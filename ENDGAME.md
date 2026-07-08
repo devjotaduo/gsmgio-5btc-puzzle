@@ -82,9 +82,36 @@ interpretativo** entre o cabeçalho e a seed (a natureza exata dos 563 chars pó
 possivelmente material de seed de alta entropia por design, ou uma 2ª camada com
 parâmetro ainda desconhecido). Este é o ponto de ataque mais promissor do endgame.
 
-## Outras linhas (próximos alvos)
-- **Joint 4-parameter attack** (PR #93 `_work/joint_attack.py`): ampliar o conjunto de
-  alfabetos-semente incluindo a construção canônica de `dbbi` que produz "btcseed".
+## Ataque exaustivo aos 563 chars pós-"BTCSEED" (12 famílias, verificado por oráculos)
+Rodei um ataque multi-agente (12 famílias × código real × oráculos duros: `aes_open`,
+`bip39_valid`, `wif_valid`, `priv_to_address` vs. `PRIZE_ADDR` e `TARGET_H160`), com
+re-verificação adversarial. Resultado (2026-07-08):
+- **Nenhum solve.** Zero oráculos duros passaram em qualquer família: nenhuma senha abre
+  `SMALL`/`COSMIC`; nenhuma extração de chave bate nos alvos; nenhum WIF/BIP39 real.
+  Cobertas: BIP39, chave-direta, Vigenère/Beaufort/autokey no resto, varredura de 2760
+  alfabetos×períodos, decode do `dbbi`, chave-AES-injetada, método z-segments, extração
+  posicional/primos/{1,4,21}, refracionamento, matriz-keystream, combinação dbbi+faed.
+- **CORREÇÃO (apofenia derrubada por verificação):** a "estrutura de 285 pares"
+  (índices pares da saída Bifid ⊂ `{B,C,D,E}` = canto 2×2) **é artefato matemático** de
+  período par sobre entrada A-I (que só ocupa as linhas 0-1 do quadrado). 2000 strings
+  A-I aleatórias reproduzem; período ímpar 569 quebra. **Não é sinal** — não confundir.
+- **Caracterização quantitativa de `BIF_REST`:** 25 letras (A-Z sem J), viés forte
+  (C=95,D=86,E=76,B=65), H=3.88 bits/char, **IoC=0.094** (acima do inglês 0.067; muito
+  acima de aleatório-25 0.04), χ²=779. **Não** é material de seed aleatório limpo — o viés
+  é dominado pela mecânica Bifid+A-I. Assinatura compatível com uma 2ª camada de
+  substituição pendente, OU com o material real não estar em `BIF_REST` cru.
+- **Saldo:** o único fato robusto continua sendo o header **"BTCSEED"** (0/3000 no teste
+  nulo) — real, porém **estéril**: não se estende e nenhum transform do resto fecha oráculo.
+  Isso enfraquece (não mata) a hipótese Bifid: btcseed pode ser um cabeçalho real cujo
+  método de payload ainda é desconhecido, ou uma coincidência rara do alfabeto canônico.
+
+## Onde o endgame realmente está
+Mesmo com ataque exaustivo verificado, o gargalo é o já diagnosticado pelo PR #93: falta a
+**interpretação do "first hint"** que fixa o alfabeto do checkerboard/cifra — o oráculo AES
+é binário (sem gradiente), então busca cega não converge. Próximos passos reais:
+- **Substituição/hill-climb sobre `BIF_REST`** (25 letras) mirando inglês legível (não sobre
+  o filler nem sobre a saída AES) — o IoC=0.094 é a assinatura clássica disso.
+- **Joint 4-parameter attack** (PR #93) ampliado com a construção canônica de `dbbi`.
 - **Novo hint oficial**: o criador disse que liberaria mais um se não resolvido.
 - **Joint 4-parameter attack** (PR #93 `_work/joint_attack.py`): o único caminho
   computacional correto — só vence se o alfabeto do checkerboard for um candidato natural
