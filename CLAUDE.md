@@ -15,16 +15,16 @@ halving do Bitcoin).
 
 - **`README.md`** — o artefato central. Documenta, fase a fase, cada hint, a
   senha/decodificação usada e o resultado. Toda mudança relevante acontece aqui.
-- **Imagens** (`puzzle.png`, `theseedisplanted.png`, `phase2.png`, `phase3.png`,
-  `SalPhaselonCosmicDuality.png`, `photo_2020-04-26_09-24-30.jpg`) — capturas de
-  cada fase, referenciadas pelo README.
 - **`result.json`** (~27 MB, **não versionado**) — export do Telegram do grupo
   "GSMG Puzzle Solvers". É a fonte primária das discussões da comunidade; use
   como material de consulta, não o commite (é grande demais e sensível).
 
-⚠️ No estado atual da working tree, alguns PNGs referenciados pelo README
-(`phase2.png`, `phase3.png`, `SalPhaselonCosmicDuality.png`) aparecem como
-deletados no git. Ao editar o README, confira se as imagens citadas existem.
+As imagens de cada fase foram **removidas** — o texto/cifra que elas mostravam
+agora está inline no README, transcrito verbatim do domínio via Wayback Machine
+(o `gsmg.io` original morreu e virou página parqueada). Para reobter o conteúdo
+de uma página: `curl "http://web.archive.org/web/<timestamp>id_/https://gsmg.io/<path>"`
+(use a CDX API `web.archive.org/cdx/search/cdx?url=gsmg.io/<path>` para achar um
+snapshot da era ativa, 2019–2021).
 
 ## Como o puzzle se resolve (padrão recorrente)
 
