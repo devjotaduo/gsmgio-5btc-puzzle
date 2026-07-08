@@ -105,6 +105,32 @@ re-verificação adversarial. Resultado (2026-07-08):
   Isso enfraquece (não mata) a hipótese Bifid: btcseed pode ser um cabeçalho real cujo
   método de payload ainda é desconhecido, ou uma coincidência rara do alfabeto canônico.
 
+## Fase 1 — a "segunda porta" (pista real do criador, NÃO resolvida por ninguém)
+O criador deixou pistas de que a matriz 14×14 da fase 1 tem MAIS que a URL
+`theseedisplanted`: *"only one door... the rabbit's nest may contain a whole lot
+more"*, *"Roses are White but often Red. Yellow has a number and so does Blue"*,
+*"another door might be found on {1},{4},{21}"*, *"prime numbers... some
+characters need to be zeroed out"*. Investigação (própria + busca na comunidade):
+- **`matrixsumlist` = 101** = soma da matriz (total de 1s) — verificado. É um
+  **componente de senha** do endgame (issue #32: `sha256([dbbi]+101+[faed]+[lastwords])`),
+  mas o palpite exato da #32 (`gsmg101adressapril`) **não abre** os blobs. O `101`
+  é o elo fase-1→endgame que faltava, mas insuficiente sem decodificar dbbi/faed.
+- **Cores azul/amarelo** = paridade (blue=1/yellow=0) → redundante com a URL. QR =
+  só o endereço. Sem vermelho oculto na matriz (a alegação de stego do `guy29278`
+  não se sustenta; contestada por `wat96`). 16 mapeamentos cor→bit × travessias
+  (espirais/linhas/colunas/diagonais) → só a 1ª porta aparece.
+- **Pixel FEFEFE** ("1 white square different", issue #14): exatamente 1 célula
+  (254,254,254 em vez de 255) na posição **(7,4) = índice 163 do espiral (primo)**,
+  à frente do coelho. Comunidade: *"we just have no clue what to do with it"*.
+- **`{1},{4},{21}`** = provável troll (1-abr-2021, dia do hint + rickroll).
+- Tentativas legíveis da comunidade — `SEND THE BLUE TO SET HEX` (XOR dbbi×faed +
+  máscara azul/amarelo) e `key eyes` (somas de linha primas) — classificadas como
+  **coincidência** pelos analistas mais rigorosos; nenhuma valida em oráculo.
+
+**Saldo honesto:** a segunda porta é uma pista real, mas **nunca foi resolvida** —
+nem aqui, nem pela comunidade após anos. O `101` e o pixel FEFEFE são fatos reais;
+o mecanismo que os transforma na chave permanece desconhecido.
+
 ## Onde o endgame realmente está
 Mesmo com ataque exaustivo verificado, o gargalo é o já diagnosticado pelo PR #93: falta a
 **interpretação do "first hint"** que fixa o alfabeto do checkerboard/cifra — o oráculo AES
