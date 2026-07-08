@@ -131,6 +131,38 @@ characters need to be zeroed out"*. Investigação (própria + busca na comunida
 nem aqui, nem pela comunidade após anos. O `101` e o pixel FEFEFE são fatos reais;
 o mecanismo que os transforma na chave permanece desconhecido.
 
+## Mapa do endgame (síntese verificada de TODAS as fases)
+Re-derivei e verifiquei do zero as fases 1→3.2.2 (workflow de 19 agentes) e correlacionei
+os hints. O método está parcialmente *especificado* nos textos decodificados:
+
+- **Pipeline (ordem de leitura do SalPhaseIon, verificada):** `DBBI[91]` (chave/keyword-source,
+  dígitos a-i=1-9) → `matrixsumlist` (usar a lista de somas da matriz da Fase 1) → `FAED[570]`
+  (payload) → `lastwordsbeforearchichoice`/`thispassword` (FAED decodificado = senha AES) →
+  `shabef`(=sha256) `our first hint is your last command` → **blob SMALL** → `shabef ans too`
+  (sha256 da resposta também) → **blob COSMIC**. Regra: cada resposta é sha256'd → senha do
+  próximo blob. COSMIC.pw provável = `sha256(plaintext de SMALL)`.
+- **Família da técnica (provada na 3.2.2):** frase-fonte → 1ªs ocorrências → quadrado
+  Polybius/checkerboard → filler (cauda LIVRE, subdeterminada) → decode com dígitos-escape.
+  DBBI faz o papel de frase-fonte (`DBIFHCEGA` = início do `CANON_ALPHA`); Bifid 5×5 (I=J,
+  período 570) sobre FAED já dá o header **BTCSEED** (verificado). Os 563 chars pós-BTCSEED
+  seguem ilegíveis → 2ª camada OU alfabeto/período/transposição ainda incorretos.
+- **Gramática de senha (verificada F2→F3):** concatenar N partes ordenadas sem separador →
+  SHA256 hex → pw do openssl. Modificadores `aa`(minúsc)/`aBa`(preserva caixa)/`enf`(remove
+  espaço). Operação terminal = `HASHTHETEXT` (sha256 UPPERCASE sem espaço; provado: sha256(
+  GSMGIO5BTCPUZZLECHALLENGE+addr)=89727c…=URL do endgame).
+- **Números-chave dos textos:** 23 ciphers / 16 encryptions / 7 intertwined passwords
+  ("FIND THE ACTUAL PRIVATE KEYNOTE", "BRUTE FORCING MIGHT BE REQUIRED"), 140, **1141**
+  (=escapes 1,4), **101** (matrixsum, primo), **163** (FEFEFE, primo), 91=7×13, 570=15×38,
+  15/9 (azul/amarelo). "REINSERTING THE PRIME BASICS" + "RETURN TO THE SOURCE CODES".
+- **Objetivo:** "HALF AND BETTER HALF" / Cosmic Duality = **DUAS** chaves privadas (2 blobs).
+  Validar produto final via `priv_to_address == PRIZE_ADDR`.
+
+**Elos não resolvidos (os mais fortes):** (a) uso exato de `matrixsumlist` (row vs col) sobre
+DBBI/FAED; (b) alfabeto/filler/período/transposição que torna **BIF_REST inteiro** legível
+(hoje só BTCSEED sai); (c) senha real do SMALL (=FAED decodificado); (d) papel do DBBI além
+de keyword-source. **As 9 hipóteses correlacionadas foram testadas com oráculo → todas
+NEGATIVE.** O método-família está mapeado; faltam os parâmetros exatos que ninguém fixou.
+
 ## Onde o endgame realmente está
 Mesmo com ataque exaustivo verificado, o gargalo é o já diagnosticado pelo PR #93: falta a
 **interpretação do "first hint"** que fixa o alfabeto do checkerboard/cifra — o oráculo AES
