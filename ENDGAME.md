@@ -57,12 +57,35 @@ ambas extraídas da página SalPhaseIon:
   all the hints." (2023-04-14)
 - Decentraland: áudio → espectrograma → **HASHTHETEXT**.
 
-## Linhas promissoras NÃO verificadas (próximos alvos)
-- **"btcseed" via Bifid** (Sycorax, Telegram): `faed` por cifra Bifid, keyword de `dbbi`
-  (`dbifhceg` → alfabeto `DBIFHCEGAKLMNOPQRSTUVWXYZ`), período 570 → começa com `btcseed`.
-  **A reproduzir com null-model** (risco de overfit; o método exato a–i→grade não está
-  documentado). Contraste: PR #93 mede `faed` como alta entropia — as duas visões
-  precisam ser reconciliadas.
+## "btcseed" — VERIFICADO como sinal real (mas loop não fecha)
+Reproduzi e testei a alegação do Sycorax de forma rigorosa (própria, 2026-07-08):
+- **Bifid(`faed`, período 570)** com o alfabeto `DBIFHCEGAKLMNOPQRSTUVWXYZ` — keyword
+  = ordem de 1ª ocorrência de `dbbi` (`d,b,i,f,h,c,e,g`) + filler alfabético (construção
+  **canônica** de Políbio) → **`BTCSEEDDEOEMCKEAD…`**. Reprodução confirmada.
+- **Teste de hipótese nula**: em 3000 alfabetos totalmente aleatórios, **0** dão "BTCSEED";
+  fixando o keyword e randomizando só o filler, **1/3000**. Ou seja, o alfabeto canônico
+  derivado de `dbbi` (o parceiro estrutural de `faed`) acerta um evento raríssimo e
+  tematicamente perfeito. **É sinal, não apofenia** — a direção `dbbi`→keyword,
+  `faed`→Bifid está muito provavelmente correta, e "btcseed" é um **cabeçalho embutido**.
+
+**Mas o loop não fecha (ainda):**
+- Os 563 chars após `BTCSEED` **não** são inglês (freq. B/C/D/E dominante); hill-climb do
+  filler (ancorado no keyword de `dbbi`, sobre os 570 chars) **não** os torna legíveis.
+- `sha256(saída Bifid)` (várias formas: full/rest, upper/lower, hex/raw) **não** abre nem
+  o blob pequeno do SalPhaseIon nem a Cosmic Duality → o mecanismo não é
+  Bifid→sha256→AES direto.
+- `dbbi` como chave corrente (Vigenère mod 26, ±, sobre a saída Bifid) **não** revela o
+  resto. `dbbi` via Bifid tb não dá texto.
+
+**Implicação:** "btcseed" é um foothold REAL e verificado. O que falta é **um único passo
+interpretativo** entre o cabeçalho e a seed (a natureza exata dos 563 chars pós-header —
+possivelmente material de seed de alta entropia por design, ou uma 2ª camada com
+parâmetro ainda desconhecido). Este é o ponto de ataque mais promissor do endgame.
+
+## Outras linhas (próximos alvos)
+- **Joint 4-parameter attack** (PR #93 `_work/joint_attack.py`): ampliar o conjunto de
+  alfabetos-semente incluindo a construção canônica de `dbbi` que produz "btcseed".
+- **Novo hint oficial**: o criador disse que liberaria mais um se não resolvido.
 - **Joint 4-parameter attack** (PR #93 `_work/joint_attack.py`): o único caminho
   computacional correto — só vence se o alfabeto do checkerboard for um candidato natural
   (o "first hint"). Ampliar o conjunto de alfabetos-semente.
