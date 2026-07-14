@@ -47,6 +47,37 @@ ambas extraídas da página SalPhaseIon:
 5. Refutados pelo PR #93 (com null-model): "matrixsumlist triangle" (apophenia),
    esteganografia nas PNGs, book cipher (Cosmic 0/27, Game of Logic 1/27).
 
+## Becos FALSOS — sessão 2026-07-14 (verificados localmente, código no scratchpad)
+Cinco testes, todos NEGATIVOS mas cada um estreitando o problema. Cada script é
+reprodutível e usa oráculos/controles (não é palpite):
+6. **Substituição monoalfabética sobre `BIF_REST`** (os 563 chars pós-BTCSEED):
+   hill-climb com 40 restarts × modelo de quadgramas EN (corpus = `result.json`) e
+   BIP39. **Controle validado**: um texto inglês real de 563 chars cifrado por
+   substituição aleatória foi recuperado a **97,3%** (score/char −4,37). O `BIF_REST`
+   real pontua **−5,45** — pior que uma string-25 aleatória (−4,56). **Não é inglês
+   nem BIP39 por substituição** (coerente com o viés B/C/D/E e IoC 0,094).
+7. **Período do Bifid**: varredura 2..570 do período de transposição, incluindo os
+   temáticos `101`(matrixsumlist)`,91,13,38,7,15,16,140,163`. **Só o período 570
+   (comprimento total) produz `BTCSEED`**; nenhum outro período dá saída legível ou
+   palavra-âncora. A transposição do Bifid é de mensagem inteira, não em blocos.
+8. **Método ensinado (a–i→1–9 → base-16 → hex→ASCII)** aplicado ao `faed` inteiro.
+   Este é o método que o próprio README usa logo acima do faed; **reproduzi
+   `lastwordsbeforearchichoice` e `thispassword` exatos** (prova de aplicação correta).
+   No `faed` completo → lixo (33% ASCII). O payload longo não usa o mesmo método.
+9. **`matrixsumlist` como keystream mod-9 sobre `faed`** (a "over-encryption"):
+   somas de **linha** `[6,10,8,7,6,6,5,4,9,9,7,8,7,9]` e **coluna**
+   `[8,10,8,10,8,7,3,6,7,5,9,6,6,8]` (ambas somam 101), soma **e** subtração, todos
+   os 14 offsets, antes do Bifid — **todas destroem o BTCSEED**. Transposição colunar
+   por matrixsumlist idem. **BTCSEED sai do `faed` CRU**: matrixsumlist NÃO é
+   over-encryption pré-Bifid sobre o faed (elo "(a)" eliminado — seu papel, se houver,
+   é em outro ponto: alfabeto, dbbi, ou pós-Bifid).
+10. **`BIF`/`BIF_REST` como material de chave direto** (oráculos DUROS: endereço BTC
+    comprimido/não vs. `1GSMG…` e h160-alvo `a9553269…`, BIP39 com checksum, WIF):
+    refractionação base-5 das coordenadas do quadrado, A1Z26→índices BIP39, base-26→
+    priv, nibble→hex, `sha256(*)`. **Zero hits reais.** O único "BIP39 válido" é um
+    falso positivo degenerado (9/15 palavras distintas, todas das 26 primeiras da
+    wordlist — coincidência de checksum ~1/32; não deriva endereço relacionado).
+
 ## Pistas do criador (Jrk Bgrt / @SoWut) — Telegram
 - "At least a **prime number** is very important to get any further." (2023-01-09)
 - "Some characters need to be **'zeroed out'**." + "prime positions" (2021-12-26) — no
