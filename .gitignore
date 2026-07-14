@@ -1,2 +1,9 @@
 # Export do Telegram (~27 MB) — fonte de consulta, não versionar
 result.json
+
+# Solver — saidas de execucao, logs e caches (nao versionar)
+solver/out/
+solver/*.log
+solver/quadgram.pkl
+solver/__pycache__/
+solver/out_run.log
