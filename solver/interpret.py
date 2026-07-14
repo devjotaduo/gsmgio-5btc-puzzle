@@ -172,12 +172,13 @@ def main():
             json.dump(r, open(os.path.join(OUT, "SOLVED.json"), "w"), indent=2)
             print(f"\n!!! SOLVE via '{label}' — out/SOLVED.json"); return
     results.sort(key=lambda r: -r["score"])
-    print(f"\n=== TOP quadrados por legibilidade (baseline CANON={next(r['score'] for r in results if 'CANON' in r['label'])}) ===")
-    for r in results[:12]:
-        print(f"  {r['score']}  per={r['period']:3d}  {r['label']:34s} head={r['head']}")
     json.dump({"notes": notes[:20], "proposals": {k: sorted(v) for k, v in proposals.items()},
                "results": results[:40]},
               open(os.path.join(OUT, "interpret.json"), "w"), ensure_ascii=False, indent=2)
+    base = next((r["score"] for r in results if "CANON" in r["label"]), "n/a")
+    print(f"\n=== TOP quadrados por legibilidade (baseline CANON={base}) ===")
+    for r in results[:12]:
+        print(f"  {r['score']}  per={r['period']:3d}  {r['label']:34s} head={r['head']}")
     print(f"\n[{time.strftime('%H:%M:%S')}] gravado out/interpret.json ({len(results)} quadrados testados)")
     if notes:
         print("Notas do llama (o que o 'first hint' significa):")
