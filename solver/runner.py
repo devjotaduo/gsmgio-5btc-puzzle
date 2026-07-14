@@ -203,7 +203,9 @@ def main():
     ap.add_argument("--llm-every", type=int, default=400,
                     help="chamar o Llama a cada N tentativas enumerativas")
     ap.add_argument("--max", type=int, default=0, help="parar apos N tentativas (0=infinito)")
+    ap.add_argument("--max-hours", type=float, default=0, help="parar apos N horas (0=infinito)")
     args = ap.parse_args()
+    deadline = time.time() + args.max_hours * 3600 if args.max_hours else None
 
     print(f"[{now()}] solver GSMG iniciado | modelo={MODEL} | out={OUT}")
     scorer = Scorer()
@@ -253,6 +255,12 @@ def main():
     heartbeat = time.time()
     try:
         while True:
+            # parada por deadline ou por SOLVE de outro motor (GPU)
+            if deadline and time.time() >= deadline:
+                print(f"[{now()}] limite de {args.max_hours}h atingido"); return
+            if os.path.exists(os.path.join(OUT, "SOLVED.json")) or \
+               os.path.exists(os.path.join(OUT, "BREAKTHROUGH.json")):
+                print(f"[{now()}] outro motor fechou (SOLVED/BREAKTHROUGH) — encerrando"); return
             # rajada enumerativa
             for _ in range(args.llm_every):
                 if handle(next(gen), "enum"):
