@@ -252,7 +252,7 @@ if __name__ == "__main__":
     ap.add_argument("--max-gen", type=int, default=0)
     ap.add_argument("--max-hours", type=float, default=0, help="parar apos N horas (0=infinito)")
     ap.add_argument("--phase", type=int, default=250, help="geracoes dedicadas por periodo antes de ciclar")
-    ap.add_argument("--breakthrough", type=float, default=-4.2,
+    ap.add_argument("--breakthrough", type=float, default=-4.8,
                     help="score de legibilidade que dispara BREAKTHROUGH e para (ingles ~ -4.3)")
     a = ap.parse_args()
     if a.selftest:

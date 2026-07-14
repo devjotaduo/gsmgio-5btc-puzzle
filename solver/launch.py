@@ -23,7 +23,8 @@ OUT = os.path.join(HERE, "out"); os.makedirs(OUT, exist_ok=True)
 PY = sys.executable
 
 def print_status():
-    for f, label in (("gpu_status.json", "GPU-Bifid"), ("status.json", "CPU-Llama")):
+    for f, label in (("gpu_status.json", "GPU-Bifid"), ("cb_status.json", "GPU-Checkerboard"),
+                     ("status.json", "CPU-Llama")):
         p = os.path.join(OUT, f)
         if os.path.exists(p):
             d = json.load(open(p, encoding="utf-8"))
@@ -34,7 +35,7 @@ def print_status():
     if os.path.exists(sp):
         print("\n*** SOLVED.json EXISTE ***")
         print(open(sp, encoding="utf-8").read())
-    for f in ("gpu_candidates.jsonl", "candidates.jsonl"):
+    for f in ("gpu_candidates.jsonl", "cb_candidates.jsonl", "candidates.jsonl"):
         p = os.path.join(OUT, f)
         if os.path.exists(p):
             n = sum(1 for _ in open(p, encoding="utf-8"))
@@ -69,13 +70,16 @@ def main():
         gpu_ok = False
 
     gpu_cmd = ["gpu_search.py", "--pop", "8192"]
+    cb_cmd = ["gpu_checkerboard.py", "--pop", "8192"]
     if a.max_hours:
         gpu_cmd += ["--max-hours", str(a.max_hours)]
+        cb_cmd += ["--max-hours", str(a.max_hours)]
     if a.only != "cpu":
         if gpu_ok:
-            spawn("gpu", gpu_cmd, "gpu_faed.log")
+            spawn("gpu-bifid", gpu_cmd, "gpu_faed.log")
+            spawn("gpu-checkerboard", cb_cmd, "gpu_cb.log")   # cifra PROVADA do puzzle (VIC)
         else:
-            print("[launch] GPU/torch indisponivel — pulando motor gpu")
+            print("[launch] GPU/torch indisponivel — pulando motores gpu")
     cpu_cmd = ["runner.py"]
     if a.max_hours:
         cpu_cmd += ["--max-hours", str(a.max_hours)]
