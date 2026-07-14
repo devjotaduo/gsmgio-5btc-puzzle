@@ -31,6 +31,44 @@ ambas extraídas da página SalPhaseIon:
   keystream), e não há sinal de verificação até o loop AES fechar. Busca cega não
   converge (o ataque conjunto de 4 parâmetros do PR #93 fez 4904 formas → 0 hits).
 
+## Campanha 2026-07-14 — framework GPU/oráculo + 8 frentes control-validadas (NÃO repetir)
+Construí um harness reprodutível em `solver/` (Llama local propõe, GPU criptanalisa,
+oráculos DUROS julgam: endereço BTC / BIP39-checksum / padding-AES). Cada motor de GPU é
+**control-validado** (recupera um texto inglês *conhecido* cifrado, então seus negativos
+têm peso — não são incapacidade). Todas as frentes abaixo deram NEGATIVO por oráculo:
+
+1. **Bifid período-curto** (`gpu_search.py`): GA na GPU, controle período-15 = 100% match.
+   No faed: empaca em −5.5 (ruído). Período-570 (que dá BTCSEED) é indecifrável por busca
+   de quadrado (o quadrado CANON é dado pelo dbbi, não buscável).
+2. **Straddling checkerboard / VIC** (`gpu_checkerboard.py`): a cifra provada da fase 3.2.2;
+   encaixe 9 símbolos → 7+9+9=25 slots. Controle 100%. No faed: −5.6 (ruído).
+3. **Trifid / base-3** (`gpu_trifid.py`): 9=3², 570×2=1140=3×380. Controle 87%. No faed:
+   −6.8 (pior que ruído).
+4. **Chave direta** (`seed_sweep.py`): faed(base-9)/BIF(base-26)/trigramas → priv key +
+   BIP39 (canônico + índices 11-bit), 2 endianidades → 50 priv + 250 BIP39, 0 hit.
+5. **Keywords da comunidade** (`interpret.py`): llama3 leu 1088 msgs sobre o "first hint"
+   → 96 quadrados Polybius testados vs oráculo. Nenhum supera o CANON.
+6. **Prime basics** (`prime_attack.py`): fato VERIFICADO — no dbbi, `d` é a única letra só
+   em posições não-primas. 104 construções (máscaras prime, zerar D, keystream de primos)
+   → 0 solve, top −5.28.
+7. **matrixsumlist+enter** (`matrixsum_attack.py`): a LISTA real de somas (row=[6,10,8,7,6,
+   6,5,4,9,9,7,8,7,9]) como keystream mod-9 e transposição colunar, antes/depois do Bifid.
+   186 construções → 0 solve, top −6.36.
+8. **Frases dadas pela página** (`focused_aes.py`): sha256("our first hint is your last
+   command") e todas as frases (lastwordsbeforearchichoice/thispassword/enter) com gramática
+   HASHTHETEXT vs SMALL/COSMIC → 185 senhas, 0 hit.
+
+**Correções estruturais desta campanha (releitura crua, sem assumir BTCSEED):**
+- `enter` (2ª seção abba) está **embutido no blob AES**, entre os dois chunks base64
+  (`...rd9` `z` `[enter]` `QvX0...`) — **não** é instrução do faed.
+- o `z` entre os chunks é **necessário** para o base64 do SMALL fechar (128 chars → ct 80B).
+- SMALL como `c1z` sozinho (2 blocos) também não abre com as frases dadas.
+
+**Meta-conclusão:** o espaço computacional das hipóteses conhecidas está esgotado; tudo que
+se constrói sobre o anchor BTCSEED falha. Possível que BTCSEED seja coincidência (viés
+B/C/D/E favorece a palavra). O desbloqueio real = info externa nova (próximo hint do criador)
+ou uma leitura do faed que a fixação no BTCSEED cegou. Controlar via skill `/gsmg-solver`.
+
 ## Becos FALSOS — verificados localmente (NÃO repetir)
 1. **Afim base-9 (issue #51)**: o bloco `faed`(570) → "Cryptography is the practice…"
    via afim (a=5,b=8). **Falso**: a chave dele gera hex `29d23a21…`, não o `43727970…`
