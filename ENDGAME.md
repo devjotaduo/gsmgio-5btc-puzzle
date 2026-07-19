@@ -116,6 +116,43 @@ reprodutível e usa oráculos/controles (não é palpite):
     falso positivo degenerado (9/15 palavras distintas, todas das 26 primeiras da
     wordlist — coincidência de checksum ~1/32; não deriva endereço relacionado).
 
+## Becos FALSOS — sessão 2026-07-19 (grafo vetorial + pistas color-prime)
+Nova abordagem: criei/rodei um **grafo vetorial textual local** sobre README, docs,
+solver e `result.json` (`solver/vector_graph.py`, 7456 chunks) para puxar conexões
+semânticas não óbvias. O grafo destacou três leads recentes do Telegram:
+`abcdefghi → 2 56 1 34 789`, `yellow blue prime sum list (17,41)` e
+`24 colored squares = 24 primes < 91 = len(dbbi)`. Todos foram convertidos em testes
+pequenos, falsificáveis, com oráculos duros:
+
+11. **Permutação `abcdefghi→256134789` + `17/41` como alfabeto/quadrado/senha**
+  (`solver/alphabet_group_attack.py`): 273 construções. Testei a permutação direta,
+  inversa, quadrados Bifid derivados do prefixo reordenado, keywords temáticas
+  `YELLOWBLUEPRIME1741`, `MATRIXSUMLIST1011741`, períodos temáticos
+  `[570,285,190,114,95,57,41,38,19,17,15,13,7]` e senhas diretas/sha256.
+  **Zero hits** em AES SMALL/COSMIC e privkey. Melhor candidato continuou sendo o
+  baseline canônico `BTCSEED...` (`identity|canon|p570`, score −5.577).
+12. **24 casas coloridas ↔ 24 primos menores que 91 aplicadas ao `dbbi`**
+  (`solver/colored_prime_dbbi_attack.py`): 182 construções. Mapeei a sequência
+  espiral `BBBBYBBBYYBBBBYBBYYBYYBY` aos primos 1-indexados
+  `[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89]`;
+  zerei/removi/substituí letras nos primos amarelos/azuis e usei o `dbbi` mutado
+  como fonte de keyword Bifid. **Zero hits** em AES/privkey. Mutar amarelos não
+  altera o quadrado canônico; mutar azuis piora a legibilidade.
+13. **`Y=17`, `B=41` como keystream mod-9 aplicado diretamente ao `faed`**
+  (`solver/color_prime_faed_shift.py`): 208 construções. Estrutura testada:
+  `len(faed)=570=6×91+24`, seis blocos de 91 + cauda de 24; nos 24 primos de
+  cada bloco, converter `a-i` pela pista `a→2,b→5,c→6,d→1,e→3,f→4,g→7,h→8,i→9`,
+  somar/subtrair `B=41≡5` ou `Y=17≡8 (mod 9)`, com `FEFEFE`/primo 73 como
+  original/neutro/azul/amarelo; depois Bifid canônico e oráculos. **Zero hits**.
+  As melhores saídas com `nonprime=to_a` são artificiais (`ETET...`) e piores que
+  o baseline; com `nonprime=keep`, nenhuma melhora o `BTCSEED` canônico.
+
+**Saldo:** a frente color-prime em suas leituras naturais agora também está coberta por
+negativos reprodutíveis. O lead `abcdefghi→256134789` parece útil como anotação de
+comunidade, mas não como permutação direta do alfabeto/payload. Continua faltando uma
+operação **inequívoca** que conecte `yellow blue primes`/`FEFEFE` ao pipeline sem destruir
+o único sinal robusto (`BTCSEED`).
+
 ## Pistas do criador (Jrk Bgrt / @SoWut) — Telegram
 - "At least a **prime number** is very important to get any further." (2023-01-09)
 - "Some characters need to be **'zeroed out'**." + "prime positions" (2021-12-26) — no
