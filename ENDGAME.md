@@ -335,6 +335,28 @@ mecânica estão cobertas por negativo. O desbloqueio exige a peça interpretati
 **Pendência técnica:** `_work/joint_attack_v2.py` está corrompido em disco (o `ENDGAME.md` o
 chama de "único caminho computacional correto"). Restaurar via git antes de qualquer campanha
 computacional futura.
+
+## joint_attack_v2 RECONSTRUÍDO e testado — última rota computacional FECHADA (2026-07-23)
+O `joint_attack_v2.py` original corrompeu e nunca foi commitado (sem git history). **Reconstruí
+do zero** (`solver/joint_attack_v2.py`) a frente que nenhum script havia combinado:
+over-encryption (keystream `matrixsumlist` mod-9) aplicada **ANTES** do straddling-checkerboard,
+com alfabeto **derivado do dbbi** — não busca aleatória. Motivação: o `checkerboard.py` buscou
+quadrados aleatórios e platôou em −5.592 por 620k gerações (log `gpu_cb.log`); o
+`matrixsum_attack.py` só aplicou keystream antes do Bifid, nunca antes do checkerboard.
+- **1008 construções**: 4 alfabetos-seed (dbbi 1ª-ocorrência, sha256(dbbi), CANON, fase-3.2.2)
+  × 36 pares de escape (e1,e2) × 4 keystreams (rowsum/colsum/spiral9/none) × direções.
+- **Top score −6.753** (pior que o platô −5.592 e muito abaixo do inglês −4.5). **0 oráculos
+  abertos** (AES SMALL/COSMIC, priv, BIP39). Over-encryption+checkerboard(dbbi) não revela texto.
+- **Conclusão:** a última rota computacional conhecida está fechada com negativo. O oráculo AES
+  é binário (sem gradiente) → busca combinatória cega não converge. Confirmado de forma
+  independente que **o gargalo é interpretativo, não computacional.**
+
+**PARADA de ataques automáticos:** o espaço computacional das hipóteses conhecidas está
+esgotado. Nenhum sweep novo deve ser rodado sem uma hipótese CONCRETA, FALSIFICÁVEL e NOVA
+derivada dos hints (escrita em inglês/português ANTES de virar código). Rotas interpretativas
+ainda não exauridas: (a) áudio do Decentraland → espectrograma → `HASHTHETEXT` + contexto
+`Press enter and start talking…`; (b) releitura do poema "Roses are White"/FEFEFE@163 como
+fonte da operação única que falta. O desbloqueio real = insight humano ou próximo hint oficial.
 - Blobs completos e **validados** inline no [README.md](README.md) (verbatim do domínio
   via Wayback; Cosmic idêntica à usada pela comunidade — mesmo salt `2d3f6fe0…`).
 - Skill `/solve-phase` (sha256→AES) e **oráculo de padding do último bloco** (barato,
