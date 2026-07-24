@@ -269,17 +269,34 @@ DBBI/FAED; (b) alfabeto/filler/período/transposição que torna **BIF_REST inte
 de keyword-source. **As 9 hipóteses correlacionadas foram testadas com oráculo → todas
 NEGATIVE.** O método-família está mapeado; faltam os parâmetros exatos que ninguém fixou.
 
+## Frente PENDENTE fechada — hill-climb monoalfabético sobre BIF_REST (2026-07-23)
+O `ENDGAME.md`/`solver/README` listavam a substituição sobre `BIF_REST` (25 letras) como o
+teste rigoroso pendente. **Rodado e fechado** (`solver/bifrest_hillclimb.py`, hill-climb com
+quadgramas EN + controle estatístico):
+- **Controle**: um texto inglês conhecido de 563 chars, cifrado por substituição aleatória
+  sobre o mesmo alfabeto (A-Z sem J), foi **recuperado a 100%** (score −4.11). O motor
+  funciona → o negativo abaixo tem peso, não é incapacidade.
+- **BIF_REST real**: melhor score **−5.52** (10 restarts), muito abaixo do teto EN −4.11.
+  Plaintext top é lixo (`AILIDEBIMAYONEYABOAENAB…`). **Não é inglês por substituição
+  monoalfabética** — confirmado, não mais só suspeitado.
+- **IoC = 0.0938** — *acima* do inglês (0.067), não abaixo. Freq. C=95,D=86,E=76,B=65 (45%
+  em 3 letras). Assinatura de **repetição sistemática** (transposição/keystream periódico ou
+  o artefato Bifid+A-I já diagnosticado), não de texto natural sob substituição.
+- **AES**: plaintext (raw/upper/lower/sha256) como senha → **0 hits** em SMALL/COSMIC.
+- **Saldo**: a última frente monoalfabética conhecida está coberta por negativo control-
+  validado. Reforça que, se BIF_REST for texto, precisa de uma 2ª camada (transposição ou
+  keystream), não de substituição — o gargalo continua sendo interpretativo (fixar
+  alfabeto/keystream via "first hint"), não computacional.
+
 ## Onde o endgame realmente está
 Mesmo com ataque exaustivo verificado, o gargalo é o já diagnosticado pelo PR #93: falta a
 **interpretação do "first hint"** que fixa o alfabeto do checkerboard/cifra — o oráculo AES
 é binário (sem gradiente), então busca cega não converge. Próximos passos reais:
-- **Substituição/hill-climb sobre `BIF_REST`** (25 letras) mirando inglês legível (não sobre
-  o filler nem sobre a saída AES) — o IoC=0.094 é a assinatura clássica disso.
-- **Joint 4-parameter attack** (PR #93) ampliado com a construção canônica de `dbbi`.
-- **Novo hint oficial**: o criador disse que liberaria mais um se não resolvido.
+- **Substituição/hill-climb sobre `BIF_REST`** (25 letras): **JÁ RODADO E FECHADO** (ver seção
+  acima, 2026-07-23) — negativo control-validado. Não repetir.
 - **Joint 4-parameter attack** (PR #93 `_work/joint_attack.py`): o único caminho
   computacional correto — só vence se o alfabeto do checkerboard for um candidato natural
-  (o "first hint"). Ampliar o conjunto de alfabetos-semente.
+  (o "first hint"). Ampliar o conjunto de alfabetos-semente com a construção canônica de `dbbi`.
 - **Novo hint oficial**: o criador disse que liberaria mais um se não resolvido.
 
 ## Ferramentas / artefatos locais
