@@ -442,31 +442,38 @@ artefato concreto contra oráculo duro. Fato-guia: **prêmio on-chain intacto �
   9 hexes) → 0 hits; `04f4d1bbd9…` é o **pubkey**-alvo (h160 = `a9553269…` =
   `TARGET_H160` do oráculo), conhecido desde 2023, não uma privkey.
 
-## Cadeia GalloClaudio64 (Chains 1→4) — REPRODUZIDA byte-a-byte; real, porém ESTÉRIL
+## Cadeia GalloClaudio64 (Chains 1→4) — parte VERIFICADA aqui, parte reportada; ESTÉRIL
 
-O pipeline das issues #68/#81/#82/#88, ausente deste arquivo até hoje, foi reproduzido
-localmente contra os próprios blobs do oráculo (agente + re-verificação independente
-do anchor central). **Todos os anchors SHA256 batem**:
+O pipeline das issues #68/#81/#82/#88, ausente deste arquivo até hoje. **Verificação
+honesta**: os passos 1-3 abaixo foram reproduzidos por mim contra os blobs commitados
+(âncoras batem); os passos 4-5 são **reportados pela comunidade e NÃO reproduzíveis só
+com o que está no repo** (dependiam do `result.json`/sessão anterior — ver seção cosmic_A).
 
+**Verificado localmente nesta sessão (material commitado):**
 1. **CHAIN 1 — SMALL decodifica** (resolve #17/#29): senha
-   `matrixsumlist+enter+lastwordsbeforearchichoice+thispassword+matrixsumlist`
+   `matrixsumlistenterlastwordsbeforearchichoicethispasswordmatrixsumlist`
    (com `matrixsumlist` DUPLICADO, EVP/MD5) → padding 0x01 válido → **79 B de key
-   material** (37% ASCII, não texto), cauda `E_C = 38d4f4c9…`. Por isso o `aes_open`
-   (≥90% ASCII) nunca o acusou.
+   material** (`sha256 1449a217…`, 37% ASCII), com `E_C = 38d4f4c9…` no índice 64. Por
+   isso o `aes_open` (≥90% ASCII) nunca o acusou.
 2. **CHAIN 3 — COSMIC decodifica**: passphrase = os 32 bytes RAW de `a795de117e4725…`
-   → **1327 B**, `sha256 = 4f7a1e4e…a5e9c081` (**re-verificado independentemente
-   nesta sessão**; corrige o beco #3 acima).
-3. **Matriz 103×103 → half/better_half** (#81): 1327 B → matriz de bits 103×103 (+7 pad);
-   invariantes reproduzidos (S=5193, p_big=58, `sha256(row_sums)=24c2fc3c…`,
-   `sha256(col_sums)=672905e9…`); `s[i]=(row_sums[i]+col_sums[(i+7)%103])&0xFF` →
-   base-38 → 68 B = `half(32) = 0423d911…` + `better_half(32) = 48cc46e6…` +
-   `tail fc0c1b02` (= "trail1" da #88).
-4. **CHAIN 4** (#88): `cc[158:]` XOR `b657264f2f6e6921` → `Salted__` (salt `5bbd88ac…`)
-   → AES com pw = `E_C‖E_S‖E_B[:2]` → **1151 B**, `sha256 = e4269ed5…` (match exato).
+   (EVP/MD5) → **1327 B** = `cc`, `sha256 = 4f7a1e4e…a5e9c081` (corrige o beco #3).
+3. **CHAIN 4, passo XOR-triangle**: `cc[158:]` XOR chave repetida `b657264f2f6e6921` →
+   começa **exatamente** com `Salted__` + salt `5bbd88ac32481bca` (verificado byte-a-byte;
+   um XOR aleatório não produziria o header). Este passo é REAL e reproduzível.
 
-**Veredito por oráculo duro: ESTÉRIL.** `check_privkey` em half/better_half (30 offsets
-+ xor + sha), nas **1119 janelas de 32 B** do Chain4 e nos 35 blocos estruturados →
-**0 hits**. Confirma independentemente o "closed deterministic boundary" das #81/#82.
+**Reportado pela comunidade, NÃO reproduzido aqui (spec ausente do repo):**
+4. **CHAIN 4, plaintext final**: AES do blob acima com pw = `E_C‖E_S‖E_B[:2]` →
+   **1151 B**, `sha256 = e4269ed5…`. Tentei reproduzir o anchor com as composições de
+   senha disponíveis no material commitado → **não fechou** (`E_S`/`E_B` vêm de outras
+   chains cuja definição não está no repo).
+5. **Matriz 103×103 → half/better_half** (#81): 1327 B → matriz de bits 103×103 → base-38
+   → `half 0423d911…` + `better_half 48cc46e6…` + `tail fc0c1b02`. Âncoras (`row_sums`
+   24c2fc3c, `col_sums` 672905e9) reportadas por múltiplos solvers, mas o passo
+   base-38→half também não é reproduzível só com o commitado.
+
+**Veredito (comunidade + nossa varredura): ESTÉRIL.** `check_privkey` em half/better_half,
+nas 1119 janelas de 32 B do Chain4 e nos surrogatos de estágio reproduzíveis → **0 hits**
+(vadiksh85-pixel #81/#82: "closed deterministic boundary"; nossa caça ao cosmic_A confirma).
 
 **A fronteira real (pós-triagem):** derivar a privkey do **pubkey-alvo uncompressed
 `04f4d1bbd9…`** (h160 `a9553269…`). O passo que falta (#92: `k_new = cc[833:865] XOR
@@ -474,3 +481,70 @@ ca[280:312]`) depende do operando **`cosmic_A`/`ca`, que NUNCA foi publicado**
 (confirmado por sweep de 65 forks + 82 issues + Wayback). Beco por **falta de fonte**,
 não por refutação — coerente com a conclusão da campanha do debate: o desbloqueio
 depende de informação externa nova.
+
+## Caça ao cosmic_A (#92) — 2026-07-23
+
+**(1) O que `ca`/`cosmic_A` É segundo as issues/forks — e não há receita pública.**
+`ca == cosmic_A == cosmic_A.bin`, um arquivo binário identificado APENAS pelo prefixo
+`sha256 = cd3fea3d…`, com ≥312 B (para admitir `ca[280:312]`), tratado como **operando
+companheiro EXTERNO** de `cc` (=`cosmic_correct`, 1327 B, `4f7a1e4e…`, reproduzido e com
+anchor batendo). A fórmula `k_new = cc[833:865] XOR ca[280:312]` nasce de UMA mensagem de
+@zemnovodnuy no #88 (bloco "Hi GalloClaudio64"), rotulada pelo próprio autor como
+**"LCP=5 (statistical)"** — casamento parcial de ~5 chars do endereço, NÃO uma privkey
+resolvida. Nenhuma fonte fornece os bytes, o SHA256 completo, o tamanho ou uma derivação:
+@andersonbig diz literalmente que **NÃO derivou** `cosmic_A.bin` ("missing external
+operand", "externally defined companion input"); @WabiLipa não o tem ("checked all pages…
+nothing"); @marcofortina + @valleytainment fizeram sweep (65 forks + 82 issues + PR #68 +
+Wayback CDX de `gsmg.io/*`) → "still did not find a public reproducible definition, byte
+dump, full SHA256+length, or derivation". `cc[833:865] = f1b49e99…c97e4565` (fatia válida).
+
+**(2) Reconstruções testadas — 5 famílias, 4714 testes de oráculo duro, 0 hits.**
+Cada família reconstrói um candidato a `ca` a partir do material conhecido e roda a
+geometria completa `k_new = cc[833:865] XOR ca[280:312]` (+ offsets vizinhos ±8, `ca`
+invertido, `k_new` invertido, `sha256(k_new)`, `k_new` como passphrase raw/hex) contra o
+oráculo duro (`O.check_privkey` + `O.aes_open`):
+
+| # | reconstrução (candidato `ca`) | n_tests | resultado |
+|---|---|---|---|
+| 1 | `chain4-1151B` (artefatos de estágio do Chain4 reproduzíveis) | 108 | 0 hits |
+| 2 | `small-keymat` (os 79 B de key material do SMALL) | 2954 | 0 hits |
+| 3 | `cosmic-sha256kdf` (COSMIC via SHA256-KDF, "lado A" da dualidade) | 63 | 0 hits |
+| 4 | `small-plain-as-key` (SMALL como senha p/ decifrar o "lado A") | 1080 | 0 hits |
+| 5 | `cc-self-second` (2ª leitura do próprio `cc`: reverso/espelho/dupla-camada) | 509 | 0 hits |
+
+Anchors reproduzidos em todas: `cc`=1327 B `4f7a1e4e…`; SMALL keymat=79 B `1449a217…`.
+Verificação-chave: `sha256` de TODOS os artefatos conhecidos (`cc`=4f7a1e4e, `cosmic_ct`=
+43cb531c, SMALL_plain=1449a217, `cc[158:]`=018e1dc4, `cc[0:312]`=f765af6f, COSMIC-SHA256KDF=
+8d3ef569) — **NENHUM começa com `cd3fea3d`**. Logo `cosmic_A` não é fatia nem transform
+trivial de nenhum artefato que temos. `cc` NÃO contém bloco `Salted__` embutido (refuta a
+hipótese de dupla-camada). O plaintext genuíno do Chain4 (1151 B, `e4269ed5…`) é
+IRRECONSTRUÍVEL a partir do que está commitado (o passo base-38→half/better_half e as
+definições E_S/E_B da senha viviam em `result.json`/sessão anterior) — testamos os
+surrogatos de estágio reproduzíveis; o Chain4 genuíno já fora varrido (1119 janelas) → 0.
+
+**(3) VEREDITO: `ca`/`cosmic_A` é EXTERNO, não derivável do material conhecido — e NÃO
+fechou.** Convergência de três evidências independentes: (a) o consenso explícito das
+issues/forks/Telegram de que ninguém tem os bytes nem uma receita; (b) `cd3fea3d…` não
+bate o `sha256` de nenhum artefato conhecido nem de suas fatias/transforms triviais; (c)
+4714 testes de oráculo duro em 5 famílias de reconstrução = **0 solves** (nem a privkey do
+alvo `1GSMG…`/h160 `a9553269…`, nem abertura de qualquer blob AES). Isto NÃO é refutação da
+fórmula por conteúdo — é **falta de fonte reproduzível**, exatamente a natureza declarada de
+`cosmic_A`. Ressalva de honestidade: a própria fórmula é um melhor-palpite estatístico
+("LCP=5") de UMA conta possivelmente-LLM (Naddiseo: "thy knowledge hast been poisoned by
+prior bad llm assumptions"); é plausível que `cosmic_A`/`cd3fea3d` nunca tenha existido como
+artefato real. O desbloqueio depende de **informação externa nova** — coerente com o
+"closed deterministic boundary" das #81/#82 e com o resto deste ENDGAME.
+
+**(4) Próximo passo REAL e falsificável que sobra.** Só há UM caminho não-especulativo:
+**recuperar os bytes reais de `cosmic_A.bin`** e testá-los diretamente
+(`k_new = cc[833:865] XOR cosmic_A[280:312] → O.check_privkey`). Rotas falsificáveis, em
+ordem de custo: (i) **Wayback/CDX exaustivo por `.bin`** em `gsmg.io/*` e subpaths pré-2023
+(`web.archive.org/cdx/search/cdx?url=gsmg.io*&matchType=domain&filter=original:.*\.bin`) —
+qualquer `.bin` de ≥312 B com `sha256` começando `cd3fea3d` fecha a conta; ausência refuta a
+hipótese "side file arquivável". (ii) **GitHub code-search global** por `cd3fea3d` bruto (não
+só `ca[280:312]`) em todos os 65+ forks e gists — hit = artefato; 0 = reforça "externo/
+privado". (iii) Se e quando a senha do blob oculto `cc[158:]` (salt `5bbd88ac…`, CT 1152 B,
+150+ senhas já falharam) aparecer, decifrá-lo e checar se o plaintext (≥312 B) tem
+`sha256=cd3fea3d…` — único candidato interno ainda não-esgotado. Enquanto `cd3fea3d…`
+permanecer sem bytes públicos, a fase é **terminal por falta de operando**, não por
+esgotamento algorítmico.
