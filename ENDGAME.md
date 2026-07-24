@@ -75,9 +75,14 @@ ou uma leitura do faed que a fixação no BTCSEED cegou. Controlar via skill `/g
    ("Crypto…") postado; nenhuma das 54 chaves afim invertíveis dá ASCII. Alucinação.
 2. **XOR key `818af53daa…`** (issues #69/#79/web): reproduz do XOR de sha256 de 7
    tokens, mas **não decifra** (padding PKCS7 do último bloco inválido; independe do IV).
-3. **XOR key `a795de117e4725…`** (PR #68): também falha no padding como `-K` direto no
-   formato salted. Só reproduzível se usada com `-nopad` + IV específico do método deles
-   — e mesmo assim o output é near-random (7.87 bits/byte = **outra camada cifrada**).
+3. ~~**XOR key `a795de117e4725…`** (PR #68): também falha no padding como `-K` direto no
+   formato salted.~~ **CORRIGIDO 2026-07-23 — o beco estava ERRADO.** `a795de11…` **não**
+   é chave `-K`: é a **PASSPHRASE** do Cosmic (os 32 bytes RAW via EVP_BytesToKey/MD5,
+   como `openssl -pass`). Re-verificado localmente: padding PKCS7 **válido** (0x01) →
+   **1327 bytes**, `sha256 = 4f7a1e4efe4bf6c5…a5e9c081` (anchor da comunidade, match
+   exato). O corpo é 38,9% ASCII — near-random **de propósito**: é uma matriz de bits,
+   não texto (por isso `aes_open`, que exige ≥90% ASCII, sempre devolveu `[]`).
+   Ver seção "Cadeia GalloClaudio64" abaixo.
 4. **Senhas AES diretas**: oráculo de padding sobre centenas de candidatos temáticos
    ({raw,upper,lower,sha256hex} × {sha256,md5} KDF) na Cosmic **e** no blob pequeno do
    SalPhaseIon → só falsos positivos (~esperado por acaso; todos <45% ASCII). Confirma
@@ -363,3 +368,57 @@ Todos os parâmetros **internos** da 1ª camada Bifid estão agora cobertos por 
 2. o único uso do matrixsumlist que ainda não colide com beco morto é **gramática de senha AES aplicada DEPOIS de decodificar o `faed`** (elo b) — mas só é testável quando o `faed` estiver aberto, o que depende de (1).
 
 Artefatos desta campanha em `scratchpad/debate/` (scripts A–D, F_* de fronteira, relatórios, SYNTHESIS.md).
+
+## Triagem 2026-07-23 — TODAS as 88 issues do GitHub (3 agentes + verificação local)
+
+Varredura completa das issues (#1–#99) em 3 clusters, com teste imediato de todo
+artefato concreto contra oráculo duro. Fato-guia: **prêmio on-chain intacto ⇒ toda
+"solução" é falsa por construção**; só o *método* pode ter valor.
+
+- **Cluster "Cosmic decifrada"** (#55, #66, #80, #91, #94, #99): **ruído/falso, 0 hits.**
+  A "master key" da #94 é o `a795de11…` re-embalado por LLM; o hash `36b5a88e9feac3f5…`
+  da #55 (repo jackdevs66) era o único não catalogado — testado (senha, privkey, `-K`
+  cru em 3 convenções de IV) → **negativo**. #80 é golpe (pede envio do prêmio para
+  `bc1q…`; assina com endereços `1JG648…`/`145ZQ9…` que NÃO são o prêmio e circulam
+  sem derivação também na #99).
+- **Cluster "hints do criador"** (#2–#77, 15 issues): **esgotado, nada novo.** #73
+  confirma que **o criador não posta no GitHub** (nenhuma issue é fonte primária).
+  Único micro-item: #77 nota a grafia deliberada "HUNDRED FOURTY" no monólogo do
+  Arquiteto — reforça o número-chave 140 já conhecido, sem operação nova.
+- **Cluster técnico** (#15, #17, #29, #51, #68, #81, #82, #87, #88, #92): **achado
+  substancial** — ver seção seguinte. Candidatos soltos da #15 (eazytest, mikorist,
+  9 hexes) → 0 hits; `04f4d1bbd9…` é o **pubkey**-alvo (h160 = `a9553269…` =
+  `TARGET_H160` do oráculo), conhecido desde 2023, não uma privkey.
+
+## Cadeia GalloClaudio64 (Chains 1→4) — REPRODUZIDA byte-a-byte; real, porém ESTÉRIL
+
+O pipeline das issues #68/#81/#82/#88, ausente deste arquivo até hoje, foi reproduzido
+localmente contra os próprios blobs do oráculo (agente + re-verificação independente
+do anchor central). **Todos os anchors SHA256 batem**:
+
+1. **CHAIN 1 — SMALL decodifica** (resolve #17/#29): senha
+   `matrixsumlist+enter+lastwordsbeforearchichoice+thispassword+matrixsumlist`
+   (com `matrixsumlist` DUPLICADO, EVP/MD5) → padding 0x01 válido → **79 B de key
+   material** (37% ASCII, não texto), cauda `E_C = 38d4f4c9…`. Por isso o `aes_open`
+   (≥90% ASCII) nunca o acusou.
+2. **CHAIN 3 — COSMIC decodifica**: passphrase = os 32 bytes RAW de `a795de117e4725…`
+   → **1327 B**, `sha256 = 4f7a1e4e…a5e9c081` (**re-verificado independentemente
+   nesta sessão**; corrige o beco #3 acima).
+3. **Matriz 103×103 → half/better_half** (#81): 1327 B → matriz de bits 103×103 (+7 pad);
+   invariantes reproduzidos (S=5193, p_big=58, `sha256(row_sums)=24c2fc3c…`,
+   `sha256(col_sums)=672905e9…`); `s[i]=(row_sums[i]+col_sums[(i+7)%103])&0xFF` →
+   base-38 → 68 B = `half(32) = 0423d911…` + `better_half(32) = 48cc46e6…` +
+   `tail fc0c1b02` (= "trail1" da #88).
+4. **CHAIN 4** (#88): `cc[158:]` XOR `b657264f2f6e6921` → `Salted__` (salt `5bbd88ac…`)
+   → AES com pw = `E_C‖E_S‖E_B[:2]` → **1151 B**, `sha256 = e4269ed5…` (match exato).
+
+**Veredito por oráculo duro: ESTÉRIL.** `check_privkey` em half/better_half (30 offsets
++ xor + sha), nas **1119 janelas de 32 B** do Chain4 e nos 35 blocos estruturados →
+**0 hits**. Confirma independentemente o "closed deterministic boundary" das #81/#82.
+
+**A fronteira real (pós-triagem):** derivar a privkey do **pubkey-alvo uncompressed
+`04f4d1bbd9…`** (h160 `a9553269…`). O passo que falta (#92: `k_new = cc[833:865] XOR
+ca[280:312]`) depende do operando **`cosmic_A`/`ca`, que NUNCA foi publicado**
+(confirmado por sweep de 65 forks + 82 issues + Wayback). Beco por **falta de fonte**,
+não por refutação — coerente com a conclusão da campanha do debate: o desbloqueio
+depende de informação externa nova.
