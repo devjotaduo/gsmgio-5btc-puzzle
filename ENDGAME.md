@@ -538,10 +538,12 @@ artefato real. O desbloqueio depende de **informação externa nova** — coeren
 **(4) Próximo passo REAL e falsificável que sobra.** Só há UM caminho não-especulativo:
 **recuperar os bytes reais de `cosmic_A.bin`** e testá-los diretamente
 (`k_new = cc[833:865] XOR cosmic_A[280:312] → O.check_privkey`). Rotas falsificáveis, em
-ordem de custo: (i) **Wayback/CDX exaustivo por `.bin`** em `gsmg.io/*` e subpaths pré-2023
-(`web.archive.org/cdx/search/cdx?url=gsmg.io*&matchType=domain&filter=original:.*\.bin`) —
-qualquer `.bin` de ≥312 B com `sha256` começando `cd3fea3d` fecha a conta; ausência refuta a
-hipótese "side file arquivável". (ii) **GitHub code-search global** por `cd3fea3d` bruto (não
+ordem de custo: (i) ~~**Wayback/CDX exaustivo por `.bin`**~~ **JÁ FEITO 2026-07-23 → NEGATIVO.**
+CDX `url=gsmg.io*&matchType=domain&filter=original:.*\.(bin|dat|raw|key|enc)` = **0 resultados**
+(sanidade: a mesma API retorna as capturas HTML de gsmg.io, então o vazio é real). Nenhum asset
+binário foi arquivado sob `gsmg.io`; a hipótese "side file arquivável" está **refutada** — se
+`cosmic_A` existiu, era artefato privado do autor da #88 ou hospedado fora. (ii) **GitHub
+code-search global** por `cd3fea3d` bruto (não
 só `ca[280:312]`) em todos os 65+ forks e gists — hit = artefato; 0 = reforça "externo/
 privado". (iii) Se e quando a senha do blob oculto `cc[158:]` (salt `5bbd88ac…`, CT 1152 B,
 150+ senhas já falharam) aparecer, decifrá-lo e checar se o plaintext (≥312 B) tem
