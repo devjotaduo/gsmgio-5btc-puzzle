@@ -304,7 +304,37 @@ Mesmo com ataque exaustivo verificado, o gargalo é o já diagnosticado pelo PR 
   (o "first hint"). Ampliar o conjunto de alfabetos-semente com a construção canônica de `dbbi`.
 - **Novo hint oficial**: o criador disse que liberaria mais um se não resolvido.
 
-## Ferramentas / artefatos locais
+## Frentes fechadas nesta sessão — endpoint/senha + transposição pós-Bifid (2026-07-23)
+Além do hill-climb do BIF_REST (acima), fechei mais três frentes determinísticas, todas com
+oráculo duro (AES SMALL+COSMIC / priv / BIP39). Scripts em `solver/`, logs em `_work/`:
+
+1. **Página SalPhaseIon tem texto oculto?** — `_work/salphaseion.html` (HTML bruto do Wayback,
+   descomprimido). **NÃO**: só as 2 `<textarea>` (dbbi/faed já transcritos) + 1 script. Nenhum
+   texto fora do conteúdo conhecido. Idem `theseedisplanted` = fase 2 (form oculto já resolvido
+   com `theflowerblossoms…`), não uma porta nova.
+2. **`first hint`/matriz/URL-hash como senha AES** (`solver/first_hint_sweep.py`, 56 cands):
+   matriz 14×14 (com/sem espaço), hash da URL `89727c…`, `GSMGIO5BTC…`, frase de cores,
+   `our first hint is your last command`, `ans too`, `shabef`, `followthewhiterabbit` — cada um
+   em raw/sha256hex × formas. **0 hits.** (result.json confirma: comunidade já exauriu isto.)
+3. **Frases-ANSWER decodificadas como senha** (`solver/answer_phrase_sweep.py`, 78 formas):
+   `lastwordsbeforearchichoice`/`thispassword` concatenadas/espaçadas/`enter+…`, em
+   raw/sha256/double-sha256. **0 hits.** (result.json: comunidade testou
+   `matrixsumlistenterlastwordsbeforearchichoicethispassword…` com openssl md5/sha256 — idem.)
+4. **Transposição colunar PÓS-Bifid** (`solver/bifrest_transpose.py`, 164 construções): o
+   `matrixsum_attack.py` só transpunha ANTES do Bifid; aqui transpus BIF_REST **e** BIF completo
+   por grades de largura temática (91,13,38,7,15,19,…570), com colunas lidas em ordem natural,
+   rowsum, colsum **e ordem-espiral da matriz** (validada: decodifica `theseedisplanted` exato).
+   **Top score −5.577 (baseline CANON puro), 0 oráculos abertos.** Transposição pós-Bifid não
+   revela texto — negativo.
+
+**Saldo da sessão:** 6 frentes fechadas, 0 solves. Confirmado (empírico + comunidade) que o
+gargalo NÃO é computacional. Todas as rotas de "endpoint" (frase→hash→AES) e de transposição
+mecânica estão cobertas por negativo. O desbloqueio exige a peça interpretativa que fixa a
+2ª camada — ninguém (comunidade em ~6 anos, nem esta sessão) a encontrou.
+
+**Pendência técnica:** `_work/joint_attack_v2.py` está corrompido em disco (o `ENDGAME.md` o
+chama de "único caminho computacional correto"). Restaurar via git antes de qualquer campanha
+computacional futura.
 - Blobs completos e **validados** inline no [README.md](README.md) (verbatim do domínio
   via Wayback; Cosmic idêntica à usada pela comunidade — mesmo salt `2d3f6fe0…`).
 - Skill `/solve-phase` (sha256→AES) e **oráculo de padding do último bloco** (barato,

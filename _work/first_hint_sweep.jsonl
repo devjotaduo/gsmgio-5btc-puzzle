@@ -1,0 +1,56 @@
+{"label": "url_hash_hex", "variant": "89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110", "mode": "sha256hex", "hits": []}
+{"label": "url_hash_hex", "variant": "89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110", "mode": "raw", "hits": []}
+{"label": "url_hash_hex", "variant": "89727C598B9CD1CF8873F27CB7057F050645DDB6A7A157A110", "mode": "sha256hex", "hits": []}
+{"label": "url_hash_hex", "variant": "89727C598B9CD1CF8873F27CB7057F050645DDB6A7A157A110", "mode": "raw", "hits": []}
+{"label": "url_src", "variant": "GSMGIO5BTCPUZZLECHALLENGE1GSMG1JC9wtdSwfwApgj2xcmJ", "mode": "sha256hex", "hits": []}
+{"label": "url_src", "variant": "GSMGIO5BTCPUZZLECHALLENGE1GSMG1JC9wtdSwfwApgj2xcmJ", "mode": "raw", "hits": []}
+{"label": "url_src", "variant": "gsmgio5btcpuzzlechallenge1gsmg1jc9wtdswfwapgj2xcmj", "mode": "sha256hex", "hits": []}
+{"label": "url_src", "variant": "gsmgio5btcpuzzlechallenge1gsmg1jc9wtdswfwapgj2xcmj", "mode": "raw", "hits": []}
+{"label": "url_src", "variant": "GSMGIO5BTCPUZZLECHALLENGE1GSMG1JC9WTDSWFWAPGJ2XCMJ", "mode": "sha256hex", "hits": []}
+{"label": "url_src", "variant": "GSMGIO5BTCPUZZLECHALLENGE1GSMG1JC9WTDSWFWAPGJ2XCMJ", "mode": "raw", "hits": []}
+{"label": "matrix_spaces", "variant": "0 0 1 1 0 1 0 0 1 0 1 1 0 0\n1 1 1 1 0 0 1 1 1 0 1 ", "mode": "sha256hex", "hits": []}
+{"label": "matrix_spaces", "variant": "0 0 1 1 0 1 0 0 1 0 1 1 0 0\n1 1 1 1 0 0 1 1 1 0 1 ", "mode": "raw", "hits": []}
+{"label": "matrix_spaces", "variant": "00110100101100\n11110011101011\n11011101001001\n01101", "mode": "sha256hex", "hits": []}
+{"label": "matrix_spaces", "variant": "00110100101100\n11110011101011\n11011101001001\n01101", "mode": "raw", "hits": []}
+{"label": "matrix_spaces", "variant": "0 0 1 1 0 1 0 0 1 0 1 1 0 01 1 1 1 0 0 1 1 1 0 1 0", "mode": "sha256hex", "hits": []}
+{"label": "matrix_spaces", "variant": "0 0 1 1 0 1 0 0 1 0 1 1 0 01 1 1 1 0 0 1 1 1 0 1 0", "mode": "raw", "hits": []}
+{"label": "matrix_spaces", "variant": "00110100101100111100111010111101110100100101101000", "mode": "sha256hex", "hits": []}
+{"label": "matrix_spaces", "variant": "00110100101100111100111010111101110100100101101000", "mode": "raw", "hits": []}
+{"label": "matrix_nospace", "variant": "00110100101100111100111010111101110100100101101000", "mode": "sha256hex", "hits": []}
+{"label": "matrix_nospace", "variant": "00110100101100111100111010111101110100100101101000", "mode": "raw", "hits": []}
+{"label": "color_phrase", "variant": "Roses are White but often Red. Yellow has a number", "mode": "sha256hex", "hits": []}
+{"label": "color_phrase", "variant": "Roses are White but often Red. Yellow has a number", "mode": "raw", "hits": []}
+{"label": "color_phrase", "variant": "roses are white but often red. yellow has a number", "mode": "sha256hex", "hits": []}
+{"label": "color_phrase", "variant": "roses are white but often red. yellow has a number", "mode": "raw", "hits": []}
+{"label": "color_phrase", "variant": "ROSES ARE WHITE BUT OFTEN RED. YELLOW HAS A NUMBER", "mode": "sha256hex", "hits": []}
+{"label": "color_phrase", "variant": "ROSES ARE WHITE BUT OFTEN RED. YELLOW HAS A NUMBER", "mode": "raw", "hits": []}
+{"label": "color_phrase", "variant": "RosesareWhitebutoftenRed.Yellowhasanumberandsodoes", "mode": "sha256hex", "hits": []}
+{"label": "color_phrase", "variant": "RosesareWhitebutoftenRed.Yellowhasanumberandsodoes", "mode": "raw", "hits": []}
+{"label": "first_hint", "variant": "our first hint is your last command", "mode": "sha256hex", "hits": []}
+{"label": "first_hint", "variant": "our first hint is your last command", "mode": "raw", "hits": []}
+{"label": "first_hint", "variant": "OUR FIRST HINT IS YOUR LAST COMMAND", "mode": "sha256hex", "hits": []}
+{"label": "first_hint", "variant": "OUR FIRST HINT IS YOUR LAST COMMAND", "mode": "raw", "hits": []}
+{"label": "first_hint", "variant": "ourfirsthintisyourlastcommand", "mode": "sha256hex", "hits": []}
+{"label": "first_hint", "variant": "ourfirsthintisyourlastcommand", "mode": "raw", "hits": []}
+{"label": "first_hint_nospace", "variant": "ourfirsthintisyourlastcommand", "mode": "sha256hex", "hits": []}
+{"label": "first_hint_nospace", "variant": "ourfirsthintisyourlastcommand", "mode": "raw", "hits": []}
+{"label": "first_hint_nospace", "variant": "OURFIRSTHINTISYOURLASTCOMMAND", "mode": "sha256hex", "hits": []}
+{"label": "first_hint_nospace", "variant": "OURFIRSTHINTISYOURLASTCOMMAND", "mode": "raw", "hits": []}
+{"label": "ans_too", "variant": "ans too", "mode": "sha256hex", "hits": []}
+{"label": "ans_too", "variant": "ans too", "mode": "raw", "hits": []}
+{"label": "ans_too", "variant": "ANS TOO", "mode": "sha256hex", "hits": []}
+{"label": "ans_too", "variant": "ANS TOO", "mode": "raw", "hits": []}
+{"label": "ans_too", "variant": "anstoo", "mode": "sha256hex", "hits": []}
+{"label": "ans_too", "variant": "anstoo", "mode": "raw", "hits": []}
+{"label": "anstoo", "variant": "anstoo", "mode": "sha256hex", "hits": []}
+{"label": "anstoo", "variant": "anstoo", "mode": "raw", "hits": []}
+{"label": "anstoo", "variant": "ANSTOO", "mode": "sha256hex", "hits": []}
+{"label": "anstoo", "variant": "ANSTOO", "mode": "raw", "hits": []}
+{"label": "shabef", "variant": "shabef", "mode": "sha256hex", "hits": []}
+{"label": "shabef", "variant": "shabef", "mode": "raw", "hits": []}
+{"label": "shabef", "variant": "SHABEF", "mode": "sha256hex", "hits": []}
+{"label": "shabef", "variant": "SHABEF", "mode": "raw", "hits": []}
+{"label": "followwhiterabbit", "variant": "followthewhiterabbit", "mode": "sha256hex", "hits": []}
+{"label": "followwhiterabbit", "variant": "followthewhiterabbit", "mode": "raw", "hits": []}
+{"label": "followwhiterabbit", "variant": "FOLLOWTHEWHITERABBIT", "mode": "sha256hex", "hits": []}
+{"label": "followwhiterabbit", "variant": "FOLLOWTHEWHITERABBIT", "mode": "raw", "hits": []}

@@ -1,0 +1,78 @@
+{"label": "lastwords", "variant": "lastwordsbeforearchichoice", "mode": "sha256hex", "hits": []}
+{"label": "lastwords", "variant": "lastwordsbeforearchichoice", "mode": "raw", "hits": []}
+{"label": "lastwords", "variant": "lastwordsbeforearchichoice", "mode": "double_sha256", "hits": []}
+{"label": "lastwords", "variant": "LASTWORDSBEFOREARCHICHOICE", "mode": "sha256hex", "hits": []}
+{"label": "lastwords", "variant": "LASTWORDSBEFOREARCHICHOICE", "mode": "raw", "hits": []}
+{"label": "lastwords", "variant": "LASTWORDSBEFOREARCHICHOICE", "mode": "double_sha256", "hits": []}
+{"label": "lastwords", "variant": "Lastwordsbeforearchichoice", "mode": "sha256hex", "hits": []}
+{"label": "lastwords", "variant": "Lastwordsbeforearchichoice", "mode": "raw", "hits": []}
+{"label": "lastwords", "variant": "Lastwordsbeforearchichoice", "mode": "double_sha256", "hits": []}
+{"label": "thispass", "variant": "thispassword", "mode": "sha256hex", "hits": []}
+{"label": "thispass", "variant": "thispassword", "mode": "raw", "hits": []}
+{"label": "thispass", "variant": "thispassword", "mode": "double_sha256", "hits": []}
+{"label": "thispass", "variant": "THISPASSWORD", "mode": "sha256hex", "hits": []}
+{"label": "thispass", "variant": "THISPASSWORD", "mode": "raw", "hits": []}
+{"label": "thispass", "variant": "THISPASSWORD", "mode": "double_sha256", "hits": []}
+{"label": "thispass", "variant": "Thispassword", "mode": "sha256hex", "hits": []}
+{"label": "thispass", "variant": "Thispassword", "mode": "raw", "hits": []}
+{"label": "thispass", "variant": "Thispassword", "mode": "double_sha256", "hits": []}
+{"label": "concat", "variant": "lastwordsbeforearchichoicethispassword", "mode": "sha256hex", "hits": []}
+{"label": "concat", "variant": "lastwordsbeforearchichoicethispassword", "mode": "raw", "hits": []}
+{"label": "concat", "variant": "lastwordsbeforearchichoicethispassword", "mode": "double_sha256", "hits": []}
+{"label": "concat", "variant": "LASTWORDSBEFOREARCHICHOICETHISPASSWORD", "mode": "sha256hex", "hits": []}
+{"label": "concat", "variant": "LASTWORDSBEFOREARCHICHOICETHISPASSWORD", "mode": "raw", "hits": []}
+{"label": "concat", "variant": "LASTWORDSBEFOREARCHICHOICETHISPASSWORD", "mode": "double_sha256", "hits": []}
+{"label": "concat", "variant": "Lastwordsbeforearchichoicethispassword", "mode": "sha256hex", "hits": []}
+{"label": "concat", "variant": "Lastwordsbeforearchichoicethispassword", "mode": "raw", "hits": []}
+{"label": "concat", "variant": "Lastwordsbeforearchichoicethispassword", "mode": "double_sha256", "hits": []}
+{"label": "concat_sp", "variant": "lastwordsbeforearchichoice thispassword", "mode": "sha256hex", "hits": []}
+{"label": "concat_sp", "variant": "lastwordsbeforearchichoice thispassword", "mode": "raw", "hits": []}
+{"label": "concat_sp", "variant": "lastwordsbeforearchichoice thispassword", "mode": "double_sha256", "hits": []}
+{"label": "concat_sp", "variant": "LASTWORDSBEFOREARCHICHOICE THISPASSWORD", "mode": "sha256hex", "hits": []}
+{"label": "concat_sp", "variant": "LASTWORDSBEFOREARCHICHOICE THISPASSWORD", "mode": "raw", "hits": []}
+{"label": "concat_sp", "variant": "LASTWORDSBEFOREARCHICHOICE THISPASSWORD", "mode": "double_sha256", "hits": []}
+{"label": "concat_sp", "variant": "lastwordsbeforearchichoicethispassword", "mode": "sha256hex", "hits": []}
+{"label": "concat_sp", "variant": "lastwordsbeforearchichoicethispassword", "mode": "raw", "hits": []}
+{"label": "concat_sp", "variant": "lastwordsbeforearchichoicethispassword", "mode": "double_sha256", "hits": []}
+{"label": "concat_sp", "variant": "LastwordsbeforearchichoiceThispassword", "mode": "sha256hex", "hits": []}
+{"label": "concat_sp", "variant": "LastwordsbeforearchichoiceThispassword", "mode": "raw", "hits": []}
+{"label": "concat_sp", "variant": "LastwordsbeforearchichoiceThispassword", "mode": "double_sha256", "hits": []}
+{"label": "rev", "variant": "thispasswordlastwordsbeforearchichoice", "mode": "sha256hex", "hits": []}
+{"label": "rev", "variant": "thispasswordlastwordsbeforearchichoice", "mode": "raw", "hits": []}
+{"label": "rev", "variant": "thispasswordlastwordsbeforearchichoice", "mode": "double_sha256", "hits": []}
+{"label": "rev", "variant": "THISPASSWORDLASTWORDSBEFOREARCHICHOICE", "mode": "sha256hex", "hits": []}
+{"label": "rev", "variant": "THISPASSWORDLASTWORDSBEFOREARCHICHOICE", "mode": "raw", "hits": []}
+{"label": "rev", "variant": "THISPASSWORDLASTWORDSBEFOREARCHICHOICE", "mode": "double_sha256", "hits": []}
+{"label": "rev", "variant": "Thispasswordlastwordsbeforearchichoice", "mode": "sha256hex", "hits": []}
+{"label": "rev", "variant": "Thispasswordlastwordsbeforearchichoice", "mode": "raw", "hits": []}
+{"label": "rev", "variant": "Thispasswordlastwordsbeforearchichoice", "mode": "double_sha256", "hits": []}
+{"label": "enter_lw_tp", "variant": "enterlastwordsbeforearchichoicethispassw", "mode": "sha256hex", "hits": []}
+{"label": "enter_lw_tp", "variant": "enterlastwordsbeforearchichoicethispassw", "mode": "raw", "hits": []}
+{"label": "enter_lw_tp", "variant": "enterlastwordsbeforearchichoicethispassw", "mode": "double_sha256", "hits": []}
+{"label": "enter_lw_tp", "variant": "ENTERLASTWORDSBEFOREARCHICHOICETHISPASSW", "mode": "sha256hex", "hits": []}
+{"label": "enter_lw_tp", "variant": "ENTERLASTWORDSBEFOREARCHICHOICETHISPASSW", "mode": "raw", "hits": []}
+{"label": "enter_lw_tp", "variant": "ENTERLASTWORDSBEFOREARCHICHOICETHISPASSW", "mode": "double_sha256", "hits": []}
+{"label": "enter_lw_tp", "variant": "Enterlastwordsbeforearchichoicethispassw", "mode": "sha256hex", "hits": []}
+{"label": "enter_lw_tp", "variant": "Enterlastwordsbeforearchichoicethispassw", "mode": "raw", "hits": []}
+{"label": "enter_lw_tp", "variant": "Enterlastwordsbeforearchichoicethispassw", "mode": "double_sha256", "hits": []}
+{"label": "firsthint_lw", "variant": "ourfirsthintisyourlastcommandlastwordsbe", "mode": "sha256hex", "hits": []}
+{"label": "firsthint_lw", "variant": "ourfirsthintisyourlastcommandlastwordsbe", "mode": "raw", "hits": []}
+{"label": "firsthint_lw", "variant": "ourfirsthintisyourlastcommandlastwordsbe", "mode": "double_sha256", "hits": []}
+{"label": "firsthint_lw", "variant": "OURFIRSTHINTISYOURLASTCOMMANDLASTWORDSBE", "mode": "sha256hex", "hits": []}
+{"label": "firsthint_lw", "variant": "OURFIRSTHINTISYOURLASTCOMMANDLASTWORDSBE", "mode": "raw", "hits": []}
+{"label": "firsthint_lw", "variant": "OURFIRSTHINTISYOURLASTCOMMANDLASTWORDSBE", "mode": "double_sha256", "hits": []}
+{"label": "firsthint_lw", "variant": "Ourfirsthintisyourlastcommandlastwordsbe", "mode": "sha256hex", "hits": []}
+{"label": "firsthint_lw", "variant": "Ourfirsthintisyourlastcommandlastwordsbe", "mode": "raw", "hits": []}
+{"label": "firsthint_lw", "variant": "Ourfirsthintisyourlastcommandlastwordsbe", "mode": "double_sha256", "hits": []}
+{"label": "both_spaced", "variant": "last words before archi choice this pass", "mode": "sha256hex", "hits": []}
+{"label": "both_spaced", "variant": "last words before archi choice this pass", "mode": "raw", "hits": []}
+{"label": "both_spaced", "variant": "last words before archi choice this pass", "mode": "double_sha256", "hits": []}
+{"label": "both_spaced", "variant": "LAST WORDS BEFORE ARCHI CHOICE THIS PASS", "mode": "sha256hex", "hits": []}
+{"label": "both_spaced", "variant": "LAST WORDS BEFORE ARCHI CHOICE THIS PASS", "mode": "raw", "hits": []}
+{"label": "both_spaced", "variant": "LAST WORDS BEFORE ARCHI CHOICE THIS PASS", "mode": "double_sha256", "hits": []}
+{"label": "both_spaced", "variant": "lastwordsbeforearchichoicethispassword", "mode": "sha256hex", "hits": []}
+{"label": "both_spaced", "variant": "lastwordsbeforearchichoicethispassword", "mode": "raw", "hits": []}
+{"label": "both_spaced", "variant": "lastwordsbeforearchichoicethispassword", "mode": "double_sha256", "hits": []}
+{"label": "both_spaced", "variant": "LastWordsBeforeArchiChoiceThisPassword", "mode": "sha256hex", "hits": []}
+{"label": "both_spaced", "variant": "LastWordsBeforeArchiChoiceThisPassword", "mode": "raw", "hits": []}
+{"label": "both_spaced", "variant": "LastWordsBeforeArchiChoiceThisPassword", "mode": "double_sha256", "hits": []}
