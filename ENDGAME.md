@@ -289,3 +289,60 @@ Mesmo com ataque exaustivo verificado, o gargalo é o já diagnosticado pelo PR 
   independe do IV) para triagem de chaves candidatas.
 - Pesquisa de referência: **PR #93** (`halbgott29a`, `FINDINGS.md` + `_work/`) e
   **PR #68 / issue #88** (`GalloClaudio64`, `zemnovodnuy`, `robotixcoder`).
+
+## Campanha 2026-07-23 — debate multi-agente (round 1+2, verificado por oráculo)
+
+Sete agentes (4 debatedores + 3 céticos adversariais) mais 3 leads de fronteira atacaram o endgame Salphaseion/Cosmic Duality. **Resultado global: 0 solves de oráculo duro.** Tudo negativo, mas o espaço-problema estreitou de forma concreta e reprodutível. Todos os números abaixo vêm de `aes_open`/`check_privkey`/`check_mnemonic` (verdade dura), nunca de legibilidade — a legibilidade aparece só como triagem/controle.
+
+### 1) As 4 teses e por que cada uma cai
+
+| Tese | Frente | Resultado duro | Melhor sinal (só triagem) |
+|---|---|---|---|
+| **A — matrixsumlist como operador aritmético/keystream/transposição** sobre as strings a-i | 202 construções | 0 oráculo duro; a3 = 0 hits em 37.114 formas | readable -6.40, **pior** que baseline -5.58; null-model (400 keystreams aleatórios) igual aos 168 reais |
+| **B — Vigenère/Beaufort chaveado** sobre bif_rest/bif_full A-Z | sweep A-Z e A-Z-sem-J | `aes_open(REST)` e as 6 formas (raw/lower/upper × 3 sha256) = `[]` | melhor decode -6.307 é **pior** que o cru -5.590; períodos 15/38 são fatores de 570 (BIF cheio), não de 563 (REST, primo) |
+| **C — cauda = entropia BIP39** (bytes → privkey/mnemônico) | c2a índices 11-bit + c2b entropia→mnemonic | 0 match; check_mnemonic = False | apofenia de checksum (~1/16), nunca deriva `1GSMG...` |
+| **D — keyword travado, só o filler varia** no quadrado Bifid | hill-climb 12×3000 | converge ao filler alfabético exato; baseline full solve=False, 0 hits | outlier alfabético usado honestamente como "ótimo mas no ruído", nunca como solve |
+
+### 2) O que a verificação adversarial confirmou / ressalvou
+
+Os 4 céticos reproduziram byte-a-byte a partir do Python312 do `solver/`. **Todos os 4 negativos se sustentam** (`negative_sound=true`, `method_ok=true`). Confirmações e ressalvas reais:
+
+- **Motor de oráculo genuíno** (A, B, D): `aes_open` faz EVP MD5+SHA256, PKCS7, corte 90% ascii; rejeita lixo e `sha256('test')` sem falso-positivo. Não é legibilidade disfarçada.
+- **Controle negativo válido** (B): inglês cifrado é recuperado a -3.966, separando limpo do pelotão (-6.3) e do random (-7.85).
+- **FURO de completude fechado pelos próprios céticos** (rodaram e também deu negativo):
+  - A: ramo **aditivo** (Vigenère/Beaufort mod-26/25) sobre bif_rest A-Z — nunca coberto por a1(mod-9)/a2(transposição). 672 construções, 0 hits, readable -7.46.
+  - B: Vigenère/Beaufort no alfabeto **CANON25** (DBIFHCEGA..., o espaço Polybius real) — 10 chaves temáticas, melhor -7.432, 0 solves.
+  - C: varredura **densa** da entropia (step=1, antes só step=11) + cauda **digit-reversed** (o código só invertia BYTES, nunca a ordem dos DÍGITOS antes da conversão de base) — 3.390 derivações, 0 match.
+  - D: canal controlável-183 **isolado** — filler não-alfabético bate o alfabético (-6.823 vs -7.313), mas o texto continua lixo.
+- **Furo metodológico honesto que NÃO derruba o veredito** (B): o braço BIP39 de `hard_oracles` é **inerte** — A1Z26 gera índices 0..25 e `WORDLIST[i%2048]` só toca `palavras[0..25]`, então `check_mnemonic` foi chamado mas nunca teve chance real de disparar. "0 BIP39" ali é teste vazio, não evidência. O veredito vive de inglês+AES, que são sólidos.
+
+### 3) Os 3 leads novos de fronteira
+
+| Lead | n_testes | Solve | Veredito |
+|---|---|---|---|
+| **índice-cumulativo** (matrixsumlist como ÍNDICE de seleção → string-14 → chave) | 2.564 | ❌ | NEGATIVO. 249 "BIP39 válidos" apareceram, mas o **null-model os mata: 100% (3000/3000)** de seleções aleatórias de 14 chars reproduzem o mesmo efeito checksum, 0 match real. Leitura posicional do matrixsumlist esgotada (complementa o beco aritmético). |
+| **canal-ímpar-285** (o único canal Bifid com payload real, como material de chave cru) | 36.619 | ❌ | **NEGATIVO FORTE.** Não é chave em nenhuma base (25/26/16/10), janela ou endianidade, nem após 2ª camada de keystream mod-25/26/9 chaveada por dbbi/matrixsumlist/BTCSEED. Fecha os "próximos passos" que C e D deixaram abertos. |
+| **alfabeto-1a-camada** (7 quadrados naturais × 13 períodos temáticos) | 273 views / 91 runs | ❌ | **NEGATIVO FORTE.** `canon_ij|p570` é o topo em TODAS as views (full -5.577); nenhuma variante de merge/filler/período o supera — variar só DEGRADA o único sinal robusto. O parâmetro da 1ª camada Bifid é o ótimo. |
+
+### 4) FATO ESTRUTURAL novo (par vs ímpar do Bifid)
+
+Confirmado independentemente por D e pelo lead canal-ímpar-285: dos 570 símbolos do render Bifid (== bif_full, começa com BTCSEED),
+
+- **o canal PAR está travado em 4 símbolos {B,C,D,E}** (idx ∈ {0,1,5,6}) — é artefato estrutural do quadrado canônico, carrega ≤2 bits/char, **sem informação de payload**;
+- **o canal ÍMPAR-285 varre as 25 letras** — é o **único canal com payload real**;
+- das 285 posições, **183 são controláveis e 102 estão travadas**; e (segundo lock, que D subestimou) as 183 livres só admitem **K-Z, sem vogais A/E/I** — logo esse canal é estruturalmente incapaz de conter inglês cru.
+
+**Implicação:** qualquer tese de "seed/chave crua lida direto do Bifid" está morta — o payload não está na superfície do quadrado. O material aproveitável é só o canal ímpar, e ele já foi exaustivamente refutado como chave direta sob ≤1 camada Vigenère temática.
+
+### 5) Adendo — último lead fechado (transposição colunar por matrixsumlist)
+
+O único lead que a síntese deixara nomeado — `matrixsumlist` como **ordem-de-leitura** (transposição colunar keyed pela lista de somas CRUA `[6,10,8,...]`, não soma nem seleção) — foi testado depois (`scratchpad/debate/F_last_transposition.py`): transposição por row/col (e reversos) sobre canal-ímpar/full/rest/par, extração de bytes em 5 bases × janelas × 2 endianidades + sha256→privkey + senha AES + entropia BIP39 = **1.280 consultas a oráculo duro, 0 hits.** A transposição colunar por matrixsumlist sobre qualquer canal do Bifid também está esgotada.
+
+### 6) Estado após a campanha — o gargalo é EXTERNO
+
+Todos os parâmetros **internos** da 1ª camada Bifid estão agora cobertos por negativo reprodutível: quadrado, período, merge, filler, canal (par/ímpar), e as três leituras do matrixsumlist (aritmética, posicional/índice, transposição). O gargalo comprovadamente **não está na 1ª camada** — está na **2ª camada sobre o payload pós-BTCSEED, cujo parâmetro é externo e desconhecido**. O oráculo AES é sem-gradiente (busca cega não converge), então a recomendação verificada é **parar de varrer o Bifid** (esgotado) e:
+
+1. **buscar info nova do criador** (o hint que fixa o alfabeto/senha-raiz da 2ª camada) — o desbloqueio real;
+2. o único uso do matrixsumlist que ainda não colide com beco morto é **gramática de senha AES aplicada DEPOIS de decodificar o `faed`** (elo b) — mas só é testável quando o `faed` estiver aberto, o que depende de (1).
+
+Artefatos desta campanha em `scratchpad/debate/` (scripts A–D, F_* de fronteira, relatórios, SYNTHESIS.md).
