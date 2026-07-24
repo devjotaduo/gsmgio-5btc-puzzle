@@ -542,10 +542,11 @@ ordem de custo: (i) ~~**Wayback/CDX exaustivo por `.bin`**~~ **JÁ FEITO 2026-07
 CDX `url=gsmg.io*&matchType=domain&filter=original:.*\.(bin|dat|raw|key|enc)` = **0 resultados**
 (sanidade: a mesma API retorna as capturas HTML de gsmg.io, então o vazio é real). Nenhum asset
 binário foi arquivado sob `gsmg.io`; a hipótese "side file arquivável" está **refutada** — se
-`cosmic_A` existiu, era artefato privado do autor da #88 ou hospedado fora. (ii) **GitHub
-code-search global** por `cd3fea3d` bruto (não
-só `ca[280:312]`) em todos os 65+ forks e gists — hit = artefato; 0 = reforça "externo/
-privado". (iii) Se e quando a senha do blob oculto `cc[158:]` (salt `5bbd88ac…`, CT 1152 B,
+`cosmic_A` existiu, era artefato privado do autor da #88 ou hospedado fora. (ii) ~~**GitHub
+code-search global** por `cd3fea3d` bruto~~ **JÁ FEITO 2026-07-23 → NEGATIVO.**
+`gh search code cd3fea3d` e `cosmic_A.bin` = só coincidências de substring em repos sem
+relação (blacktop/ipsw, cms-sw, audreyt/parse-afp); nenhum `cosmic_A.bin` publicado. Reforça
+"externo/privado, nunca publicado". (iii) Se e quando a senha do blob oculto `cc[158:]` (salt `5bbd88ac…`, CT 1152 B,
 150+ senhas já falharam) aparecer, decifrá-lo e checar se o plaintext (≥312 B) tem
 `sha256=cd3fea3d…` — único candidato interno ainda não-esgotado. Enquanto `cd3fea3d…`
 permanecer sem bytes públicos, a fase é **terminal por falta de operando**, não por
