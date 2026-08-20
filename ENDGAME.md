@@ -864,3 +864,78 @@ endgame conhecido; o domínio morreu e virou parking; o único hash-artefato rea
 leva a parking sem conteúdo. Se a "outra porta" existiu, seu conteúdo se perdeu com o domínio
 (nunca arquivado na era ativa). Reforça que o desbloqueio é a **regra de derivação dos 35
 blocos**, não uma URL/página a mais.
+
+## Sessão 2026-08-20 (e) — BIP39 `blood→blind`, anomalia 163 e matriz DBBI
+
+Uma construção nova e reproduzível surgiu da discussão de `gnomad` no Telegram
+(2024-10-22, ids 28055–28087): as 24 casas coloridas podem ser separadas em dois grupos de
+12 com soma 1188 ao mover `7,15,31`; o índice BIP39 zero-based 1188 é `nest`. Mais forte:
+os 11 índices **primos** coloridos
+`[7,23,31,47,71,79,103,127,151,167,191]`, acrescidos da anomalia FEFEFE=`163` na ordem
+numérica, dão as palavras BIP39
+`abstract actual advance album angry antique artefact avocado base behave belt blood`.
+O checksum é inválido; recomputá-lo altera somente o último índice `191→190`, isto é,
+**`blood→blind`**, literalmente zerando o último bit. A mnemonic corrigida é válida e a
+soma de seus índices é 1159, cuja palavra BIP39 zero-based é **`movie`**. O encaixe é
+coerente com *"in front of your eyes but you're not seeing it"* e com o passo seguinte do
+roadmap, *"last words before archi choice"*. Não há mensagem no export do Telegram que
+registre essa correção de checksum ou a saída `movie`.
+
+Teste falsificável (`solver/anomaly_dbbi_attack.py`): interpretei *"the anomaly revealed as
+both beginning, and end"* como a lista de 13 colunas
+`[163,7,23,31,47,71,79,103,127,151,167,191,163]` (também com `191→190`). O produto
+`DBBI(7×13) × lista(13×1)` fornece sete escalares, que foram alinhados às sete palavras de
+quatro bytes do header e aos sete grupos de cinco blocos do Chain4. Foram cobertas somente
+as leituras motivadas: `a=0/1`, lista raw/mod-9, ordem direta/reversa, cores B/Y opostas,
+alternância, metades opostas e os sete sinais `+/-` do prefixo.
+
+- **288 hipóteses estruturais**, **71.922 chaves AES únicas**, 71.922 testes de privkey
+  direta e **2.517.270** plaintexts AES-ECB de 32 B comparados à pubkey do prêmio:
+  **0 hard hits e 0 soft hits**.
+- Os DBBIs deslocados produziram só 44 quadrados Bifid distintos; o melhor plaintext
+  pontuou −6,2899, pior que o baseline canônico `BTCSEED…` (−5,5770). Nenhum abre a
+  fronteira.
+- Na leitura mais natural (checksum corrigido, `a=1…i=9`, sinais alternados), os sete
+  produtos são `[-140,258,1568,-507,-573,2545,256]`. O `−140` da primeira linha é raro:
+  num null-model de **1.000.000** de embaralhamentos do mesmo multiconjunto DBBI,
+  `|dot|=140` na primeira linha ocorreu 509 vezes (0,0509%); em qualquer linha, 3.396
+  (0,3396%). É sugestivo, mas foi observado após explorar várias leituras, portanto não é
+  prova isolada.
+- Um sinal ainda mais forte aparece ao reduzir esses sete produtos módulo 26. Antes de
+  corrigir o checksum, a polaridade alternada oposta dá **`PHASHFG`**; depois de
+  `191→190`, dá **`QYINZXW`**. Logo `HASH` e `YIN` estão literais, sem corrigir ou
+  permutar letras. No mesmo milhão de nulls, `HASH` surgiu 10 vezes (0,001%), `YIN` 269
+  (0,0269%) e **ambos juntos, zero vezes**. A busca exata no Telegram também não encontra
+  `PHASHFG`, `QYINZXW`, `HASH YIN` ou `blood blind`: a observação parece inédita. O
+  null-model é condicionado à leitura natural escolhida e não corrige todo o viés de
+  seleção retrospectiva; por isso sustenta a pista, mas não a transforma sozinho em prova.
+- O Telegram já interpreta `HUNDRED FOURTY` como o comprimento, incluindo `0x`, do hex do
+  headline do bloco gênese usado na fase anterior (ids 6144, 13453 e 26099). Como
+  `140=35×4`, os 140 caracteres foram divididos em 35 quartetos, um por bloco final, nas
+  orientações 7×5/5×7: 288 famílias, 10.080 testes de chave direta e 20.160 decifrações
+  AES-ECB/CBC com header. Novamente **0 hard/soft hits**.
+- `HASH(YIN)` foi testado como SHA-256 literal e como o hash do lado BIP39 corrigido
+  (`…belt blind`: frase, entropia e seed), junto de `hash(YANG)`, XOR, soma/subtração,
+  concatenações, meias-metades e operações por bloco: 545 chaves, 76.300 candidatos AES e
+  7.280 candidatos algébricos, **0 hits**. A leitura **sete letras = sete senhas**
+  (`HASHYIN`, `YINYANG`, `PHASHFG`, `QYINZXW`) sobre os sete grupos de cinco blocos também
+  falhou: 288 famílias, 696 chaves, 20.160 plaintexts e 10.944 agregações, **0 hits**.
+
+Reprodução: `./puzzle-env/Scripts/python.exe solver/anomaly_dbbi_attack.py`; relatório
+completo em `_work/anomaly_dbbi_attack.json`.
+
+**Veredito — CORRIGIDO por verificação de oráculo (Claude, 2026-08-20).** O veredito
+anterior ("null-model forte, provavelmente instrução autêntica") **não se sustenta**: as
+próprias taxas medidas são **nível-acaso**, não enriquecidas. Analiticamente, num string de
+7 letras A-Z: `P('HASH')=8,75e-6` (medido 1,0e-5) e `P('YIN')=2,84e-4` (medido 2,69e-4) —
+**idênticas ao aleatório** ⇒ a matriz real NÃO produz HASH/YIN mais que uma embaralhada. O
+`joint=0/1M` é o esperado (prob. conjunta ~2,5e-9), não raridade reveladora. Some-se a isso:
+(i) a seed é **auto-construída** da "prime list" (índices `[7,23,31,47,71,79,103,127,151,163,
+167,190]`, todos primos + `blood→blind` só força o checksum ~1/16); (ii) **incoerência** —
+`HASH` sai de `PHASHFG` (leitura PRÉ-correção, descartada) e `YIN` de `QYINZXW` (PÓS-correção):
+mistura rascunho com resposta; (iii) o oráculo **já falsificou** toda mecanização (`HASH(YIN)`,
+mnemonic, `HASH(YANG)`, XOR, ±, 7 senhas, header/35-blocos = 0 hard/soft hits). A saída "YIN =
+algum artefato, não a palavra" é **mover a trave** (unfalsificável). **Conclusão: apofenia,
+FRENTE FECHADA.** Preservar só `140` como checkpoint numérico e `movie` como curiosidade — não
+reabrir `blood→blind→HASH(YIN)` sem uma regra com **predição-antes-do-teste + zero graus de
+liberdade + fechamento de oráculo** (os três juntos; nenhum presente aqui).
