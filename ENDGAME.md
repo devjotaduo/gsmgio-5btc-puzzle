@@ -757,3 +757,23 @@ sha256 canônicos (chain4 `e4269ed5…`, blocks `43d3fe43…`, half `b9736fe0…
 **Saldo:** nenhuma surpresa — reforça o veredito. A superfície do Chain4 não tem texto, a
 dualidade não é key+IV, e a privkey não é composição trivial das duas metades. O bloqueio
 segue **externo/interpretativo** (regra que converte prefixo/header28/35 blocos na chave).
+
+### Lacuna fechada — frases-roadmap/comunidade contra a FRONTEIRA (não só SMALL/COSMIC)
+Mineração do `result.json` (agente `telegram-digger`) esclareceu que os "hints 2023–2026"
+são, em maioria, **releituras de UMA frase-roadmap** que o criador decodificou (binário
+revertido, 2023-02-25, id 8448): `yellowblueprimes · matrixsumlist ·
+lastwordsbeforearchichoice · yinyang · wewontgiveawaythepassword ·
+itsinfrontofyoureyesbutyourenotseeingit · verylaststepisatruegiveaway · promised`. Logo
+`yinyang`/"in front of your eyes"/"give away" são **pedaços da mesma string**, não hints
+independentes. Propostas concretas da comunidade (todas **não-testadas/​não-confirmadas**):
+"The Venus Project" e "The Choice Is Ours" (doc. do Venus Project, p/ o slot
+`lastwordsbeforearchichoice`) como senha; `eps3.5_kill-process.inc` (Mr. Robot); FEFEFE via
+Baudot/ITA2 → `NXBPGBBKFSQLVXJDNYBPRBJSFSBQ`; "tiny hint" = `<`/LSB/TINY INT (BIP39 já
+refutado por null-model). **Fato-chave:** o `roadmap_sweep.py` antigo testou essas frases só
+contra **SMALL/COSMIC — que já estão abertos** (são entradas da cadeia), então era teste
+vazio na fronteira. Fechei a lacuna: **47 frases** (roadmap ordenado, frase-meta inteira,
+Venus/Choice-Is-Ours/Fresco, cosmic-duality, tiny-hint) × formas {raw, UPPER=HASHTHETEXT,
+lower} testadas na **fronteira real** — `sha256(frase)` como **privkey** direta ("give
+away") e como **chave AES-256 dos 35 blocos** (CBC IVs z/header/half + ECB, dupla-sha256) →
+**0 padding-válido, 0 privkey-hit**. As frases-roadmap não abrem a fronteira. O "give away"
+final **não** é `sha256` de nenhuma frase conhecida.
