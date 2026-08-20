@@ -12,6 +12,10 @@ Prêmio ainda **não sacado**: ~1.256 BTC em
 (≈125 txs, todas "dust"). Nenhuma "solução" pública é real.
 
 ## A fronteira real
+**Atualização 2026-08-20:** a frente `dbbi`/`faed` abaixo é histórica. A cadeia pública
+agora é reproduzível até o plaintext canônico do Chain4; a fronteira atual é derivar a
+única chave AES que abre os 35 blocos finais. Ver "Auditoria 2026-08-20" abaixo.
+
 O endgame reduz a decodificar **duas strings** sobre o alfabeto de 9 símbolos `a–i`,
 ambas extraídas da página SalPhaseIon:
 
@@ -442,47 +446,66 @@ artefato concreto contra oráculo duro. Fato-guia: **prêmio on-chain intacto �
   9 hexes) → 0 hits; `04f4d1bbd9…` é o **pubkey**-alvo (h160 = `a9553269…` =
   `TARGET_H160` do oráculo), conhecido desde 2023, não uma privkey.
 
-## Cadeia GalloClaudio64 (Chains 1→4) — parte VERIFICADA aqui, parte reportada; ESTÉRIL
+## Cadeia GalloClaudio64 (Chains 1→4) — VERIFICADA até o payload final
 
-O pipeline das issues #68/#81/#82/#88, ausente deste arquivo até hoje. **Verificação
-honesta**: os passos 1-3 abaixo foram reproduzidos por mim contra os blobs commitados
-(âncoras batem); os passos 4-5 são **reportados pela comunidade e NÃO reproduzíveis só
-com o que está no repo** (dependiam do `result.json`/sessão anterior — ver seção cosmic_A).
+O pipeline das issues #68/#81/#82/#88 foi reproduzido byte a byte com os blobs do README
+e os valores públicos recuperados do `result.json`. O reprodutor mínimo está em
+`solver/final_chain.py`; todos os checkpoints abaixo são comparações explícitas, inclusive
+quando o Python roda com `-O`.
 
-**Verificado localmente nesta sessão (material commitado):**
 1. **CHAIN 1 — SMALL decodifica** (resolve #17/#29): senha
    `matrixsumlistenterlastwordsbeforearchichoicethispasswordmatrixsumlist`
    (com `matrixsumlist` DUPLICADO, EVP/MD5) → padding 0x01 válido → **79 B de key
    material** (`sha256 1449a217…`, 37% ASCII), com `E_C = 38d4f4c9…` no índice 64. Por
    isso o `aes_open` (≥90% ASCII) nunca o acusou.
-2. **CHAIN 3 — COSMIC decodifica**: passphrase = os 32 bytes RAW de `a795de117e4725…`
+2. **CHAIN 2 — blob curto decodifica**: senha = WIF não comprimido do primeiro escalar
+   do Chain1, `5K2byJ…pz8AT` (EVP/MD5) → **79 B**, `sha256 b40fce72…f4d004`, com
+   `E_S = 740a25de…a23a2` no índice 64.
+3. **CHAIN 3 — COSMIC decodifica**: passphrase = os 32 bytes RAW de `a795de117e4725…`
    (EVP/MD5) → **1327 B** = `cc`, `sha256 = 4f7a1e4e…a5e9c081` (corrige o beco #3).
-3. **CHAIN 4, passo XOR-triangle**: `cc[158:]` XOR chave repetida `b657264f2f6e6921` →
+4. **Matriz 103×103 → half/better_half**: os primeiros 10609 bits do Cosmic formam a
+   matriz; `secondary[i] = row_sum[i] + col_sum[(i+7)%103]`. Os 103 dígitos base-38
+   produzem exatamente 68 B = `0423d911…fcc35 ‖ 48cc46e6…23971 ‖ fc0c1b02`.
+5. **CHAIN 4, passo XOR**: `cc[158:-1]` XOR chave repetida `b657264f2f6e6921` →
    começa **exatamente** com `Salted__` + salt `5bbd88ac32481bca` (verificado byte-a-byte;
-   um XOR aleatório não produziria o header). Este passo é REAL e reproduzível.
+   um XOR aleatório não produziria o header). A senha AES é
+   `E_C‖E_S‖E_B[:2] = 38d4f4c9…a23a259cc`; o resultado tem **1151 B** e
+   `sha256 e4269ed5…ea135b`.
 
-**Reportado pela comunidade, NÃO reproduzido aqui (spec ausente do repo):**
-4. **CHAIN 4, plaintext final**: AES do blob acima com pw = `E_C‖E_S‖E_B[:2]` →
-   **1151 B**, `sha256 = e4269ed5…`. Tentei reproduzir o anchor com as composições de
-   senha disponíveis no material commitado → **não fechou** (`E_S`/`E_B` vêm de outras
-   chains cuja definição não está no repo).
-5. **Matriz 103×103 → half/better_half** (#81): 1327 B → matriz de bits 103×103 → base-38
-   → `half 0423d911…` + `better_half 48cc46e6…` + `tail fc0c1b02`. Âncoras (`row_sums`
-   24c2fc3c, `col_sums` 672905e9) reportadas por múltiplos solvers, mas o passo
-   base-38→half também não é reproduzível só com o commitado.
+O Chain4 termina em um prefixo de 31 B (`+-…7`) e **35×32 B** de ciphertext,
+`sha256 43d3fe43…35c142`. Half/better_half são chaves de endereços intermediários, não do
+prêmio. A fronteira canônica é a operação que deriva a chave AES-256 desses 35 blocos.
 
-**Veredito (comunidade + nossa varredura): ESTÉRIL.** `check_privkey` em half/better_half,
-nas 1119 janelas de 32 B do Chain4 e nos surrogatos de estágio reproduzíveis → **0 hits**
-(vadiksh85-pixel #81/#82: "closed deterministic boundary"; nossa caça ao cosmic_A confirma).
+## Auditoria 2026-08-20 — fronteira canônica
 
-**A fronteira real (pós-triagem):** derivar a privkey do **pubkey-alvo uncompressed
-`04f4d1bbd9…`** (h160 `a9553269…`). O passo que falta (#92: `k_new = cc[833:865] XOR
-ca[280:312]`) depende do operando **`cosmic_A`/`ca`, que NUNCA foi publicado**
-(confirmado por sweep de 65 forks + 82 issues + Wayback). Beco por **falta de fonte**,
-não por refutação — coerente com a conclusão da campanha do debate: o desbloqueio
-depende de informação externa nova.
+- `solver/final_chain.py` reproduz Chain1, Chain2, Cosmic, matriz/base-38, blob XOR e
+  Chain4 em execução normal, `python -O` e `python -m solver.final_chain`.
+- O formato exato do Chain4 é `+-` + 28 bytes + `7` + 35 blocos de 32 B.
+- O tail `fc0c1b02`, lido como bytes assinados, preenche `X,H,Y,Q` na tabela antiga e
+  produz cinco pares `(-4,2),(32,12),(4,27),(0,2),(-16,15)`. Reduzindo `(x,y)` módulo 14
+  e usando-os como `(coluna,linha)` da matriz inicial, obtêm-se
+  `(10,2),(4,12),(4,13),(0,2),(12,1)`: todos são células pretas/`1`. Logo a tabela gera
+  **`11111₂ = 31`**, exatamente o tamanho do prefixo e o offset do corpo de 35 blocos.
+  Este encaixe explica o corte de forma reproduzível; não deriva ainda a chave final.
+- A leitura alternativa dos cinco pares como permutações afins de uma grade 5×7 foi
+  testada com triângulo XOR, rotações pelo header28, soma/subtração e AES ECB/CBC:
+  **1334 chaves distintas, 0 hit** no endereço.
+- O encaixe direto `header28 ‖ fc0c1b02` (e ordem inversa) como AES-256 também falha.
+- `11111` como chave direta (`SHA256("11111")`, inteiro 31 ou byte `0x1f` repetido), em
+  AES ECB/CBC com IVs naturais do prefixo, também dá **0 hit**; sua função observada é
+  indicar o offset 31.
+- O HTML e os dois PNGs do `gsmg-archive.org` não trazem operando, comentário ou metadata
+  adicional; reproduzem os artefatos já transcritos.
+
+**Bloqueio restante:** a regra que converte o prefixo/tabela/35 blocos na única chave AES.
+Não há solução pública reproduzível nem chave privada do prêmio conhecida até esta data.
 
 ## Caça ao cosmic_A (#92) — 2026-07-23
+
+> **Nota 2026-08-20:** esta é uma trilha histórica e não o bloqueio canônico. O nome
+> `cosmic_A` aparece sem bytes, tamanho ou hash completo verificável; o Chain4 genuíno
+> independe dele e agora é reproduzível. Preserve os negativos abaixo, mas não trate
+> `cosmic_A` como requisito demonstrado do puzzle.
 
 **(1) O que `ca`/`cosmic_A` É segundo as issues/forks — e não há receita pública.**
 `ca == cosmic_A == cosmic_A.bin`, um arquivo binário identificado APENAS pelo prefixo
@@ -517,10 +540,9 @@ Verificação-chave: `sha256` de TODOS os artefatos conhecidos (`cc`=4f7a1e4e, `
 43cb531c, SMALL_plain=1449a217, `cc[158:]`=018e1dc4, `cc[0:312]`=f765af6f, COSMIC-SHA256KDF=
 8d3ef569) — **NENHUM começa com `cd3fea3d`**. Logo `cosmic_A` não é fatia nem transform
 trivial de nenhum artefato que temos. `cc` NÃO contém bloco `Salted__` embutido (refuta a
-hipótese de dupla-camada). O plaintext genuíno do Chain4 (1151 B, `e4269ed5…`) é
-IRRECONSTRUÍVEL a partir do que está commitado (o passo base-38→half/better_half e as
-definições E_S/E_B da senha viviam em `result.json`/sessão anterior) — testamos os
-surrogatos de estágio reproduzíveis; o Chain4 genuíno já fora varrido (1119 janelas) → 0.
+hipótese de dupla-camada). **Correção 2026-08-20:** o plaintext genuíno do Chain4
+(1151 B, `e4269ed5…`) e a matriz half/better_half foram reconstruídos; a afirmação antiga
+de irreprodutibilidade estava errada. A varredura de janelas continua negativa.
 
 **(3) VEREDITO: `ca`/`cosmic_A` é EXTERNO, não derivável do material conhecido — e NÃO
 fechou.** Convergência de três evidências independentes: (a) o consenso explícito das
@@ -551,3 +573,74 @@ relação (blacktop/ipsw, cms-sw, audreyt/parse-afp); nenhum `cosmic_A.bin` publ
 `sha256=cd3fea3d…` — único candidato interno ainda não-esgotado. Enquanto `cd3fea3d…`
 permanecer sem bytes públicos, a fase é **terminal por falta de operando**, não por
 esgotamento algorítmico.
+
+## Sessão 2026-08-20 — hints 2026 do criador + trilha on-chain GSMG (tudo NEGATIVO em oráculo)
+
+**Correção de registro:** `solver/final_chain.py` (commitado) reproduz **toda** a cadeia
+Chain1→4 com asserts — inclusive a senha do blob oculto `cc[158:-1]` (XOR `b657264f…`),
+que seções acima ainda tratavam como desconhecida ("150+ senhas falharam"). Chain4 =
+1151 B, `sha256=e4269ed5…` confirmado localmente. Varredura final desta sessão: **4750
+janelas de 32 B** em todos os estágios (chain1/chain2/cosmic/chain4/half/better_half/
+sha256 de cada) → **0 hits** em `check_privkey`. A cadeia pública é estéril, reconfirmado.
+
+### (a) Hints do criador em 2026 (estavam fora deste arquivo — extraídos do `result.json`)
+- **2026-01-01 00:15–00:20** — cinco mensagens `.` `..` `...` `....` `.....` seguidas de
+  binário que decodifica para: `Happy new year! Make the best of everything. Oh, and
+  here's a "tiny hint" <3.` A "tiny hint" nunca foi identificada com certeza (candidatos:
+  os pontos 1-5, a frase, `<3`).
+- **2026-03-03** — visita ao grupo. Sequência-chave: gnomad aponta o comentário de DG
+  *"it's in front of your eyes but you're not seeing it"* → criador responde **"Bingo"**.
+  DG perguntou se era recomendação de ler **"Looking Forward"** (livro de Jacque Fresco,
+  1969) — sem resposta direta; criador disse *"Jacque was quite an inspiring lad"* e que
+  ia "rewatch episode 3.5 with the better half" (Mr. Robot, cf. `eps3.4_…` da fase 2).
+- **2026-05-28** — *"Ah, ofcourse. The puzzle is still valid!"* (sites fora do ar não
+  importam; comunidade mantém espelho em `gsmg-archive.org`).
+- Reancoragem: o **roadmap** atribuído ao criador (binário revertido, 2023-02-25):
+  `yellowblueprimes → matrixsumlist → lastwordsbeforearchichoice → yinyang` +
+  *"we wont give away the password its in front of your eyes but you're not seeing it"* +
+  *"very last step is a true give away promised"*. E 2023-08-06: *"Once you hit a ying
+  yang, you'll be able to solve it the same day."*
+
+### (b) Testes desta sessão (oráculo duro, todos NEGATIVOS)
+1. **`five_gaps.py`** (escrito em 2026-07-23, nunca rodado — agora executado): 5 lacunas
+   determinísticas (concat ordenada dos tokens da página, HASHTHETEXT sobre a matriz,
+   sha256 de URLs, 101 mod 9 como shift escalar no faed + Bifid, sha256(matrixsumlist/
+   101)) → **0 hits** (`_work/five_gaps.jsonl`).
+2. **`roadmap_sweep.py`** (novo): 368 senhas da gramática do roadmap (permutações
+   ordenadas, caudas, `yinyang`/`salvation`, extração YB-primos do Denis Golovkin
+   `ncsyangcahiriasogaleafayanestve`, frases do "tiny hint") × {raw, sha256, upper,
+   double} → **0 hits** em SMALL/COSMIC (`_work/roadmap_sweep.jsonl`).
+3. **Varredura on-chain das 125 txs do prêmio** (nunca documentada aqui): OP_RETURNs são
+   ruído de terceiros ("The answer is women", "There is no spoon", "THEMATRIXHASYOU",
+   passwords candidatos pulverizados em 2026-02-24). **Achado real:** o endereço
+   **`3GSMG24TujqfMJG1kQoBX18DzJHQLeJYMK` é operacional do criador desde 2020-03**
+   (OP_RETURNs "GSMG.io: Right, this is causality", "phase3.2 pass OK", "You are here
+   because 227 chars were correct", "Good job, Neo!", "Halving" 2020-05-11 — o dia do
+   halving que reduziu o prêmio — e 2021-07-18 **"GSMG.io neighbors, half and double"**
+   pagando 5000 sats a 4 endereços: `1G1kRAFR68…`, `16eEXbSuKN8…`, `1KHMK2C8uBpt…`,
+   `1PhXF3xVQ8Sg…`). Essa mensagem de 2021 é um hint primário pouco conhecido:
+   **"neighbors, half and double"** (cf. "HALF AND BETTER HALF").
+4. **Trilha 1GSMG9VDLTU6 (2026-05-15/16)**: vanity barato (1GSMG = ~minutos; comunidade,
+   "ns": "don't believe the spam") enviou 5 OP_RETURNs (`hereismysecret`,
+   `leavethematrix`, `isolveditwithanabacus`, `yourlastcommand`, `secondanswer`), depois
+   **`GSMGJH`+65 B** (tx `808f812f…`, blk 949653) e **`GSMGBH`+65 B**, e um pointer
+   `GSMG WITNESS BLK 949653 TX 808f812f` **para o endereço do prêmio**. Os 65 B têm
+   formato de assinatura compacta Bitcoin (header 0x20/0x1f na faixa 27–34).
+   `gsmg_sig_recover.py`: recuperação ECDSA com 45 mensagens candidatas × todos os
+   headers → **0 endereços interessantes recuperados** (sem a mensagem exata, não fecha).
+   Bateria direta: 1195 candidatos (fatias 32 B, XOR JH^BH, sha256 de formas) →
+   **0 privkey hits, 0 AES hits**. Veredito: provável cosplay/spam; mesmo se for hint,
+   não decodifica sem a mensagem assinada.
+5. **Imagem original recuperada** (`gsmg-archive.org` → `_work/archive/follow_the_white_rabbit.png`,
+   350×350 RGBA): re-verificação pixel-a-pixel confirma **todos** os fatos visuais deste
+   arquivo — 87 K / 83+1 W / 15 azuis / 9 amarelos; **FEFEFE exatamente em (7,4)** =
+   índice espiral **163 (primo)**; sequência colorida espiral `BBBBYBBBYYBBBBYBBYYBYYBY`
+   (24 casas) idêntica à usada nos ataques color-prime. Nada de novo na imagem.
+
+### (c) Estado após 2026-08-20
+Nada mudou a fronteira: `dbbi`/`faed` (2ª camada do pós-BTCSEED) e `cosmic_A` (operando
+externo inexistente em público) seguem como os dois bloqueios. Os hints 2026 do criador
+são **interpretativos** ("está na frente dos seus olhos", yin-yang = marco de
+proximidade), não operacionais. A observação on-chain "neighbors, half and double"
+(2021) é o único hint primário ainda não mapeado para uma operação concreta — candidato
+a futura hipótese falsificável (chaves vizinhas numéricas: k/2, 2k, k±n?).
