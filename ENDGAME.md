@@ -574,6 +574,44 @@ relação (blacktop/ipsw, cms-sw, audreyt/parse-afp); nenhum `cosmic_A.bin` publ
 permanecer sem bytes públicos, a fase é **terminal por falta de operando**, não por
 esgotamento algorítmico.
 
+## Sessão 2026-08-20 (b) — ECC fechado + Chain1→4 VALIDADA independentemente
+
+Frente ECC (curva elíptica) e re-verificação da cadeia, tudo por oráculo duro (endereço).
+
+**(1) ECC direto sobre a chave do prêmio — FECHADO.** O endereço `1GSMG1JC9…` **já gastou**
+(6 inputs em `88cdb3cd…` e `2aa9a4a9…`), revelando a pubkey
+`04f4d1bbd91e65…bf33559` (h160 `a9553269…` = `TARGET_H160`). Extraí `(r,s)` das 6 assinaturas:
+os **6 nonces `r` são distintos → sem reuso de nonce** → recuperação algébrica impossível.
+Só 6 assinaturas ⇒ lattice/nonce-enviesado inviável; ECDLP secp256k1 intacto ⇒ pubkey não
+ajuda. `solver/gsmg_sig_recover.py` (recuperação dos OP_RETURN `GSMGJH`/`GSMGBH`) → 0 matches.
+**Nenhuma rota de curva ajuda; a privkey só sai pela cadeia simétrica.** Ver [[ecc-attack-surface]].
+
+**(2) Chain1→4 é REAL — validada por derivação nova.** `half` e `better_half` (os dois 32 B
+da matriz Cosmic base-38), usados como **chave privada**, derivam exatamente:
+- `half` → **`1JG648yaB7Wp2dpUfcZoRSD4q35oq47vCu`**
+- `better_half` → **`145ZQ9siLrsXBKf465wjdyQYAP5dRwhRhQ`**
+
+Estes são precisamente os endereços que aparecem "sem derivação" nas issues #80/#99 (o golpe).
+Ou seja: os golpistas tinham `half`/`better_half` (reconstruíram a cadeia até aí) mas **não o
+prêmio**. Isto **confirma que a reconstrução Chain1→4 do `final_chain.py` é correta** de ponta a
+ponta (não é narrativa LLM-envenenada) e que "the private keys belong to half and better half"
+se refere a estes dois endereços — **que não são o prêmio `1GSMG1…`**.
+
+**(3) Novos negativos sobre a fronteira Chain4 (não estavam documentados):**
+- `half`/`better_half`/`sha256(half±bh)`/`half^bh` como **privkey direto** → não é o prêmio.
+- Os 35 blocos AES-decifrados com `half`/`bh`/`sha256(half‖bh)` (ECB e CBC, IVs 0/header/tail),
+  `pt[:32]`/`pt[-32]` como privkey → **0 hits** (490 testes).
+- Cada um dos 35 blocos como privkey-candidato cru + XOR (half/bh/tail/header) + `sha256(bloco)`
+  → **0 hits**.
+- **Estrutura dos 35 blocos:** entropia ~4,9/5,0 bits/byte por bloco de 32 B (≈máxima),
+  **independentes** (nenhum par com XOR de zeros). São ciphertext/aleatório puro — **sem
+  estrutura interna explorável**. Confirma que a chave AES-256 dos 35 blocos exige a **regra de
+  derivação externa/interpretativa**; oráculo binário + entropia máxima ⇒ busca cega não converge.
+
+**Saldo:** o único ponto interno reproduzível (Chain4) está agora reverificado no nível mais
+profundo como **terminal sem info externa**. O prêmio permanece protegido pela regra que
+converte prefixo/tabela/35 blocos na chave — não encontrada por ninguém até esta data.
+
 ## Sessão 2026-08-20 — hints 2026 do criador + trilha on-chain GSMG (tudo NEGATIVO em oráculo)
 
 **Correção de registro:** `solver/final_chain.py` (commitado) reproduz **toda** a cadeia
@@ -641,6 +679,23 @@ sha256 de cada) → **0 hits** em `check_privkey`. A cadeia pública é estéril
 Nada mudou a fronteira: `dbbi`/`faed` (2ª camada do pós-BTCSEED) e `cosmic_A` (operando
 externo inexistente em público) seguem como os dois bloqueios. Os hints 2026 do criador
 são **interpretativos** ("está na frente dos seus olhos", yin-yang = marco de
-proximidade), não operacionais. A observação on-chain "neighbors, half and double"
-(2021) é o único hint primário ainda não mapeado para uma operação concreta — candidato
-a futura hipótese falsificável (chaves vizinhas numéricas: k/2, 2k, k±n?).
+proximidade), não operacionais.
+
+### (d) "neighbors, half and double" — TESTADO e FECHADO (2026-08-20, `solver/neighbors_attack.py`)
+O hint on-chain de 2021-07-18 foi mapeado para a leitura aritmética secp256k1 e testado
+com oráculo duro (`check_privkey` contra o endereço-prêmio e o h160-alvo):
+- **Fatos:** `better_half ≠ 2·half` e `half ≠ 2·better_half` (mod n) — os artefatos da
+  matriz 103×103 NÃO guardam relação half/double entre si.
+- **243.900 candidatos:** cada artefato-base (`half`, `better_half`, `chain1[:32]`,
+  `chain2[:32]`, `cc[833:865]`, header do chain4) sob `×2`, `×inv(2)`, `±d` (d até 10.000
+  + temáticos 101/163/227/1141/140/38/103/570/91/1327/1151); pares `half±better_half`,
+  XOR, `(h+bh)/2`, `(h+bh)·2`, sha256 de concatenações (incl. `matrix_tail`); os 35 blocos
+  do chain4 sob double/half/pares adjacentes/todos os pares/XOR e combinações com
+  half/better_half. **0 hits.**
+- **h160 dos 4 endereços "neighbors"** (`1G1kRAFR68…`, `16eEXbSuKN8…`, `1KHMK2C8uBpt…`,
+  `1PhXF3xVQ8Sg…`): nenhuma relação half/double com o h160 do prêmio; sha256 dos
+  endereços (todos os 24 arranjos) e da frase em 5 formas × {privkey, AES raw/sha256}
+  → **0 hits** (34 testes).
+- **Veredito:** a leitura "chaves numericamente vizinhas/metade/dobro" está refutada.
+  Resta a leitura social: a tx pagou 4 solvers contemporâneos ("Good job, Neo!" era o
+  padrão de encorajamento do criador) — provável shout-out, não hint de chave.
