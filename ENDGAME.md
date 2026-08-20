@@ -758,6 +758,56 @@ sha256 canônicos (chain4 `e4269ed5…`, blocks `43d3fe43…`, half `b9736fe0…
 dualidade não é key+IV, e a privkey não é composição trivial das duas metades. O bloqueio
 segue **externo/interpretativo** (regra que converte prefixo/header28/35 blocos na chave).
 
+## Sessão 2026-08-20 (d) — `+-`/header28/`7` atacado pela estrutura exata
+
+Oráculo usado em todos os testes: pubkey não comprimida revelada on-chain,
+`04f4d1bbd91e65e2a019566a17574e97dae908b784b388891848007e4f55d5a4649c73d25fc5ed8fd7227cab0be4e576c0c6404db5aa546286563e4be12bf33559`;
+seu HASH160 foi recalculado localmente como `a9553269572a317e39f0f518cb87c1a0ee1dbae4`.
+
+1. **Soma/subtração exaustiva em espaço de pontos — FECHADA.** Meet-in-the-middle com
+   Gray code/libsecp256k1 esgotou as seleções `0/1` e os sinais `+/-` dos 35 blocos,
+   nas leituras big-endian e little-endian: `4 × 2^35` casos lógicos, **0 hits**. O
+   controle sintético recuperou a soma esperada. Isso refuta qualquer chave que seja
+   simplesmente a soma de um subconjunto ou uma soma assinada de todos os blocos; não
+   refuta operações não lineares nem um operando externo.
+2. **`28 = 7×4`, `35 = 7×5`: quatro bytes como operadores.** Para grupos contíguos e
+   round-robin, os quatro bytes selecionaram `+/-` por LSB, MSB e paridade de popcount
+   (com ambas as polaridades). Foram usados aritmética módulo `n`, módulo `2^256` e por
+   byte; os sete resultados alimentaram todas as ordens naturais do triângulo XOR de
+   28 nós, e o header endereçou bytes por low-5, high-5 e índice one-based. Resultado:
+   **22.882 chaves únicas**, 0 privkey, 0 bloco AES-alvo. Houve 490 paddings em cinco
+   modos AES — compatível com ruído (`≈447` esperados); melhor fração ASCII `0,425`.
+3. **Quatro bytes como ordem dos cinco operandos.** Foram cobertos selection shuffle,
+   Fisher–Yates e índice factorádico big/little-endian (também inversos), quatro padrões
+   alternados de `+-`, dois layouts e três domínios aritméticos. O mesmo roteamento pelo
+   triângulo produziu **130.644 chaves únicas**: 0 privkey direta; 2.645 paddings em cinco
+   modos (`≈2.552` esperados), todos aleatórios; e **4.572.540** blocos AES-ECB de 32 B
+   convertidos em pontos secp256k1, **0 hits**.
+4. **Sete palavras de 4 B como checksums/roteadores.** Todas as `C(35,5)=324.632`
+   combinações foram comparadas com as sete palavras sob CRC32, Adler32, SHA-256, MD5,
+   BLAKE2s, concatenação normal/reversa e folds XOR/soma de propriedades dos blocos:
+   **0 correspondências**. Logo o header não particiona os 35 blocos por nenhuma dessas
+   assinaturas comuns.
+5. **Sete IVs/salts + sete senhas entrelaçadas.** Os sete SHA256 de tokens foram testados
+   contra sete streams de cinco blocos (contíguos/round-robin), com IV por palavra de
+   header (repetido, padding, digest e janelas) e EVP/MD5 ou EVP/SHA256 com cinco salts
+   naturais. Nenhum modelo gerou matching 7/7; o melhor EVP foi 1/7, exatamente ruído.
+   Zero blocos decifrados produziram a pubkey-alvo.
+
+**Proveniência da pista triangular:** o comentário público de GalloClaudio64 diz apenas
+“the only way out will be an XOR triangle” e admite não ter resolvido a etapa seguinte;
+não fornece fórmula, orientação ou operando. A busca pelo prefixo exato não encontrou
+formato/protocolo conhecido nem fonte independente com a regra. A auditoria pública mais
+ampla localizada (`AppleLamps/puzle`, `VERIFICATION_REPORT.md`) converge no mesmo limite:
+Chain4 é reproduzível, mas `cosmic_A`/`ca`, `row1-4` e `K_I1` não têm bytes/derivação
+públicos autenticados.
+
+**Veredito:** as duas gramáticas naturais que usavam *todos* os comprimentos do payload
+foram falsificadas por oráculo duro. O próximo passo produtivo não é ampliar transformações
+arbitrárias: é obter a instrução original perdida ou uma definição autenticada do operando
+que liga o header28 aos 35 blocos. Sem isso, o espaço de regras é irrestrito e qualquer
+“solve” seria ajuste ao alvo, não derivação do puzzle.
+
 ### Lacuna fechada — frases-roadmap/comunidade contra a FRONTEIRA (não só SMALL/COSMIC)
 Mineração do `result.json` (agente `telegram-digger`) esclareceu que os "hints 2023–2026"
 são, em maioria, **releituras de UMA frase-roadmap** que o criador decodificou (binário
@@ -777,3 +827,40 @@ lower} testadas na **fronteira real** — `sha256(frase)` como **privkey** diret
 away") e como **chave AES-256 dos 35 blocos** (CBC IVs z/header/half + ECB, dupla-sha256) →
 **0 padding-válido, 0 privkey-hit**. As frases-roadmap não abrem a fronteira. O "give away"
 final **não** é `sha256` de nenhuma frase conhecida.
+
+## Sessão 2026-08-20 (d) — leitura filosófica "duas portas" + enumeração de páginas arquivadas
+Direção interpretativa nova (tema Matrix: *"the problem is choice"*, duas portas, path of
+the One vs path of Neo; yin-yang; *"rewatch ep3.5 with the better half"*; e o desabafo da
+comunidade *"maybe all of us have chosen the wrong door"*). Duas hipóteses concretas:
+
+1. **Dualidade unificada — a trilha-fase é a CHAVE dos 35 blocos.** O repo tratou dbbi/faed
+   e Chain1→4 como alternativas e as **desconectou**. A filosofia diz o oposto (as duas
+   metades entrelaçadas). Testei a saída da trilha-fase (`BIF`=Bifid(faed,CANON,570) começando
+   em `BTCSEED`, `BIF_REST`, `BTCSEED`, faed, dbbi) como material de **chave AES-256 dos 35
+   blocos** e como **privkey direta**: 34 chaves (sha/sha2/raw32/xor-metades/concat-com-half-bh)
+   × CBC(5 IVs)+ECB → **0 padding, 0 hit**. A trilha-fase, nas leituras diretas, não é a chave.
+
+2. **"Segunda porta" via URL arquivada — FECHADA com prova.** A mecânica do puzzle é
+   `resposta → sha256 → gsmg.io/<hash>`. **Fato novo:** `sha256(cosmic_plaintext) =
+   4f7a1e4e…` (o "âncora do Cosmic") **é uma URL real** — `gsmg.io/4f7a1e4e…` existe no
+   Wayback. O ENDGAME tratava `4f7a1e4e` só como hash, nunca como porta. Enumerei **todas**
+   as páginas `gsmg.io/<64-hex>` arquivadas (CDX domain): **13 páginas**. Classificação:
+   - `89727c…` = SalPhaseIon/endgame (conhecida; capturas 2023→2026, ~4.6 KB de conteúdo real).
+   - `4f7a1e4e…` = hash do Cosmic; **só captura 2026 = gate FingerprintJS → domínio parqueado**
+     (`abovedomains.com/forsale`); sem conteúdo da era ativa; 404 no espelho.
+   - **11 páginas não-documentadas** (`0b0f37, 10d6a2, 21ef05, 53616c, 673e3b, a2aefdb,
+     aca20a, c1780c, c2eef3, e24bd2, f9719d`): **todas só com capturas 2025-2026 de ~12 KB =
+     app-shell de parking**, nenhuma da era ativa. **Teste decisivo:** `sha256` de **61
+     artefatos conhecidos** (chain1-4, os 35 blocos individuais, BIF, BTCSEED, dbbi, faed,
+     endereços…) → **nenhum** bate as 11 (só `cosmic→4f7a1e4e`). Logo as 11 **não são portas
+     derivadas de artefatos** — são probes de outros solvers (que também testam
+     "resposta→sha256→URL") arquivados por acaso como parking. A `53616c7465645f5f…` decodifica
+     literalmente para `Salted__`+salt`74c974e3…`+16 B — provável brinquedo de solver, não porta.
+   - Espelho `gsmg-archive.org` = site curado (não serve por hash-path; 404 até na 89727c).
+
+**Saldo:** a leitura filosófica "duas portas" era sólida e foi executada com rigor, mas a
+rota concreta (porta escondida no arquivo) está **morta**: não há página da era ativa além do
+endgame conhecido; o domínio morreu e virou parking; o único hash-artefato real (`4f7a1e4e`)
+leva a parking sem conteúdo. Se a "outra porta" existiu, seu conteúdo se perdeu com o domínio
+(nunca arquivado na era ativa). Reforça que o desbloqueio é a **regra de derivação dos 35
+blocos**, não uma URL/página a mais.
