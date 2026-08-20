@@ -85,6 +85,46 @@ Start from upper left square and go counterclockwise in a spiral. Convert the bi
 
 What you get is: gsmg.io/theseedisplanted
 
+### Segunda camada visual (parcial)
+
+Na imagem original, as 24 células azuis/amarelas aparecem exatamente nos índices
+espirais zero-based `7, 15, 23, ..., 191`: uma no último bit de cada byte da URL.
+A sequência `BBBBYBBBYYBBBBYBBYYBYYBY`, usando azul=`1` e amarelo=`0`, é idêntica
+aos bits menos significativos dos 24 caracteres de `gsmg.io/theseedisplanted`.
+Logo, as cores codificam a paridade dos caracteres; não formam uma segunda mensagem
+independente.
+
+Filtrando apenas as células coloridas em ordem normal de linhas, amarelo=`1` produz
+`010000011101010001100100` = `0x41D464`; azul=`1` produz o complemento `0xBE2B9B`.
+Mais importante, as cores originais são azul `#3F48CC` e amarelo `#FFF200`. A soma
+dos dígitos hexadecimais de cada cor é respectivamente `54` e `47`, portanto
+`54 + 47 = 101` (o `matrixsumlist`) e `54 - 47 = 7`. Isso explica de forma
+reproduzível os marcadores `+-` e `7` encontrados no payload final, embora a operação
+que deriva a chave ainda não esteja determinada.
+
+Há ainda uma única célula quase branca (`#FEFEFE`) em `(linha 7, coluna 4)`, no índice
+espiral zero-based `163`, que é primo. O mecanismo sugerido pelas pistas sobre primos e
+caracteres "zeroed out" continua sem solução. Em particular, interpretar a posição local
+da célula colorida como deslocamento assinado reduz tudo ao mesmo valor `7`; as duas
+atribuições de sinal azul/amarelo produzem texto não legível e não fornecem senha para o
+próximo estágio.
+
+Uma leitura BIP39 reproduzível reforça a pista visual: os 11 índices primos coloridos,
+mais o `163` na ordem numérica, dão 12 palavras terminadas em `blood`. O checksum BIP39
+fica válido ao zerar somente o último bit (`191→190`), trocando `blood` por `blind` — um
+encaixe literal com “in front of your eyes but you're not seeing it”. A soma dos índices
+corrigidos é `1159`, cuja palavra BIP39 zero-based é `movie`. O teste dessa lista contra
+a matriz `dbbi` e o Chain4 está documentado em [`ENDGAME.md`](ENDGAME.md): o sinal
+semântico permanece, mas as derivações diretas de chave deram negativo.
+
+Há ainda um segundo encaixe: usando a lista raw com sinais alternados sobre `dbbi` (`a=1`
+até `i=9`) e reduzindo os sete produtos módulo 26, sai `PHASHFG`; após a correção
+`191→190` e a polaridade oposta, sai `QYINZXW`. Ou seja, as palavras **`HASH`** e
+**`YIN`** aparecem literalmente. Em um milhão de embaralhamentos do mesmo multiconjunto
+de células, `HASH` apareceu 10 vezes, `YIN` 269 vezes e os dois juntos nenhuma vez. Isso
+é evidência forte de uma instrução `HASH(YIN)`, embora as aplicações diretas ao Chain4
+ainda não atinjam a chave do prêmio.
+
 ## 2. https://gsmg.io/theseedisplanted
 
 _Página `gsmg.io/theseedisplanted` — 8 imagens lado a lado (que, rearranjadas, formam "war+ning" e "LO+gic" → a música *The Warning*, by Logic):_
@@ -591,3 +631,50 @@ Through some trial and error, we find that these need to be shifted to base 16, 
 The following follows the same formatting as previous openssl base64-encoded AES blobs that we encounted in previous stages
 > U 2 F s d G V k X 1 8 6 t Y U 0 h V J B X X U n B U O 7 C 0 + X 4 K U W n W k C v o Z S x b R D 3 w N s G W V H e f v d r d 9 z
 > Q v X 0 t 8 v 3 j P B 4 o k p s p x e b R i 6 s E 1 B M l 5 H I 8 R k u + K e j U q T v d W O X 6 n Q j S p e p X w G u N / j J
+
+### Estado reproduzível do endgame (2026-08-20)
+
+O pipeline público agora fecha até o último payload binário. Execute:
+
+```powershell
+.\puzzle-env\Scripts\python.exe solver\final_chain.py
+```
+
+Checkpoints principais:
+
+- Cosmic: 1327 B, SHA256 `4f7a1e4efe4bf6c5581e32505c019657cb7b030e90232d33f011aca6a5e9c081`;
+- matriz 103×103/base-38: `half` (32 B) + `better_half` (32 B) + tail `fc0c1b02`;
+- Chain4: 1151 B, SHA256 `e4269ed5fbb202a81e5e1aa6b5190fdd1ea126b2c8547ea7cdbdf45387ea135b`;
+- corpo final: 35×32 B a partir do offset 31, SHA256 `43d3fe43b17ad9e8f5cfa40f35a398fdf32de2fdb18d6261cac283016935c142`.
+
+O tail `fc0c1b02` completa a tabela antiga como cinco pares `(x,y)`. Reduzidos módulo 14
+e aplicados à matriz inicial, os cinco pontos caem em células `1`: `11111₂ = 31`. Esse
+resultado explica exatamente o corte de 31 bytes antes dos 35 blocos; é um encaixe novo e
+reproduzível, mas não fornece a chave AES. A leitura em base zero e a relevância de `31`
+como primo são corroboradas por duas respostas do criador no Telegram: “First or zero”
+(2020-05-21) e “prime number is very important” (2023-01-09).
+
+A chave AES-256 que abre esses 35 blocos e revela a chave do endereço-prêmio ainda não
+tem derivação pública reproduzível. O histórico de hipóteses e negativos está em
+[`ENDGAME.md`](ENDGAME.md).
+
+Um teste exato em espaço de pontos secp256k1 esgotou, para os 35 blocos em big-endian e
+little-endian, tanto todas as seleções `0/1` quanto todas as atribuições de sinal `+/-`
+(`4 × 2^35` casos lógicos, resolvidos por meet-in-the-middle): **zero acertos** na pubkey
+on-chain do prêmio. Assim, `+-` não significa soma/subtração escalar direta dos blocos.
+
+A leitura estrutural `28 = 7 × 4`, `35 = 7 × 5` também foi testada: bytes do cabeçalho
+como seletores de sinais, permutações dos cinco operandos, endereços dos 28 nós de um
+triângulo XOR, IVs/salts de sete streams e checksums de grupos de cinco. Foram 153.526
+chaves derivadas nas duas gramáticas principais e 4.572.540 escalares AES-ECB verificados
+contra a pubkey, sem acerto; os paddings observados seguem a taxa aleatória de `1/256`.
+Portanto, a regra autêntica que liga o prefixo aos 35 blocos continua ausente das fontes
+públicas, e não é uma dessas leituras naturais.
+
+Adendo 2026-08-20 (f): os hints primários do criador de 2026 — "rewatch episode 3.5
+with the better half" (Mr. Robot `eps3.5_kill-process.inc`), "our first hint is your
+last command" (`89727c…` como chave dos 35 blocos), a senha do Chain4 (32 B) reusada
+como chave da última camada, e combinações diretas dos 35 blocos (incl. header28
+como índices de seleção) — foram testados contra o oráculo duro da fronteira
+(pubkey on-chain + padding AES): **0 solves**. Detalhe em [`ENDGAME.md`](ENDGAME.md),
+"Sessão 2026-08-20 (f)".

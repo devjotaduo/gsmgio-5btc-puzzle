@@ -939,3 +939,72 @@ algum artefato, não a palavra" é **mover a trave** (unfalsificável). **Conclu
 FRENTE FECHADA.** Preservar só `140` como checkpoint numérico e `movie` como curiosidade — não
 reabrir `blood→blind→HASH(YIN)` sem uma regra com **predição-antes-do-teste + zero graus de
 liberdade + fechamento de oráculo** (os três juntos; nenhum presente aqui).
+
+## Sessão 2026-08-20 (f) — hints 2026 do criador atacados na FRONTEIRA (4 hipóteses, 0 solves)
+
+Quatro hipóteses **novas** derivadas dos hints primários de 2026 do criador, todas
+falsificadas por oráculo duro (`matches_pubkey` vs pubkey on-chain `04f4d1bbd…bf33559`,
+e `aes_open`/padding-PKCS7 sobre os 35 blocos). Scripts novos em `solver/`, logs em
+`_work/`. Cada uma preenche um gap concreto que os testes anteriores **não** cobriam.
+
+**Gap fechado em cada uma:**
+- O `first_hint_sweep.py` testou `89727c…` (hash do 1º hint / URL do endgame) **só
+  contra SMALL/COSMIC** (já abertos → teste vazio). A lacuna posterior testou **47
+  outras** frases na fronteira dos 35 blocos, **nunca** o `89727c…` em si.
+- `eps3.5_kill-process.inc` estava registrado acima como proposta "não-testada/não-
+  confirmada"; nenhuma das 47 frases da fronteira o incluiu.
+- `CHAIN4_PASSWORD` (`E_C‖E_S‖E_B[:2]`, **32 bytes exatos**) só abria o chain4,
+  nunca foi aplicada aos 35 blocos.
+- Os testes `28=7×4`/`35=7×5` usaram as 7 palavras como **operadores/checksums/
+  ordem**, nunca como **índices de seleção direta** de 7 blocos.
+
+### 1) "rewatch episode 3.5 with the better half" (criador, 2026-03-03) — FECHADA
+Episódio Mr. Robot S03E06 = `eps3.5_kill-process.inc`, **28º da série** (header do
+Chain4 = 28 bytes). Temas que ecoam o puzzle: **HSM + roubo de certificados de
+code-signing** (fase 3 = Thales HSM), `shred -uzn3` → **zero out** (hint "some
+characters need to be zeroed out"), **misdirection** ("in front of your eyes but
+not seeing it", confirmado por Bingo), 71 prédios / Red Wheelbarrow.
+`solver/eps35_attack.py`: ~40 strings do episódio (título em 4 grafias, kill-process,
+process.inc, Red Wheelbarrow, 71, 28, "rewatch…with the better half", eps3.4+3.5)
++ combinações com `better_half` (concat/XOR/sha) + leitura "kill-process = zerar
+header" + "28o ep = header28 como chave" + "71 como escalar/offset".
+**469 chaves únicas × ~10 IVs × {CBC-stream, CBC-perblock, ECB} = 200.370 testes
+AES + 316.099 privkey → 0 HARD, 0 SOFT.** Top printabilidade 0,433 (≈ruído).
+
+### 2) "our first hint is your last command" — `89727c…` como chave dos 35 blocos — FECHADA
+A frase literal da página SalPhaseion + "give away" + "in front of your eyes" sugere:
+o hash do 1º hint = chave do último passo. `sha256(GSMGIO5BTCPUZZLECHALLENGE
+1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe) = 89727c…` tem **32 bytes exatos** = AES-256.
+`solver/first_hint_frontier.py`: `89727c…` em bytes/hex/UPPER, sha256/double-sha256,
+HASHTHETEXT sobre textos visíveis (matrixsumlist/enter/lastwords…/thispassword/
+endereço/URL), "our first hint is your last command" e variantes, XOR/concat com
+half/better_half/tail, e EVP_BytesToKey (MD5+SHA256) com salts chain4/cosmic.
+**89 chaves × ~15 IVs × {stream, perblock, ECB} = 51.086 AES + 135.903 privkey →
+0 HARD, 0 SOFT.** A leitura mais elegante ("o hash que todos conhecem é a última
+chave") está refutada.
+
+### 3) Senha do Chain4 (32 B) como chave dos 35 blocos — FECHADA
+"First hint is your last command" lido como auto-referência: a senha/comando já
+usada para abrir o chain4 é reusada na última camada. `CHAIN4_PASSWORD =
+chain1[64:79]‖chain2[64:79]‖cosmic[64:66]` = **32 bytes**. `solver/chain4pw_frontier
+.py`: a senha, sha256/sha256hex dela, as chaves AES EVP/MD5 e EVP/SHA256 reais que
+decifraram o chain4, fatias de chain1/chain2/cosmic, `chain4[:32]`, `sha256(chain4)`.
+**7.456 AES + 19.424 privkey → 0 HARD, 0 SOFT.**
+
+### 4) Leituras DIRETAS (sem AES) dos 35 blocos como privkey — FECHADA
+`solver/direct_combine.py`: XOR/soma de todos os 35, índices primos, **ápice do
+triângulo XOR 1D** (C(34,i) ímpar → posições 0,2,32,34), **header28 como 7 uint32
+→ índices mod 35 → selecionam 7 blocos** (leitura não coberta antes), header28 como
+28 índices, grupos 7×5 e round-robin, sha256 de concatenações, e combinações com
+half/better_half (yin-yang). **40 candidatos → 0 matches_pubkey.**
+`header7words mod 35 = [13,5,26,21,14,18,19]_big / [23,15,11,16,29,3,34]_little`
+(o little termina em 34, mas sem hit).
+
+**Saldo:** quatro leituras primárias novas (eps3.5, 89727c-como-última-chave, senha-
+chain4-reusada, combinações-diretas-incl.-header-como-índice) fechadas com oráculo
+duro. Reforça o veredito consolidado: o gargalo da fronteira canônica (regra que
+converte `+-`+header28+`7`+35×32B na chave final) é **interpretativo/externo**, não
+computacional. Nenhuma string visível do material, nenhum hint 2026 do criador, e
+nenhuma combinação direta dos blocos fecha o oráculo. O desbloqueio real continua
+sendo ou um próximo hint oficial, ou o insight interpretativo que 6 anos de
+comunidade + automação extensa + esta sessão não encontraram.
