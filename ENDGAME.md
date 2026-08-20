@@ -1008,3 +1008,57 @@ computacional. Nenhuma string visível do material, nenhum hint 2026 do criador,
 nenhuma combinação direta dos blocos fecha o oráculo. O desbloqueio real continua
 sendo ou um próximo hint oficial, ou o insight interpretativo que 6 anos de
 comunidade + automação extensa + esta sessão não encontraram.
+
+## Sessão 2026-08-20 (g) — leitura filosófica "the SEED is PLANTED" + BIP39/BIP32 (~973 testes, 0 solves)
+
+Hipótese interpretativa NOVA, derivada da metáfora botânica do puzzle:
+*"the **seed** is **planted**"* (fase 1) → *"the flower **blossoms**"* (fase 2) →
+*"**return** to the source"* (endgame) → *"very last step is a true **give away**"*.
+Se a SEED BIP39/HD-wallet está PLANTADA nos bits da matriz 14×14 (a primeira
+coisa que todos veem = "in front of your eyes"), e "return to the source" =
+voltar a essa seed, então o endereço do prêmio é uma folha da árvore BIP44
+derivada da matriz. Ninguém havia testado os **bits da matriz como entropia
+BIP39** — o ENDGAME só testou BIP39 dos *índices coloridos* (primos), que era
+apofenia refutada por null-model.
+
+Quatro frentes, todas com oráculo duro (`check_privkey` / `aes_open` / BIP44
+→ `PRIZE_ADDR`), todas NEGATIVAS:
+
+### 1) Matriz 14×14 → entropia BIP39 → BIP44 → endereço (`seed_return_attack.py`)
+- 4 leituras dos 196 bits (row-major, col-major, espiral CW, espiral CCW) × 3
+  tamanhos de entropia (128/160/192 bits = 12/15/18 palavras) × {BIP39→BIP44,
+  SHA256→privkey, int-mod-N→privkey, SHA256→AES-35-blocos}.
+- **Confirmado:** espiral CCW do upper-left produz exatamente
+  `gsmg.io/theseedisplanted` (validação da leitura).
+- 48 testes → **0 hard, 0 soft.** O mnemonic da URL (18 palavras:
+  "guess opinion flush fresh notice nut spider arrow inflict clinic flip spray
+  damage curtain mad soldier grace canyon") não deriva o prêmio.
+
+### 2) BIP39 da matriz + passphrase temática (`bip39_passphrase_attack.py`)
+- "Press **enter** and start talking" (Decentraland) → passphrase = "enter"?
+- 20 entropias (4 leituras × {16/20/24B + SHA256-32B} + URL + senhas das fases 2/3)
+  × 24 passphrases temáticas (enter, HASHTHETEXT, matrixsumlist, yinyang,
+  hash-89727c, endereço, causality, flor, shabefanstoo, 7, +-, 101, etc.).
+- 456 combinações → **0 hard.** A "25ª palavra" temática não revela o prêmio.
+
+### 3) "Cosmic Duality" = BIP32 child derivation half × better_half
+- `half` como parent_priv + `better_half` como chain_code (e vice-versa), índices
+  0-9 + hardened 0-4 + temáticos (44', 0', hardened-root).
+- HMAC-SHA512(half, better_half) [:32] e [32:] como privkey e AES key.
+- 85 testes → **0 hard, 0 soft.** O "casamento" yin-yang não gera o filho-prêmio.
+
+### 4) Dualidade como entropia BIP39 + passphrase (72 combinações)
+- `half`, `better_half`, `sha256(half+bh)`, `sha256(bh+half)`, `half^bh`,
+  `sha256(half^bh)` como entropia BIP39 (32B → 24 palavras) × 12 passphrases
+  (a outra metade em hex, enter, yinyang, etc.) → BIP44 + master-priv + AES.
+- 72 combinações → **0 hard.**
+
+**Saldo:** a leitura filosófica mais elegante do puzzle ("a seed está plantada
+na fase 1; retorne à fonte; a dualidade cósmica casa as metades; o último passo
+é um give-away do que está na frente dos olhos") está **refutada por oráculo**.
+A matriz 14×14 como entropia BIP39, com ou sem passphrase, em qualquer leitura
+ou tamanho, não deriva o endereço do prêmio. A dualidade half/better_half em
+BIP32 também não. A ideia era forte o suficiente para merecer teste — e o
+negativo estreita o problema: **a "seed" do puzzle não é uma seed BIP39 dos
+bits da matriz, nem uma derivação BIP32 das metadas.** Scripts em `solver/
+seed_return_attack.py` e `solver/bip39_passphrase_attack.py`.
