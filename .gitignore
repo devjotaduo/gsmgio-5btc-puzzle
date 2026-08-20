@@ -1,6 +1,13 @@
 # Export do Telegram (~27 MB) — fonte de consulta, não versionar
 result.json
 
+# Monitor local do Telegram (tg_monitor.py) — sessão, credenciais e estado
+# NUNCA versionar: a sessão é login autenticado da sua conta.
+.tg_session*
+.tg_state.json
+tg_digest.md
+.env
+
 # Solver — saidas de execucao, logs e caches (nao versionar)
 solver/out/
 solver/*.log
