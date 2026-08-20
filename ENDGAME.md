@@ -230,10 +230,22 @@ characters need to be zeroed out"*. Investigação (própria + busca na comunida
   **componente de senha** do endgame (issue #32: `sha256([dbbi]+101+[faed]+[lastwords])`),
   mas o palpite exato da #32 (`gsmg101adressapril`) **não abre** os blobs. O `101`
   é o elo fase-1→endgame que faltava, mas insuficiente sem decodificar dbbi/faed.
-- **Cores azul/amarelo** = paridade (blue=1/yellow=0) → redundante com a URL. QR =
+- **Cores azul/amarelo** = paridade (blue=1/yellow=0) → redundante com a URL. As 24
+  células coloridas estão exatamente nos índices espirais zero-based
+  `7,15,23,...,191`, isto é, no bit 7 de cada um dos 24 bytes; a sequência
+  `BBBBYBBBYYBBBBYBBYYBYYBY` coincide bit a bit com os LSBs de
+  `gsmg.io/theseedisplanted`. Portanto a hipótese "posição local + sinal da cor" tem
+  apenas o deslocamento constante 7: as duas orientações produzem
+  `nztn'pv6malzll]pziehgml]` e `` `lf`5bh({o^l^^kblwsZu{^k ``, ambos ruído. QR =
   só o endereço. Sem vermelho oculto na matriz (a alegação de stego do `guy29278`
   não se sustenta; contestada por `wat96`). 16 mapeamentos cor→bit × travessias
   (espirais/linhas/colunas/diagonais) → só a 1ª porta aparece.
+- **Leitura numérica das cores — sinal novo e reproduzível:** filtrando as 24 células
+  coloridas em ordem row-major, amarelo=`1` dá `0x41D464` e azul=`1` dá o complemento
+  `0xBE2B9B`. Na paleta original, azul=`#3F48CC` e amarelo=`#FFF200`; as somas dos
+  dígitos hexadecimais são `54` e `47`. Assim, `54+47=101` explica `matrixsumlist` e
+  `54-47=7` explica o marcador/operando `+-...7` do Chain4. O elo é forte, mas ainda
+  não fixa sozinho a chave final.
 - **Pixel FEFEFE** ("1 white square different", issue #14): exatamente 1 célula
   (254,254,254 em vez de 255) na posição **(7,4) = índice 163 do espiral (primo)**,
   à frente do coelho. Comunidade: *"we just have no clue what to do with it"*.
@@ -494,6 +506,28 @@ prêmio. A fronteira canônica é a operação que deriva a chave AES-256 desses
 - `11111` como chave direta (`SHA256("11111")`, inteiro 31 ou byte `0x1f` repetido), em
   AES ECB/CBC com IVs naturais do prefixo, também dá **0 hit**; sua função observada é
   indicar o offset 31.
+- A leitura zero-based tem apoio primário: ao perguntarem se a primeira peça era índice
+  um ou zero, Jrk respondeu **“First or zero”** (Telegram, 2020-05-21). Ele também confirmou
+  que um número primo era necessário (2021-12-26 e 2023-01-09); `31` é primo.
+- A geometria `28 = 7×4` e `35 = 7×5` foi tratada como sete grupos de cinco operandos e
+  quatro seletores `+/-`. Paridade/MSB, ordem contígua/colunar e aritmética módulo `2²⁵⁶`/
+  secp256k1 geraram 176 chaves; AES-ECB e 880 combinações AES-CBC com IVs naturais deram
+  **0 hit**. Esta leitura algébrica direta está fechada.
+- Interpretar o header como bytes assinados, zerar não-primos e completar com o `7` final
+  produz `[-71,-79,47,-17,-113,5,7]`. A seleção correspondente de sete blocos, combinada
+  por XOR, soma assinada ou SHA256, também deu **0 hit**. Como seis primos em 28 bytes é
+  próximo do esperado ao acaso, esta leitura deve ser tratada como apofenia refutada.
+- O encaixe das cores foi levado ao oráculo: `header28 ‖ {0x41D464,0xBE2B9B,
+  0xFFFFFF,0x7C5737,0xF73D92} ‖ "7"` forma cinco chaves AES-256 exatas. ECB e CBC com
+  seis IVs naturais deram **0 padding válido e 0 privkey hit**. Usar primalidade dos 28
+  bytes do header ou das 28 somas de linha/coluna como os sinais `+/-` entre sete grupos
+  de cinco operandos, seguido por XOR dos sete, XOR de seus SHA256 ou triângulo XOR,
+  produziu 12 chaves adicionais: novamente **0 hit**.
+- A pista pública de “XOR triangle” foi testada nas quatro geometrias canônicas dos 35
+  blocos (triângulo 1D completo, `7×5`, linhas `2..8` e `8..2`). Nenhum ápice é a
+  privkey; como chave AES em ECB/CBC, nenhum gera padding ou fatia de 32 B que bata no
+  endereço-prêmio. O header28 tampouco reduz ao `7` por triângulo 1D (`0x20`) ou por
+  linhas `1..7` (`0x96`).
 - O HTML e os dois PNGs do `gsmg-archive.org` não trazem operando, comentário ou metadata
   adicional; reproduzem os artefatos já transcritos.
 
@@ -676,10 +710,11 @@ sha256 de cada) → **0 hits** em `check_privkey`. A cadeia pública é estéril
    (24 casas) idêntica à usada nos ataques color-prime. Nada de novo na imagem.
 
 ### (c) Estado após 2026-08-20
-Nada mudou a fronteira: `dbbi`/`faed` (2ª camada do pós-BTCSEED) e `cosmic_A` (operando
-externo inexistente em público) seguem como os dois bloqueios. Os hints 2026 do criador
-são **interpretativos** ("está na frente dos seus olhos", yin-yang = marco de
-proximidade), não operacionais.
+Esta conclusão histórica foi superada pela reprodução Chain1→4 descrita acima:
+`dbbi`/`faed` e `cosmic_A` não são mais bloqueios necessários. A fronteira canônica é
+somente a regra que converte `+-` + header28 + `7` + 35 blocos na chave final. Os hints
+2026 do criador continuam **interpretativos** ("está na frente dos seus olhos",
+yin-yang = marco de proximidade), não operacionais.
 
 ### (d) "neighbors, half and double" — TESTADO e FECHADO (2026-08-20, `solver/neighbors_attack.py`)
 O hint on-chain de 2021-07-18 foi mapeado para a leitura aritmética secp256k1 e testado
@@ -699,3 +734,26 @@ com oráculo duro (`check_privkey` contra o endereço-prêmio e o h160-alvo):
 - **Veredito:** a leitura "chaves numericamente vizinhas/metade/dobro" está refutada.
   Resta a leitura social: a tx pagou 4 solvers contemporâneos ("Good job, Neo!" era o
   padrão de encorajamento do criador) — provável shout-out, não hint de chave.
+
+## Sessão 2026-08-20 (c) — reprodução re-confirmada + 3 leituras novas fechadas
+Re-executei `py -3.12 -m solver.final_chain`: **toda a cadeia Chain1→4 reproduz** com os
+sha256 canônicos (chain4 `e4269ed5…`, blocks `43d3fe43…`, half `b9736fe0…`, better_half
+`37ec1d87…`). Estado confirmado real. Três leituras específicas que os testes anteriores
+**não** cobriam foram testadas (oráculo duro, todas NEGATIVAS):
+1. **ASCII escondido no chain4 inteiro** (hint 2026 "está na frente dos seus olhos"): os
+   únicos bytes imprimíveis são `+-` e `7`; os 33 runs ASCII ≥3 no corpo são ruído
+   estatístico esperado de 1120 B aleatórios. Os 35 blocos são **todos distintos** (35/35)
+   e sem XOR-relação entre adjacentes. Não há texto literal na superfície.
+2. **Dualidade como key+IV** (as duas metades como os dois parâmetros do AES-CBC nos 35
+   blocos): key ∈ {half, bh, half^bh, sha256(half‖bh), sha256(bh‖half)} × IV ∈ {bh16,
+   half16, bh_hi, half_hi, hdr16, zero} + ECB = **35 testes, 0 padding-válido**. (Os 490
+   testes anteriores usavam IV ∈ {0, header, tail}, nunca a outra metade como IV.)
+3. **"half and better half" = metade de cada** (montar a privkey-prêmio com 16 B de cada
+   artefato, não os escalares 256-bit inteiros): 54 candidatos — concatenações das quatro
+   meias-metades {hL,hH,bL,bH}, reversos, interleave byte-a-byte, e sha256 delas — →
+   **0 hits** em `check_privkey`. Complementa os testes escalares (`half±bh`, `xor`,
+   `(h+bh)/2·2`) que já eram negativos.
+
+**Saldo:** nenhuma surpresa — reforça o veredito. A superfície do Chain4 não tem texto, a
+dualidade não é key+IV, e a privkey não é composição trivial das duas metades. O bloqueio
+segue **externo/interpretativo** (regra que converte prefixo/header28/35 blocos na chave).
