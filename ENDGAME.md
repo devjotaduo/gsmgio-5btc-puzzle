@@ -1126,3 +1126,58 @@ decoder vetorizado contra o decode exato + `Scorer` real (|Δ| médio 0,019).
 comprimento, chain-addition) estão **fechadas por oráculo**. A fronteira
 permanece a mesma: falta a regra que deriva a senha; o espaço de cifras de
 substituição simples sobre a–i está esgotado nos dois sentidos.
+
+## Sessão 2026-08-30 — 6 camadas de hipóteses novas sobre os 35 blocos (0 solves)
+
+`final_chain.py` reproduzido (todos os checkpoints OK). Seis scripts (`solver/
+new_hypotheses.py` … `new_hypotheses_6.py`), ~2.000 chaves únicas testadas contra
+o oráculo duro (`matches_pubkey` vs pubkey on-chain; padding+ASCII como soft):
+**0 HARD hits, 0 SOFT hits** em todas as camadas.
+
+1. **Camada 1** (157 chaves): SHA256 do prefixo31 e variantes com `+-7`;
+   alterna `+/-` em grupos de 7 e em 35 blocos (sinais por paridade/MSB do
+   header); step-7; header7words mod 5 (`[3,0,1,1,4,3,4]`) e mod 35 como
+   seletores; chaves triviais (`0x07`, 7); `half·bh mod N`; header28+padding
+   (16 formas); EVP_BytesToKey (MD5+SHA256); XOR cycling; EBCDIC; BIP39 dos
+   blocos; ~40 senhas temáticas (fases 2/3/3.2/roadmap).
+2. **Camada 2**: decodificações do Bifid output (base-26, base-9, WIF
+   base58, fatias como AES key, 2ª camada Bifid); 7 senhas das fases por
+   grupo de 5 blocos; cifras alternativas (3DES, RC4, ChaCha20, XOR 0x07);
+   BIF_REST como passphrase EVP; blocos reversed/wordswap; SHA256/dblsha256
+   por bloco; bits da matriz 14×14 como chave; fatias de half‖bh; grupos de
+   5 em ECB com half/bh.
+3. **Camada 3**: encodings binários do BIF_REST (A-M/N-Z, A-I/K-Z,
+   vogal/cons, offsets 0-96); base-25 do BIF_REST/BIF (offsets 0-55);
+   coordenadas do quadrado Bifid em base-5; **Bifid ENCRYPT correto** de faed
+   (13 períodos); 7 primos como seletores → XOR/soma → AES; interleave das 7
+   partes da fase 3; 16 rounds de AES-ECB com mesma chave; half±bh escalares
+   (15 combinações mod N); row/col sums da matriz como keystream.
+4. **Camada 4**: Bifid encrypt correto (p=570 dá `BCEEDCB…` — diferente do
+   decrypt, nada legível); double/triple Bifid decrypt; "BTCSEED" e 9
+   variantes como senha (AES/EVP nos 35 blocos); EVP no chain4_blob com 8
+   senhas; BIP39 entropy por bloco (12/24 palavras); XOR/soma de todos os 35;
+   pares consecutivos e simétricos XOR/ADD.
+5. **Camada 5** (ordens de leitura): **transposta** — colunas j=0..31 dos 35
+   blocos (3 subsets de 32); diagonais/anti-diagonais; strides 35/33/34/36/37/
+   7/5/23/16/17/19 com offsets (no body e no blob 1151); header28 como
+   posições no body; interleaves (grupos 2/4/7/8); reversed (body/blocos/blob);
+   bloco i como chave do bloco i+1; **primeiros 32 primos como bytes**;
+   7/16/23 primos; header28+16 paddings; prefix31+9 pads; XOR/soma de subsets
+   (prime/múltiplos de 5/7/first7/last7); 7 grupos de 5 e 5 grupos de 7
+   (XOR/soma/concat 4-6-7 bytes de cada); rotações de bits; 7º byte de cada
+   bloco; byte 23/16; header28 como índices de blocos.
+6. **Camada 6** ("7 intertwined passwords" literal): as 7 palavras uint32 do
+   header28 como senhas (sha256 raw/hex/decimal, word×8, EVP/MD5 com 5 salts)
+   para 7 grupos de 5 blocos (contíguo/round-robin, CBC+ECB); palavra g como
+   senha do bloco i (ciclismo); palavras concatenadas + padding como chave;
+   palavras como escalares; 23 blocos ± XOR/add com palavras ciclando; 16
+   rounds AES com chaves rotativas das 7 palavras; concat/XOR dos 7 sha256.
+
+**Saldo:** ~2.000 hipóteses estruturais adicionais fechadas por oráculo duro
+(sem privkey-hit, sem padding+ASCII, top printability 0,44 ≈ ruído). As
+famílias mais naturais que restavam (transposta/colunas, strides, primos como
+bytes e seletores, header-palavras-como-senhas, Bifid bidirecional, BIP39 por
+bloco) estão agora cobertas. Coerente com o veredito consolidado: o gargalo é
+**interpretativo/externo** — a regra que converte `+-`+header28+`7`+35 blocos
+na chave final não é nenhuma combinação estrutural conhecida do próprio
+payload. Não reabrir estas famílias sem hipótese nova derivada de hint real.
