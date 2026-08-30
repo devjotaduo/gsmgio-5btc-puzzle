@@ -1270,3 +1270,70 @@ documentados antes neste arquivo:**
   parte do puzzle** ("Correct", 2023-08-29); SHA256 do texto da fase 1 confirmado
   com "the author is a bit picky what he considers to be text" ("Good point");
   "Has anyone passed the salvation part?" → **"Partly"** (2023-08-06).
+
+## Sessão 2026-08-30 — hint confirmado: p.39 "Le Miroir de la Vie et de la Mort" + oráculo-espelho (0 solves, 1 gap fechado)
+
+**Evidência primária NOVA (mineração própria do `result.json`, via citação de
+Diego Schmidt 2025-06-13):** Jrk Bgrt, **2023-01-08**: *"@barrystyle, provided
+a very specific hint already. **(Cosmic Duality Book Page — Life and Death)**"*.
+O parêntese com a página exata não estava documentado — só a referência genérica
+ao post do barrystyle.
+
+1. **O livro identificado:** Time-Life Books, série *Mysteries of the Unknown*,
+   volume **Cosmic Duality** (1991). Sinopse da editora: "pairs of opposites such
+   as life and death, **male and female**, and especially, evil and good" (a
+   mesma dualidade do "16 female, 7 male" do Arquiteto). Scan: archive.org
+   `cosmicdualitymys0000time` (baixado em `_work/cosmic_duality.pdf`, 152 pp.,
+   não versionado — regenerável do identifier). **p.39 do livro = p.43 do PDF** =
+   gravura francesa do séc. XVII **"Le Miroir de la Vie et de la Mort"** (a
+   "ultimate duality" citada na legenda da p.38; crédito do livro: Bayerische
+   Staatsbibliothek, Munich; versão colorida no Musée Carnavalet via Bridgeman
+   ID 419521). Tradução impressa na p.38: *"To love beauty is unwise, for time
+   destroys it. In this world of contrasts, everything changes, and the moment
+   we start to live, we start to die."*
+2. **Verso francês (reconstrução parcial, consenso multi-OCR)** — engines:
+   camada tesseract do scan + Windows.Media.Ocr (en-US e pt-BR) via
+   `_work/winrt_ocr.ps1` sobre recortes 600 DPI:
+   `LE MIROIR DE LA VIE ET DE LA MORT / [?] la beauté d'un [vis]age, / [?]
+   aymer; ce n'est point estre sage, / le temps en moins d'une heure [?] /
+   tout ce monde et nostre [?] à peu [estre,] / qu'on commençons à vivre, on
+   commençons à mourir.` Inícios das linhas 1–2 não recuperados (tipo itálico
+   antigo no limite do OCR); salvo em `_work/miroir_verse.txt`. Rotas para o
+   verbatim completo: tesseract local, digitalização BSB, asset Bridgeman 419521
+   (MeisterDrucke 403 no fetch; portal Paris Musées não filtra por frase — 451k
+   resultados — e busca site: não achou registro com esse título).
+3. **Testes do material** (`solver/miroir_attack.py`, 56 senhas): verso
+   (parcial/reconstrução/tradução EN) em raw/UPPER/sem-espaços como EVP
+   SMALL/COSMIC (≥85% ASCII), sha256→privkey, AES-256 nos 35 blocos (IVs
+   zero/header/half); títulos FR/EN; **cifra-de-livro com índices primos** sobre
+   o verso (letras 1/0-based, iniciais e palavras em posições primas);
+   mecânica do espelho **pré-Bifid** (atbash do faed/dbbi, reversões, quadrado
+   derivado do dbbi-espelhado, atbash do output) → **0 hits**; todas as
+   variantes de espelho pontuam −6,8 a −8,3, **pior** que o canônico −5,577 — o
+   espelho não é camada pré-Bifid (mais um negativo que reforça o quadrado
+   canônico como único sinal).
+4. **ORÁCULO-ESPELHO (novo — nunca testado em todo o campaign;**
+   `solver/mirror_attack.py`): a gravura ensina a ver uma coisa através do seu
+   oposto; em secp256k1, para cada x há dois y (y e p−y) e a privkey do
+   ponto-espelho é **N−k**. Se o puzzle *entrega* N−k, todo scan histórico
+   (oráculo = pubkey exata) teria errado por um sinal. Ponto-espelho do alvo:
+   `04f4d1bbd9…464638c2da…dd40cc6d6` — endereço-"morte"
+   **`1LzLrZVkafbXLpam3qibRDdMe5sttUoCq4`**. Resultados:
+   - **better_half ≠ N−half** e as duas metades **não compartilham x** — as
+     "duas metades" NÃO são gêmeas-espelho (refuta a leitura estrutural mais
+     elegante do yin-yang);
+   - ~3.704 janelas de 32 B em todos os estágios + N− de todos os artefatos
+     base + 35 blocos e N−blocos + sha256 por bloco + combos das camadas
+     (XOR/soma de subsets, pares simétricos, seleções por header) + plaintexts
+     AES das chaves naturais — todos contra o oráculo-espelho **e** o direto →
+     **0 hits**. Gap fechado para as famílias naturais; o oráculo-espelho entra
+     no toolkit permanente (todo candidato futuro deve checar ambos os pontos).
+
+**Saldo:** a página exata do hint confirmado está identificada e reproduzível;
+o material dela não fecha oráculo nas leituras naturais; a mecânica-espelho
+formalizada (EC-negação) está refutada nas leituras estruturais e naturais. O
+"scary specific" da página permanece interpretativo — as leituras mecânicas
+óbvias do espelho estão mortas. Próximos passos reais nesta frente: (i) verbatim
+completo do verso para expandir a bateria (verso/cifra-de-livro); (ii) páginas
+vizinhas do livro (p.18: Jung, "liberation from opposites", já citada pelo
+gnomad; contracapa/sumário).
