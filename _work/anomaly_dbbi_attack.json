@@ -1,0 +1,431 @@
+{
+  "contract": "DBBI(7x13) dot anomaly-prime list(13) -> 7 header words / 7x5 Chain4",
+  "raw_mnemonic": "abstract actual advance album angry antique artefact avocado base behave belt blood",
+  "checksum_mnemonic": "abstract actual advance album angry antique artefact avocado base behave belt blind",
+  "hypotheses": 288,
+  "natural_alternating_dots": [
+    -140,
+    258,
+    1568,
+    -507,
+    -573,
+    2545,
+    256
+  ],
+  "null_model_140": {
+    "trials": 1000000,
+    "first_row_hits": 509,
+    "first_row_rate": 0.000509,
+    "any_row_hits": 3396,
+    "any_row_rate": 0.003396,
+    "yin_substring_hits": 269,
+    "yin_substring_rate": 0.000269,
+    "hash_substring_hits": 10,
+    "hash_substring_rate": 1e-05,
+    "joint_hash_and_yin_hits": 0,
+    "joint_hash_and_yin_rate": 0.0,
+    "triple_first140_hash_yin_hits": 0,
+    "triple_first140_hash_yin_rate": 0.0
+  },
+  "unique_bifid_squares": 44,
+  "bifid_anchor_hits": [
+    {
+      "label": "raw191/forward/a0/raw/all+",
+      "square": "EIGDCAHFBKLMNOPQRSTUVWXYZ",
+      "anchors": [
+        "KEY"
+      ],
+      "head": "HLAIEEETILELIIIEIRANIWHREUAIHRABAFIMINIWHDEREWAPEEEUITEMAMEUIMARIMEHEMAIAGEIETEO"
+    },
+    {
+      "label": "raw191/forward/a0/raw/colors-BY-ends+1+1",
+      "square": "EIGDCFHABKLMNOPQRSTUVWXYZ",
+      "anchors": [
+        "KEY"
+      ],
+      "head": "HGFMEEETINELIIIGIRFGIWHREUFMHRFBFAIMILIWHOEREWFCEEEUITEMFIEUIMFRIMEHEMFMFNEIETEO"
+    }
+  ],
+  "bifid_top": [
+    {
+      "score": -6.2899,
+      "label": "raw191/forward/a0/raw/all+",
+      "square": "EIGDCAHFBKLMNOPQRSTUVWXYZ",
+      "head": "HLAIEEETILELIIIEIRANIWHREUAIHRABAFIMINIWHDEREWAPEEEUITEMAMEUIMARIMEHEMAIAGEIETEO"
+    },
+    {
+      "score": -6.291,
+      "label": "checksum190/reverse/a0/raw/alternating+",
+      "square": "EAGBCIHDFKLMNOPQRSTUVWXYZ",
+      "head": "IRAIEEHNEMELAAEAHMISAWARIPAIARHDIDAMAOAWEFHLAVIUEEIPIOALHQIPAMAQAMHEALAIEDAEHNAN"
+    },
+    {
+      "score": -6.3661,
+      "label": "checksum190/forward/a0/raw/all+",
+      "square": "EIGDCAFHBKLMNOPQRSTUVWXYZ",
+      "head": "FAAIEEETILELIGIEISAHIXFSEUAIFSAOANINIMIXFDEREWAKEEEUITEMAFEUINARINEFEMAIAGEIETEO"
+    },
+    {
+      "score": -6.3696,
+      "label": "raw191/forward/a0/raw/colors-BY-ends+1-1",
+      "square": "EIGDCFAHBKLMNOPQRSTUVWXYZ",
+      "head": "AIFAEEETIMELIGIIISFGIXASEUFAASFOFNINILIXABEREWFCEEEUITEMFIEUINFRINEAEMFAFHEIETEO"
+    },
+    {
+      "score": -6.382,
+      "label": "checksum190/reverse/a0/raw/colors-BY-ends+1+1",
+      "square": "EAFBCDIGHKLMNOPQRSTUVWXYZ",
+      "head": "EMAIEEIEDMDLABEAIBANAYATDCAIATIQISIODNAYEHIAAWEPEEDCDBIMAMDCIOARIOIIIMAIAGAAIEIL"
+    },
+    {
+      "score": -6.4315,
+      "label": "checksum190/reverse/a0/raw/colors-BY-ends+0+0",
+      "square": "DAFBCIEGHKLMNOPQRSTUVWXYZ",
+      "head": "DMAIEEDDIMEMEHIEABANAYATDCAIATIQESEOINAYDHADAVDPEEDCDBELALDCEOAQEOEDELAIAGEIDDIL"
+    },
+    {
+      "score": -6.4384,
+      "label": "raw191/reverse/a0/raw/colors-BY-ends+1+1",
+      "square": "EIFBCADGHKLMNOPQRSTUVWXYZ",
+      "head": "ILAIEEDDDLALIBIEDHINIYITAKAIITDRDSDOANIYABADEWEPEEAKAHAMEMAKDOERDOEDAMAIDFEIDDDM"
+    },
+    {
+      "score": -6.4497,
+      "label": "raw191/reverse/a0/raw/colors-BY-ends+0+0",
+      "square": "DIFBCAEGHKLMNOPQRSTUVWXYZ",
+      "head": "ILAIEEDDELEMEHEAIBINIYITDCAIITAQESEOANIYABDIDWDPEEDCDBAMDMDCEODREODEAMAIEFAEDDAL"
+    },
+    {
+      "score": -6.4589,
+      "label": "checksum190/reverse/a0/raw/colors-BY-ends+1-1",
+      "square": "CAFBDIEGHKLMNOPQRSTUVWXYZ",
+      "head": "CMAIEECZIMEMEHIEAYANABATCVAIATIUESEOINABCHAVACCLEECVCYELALCVEOAQEOECELAIAGEICZIP"
+    },
+    {
+      "score": -6.6647,
+      "label": "checksum190/reverse/a0/raw/halves-",
+      "square": "CAFBDGEHIKLMNOPQRSTUVWXYZ",
+      "head": "CMAIEECZGAEAEHGEAXALAFASCVAIASGPELEFGFAFCIAYABCLEECVCYEBAOCVEFATEFETEBAIAGEICZGD"
+    },
+    {
+      "score": -6.7393,
+      "label": "raw191/forward/a0/raw/colors-YB-ends+1-1",
+      "square": "EDFIBAGCHKLMNOPQRSTUVWXYZ",
+      "head": "DLAIEEEGGAAADIDEDHDMGODYDCAIDYARGRGHACGOABEHAODNEEDCEKAHEODCGHEYGHETAHAIGDEIEGAG"
+    },
+    {
+      "score": -6.7608,
+      "label": "raw191/reverse/a0/raw/halves+",
+      "square": "EDGCAIHFBKLMNOPQRSTUVWXYZ",
+      "head": "IPDVEEEHEPELDDEADHINDRHREBDVHRIHIFDMDNDRDYDIDQIOEEEBDBDLHLEBDMHQDMHEDLDVEXDEEHEM"
+    }
+  ],
+  "unique_aes_keys": 71922,
+  "direct_private_key_tests": 71922,
+  "aes_ecb_private_key_tests": 2517270,
+  "hard_hits": [],
+  "soft_hits": [],
+  "genesis_140_chunk_attack": {
+    "genesis": "0x736B6E616220726F662074756F6C69616220646E6F63657320666F206B6E697262206E6F20726F6C6C65636E61684320393030322F6E614A2F33302073656D695420656854",
+    "families": 288,
+    "direct_private_key_tests": 10080,
+    "aes_candidates": 20160,
+    "hard_hits": [],
+    "soft_hits": [],
+    "top_printable": [
+      {
+        "ratio": 0.4179,
+        "label": "upper/columns-7x5/chunkrev=True/roundrobin/chunk+dot/dot=+1/CBC-header",
+        "head": "63a8a23e97572c9489e0b1733c2229ec6493e93ffce919ff83c2c4888ab7f21c"
+      },
+      {
+        "ratio": 0.4143,
+        "label": "upper/direct/chunkrev=True/contiguous/chunk+dot/dot=+1/ECB",
+        "head": "a9361ee25dc99048437e0daff6bc953013e69e419628c3e70ff00250ec4b7f0c"
+      },
+      {
+        "ratio": 0.4125,
+        "label": "lower/reverse/chunkrev=True/contiguous/repeat/dot=+1/CBC-header",
+        "head": "6b59fd108cdf0ee62b1ee94b40973bc425ba2aaa75ab8315bb5de31c7168b0e6"
+      },
+      {
+        "ratio": 0.4107,
+        "label": "upper/direct/chunkrev=True/roundrobin/sha/dot=+1/CBC-header",
+        "head": "9a9b33f4cd33e4078101a6bb60f914ed2597948d306d17208bc28c6122e9fffa"
+      },
+      {
+        "ratio": 0.4098,
+        "label": "upper/direct/chunkrev=True/roundrobin/chunk+header/dot=+1/CBC-header",
+        "head": "b00c1c8cab6046441b5d3c0ec48c68f53083e61f58cb9ac4657e4984d7c68dd1"
+      },
+      {
+        "ratio": 0.408,
+        "label": "lower/direct/chunkrev=True/roundrobin/dot+chunk/dot=+1/CBC-header",
+        "head": "407c36c147d015610e71efd9ab3064a5312e9c36e55b62dbbfc81b1340234bfc"
+      },
+      {
+        "ratio": 0.4071,
+        "label": "upper/columns-5x7/chunkrev=False/roundrobin/dot+chunk/dot=+1/ECB",
+        "head": "c8eff7dad2b2c435cbfec76e34af82e27801c9175b39540864e0b58a66a964ed"
+      },
+      {
+        "ratio": 0.4071,
+        "label": "lower/reverse/chunkrev=True/roundrobin/framed/dot=+1/CBC-header",
+        "head": "044dfbd21cdd8687c2cc45e6d7742c47e568f3b4c95c9c667a0e8522f4d4d744"
+      },
+      {
+        "ratio": 0.4071,
+        "label": "lower/direct/chunkrev=True/roundrobin/dot+chunk/dot=+1/ECB",
+        "head": "8ae28a1d8d4ea9bdc4ef530561aed879465beb488f9ab8c333faddcb26dfc6ec"
+      },
+      {
+        "ratio": 0.4071,
+        "label": "lower/columns-7x5/chunkrev=True/roundrobin/sha/dot=+1/ECB",
+        "head": "6dc821f6d64760b8c15f093c7cc8ae4a07e020302eb24b681544ec49d24d0945"
+      },
+      {
+        "ratio": 0.4071,
+        "label": "lower/columns-7x5/chunkrev=True/contiguous/sha/dot=+1/ECB",
+        "head": "6dc821f6d64760b8c15f093c7cc8ae4a07e020302eb24b681544ec49d24d0945"
+      },
+      {
+        "ratio": 0.4062,
+        "label": "lower/columns-5x7/chunkrev=False/contiguous/repeat/dot=+1/CBC-header",
+        "head": "3642f42c5a3142a9c57d8df46d07c97027a5c0fca039d942c8ecf2ee4a15b288"
+      }
+    ]
+  },
+  "emergent_word_attack": {
+    "raw_mod26": "PHASHFG",
+    "corrected_mod26": "QYINZXW",
+    "unique_keys": 545,
+    "aes_private_key_tests": 76300,
+    "block_algebra_private_key_tests": 7280,
+    "hard_hits": [],
+    "soft_hits": [],
+    "top_printable": [
+      {
+        "ratio": 0.4357,
+        "mode": "CBC-header-first",
+        "key": "f332ec674ae0af85340839e9422ae919fb1d0e1d2ed69fdc6f6d7070e9ef20ff",
+        "head": "6de64964e895fdc03d73212c4fded752cd9722780fd4758a6618208b678a86bd"
+      },
+      {
+        "ratio": 0.4313,
+        "mode": "CBC-header-last",
+        "key": "2b2d70686173686667372b2d70686173686667372b2d70686173686667372b2d",
+        "head": "da444549d862c2133838647138365e8bf266f1469480ddacede14c22e42b71df"
+      },
+      {
+        "ratio": 0.4304,
+        "mode": "CBC-zero",
+        "key": "f332ec674ae0af85340839e9422ae919fb1d0e1d2ed69fdc6f6d7070e9ef20ff",
+        "head": "a778f5b89fb715ca84d9aa9d2975fb95cd9722780fd4758a6618208b678a86bd"
+      },
+      {
+        "ratio": 0.4304,
+        "mode": "CBC-header-first",
+        "key": "2b2d70686173686667372b2d70686173686667372b2d70686173686667372b2d",
+        "head": "7671d552336fc56c4fae8c4f1b2e9549f266f1469480ddacede14c22e42b71df"
+      },
+      {
+        "ratio": 0.4295,
+        "mode": "CBC-header-last",
+        "key": "f332ec674ae0af85340839e9422ae919fb1d0e1d2ed69fdc6f6d7070e9ef20ff",
+        "head": "c1d3d97f0398fabf4ae5c9126cc61c90cd9722780fd4758a6618208b678a86bd"
+      },
+      {
+        "ratio": 0.4268,
+        "mode": "CBC-zero",
+        "key": "2b2d70686173686667372b2d70686173686667372b2d70686173686667372b2d",
+        "head": "bcef698e444d2d66f60407fe7d85b98ef266f1469480ddacede14c22e42b71df"
+      },
+      {
+        "ratio": 0.4259,
+        "mode": "CBC-zero",
+        "key": "e157ed94f9b7353632524f0c18074354a158cb801e80ab0c03d78718eda7c4e3",
+        "head": "45c7e68570eebf24ac65205ff16076ab52a6c7a3cbb34306ac3e0b4dd838da88"
+      },
+      {
+        "ratio": 0.4259,
+        "mode": "CBC-header-last",
+        "key": "e157ed94f9b7353632524f0c18074354a158cb801e80ab0c03d78718eda7c4e3",
+        "head": "236cca42ecc15051625943d0b4d391ae52a6c7a3cbb34306ac3e0b4dd838da88"
+      },
+      {
+        "ratio": 0.425,
+        "mode": "CBC-header-first",
+        "key": "e157ed94f9b7353632524f0c18074354a158cb801e80ab0c03d78718eda7c4e3",
+        "head": "8f595a5907cc572e15cfabee97cb5a6c52a6c7a3cbb34306ac3e0b4dd838da88"
+      },
+      {
+        "ratio": 0.4223,
+        "mode": "ECB",
+        "key": "95648b4276a5433d36acd80bbd898c5785b23a7ecc5f7a7c3cc20947e8d66ae1",
+        "head": "a4feee6eea9a7467ce7164f3818849db376d7ad77557583c2e969659cac4792c"
+      },
+      {
+        "ratio": 0.4214,
+        "mode": "ECB",
+        "key": "2b2d7179696e7a7877372b2d7179696e7a7877372b2d7179696e7a7877372b2d",
+        "head": "3aa66abf7e20789730c56e32cdf663a8c54fb06d9e1bd6354ae5974d74b4dfb5"
+      },
+      {
+        "ratio": 0.4205,
+        "mode": "CBC-zero",
+        "key": "9f9d79ece6f5c956063beff2130631da40a37d050cb3813190b58abb17fec3db",
+        "head": "5734b164b30b6e4926bc422b32e1314e4ccee79a8877b7c3a51d04860918b5f0"
+      }
+    ]
+  },
+  "seven_password_attack": {
+    "tokens": [
+      "HASHYIN",
+      "PHASHFG",
+      "QYINZXW",
+      "YINYANG"
+    ],
+    "families": 288,
+    "unique_direct_keys": 696,
+    "aes_private_key_tests": 20160,
+    "aggregate_private_key_tests": 10944,
+    "hard_hits": [],
+    "soft_hits": [],
+    "top_printable": [
+      {
+        "ratio": 0.4268,
+        "label": "gfhsahp/contiguous/dot+letter/dot=+1/CBC-header",
+        "head": "0f427dc989b91418019dcfe547f12040a78b2b4de90370953e09a2a51a878328"
+      },
+      {
+        "ratio": 0.425,
+        "label": "wxzniyq/contiguous/letter+dot/dot=-1/CBC-header",
+        "head": "5a3213a901b3305d5428594dbf764e2434b78376d7d2ec6cbe8e0897e1a85807"
+      },
+      {
+        "ratio": 0.4205,
+        "label": "HASHYIN/contiguous/repeat-letter/dot=+1/CBC-header",
+        "head": "6148e165d58752411caf083b50381c7ff9b62ad8df6273db56a4174c53bcb6f4"
+      },
+      {
+        "ratio": 0.4196,
+        "label": "yinyang/roundrobin/letter+dot/dot=-1/ECB",
+        "head": "85a50cfe7efa1b8a669bbec4c9b65849c811098d4044235c7fb14ca7b080ee67"
+      },
+      {
+        "ratio": 0.4188,
+        "label": "qyinzxw/roundrobin/framed/dot=+1/CBC-header",
+        "head": "954c090e7e4a1744735b3492866f3b29b8314cc2ea127f7e347c0e475cba3568"
+      },
+      {
+        "ratio": 0.4188,
+        "label": "hashyin/roundrobin/letter+dot/dot=-1/ECB",
+        "head": "0b3ad03e8117519bbca797c163e640bfa55a13043edd3ab791c854147bb0e997"
+      },
+      {
+        "ratio": 0.4179,
+        "label": "gnayniy/contiguous/letter+dot/dot=-1/ECB",
+        "head": "3d11eb9c844ba8f0684f666f6c15405f38afe77b0946f35c3ceb4d5f94b77358"
+      },
+      {
+        "ratio": 0.4179,
+        "label": "HASHYIN/roundrobin/framed/dot=+1/ECB",
+        "head": "96b5576f8af777e2afcbed8b61dd163df9fe5241035ed7657f8d498d218c97e0"
+      },
+      {
+        "ratio": 0.4179,
+        "label": "GFHSAHP/roundrobin/framed/dot=+1/CBC-header",
+        "head": "3d9f5b033aaf9c16f0f1e4383f52c669858bb62eac330198e0bdef065b368766"
+      },
+      {
+        "ratio": 0.417,
+        "label": "phashfg/contiguous/sha-letter/dot=+1/ECB",
+        "head": "4d2b897acd24532a1ac8194f044c679bcaf1724b40cb3f5d12ea167236379c1b"
+      },
+      {
+        "ratio": 0.4152,
+        "label": "gnayniy/roundrobin/word+letter/dot=+1/CBC-header",
+        "head": "8a210881d3f7f3fd4042bee248be31b3195bef0aba93a49ce9312ab5c1a724bd"
+      },
+      {
+        "ratio": 0.4143,
+        "label": "gnayniy/roundrobin/letter+dot/dot=-1/ECB",
+        "head": "3d11eb9c844ba8f0684f666f6c15405f38afe77b0946f35c3ceb4d5f94b77358"
+      }
+    ]
+  },
+  "top_printable": [
+    {
+      "ratio": 0.4446,
+      "label": "raw191/forward/a1/raw/halves+/dots-dec-b''/framed-sha",
+      "key": "60e79b5c301ae4e14556f9dd84ac8f25eaf2377f5a197af79e9814d631559520",
+      "head": "48aceb409568f98a630ffbc46252d1aeb752bc45e88a1562a31c6de72922de35"
+    },
+    {
+      "ratio": 0.4402,
+      "label": "checksum190/reverse/a1/raw/center0+/header-big-pm-3a",
+      "key": "a68311cd82e74b5e2dc9cde7debb7f902e4a5c4e3133ef0d40c5ead100b1e052",
+      "head": "1a69276c6189dc7748afc0ec9da0d601c06b59385db239361a2f78cad782d6bd"
+    },
+    {
+      "ratio": 0.4384,
+      "label": "raw191/forward/a0/mod9/colors-YB-ends-1+1/select-roundrobin/dot/off-1/join-reverse",
+      "key": "8763c5ccb171711fd10455b30ded57afd81087a066714ec0bb226768894463f8",
+      "head": "5e6d64c8e6280b8a83ff032f20075e75721d713e25a8d656f9c1cd775acd72e0"
+    },
+    {
+      "ratio": 0.4384,
+      "label": "checksum190/forward/a0/raw/colors-BY-ends+1+1/select-roundrobin/header-dot/off-1/xor",
+      "key": "ffd73fef20f958c679bb88beb0d058a1826cdffe1763d55d8c2411d3231d1b1e",
+      "head": "b85a68586a75c99f63d32ec107df611d3360c17d3fc4f7c57bd521b7a16a5bba"
+    },
+    {
+      "ratio": 0.4375,
+      "label": "raw191/forward/a0/mod9/center0+/select-roundrobin/dot+header/off0/xor",
+      "key": "c1c8e3d017615c6c3f719d87aab2a1d97b9c132f74f3c0d690377176b7421d10",
+      "head": "d5c4291017485462e833c872e80ceb115d1b365604481775e761ca2ded0bfd53"
+    },
+    {
+      "ratio": 0.4375,
+      "label": "checksum190/reverse/a1/raw/colors-BY-ends+1-1/header-little-pm-07",
+      "key": "0aa4b25e91e26ac460b986264a2b1d2c0246d394954cd798577e5b7f43265b47",
+      "head": "be433e74333cc163ef5b603dd41a227b5bf9569e9fdea8a0545358929a833039"
+    },
+    {
+      "ratio": 0.4366,
+      "label": "raw191/reverse/a0/raw/colors-BY-ends+1+1/select-contiguous/header-dot/off0/join",
+      "key": "8d33297b12c21785375c314f6fdaac7abd7ba68ace6a80078ccbfc0d6c2222a4",
+      "head": "2146548e77c304a340873ebb09ee1679598094a2f70e93554e7d7d83e65898e1"
+    },
+    {
+      "ratio": 0.4366,
+      "label": "checksum190/reverse/a1/raw/colors-BY-ends-1+1/header-big-pm-1a",
+      "key": "00822191a32392e30f0a17059a565a4d4ce7adf7bee2407a5a210dcca5c06196",
+      "head": "e91248c99d4ef3182b6fe557ccd5409975a45ee2bf693f9025e4a1dc3909495c"
+    },
+    {
+      "ratio": 0.4357,
+      "label": "checksum190/reverse/a1/raw/all+/header-big-pm-7a",
+      "key": "eed7c1c68b77ad6c7a74091fcf7767ed6951b7a0c05177e1c0749c0bb6d57818",
+      "head": "67898a16934e80a077d0afdd070e39cdfb48422db6123d0c0d94a1172b4c1a9d"
+    },
+    {
+      "ratio": 0.4357,
+      "label": "checksum190/reverse/a1/mod9/colors-YB-ends+0+0/row0-dot+word/sha",
+      "key": "c602a1c3fed9ee08dfb7633a4c6d9b2b40b8a0817351184e5586f07df009f178",
+      "head": "058a9e52a6996acc25138a98d91c4e257a527ac36a3f2194b0c4a836b4e7d34c"
+    },
+    {
+      "ratio": 0.4357,
+      "label": "checksum190/reverse/a0/raw/colors-BY-ends+1-1/select-roundrobin/dot-xor-header/off-1/xor",
+      "key": "4e44d9319650884872dda8f1f291adfb2353193f1492ca48ea92475f1b1a53a6",
+      "head": "844c3b2e1765d311561c73093338c258d863085c2d3d42cb5b15e9c09a60af50"
+    },
+    {
+      "ratio": 0.4348,
+      "label": "raw191/reverse/a0/raw/colors-BY-ends+1-1/header-little-pm-73",
+      "key": "07eda7b2ff0b9444e57efe8d495979d5ab3cf465dab6ca2fe70e14320936d7bd",
+      "head": "99ec51c5a134160ebddae40ad87bb1d632527e278168664ce8f341721437a958"
+    }
+  ]
+}

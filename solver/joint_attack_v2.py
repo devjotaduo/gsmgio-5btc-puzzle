@@ -2,7 +2,7 @@
 """
 joint_attack_v2 — RECONSTRUIDO (o original corrompeu, sem git history).
 A frente que NENHUM script combinou: over-encryption (matrixsumlist mod-9)
-APLICADA ANTES do straddling-checkerboard, com alfabeto DERIVADO do dbbi.
+APLICADA ANTES do straddling-checkerboard, com alfabetos do dbbi e da pagina.
 
 Por que: checkerboard.py buscou quadrados ALEATORIOS -> platô -5.592 em 620k
 gens (log). matrixsum_attack.py aplicou keystream só antes do BIFID, nunca antes
@@ -20,6 +20,7 @@ import os, json, time, hashlib, itertools
 import oracles as O
 from scorer import Scorer
 from checkerboard import build_layout, decode, ALPHA25
+from dbbi_repeat_attack import key_orders
 from prime_attack import hard_oracles, key_from_symbols
 
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "_work", "joint_attack_v2_results.jsonl")
@@ -53,9 +54,11 @@ def faed_digits():
     return [ord(c)-ord('a')+1 for c in O.sources()["faed"]]  # 1..9
 
 def dbbi_alphabets():
-    """Seeds canonicos de alfabeto-checkerboard DERIVADOS do dbbi (nao aleatorio)."""
+    """Seeds canonicos de alfabeto-checkerboard (nao aleatorios)."""
     dbbi = O.sources()["dbbi"]
     seeds = {}
+    def keyed(text):
+        return "".join(dict.fromkeys(text.upper().replace("J", "I") + ALPHA25))
     # 1) ordem de 1a ocorrencia do dbbi (a-i) mapeada p/ A-I, + filler alfabetico
     seen = []
     for c in dbbi:
@@ -77,6 +80,10 @@ def dbbi_alphabets():
     seeds["canon"] = "DBIFHCEGAKLMNOPQRSTUVWXYZ"
     # 4) fase 3.2.2 (ja negativo sem keystream — testar COM keystream)
     seeds["phase322"] = "FUBCDORALETHINGKYMVPSJQZXW"[:25]
+    # 5) instrucao literal da pagina SalPhaseIon como chave de alfabeto
+    page_key = "lastwordsbeforearchichoicethispassword"
+    seeds["page_key"] = keyed(page_key)
+    seeds["page_key_rev"] = keyed(page_key[::-1])
     return seeds
 
 def remove_keystream(digits, klist, direction):
@@ -104,7 +111,7 @@ def main():
     log = open(OUT, "w", encoding="utf-8")
     digits = faed_digits()
     alphabets = dbbi_alphabets()
-    print(f"[setup] faed {len(digits)} digitos | {len(alphabets)} alfabetos-seed do dbbi")
+    print(f"[setup] faed {len(digits)} digitos | {len(alphabets)} alfabetos-seed")
     for name, a in alphabets.items():
         ok = len(a)==25 and len(set(a))==25
         print(f"  seed {name:16s} valido={ok} {a}")
@@ -115,6 +122,9 @@ def main():
         "spiral9": [(SPIRAL[i%len(SPIRAL)]*4 + (i%9)) % 9 + 1 for i in range(14)],
         "none": None,
     }
+    keystreams.update({name: [value + 1 for value in key]
+                       for name, key in key_orders(O.sources()["dbbi"]).items()
+                       if name.startswith("sum-")})
     results = []; t0 = time.time(); tried = 0
     for aname, alpha in alphabets.items():
         if len(set(alpha)) != 25:

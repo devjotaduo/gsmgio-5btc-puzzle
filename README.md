@@ -632,9 +632,23 @@ The following follows the same formatting as previous openssl base64-encoded AES
 > U 2 F s d G V k X 1 8 6 t Y U 0 h V J B X X U n B U O 7 C 0 + X 4 K U W n W k C v o Z S x b R D 3 w N s G W V H e f v d r d 9 z
 > Q v X 0 t 8 v 3 j P B 4 o k p s p x e b R i 6 s E 1 B M l 5 H I 8 R k u + K e j U q T v d W O X 6 n Q j S p e p X w G u N / j J
 
-### Estado reproduzível do endgame (2026-08-20)
+### Cadeia histórica reproduzível (não validada)
 
-O pipeline público agora fecha até o último payload binário. Execute:
+**Correção 2026-08-30:** a cadeia abaixo reproduz bytes e hashes, mas não prova uma
+decifração. As primeiras saídas são binárias de alta entropia aceitas apenas por padding
+PKCS#7 — um evento aleatório esperado em cerca de 1/256 tentativas — e o URL/hash usado
+depois é autorreferente. A [correção pública #104](https://github.com/puzzlehunt/gsmgio-5btc-puzzle/issues/104)
+recoloca a fronteira verificável na senha dos blobs AES da página SalPhaseIon/Cosmic.
+
+Progresso reproduzível desta revisão: organizar o bloco `faed` como 15×38 (o comprimento
+de `lastwordsbeforearchichoicethispassword`) e somar as linhas com a=0 produz
+`[140,171,129,168,150,174,184,176,188,179,175,179,169,164,163]`. O primeiro valor
+repete o “hundred fourty” do texto da fase 3.2 e o último é o índice espiral do pixel
+`#FEFEFE`. A interpretação dessa lista como entropia BIP39 e cerca de 720 mil caminhos
+Bitcoin não atingiram o endereço-prêmio; portanto é uma pista estrutural, não a solução.
+Os testes e negativos estão em [`ENDGAME.md`](ENDGAME.md).
+
+Para reproduzir a construção histórica, execute:
 
 ```powershell
 .\puzzle-env\Scripts\python.exe solver\final_chain.py

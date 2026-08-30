@@ -1,0 +1,427 @@
+2019-04-20T13:18:49	Ok.. somebody has cracked the first code.
+2019-04-20T13:19:00	that was way faster than expected.
+2019-04-20T13:21:57	The first part. Maybe the puzzle has multiple stages 😉.
+2019-04-20T13:22:36	It is.
+2019-04-20T13:41:14	It's a way to protect websites against cross site request forgery but the loadbalancer is a bitch on multiple tries apparently.
+2019-04-22T11:28:08	wrong chat RKT 😊
+2019-04-22T11:39:49	😂
+2019-04-22T16:48:52	5ac407837447fba24ba2802e4d1e9aecb4580aa29fef1088cc387c180b746f75
+2019-04-22T16:49:09	just try hit your options against that hash.
+2019-04-22T18:24:17	Puzzle token issue for stage 1 seems to be resolved.
+2019-04-22T18:26:42	https://passwordsgenerator.net/sha256-hash-generator/
+2019-04-22T18:26:51	or just get yourself a python script
+2019-04-22T18:28:13	a sticker
+2019-04-22T19:29:02	A hash which we provided as the website was giving a lot of token errors. With this hash the puzzlers can try their passwords instead of firing them at the website.
+2019-04-23T15:57:51	Ewout managed to crack the april 1st puzzle. He was the first to solve it.
+2019-04-27T12:46:58	hahahaha :D
+2019-04-27T12:47:07	back to the pile!
+2019-04-29T19:35:29	I personally don't mind you talkinig in another language in  this chat tbh although I do prefer english to be the standard language as I assume most of us will be able to follow the conversations. The main chat of GSMG is english only.
+2019-05-08T10:20:21	Apparently somebody managed to get into Phase 3 🧐
+2019-05-08T10:34:39	Nobody knows
+2019-05-14T11:49:49	👌
+2019-05-14T11:51:40	Quests might* be scams. We didn't promote this puzzle nor is it unsolvalble. Please enjoy the puzzle or continue your journey.
+2019-05-14T11:53:59	Sure, once it's solved.
+2019-05-14T12:01:11	I suppose the btc price will be above 10k at the next halving.
+2019-05-17T19:39:21	Dear all, somebody pointed out that there might be a mistake in phase III and that is correct unfortunately. The mistake makes it nearly impossible to solve unless you'd know where to add 1 extra character between the 3 answers. My sincerest apologies for this, I'll fix this a soon as I've found a decent spot to do so as I'm on holiday atm. Again, 1000 times sorry, I'm aware I might have wasted a lot of time for some :-(...
+2019-05-17T19:43:46	Here's the hint in order to bypass the mistake: |  | giveit = givetit
+2019-05-17T21:04:04	Correct.
+2019-05-17T21:15:22	For those feeling bad about having wasted time on my typo. I might feel even worse as I've tested the entire puzzle 3 times with the same string which had the typo in it 😒. I'll kill some braincells tonight with tasteless alcohol in order to forget this blunder.
+2019-05-17T23:30:08	The issue is within the 3th phase. Not in going from 2 to 3.
+2019-05-17T23:30:34	Once you have to work with give(t)it you'll know.
+2019-05-18T13:26:26	So, after yesterday's 'hint' a team of puzzlers has made an unbelievable amount of progress in just one day... The progress they made was unforseen as we expected it to take at least a !month! to pass those parts of the puzzle. Hat off for those that managed to puzzle their way through all the ciphers and riddles in this extraordinary pace. We're really impressed by that, actually, we stand in awe for you. Congrats. |  | To those not having reached Phase III yet, no worries besides a bit of extra pr...
+2019-05-18T13:31:02	In case the private key hasn't been found in 2019 we'll release a tiny hint at the start of 2020, that will be the final hint. Can the private key be retrieved without that hint? Yes.
+2019-05-18T13:49:27	Nope
+2019-05-18T13:50:17	Part III consist out of a few stages. The last few stages are, how shall I say it, not really easy to solve for most.
+2019-05-18T14:10:46	No, they reaced out to me on tg and send me proof of them passing the stages.
+2019-05-18T14:13:29	No hints after stage 2 (except the 't' to fix my stupid mistake)
+2019-05-26T21:25:10	Not completely, voice recognition might even work to pass although I'd copy past the answer as it's faster ;-).
+2019-05-27T00:20:49	Ok you found a song. Do have a clue on how to proceed on the webpage?
+2019-05-28T13:45:40	Nobody knows.
+2019-05-31T12:02:28	Now we need a bot here too
+2019-05-31T12:20:06	
+2019-05-31T12:27:49	shitcoin
+2019-05-31T12:27:53	😉
+2019-05-31T12:28:01	Well.... yes
+2019-05-31T12:28:28	Apparently folks found a new piece.
+2019-05-31T12:29:13	Almost banned for spam 😋
+2019-05-31T12:32:29	/daysandbox_set safe_hours=720
+2019-06-27T18:38:51	🌱
+2019-06-27T18:39:32	🛣
+2019-08-10T13:50:10	You'll only know when you've solved that part.
+2019-09-04T04:58:16	Still no hints ;-)
+2019-09-22T19:55:01	Found it by now?
+2019-09-22T20:00:48	7 parts right?
+2019-09-26T12:35:24	There may indeed a piece be found outside the main puzzle.
+2019-10-13T15:38:53	Gsmg.io/puzzle
+2019-10-31T22:53:04	Sure, what's the hint?
+2019-12-03T14:55:55	giveit = givetit
+2019-12-31T07:30:23	Hahaha, you're on it. Not an exact time, but it will be posted in this channel. It's at the start of 2020 indeed, way before the halving.
+2019-12-31T07:33:29	To all you peepz in advance: have a blast in the last part of 2019 and have an even better 2020. Best wishes to you all and good luck with the next puzzle piece(s) in case you manage to find them 😉!
+2020-01-04T22:01:00	
+2020-01-04T22:01:19	Anybody hungry?
+2020-01-04T22:01:54	No, it's a dessert
+2020-01-04T22:06:01	Note: I might be in a trolling mood.
+2020-01-12T17:52:32	👆
+2020-01-13T13:40:54	Hint to be expected within a few days. Note: not trolling with scripted cake this time.
+2020-01-14T07:38:06	Roses are White but often Red. | Yellow has a number and so does Blue. | Go back to the first puzzle piece without further ado. |  | It might have shown you only one door, beware that the rabbits nest may contain a whole lot more. |  | Hush hush.
+2020-01-14T07:38:49	Good luck 👍
+2020-01-27T12:21:35	Might have been fixed fyi 👆
+2020-01-27T13:00:04	Would be nice, not required
+2020-02-20T12:31:58	😎
+2020-02-21T10:03:21	I'm not the esthetician when it comes to coding 😉
+2020-02-22T12:19:41	👋
+2020-02-22T12:32:30	Solutions for the first stages can be found online.
+2020-02-22T12:32:52	The quickest brain did it within 2 hours if I remember correctly.
+2020-02-22T12:34:10	Don't know
+2020-02-22T13:11:52	Typos: Horrible mistakes due to rushed work. I'm 100% to blame for this noobish display of words. No clues to be found in those typos might you wonder 😉.
+2020-02-22T17:30:18	Only -41,-17 matters
+2020-02-25T09:45:53	Not sponsored, just see it as a side quest
+2020-02-25T15:04:46	You are right
+2020-02-25T15:07:05	FA please soften the communication. I like enthusiasm, but don't bring down the vibe. A lot of very smart people have been on this puzzle and put in a lot more effort than 1 can do in a month. Some puzzlers amazed me by being so incredibly fast in some stages.
+2020-02-25T15:07:19	3.2 is a thing btw
+2020-02-25T15:09:10	Or nobody found the direction
+2020-02-25T15:09:39	But I should shut up ofcourse 😁
+2020-02-25T15:10:30	I'd dive in the puzzle from the beginning before making assumptions
+2020-02-25T15:11:01	A few guys here cracked phase 2 in 2 days.
+2020-02-25T15:15:01	Don't know but most see 3.2 as the last part.
+2020-02-25T15:38:52	😂😂😂
+2020-02-25T15:40:01	Just spend less time here fishing for clues and solve 🧐
+2020-02-27T13:06:27	Nice and silent
+2020-02-27T13:06:41	Damn so annoying
+2020-02-27T13:07:09	He'll be back
+2020-03-16T10:13:31	Yeah we might want to push the English only rule here too ;-)
+2020-03-24T21:19:39	Interesting 😜
+2020-03-24T22:02:42	Answering that would be too much of a hint.
+2020-03-24T22:22:40	There must at least be something hidden in there.
+2020-04-06T09:12:03	No hints 🤓
+2020-04-08T15:38:10	Those hints are the last hints. Although I can say that one team managed to find something... something others haven't yet found (unless they didn't tell us).
+2020-04-08T16:01:53	That would be another hint.
+2020-04-08T16:12:53	there are errors?
+2020-04-08T16:16:14	Before you send anything. No hints; errors and typos are mostly not intended 😄
+2020-04-08T16:27:23	well, I'll just wait until you guys have progressed to "the next stage or something like that"😁
+2020-04-08T17:12:57	the backstage 😎
+2020-04-08T17:16:02	obviously a typo
+2020-04-08T17:17:30	Rushed work. I take all the blame there is for those 😞. My sincerest apologies.
+2020-04-08T17:17:43	Hope it hasn't spoiled the fun so far.
+2020-04-08T17:19:06	I can't even write without typo's. The intelligence is an illusion.
+2020-04-08T17:19:36	But thanks nevertheless.
+2020-04-08T17:27:08	Quite some typos have been changed already. The biggest blunder so far in the mainline of the puzzle was givetit instead of giveit 😩🔨
+2020-04-08T17:28:48	What impressed me most so far was that 1 crew even managed to pass it while the typo was unknown.
+2020-04-08T17:33:39	Humph. Hope, it is the quintessential human delusion, simultaneously the source of your greatest strength, and your greatest weakness.
+2020-04-08T17:33:48	(not a hint btw, just fooling around)
+2020-04-08T17:39:11	like 5 thousand milibitcoin...?
+2020-04-08T17:51:58	And Oen
+2020-04-11T16:52:20	♟
+2020-04-29T14:18:49	👆
+2020-05-11T13:42:26	
+2020-05-11T14:07:48	Invest it in bitconnect.
+2020-05-11T16:26:40	Well spotted
+2020-05-11T16:26:51	Happy halving!
+2020-05-11T16:31:00	It'll high likely be worth more than it once the price was 5 btc. Next halving in 209999
+2020-05-11T17:31:25	Let's see what bitcoin is worth the next halving and who knows what you'll find after opening the 2nd door. The price is in half, but what does it mean 🤔.
+2020-05-20T19:54:11	It is
+2020-05-20T20:36:55	This one 👆.
+2020-05-20T23:40:46	answer is there
+2020-05-21T03:12:59	First or zero
+2020-05-23T09:29:12	Thanks @EwoutM, I fell asleep.
+2020-05-23T10:40:20	/goodbye off
+2020-05-23T10:40:29	/cleanwelcome on
+2020-05-23T16:51:51	I have a purpose now. Buy a dosis of super covid-20 for every spammer.
+2020-05-23T16:53:42	Perfect
+2020-05-23T16:53:55	Make it very contagious please.
+2020-05-23T17:01:14	/lock audio bot button command contact document email emojigame forward game invitelink location phone poll rtl sticker url video videonote voice
+2020-05-23T17:01:44	😇
+2020-05-24T23:17:02	I think a computer would beat me in the turing test.
+2020-06-30T20:29:05	👆
+2020-08-02T13:54:57	Or the same puzzle, or just not at all 🤷‍♀.
+2020-08-02T13:56:20	Really nobody managed to find the extra door, didn't expect that after the earlier pace of cracking things.
+2020-08-03T09:46:06	A few here know
+2020-08-03T12:17:43	It's ok, more chance for those that aren't running. We said we'd do this from the start, no need to feel bad about this.
+2020-08-09T07:38:27	a private key
+2020-08-10T13:50:52	Cracking ethereum requires billions of ether.
+2020-08-12T10:10:55	Indeed remarkable with the hints stating the path pretty obvious...
+2020-08-12T15:22:59	No hints
+2020-08-12T15:23:21	There's 1 club that passed but they are stuck in the next phase.
+2020-08-12T16:18:55	Correct
+2020-10-01T09:41:56	I've just been notified that number 2 has made it to the next stage.
+2020-10-27T05:58:39	https://www.blockchain.com/btc/address/1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe price is indeed still there.
+2020-11-24T15:02:48	We have our reasons halving the price money at every bitcoin halving event :-).
+2020-11-24T16:02:23	Who knows, maybe even in the same block.
+2020-12-26T08:54:18	Thanks
+2021-01-07T16:57:32	It'll be split on the next halving.
+2021-01-07T16:58:45	We mentioned this at the beginning, when the puzzle started.
+2021-01-07T16:59:38	Depends on the contestants' puzzle skills.
+2021-01-07T18:58:17	Tg channel
+2021-01-18T11:41:23	I can solemnly promise you I'm not using any other accounts besides my own.
+2021-01-19T15:12:59	From now on no more begging for money in exchange for "hints". Doing so results in a ban. Measure in place due to many complaints.
+2021-01-19T15:14:14	This puzzle is supposed to be fun ✌️.
+2021-01-19T18:39:00	I'll offer free hints in PM. (After you've paid me 5.1 btc 🤡).
+2021-01-19T18:39:13	Good luck again.
+2021-01-21T08:35:49	Not to give any hints but a few might not require the internet anymore.
+2021-03-01T08:33:17	Ancient spelling 😅. One of the many many typos.
+2021-03-01T08:34:42	You are at the prime part already???
+2021-03-01T08:35:15	Oh wait, shouldn't have said that. That might have been a hint 🤔.
+2021-03-01T08:38:37	Rumour has it I'm an admin at least.
+2021-03-01T08:45:48	
+2021-03-05T10:14:28	Those not enjoying the puzzle are the ones wasting time I guess 😅?
+2021-03-05T10:15:26	Infrared
+2021-03-05T10:15:45	No hints 🤡
+2021-03-14T03:58:08	Fyi. Another person (or team) made it to salph.
+2021-03-14T06:25:14	Nope
+2021-03-14T06:45:01	I don't check the website logs. There aren't any tracking scripts either. People somehow now how to reach me on telegram and PM me, that's how I know :-). Although I can't prove it, we don't monitor the puzzlers progress in any way. I just read the chat and when I notice the address is empty I'll know how they did it. After the first stage was cracked within no-time I was afraid the entire puzzle would have been solved not too long after that. When people progress in salphation it might be crack...
+2021-03-14T12:19:29	I gave an unforseen hint already 🤷‍♂
+2021-03-15T04:16:26	Hush hush
+2021-03-19T08:07:55	If know about 3 people/teams.
+2021-03-19T08:19:59	4*
+2021-03-22T13:53:39	Nr 5 in salph
+2021-03-24T19:19:43	🤣
+2021-03-27T10:37:10	Maybe combine it with some psilocybe azurescens and mao inhibitors or go all  the way with some 5-MeO-DMT. 👀
+2021-03-27T10:39:51	
+2021-04-01T03:57:38	Hint: "another door might be found on {1 },{4} ,{21}"
+2021-04-01T05:34:22	Good one V ;-). (Assuming you played cyberpunk).
+2021-04-01T10:29:41	R=18 | A=1 | B=2 |  | Could also be 21 or 1812 bit 🧐. Sometimes I'm glad I don't have to solve this puzzle myself.
+2021-04-01T11:06:39	👆
+2021-04-02T17:18:22	I haven't deleted it. Not sure who, but I noticed some more messages are deleted from time to time.
+2021-04-03T12:51:32	Nobody knows
+2021-04-03T12:52:35	I've been pretending to be one of the few creators for a while now.
+2021-04-06T11:08:39	Some parts of cicada puzzles are still unsolved. Must be bad design.
+2021-04-06T11:09:36	If it were just about having fun, that'd be great wouldn't it :-).
+2021-04-09T16:46:38	✅
+2021-04-10T14:49:28	Fyi, another person or team reached salph today.
+2021-04-16T08:14:33	Blame noted and accepted
+2021-04-16T08:20:09	Deal, we'll take of 75% instead 😈.
+2021-04-16T08:21:12	https://www.bitcoinblockhalf.com/
+2021-04-16T08:33:32	I don't care who shares what indeed, too much of a hassle. As long as people enjoy and that the best puzzler gets the price I'm ok with a lot.
+2021-04-16T09:08:24	Good point
+2021-04-18T14:33:41	I suspect he isn't
+2021-04-18T15:24:13	Do you know what usually happens on the first of april?
+2021-08-10T17:51:12	Technically we do 😁
+2021-08-11T07:55:52	The one to be found by solving the puzzle yes
+2021-08-11T08:07:15	And the solver will find a way to 'decrypt' it.
+2021-09-23T20:38:41	https://blockchair.com/tools/halving-countdown
+2021-09-24T06:37:18	This was alcohol talking last night. The topic puzzle came up, and couldn't resist posting it 😅.
+2021-09-24T07:01:15	That's not mine
+2021-10-31T08:08:49	😅
+2021-12-03T00:41:18	There is | Another | D | O | O | R
+2021-12-03T00:46:25	Remind me when it's Christmas.
+2021-12-26T17:11:26	Oh well, why not. A mini mini hint. Ready 🐰?
+2021-12-26T17:18:32	The previous "there is another door hint" is still a thing. We're not sure if anyone has found another door so far, and we can't check that... We've seen prime numbers being mentioned; well, that is definitely an aspect which is required to proceed. Furthermore, along the way, some characters need to be 'zeroed out'.. Best of luck and happy holidays! 🥂
+2021-12-30T21:39:11	...how did you found out?
+2021-12-30T21:42:43	That leaves me positively speechless
+2021-12-30T21:45:53	Rumour has it, it is was done before dawn.
+2021-12-30T21:46:44	This was stated after drinking dozers stuff.
+2021-12-30T21:47:07	😁
+2021-12-31T14:14:55	The only date I give away is the expiry date of neo's passport.
+2022-05-25T07:22:06	
+2022-05-25T11:25:33	Looks like somebody found a gsmg subscription.
+2022-06-01T13:56:24	👽
+2022-09-06T06:21:52	
+2022-12-02T09:14:53	It is meant to be solved.
+2022-12-02T09:36:36	There might be a hint coming but not too soon.
+2022-12-02T19:45:40	I'm not exactly sure how long it would take to discover that theory so I can't really tell 🤔.
+2022-12-11T12:30:38	.... That is very specific
+2022-12-11T12:33:20	If the puzzle is solved you'll see how scary specific that is 😂
+2023-01-09T01:52:11	@barrystyle, provided a very specific hint already.
+2023-01-09T07:10:46	At least prime number is very important to get any further.
+2023-01-11T05:45:22	
+2023-01-11T05:46:17	Mini apologies for this Jeremy gif, couldn't help myself.
+2023-01-11T21:23:03	Rumour has it a new hint is to be expected within 2 months from now.
+2023-01-12T08:02:00	We obviously did this to have a chance at ending up in the Guinness Book for creating the lamest puzzle ever.
+2023-01-12T08:07:00	I checked a certain GitHub yesterday, for whoever set that up, nicely done. You guys are really getting close.
+2023-01-12T08:08:02	At least higher than sqrt(-1).
+2023-01-12T08:09:14	Focussing on the theory of everything is also still a valid path to reaching the private key.
+2023-01-12T08:10:54	An imaginary puzzle would.
+2023-01-12T08:13:36	
+2023-01-12T08:15:46	Just be clear. My apologies for this puzzle not to be too easy. I'm aware it might appear unsolvable, but it's not. If you find the answer now, the remaining 2.5 btc is well deserved... Or 5, who knows.
+2023-01-12T13:05:16	Every btc halving the price will half too.
+2023-01-12T14:47:07	👆
+2023-01-25T11:59:19	42
+2023-02-02T11:47:18	I'm staying out of this one 😅
+2023-02-23T20:20:03	00100110 10100110 11001110 10010110 10110110 11110110 01001110 00001110 10011110 10000110 11101110 10000110 10100110 01101110 10010110 11100110 10100110 10101110 01001110 00101110 10000110 11001110 10010110 00001110 10100110 00101110 11001110 00101110 11001110 10000110 00110110 10011110 01001110 10100110 01101110 00101110 10010110 11100110 01110110 10010110 10100110 10100110 11001110 00101110 11110110 01110110 10100110 01001110 10101110 11110110 10011110 00101110 10101110 01000110 11001110 10100...
+2023-03-03T06:47:19	🐰
+2023-04-07T23:53:03	👆🤷‍♂
+2023-04-14T14:41:07	It can be solved, albeit very difficult as you have to understand how to interpret all the hints. Currently we are not planning to release any new hints soon.
+2023-04-29T18:19:45	😂
+2023-05-02T16:12:43	Still remarkable that scene. Especially the expiration date of his passport 😁.
+2023-05-02T17:03:59	Hope..
+2023-06-10T03:39:07	Correct. | - | No. | - | Can't say anything about this.
+2023-06-12T09:31:49	Physically, I assume not 😅.
+2023-08-03T16:50:23	Ok ok ok ok. I can't hold this one any longer.
+2023-08-03T16:51:33	Are you really looking for just the btc...?
+2023-08-03T17:17:19	Another one only 8 minutes after the last one?
+2023-08-03T17:28:20	Might be. Wish I had said nothing though.
+2023-08-03T17:30:14	Exactly, should have refrained from typing earlier maybe.
+2023-08-03T17:32:25	
+2023-08-03T17:32:47	
+2023-08-03T17:33:50	I saw that you guys got really really far already.
+2023-08-03T17:34:24	Actually, the hardest part is done.
+2023-08-04T21:46:47	"Globally supporting my generation"
+2023-08-06T07:42:15	This may sound at little dramatic but if I suddenly can't answer you guys anymore, it was nice knowing you all ❤️.
+2023-08-06T07:43:46	Oh, and be careful of what you get yourselves into. 🤐
+2023-08-06T07:44:27	I'll not explain why.
+2023-08-06T07:44:39	The puzzle talks for me.
+2023-08-06T07:45:26	And don't worry, I'll just be here in the meanwhile 😘.
+2023-08-06T07:55:01	Not at all.
+2023-08-06T07:56:34	You know if you know.
+2023-08-06T08:22:27	It wasn't cryptic enough before?
+2023-08-06T09:05:33	I wish only for that the puzzle provided some exciting pieces of information. That others have learned something new and that for some it is simply entertaining. I hope that the person who connects the last pieces for the 'main price' will thus get its hands on the private key and hold or spend it wisely, but mostly enjoy it. And lastly, I hope to witness the day that the last scene of mr. Robot becomes a reality.
+2023-08-06T09:05:51	In the eye of the beholder, for sure 😊.
+2023-08-06T09:09:27	Technically my friends and family can get to all my data if they'd work together. In that scenario, don't expect a halving of the price.
+2023-08-06T09:11:19	Hahaha good one. I thought of a 24h Killswitch, but nah. Can't be bothered :D! Instead.
+2023-08-06T09:12:13	Probably the last hint: |  | Once you hit a "ying yang", you'll be able to solve it the same day.
+2023-08-06T09:13:30	Chance is small though. Merely an fyi, bit dramatic as stated earlier.
+2023-08-06T09:14:54	Both?
+2023-08-06T09:19:07	No need. You have all the info.
+2023-08-06T09:19:16	Good to see you again btw.
+2023-08-06T09:20:13	No hints 🤡
+2023-08-06T09:21:07	My hat off to you, and you know why 🫡.
+2023-08-06T09:21:37	Only fair ones. And to everyone.
+2023-08-06T09:43:54	To answer your question 'fully', from here on, high likely no hints anymore. But if somehow you all can't solve it from here in the next few years (which I deem unlikely given the state of the solving process), then I might feel the need to give an additional hint, as I couldn't happily live with the idea that some would think that this was a scam. Note, that I hope not to have to give another hint as it would probably be a give away. Good luck to you all!
+2023-08-06T09:49:59	Something was solved rather... remarkable.
+2023-08-06T09:53:56	Partly.
+2023-08-06T09:56:02	I won't!
+2023-08-06T10:00:38	Ok, although I somehow feel the need to have my eyes at this chat all for sudden it's time for me to shut up again and see my little ones play in an obstacle parc here on France. Ciao!
+2023-08-06T14:23:44	I have no clue.
+2023-08-06T15:39:34	Correct. Well, technically, you'll need the internet to claim the prize in the end 🤔.
+2023-08-11T02:52:53	Hi all, getting quite some DM's which is fine, just know that I'm traveling the next coming days ✌️!
+2023-08-11T02:53:25	And I usually answer with "no hints".
+2023-08-18T10:24:12	😳 how?
+2023-08-18T10:25:35	Hi all. I'm on holiday btw. I might not answer DMs.
+2023-08-23T16:43:21	Note that I get quite some puzzle DMs. I've become used to just say 'no hints'.. (sorry for that).
+2023-08-29T15:06:07	Correct
+2023-09-28T13:13:32	I'm ok! ♥️
+2023-09-28T13:14:24	Sorry for not answering. I've just been trying not to live in my phone, as that has become a habit the last 20 years of my life.
+2023-09-28T13:16:21	Still on holiday 😅. In the Caribbean currently. It's lovely here. I see some spam complaints, also sorry for that. Everyone ok besides that?
+2023-09-28T13:19:30	Thanks!!!
+2023-11-17T09:50:24	Hello there, are we all still having fun?
+2023-11-17T09:51:43	I received some DMs, I thought I'd say hi ✌️. I'm ok, apologies for not being here on a daily basis.
+2023-11-24T11:05:13	There's a question multiple people have asked me. "Given the available knowledge, is internet still required to solve it?" |  | Nope
+2023-12-26T14:13:51	Heeeeelllloooooooo
+2023-12-26T14:14:06	Happy Christmas all ❤️
+2023-12-26T14:15:02	Hahahaha that meme, love it
+2023-12-26T14:15:42	Any spammers I have to ban?
+2023-12-26T14:27:27	Have you tried the purple pill already?
+2023-12-26T14:28:12	Candy flipping into 2024 ;-)
+2024-01-26T14:13:57	~2000 new messages, great. You all doing ok?
+2024-01-26T14:21:46	Regular Bitcoin Private key
+2024-01-26T14:22:04	🤐
+2024-03-26T07:41:13	I'm not really here, just checking if you folks are still alive and kicking. ✌️
+2024-03-26T07:42:36	For all those DM'ing me, the answer to your question is probably NO or YES. I decided not to answer any puzzle questions anymore. If there will be a hint (ever). It will be here.
+2024-03-26T07:43:04	IT'S OK, I FORGOT THAT IT'S CAPS TUESDAY.
+2024-03-26T07:46:40	Yeah, being lost is a common aspect of being on this planet I guess, or at least when tempering with rabbit holes.
+2024-03-26T07:47:53	Btw, for those with the heartwarming words. Many thanks ❤️.
+2024-03-26T07:49:08	Please understand that I get multiple of these questions on a daily basis..
+2024-03-26T07:50:02	There are investment institutions for this. Requesting money for a solid idea is not that difficult.
+2024-03-26T07:52:11	Yes. Some if you might soon be drinking it probably.
+2024-03-26T07:53:04	Seems puzzlers are decent people ;-).
+2024-03-26T07:55:39	Ask Claude-3 for the best approach maybe?
+2024-03-26T07:56:29	Understandable
+2024-03-26T07:57:09	Does it come close to Claude and gpt?
+2024-03-26T11:40:01	Technically yes but Nope.
+2024-03-26T11:40:38	And hi, you're hallucinating. Is it the mescaline?
+2024-03-26T11:41:41	😉
+2024-03-26T14:05:05	I prefer superpositions 😉.
+2024-03-26T14:23:03	You're doing fine.
+2024-03-27T13:41:56	Sqaures and a rabbit?
+2024-04-10T15:21:30	1357 blocks to go
+2024-04-17T08:02:00	I received some complaints about insulting behavior. |  | May it be obvious that it's not acceptable. |  | Please refrain from doing so, or I have to get the banhammer out of the drawer of either slap someone with a large trout. |  | Please be nice ❤️.
+2024-04-17T08:03:03	Happy countdown everyone ✌️!
+2024-04-19T21:08:44	Ha, we lost one 'puzzler'.
+2024-04-19T21:10:14	Seemed like a nice moment to get the ban hammer out of the drawer.
+2024-04-19T21:10:43	Happy halving everyone!
+2024-04-19T21:15:48	For those that still haven't solved the puzzle. There are few prizes to win besides the banter in this chat. A private key, some 'obscure' intel, or what I hope most of you have discovered by now, the most obvious reason to make sure you hold on to Bitcoin 😉.
+2024-04-19T21:15:54	✌️
+2024-04-19T21:29:57	16$ fee. Damn. |  | Well, anyway, see you in 4 years! Good luck you all.
+2024-04-19T21:31:10	Me? No. Don't know that guy.
+2024-04-19T22:34:10	I should.
+2024-04-19T22:35:15	Challenge accepted.
+2024-06-06T05:16:00	Crazy No hint Thursday, every Friday!
+2024-06-07T07:10:08	An active one.
+2024-07-11T16:29:17	None planned.
+2024-07-31T21:26:53	
+2024-08-30T06:21:04	It indeed set to private. I haven't opened tg for a while so I guess it wasn't from my side 🫤.
+2024-09-19T04:20:23	I simply liked Jacque's ideas a lot. I have techy friends building communities around that idea today; I haven't invested much time into it as I should myself. But in the coming years I move to a place where that becomes a possibility.
+2024-10-21T16:03:09	I know a Matthew, and if he knows a Roberto, it's likely the same one and a very smart guy. 😉
+2024-10-21T16:03:34	Hi all! Everyone still happy?
+2024-10-21T16:06:58	Nice! Chilling under artificial stars, clearing up disks.
+2024-11-29T06:56:10	In that case I'll show, as I don't have much talent.
+2024-11-29T06:56:39	Hello everyone, still having fun :-)?
+2024-11-29T06:57:24	I was told this group could use some moderation.
+2024-11-29T06:59:41	If wallet != empty, puzzle not solved. |  | (Most likely).
+2024-11-29T07:00:19	That was indeed the plan.
+2024-11-29T07:10:40	
+2024-11-29T07:13:16	If at all, a very bad one. Not even worth the title of skid. Although, as you might have guessed, I've seen some 'security' places 'protecting' our digital realms.
+2024-11-29T07:15:17	Haven't interacted with a terminal in a while. "But what can you do without a cpu?", touch grass it is.
+2024-11-29T07:17:21	Hint? Hint? Heh, what craziness are you talking about? There is no hint.
+2024-11-29T07:17:37	
+2024-11-29T07:20:59	🤐
+2024-11-29T07:28:47	At this point, I don't know what to hint, without ruining it for those that might find it. If you guys got 1 microstep further, the puzzle will likely be solved the same day. |  | I could come up with some empty cryptic bs hint, but that would be lame too. |  | And in the end, good puzzles don't need hints, hence this puzzle appears to be a tiny bit shitty sometimes.
+2024-11-29T07:29:20	No clue Friday. | Every Saturday.
+2024-11-29T07:39:33	Oh, and before I forget, apologies for not answering any DMs, don't take it personal. |  | I mainly got tired of answering with either 'no hints', or listening to sad stories about family, or kids with severe health problems, hoping to obtain a hint, all day every day.
+2024-11-29T07:42:55	I saw that @qv8du3ne8s9 😂
+2024-11-29T07:47:19	I think I'll be going for ASCII 127 myself. But not overly dramatic.
+2024-11-29T07:57:33	I think I'm fine - gladly I don't feel that weird anxiety anymore. However, I do expect that in about 18 years my government might have to notify me that I've been 'under investigation' for a while. But don't worry about me; me, family and friends are doing great!
+2024-11-29T07:58:58	This is so true. I must say, with that in mind, it makes typing any message here a bit more challenging.
+2024-11-29T08:00:25	Admins
+2024-11-29T08:02:00	Happiness.
+2024-11-29T08:06:24	You only need the last number of pi and it might get you somewhere.
+2024-11-29T08:13:47	I already have gray hair unfortunately.
+2024-11-29T08:15:34	Maybe Bryan Johnson has an answer for my hair.
+2024-11-29T08:20:19	Pimeyes leads me to a festival thingy in the Netherlands. Is this a puzzle?
+2024-11-29T08:23:12	Not sure why but I suppose it doesn't affect the puzzle.
+2024-11-29T08:25:31	Could be, it has been years and we had a few FE guys working on it.
+2024-11-29T08:28:41	Yeah, what can I say? In a way, it's a pretty smart by mr Sailor, and Bitcoin is built to withstand this shenanigans anyway.
+2024-11-29T08:29:55	Yeah NAD is great.
+2024-11-29T08:30:33	I only take ~80 supplements daily, nothing crazy 😅.
+2024-11-29T08:32:02	Blueprint is sort of the leading list at this point.
+2024-11-29T08:34:04	I mean, if you guys don't solve it anytime soon I'll have to try and stay alive till the year 2145.
+2024-11-29T08:37:27	I explain them a lot but I don't want them to know about BTC yet, having this unhealthy fear for btc kidnapping.
+2024-11-29T08:39:50	Enjoying life, mostly 😉.
+2024-11-29T08:47:44	Yeah, heard this argument before. Haven't used it myself for years. Bryan is a bit.. extreme, and his team of doctors probably concluded that it's good for him. Also, there aren't many studies that have concluded that long term low dose usage would do any damage. |  | In the end there's no perfect static setup, as we're all a bit different.
+2024-11-29T08:51:05	Another doctor in my room states that these are indeed the typical puzzle doctors 😉.
+2024-11-29T08:54:17	Already better than many doctors... especially for discovering very unlikely cases.
+2024-11-29T09:03:37	I'd quit that if you want quality sleep. I used it so much, my body can't deal with it anymore. After a week or 2 you'll start dreaming again.
+2024-11-29T09:05:46	Ah sorry, I missed that. I used a gram daily, for years. 😅
+2024-11-29T09:06:39	🫡
+2024-11-29T09:13:43	Ok, I'm off people 👻. Be good, stay healthy, stack sats and enjoy life.  |  | Ciao! |  | And good luck Admins! (And many thanks in advance, please be fair 😉).
+2025-04-28T13:45:31	
+2025-04-28T13:45:47	You people are still having fun I see.
+2025-04-28T13:48:07	Ah, no hints? Ok, that's also fine.
+2025-04-28T13:51:05	I have to say, that touching grass thingy is pretty nice.
+2025-04-28T13:52:50	Yeah, tricky question. You can try to time it (I stopped doing that), but if you understand the puzzle you'll discover that I'd suggest btc only, and don't gamble.
+2025-04-28T13:55:14	I was hinted when eth was 2$. Saw the "DAO" unfold live in front of my eyes with 8000 holders on slack; was allowed to double my eth with all the left over etc, and then swap it to btc. Good old times.
+2025-04-28T13:56:14	If I'd ever take the funds (I won't), I wouldn't even tell the answer 😈.
+2025-04-28T13:57:17	Did anyone found yingyang? I don't think so, you guys are so smart, when yingyang is reached, 2 hours max.
+2025-04-28T13:58:50	Im with alcohol, dont blame me for more typos.
+2025-04-28T13:59:29	Alcohol, and answering this chat go hand in hand somehow.
+2025-04-28T14:00:26	Que?
+2025-04-28T14:01:36	It’s the next phase, but I await the day someone finally gets there.
+2025-04-28T14:02:46	Ok, the "better half" is hungry. Which means I'm off 🤗
+2025-09-15T23:20:54	
+2025-09-15T23:24:36	Yes
+2025-09-15T23:24:52	Carrots were originally purple, until the Dutch turned them orange in the 1600s to kiss up to their royal family.
+2026-01-01T00:15:02	.
+2026-01-01T00:16:15	..
+2026-01-01T00:17:05	...
+2026-01-01T00:18:07	....
+2026-01-01T00:19:05	.....
+2026-01-01T00:20:03	01001000 01100001 01110000 01110000 01111001 00100000 01101110 01100101 01110111 00100000 01111001 01100101 01100001 01110010 00100001 00100000 01001101 01100001 01101011 01100101 00100000 01110100 01101000 01100101 00100000 01100010 01100101 01110011 01110100 00100000 01101111 01100110 00100000 01100101 01110110 01100101 01110010 01111001 01110100 01101000 01101001 01101110 01100111 00101110 00100000 01001111 01101000 00101100 00100000 01100001 01101110 01100100 00100000 01101000 01100101 01110...
+2026-03-03T22:11:55	👆🫡
+2026-03-03T22:12:28	Hi all 👋🏻
+2026-03-03T22:17:02	No hints , only free will. One of the few things I somehow strugle to fully accept albeit that science is currently not on the deterministic side if I'm not mistaken.
+2026-03-03T22:18:06	Everyone still having fun?
+2026-03-03T22:19:39	Jacque was quite an inspiring lad I'd say.
+2026-03-03T22:21:38	It's kinda of a pvp zone here. Sort of a rust server with both nice and toxic units.
+2026-03-03T22:22:42	Maybe, Cartman's quote about chatroulette fits too.
+2026-03-03T22:23:27	🤐
+2026-03-03T22:27:00	Looks at gnomad. 👀
+2026-03-03T22:29:05	Bingo
+2026-03-03T22:30:47	I only need to look at the address. If any of you reaches the next phase, the price is taken in no-time.
+2026-03-03T22:31:09	🤷‍♂️
+2026-03-03T22:32:01	I suppose that could get you far in real life.
+2026-03-03T22:33:52	Before I forget. For those who DM me, my apologies for not answering - or only rarely. Nothing personal ❤️.
+2026-03-03T22:35:22	I'm going to rewatch episode 3.5 with  the better half.
+2026-03-03T22:36:04	Nope. You're not the first to ask.
+2026-03-03T22:37:14	Cheers all, good luck again 👋🏻!
+2026-05-28T08:41:02	Ah, ofcourse. The puzzle is still valid!
+2026-05-28T10:34:18	🫡🥳
