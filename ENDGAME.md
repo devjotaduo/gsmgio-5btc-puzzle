@@ -1337,3 +1337,80 @@ formalizada (EC-negação) está refutada nas leituras estruturais e naturais. O
 completo do verso para expandir a bateria (verso/cifra-de-livro); (ii) páginas
 vizinhas do livro (p.18: Jung, "liberation from opposites", já citada pelo
 gnomad; contracapa/sumário).
+
+## Sessão 2026-08-30 — RECEITA PROVADA do passphrase do Cosmic ("intertwined = XOR") + imagem completa forense
+
+**1. A GRAMÁTICA DOS "SEVEN INTERTWINED PASSWORDS" ESTÁ PROVADA (positivo!).**
+Mineração do `result.json` (mensagem do k1ng, 2025-08-23): *"the combined
+passwords produce what he said, but you need to **hash them individually and
+then xor them together**"*. Verificado localmente com zero graus de liberdade
+(`solver/intertwine_attack.py`):
+
+```
+a795de117e4725…50735 = sha256("enter") ⊕ sha256("lastwordsbeforearchichoice")
+  ⊕ sha256("thispassword") ⊕ sha256("yourlastcommand") ⊕ sha256("secondanswer")
+```
+
+Equivalente ao XOR das 7 partes da senha combinada
+(`matrixsumlist·enter·lastwords…·thispassword·matrixsumlist·yourlastcommand·
+secondanswer`) — o `matrixsumlist` duplicado **cancela** no XOR ("7 intertwined
+passwords"). Os tokens vêm TODOS da página (`yourlastcommand` = *"our first hint
+is your last command"*; `secondanswer` = *"shabef ans too"*). **Implicação
+estratégica:** o passphrase do Cosmic tem derivação significativa dos tokens da
+página — a etapa cosmic da cadeia NÃO é falso-positivo de padding (reabilita
+parcialmente a cadeia contra a retratação #104); a gramática XOR-of-sha256 é a
+mecânica real do puzzle.
+
+**2. A mesma gramática NÃO fecha os 35 blocos** (baterias v2–v4:
+`intertwine_attack2/3/4.py`, ~1.900 seleções): pool cronológico das 31 senhas
+do puzzle (seleções por índices primos 0/1-based, first-7/16/23, header-words
+como índices), **todas as C(12,7)=792 7-subsets** do núcleo da página, receita
++ 1 token (todas as extensões), **16+7=23** do filme (16 partes-senha página+
+fase-3; 7 senhas das 7 etapas em 3 formas), janelas deslizantes de 7/16/23
+palavras sobre o monólogo e o texto 3.2.2, as 7 palavras de *"our first hint is
+your last command"* (como senha do SMALL — a de 69 chars segue sendo a única
+que abre), palavras inseridas do diff (YOU/ME/WELL/NOT/CODES/HOPEFULLY),
+frases do Arquiteto, `a795de11` raw como chave AES. **0 hits** (oráculo duplo
+alvo+espelho, CBC 6 IVs + ECB + scan de privkey). A seleção final da chave dos
+35 blocos não é XOR-of-sha256 de nenhuma seleção natural.
+
+**3. Imagem completa do puzzle recuperada e forense total (fechada).** CDX do
+Wayback revelou `gsmg.io/Puzzle` = **PNG real da era ativa** (2020-11-12,
+29.931 B, 1048×1556; salvo em `_work/archive/Puzzle_full.png`, nunca presente
+no repo — o ENDGAME só conhecia o recorte da matriz). Geografia completa
+(System.Drawing, scripts `_work/pixel_*.ps1`/`zone_map.ps1`): matriz 14×14
+(75 px/célula, FEFEFE em (7,4) = x300–374/y525–599 ✓), **linha vermelha
+y=1047–1061** (15×1047 px 100% sólidos de #ED1C24, zero variação), rodapé
+cinza (y1065–1552) com: logo GSMG azul, banner "GSMG.IO 5 BTC PUZZLE
+CHALLENGE" (OCR), QR preto (o conhecido — decodifica para o endereço), e o
+endereço-prêmio (OCR da segunda faixa). **Zero pixels roxos, zero anomalias
+além do FEFEFE documentado, linha vermelha sem esteganografia.** A "purple
+pill" não esconde canal em nível de pixel — a conclusão do k1ng ("500 hours…
+nothing relevant") confirmada programaticamente. As faixas de texto abaixo da
+linha vermelha = banner + endereço (o "texto" cujo sha256 = 89727c…).
+
+**4. Varrida de imagens/páginas arquivadas do domínio (CDX completo).**
+- `img/red_*/blue_*/black_*` (crypto_gic, n_you, open_lock_n_ing, t, ca,
+  dig_i, lock_lo, banking-war): ativos da homepage (2020-11-15), **rebus de
+  marketing** ("crypto logic", "digital", "banking war"…), não-puzzle. Salvos
+  em `_work/archive/` para o registro.
+- `gsmg.io/door.png` e `img/puzzle.png`: capturas **parking-era** (2025/26,
+  HTML comprimido) — probes de solvers, beco.
+- `gsmg.io/choiceisanillusion…averyspecialdessertiwroteitmyself`
+  (2020-11-12, ativa): **é a página da fase 3 conhecida** (README §3) — os dois
+  FENs (w = posição dada; b = resposta do "buddhist move") e o blob PHASE 3
+  batem com o documentado. Re-verificação independente, nada novo.
+- `/merovingian`, `/final_stage`, `/followthewhiterabbit`, `/phase1..3`,
+  `/eps3.4_runtime-error.r00` etc.: capturas parking-era (probes).
+- `follow_the_white_rabbit.png` do Wayback = byte-idêntico ao local.
+
+**Saldo da sessão:** o único POSITIVO é a receita do Cosmic (acima) — primeira
+derivação significativa de uma senha do puzzle fora da concatenação literal;
+ela muda o mapa: a gramática "intertwined = XOR de sha256 individuais" está
+provada e o pipeline "shabef ans too" fecha semanticamente. O negativo: a
+chave dos 35 blocos não usa essa gramática em seleção natural alguma, a imagem
+completa não tem canal oculto, e as portas arquivadas novas são marketing ou
+probes. A fronteira permanece: a regra que converte `+-`+header28+`7`+35
+blocos na chave final — agora com a hipótese forte adicional de que ela deve
+ser **uma gramática derivável dos tokens** (como SMALL=concat e COSMIC=XOR),
+ainda não encontrada.
