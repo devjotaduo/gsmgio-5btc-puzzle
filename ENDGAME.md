@@ -1181,3 +1181,42 @@ bloco) estão agora cobertas. Coerente com o veredito consolidado: o gargalo é
 **interpretativo/externo** — a regra que converte `+-`+header28+`7`+35 blocos
 na chave final não é nenhuma combinação estrutural conhecida do próprio
 payload. Não reabrir estas famílias sem hipótese nova derivada de hint real.
+
+## Sessão 2026-09-01 (b) — composição checkerboard↔Bifid FECHADA + hints inéditos do criador minerados
+
+**Composição (`solver/composition_attack.py`, log `_work/composition_attack.jsonl`,
+Bifid validado pela reprodução do baseline BTCSEED −5,577):**
+
+- **G1** checkerboard→Bifid e Bifid→checkerboard sobre faed (2 mapeamentos × 36
+  pares × 5 alfabetos × 14 períodos) = 18.000 construções; melhor −5,577 = o
+  próprio BTCSEED re-emergindo pela composição identidade (valida o pipeline,
+  não é sinal novo). NEGATIVO.
+- **G2** dbbi como keystream ± mod 25/26 sobre as top-200 saídas de checkerboard
+  = 2.400 construções; melhor −7,356. NEGATIVO.
+- **G3** dbbi como chave de transposição colunar (larguras 91/13/7/38, letras e
+  dígitos) sobre faed → checkerboard = 5.184 construções; melhor −6,479. NEGATIVO.
+
+Com isso, as lacunas de composição VIC listadas na revisão estão esgotadas.
+
+**Mineração do `result.json` (427 mensagens do criador, 2019–2026) — hints NÃO
+documentados antes neste arquivo:**
+
+- 2021-04-01: **"R=18 / A=1 / B=2. Could also be 21 or 1812 bit 🧐."** — confirma
+  a1z26 (coerente com shabef=sha256) e sugere os números 21 e 1812 (bits?).
+- 2023-12-26 **"Have you tried the purple pill already?"** + 2025-09-15
+  **"Carrots were originally purple, until the Dutch turned them orange in the
+  1600s…"** (resposta direta a "anything else for us?") — tema ROXO = vermelho+azul,
+  possível ponte com as cores da fase 1 (amarelo #FFF200 / azul #3F48CC, somas
+  hex 47/54) e o poema "Roses are White but often Red".
+- 2021-12-31 + 2023-05-02: **a data de expiração do passaporte do Neo**
+  (Matrix: 11 SEP 2001) apontada duas vezes como "a única data" dada.
+- 2023-08-04: **GSMG = "Globally supporting my generation"**.
+- 2024-01-26: **"Regular Bitcoin Private key"** — o alvo é uma privkey comum
+  (tensiona com as linhas BIP39/seed já refutadas).
+- 2023-01-09: **"@barrystyle provided a very specific hint already"** (refere-se
+  ao post do barrystyle sobre a imagem/livro "Cosmic Duality", 2022-12-11:
+  "you'll see how scary specific that is") + "prime number is very important".
+- Confirmações do criador: mensagens OP_RETURN na blockchain **não são dele nem
+  parte do puzzle** ("Correct", 2023-08-29); SHA256 do texto da fase 1 confirmado
+  com "the author is a bit picky what he considers to be text" ("Good point");
+  "Has anyone passed the salvation part?" → **"Partly"** (2023-08-06).
