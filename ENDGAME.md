@@ -1182,6 +1182,56 @@ bloco) estão agora cobertas. Coerente com o veredito consolidado: o gargalo é
 na chave final não é nenhuma combinação estrutural conhecida do próprio
 payload. Não reabrir estas famílias sem hipótese nova derivada de hint real.
 
+## Sessão 2026-08-30 — pop-cultura + diff do Arquiteto (2 frentes, 0 solves)
+
+Duas leituras "não-óbvias" derivadas das referências culturais das fases,
+ambas falsificadas por oráculo (`matches_pubkey`, padding+ASCII, EVP SMALL/
+COSMIC ≥85%). Scripts: `solver/pop_culture_attack.py`, `solver/architect_diff.py`.
+
+1. **Títulos/nomes como keyword do quadrado Bifid** (64 keywords: SALPHASEION,
+   COSMICDUALITY, ALPHANOESIS — `SALPHASEION` é anagrama exato de
+   `ALPHA+NOESIS` —, KEYMAKER, TEMETNOSCE, MEROVINGIAN, NEBUCHADNEZZAR,
+   WHITERABBIT, GOASKALICE, HAL9000/SAL9000, QU4RTZ, WHITEROSE etc.), períodos
+   570/91/38/13/7 no faed e 91/13/7 no dbbi + top-5 como senha AES/EVP.
+   **Melhor keyword: −6.078** (NEBUCHADNEZZAR:dbbi p7), bem **pior** que o
+   canônico (−5.577). Resultado útil: *reforça* que o quadrado `DBIFHCEGA…`
+   derivado do dbbi é o único com sinal (BTCSEED não é coincidência de keyword).
+2. **O mapeamento literal do discurso ORIGINAL do Arquiteto**: "select from
+   the matrix 23 individuals — 16 female, 7 male — to rebuild Zion" ↔ "select
+   from over twenty-three ciphers, sixteen encryptions and or seven
+   intertwined passwords". Lido como 7 senhas (palavras do header28) × 16
+   "receptivas" (IV de 16 B): 8 chaves-7palavras × 15 IVs (metades half/bh,
+   XOR, blocos 0/34, header, cosmic, chain1/2[64:80], c4pw) + direção inversa
+   (chave=dualidade × IV=7 palavras) = ~140 combinações CBC/scan → **0 hits**.
+3. **~120 frases canônicas** (Matrix: "no one can be told what the Matrix is/
+   you have to see it for yourself" — espelho exato do hint "in front of your
+   eyes" com "Bingo" do criador —, TEMETNOSCE, KNOCKKNOCKNEO, duas portas,
+   METACORTEX, MARK3NO11, MOBILAVE, DUJOUR; 2001/HAL; eps3.5 dupla
+   `qu4rtz.decr1p7.nd4c0de.perl`, poema Red Wheelbarrow completo, BONSOIR
+   ELLIOT, FSOCIETY00DAT; Jefferson Airplane; Venus Project; grafias "erradas"
+   do próprio monólogo FOURTY/WAISTING/THROPHIES/YINGYANG) como senha nos 35
+   blocos, SMALL e COSMIC (raw+sha256hex) → **0 hits**.
+4. **Diff palavra-a-palavra monólogo vs roteiro do filme** (matrixfans/
+   scottmanning, concordantes; reproduzível no script). Desvios únicos:
+   inserções **YOU / ME / WELL / NOT / CODES / HOPEFULLY**, "WE"→"I" (2×),
+   SIXTH→LAST, ONE→YOU, MATRIX→PUZZLE, PROGRAM→BASICS, ZION→"YOUR WILL TO
+   LIVE AND", "ENTIRE HUMAN RACE"→"ENTIRENESS OF YOURSELF **SELF** … CIAO
+   BELLA O", + a súplica GSMG com HUNDRED FOURTY/WISEMAN ABOVE. Testes
+   mecânicos do diff: palavras inseridas/duplicadas como senha; letras extras
+   das grafias (U,I,H + G de THINGKY do pré-texto — 24 permutações "UIHG");
+   mapa de letras ONE→YOU (O→Y,N→O,E→U) aplicado ao Bifid; posições das
+   duplicadas como índices de blocos; seleções 7+16=23 blocos (7 do header +
+   16 complementos, XOR/soma); fatias char/word 140 do monólogo e do faed →
+   **0 hits**.
+
+**Saldo:** as leituras pop-culturais naturais (keywords de nomes, o 16+7 do
+filme, frases canônicas, o diff mecânico) estão fechadas. Fatos que sobrevivem
+como **pistas interpretativas não-mecanizadas**: os três ecos "YOU"/"ME"/"SELF"
+(+ "AND WILL") parecem deliberados e não fecham oráculo como fórmula — sugere
+papel semântico (pessoas da dualidade?), não aritmético; o "O" final de "ciao
+bella o" e a grafia "ying yang" seguem sem explicação. Nenhum reabrir sem
+predição-antes-do-teste + zero graus de liberdade.
+
 ## Sessão 2026-09-01 (b) — composição checkerboard↔Bifid FECHADA + hints inéditos do criador minerados
 
 **Composição (`solver/composition_attack.py`, log `_work/composition_attack.jsonl`,
