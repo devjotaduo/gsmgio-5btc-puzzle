@@ -12,9 +12,36 @@ Prêmio ainda **não sacado**: ~1.256 BTC em
 (≈125 txs, todas "dust"). Nenhuma "solução" pública é real.
 
 ## A fronteira real
-**Atualização 2026-08-20:** a frente `dbbi`/`faed` abaixo é histórica. A cadeia pública
-agora é reproduzível até o plaintext canônico do Chain4; a fronteira atual é derivar a
-única chave AES que abre os 35 blocos finais. Ver "Auditoria 2026-08-20" abaixo.
+**Correção 2026-08-30:** Chain1→4 é uma construção reproduzível, não uma solução
+validada. Os primeiros “plaintexts” têm alta entropia e passaram somente no padding
+PKCS#7; recriptografar os mesmos bytes e obter os mesmos hashes não é um oráculo
+independente. A [issue #104](https://github.com/puzzlehunt/gsmgio-5btc-puzzle/issues/104)
+documenta a retratação. A fronteira verificável volta a ser a derivação da senha que
+produza plaintext semântico nos blobs AES originais da página SalPhaseIon/Cosmic.
+
+Varreduras reproduzíveis desta correção:
+
+- `solver/salphaseion_passphrase_sweep.py`: 231.993 senhas derivadas dos tokens da
+  página, da cena do Arquiteto (inclusive pontuação original) e dos hints primários;
+  1.780 paddings aleatórios, nenhum plaintext com ≥85% ASCII no blob pequeno;
+- `solver/architect_sum_attack.py`: pareamento das somas de linha/coluna da matriz
+  14×14 com os 14 finais de linha antes de `SELECT`, e das 15 somas de `faed` com as
+  últimas 15 palavras; 6.492 senhas, zero plaintext semântico;
+- `solver/dbbi_repeat_attack.py` e `solver/joint_attack_v2.py`: as somas literais do
+  bloco `dbbi` em 7×13/13×7, três mapeamentos e duas famílias de cifra produziram
+  33.350 + 6.696 construções; o melhor score (`-6.637`) ficou abaixo de inglês (`-4.5`);
+- `solver/faed_matrix_sum_attack.py`: `faed` em 15×38 com a=0 produz a lista
+  `[140,171,129,168,150,174,184,176,188,179,175,179,169,164,163]`. O primeiro
+  valor repete o “hundred fourty” da fase 3.2 e o último repete o índice espiral
+  `163` do pixel `#FEFEFE`, um encaixe estrutural novo. Como índices BIP39, a lista
+  termina em `behave` com checksum inválido; preservar os 160 bits de entropia e
+  recalcular só o checksum troca a última palavra por `bike`. Cerca de 720 mil
+  derivações BIP32/BIP44, com e sem checksum e com passphrases literais, não geraram
+  o endereço-prêmio; 2.436 formas da lista também não abriram o AES.
+
+As seções de 2026-08-20 abaixo ficam preservadas como histórico de hipóteses e testes,
+mas suas afirmações de “canônico”, “real” ou “validado” devem ser lidas como refutadas
+por esta correção.
 
 O endgame reduz a decodificar **duas strings** sobre o alfabeto de 9 símbolos `a–i`,
 ambas extraídas da página SalPhaseIon:
@@ -1062,3 +1089,40 @@ BIP32 também não. A ideia era forte o suficiente para merecer teste — e o
 negativo estreita o problema: **a "seed" do puzzle não é uma seed BIP39 dos
 bits da matriz, nem uma derivação BIP32 das metadas.** Scripts em `solver/
 seed_return_attack.py` e `solver/bip39_passphrase_attack.py`.
+
+## Sessão 2026-09-01 — VIC/checkerboard: lacunas residuais atacadas (`solver/vic_full_attack.py`)
+
+Varredura das lacunas de VIC/checkerboard que o mapa de ataques anteriores deixou
+abertas. Log completo em `_work/vic_full_attack.jsonl`; validação cruzada do
+decoder vetorizado contra o decode exato + `Scorer` real (|Δ| médio 0,019).
+**Resultado: 0 hits de oráculo em ~104,5 milhões de decodes.**
+
+- **F1 — dbbi: mapeamento a–i→dígitos EXAUSTIVO × checkerboard.** Todos os 9!
+  mapeamentos × 2 universos de dígitos (0–8, 1–9) × 36 pares de escape × 4
+  alfabetos (1ª ocorrência DBIFHCEGA+filler, VIC 3.2.2, A–Z sem J, ETAOIN-first)
+  = **104.509.440 decodes (espaço 100% coberto)**. Melhor score **−4,902**, mas
+  os top-50 são sopa de ETAOIN (o alfabeto etaoin infla o score por construção,
+  não por estrutura recuperada) — abaixo de inglês real (−4,1 a −4,5) e sem
+  disparar o gatilho de oráculo. **Conclusão: dbbi não é straddling checkerboard
+  com alfabeto fixo conhecido e escapes simples.** Se for checkerboard, o quadrado
+  é keyed (espaço de hill-climb, já coberto por `checkerboard.py`/`gpu_checkerboard.py`)
+  ou a camada a–i→dígitos não é permutação simples.
+- **F2 — dbbi transposto por `matrixsumlist` (13 letras ↔ 13 colunas).** Grades
+  7×13 e 13×7, chave em ordem alfabética ± reversa, in/out = 12 streams × 3
+  mapeamentos × checkerboard + uso como keystream→Bifid = 3.840 construções;
+  melhor −5,532 (checkerboard) / −6,945 (Bifid). NEGATIVO.
+- **F3 — chain-addition VIC (lagged Fibonacci).** 13 sementes temáticas (101,
+  163, 140, 1141, 7, 28, 35, 256134789, dígitos do dbbi, sha256 do first-hint…)
+  × mod 10/9 × ± × a=0/a=1 × universos = 29.952 construções; melhor −6,155 (ruído).
+  NEGATIVO.
+- **F4 — faed 15×38 transposto por `lastwordsbeforearchichoicethispassword`
+  (38 letras ↔ 38 colunas) + boustrophedon + espiral.** 2.592 construções;
+  melhor −6,188. NEGATIVO.
+- **F5 — melhor plaintext de F1 como senha AES/sha256/keyword Bifid/chave de
+  transposição.** Tudo < −7,3; nenhum oráculo.
+
+**Saldo:** as três maiores lacunas de modelagem VIC apontadas na revisão
+(mapeamento exaustivo, transposição keyed pelas strings-casamento de
+comprimento, chain-addition) estão **fechadas por oráculo**. A fronteira
+permanece a mesma: falta a regra que deriva a senha; o espaço de cifras de
+substituição simples sobre a–i está esgotado nos dois sentidos.
