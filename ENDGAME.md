@@ -1792,3 +1792,56 @@ uma leitura DIFERENTE da matriz-103²-comunitária (que é terminal). Isso exige
 nova, concreta e falsificável sobre `cc` (2ª camada de cifra? outra geometria do 1327/103²?
 o papel do primo 1327?) — **não** outro sweep. O gargalo permanece interpretativo/externo
 (novo hint do criador ou insight humano), agora com o alvo re-centrado no artefato certo.
+
+## Sessão 2026-08-31 (e) — time em `cc` (0 solve) + BTCSEED CONFIRMADO real → o prêmio vem do ramo faed, não do Cosmic
+
+Rodada INV1/INV2/INV3 + cético (workflow `gsmg-cc-frontier`) sobre o plaintext Cosmic `cc`,
+mais resolução própria de H-NEXT-1. **0 SOLVE**, negativos control-validados. Mas o mapa
+do endgame ficou coerente pela primeira vez.
+
+### Frentes fechadas nesta rodada
+- **half/better_half = os endereços DONOS, não a chave (on-chain, ao vivo):** `1JG648…`
+  recebeu 1.756.275 sats em 101 txs, **saldo 0**; `145ZQ9…` idem — pó de ~90 depósitos, chaves
+  **queimadas** (privkeys vazaram no golpe #80/#99, "Donate to my btc"). São a dualidade
+  "half and better half … also need funds to live" tornada pó por terceiros, NÃO o prêmio.
+- **half/bh ≠ chave da 2ª camada do faed** (INV1): como keystream sobre o BIF_REST (563 chars),
+  12 saídas, todas piores que o cru; null-model de 500 keystreams aleatórios → half/bh caem
+  DENTRO do ruído (média −7,86). Refutado, não-apofenia.
+- **Geometria do primo 1327 (INV2): 37 leituras, 0 hits** (bits 8·1327, bytes 2·3·13·17,
+  7 bits sobrando, cc mod N, base-38). Transpor alta-entropia continua alta-entropia.
+- **2ª camada em cc por gramática derivada (INV3): 284 chaves únicas, 1420 decifrações, 0 hits**
+  (SMALL=concat→sha256, COSMIC=XOR(sha256), sha/sha² da resposta, half/bh). cc não abre.
+
+### H-NEXT-1 RESOLVIDO — BTCSEED é sinal REAL, não circular
+Dúvida do cético: o alfabeto CANON do Bifid faed foi ajustado à palavra "BTCSEED" (circular)?
+**Não.** Verificado byte-a-byte:
+- A ordem de 1ª ocorrência dos 9 símbolos no `dbbi` é **`dbifhcega`** = exatamente o keyword do
+  `CANON_ALPHA` (`DBIFHCEGAKLMNOPQRSTUVWXYZ`). O alfabeto é **forçado deterministicamente** pelo
+  artefato dbbi — zero liberdade para encaixar a palavra.
+- `solver/skeptic_btcseed_null.py`: só **8 de 362880** permutações A–I dão prefixo "BTCSEED"
+  (2,2e-5); 200k permutações aleatórias → 7 hits (3,5e-5). BTCSEED é genuinamente raro, e o
+  alfabeto CANON (não-ajustado) acerta esse evento. **Sinal real, foothold legítimo.**
+
+### MAPA FINAL COERENTE do endgame (síntese de todas as sessões)
+- **Página SalPhaseIon/Cosmic** (byte-verificada, sem instrução oculta) tem DOIS ramos:
+  1. **Ramo faed/BTCSEED (SalPhaseIon)** = o caminho PRETENDIDO do prêmio `1GSMG`. BTCSEED é
+     header real; a **2ª camada sobre o BIF_REST (563 chars pós-BTCSEED) → a "Regular Bitcoin
+     Private key"** é a FRONTEIRA. Travada por um parâmetro externo (alfabeto/cifra da 2ª camada)
+     que a busca cega não fixa — exaustivamente atacada, espaço computacional fechado.
+  2. **Ramo Cosmic/cc/matriz-103² (Cosmic Duality)** = BECO. Produz half/better_half (os "donos",
+     agora pó queimado); o "Chain4/35-blocos" a jusante é FABRICAÇÃO comunitária (mask construído,
+     hashes auto-referenciais, criador nunca atestou). NÃO é o caminho do prêmio.
+- **Conclusão:** anos de esforço da comunidade e de sessões anteriores foram gastos no ramo
+  ERRADO (Cosmic/35-blocos). O prêmio depende de decifrar a 2ª camada do **BIF_REST**, e o
+  desbloqueio real = o hint externo do criador que fixa o parâmetro dessa camada (ou insight
+  humano). Confirmado o padrão: gargalo interpretativo/externo, agora com o ramo certo isolado.
+
+### Threads concretos ainda não esgotados (para a próxima, sem sweep)
+- **H-NEXT-2:** o blob SMALL (`U2FsdGVk…QvX0…`) da textarea SalPhaseIon é `Salted__` GENUÍNO;
+  atacá-lo com material derivado do pipeline **faed** (não a passphrase XOR do Cosmic) é finito.
+- **2ª camada do BIF_REST:** o alvo real, mas precisa do parâmetro externo (alfabeto/keystream)
+  — nomear a fonte do parâmetro (hint) antes de qualquer novo código.
+
+**Veredito:** não resolvido; prêmio intacto. Ganho desta sessão: o ramo do prêmio foi
+ISOLADO (faed/BTCSEED), o beco (Cosmic/35-blocos) foi provado fabricado, e o único sinal
+positivo (BTCSEED) foi confirmado real. O que falta é externo.
