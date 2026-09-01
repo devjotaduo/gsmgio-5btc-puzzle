@@ -1676,3 +1676,69 @@ decifração dos próprios 35 blocos** (ou uma releitura da cadeia Chain4→35-b
 que #104 marcou como "construção reproduzível, não validada"), **não** um hint/página
 perdido na web. Isso refuta a hipótese dominante de "desbloqueio externo" e reorienta
 todo trabalho futuro para dentro do payload já em mãos.
+
+## Síntese multi-agente A1–A4 (2026-08-31) — veredito e critério de parada
+
+Campanha de 4 agentes (auditor-cadeia, mask-hunter, releituras H1–H3, cético)
+consolidada e **reverificada byte-a-byte** nesta sessão. Scripts runnable:
+`solver/a1_integrity_checks.py`, `solver/mask_provenance.py`,
+`solver/a3_rereads_attack.py`, `solver/a4_controls.py`.
+
+### 1. Oráculo duro — NADA abriu
+Nenhum candidato produziu a pubkey-alvo `04f4d1bb…f33559`, seu espelho EC, nem o
+endereço-prêmio `1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe` (h160 `a955…bae4`).
+`_work/a3_rereads_attack.jsonl` = **0 bytes** (0 hits em 87 chaves). **Não há SOLVE.**
+
+### 2. Cadeia — os 35 blocos (`43d3fe43…`) são **SUSPEITOS**, não bytes-certos
+Reprodutibilidade (`final_chain.py`) prova só que o pipeline é **determinístico**, não
+correto. As **duas únicas âncoras fortes** — (a) senha COSMIC `a795de11…` = XOR de
+sha256 de 5 frases; (b) `half`/`better_half` → `1JG648…`/`145ZQ9…` (match externo,
+CHECK 5) — vivem no ramo **COSMIC→matriz**, que é **TERMINAL** (não alimenta os 35
+blocos e não dá o prêmio). O ramo que PRODUZ os 35 blocos (Chain1→Chain2→Chain4) tem
+seu nó decisivo, o **Chain4**, classificado como **só-padding com âncora circular**.
+
+**Chain4 mask = CONSTRUÍDO (não derivado), byte-exato:**
+`CHAIN4_MASK = b657264f2f6e6921 == cosmic[158:166] XOR "Salted__"` (`equals_mask=True`,
+A1-CHECK1 e A2-TESTE1). Os 8 bytes do mask são **integralmente consumidos** ao forçar o
+header de 8B `Salted__`; salt (`5bbd88ac…`) e corpo ficam determinísticos. O header,
+portanto, é **tautológico — imposto, não âncora independente**. A busca por derivação do
+mask (A2 D1–D8: sha256/md5 slice, XOR de subsets, fatias de artefatos, salts; + A4:
+concat→sha256/md5, reverso, auto-XOR) veio **toda vazia**. Único sinal residual não
+tautológico: PKCS7 pad = `0x01` (1/256, fraquíssimo). **A crítica #104 PROCEDE.**
+Amarras não-triviais do ramo dos 35 blocos são fracas: WIF-não-comprimido único (CHECK3,
+~2%), offset-64 único no Chain4 (CHECK4, mas ~25% de acerto por acaso), e só 2 bytes
+ancorados (`cosmic[64:66]`). **Confiança nos 35 blocos com base no header = ZERO.**
+
+### 3. Releituras H1–H3 — FECHADAS sob oráculo forte
+87 chaves (H1 header28-como-privkey = 20; H2 sha256 dos plaintexts = 41; H3 XOR-sha256
+dos plaintexts = 26), **0 hits duros, 0 soft**. O controle **POSITIVO** que faltava foi
+escrito e roda (`a4_controls.py`, `ALL_PATHS_FIRE=true`): o detector recupera uma needle
+plantada nos 6 caminhos (offset não-alinhado, pipeline AES-CBC, keyself, WIF, hex-ASCII,
+BIP39-derivado). **Os negativos têm peso — não são incapacidade do motor.**
+
+### 4. CRITÉRIO DE PARADA → **(c)** um elo provado só-padding/suspeito
+Não é (b): (b) exige "todos os elos ANCORADOS", e o **Chain4 é comprovadamente
+só-padding/circular** (A1+A2, confirmado A4). O passo construtivo nomeado é
+**re-ancorar o Chain4 com âncora dura** — porém isto **NÃO autoriza sweep cego**; a
+circularidade só quebra com fonte independente para `b657264f…`/offset-64/fatia
+`[158:-1]`, e essa fonte hoje **não existe no repo** (todas as derivações plausíveis já
+deram vazio). Ações concretas, falsificáveis, sem sweep:
+- **(c1) — a mais decisiva, arqueologia externa:** verificar se `CHAIN4_SHA256`
+  (`e4269ed5…`) e `BLOCKS_SHA256` (`43d3fe43…`) foram **publicados pelo criador/Vasilis
+  ANTES** deste pipeline. Se sim, o Chain4 é genuíno; se nasceram do próprio pipeline,
+  são auto-referenciais e o Chain4 fica **não-falsificado** (fora do alcance byte-exato
+  do repo). Único item capaz de mudar a classificação do Chain4.
+- **(c2) — sonda interna bounded (única não coberta por H1–H3):** header28 `ca9e…e705`
+  sob **endianness/byte-invertido** como privkey crua de 32B — defensável pelo hint do
+  criador 2024-01-26 ("Regular Bitcoin Private key" = 32B crua, não seed). A3 só testou
+  ordem direta. É hipótese nova (não repete família H1), testável contra o oráculo forte.
+
+**Fora disso: PARAR.** Espaço computacional interno esgotado; sem hipótese concreta
+derivada de hint/insight real, nenhum sweep novo se justifica.
+
+### 5. Itens em aberto registrados (não verificáveis do repo / blind spots reais)
+- Atestação externa de `CHAIN4_SHA256`/`BLOCKS_SHA256` (item c1).
+- Blind spot BIP39: `oracles.check_mnemonic` exige ≥60% palavras distintas → um mnemonic
+  degenerado/baixa-diversidade seria **silenciosamente perdido** (ortogonal a H1–H3, que
+  são saídas de alta entropia).
+- Variante endianness do header28 em H1 (item c2).
