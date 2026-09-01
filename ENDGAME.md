@@ -1604,3 +1604,75 @@ regra que converte `+-`+header28+`7`+35 blocos na privkey regular do prêmio nã
 derivável do material público — precisa da página live original ou do primeiro hint
 de 2019 verbatim (convergente com o solver sênior da comunidade). **Não reabrir
 sweeps sobre os 35 blocos sem hipótese nova derivada de hint externo real.**
+
+## Sessão 2026-08-31 (c) — arqueologia web exaustiva: a teoria do "desbloqueio externo" REFUTADA
+
+Workflow de 6 agentes de recuperação + síntese (Wayback CDX + `id_`, decompile do
+`app.js`, cross-check no `result.json` e Reddit). Motivação: o solver sênior da
+comunidade (Vasilis Dragon) diagnosticou que faltariam duas peças EXTERNAS — a
+página SalPhaseIon/Cosmic *live* com "instruction text ao redor dos blobs", e o
+primeiro hint de 2019 *verbatim*. **Ambas foram investigadas até o fim; nenhuma
+existe. A teoria do desbloqueio externo está refutada.**
+
+### (a) Página live tem instrução oculta? — NÃO (refutado)
+Os 6 snapshots / 5 digests distintos de `gsmg.io/89727c…` (2023-06-01 → 2026-04-05)
+foram baixados e diffados byte-a-byte. Em TODOS, o único texto fora das duas
+`<textarea>` é: `<title>GSMG Puzzle</title>`, meta description, `meta robots
+noindex`, os dois `<h1> SalPhaseIon </h1>` / `<h1> Cosmic Duality </h1>`, e
+`body{font-family:'arial'}`. **Zero comentários, zero `<p>/<div>/<a>`, zero
+payload.** Mudanças na linha do tempo são só cosméticas (caixa da tag, reindentação)
+e, a partir de out/2025, um `<script>` que é apenas o beacon do Cloudflare (não lê as
+textareas, não decodifica, não redireciona). A rota `/salphaseion` da SPA só tem
+captura de 2026 = shell Vue vazio. **VERIFICAÇÃO PRÓPRIA ADICIONAL:** a transcrição
+do repo (README) das duas textareas bate **byte-a-byte** com a página live 2023-06-01
+(SalPhaseIon 1075 chars, Cosmic 1792 chars base64, whitespace-normalizado) — não há
+erro de transcrição na base do endgame.
+
+### (b) Primeiro hint de 2019 verbatim — RECUPERADO
+Em 2019 o `gsmg.io` era a plataforma de trading (SPA Vue); o puzzle vivia na rota
+`/puzzle`, com markup embutido no bundle `app.js`. O componente tem `script: null`
+(markup 100% estático). O primeiro hint verbatim é **apenas**:
+```
+<h1 class="headline">GSMG MEGANIGMA || 5 BTC</h1>
+<img src="/img/follow_the_white_rabbit.png" alt="Follow the white rabbit">
+```
+- Fonte: `app.js` de 2019-04-28; a função `render` da rota `/puzzle` é byte-idêntica
+  em 2019 e 2020 (md5 `a7dda948140b3619ef2e9336edd0b282`).
+- `follow_the_white_rabbit.png` (350×350) = a própria matriz 14×14 da Fase 1; sem
+  chunks tEXt/iTXt/zTXt; digest imutável 2019→2026.
+- Corroboração verbatim: o solver `silver_anth` (1º a resolver a Fase 1, 2019-04-20)
+  postou a foto do anúncio: *"originally was just this image"*; Reddit
+  `r/bitcoinpuzzles/comments/dfwcqk` (OP `Sandalphon69`, 2019-10-10) descreve a Fase
+  1 igual ao README.
+- **O primeiro hint NÃO tem prosa/instrução ao redor** — é só a imagem-matriz sob o
+  heading. Nada oculto faltante.
+
+### Inéditos (menores, sem payload de puzzle)
+1. **Título original "GSMG MEGANIGMA || 5 BTC"** (o README anotava "GSMG.IO 5 BTC
+   PUZZLE CHALLENGE"; note que `GSMGIO5BTCPUZZLECHALLENGE` continua sendo a string
+   HASHTHETEXT que gera a URL do endgame — fato separado e intacto).
+2. **Comentário `<!-- Nice to see you around! Good luck little bunny hunter ;) -->`**
+   em `theseedisplanted`, presente só nos snapshots de 2026 (ausente em 2020/2022) —
+   era de domínio morto, sabor Matrix, sem carga.
+3. Todos os hash-paths e quote-paths Matrix (`merovingian`, `whiterose`,
+   `hopeisthequintessential…`, e o `4f7a1e4e…` = sha256 do plaintext Cosmic) só têm
+   captura 2025-2026 = shell Vue vazio / erro 530 / página "for sale". **Nenhum stage
+   pós-Cosmic genuíno existe no arquivo.** O `app.js` de 2025 tem zero ocorrências de
+   `salphaseion/cosmic/89727c/choiceisanillusion`.
+
+### Teste das strings novas (ultracode, bounded, inédito)
+`GSMG MEGANIGMA` (todas as formas), `MEGANIGMA`, e o comentário "bunny hunter"
+(15 strings × {raw, upper, sem-espaço}) como: sha256→chave AES dos 35 blocos
+(oráculo forte alvo+espelho, 6 IVs CBC+ECB, scan byte-a-byte) e raw→passphrase EVP
+em SMALL/COSMIC. **0 hits, 0 soft.** As strings novas não são chave/senha.
+
+### Veredito
+A arqueologia web **não produziu alavanca externa nova**. As duas peças supostamente
+faltantes não existem: a página live sempre foi só as duas textareas (byte-correta no
+repo), e o primeiro hint sempre foi só a imagem-matriz. A web está morta e à venda;
+não há página, stage, prosa de instrução ou artefato externo não capturado.
+**Implicação (mudança de mapa):** a peça que falta — se existe — é **INTERNA à
+decifração dos próprios 35 blocos** (ou uma releitura da cadeia Chain4→35-blocos
+que #104 marcou como "construção reproduzível, não validada"), **não** um hint/página
+perdido na web. Isso refuta a hipótese dominante de "desbloqueio externo" e reorienta
+todo trabalho futuro para dentro do payload já em mãos.
