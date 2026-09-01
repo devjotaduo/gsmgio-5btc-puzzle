@@ -1524,3 +1524,83 @@ demais para busca cega sem gradiente); (b) o script real `dbbi_sum_faed.py` de X
 associada (fora do export do Telegram). A frente permanece interpretativa: os marcadores são
 provavelmente **verificadores de alinhamento**, e falta a regra — ainda não publicada — que
 transforma o material verificado na chave AES dos 35 blocos.
+
+## Sessão 2026-08-31 (b) — campanha multi-agente: verificação dos positivos + 4 frentes fechadas + inteligência do Telegram
+
+Campanha de 4 agentes paralelos, com re-verificação independente dos achados
+"load-bearing" e da suspeita de erro no oráculo. **Saldo: 0 solves, mas os
+positivos verificados e o gargalo re-confirmado como EXTERNO.**
+
+### 1) Positivos re-verificados (independente, byte-a-byte)
+- **`intertwined = XOR`**: `sha256("enter") ⊕ sha256("lastwordsbeforearchichoice")
+  ⊕ sha256("thispassword") ⊕ sha256("yourlastcommand") ⊕ sha256("secondanswer")`
+  == passphrase Cosmic `a795de117e472590…52e50735` **(match exato reproduzido)**.
+  Como acertar 256 bits exatos não é força-brutável, a gramática XOR-of-sha256 é
+  real (não coincidência de padding). Reforça a reabilitação parcial vs. #104.
+- **Cadeia canônica**: `final_chain.reproduce()` dá `half=0423d911…`,
+  `better_half=48cc46e6…`, header `+-`+28B+`7`, 35×32B. Os checkpoints sha256
+  batem com os do solver sênior Vasilis Dragon (Telegram id 65629): cosmic
+  `4f7a1e4e`, chain4 pós-AES 1151B `e4269ed5`, 35 blocos 1120B `43d3fe43`.
+  **Confirmado que atacamos a cadeia canônica**, não a derivação quebrada da #68
+  (`a80a399a`, "wrong bytes").
+
+### 2) SUSPEITA DE ERRO investigada — pontos-cegos do oráculo (reais, porém benignos)
+`solver/strong_oracle_35.py` + `solver/strong_recheck.py`. O detector antigo
+(`intertwine_attack.full_battery`) tinha 3 pontos-cegos REAIS: (a) scan de privkey
+só em offsets múltiplos de 16 (perdia privkey não-alinhada); (b) sem WIF, BIP39
+nem privkey em HEX-ASCII; (c) só 5 IVs. **Mas remover os três NÃO revelou nada**:
+38 famílias já "esgotadas" × 6 IVs CBC + ECB × varredura byte-a-byte + WIF +
+BIP39 + hex-ASCII (alvo+espelho) → **0 hard, 0 soft**. Nuance importante: o gate
+de 80% ASCII do `valid_pt` só afetava o reporte SOFT — o scan de privkey crua já
+rodava independente, então nunca escondeu uma privkey crua. **Os negativos antigos
+dos 35 blocos se sustentam mesmo sem os pontos-cegos** — a dúvida "e se o detector
+estava fraco?" está fechada. `strong_oracle_35.py` vira o detector canônico.
+
+### 3) Terceira gramática sobre artefatos-bytes — FECHADA
+`solver/third_grammar_attack.py`. Aplicou as gramáticas PROVADAS
+(`XOR(sha256_individual)` / `sha256(concat)` / seletor-header) aos **artefatos
+intermediários da cadeia** (half, better_half, E_C, E_S, keymat79, cc[833:865],
+header28, XOR dos 35 blocos) — lacuna que o `intertwine_attack.py` deixara (só
+testara strings de token). **103 chaves, 0 hard, 0 soft** sob o detector forte.
+As chaves a priori mais fortes (`sha256(half‖better_half)`, `XOR(sha(half),sha(bh))`,
+`XOR(sha(E_C),sha(E_S))`) todas negativas. As duas metades **não** formam a privkey
+por XOR/mul/sha/and/or/add-bytewise nem ±mod N (verificado à parte).
+
+### 4) SEND THE BLUE TO SET HEX — FECHADA (ver seção detalhada acima)
+`solver/send_blue_sethex_attack.py`, 7 hipóteses, 73 chaves + 20 passphrases, 0
+hits. Confirmação independente de que "set hex" é curve-fit (veredito de Vasilis)
+e de que os marcadores SENDTHE/BLUE/TOSETHEX são **verificadores de alinhamento**,
+não a chave (reframe do gnosis). Fato novo: FAED → 570 dígitos **todos em 1-9**
+(nibbles hex válidos); cores complementares exatas (`BE2B9B ⊕ 41D464 = FFFFFF`).
+
+### 5) Inteligência do Telegram (garimpa read-only do `result.json`) — INÉDITA aqui
+- **Criador (Jrk Bgrt / @SoWut), 2025–2026 — NENHUM hint operacional.**
+  2026-03-03: *"No hints, only free will."*; único ponteiro social: *"Looks at
+  gnomad. 👀"* (aponta o usuário **gnomad** como quem estaria no caminho);
+  *"I only need to look at the address. If any of you reaches the next phase, the
+  price is taken in no-time."*; *"I'm going to rewatch episode 3.5 with the better
+  half."* (Mr. Robot + companheira). 2026-05-28: *"The puzzle is still valid!"*.
+  Mensagem binária de Ano-Novo (2026-01-01) decodifica a *"…here's a 'tiny hint'
+  <3"* — provável gozação. "better half" = **companheira dele** (confirmado
+  2025-04-28), não um artefato criptográfico.
+- **Hint decisivo de enquadramento (2024-01-26): "Regular Bitcoin Private key"** —
+  o alvo é uma **privkey comum de 32 B**, não seed/BIP39. Reorienta: o plaintext
+  final dos 35 blocos deve *conter uma privkey crua*; as linhas BIP39 são
+  provavelmente ruído (coerente com todos os negativos BIP39).
+- **Estado-da-arte da comunidade (Vasilis Dragon, id 65629):** já rodou TODOS os
+  valores retidos como chave (8 K-values, 4 E-fields, cosmic key, header28, C32,
+  faed s15 rail + completações, yellow-prime+blue, o "68-byte half/better-half
+  thing", two-primes) sob a KDF EVP exata → nada. Diagnóstico dele do bloqueio:
+  *"either it's a transform nobody's hit in seven years, or the missing piece died
+  with the site"* — e o que falta publicamente é **a página salphaseion/cosmic ao
+  vivo (texto de instrução ao redor dos blobs) e o primeiro hint de 2019 verbatim.**
+- **gnosis (id 64922):** falta *"um último passo de composição binária = yinyang"*.
+
+### Veredito da campanha
+As 4 frentes atacadas fecham com negativo control-validado; a suspeita de erro no
+oráculo foi investigada e é **benigna** (negativos se sustentam). Nenhum caminho
+computacional novo abriu. O gargalo é re-confirmado **externo/interpretativo**: a
+regra que converte `+-`+header28+`7`+35 blocos na privkey regular do prêmio não é
+derivável do material público — precisa da página live original ou do primeiro hint
+de 2019 verbatim (convergente com o solver sênior da comunidade). **Não reabrir
+sweeps sobre os 35 blocos sem hipótese nova derivada de hint externo real.**
