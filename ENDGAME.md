@@ -1414,3 +1414,113 @@ probes. A fronteira permanece: a regra que converte `+-`+header28+`7`+35
 blocos na chave final — agora com a hipótese forte adicional de que ela deve
 ser **uma gramática derivável dos tokens** (como SMALL=concat e COSMIC=XOR),
 ainda não encontrada.
+
+## Sessão 2026-08-31 — candidato DBBI/FAED: `SEND THE BLUE TO SET HEX`
+
+Um script compartilhado no Telegram por **X** em 2026-05-22 (mensagens 63504–63520,
+cópia pública em [Ideone fZkIsw](https://ideone.com/fZkIsw)) revelou um checkpoint
+estrutural ainda não documentado. A construção tem dois encaixes exatos:
+
+- `len(dbbi)=91=C(14,2)`: `a=1…i=9` preenche o triângulo superior de uma matriz
+  simétrica 14×14; suas 14 somas de linha formam uma chave periódica;
+- `len(faed)=570=38×15`: o FAED vira 38 linhas de 15 caracteres; cada soma de linha
+  é XORada com a chave e reduzida módulo 26.
+
+A saída-base contém `SENDTHE` no offset zero-based 11:
+
+```text
+JLIQFOPGVBLSENDTHECZAGJJYDSWCGUDJNFTWB
+```
+
+O zero-mask azul/amarelo/primo aplicado ao FAED produz `BLUENET` no offset 9;
+zerar na matriz-chave as arestas indicadas pelas células amarelas produz `TOSETHEX`
+no offset 11:
+
+```text
+JLUPFLPGLBLUENETDICZAGAJQDSWCGUDONFHWB
+OLIQUBROVQLTOSETHEXQYOJSSICJFGUDCCVBWQ
+```
+
+O autor do script publicou a interpretação **`SEND THE BLUE TO SET HEX`**. O `NET` foi
+acrescentado depois por outros solvers: os três marcadores não começam na mesma coluna e
+não houve confirmação de Jrk. Portanto `SENDTHE`, `BLUE` e `TOSETHEX` são os marcadores
+reproduzidos; `BLUENET` é uma extensão comunitária. O encaixe `91=C(14,2)` explica
+naturalmente o tamanho do DBBI e dá ao hint “zeroed out” uma aplicação concreta, mas a
+receita completa permanece pós-selecionada.
+
+Reprodução e null-model: [`solver/blue_net_attack.py`](solver/blue_net_attack.py),
+relatório em `_work/blue_net_attack.json`. Em 2×20.000 permutações com contagens de
+símbolos preservadas, nenhuma igualou os marcadores publicados; limite superior unilateral
+de 95% condicionado à receita ≈`1,50e-4`. Esse número **não** corrige os graus de liberdade
+do pesquisador nem a escolha post-hoc das palavras.
+
+Bateria curta na fronteira final: 27 materiais estruturais, 58 chaves e 79 passphrases;
+ECB mais cinco decifrações CBC por chave, EVP com key+IV reais, scan escalar byte a byte e
+oráculos direto/espelho. Resultado: **0 private-key hits, 0 plaintexts semânticos e 0
+paddings na camada final**. Um padding casual apareceu no SMALL com imprimibilidade 0,418,
+corretamente classificado como ruído. Logo, nenhuma interpretação testada equivale a “usar
+as posições/cor/rede azul diretamente como chave AES”. A próxima fronteira é determinar
+o verbo técnico **SEND** e o destino **SET HEX**, sem promover `NET` a pista confirmada.
+
+### Operacionalização do verbo `SEND`/`SET HEX` — 5 leituras, 0 solves (`send_blue_sethex_attack.py`)
+
+Tratei `SEND THE BLUE TO SET HEX` como o "first hint" que fixa a 2ª camada e testei
+operacionalizações concretas do verbo NÃO cobertas pela bateria anterior. Script:
+[`solver/send_blue_sethex_attack.py`](solver/send_blue_sethex_attack.py) (reusa
+`oracles`/`final_chain`/`blue_net_attack`), relatório em `_work/send_blue_sethex_attack.json`.
+**73 chaves de 32B + 20 passphrases + 6 IVs**; oráculo duro = pubkey-alvo `04f4d1bbd9…`
++ espelho, endereço-prêmio, BIP44/BIP32 e blobs SMALL/COSMIC. Resultado: **0 hits em
+privkey/endereço, 0 seed BIP32, 0 pubkey-markers nos 35 blocos, 0 opens semânticos**. Um
+único padding PKCS7 casual (ECB sob `sha256(faed@amarelo)`, ratio 0,389) = ruído ~1/256.
+
+- **H1 — "SET HEX" = decode a-i→dígito→HEX de FAED/DBBI é o valor hex.** FAED (570 chars
+  a-i) decodifica para 570 dígitos, todos em 1-9 (nibbles hex válidos; o próprio prefixo
+  `faed`→`6154`). Testei os dígitos lidos como hex (`[:32]`/`[-32:]`, mapas a=1..i=9 e
+  a=0..i=8), `sha256(dígitos)` e `sha256(raw)` de faed/faednp/dbbi como privkey, seed
+  BIP32 (inclusive o hex longo de 285B) e chave AES dos 35 blocos. **Nada.**
+- **H2 — "SEND THE BLUE" = selecionar pela máscara azul.** Subsequência de FAED nas 15
+  posições azuis lineares e as 15 letras DBBI nas arestas azuis (`bbbhibeeehefbfe`), mais
+  a amarela (9). Decode→hex/sha256 → mesmos oráculos. **Nada.**
+- **H3 — cores como VALOR hex direto.** `0xBE2B9B` (azul) e `0x41D464` (amarelo) — que são
+  **complementos exatos** (`BE2B9B ⊕ 41D464 = FFFFFF`) — como chave (repetição→32B,
+  `sha256` do raw/ascii-hex/decimal, pares concatenados) e como **IV** dos 35 blocos.
+  **Nada.**
+- **H5 — string-instrução como senha.** `sha256` de `SENDTHEBLUETOSETHEX`/`SET HEX`/etc.
+  como chave AES dos blocos; cores e dígitos faed/dbbi como passphrase EVP em SMALL/COSMIC.
+  **Nada** (confirma e amplia o que `blue_net_attack.py` já vira).
+
+Incorporando o chão-verdade garimpado do `result.json` (correções do coordenador):
+
+- **Receita verbatim de X (id 63520):** "dbbi row sums = chave repetida; faed 570=38×15 →
+  38 linhas de 15, somadas; XOR com a chave; zero-masks azul/amarelo → SENDTHE, BLUE,
+  TOSETHEX". É **exatamente** o que `blue_net_attack.py` já reproduz byte-a-byte. O
+  `ideone fZkIsw` NÃO é o script de X (é um gerador de primos de outro user); o
+  `dbbi_sum_faed.py` real não está no export.
+- **Reframe dos solvers seniores:** *gnosis* (id 64922) — os marcadores leem como
+  **verificadores**, não a chave AES final; faltaria "um último passo de composição binária
+  que Jrk chamou de **yinyang**". *Vasilis Dragon* (id 65629) — "the s15 / P-M 'set hex'
+  readings are curve-fit, they're dead" e já rodou todos os valores retidos como chave sob
+  EVP-md5/sha256 → nada. **Meus 0 em H1-H5 são confirmação independente desse veredito.**
+- **H6 — hipótese "yinyang"/verificador (nova frente).** Se os marcadores só validam o
+  alinhamento dbbi/faed, a chave viria de compor binariamente as duas metades. Testei
+  duplas concretas do endgame: `HALF ⊕ BETTER_HALF` (as duas metades já decodificadas do
+  cosmic), `sha256(half‖better_half)`, `bluepos ⊕ yellowpos`, `blue ⊕ set-hex`, e as rails
+  base/blue/yellow XORadas → privkey + AES-35-blocos. Também testei `half` e `better_half`
+  **sozinhas** como privkey. **Nada** — nenhuma composição binária óbvia rende a chave.
+- **H7 — lead EI E (id 66216).** `BLUENET as hex = 061119242f3a5863767e81a3aab9c1` (15B =
+  as 15 posições azuis); o único dígito hex faltante é **`d`** (0x0d); em DBBI `d` aparece
+  4× (pos. 1,48,55,74; soma **178** → row 13 col 10 = último amarelo em row-major). Testei
+  o hex de 15B e as completações com `d` (pad-0, `+0x0d`, repetição→32B, `sha256`, e `178`
+  como material) como chave/privkey. `blue_net_attack.py` já cobria `sha256`/`repeat16` de
+  `blue16` e do set `0123456789abcdef`; as formas de 32B diretas aqui adicionadas também
+  dão **0**.
+
+**Saldo:** as leituras "set hex → chave" estão agora exaustivamente NEGATIVAS em oráculo
+duro, corroborando o veredito de Vasilis de que são curve-fit. O que **não** consigo fixar
+sem mais informação: (a) o "yinyang"/último passo de composição binária que Jrk citou — não
+há no material publicado uma definição única de QUAIS dois operandos compor nem COM QUAL
+operação (testei as duplas mais literais; o espaço de composições arbitrárias é grande
+demais para busca cega sem gradiente); (b) o script real `dbbi_sum_faed.py` de X e a imagem
+associada (fora do export do Telegram). A frente permanece interpretativa: os marcadores são
+provavelmente **verificadores de alinhamento**, e falta a regra — ainda não publicada — que
+transforma o material verificado na chave AES dos 35 blocos.
