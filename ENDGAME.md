@@ -1845,3 +1845,31 @@ Dúvida do cético: o alfabeto CANON do Bifid faed foi ajustado à palavra "BTCS
 **Veredito:** não resolvido; prêmio intacto. Ganho desta sessão: o ramo do prêmio foi
 ISOLADO (faed/BTCSEED), o beco (Cosmic/35-blocos) foi provado fabricado, e o único sinal
 positivo (BTCSEED) foi confirmado real. O que falta é externo.
+
+## Sessão 2026-09-01 — 3 tries diretos na 2ª camada (todos negativos, control-validados)
+
+Ataque direto aos dois threads nomeados na sessão (e), + 1 cruzamento inédito. Tudo com
+oráculo duro (privkey alvo/espelho, AES SMALL/COSMIC ≥85% ASCII) e Scorer de inglês.
+
+1. **Blob SMALL genuíno (H-NEXT-2):** 216 senhas principiadas — concat→sha256 e
+   XOR-de-sha256 (gramáticas provadas) sobre os tokens da página + frases decodificadas do
+   faed + "our first hint is your last command" + BTCSEED — via EVP. **0 plaintext legível,
+   0 link SMALL→COSMIC (sha256(pt) não abre COSMIC), 0 privkey.** O SMALL não abre para
+   instrução/resposta sob nenhuma gramática de senha derivada.
+2. **dbbi decodificado como keystream da 2ª camada (BIF_REST):** dbbi (a-i→1-9), cumsum,
+   matrixsumlist e dbbi+matrixsum como keystream mod-25 (vig_dec/enc/beaufort) sobre os 563
+   chars. **Todas as saídas PIORAM** (melhor −7,56 vs REST cru −5,59); 0 oráculo duro. O 2º
+   parâmetro NÃO é o dbbi decodificado.
+3. **`cc` RAW cruzando o ramo faed (Cosmic Duality = combinar, INÉDITO):** o plaintext Cosmic
+   `cc` (1327B) como keystream mod-9 sobre o faed PRÉ-Bifid (então Bifid canônico) e mod-25
+   sobre o BIF_REST (offsets 0/7/158/163/833), + fatias de cc como chave AES. **0 hits duros,
+   todas as saídas piores que o cru.** As duas metades da "dualidade" não se combinam no nível
+   bruto para revelar o payload.
+
+**Saldo:** os threads concretos que restavam estão fechados. Confirmado de forma decisiva e
+multiplamente que **o parâmetro da 2ª camada do BIF_REST NÃO é derivável de nenhum artefato em
+mãos** (dbbi, faed, cc, half/bh, matrixsumlist, tokens da página) por nenhuma operação de
+combinação testada. O prêmio vem do ramo faed/BTCSEED (identificado), mas o passo final exige
+**informação externa** (o hint do criador que fixa alfabeto/keystream da 2ª camada) — nem a
+comunidade em ~6 anos, nem as campanhas multi-agente desta sessão, a encontraram. Parar de
+varrer; o desbloqueio é externo.
