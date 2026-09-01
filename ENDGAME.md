@@ -1742,3 +1742,53 @@ derivada de hint/insight real, nenhum sweep novo se justifica.
   degenerado/baixa-diversidade seria **silenciosamente perdido** (ortogonal a H1–H3, que
   são saídas de alta entropia).
 - Variante endianness do header28 em H1 (item c2).
+
+## Sessão 2026-08-31 (d) — REDIREÇÃO: os "35 blocos" são fabricação comunitária; a fronteira real é o plaintext Cosmic `cc`
+
+Fecho do plano `.claude/plans/endgame-internal-frontier.plan.md` (Fase 0→2, time A1–A4
++ arqueologia de proveniência + verificações próprias). **Conclusão estratégica que muda
+o mapa:** o alvo "35 blocos" que a comunidade (e sessões anteriores deste repo) vinha
+atacando **não é o caminho do criador** — é uma construção auto-referencial. A fronteira
+VERIFICADA recua para o plaintext Cosmic `cc`.
+
+### Evidência (3 ângulos independentes, todos verificados byte-a-byte)
+1. **Chain4 mask CONSTRUÍDO:** `b657264f2f6e6921 == cosmic[158:166] XOR "Salted__"` — os 8
+   bytes do mask são engenharia-reversa exata para impor o header `Salted__`. O header é
+   tautológico, **não** âncora independente → a crítica da issue #104 **procede**. Toda
+   busca por derivação dura do mask (A2 D1–D8 + A4) deu vazio; ele nunca apareceu no
+   Telegram (`b657264f` = 0 ocorrências no `result.json`).
+2. **Proveniência auto-referencial:** os hashes `e4269ed5` (chain4) e `43d3fe43` (35 blocos)
+   aparecem **uma única vez** no export inteiro (Vasilis, 2026-06-21), rotulados pelo próprio
+   autor como vindos "dos issue dumps" — sem precedente, sem atestação independente, ~10 meses
+   DEPOIS do `4f7a1e4e`. O criador **nunca** mencionou "35 blocos"/"Chain4"/matriz-103²/
+   `Salted__` intermediário. (A frase "half and better half" é genuína do texto do puzzle; a
+   *mecânica* da matriz é derivação de solver.)
+3. **Ramo terminal → endereços de golpe:** a matriz 103² → `half`/`better_half` deriva (pubkey
+   comprimida, verificado nesta sessão) `1JG648yaB7Wp2dpUfcZoRSD4q35oq47vCu` e
+   `145ZQ9siLrsXBKf465wjdyQYAP5dRwhRhQ` — exatamente os endereços das issues #80/#99, que
+   **não são o prêmio** e não têm derivação legítima até ele. Esse ramo é TERMINAL.
+
+### O endpoint genuíno: `cc` (plaintext Cosmic)
+- **Duplamente ancorado:** a passphrase `a795de11…` (derivação XOR-de-sha256 dos 5 tokens,
+  provada) decifra o blob Cosmic em **1327 bytes com `sha256 = 4f7a1e4e…`** — a âncora
+  independente e multiplamente atestada (Cuevabit 2025-08-09, antes de tudo). Verificado agora.
+- **Caracterização:** 1327 bytes e **1327 é PRIMO** (criador: "a prime number is very
+  important"); entropia 7,87 bits/byte (alta, cifrado/denso); 0,48 imprimível; 255/256 bytes
+  distintos; `1327×8 = 10616 ≈ 103² = 10609` (sobra 7). É bit-material de alta entropia.
+
+### Testes bounded desta sessão (todos negativos, control-validados)
+- **(c2) header28 em endianness invertida** como privkey crua (11 formas): 0 hits.
+- **cc varrido por privkey/WIF do prêmio:** 1296 offsets + WIF embutido + sha de fatias
+  naturais + row/col-sums do 103² → **0 hits**. A privkey NÃO está embutida crua em `cc`.
+- **half/better_half** e combinações diretas como privkey: 0 (sessão b).
+- **H1–H3 releituras internas** (87 chaves) + strong_oracle_35: 0 (com controle positivo
+  `a4_controls.py ALL_PATHS_FIRE=true`).
+
+### Veredito e próxima fronteira (honesto)
+Nada abriu; **não está resolvido**; o prêmio segue on-chain intacto. Mas o mapa mudou: parar
+de atacar os "35 blocos" (alvo fabricado). **A fronteira real é a interpretação correta de
+`cc` (1327 B, primo, alta entropia) que produza a "Regular Bitcoin Private key" do prêmio** —
+uma leitura DIFERENTE da matriz-103²-comunitária (que é terminal). Isso exige uma hipótese
+nova, concreta e falsificável sobre `cc` (2ª camada de cifra? outra geometria do 1327/103²?
+o papel do primo 1327?) — **não** outro sweep. O gargalo permanece interpretativo/externo
+(novo hint do criador ou insight humano), agora com o alvo re-centrado no artefato certo.
