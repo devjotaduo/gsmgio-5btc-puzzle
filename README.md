@@ -204,6 +204,29 @@ Ok kid, on the highway, let put it in the worst gear.
 ```
 
 It is unclear how to use X 2 S H 4 Y 0 Q B 15, but it was observed that S is Klingon numbers 2+(5*6)=32 and BV80605001911AP is a model of Intel i5 processor, hence B=(5i-i)^2=(4i)^2=-16.
+
+**Resolução da tabela (grupo "GSMG Puzzle Solvers" no Telegram, 2020–2023; consolidada em 2026-09-02).**
+A tabela é auto-contida e não deixa resíduo: cada letra vira um número, a string resultante é lida
+em "marcha ré" ("put it in the worst gear" = *reverse*) e o resultado são coordenadas geográficas.
+
+| letra | leitura | valor |
+|---|---|---|
+| S | `cha' + (vagh * jav)` = 2 + (5 × 6) em Klingon | 32 |
+| H | a "resposta" da piada do Guia do Mochileiro, vezes −1 (o sinal é descartado na leitura posicional) | 42 |
+| Q | "a hackers' swordless fish" = *Qwerty*, o peixe de Elliot em **Mr. Robot** (série citada no parágrafo acima da tabela); "extend the name" → `QWERTYUIOP`, que fica sob `1234567890` no teclado; "the I and W are below" → acima de I está 8, acima de W está 2 | 82 |
+| B | `BV80605001911AP` é um Core **i5**; `i5 − i` = 5; `5² = 25` (a leitura algébrica (5i−i)² = −16 não fecha as coordenadas) | 25 |
+| X, Y | não são números: são as letras das direções | E, N |
+
+Concatenando na ordem da tabela: `X 2 32 42 4 Y 0 82 25 15` → `X232424Y0822515`. Invertida
+caractere a caractere: `5152280Y424232X` → **51°52'28.0"N 4°24'23.2"E**, consumindo todos os
+dígitos (o "2" após o X, que parecia sobrar, é a fração de segundo). O ponto cai na zona da
+SafeNet Technologies B.V. (Columbusstraat 25, Rotterdam-Albrandswaard), ou seja, a tabela
+confirma **Safenet** (e não Thales) como a 2ª parte da senha da fase 3. Um membro do grupo
+(2023-09-04) objetou que o ponto fica algumas centenas de metros do prédio, então trate a
+identificação do endereço como provável, não exata. Créditos: Q=82 e a leitura do i5 (Zil,
+2023-08-05), coordenadas (silver_anth, 2023-08-05), endereço (nieods, 2023-08-22).
+Todas as formas dessas coordenadas, do endereço e dos valores da tabela foram testadas como
+senha dos blobs do endgame (2026-09-02, ~60 mil testes): negativo.
 Using the other hints (2name, 3Moon, 4How so mate) which are a reference to a [Thales Hardware Security Module](https://thalesdocs.com/gphsm/luna/10.1/docs/network/Content/Product_Overview/the_safenet_hsm/the_safenet_hsm.htm), you can decrypt the next phase. The password is a concatenation of 7 parts. The first part is causality.
 
 For part 5, you have to follow the ramblings, (these are a bit of a stretch)

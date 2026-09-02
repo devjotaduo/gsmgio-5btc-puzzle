@@ -2077,3 +2077,114 @@ principiadas que sobreviveram a tudo acima estão no briefing da campanha (`BRIE
 scratchpad da sessão): seleção de bits por índice em vez de permutação, o resíduo fraco de índice
 de coincidência de dígrafos, chaves aditivas de dois ou três resíduos, e a tabela da fase 2 lida
 como bytes, teclado ou programa de transposição.
+
+### 8. Segunda metade da rodada 2 (retomada após limite de sessão) — 0 hits em mais 30 M testes
+
+| família | testes | o que fechou |
+|---|---:|---|
+| `select_bits` | 3.011.429 | 32 bytes / 256 bits **selecionados** de `faed`/`dbbi` por índices (primos base 0/1, coloridos, azuis/amarelas, células 0/1 da matriz README, i mod k para k=2..19, posições de g/i, 1ª/última ocorrência, saltos do `dbbi`, janelas de 32–256 em todo offset) em base 9/10, pares/trios decimais, nibbles, 1–4 bits por símbolo, reverso, sha256 — nenhuma é a chave nem abre blob. Não existe seleção "natural" de exatamente 256 bits. |
+| `computed_lists` | 5.160.965 | `dbbi`/`faed` **não** são listas calculadas da matriz (pares de linhas/colunas em 5 ordens × 8 operações × 5 reduções), nem dígitos de constantes (π, e, √2, φ, ln2, γ, Champernowne, com/sem zeros), nem dígitos de hashes/pubkey/endereço, nem base58; como número, `faed` não tem estrutura (não é quadrado, potência de 2, nem tem cofator útil). |
+| `residue_autocorr` | 1.095.534 | O resíduo de índice de coincidência de dígrafos é **deslocamento de baseline** do viés unigrama, não assinatura de chave (p family-wise 0,44–0,71). Camada aditiva de **poucos resíduos** (25 chaves nomeadas + 8.030 chaves binárias de período ≤ 12, ±k, 4 configurações) fica dentro do nulo de `faed` embaralhado. Controle: checkerboard + chave binária ainda dá H_cond z≈−6 com a chave errada; `faed` cru dá −0,45. |
+| `phase2_table_bytes` | 798.572 | Tabela `# X 2 S H 4 Y 0 Q B 15 #` como bytes/nibbles/hex/decimal com X,Y varridos em 0..99 e temáticos, Q em 6 leituras, como senha/-K/IV/privkey; cifra de teclado em 3 layouts × 5 direções; 8ª parte nas 6 juntas internas da senha da fase 3 (27.648 senhas); alfabetos fill+kw e dot-style das 39 frases da fase 2; tabela como ordem das 7 partes (5.040 permutações). |
+| `yinyang_interleave` | 99.008 | A distribuição conjunta 9×9 de (A[i], B[i]) e das outras 4 pareações é **independente** (z entre −0,75 e +0,66; um quadrado 9×9 keyed real dá z=+131). `faed` não é (linha, coluna) de um quadrado 9×9 nem código de 2 dígitos sobre 81 símbolos. |
+| `pop_culture_exact` | 102.104 | "Últimas palavras antes da escolha" extraídas programaticamente do próprio puzzle (README, ENDGAME, mensagens do criador) e nomes/títulos curtos do universo Matrix/Alice/Mr. Robot, em 8 formas × 3 blobs + brainwallet. |
+| `dutch_german_scorer` | 22.920 | Modelos de quadgramas nl/de calibrados: o scorer de **inglês** já dá −5,45 em holandês real contra −6,66 em texto embaralhado, logo as triagens das rodadas 1–2 **não eram cegas** a holandês/alemão; hill-climb de checkerboard e de substituição sobre `dbbi`, REST563 e canal ímpar com nulo casado por classe de paridade: ruído. |
+| `bifid3x3_exhaustive` | 19.754.906 | **Todas** as 60.480 classes de quadrados 3×3 (= os 362.880 por conjugação linha/coluna, verificada) × todos os períodos × 2 modos, em `faed` e `dbbi` = 2,18 M saídas, cada uma como senha crua e sha256 nos 3 blobs, como privkey e via z-method; triagem invariante ao rótulo com nulo próprio (melhor z real −8,2 está dentro do nulo −6,3..−8,0); texto plantado recuperado em 1º entre 1,81 M. Ganho de ferramenta: teste de padding com um único AES-ECB no último bloco, 30× mais rápido. |
+| `permutation_search` (2ª passada) | 469.073 | Rotas de dois lados, colunar dupla e metades com rotas diferentes; controle recupera a permutação verdadeira em 1º entre 26.680. |
+
+Testes inline desta sessão, também negativos: inserção de zeros nas posições primas seguida do
+z-method (1.836); `faed`/`dbbi` com coringa em cada letra dentro dos 100 mil primeiros dígitos de
+13 constantes; cada símbolo como delimitador com comprimentos e campos octais pontuados contra
+nulo (360 leituras); "follow the white rabbit" e 51 frases vizinhas como senha em 5 formas (896).
+
+Dois fatos estatísticos novos para orientar o próximo passo:
+
+- O unigrama de `faed` (a54 b49 c52 d49 e69 f57 **g107** h58 i75) é incompatível com base 9
+  uniforme (χ²=43,7, df 8) e com um mapa hexadecimal 16→9 (χ²≈41), mas **compatível com dígitos
+  decimais uniformes em que `g` representa dois dígitos** (χ²=11,5, p≈0,17). A contagem 107 de
+  `g` é a única prima entre os nove símbolos e está 5,7 sigmas acima do esperado.
+- As metades diferem em composição (χ²=17,4, p≈0,02 no corte a priori em 285), mas o melhor corte
+  livre cai em 220 e não sobrevive à correção pela busca (p≈0,06). A não-estacionariedade é fraca.
+
+O veredito operacional das duas rodadas: `faed` não é saída de nenhuma cifra clássica de texto
+(fracionação, substituição chaveada, transposição, checkerboard, Bifid, aditiva de poucos ou muitos
+resíduos), nem seleção ou leitura posicional de uma chave, nem lista calculada. O que sobrevive é
+um objeto **serialmente i.i.d. com viés unigrama** cuja função no puzzle ainda não foi identificada.
+
+### 9. Síntese do crítico da rodada 2 e leads da rodada 3
+
+Balanço: 16 famílias, 36,1 M testes nesta rodada, ~50 M acumulados, **0 hits**. Piso de padding
+válido medido de forma independente por três famílias grandes: 0,00387 a 0,00388 contra 1/256 =
+0,00391. Nenhum plaintext AES passou de 53% de bytes imprimíveis; nenhum texto decodificado passou
+de −5,2 em quadgramas (inglês real ≈ −3; o controle plantado marcou −3,9).
+
+**Resultado documental positivo:** a tabela `# X 2 S H 4 Y 0 Q B 15 #` da fase 2 está resolvida
+sem resíduo (Q=82 pelo peixe Qwerty de Mr. Robot, B=25 pelo i5, H=42, S=32, X=E, Y=N; a string
+invertida dá 51°52'28.0"N 4°24'23.2"E, zona da SafeNet em Roterdã). O trabalho é do grupo do
+Telegram (2020–2023) e nunca tinha entrado no README; agora está na seção da fase 2. Corolário:
+**B=−16, usado em todo trabalho anterior, está errado.** A tabela existe para confirmar "Safenet"
+na senha da fase 3 e não alimenta o endgame.
+
+**Modelo que sobrevive a tudo:** `faed` é material de alta entropia, não mensagem. Assinatura:
+MI no lag 285 ≈ 0, entropia condicional no nulo, nenhuma dependência conjunta em duas metades,
+autocorrelação de n-gramas no nulo. Isso é (i) expansão de hash / material de chave, ou (ii)
+ciphertext de cifra de fluxo com **running key aperiódica de alta entropia**, a única camada
+aditiva que o diagnóstico de potência não exclui (chave binária: 0% das 685 amostras plantadas
+ficam tão planas quanto `faed`; ternária: 2,9%). O único traço estrutural é o unigrama compatível
+com dígitos decimais uniformes em que `g` vale 0 ou 7, e `faed` não tem `o` (o zero da página):
+o único fio que liga a estatística ao hint "some characters need to be zeroed out".
+
+**Segundo olhar humano recomendado pelo crítico:**
+
+- `faed[438:446]` = `bbeibbei` e `faed[453:461]` = `ieeeieee`: dois repeats em tandem de 4
+  símbolos a 15 posições um do outro. Esperado 0,12 em todo o `faed`; observar 2 dá p≈0,006, mas
+  foram 1.250 estatísticas varridas, então não é significativo em conjunto. É a única estrutura
+  local do `faed`.
+- `aedgg` aparece 3 vezes (índices 1, 36, 215) e `faed` começa com `f`+`aedgg`; um 5-grama com
+  3 ocorrências tem probabilidade ≈3%. O início do `faed` é a região com mais coincidências.
+- Nenhuma seleção principiada de `faed` tem 32/64/128/256 bits (primos=104, uns da matriz=101,
+  escapes g/i=182, complemento=388, saltos do `dbbi`=91). Isso reforça "`faed` → senha de texto"
+  e enfraquece "`faed` → chave crua".
+
+**Leads da rodada 3 (ordenados pelo crítico), com o estado ao fim desta sessão:**
+
+1. R1: `lastwordsbeforearchichoice` com as falas reais da cena do Arquiteto. Agentes foram
+   bloqueados duas vezes por filtro de conteúdo. Testado inline nesta sessão com frases curtas
+   (ver adendo abaixo).
+2. R2: TAIL32 × componentes da senha da fase 3 × tokens de xadrez da frase "fubcd-king &
+   oracle-queen … as wide as the first one seen". Testado inline (adendo abaixo).
+3. R3: "our first hint is your last command" = a linha de comando `openssl` literal. Testado
+   inline (adendo abaixo).
+4. R4: mapa símbolo→valor não-identidade (CANON, frequência, alfabeto da 3.2, reverso) antes de
+   qualquer materialização. Em execução por agente (rodada 3).
+5. R5: `g` como zero seletivo, com seletores por cor/matriz/ordinal, seguido do z-method. Testado
+   inline (adendo abaixo).
+6. R6: running key aperiódica com gate de entropia condicional. Em execução por agente (rodada 3).
+
+**O que o crítico recomenda a um humano:** a fronteira mudou de "qual cifra?" para "qual insumo
+falta?". Depois de ~50 M testes com nulos casados e controles positivos recuperados em primeiro
+lugar, toda leitura de `faed`/`dbbi` como mensagem está refutada com poder medido, e o vocabulário
+de senhas da comunidade (>1,3 M formas) está queimado contra os três blobs. Ações fora do alcance
+de um agente: perguntar ao criador se o TAIL32 abre com material da fase 3 ou da SalPhaseIon;
+varrer as variantes de whitespace do parágrafo "Raising the stakes…" no snapshot vivo do Wayback;
+e examinar o livro físico *Cosmic Duality* (Time-Life), p. 39, "Le Miroir de la Vie et de la
+Mort", já que `yinyang` é o único dos quatro passos do roadmap sem referente decodificado.
+
+**Calibrações que passam a valer como regra:** qualquer z entre 5 e 8 num funil grande é ruído
+(o nulo empírico chega a 5,5 com 25–60 mil permutações e a −8,0 com 2 M candidatos de Bifid);
+nulos devem preservar a estrutura (classes de posição no Bifid, marginais no símbolo-par, paridade
+no hill-climb); e o teste de padding com um único AES-ECB no último bloco é 30× mais rápido que
+decifrar o blob inteiro.
+
+**Adendo — R1, R2, R3 e R5 executados inline nesta sessão (0 hits):**
+
+| leitura | testes | cobertura |
+|---|---:|---|
+| R1 falas finais da cena do Arquiteto | 62.760 AES + 20 k privkeys | 96 frases curtas (últimas falas do Arquiteto e de Neo, as duas portas, "the problem is choice", esperança, "we won't") × 11 grafias × 4 formas, mais prefixo `giveit`, sufixos dos tokens da página e a composição do roadmap `yellowblueprimes`+`matrixsumlist`+frase+`yinyang` |
+| R3 linha de comando `openssl` | 43.656 AES + 14 k privkeys | 3.638 variantes da linha (`enc -aes-256-cbc`, `-d -a`, `-in` com 11 nomes, `-pass pass:`/`-k` com os sha256 das fases 2, 3, 3.2 e a URL), cruas, sem espaços e só alfanuméricas, × 4 formas |
+| R2 TAIL32 × fase 3 × xadrez × 3.2 | 569.370 AES + 190 k privkeys | 126 tokens (as 7 partes da senha da fase 3 com o hex do genesis e os dois FENs, peças e casas do tabuleiro, `fubcd`/`king`/`oracle`/`queen`/`thingky`/`mvps`/`sadboard`/`aswideasthefirstoneseen`, tokens da 3.2) em 1, 2 e 3 partes, com 4 partes no núcleo de 12, com e sem separador `.` |
+| R5 `g` como zero seletivo | 704 z-methods + 8,4 k AES | 88 seletores (primos base 0/1, ordinal primo, azuis/amarelas/coloridas, células 0/1 da matriz README em espiral e row-major, paridade, resíduos mod 2..9, primeiros/últimos k, metades, todos/nenhum) × 2 polaridades × faed/metades/reverso; melhor imprimível 0,49 |
+
+Padding válido nas varreduras AES: 2.486 em 624.408 e 2.277 em 569.370, ambos ≈ 1/251 = ruído.
+Com isso, das seis leituras do crítico restam apenas R4 (mapa símbolo→valor) e R6 (running key
+aperiódica), ambas em execução por agentes ao fim desta sessão.
