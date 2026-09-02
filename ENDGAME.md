@@ -1873,3 +1873,207 @@ combinação testada. O prêmio vem do ramo faed/BTCSEED (identificado), mas o p
 **informação externa** (o hint do criador que fixa alfabeto/keystream da 2ª camada) — nem a
 comunidade em ~6 anos, nem as campanhas multi-agente desta sessão, a encontraram. Parar de
 varrer; o desbloqueio é externo.
+
+## Sessão 2026-09-01 (continuação) — auditoria externa pós-commit e critério de retomada
+
+O termo **“desbloqueio externo”** acima precisava ser desambiguado, pois a sessão (c) já
+refutara duas versões fortes da hipótese: não existe texto de instrução perdido na página
+live/Wayback e não existe um “primeiro hint de 2019” diferente do material preservado. A
+conclusão correta é mais estreita: **todo o corpus histórico público conhecido foi esgotado**;
+somente um hint primário realmente novo do criador (ou um artefato primário novo e
+proveniente) pode fixar o parâmetro que falta.
+
+### Fontes verificadas nesta continuação
+
+- O export local `result.json` termina em **2026-07-08**. A mineração anterior já cobre as
+  427 mensagens atribuídas ao criador até esse corte; as últimas mensagens do grupo não
+  contêm novo post de Jrk/@SoWut. Logo, o único blind spot temporal concreto é conteúdo
+  publicado **depois de 2026-07-08**.
+- Busca pública atual por GSMG/SalPhaseIon/BTCSEED/“Regular Bitcoin Private key” não revelou
+  hint primário posterior ao export. Reddit, Bitcointalk e o repositório público principal
+  repetem material já arquivado ou alegações sem proveniência.
+- O repositório recente `jackdevs66/GSMG5_CDuality`, apresentado como “reproducible
+  solution”, **não é solução do prêmio nem traz a 2ª camada do FAED**. Ele somente reproduz
+  o ramo Cosmic já conhecido: as sete palavras, a passphrase `a795de11…` e o plaintext de
+  `sha256=4f7a1e4e…`. Não publica privkey do endereço `1GSMG`, não fecha o oráculo on-chain e
+  não acrescenta material primário. É confirmação independente do endpoint `cc`, nada além.
+
+### Regra operacional (evita reabrir sweeps mortos)
+
+**RETOMAR somente se** aparecer ao menos um destes sinais falsificáveis:
+
+1. mensagem primária de Jrk/@SoWut posterior a 2026-07-08;
+2. artefato original com proveniência verificável que altere `dbbi`, `faed` ou a instrução
+   ao redor deles;
+3. hipótese humana que nomeie explicitamente a cifra da 2ª camada **e** derive seu parâmetro
+   de uma pista ainda não testada.
+
+Repos, posts ou scripts que apenas reproduzam `a795de11…`, `4f7a1e4e…`, half/better_half,
+Chain4 ou os 35 blocos devem ser classificados como **duplicação do ramo Cosmic/beco**, não
+como progresso. Até um dos três sinais acima existir: **STOP — monitorar fonte primária, não
+varrer.**
+
+## Sessão 2026-09-01 (h) — `BTCSEED` tomado literalmente (5 hipóteses novas, 0 solve)
+
+Esta retomada satisfaz excepcionalmente o item 3 acima: em vez de variar novamente o Bifid,
+foram escritos antes do teste cinco significados concretos para o header `BTCSEED`, cada um
+com espaço finito e oráculo duro. Os controles positivos verificam as implementações; nenhum
+score de idioma foi aceito como solução.
+
+1. **Padrões Bitcoin (`solver/btcseed_standard_attack.py`).** `BTCSEED` foi interpretado como
+   a operação normativa BIP32 `HMAC-SHA512(key="Bitcoin seed", data=seed)`. O vetor BIP32 #1
+   bate byte a byte. Foram testados **109 materiais** naturais (FAED/BIF/REST, base-9/hex,
+   metades 285 intercaladas, subsequências primas e o canal B/C/D/E), **21.578** consultas de
+   privkey direta e **82.790** filhos em 85 caminhos comuns. As 104 posições primas zero-based
+   do BIF completo também foram preservadas cruas: `104=2×52`, portanto suas metades e canais
+   alternados entram como WIF/seed sem remapeamento. Dos **28** materiais com 51/52 caracteres,
+   **0 são WIF Base58Check válidos**. Resultado global: **0 hits**.
+2. **Dualidade de primo seguro (`solver/btcseed_duality_attack.py`).** A observação do Telegram
+   id 43442 foi confirmada: `len(BIF_REST)=563`, 563 é o 103º primo e, mais especificamente,
+   **`563=2×281+1`**, com 281 também primo. Remover o header separa deterministicamente
+   `rest[0::2]` em 282 símbolos base-25 e `rest[1::2]` em 281 símbolos `{B,C,D,E}`. Estes quatro
+   são exatamente o canto 2×2 do quadrado CANON, isto é, um dígito base-4; emparelhar os canais
+   dá base-100 sem chave livre. As duas ordens de coordenadas, duas posições do símbolo excedente,
+   base-100 direta/inteira e as operações geométricas `+/-/reflexão` produziram **52 textos** e
+   **70 streams binários únicos**, com **29.976** janelas de privkey: **0 AES/privkey hits** e
+   todos os scores textuais piores que o baseline.
+3. **Sete letras entrelaçadas (`solver/btcseed_intertwine_attack.py`).** A gramática autêntica
+   `XOR(SHA256(parte_i))` reproduz primeiro o controle Cosmic exato
+   `a795de117e472590…52e50735`. Aplicada às sete letras de `BTCSEED`, gera
+   `e0b6613e9db7370d2e45aa68b55e23b67fbbc6aa10d689804bf44f1e635b7c82`; não é a privkey do
+   prêmio e não abre SMALL/COSMIC em raw/hex. A forma minúscula diagnóstica também falha.
+4. **Bazeries (`solver/btcseed_bazeries_attack.py`).** O relato imediatamente posterior ao
+   achado (Telegram id 43274) dizia que o REST tinha “full match” com Bazeries no dCode; esta
+   era uma cifra nomeada e ainda não implementada no repo. O vetor público
+   `UNIVERSITY --900004--> QMHATRMGXS` valida a implementação. Chaves numéricas estritamente
+   ancoradas em `563`, `103`, `570` e `matrixsumlist=101`, com keyword tradicional,
+   `BTCSEED` ou `DBIFHCEG`, deram **16 candidatos**, **0 hits**; o melhor score foi −7,35,
+   muito pior que REST cru −5,59. O classificador comunitário era falso positivo.
+5. **Canal útil e título (`solver/btcseed_payload_attack.py`).** O canal base-25 de 282 símbolos
+   foi atacado por recuperação estatística Vigenère/Beaufort nos períodos 1–50,57,91,94,141:
+   **216 candidatos**, 0 oráculos. O score artificial −4,22 em período 141 usa só duas
+   observações por símbolo da chave e é sobreajuste; períodos sustentáveis não mostram inglês.
+   Como `SALPHASEION` é anagrama exato de `ALPHA NOESIS`, a lacuna “título como parâmetro da
+   2ª camada” também recebeu **72** testes diretos (`SALPHASEION`, `ALPHANOESIS`, `NOESIS` e
+   `SAL/PHASE/ION`, três direções, dois alfabetos, REST/canal). **0 hits**; melhor −7,38.
+
+Relatórios completos: `_work/btcseed_standard_attack.json`,
+`_work/btcseed_duality_attack.json`, `_work/btcseed_intertwine_attack.json`,
+`_work/btcseed_bazeries_attack.json` e `_work/btcseed_payload_attack.json`.
+
+**Veredito:** `BTCSEED` continua sendo sinal autêntico e o ramo do prêmio, mas não significa
+BIP32/WIF direto, as sete letras na gramática XOR, Bazeries, a fusão base-100 dos canais, nem
+Vigenère/Beaufort com o título. **0 solve.** O parâmetro inequívoco da segunda camada continua
+ausente do corpus público. STOP desta receita: não ampliar a enumeração sem novo hint primário
+ou uma cifra+parâmetro derivados antes do teste.
+
+---
+
+## Auditoria 2026-09-02 — a cadeia comunitária é MIRAGEM; o KDF real é EVP-SHA256; nenhum blob foi aberto
+
+Duas rodadas multi-agente (18 + 8 famílias concluídas, ~14 milhões de testes de oráculo duro,
+**0 hits**) reviraram as premissas deste arquivo. Três resultados invalidam trechos anteriores e
+devem ser lidos antes de qualquer trabalho novo.
+
+### 1. Chains 1→4 / `cc` / half / better_half / "35 blocos" são falsos positivos de padding
+
+Todos os quatro "decrypts" da cadeia (Chain1 79 B, Chain2 79 B, Cosmic `cc` 1327 B, Chain4 1151 B)
+terminam com padding `0x01`. Uma mensagem real teria pad = 1 em apenas 1 de 16 casos; quatro
+seguidas dão 1 em 65.536. Os plaintexts são de alta entropia, sem estrutura. A passphrase
+`a795de11…` que abre o Cosmic foi **construída** por XOR de SHA-256 de tokens, e com uma senha
+construída a chance de cair um padding válido é 1/256 por tentativa entre milhares. A seção
+"Cadeia GalloClaudio64 (Chains 1→4) — VERIFICADA até o payload final" descreve, portanto, ruído.
+
+### 2. O criador usa EVP_BytesToKey com SHA-256, não MD5
+
+Os blobs autênticos das fases 2, 3 e 3.2 foram reabertos localmente: cada um decifra **somente**
+com `EVP_BytesToKey`-SHA256 (openssl ≥ 1.1.0) e nunca com MD5. A cadeia comunitária usava MD5 —
+segunda evidência independente de que ela é miragem. Toda varredura futura deve usar SHA-256 como
+padrão.
+
+A família `kdf_variants` fechou o KDF em definitivo com 1,21 milhão de testes: PBKDF2-HMAC-SHA256
+(1.000 / 2.048 / 10.000 / 100.000 iterações), PBKDF2 com SHA-1 e SHA-512, `EVP_BytesToKey` com
+md5/sha1/sha224/sha384/sha512/ripemd160, chave crua `-K` em nove variantes de IV, e AES-128/192,
+todos negativos, com nove controles positivos gerados pelo openssl real reabrindo exatamente na
+derivação esperada. O argumento decisivo é estrutural: os três blobs carregam o cabeçalho
+`Salted__` seguido de 8 bytes de salt, e `openssl enc -K` **não escreve esse cabeçalho**. Logo o
+criador usou `-pass`/`-k` com EVP-SHA256. **O desconhecido é a senha, não o KDF.**
+
+### 3. A "matriz de 102 uns" é artefato de amostragem
+
+A leitura de que a imagem original teria 102 células pretas, com a célula (7,6) no índice espiral
+193 (primo), está errada. Medindo a fração de pixels escuros por célula na imagem
+`_work/archive/follow_the_white_rabbit.png` (350×350, célula de 25 px), 189 das 196 células dão
+exatamente 0,00 ou 1,00; as sete restantes, todas no centro, dão valores intermediários:
+
+| célula | (6,6) | (6,7) | (7,6) | (7,7) | (7,8) | (7,9) | (8,6) |
+|---|---|---|---|---|---|---|---|
+| fração preta | 0,16 | 0,36 | 0,24 | 0,12 | 0,36 | 0,16 | 0,08 |
+
+O centro contém um **pictograma desenhado em resolução de 5 px** (uma mão apontando / cursor) que
+atravessa a grade de 25 px. Não é dado binário de célula. A matriz de bits real é a do README, com
+**101 uns**. Descarte todo raciocínio construído sobre "102 uns", "espiral 193 é primo", "cauda
+central 0100" e "91 zeros nos índices 0..191". O bitmap do pictograma (270 bits) foi testado como
+bits, bytes, decimal, SHA-256 e chave privada: negativo.
+
+### 4. O TAIL32 é real, nunca foi aberto, e agora está esgotado no vocabulário conhecido
+
+O bloco AES no fim da fase 3.2 (80 B de ciphertext) nunca entrou no `oracles.aes_open`, que só
+tinha SMALL e COSMIC. O criador confirmou em 2023-06-10 que ele é real e que não é o hint da
+SalPhaseIon. A família `tail32_history` regerou 466.310 senhas-base — 308.031 de todos os scripts
+históricos em `solver/` mais 158.279 da gramática da fase 3.2 — em três formas cada, contra o
+TAIL32 com SHA-256 e MD5, mais 933 mil verificações de chave privada. Os paddings válidos ficaram
+exatamente na taxa de ruído de 1/256, sem nenhum plaintext com 60% de bytes imprimíveis. Se o
+TAIL32 usa a gramática `sha256(concatenação)`, suas palavras não estão no vocabulário da
+comunidade nem nos tokens da fase 3.2.
+
+### 5. O que a estatística de `faed` já exclui
+
+`faed` (570 símbolos a–i) comporta-se como fonte independente e identicamente distribuída, com
+unigrama enviesado (g e i somam 32%, a forma típica de escapes de checkerboard) mas **sem memória
+serial**. Duas famílias independentes confirmaram, cada uma com controle positivo que recupera o
+sinal plantado:
+
+- `checkerboard_keystream` construiu 18.426 streams re-chaveados (41 keystreams × rotações ×
+  soma/subtração/Beaufort/autokey) e filtrou por entropia condicional e índice de coincidência
+  contra embaralhados. O maior desvio real foi 5,57 sigmas, dentro da cauda do modelo nulo; a chave
+  correta no controle produz −31, e mesmo uma rotação errada da chave certa deixa −5,5. Camada
+  aditiva com chave de três ou mais resíduos está refutada.
+- `permutation_search` testou 3.381 permutações estruturadas de `faed` e 2.900 de `dbbi` (primos,
+  índices coloridos, resíduos módulo k, 16 grades com 24 leituras cada, metades, transposição
+  colunar com 50 chaves × larguras 5 a 40, todas com inversas). O maior desvio foi 3,67 sigmas,
+  igual ao máximo esperado de 3.381 amostras normais. O controle recupera a permutação inversa
+  exata do checkerboard da fase 3.2.2. O hill-climb não tem poder discriminativo: dá 76,8 em `faed`
+  e 75,3 em `faed` embaralhado.
+
+Corolário: checkerboard e VIC diretos **e permutados** sobre `faed` estão excluídos, com poder
+estatístico quatro vezes maior que o do controle da fase 3.2.2. O `BTCSEED` do Bifid-570 depende
+apenas de `faed[0:4]` e `faed[285:289]` e deve ser tratado como coincidência provável, não como
+ramo do prêmio.
+
+### 6. Outras famílias fechadas nestas duas rodadas
+
+`hashthetext`; `brainwallet` (3.246 frases × 10 formas); aritmética das metades; checkerboard com
+60 alfabetos de frase × 72 escapes; Bifid 5×5 com 120 alfabetos e todos os períodos; Bifid 3×3 com
+6 quadrados; Polybius 9×9/27/T9; a matriz como keystream, transposição e senha; 27 listas de somas
+geométricas do `dbbi`; z-method com primos zerados; estrutura dos blobs; 99 keystreams × 7 modos;
+765 leituras geométricas do `faed` e 136 do `dbbi`; extração de seed do Bifid; mineração do
+Telegram; `dbbi` preenchendo as células-zero da espiral; bits em posições primas e canais
+R/G/B/infravermelho/XOR da imagem; hash do próprio texto base64 dos blobs e formas de entrada de
+shell (incluindo `sha256hex` + newline e UTF-16-LE); e a tabela da fase 2 na gramática da fase 3
+(2.304 sequências × 5 formas, 80 alfabetos keyed, 1.920 keystreams).
+
+Sobre a tabela `# X 2 S H 4 Y 0 Q B 15 #`: S = 32 (klingon `cha' + vagh × jav`), B = −16, H = −42
+(o criador respondeu "42" em 2023-01-25). Para Q as leituras mais defensáveis são *phishing/phish*
+(swordfish sem *sword*, grafia hacker `ph`, "extend" = `+ing`) e *Twofish* → 2 (extensão do
+Blowfish); 82 seria o ASCII de `R`, casando com "worst gear" = ré. "The I and W are below" segue
+sem leitura firme.
+
+### 7. Onde a fronteira está agora
+
+Decodificar `dbbi` (91 símbolos) ou `faed` (570) até uma senha, e abrir SMALL (80 B), COSMIC
+(1328 B) ou TAIL32 (80 B) com EVP-SHA256. Nenhum blob do endgame jamais foi aberto. As leituras
+principiadas que sobreviveram a tudo acima estão no briefing da campanha (`BRIEFING.md` no
+scratchpad da sessão): seleção de bits por índice em vez de permutação, o resíduo fraco de índice
+de coincidência de dígrafos, chaves aditivas de dois ou três resíduos, e a tabela da fase 2 lida
+como bytes, teclado ou programa de transposição.
