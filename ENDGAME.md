@@ -2219,3 +2219,9 @@ offset é o índice remissivo, e os decodes (checkerboard −6,5, Bifid −7,2, 
 são ruído. Lição: z de gate com 30 embaralhamentos infla extremos; confirmar sempre com ≥1.000.
 Com isso, das seis leituras do crítico, **as seis estão fechadas**; o lead "livro Cosmic Duality"
 como running key está negativo para o texto OCR (resta apenas a gravura da p. 39 como imagem).
+
+**Adendo — parágrafo "Raising the stakes…" em variantes (inline, 6.360 oráculos, 0):** 16 fatias
+do parágrafo (inteiro, cada sentença, cada segmento entre vírgulas, "fubcd-king", "oracle-queen",
+"the first one seen"…) × 31 variantes de whitespace/entidade HTML/quebra de linha/pontuação/caixa/
+tags × 6 formas (crua, sha256hex, SHA256HEX, sha256², digest cru, UTF-16-LE), mais concatenações
+com a gramática da 3.2 e os tokens do endgame. Paddings válidos 19 em ~4.800 = ruído.
