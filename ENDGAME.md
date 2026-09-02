@@ -2010,8 +2010,8 @@ exatamente 0,00 ou 1,00; as sete restantes, todas no centro, dão valores interm
 |---|---|---|---|---|---|---|---|
 | fração preta | 0,16 | 0,36 | 0,24 | 0,12 | 0,36 | 0,16 | 0,08 |
 
-O centro contém um **pictograma desenhado em resolução de 5 px** (uma mão apontando / cursor) que
-atravessa a grade de 25 px. Não é dado binário de célula. A matriz de bits real é a do README, com
+O centro contém o **desenho de um coelho branco em resolução de 5 px** (orelhas, olho, corpo, cauda)
+que atravessa a grade de 25 px — o "white rabbit" do título da imagem. Não é dado binário de célula. A matriz de bits real é a do README, com
 **101 uns**. Descarte todo raciocínio construído sobre "102 uns", "espiral 193 é primo", "cauda
 central 0100" e "91 zeros nos índices 0..191". O bitmap do pictograma (270 bits) foi testado como
 bits, bytes, decimal, SHA-256 e chave privada: negativo.
