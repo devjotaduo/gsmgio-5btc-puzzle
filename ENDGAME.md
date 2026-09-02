@@ -2188,3 +2188,34 @@ decifrar o blob inteiro.
 Padding válido nas varreduras AES: 2.486 em 624.408 e 2.277 em 569.370, ambos ≈ 1/251 = ruído.
 Com isso, das seis leituras do crítico restam apenas R4 (mapa símbolo→valor) e R6 (running key
 aperiódica), ambas em execução por agentes ao fim desta sessão.
+
+**Adendo — R4 e R6 executados por agentes (rodada 3, 0 hits):**
+
+- R4 `symbol_map_variants` (1.647.689 testes): 14 mapas símbolo→valor (CANON, 1ª ocorrência do
+  `faed`, frequência crescente/decrescente, alfabeto keyed da 3.2, reverso, cada um em 1..9 e 0..8,
+  mais `g`=0 e `g`=7 globais) × 9 fontes × 57 seleções × 26 materializações, com janelas de
+  32/64/77/78/80/81 símbolos em todo offset: 890 k checagens de privkey e 757 k de padding, tudo no
+  piso 1/256. Três controles plantados recuperados. Se `faed`/`dbbi` codificam a chave, não é por
+  mapa global fixo símbolo→dígito.
+- R6 `running_key_gate` (18.972 streams reais): 51 running keys ≥ 570 dígitos derivadas do corpus
+  (Arquiteto, plaintexts das fases 2/3/3.2, `dbbi` repetido, sha256 dos tokens, URL, π/e/√2,
+  matriz, binários da página, `faed` como autokey) × 4 configurações × 31 alinhamentos × 3 modos,
+  com gate de entropia condicional |z| ≥ 10. O controle (checkerboard + π) passa em rank 1 com
+  z=−30,5 e 0 falsos positivos na varredura cega; `faed` real só aprova o artefato self-simétrico do
+  lag 285 e, fora dele, fica em 7,7 = cauda do nulo (5,7–5,9). A última camada aditiva aberta está
+  refutada para chaves ancoradas no corpus; restam apenas chaves correntes externas.
+
+Total acumulado da campanha 2026-09-02: **~54 M testes de oráculo duro, 0 hits.**
+
+**Adendo — running key EXTERNA: o texto do livro *Cosmic Duality* (inline, 6,4 M streams, 0):**
+o OCR completo do livro (`_work/cosmic_duality.txt`, 265 mil letras) como chave corrente em
+a1z26 e a0z25, todos os 265.156 alinhamentos × 4 configurações × 3 modos, com pré-filtro
+vetorizado de entropia condicional e gate completo nos 150 menores de cada combinação; o mesmo
+pipeline sobre um `faed` embaralhado como nulo. Controle: checkerboard 3.2.2 + chave do livro no
+offset 12345 dá z=−24,9 na chave certa e −1,4 deslocada de 1. Resultado: um único stream real
+passou o gate de 30 embaralhamentos (z=−10,5, offset 252770, `m10i0`/Beaufort), mas com 3.000
+embaralhamentos o z estabiliza em **−5,4**, o nulo casado chega a −7,8, o trecho do livro nesse
+offset é o índice remissivo, e os decodes (checkerboard −6,5, Bifid −7,2, z-method 38% imprimível)
+são ruído. Lição: z de gate com 30 embaralhamentos infla extremos; confirmar sempre com ≥1.000.
+Com isso, das seis leituras do crítico, **as seis estão fechadas**; o lead "livro Cosmic Duality"
+como running key está negativo para o texto OCR (resta apenas a gravura da p. 39 como imagem).
