@@ -2468,3 +2468,11 @@ see what's in front of your eyes you need to be looking forward"): 1.064 textos 
 1–3 tokens do roadmap/página/livro contendo `lookingforward`, em 3 caixas e 3 separadores × 4
 formas (crua, sha256hex, SHA256HEX, digest) × 3 blobs × 2 KDF = 25.536 AES; paddings 105 contra
 100 esperados; privkey por sha256(frase): 0. **Negativo.**
+
+Números do puzzle como **páginas** do scan real de 1969 (archive.org, `page_numbers.json` +
+`djvu.xml`, 92 de ~165 páginas mapeadas; `_work/looking_forward_pages_1969.json`): páginas 7, 9,
+14, 15, 16, 23, 24, 39, 42, 163 (101, 140, 193, 243, 285 fora do mapeamento ou do livro) × {página
+inteira, 1ª/última sentença, 1ª/última palavra, 5 primeiras/últimas, 1ª+última} × 4 formas × 3 blobs
+× 2 KDF = 1.920 AES, paddings 8 = esperado, privkey 0. **Negativo.** Com isto o livro está fechado
+em todas as leituras públicas: texto (senha, running key, cifra de livro), gravuras, palavra-título
+e páginas.
