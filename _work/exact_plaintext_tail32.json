@@ -1,0 +1,9 @@
+{
+ "family": "exact_plaintext_tail32",
+ "n_materials": 31,
+ "n_forms": 173,
+ "n_aes": 1038,
+ "pads": 2,
+ "expected": 4.0546875,
+ "hard": []
+}

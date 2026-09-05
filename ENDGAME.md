@@ -2505,3 +2505,41 @@ fase 3.2 `250f37…`/`jacquefresco…`, e as das fases 2 e 3). 255 textos = as d
 todos os pares concatenados nas duas ordens e cada um com a própria linha e com `ans too` →
 1.501 formas (crua, caixa alta, sha256hex, SHA256HEX, digest cru, sha256²) × 3 blobs × EVP-SHA256
 e MD5 = **9.006 AES**; paddings 32 contra 35,2 esperados; privkey 0. **Negativo.**
+
+## Sessão 2026-09-05 (c) — RESOLVIDO: a verificação Wayback que estava em aberto
+
+A rodada 3 fechou `raising_variants` com a ressalva *"sem o snapshot vivo do Wayback, que só um
+humano pode conferir"*. Essa pendência agora está **resolvida por programa**, em duas partes.
+
+**(1) A página do endgame, cinco snapshots, byte a byte.** A CDX API dá 5 capturas de
+`gsmg.io/89727c…` com digests distintos: 2023-06-01, 2023-11-27, 2024-11-23, 2025-10-31 e
+2026-04-05 (4.556, 4.556, 4.588, 5.092 e 5.092 bytes após descomprimir o gzip). Diferenças:
+
+- **2023-06 → 2023-11: `<h1> SalPhaseIon </H1>` virou `<H1> SalPhaseIon </H1>`.** O criador
+  **editou a página** nessa janela, normalizando a tag de abertura para casar com o fechamento.
+  Corrige o mapa: a "assimetria única `<h1>…</H1>`" registrada na rodada 1 existiu só até 2023 e
+  foi removida por ele; `<h1> Cosmic Duality </h1>` continua todo minúsculo. É uma faxina, não um
+  hint, mas é o único toque documentado do criador no HTML.
+- 2023-11 → 2024-11: só indentação (minificação do servidor ligando/desligando).
+- 2024 → 2025 → 2026: inserção e bump de versão do beacon do Cloudflare.
+
+**Conteúdo idêntico nas cinco.** Verificado contra o repositório: `dbbi` e `faed` presentes e
+iguais byte a byte, blob SMALL presente, binários de `matrixsumlist` e `enter` presentes, `shabef`
+presente. Fora das duas `<textarea>` a página tem **apenas** doctype, head com `<title>GSMG
+Puzzle</title>`, quatro metas, um `<style>` de `font-family: arial`, os dois `<h1>` e `</body>`.
+Sem comentários HTML, sem atributos extras, sem terceiro campo. **O README é fiel; a página não
+esconde nada.** Cópia em `_work/salphaseion_wayback_20241123.html`.
+
+**(2) Os plaintexts exatos, em vez de whitespace adivinhado.** O parágrafo "Raising the stakes" e o
+blob TAIL32 não vivem numa página: são o texto decifrado da fase 3.2. Decifrando na hora (fase 2 =
+648 B, sha256 `e2f9dd65…`; fase 3.2 = 2.422 B, sha256 `b82afeb8…`, salvo em
+`_work/phase32_plaintext.bin`) obtêm-se os **CRLF verdadeiros**. Os blocos são separados por
+`\r\n\r\n` e o plaintext termina no blob, sem newline final. `solver/exact_plaintext_tail32_attack.py`
+usa esse material verbatim — texto inteiro, cada bloco, cada linha, cada run ASCII ≥25, prefixos e
+sufixos cumulativos e o encadeamento entre fases — em 173 formas × 3 blobs × 2 KDF = **1.038 AES**;
+paddings 2 contra 4,1 esperados, privkey 0. **Negativo**, mas agora sem a ressalva de whitespace.
+
+**Nota interpretativa.** "on a sad board but as wide as the first one seen" foi testado como
+parâmetro de grade: nenhum comprimento relevante (149 dígitos, 91 do M91, 80 do CT, 570 do faed)
+é divisível por 14. A frase já está consumida pelo checkerboard conhecido, que decodifica os 149
+dígitos para o texto de 91 letras. Não sobra parâmetro nela.
