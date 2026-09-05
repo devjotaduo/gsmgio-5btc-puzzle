@@ -2388,3 +2388,23 @@ Ibiza/Roterdã, Blueprint/NAD, passaporte do Neo), já minerado em `brainwallet`
 hits; identidade real do criador ou da parceira **não** deve ser perseguida. (2) "Couple hours"
 impõe um teto de complexidade: qualquer nova hipótese deve ser executável em minutos com CyberChef/
 dcode/openssl.
+
+### Adendo — cadeia "23 / 16 / 7 / &8 / Hb_m!%D" (sessão Codex, 2026-09-04)
+
+Origem: não é do Telegram, é de uma sessão do Codex Desktop. Cadeia: `dbbi` nas posições primas
+(base 1) filtrado pelos LSB da URL → inteiro em base 9 → `17 6c386f4f4b` (1º byte 23); `faed` nas
+posições primas filtrado pelos bits de `matrixsumlist` → base 9 → `10 eb5a8d…842c` (1º byte 16);
+5 + 18 = 23 bytes; `l8oOK` lido como "look 8"; `byte & 8` separa 16 + 7 bytes; remover o bit 3 dos
+7 dá `Hb_m!%D`. Reproduzido bit a bit em `solver/tg2026_codex_hbm_null.py`.
+
+Nulo construído sobre o **próprio espaço de variantes do Codex** (24 fluxos de dbbi × 80 de faed):
+4 pares têm 1º bytes em {7,16,23}; 394 pares têm 23 bytes; 94 admitem algum bit que corta 16/7; **15
+desses produzem 7 bytes todos imprimíveis** após remover o bit — `Hb_m!%D` é um entre ≥15 artefatos
+equivalentes. P(7 valores de 7 bits todos imprimíveis) = 12%. Cada elo tem p de dezenas de por cento;
+o produto é o que se espera de uma busca com ~2 mil pares e regras escolhidas a posteriori.
+
+Oráculos: `Hb_m!%D` + 13 derivados × 3 blobs (EVP-SHA256 e MD5) = 42 AES, 0 paddings; privkey 0.
+O próprio Codex reportou BIP38 (comum e EC-multiply) nos 35 blocos e o bloco de 16 bytes como
+OpenSSL: 0. Os 35 blocos são a cadeia-miragem (pad 0x01, EVP-MD5) — ver "A fronteira real".
+**Fechado.** Aviso operacional: Codex e Claude controlando o mesmo desktop ao mesmo tempo disputam
+a janela do Telegram; rodar um de cada vez.
