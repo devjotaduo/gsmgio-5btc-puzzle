@@ -2543,3 +2543,40 @@ paddings 2 contra 4,1 esperados, privkey 0. **Negativo**, mas agora sem a ressal
 parâmetro de grade: nenhum comprimento relevante (149 dígitos, 91 do M91, 80 do CT, 570 do faed)
 é divisível por 14. A frase já está consumida pelo checkerboard conhecido, que decodifica os 149
 dígitos para o texto de 91 letras. Não sobra parâmetro nela.
+
+## Sessão 2026-09-05 (d) — varredura completa do domínio no Wayback: nenhuma página inédita
+
+Varredura da CDX API em `matchType=domain` sobre `gsmg.io` (618 capturas, 489 com status 200;
+lista bruta em `_work/wayback_gsmg_domain_cdx.txt`). Objetivo: descobrir se existe alguma página do
+puzzle que nunca entrou no README.
+
+**Resultado: não existe.** As únicas páginas de puzzle são as cinco já documentadas (`/puzzle`,
+`/theseedisplanted`, `/phase1verification`, `/choiceisanillusion…iwroteitmyself`, `/89727c…`).
+
+O que parecia promissor e foi verificado um a um:
+
+- **`alpha.gsmg.io/89727c…`** (2026-05-18, 4.843 B) — é um **espelho vivo** da página do endgame.
+  Baixado e comparado: **idêntico** ao `gsmg.io` byte a byte, exceto pelo `<script>` do beacon do
+  Cloudflare. Fato útil: quando o criador diz "the puzzle is still valid" (2026-05-28), a página
+  segue servida — em `alpha.gsmg.io`, não no domínio raiz.
+- **`gsmg.io/4f7a1e4e…`** — esse hash é o SHA-256 do plaintext "Cosmic" da cadeia comunitária, e a
+  URL responde 200. Parecia poder reabrir a questão da miragem. **Não reabre**: o corpo de 1.224 B
+  é a página de *fingerprinting* do estacionamento (`FingerprintJS` + redirect com `tr_uuid`/`fp`).
+  A cadeia histórica continua refutada.
+- **`gsmg.io/53616c7465645f5f74c974e3…`** — `53616c7465645f5f` é "Salted__" em hex, parecia um blob
+  AES publicado como URL. É sondagem de algum solver: o servidor devolve a SPA.
+- Dezenas de caminhos temáticos (`/salphaseion`, `/merovingian`, `/TheArchitectChoice`,
+  `/whiterose`, `/whiteroseredqueen`, `/final_stage`, `/thepuzzlestartshere`, `/followthewhiterabbit`,
+  `/phase1`…`/phase3_2_2_2`, `/hopeisthequintessentialhumandelusion…`, `/youme{,i,is,iz}andself`,
+  `/eps3.4_runtime-error.r00`, `/digitallogiccryptography`, 10 URLs com cara de sha256, e as
+  variantes de `banking-war`/`crypto-gic`/`dig-i`/`lock-io`/`n-you`/`open-lock-ning`) — **todas
+  falso-200**. Verificado em `/whiterose`: devolve a aplicação de trading da GSMG (36.627 B, título
+  `GSMG`), que responde 200 em qualquer rota por roteamento no cliente. O tamanho comprimido
+  uniforme de ~12 kB é a assinatura desse falso-200.
+- `beta.`, `help.`, `stats.`, `slack-invite.`, `wishes.` — produto/documentação da plataforma de
+  trading, sem relação com o puzzle.
+
+**Conclusão.** O arquivo público do domínio está esgotado e verificado: nenhuma página, nenhum
+comentário HTML, nenhum campo escondido além do que o README já traz. Somado às sessões (c) e (d),
+as quatro fontes públicas — página, livro apontado pelo "Bingo", Telegram e plaintexts das fases —
+estão todas conferidas na origem. O que falta ao endgame não está em lugar nenhum que se possa ler.
