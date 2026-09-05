@@ -2449,3 +2449,22 @@ ocorrências de *yang*, *salvation*, *matrix*, *rabbit*, *architect*; *cosmic* a
 *Looking Forward* é mesmo a resposta ao "in front of your eyes", o elo que falta não é o texto do
 livro, mas algo específico dentro dele (uma ilustração de Fresco, uma página nomeada por um hint)
 que nenhuma fonte pública identifica.
+
+### Adendo — as ilustrações de *Looking Forward* e "lookingforward" como palavra
+
+O PDF (Edimburgo) contém **16 imagens únicas**, todas referenciadas como recurso compartilhado
+por todas as 121 páginas; é texto recomposto, sem numeração de página impressa (0 números
+detectados), logo o teste "número do puzzle = página do livro" (101, 163, 193, 42, 140…) não é
+possível com esta fonte. Folha de contato e as duas gravuras relevantes em
+`_work/looking_forward_img/`. Leitura com olhos de puzzle: **u04** é uma cúpula de projeção com uma
+grade de quadrados claros/escuros e duas pessoas olhando para cima — tematicamente "a matriz em
+frente aos seus olhos", mas é um desenho de 1969 em scan de 455×292 px, sem grade regular
+extraível; **u11** é um veículo com o número **243** (243 = 3⁵; 285 − 243 = 42 é numerologia);
+**u15** são três engrenagens "VALUES / METHOD OF THINKING / TECHNOLOGY". Nenhuma contém dado do
+puzzle, e esteganografia neste PDF seria do digitalizador, não do criador — não foi rodada.
+
+"lookingforward" como **palavra** (o "Bingo" pode endossar só o trocadilho de Denis Golovkin, "to
+see what's in front of your eyes you need to be looking forward"): 1.064 textos = permutações de
+1–3 tokens do roadmap/página/livro contendo `lookingforward`, em 3 caixas e 3 separadores × 4
+formas (crua, sha256hex, SHA256HEX, digest) × 3 blobs × 2 KDF = 25.536 AES; paddings 105 contra
+100 esperados; privkey por sha256(frase): 0. **Negativo.**
