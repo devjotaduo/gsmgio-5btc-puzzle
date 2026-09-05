@@ -2476,3 +2476,32 @@ inteira, 1ª/última sentença, 1ª/última palavra, 5 primeiras/últimas, 1ª+�
 × 2 KDF = 1.920 AES, paddings 8 = esperado, privkey 0. **Negativo.** Com isto o livro está fechado
 em todas as leituras públicas: texto (senha, running key, cifra de livro), gravuras, palavra-título
 e páginas.
+
+## Sessão 2026-09-05 (b) — roadmap `yellowblueprimes → matrixsumlist` e leituras literais da linha do blob
+
+**`roadmap_yb_matrixsum`** (`solver/roadmap_yb_matrixsum_attack.py`). O roadmap do criador é
+sequencial e os dois primeiros passos têm um encaixe numérico exato: as 24 células coloridas
+(índices espirais 7,15,…,191) são exatamente 24 = quantidade de primos < 91 = `len(dbbi)`, e a
+ordem espiral `BBBBYBBBYYBBBBYBBYYBYYBY` marca cada primo como azul (15) ou amarelo (9) — sendo
+15 a largura da grade `faed` 15×38 e 9 o tamanho do alfabeto.
+
+Primeiro um teste sharp: `dbbi` nas 9 posições primas amarelas seria uma **permutação de a–i**?
+Base 0 dá `ebedggdfb` (5 símbolos distintos), base 1 dá `bhgfceeba` (7 distintos) — **não**. A
+chance ao acaso seria 0,00022, então o negativo é informativo: a camada cor→substituição não
+existe nessa forma (soma-se ao já sabido de que azul/amarelo não dão permutação de coluna única).
+
+Depois o pipeline completo: azul/amarelo/todos como **chave de transposição colunar** (ordem
+estável, letras repetidas permitidas) sobre `faed` 15×38 e 38×15, direta e inversa, leitura por
+linha e por coluna, base 0/1, direto e reverso; sobre cada saída o passo 2 `matrixsumlist` como
+soma das listas de linhas/colunas mod 9, passo 101 e seleção mod 101. São 112 candidatos.
+**Nulo casado: 300 reatribuições aleatórias de 15 azuis entre os 24 primos, mesmo pipeline** —
+média −5,740, sd 0,102, máx −5,415; real −5,80 → **z = −0,59, p = 0,693**. Oráculos: 1.776 AES
+(fast-padding, controle abre a fase 2), 3 paddings contra 6,9 esperados, privkey 0. **Fechado.**
+
+**`first_hint_literal`** (inline). A linha `shabef our first hint is your last command` lida ao pé
+da letra: "our first hint" = o primeiro hint do puzzle (a matriz → `gsmg.io/theseedisplanted`, e o
+endereço-prêmio/HASHTHETEXT) e "your last command" = o último `openssl` que você rodou (senha da
+fase 3.2 `250f37…`/`jacquefresco…`, e as das fases 2 e 3). 255 textos = as duas listas isoladas,
+todos os pares concatenados nas duas ordens e cada um com a própria linha e com `ans too` →
+1.501 formas (crua, caixa alta, sha256hex, SHA256HEX, digest cru, sha256²) × 3 blobs × EVP-SHA256
+e MD5 = **9.006 AES**; paddings 32 contra 35,2 esperados; privkey 0. **Negativo.**
