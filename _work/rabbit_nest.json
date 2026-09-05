@@ -1,0 +1,26 @@
+{
+ "family": "rabbit_nest",
+ "counts": {
+  "172": 4,
+  "184": 2,
+  "187": 9,
+  "192": 4,
+  "193": 6,
+  "194": 3,
+  "195": 9
+ },
+ "orders": {
+  "spiral": "4294639",
+  "spiral_rev": "9364924",
+  "rowmajor": "4963942",
+  "rowmajor_rev": "2493694",
+  "nest": "4639",
+  "nest_rev": "9364",
+  "nest_rowmaj": "4963"
+ },
+ "null_p_all_1to9": 0.8234,
+ "n_materials": 50,
+ "n_forms": 200,
+ "pads": 6,
+ "hard": []
+}

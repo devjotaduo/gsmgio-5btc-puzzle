@@ -1,0 +1,542 @@
+[
+ {
+  "printable": 1.0,
+  "matrix": "README",
+  "traversal": "spiral(0, 0)ccwv",
+  "inv": false,
+  "msb": true,
+  "text": "gsmg.io/theseedisplanted",
+  "tail": "0000"
+ },
+ {
+  "printable": 1.0,
+  "matrix": "IMG",
+  "traversal": "spiral(0, 0)ccwv",
+  "inv": false,
+  "msb": true,
+  "text": "gsmg.io/theseedisplanted",
+  "tail": "0100"
+ },
+ {
+  "printable": 0.75,
+  "matrix": "README",
+  "traversal": "spiral(13, 13)ccwv",
+  "inv": true,
+  "msb": false,
+  "text": "\u00c6bZf\u00c4$\u00a5g\u00c5\u00c0BtvZde%\u00e7M|t&fW",
+  "tail": "1111"
+ },
+ {
+  "printable": 0.75,
+  "matrix": "IMG",
+  "traversal": "spiral(13, 13)ccwv",
+  "inv": true,
+  "msb": false,
+  "text": "\u00c6bZf\u00c4$\u00a5g\u00c5\u00c0BtvZde%\u00e7M|t&fW",
+  "tail": "1110"
+ },
+ {
+  "printable": 0.6666666666666666,
+  "matrix": "README",
+  "traversal": "spiral(0, 0)ccwh",
+  "inv": false,
+  "msb": true,
+  "text": "4\u00b3\u00a75\u00b6w>u0\u00b1w\u00a7t\u00b15541\u00b0v1s\u00b15",
+  "tail": "0000"
+ },
+ {
+  "printable": 0.6666666666666666,
+  "matrix": "IMG",
+  "traversal": "spiral(0, 0)ccwh",
+  "inv": false,
+  "msb": true,
+  "text": "4\u00b3\u00a75\u00b6w>u0\u00b1w\u00a7t\u00b15541\u00b0v1s\u00b15",
+  "tail": "0001"
+ },
+ {
+  "printable": 0.625,
+  "matrix": "README",
+  "traversal": "spiral(13, 0)ccwv",
+  "inv": true,
+  "msb": true,
+  "text": "\u00c4fZb\u00c6R@\u00b01Y\u00e9\u00d1VE\u00a7ea7\u009c\u009f&te\u00d9",
+  "tail": "1111"
+ },
+ {
+  "printable": 0.625,
+  "matrix": "README",
+  "traversal": "spiral(13, 13)ccwv",
+  "inv": true,
+  "msb": true,
+  "text": "cFZf#$\u00a5\u00e6\u00a3\u0003B.nZ&\u00a6\u00a4\u00e7\u00b2>.df\u00ea",
+  "tail": "1111"
+ },
+ {
+  "printable": 0.625,
+  "matrix": "IMG",
+  "traversal": "spiral(13, 0)ccwv",
+  "inv": true,
+  "msb": true,
+  "text": "\u00c4fZb\u00c6R@\u00b01Y\u00e9\u00d1VE\u00a7ea7\u009c\u009f&te\u00d9",
+  "tail": "0111"
+ },
+ {
+  "printable": 0.625,
+  "matrix": "IMG",
+  "traversal": "spiral(13, 13)ccwv",
+  "inv": true,
+  "msb": true,
+  "text": "cFZf#$\u00a5\u00e6\u00a3\u0003B.nZ&\u00a6\u00a4\u00e7\u00b2>.df\u00ea",
+  "tail": "1110"
+ },
+ {
+  "printable": 0.5833333333333334,
+  "matrix": "README",
+  "traversal": "spiral(0, 13)ccwv",
+  "inv": false,
+  "msb": true,
+  "text": "t\u00e6\u00b6\u00ce\u00e6ii\u0085\u008b\u00bd?:bjjn\u0098\u00d8;!.vi\u00a8",
+  "tail": "0000"
+ },
+ {
+  "printable": 0.5833333333333334,
+  "matrix": "README",
+  "traversal": "spiral(13, 0)ccwh",
+  "inv": true,
+  "msb": true,
+  "text": "\u0092S\u001a2\u00d31\u0014\\\u00bc\u00d4`h57-\u0013W\u00c9\u00cfd1s$\u00dd",
+  "tail": "1111"
+ },
+ {
+  "printable": 0.5833333333333334,
+  "matrix": "README",
+  "traversal": "spiral(13, 13)ccwh",
+  "inv": false,
+  "msb": false,
+  "text": "k\u009b;\u00b34\u00973\u00ba\u0097\u009f+C++\u00bb42\u00b8\tcs3\u00ba\"",
+  "tail": "0000"
+ },
+ {
+  "printable": 0.5833333333333334,
+  "matrix": "README",
+  "traversal": "spiral(13, 13)ccwh",
+  "inv": true,
+  "msb": true,
+  "text": ")&#2\u00d3\u00163\u00a2\u0016\u0006+=++\"\u00d3\u00b3\u00e2o913\u00a2\u00bb",
+  "tail": "1111"
+ },
+ {
+  "printable": 0.5833333333333334,
+  "matrix": "README",
+  "traversal": "rowsR",
+  "inv": true,
+  "msb": true,
+  "text": ")&t\\\u00ac\t\u00f4s\u0001\u0004~\u00fe=\u00c6;\u009as\u0094z[D(\u00c3-",
+  "tail": "0011"
+ },
+ {
+  "printable": 0.5833333333333334,
+  "matrix": "README",
+  "traversal": "diagR",
+  "inv": true,
+  "msb": true,
+  "text": "4\u00b0\u00b3x\u00b70\u008bw\u000e\u00a9_Pj\u00d3\u00cc+\rr3\\qV\u0015`",
+  "tail": "0011"
+ },
+ {
+  "printable": 0.5833333333333334,
+  "matrix": "IMG",
+  "traversal": "spiral(0, 13)ccwv",
+  "inv": false,
+  "msb": true,
+  "text": "t\u00e6\u00b6\u00ce\u00e6ii\u0085\u008b\u00bd?:bjjn\u0098\u00d8;!.vi\u00a8",
+  "tail": "0010"
+ },
+ {
+  "printable": 0.5833333333333334,
+  "matrix": "IMG",
+  "traversal": "spiral(13, 0)ccwh",
+  "inv": true,
+  "msb": true,
+  "text": "\u0092S\u001a2\u00d31\u0014\\\u00bc\u00d4`h57-\u0013W\u00c9\u00cfd1s$\u00dd",
+  "tail": "0111"
+ },
+ {
+  "printable": 0.5833333333333334,
+  "matrix": "IMG",
+  "traversal": "spiral(13, 13)ccwh",
+  "inv": false,
+  "msb": false,
+  "text": "k\u009b;\u00b34\u00973\u00ba\u0097\u009f+C++\u00bb42\u00b8\tcs3\u00ba\"",
+  "tail": "0100"
+ },
+ {
+  "printable": 0.5833333333333334,
+  "matrix": "IMG",
+  "traversal": "spiral(13, 13)ccwh",
+  "inv": true,
+  "msb": true,
+  "text": ")&#2\u00d3\u00163\u00a2\u0016\u0006+=++\"\u00d3\u00b3\u00e2o913\u00a2\u00bb",
+  "tail": "1011"
+ },
+ {
+  "printable": 0.5833333333333334,
+  "matrix": "IMG",
+  "traversal": "rowsR",
+  "inv": true,
+  "msb": true,
+  "text": ")&t\\\u00ac\t\u00f4s\u0001\u0004~\u00ee=\u00c6;\u009as\u0094z[D(\u00c3-",
+  "tail": "0011"
+ },
+ {
+  "printable": 0.5833333333333334,
+  "matrix": "IMG",
+  "traversal": "diagR",
+  "inv": true,
+  "msb": true,
+  "text": "4\u00b0\u00b3x\u00b70\u008bw\u000e\u00a9_P*\u00d3\u00cc+\rr3\\qV\u0015`",
+  "tail": "0011"
+ },
+ {
+  "printable": 0.5416666666666666,
+  "matrix": "README",
+  "traversal": "rowsB",
+  "inv": true,
+  "msb": false,
+  "text": "\u00d32\u00c5@\u00b4\u0089\u00979'wf\u00dc\u00df\u001fG\u00903@\u009fL\rE'%",
+  "tail": "1001"
+ },
+ {
+  "printable": 0.5416666666666666,
+  "matrix": "README",
+  "traversal": "colsB",
+  "inv": false,
+  "msb": true,
+  "text": "gs\u00e9\u00ed\u0095_g6\u00cf4T\u00811\u0016\u00c4\u00d4t\u008f\u001bY\u0019L.r",
+  "tail": "1110"
+ },
+ {
+  "printable": 0.5416666666666666,
+  "matrix": "IMG",
+  "traversal": "rowsB",
+  "inv": true,
+  "msb": false,
+  "text": "\u00d32\u00c5@\u00b4\u0089\u00979'wf\u00dc\u00df\u001dG\u00903@\u009fL\rE'%",
+  "tail": "1001"
+ },
+ {
+  "printable": 0.5416666666666666,
+  "matrix": "IMG",
+  "traversal": "colsB",
+  "inv": false,
+  "msb": true,
+  "text": "gs\u00e9\u00ed\u0095_g6\u00cf4T\u00911\u0016\u00c4\u00d4t\u008f\u001bY\u0019L.r",
+  "tail": "1110"
+ },
+ {
+  "printable": 0.5416666666666666,
+  "matrix": "IMG",
+  "traversal": "rowsR",
+  "inv": true,
+  "msb": false,
+  "text": "\u0094d.:5\u0090/\u00ce\u0080 ~w\u00bcc\u00dcY\u00ce)^\u00da\"\u0014\u00c3\u00b4",
+  "tail": "0011"
+ },
+ {
+  "printable": 0.5,
+  "matrix": "README",
+  "traversal": "spiral(0, 0)ccwh",
+  "inv": true,
+  "msb": false,
+  "text": "\u00d32\u001aS\u0092\u0011\u0083Q\u00f3r\u0011\u001a\u00d1rSS\u00d3s\u00f2\u0091s1rS",
+  "tail": "1111"
+ },
+ {
+  "printable": 0.5,
+  "matrix": "README",
+  "traversal": "spiral(0, 13)ccwv",
+  "inv": false,
+  "msb": false,
+  "text": ".gmsg\u0096\u0096\u00a1\u00d1\u00bd\u00fc\\FVVv\u0019\u001b\u00dc\u0084tn\u0096\u0015",
+  "tail": "0000"
+ },
+ {
+  "printable": 0.5,
+  "matrix": "README",
+  "traversal": "cols",
+  "inv": true,
+  "msb": false,
+  "text": "\u0019qX@Va\u0082\u0093\u008c.\u00d3~\u00a7;\u00dc\u00d4-\u000e'\u0099\u009b\u00cdK4",
+  "tail": "0110"
+ },
+ {
+  "printable": 0.5,
+  "matrix": "README",
+  "traversal": "rowsR",
+  "inv": true,
+  "msb": false,
+  "text": "\u0094d.:5\u0090/\u00ce\u0080 ~\u007f\u00bcc\u00dcY\u00ce)^\u00da\"\u0014\u00c3\u00b4",
+  "tail": "0011"
+ },
+ {
+  "printable": 0.5,
+  "matrix": "README",
+  "traversal": "rowsRB",
+  "inv": true,
+  "msb": true,
+  "text": "\u0092RtP\u00d4\u00c9\u00f4\u00039\u0004q\u00fd\u00fd\u00c6grs\u0099x\u009bD\fS-",
+  "tail": "0011"
+ },
+ {
+  "printable": 0.5,
+  "matrix": "README",
+  "traversal": "colsRB",
+  "inv": false,
+  "msb": false,
+  "text": ".\u00e7\u00c2\u0094\u0091\u00b5\u00f1HGMl\u0011\u0013HE\u00f3ls\u00f6U\u00d9\u009e>w",
+  "tail": "0110"
+ },
+ {
+  "printable": 0.5,
+  "matrix": "README",
+  "traversal": "diag",
+  "inv": false,
+  "msb": true,
+  "text": "?\u0095yW\u001cS;\u0014\u00f2\u00bc\u00c3J\u009fPV\u00a8\u00f1\u0012\u00ef1.\u0013/-",
+  "tail": "0011"
+ },
+ {
+  "printable": 0.5,
+  "matrix": "IMG",
+  "traversal": "spiral(0, 0)ccwh",
+  "inv": true,
+  "msb": false,
+  "text": "\u00d32\u001aS\u0092\u0011\u0083Q\u00f3r\u0011\u001a\u00d1rSS\u00d3s\u00f2\u0091s1rS",
+  "tail": "1110"
+ },
+ {
+  "printable": 0.5,
+  "matrix": "IMG",
+  "traversal": "spiral(0, 13)ccwv",
+  "inv": false,
+  "msb": false,
+  "text": ".gmsg\u0096\u0096\u00a1\u00d1\u00bd\u00fc\\FVVv\u0019\u001b\u00dc\u0084tn\u0096\u0015",
+  "tail": "0010"
+ },
+ {
+  "printable": 0.5,
+  "matrix": "IMG",
+  "traversal": "cols",
+  "inv": true,
+  "msb": false,
+  "text": "\u0019qX@Va\u0082\u0093\u008c.\u00d3v\u00a7;\u00dc\u00d4-\u000e'\u0099\u009b\u00cdK4",
+  "tail": "0110"
+ },
+ {
+  "printable": 0.5,
+  "matrix": "IMG",
+  "traversal": "rowsRB",
+  "inv": true,
+  "msb": true,
+  "text": "\u0092RtP\u00d4\u00c9\u00f4\u00039\u0004q\u00dd\u00fd\u00c6grs\u0099x\u009bD\fS-",
+  "tail": "0011"
+ },
+ {
+  "printable": 0.5,
+  "matrix": "IMG",
+  "traversal": "colsRB",
+  "inv": false,
+  "msb": false,
+  "text": ".\u00e7\u00c2\u0094\u0091\u00b5\u00f1HGMl\u0011\u0013IE\u00f3ls\u00f6U\u00d9\u009e>w",
+  "tail": "0110"
+ },
+ {
+  "printable": 0.5,
+  "matrix": "IMG",
+  "traversal": "colsRB",
+  "inv": true,
+  "msb": true,
+  "text": "\u008b\u0018\u00bc\u00d6vRp\u00ed\u001dM\u00c9w7m]0\u00c91\u0090Ud\u0086\u0083\u0011",
+  "tail": "1001"
+ },
+ {
+  "printable": 0.5,
+  "matrix": "IMG",
+  "traversal": "diag",
+  "inv": false,
+  "msb": true,
+  "text": "?\u0095yW\u001cS;\u0014\u00f2\u00bc\u00c3J\u00bfPV\u00a8\u00f1\u0012\u00ef1.\u0013/-",
+  "tail": "0011"
+ },
+ {
+  "printable": 0.4583333333333333,
+  "matrix": "README",
+  "traversal": "spiral(0, 0)ccwv",
+  "inv": true,
+  "msb": false,
+  "text": "\u00191I\u0019\u008bi\t\u000b\u00d1\u00e9Y1YY\u00d9i1\u00f1\u00c9y\u0089\u00d1Y\u00d9",
+  "tail": "1111"
+ },
+ {
+  "printable": 0.4583333333333333,
+  "matrix": "README",
+  "traversal": "rows",
+  "inv": false,
+  "msb": false,
+  "text": ",\u00cds\u00bdKZ\u00b8\u00c6XF\u009c#\u001c\u0010\u00b8\u00ef\u00cf\u00b8`?5\u00ba\u0098m",
+  "tail": "1011"
+ },
+ {
+  "printable": 0.4583333333333333,
+  "matrix": "README",
+  "traversal": "cols",
+  "inv": false,
+  "msb": true,
+  "text": "gq\u00e5\u00fd\u0095y\u00be6\u00ce\u008b4\u0081\u001a#\u00c4\u00d4K\u008f\u001bf&L-\u00d3",
+  "tail": "1001"
+ },
+ {
+  "printable": 0.4583333333333333,
+  "matrix": "README",
+  "traversal": "colsR",
+  "inv": false,
+  "msb": false,
+  "text": "9\u00dd\u00c2db\u00b6\u00f1\u00b8DM<\u00a2\u0011H\u00b3\u00e8l\u00e3\u009bW\u00d9_\u001ew",
+  "tail": "0110"
+ },
+ {
+  "printable": 0.4583333333333333,
+  "matrix": "README",
+  "traversal": "rowsRB",
+  "inv": false,
+  "msb": false,
+  "text": "\u00b6\u00b5\u00d1\u00f5\u00d4l\u00d0?c\u00dfq@@\u009c\u0019\u00b11f\u00e1&\u00dd\u00cf5K",
+  "tail": "1100"
+ },
+ {
+  "printable": 0.4583333333333333,
+  "matrix": "README",
+  "traversal": "colsRB",
+  "inv": true,
+  "msb": true,
+  "text": "\u008b\u0018\u00bc\u00d6vRp\u00ed\u001dM\u00c9w7\u00ed]0\u00c91\u0090Ud\u0086\u0083\u0011",
+  "tail": "1001"
+ },
+ {
+  "printable": 0.4583333333333333,
+  "matrix": "IMG",
+  "traversal": "spiral(0, 0)ccwv",
+  "inv": true,
+  "msb": false,
+  "text": "\u00191I\u0019\u008bi\t\u000b\u00d1\u00e9Y1YY\u00d9i1\u00f1\u00c9y\u0089\u00d1Y\u00d9",
+  "tail": "1011"
+ },
+ {
+  "printable": 0.4583333333333333,
+  "matrix": "IMG",
+  "traversal": "rows",
+  "inv": false,
+  "msb": false,
+  "text": ",\u00cds\u00bdKZ\u00b8\u00c6XF\u009c#\u001c\u0011\u00b8\u00ef\u00cf\u00b8`?5\u00ba\u0098m",
+  "tail": "1011"
+ },
+ {
+  "printable": 0.4583333333333333,
+  "matrix": "IMG",
+  "traversal": "cols",
+  "inv": false,
+  "msb": true,
+  "text": "gq\u00e5\u00fd\u0095y\u00be6\u00ce\u008b4\u0091\u001a#\u00c4\u00d4K\u008f\u001bf&L-\u00d3",
+  "tail": "1001"
+ },
+ {
+  "printable": 0.4583333333333333,
+  "matrix": "IMG",
+  "traversal": "colsR",
+  "inv": false,
+  "msb": false,
+  "text": "9\u00dd\u00c2db\u00b6\u00f1\u00b8DM<\u00a2\u0011I\u00b3\u00e8l\u00e3\u009bW\u00d9_\u001ew",
+  "tail": "0110"
+ },
+ {
+  "printable": 0.4583333333333333,
+  "matrix": "IMG",
+  "traversal": "rowsRB",
+  "inv": false,
+  "msb": false,
+  "text": "\u00b6\u00b5\u00d1\u00f5\u00d4l\u00d0?c\u00dfqD@\u009c\u0019\u00b11f\u00e1&\u00dd\u00cf5K",
+  "tail": "1100"
+ },
+ {
+  "printable": 0.4166666666666667,
+  "matrix": "README",
+  "traversal": "spiral(0, 13)ccwh",
+  "inv": false,
+  "msb": true,
+  "text": "4\u00b3;\u009bk9z\u00e7\u00e5\u00ee\u008d\fK\u00b2\u00b2\u00b2<&\u00e0\u00d83s\u00a8\u00ac",
+  "tail": "0000"
+ },
+ {
+  "printable": 0.4166666666666667,
+  "matrix": "README",
+  "traversal": "spiral(0, 13)ccwh",
+  "inv": false,
+  "msb": false,
+  "text": ",\u00cd\u00dc\u00d9\u00d6\u009c^\u00e7\u00a7w\u00b10\u00d2MMM<d\u0007\u001b\u00cc\u00ce\u00155",
+  "tail": "0000"
+ },
+ {
+  "printable": 0.4166666666666667,
+  "matrix": "README",
+  "traversal": "spiral(0, 13)ccwh",
+  "inv": true,
+  "msb": false,
+  "text": "\u00d32#&)c\u00a1\u0018X\u0088N\u00cf-\u00b2\u00b2\u00b2\u00c3\u009b\u00f8\u00e431\u00ea\u00ca",
+  "tail": "1111"
+ },
+ {
+  "printable": 0.4166666666666667,
+  "matrix": "README",
+  "traversal": "spiral(13, 0)ccwv",
+  "inv": true,
+  "msb": false,
+  "text": "#fZFcJ\u0002\r\u008c\u009a\u0097\u008bj\u00a2\u00e5\u00a6\u0086\u00ec9\u00f9d.\u00a6\u009b",
+  "tail": "1111"
+ },
+ {
+  "printable": 0.4166666666666667,
+  "matrix": "README",
+  "traversal": "spiral(13, 0)ccwh",
+  "inv": false,
+  "msb": false,
+  "text": "\u00b65\u00a7\u00b34s\u00d7\u00c5\u00c2\u00d4\u00f9\u00e9S\u0013K7\u0015l\f\u00d9s1\u00dbD",
+  "tail": "0000"
+ },
+ {
+  "printable": 0.4166666666666667,
+  "matrix": "README",
+  "traversal": "rows",
+  "inv": true,
+  "msb": false,
+  "text": "\u00d32\u008cB\u00b4\u00a5G9\u00a7\u00b9c\u00dc\u00e3\u00efG\u00100G\u009f\u00c0\u00caEg\u0092",
+  "tail": "0100"
+ },
+ {
+  "printable": 0.4166666666666667,
+  "matrix": "README",
+  "traversal": "cols",
+  "inv": false,
+  "msb": false,
+  "text": "\u00e6\u008e\u00a7\u00bf\u00a9\u009e}ls\u00d1,\u0081X\u00c4#+\u00d2\u00f1\u00d8fd2\u00b4\u00cb",
+  "tail": "1001"
+ },
+ {
+  "printable": 0.4166666666666667,
+  "matrix": "README",
+  "traversal": "colsB",
+  "inv": false,
+  "msb": false,
+  "text": "\u00e6\u00ce\u0097\u00b7\u00a9\u00fa\u00e6l\u00f3,*\u0081\u008ch#+.\u00f1\u00d8\u009a\u00982tN",
+  "tail": "1110"
+ }
+]

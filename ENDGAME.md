@@ -2629,3 +2629,45 @@ SafeNet) segue de pé como leitura da comunidade.
 *"2nd way from start wasnt founded"* — existiria um caminho alternativo a partir da imagem inicial,
 nunca encontrado. Bate com "Roses are White… go back to the first puzzle piece… the rabbits nest
 may contain a whole lot more" e com a "segunda porta" já registrada neste arquivo.
+
+## Sessão 2026-09-05 (f) — a "segunda via desde o início" e o ninho do coelho
+
+Lead da sessão (e): *"2nd way from start wasnt founded (shared)"* (resumo de membro, 2021-02-13) +
+*"Go back to the first puzzle piece… It might have shown you only one door, beware that the rabbits
+nest may contain a whole lot more."* (criador, 2020-01-14). Duas frentes, ambas fechadas.
+
+### (1) Outra travessia da matriz — FECHADO (`solver/second_door_traversals.py`)
+
+Se há uma segunda porta na mesma grade, ela é outra ordem de leitura das mesmas 196 células. Espaço
+enumerado por inteiro: **20 travessias** (espirais nos 4 cantos × 2 sentidos × 2 eixos iniciais,
+linhas/colunas com reverso e bustrofédon, 4 diagonais) × 2 matrizes × inversão de bits × ordem de
+bits por byte = **160 leituras**. Exatamente **duas** dão texto 100% imprimível, e as duas são a URL
+conhecida `gsmg.io/theseedisplanted` (espiral anti-horária de (0,0), vertical primeiro, MSB) — o
+controle positivo. A terceira melhor leitura tem 75% e é lixo. **Não existe segunda travessia
+legível.**
+
+### (2) O ninho: medição exata da imagem — estrutura confirmada, sem sinal
+
+`_work/archive/Puzzle_full.png` (1048×1556) medida em sub-pixels de 15 px (**5×5 por célula de
+75 px**; confirmado porque `#FEFEFE` ocupa 5.625 px = exatamente uma célula, azul 15 células,
+amarelo 9). Controle: das 196 células, **189 são perfeitamente uniformes**; apenas **7 não são** —
+e seus índices espirais são **172, 184, 187, 192, 193, 194, 195**. Ou seja, as **4 células que a URL
+não usa (192–195) estão entre elas**, e o desenho transborda para 3 células que a URL usa. É
+literalmente o ninho. O desenho isolado (15×20 sub-pixels, 137 pretos) é um coelho com duas orelhas,
+cabeça e corpo.
+
+Consequência dura: as 4 células do ninho valem **0** na matriz de bits (a cauda é `0000`, não
+`0100`) — a leitura `MATRIX_IMG[7][6]=1` continua sendo amostragem do desenho. **As 4 células
+não carregam bit; o que há ali é o traço.**
+
+Testado (`solver/rabbit_nest_attack.py`): as contagens de tinta por célula — espiral 172=4, 184=2,
+187=9, 192=4, 193=6, 194=3, 195=9, todas em 1..9 como o alfabeto a–i — em 7 ordens (espiral,
+row-major, ninho isolado, reversos) como dígitos, letras, caixa alta e z-method; mais o bitmap de
+300 bits em leituras linha/coluna/reverso/invertido × MSB e LSB; mais os 100 bits só do ninho. São
+50 materiais → 200 formas × 3 blobs × 2 KDF = **1.200 AES**, paddings 6 contra 4,7 esperados,
+privkey em toda janela: **0**. E o nulo desmonta a coincidência aparente: para um traço com a
+densidade medida (0,211), **P(as 7 contagens caírem todas em 1..9) = 0,82** — não é sinal.
+
+**Conclusão.** O "whole lot more" no ninho do coelho não é dado extraível: nem bit, nem contagem,
+nem bitmap. Junto com (1), a primeira peça do puzzle está exaurida — a única mensagem que ela
+carrega é a URL. Se a "segunda via" existe, ela não está na imagem inicial.
