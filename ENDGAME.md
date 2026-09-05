@@ -2580,3 +2580,52 @@ O que parecia promissor e foi verificado um a um:
 comentário HTML, nenhum campo escondido além do que o README já traz. Somado às sessões (c) e (d),
 as quatro fontes públicas — página, livro apontado pelo "Bingo", Telegram e plaintexts das fases —
 estão todas conferidas na origem. O que falta ao endgame não está em lugar nenhum que se possa ler.
+
+## Sessão 2026-09-05 (e) — pesquisa pública: estado on-chain, issues do repositório original
+
+**Fato duro primeiro.** O endereço-prêmio `1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe` tem **126
+transações, 8,7599 BTC recebidos e saldo de 1,25635374 BTC**, nunca gasto (última movimentação
+2026-08-29, entradas de poeira). **O puzzle continua aberto**; nenhuma das dezenas de "SOLVED"
+publicadas moveu um satoshi.
+
+### Issue #108 ("o blob pequeno tem DOIS typos na página ao vivo") — **REFUTADA**
+
+Alegação: a página ao vivo teria `R` na posição 18 e `k` na 51 do base64, e corrigir para `J` e
+`s` faria o blob abrir. Verificado contra as **seis capturas** que baixei (5 do `gsmg.io` +
+`alpha.gsmg.io`): a página ao vivo já traz **`J` e `s`** — exatamente os valores que a issue chama
+de "corrigidos". Extraindo o base64 do `<textarea>` e removendo o marcador `enter` (40 caracteres
+a/b entre as duas linhas) e o `shabefanstoo` seguinte, o blob ao vivo é **byte a byte idêntico** ao
+do repositório: zero diferenças em 128 caracteres. **Não há typo nenhum.**
+
+A decifração que a issue apresenta é a miragem já documentada: com a senha
+`matrixsumlistenter…matrixsumlist` e **EVP-MD5** o padding é válido, 79 bytes, **último byte de pad
+= 0x01**, 38% imprimível, e o resultado é o `9fa9db91…` da cadeia comunitária. Sob **EVP-SHA256** —
+o KDF que abre de fato as fases 2, 3 e 3.2 — o padding é **inválido**. Varredura de privkey em toda
+janela de 32 B do plaintext: nenhuma. Issue #103 constrói sobre a mesma cadeia (chave XOR
+`a795de11…`, EVP-MD5) e cai junto.
+
+### Issue #106 (eliooooooot) — séria, e converge com este repositório
+
+Relatório independente de ~2,5 bilhões de testes que **confirma quatro achados nossos**: o KDF real
+é EVP-SHA256 (as varredura feitas com MD5 em `open-crypto-puzzles` são nulas); a mensagem binária
+do criador de 2023 é ASCII com bits invertidos por byte; a moldura de cores nos índices espirais
+{8,16,…,192} prova a convenção de leitura; e as "soluções" de 2026 se apoiam num único padding
+PKCS7 válido, com taxa medida de **1/236** em 49.664 tentativas (nós medimos ~1/256). Também
+confirma o que a sessão (d) achou: as URLs temáticas `/followthewhiterabbit`,
+`/TheArchitectChoice`, `/hopeisthequintessentialhumandelusion…` **não têm captura da era ativa** —
+só 2025–2026, no falso-200 da SPA.
+
+**Correção necessária a essa issue.** Ela lista como *"author-confirmed red herring (2021-02-12):
+'#…# wasn't used' → a tabela da fase 2 NÃO faz parte da solução"*. No export do Telegram essa frase
+aparece em **2021-02-13**, num **resumo escrito por um membro** (conta depois apagada):
+`"summary: / #..# wasnt used. / 2nd way from start wasnt founded (shared). / blobs in mp3 didnt
+recovered. / 'salphaselon' is unknown from where was taken and didnt confirmed."` Não é fala do
+criador. Quando perguntado diretamente sobre a tabela (2024-12-02), o criador respondeu **"Can't
+say anything about this"** — recusa, não descarte. Portanto a tabela da fase 2 **não está
+confirmada como red herring**, e a resolução documentada no README (Q=82, B=25 → coordenadas da
+SafeNet) segue de pé como leitura da comunidade.
+
+**Lead novo e não perseguido** (mesma fonte de 2021, ainda sem confirmação do criador):
+*"2nd way from start wasnt founded"* — existiria um caminho alternativo a partir da imagem inicial,
+nunca encontrado. Bate com "Roses are White… go back to the first puzzle piece… the rabbits nest
+may contain a whole lot more" e com a "segunda porta" já registrada neste arquivo.
