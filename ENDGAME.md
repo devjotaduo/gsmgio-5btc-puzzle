@@ -2225,3 +2225,166 @@ do parágrafo (inteiro, cada sentença, cada segmento entre vírgulas, "fubcd-ki
 "the first one seen"…) × 31 variantes de whitespace/entidade HTML/quebra de linha/pontuação/caixa/
 tags × 6 formas (crua, sha256hex, SHA256HEX, sha256², digest cru, UTF-16-LE), mais concatenações
 com a gramática da 3.2 e os tokens do endgame. Paddings válidos 19 em ~4.800 = ruído.
+
+## Sessão 2026-09-04 — máscara ASCII `matrixsumlist` × posições primas
+
+Nova leitura derivada diretamente dos artefatos primários, sem vocabulário comunitário: a camada
+a/b que decodifica `matrixsumlist` tem **104 bits**, exatamente a quantidade de índices primos
+menores que `len(faed)=570`. A gravura da p.39 de *Cosmic Duality* foi extraída diretamente do
+PDF (página física 43): a divisão vertical vida/morte motivou tratar a/b como polaridade e testar
+ordem direta/espelhada. Hipótese: alinhar os 104 bits, um a um, às 104 posições primas de `faed`,
+nas bases 0 e 1, e zerar a polaridade “morta” indicada por a ou b.
+
+`solver/prime_ascii_mask_attack.py` cobriu base 0/1 × máscara direta/espelhada × ambas as
+polaridades, materializando o fluxo completo zerado, somente os primos zerados, primos vivos,
+primos mortos e fluxo sem os mortos; cada um em dígitos, alfabeto `o=0,a=1…i=9`, caixa alta,
+z-method e reverso. As 256 saídas únicas foram verificadas como sha256→privkey e como senha
+hexadecimal nos três blobs via EVP-SHA256 (**768 testes AES**). Controle positivo: o mesmo código
+abriu a fase 2 com `sha256(causality)` e recuperou plaintext 98,1% imprimível.
+
+Resultado: **0 hits duros, 0 textos semânticos**. Um único padding válido apareceu no COSMIC
+(38,9% imprimível), abaixo do esperado por acaso e claramente ruído. A coincidência estrutural
+104 bits ↔ 104 primos é real e fica registrada, mas a interpretação literal “máscara que zera
+posições primas” está fechada nessas polaridades e ordens. Relatório completo:
+`_work/new_approach_page39/prime_ascii_mask_attack.json`.
+
+### Adendo — os 104 bits como rota/permutação
+
+A alternativa seguinte preservou todos os caracteres: os bits ASCII de `matrixsumlist` passaram
+a ordenar os 104 caracteres extraídos das posições primas de `faed`. Foram cobertas partição
+estável 0→1/1→0, grupos invertidos, intercalação, roteamento por deque e ordenação local dos 13
+bytes × 8 bits em leitura por linha/coluna. Cada rota foi executada nos dois sentidos, com quatro
+orientações justificadas do bitstream (direta, espelho, bytes invertidos e bits invertidos dentro
+de cada byte), posições primas base 0/1 e duas saídas: fluxo primo isolado ou reinserido em `faed`.
+
+Após deduplicação, `solver/prime_ascii_permutation_attack.py` produziu **96 rotas**, 384 streams e
+7.440 materializações (símbolos, caixa, dígitos, z-method, reverso e Bifid canônico em períodos
+ancorados). Todas foram verificadas por SHA256→chave pública — incluindo o ponto secp256k1 negado
+— e por sha256hex→AES nos três blobs: **22.320 testes AES, 0 hits duros e 0 candidatos Bifid no
+limiar semântico**. Os 82 paddings válidos batem o acaso (87,19 esperados); o melhor plaintext
+aleatório teve só 51% de bytes imprimíveis. Controles: os 96 pares rota/inversa fizeram round-trip,
+as duas convenções têm 104 primos e o pipeline abriu a fase 2 com `sha256(causality)`.
+
+Conclusão: a leitura “um bit por posição prima” continua uma coincidência estrutural forte, mas
+as famílias naturais em que o bit **zera** ou **ordena** o caractere estão fechadas. Relatório:
+`_work/new_approach_page39/prime_ascii_permutation_attack.json`.
+
+## Sessão 2026-09-04 — perícia da p.39 e `lastwordsbeforearchichoice`
+
+A gravura de *Cosmic Duality*, p.39 (página física 43 do PDF), foi reextraída em vez de depender
+do OCR parcial. A página é uma composição MRC com JPEG RGB de 963×1214, uma camada JPEG RGB de
+2889×3641 e máscara JBIG2 de mesma resolução. `qpdf --check` não encontrou dano estrutural; os
+JPEGs não têm EXIF nem tabelas DQT não utilizadas, e depois do último `%%EOF` há somente CRLF.
+Assim, não apareceu payload oculto simples em metadados, quantização JPEG, overlay pós-EOF ou
+camada PDF separada. O render combinado de 300 DPI está em
+`_work/new_approach_skills/page43_render_300dpi.png`.
+
+O render tornou legível o verso completo de **Le Miroir de la Vie et de la Mort**. A transcrição
+verbatim usada no ataque está em `_work/miroir_verse.txt`; ela preserva inclusive `n'auons` e
+`Quen`. A pista já decodificada `lastwordsbeforearchichoice` produz a seleção objetiva:
+
+`visage sage perir asseurée durée mourir`
+
+Também foram testados os primeiros termos (`Mondains Scachez Puis Nous Tout Quen`), o acróstico
+`MSPNTQ`, o teléstico `VSPADM`, extremos de cada linha e o texto integral. A geometria do espelho
+limitou as rotas a direta, reversa, fora→dentro e dentro→fora, além dos subconjuntos primos base
+0/1. Para cada leitura, `solver/miroir_verbatim_attack.py` cobre separadores, caixa, retirada de
+acentos/pontuação, reverso textual e XOR dos SHA-256 individuais — este último reaproveita o
+operador já demonstrado por `intertwined` em fase anterior.
+
+Após deduplicação foram 583 candidatos textuais, 20 chaves XOR e 603 chaves finais únicas. Os
+três blobs foram testados com senha crua, SHA-256 hexadecimal e digest cru, tanto em EVP-MD5
+quanto em EVP-SHA256: **10.494 tentativas AES**. Cada chave final também passou por **3.618
+decifrações** dos 35 blocos (ECB e CBC com cinco IVs ancorados) e varredura de toda janela de 32
+bytes contra a chave pública secp256k1 alvo e seu ponto negado. Controles positivos abriram a
+fase 2 com `sha256(causality)` e reproduziram o SHA-256 conhecido do plaintext COSMIC.
+
+Resultado: **0 hits duros**. Houve 49 paddings válidos contra ~41 esperados ao acaso; nenhum foi
+semântico e o melhor teve só 48,1% de bytes imprimíveis. Portanto, a leitura literal das últimas
+palavras do poema — incluindo suas combinações naturais de espelho e XOR — está fechada. O
+relatório completo está em `_work/new_approach_skills/miroir_verbatim_attack.json`.
+
+## Sessão 2026-09-04 — último commit Claude × ambiguidade `g=0/7`
+
+A proveniência foi auditada antes do novo ataque. O último commit do Claude é `6315bca`
+(`raising_variants`, 6.360 oráculos, negativo); ele está em `master`. Não há outra branch local,
+stash ou worktree. O snapshot e a memória originais da sessão foram recuperados em
+`solver/experiments/claude_endgame_2026_09_02/`. O plaintext completo da fase 3.2.2 já constava
+na gramática de `tail32_history.py`, portanto não havia uma omissão simples de “answer too”.
+
+O fato novo aproveitável da memória era estatístico: `faed` tem 107 ocorrências de `g` e seu
+unigrama é compatível com dígitos decimais uniformes se `g` representar **0 ou 7**. Isso foi
+cruzado com os 104 bits a/b que decodificam literalmente `matrixsumlist`. A hipótese testada foi:
+os bits escolhem 0/7 nas ocorrências de `g`; os três `g` excedentes são os “extra” removidos ou
+recebem todas as 8 combinações binárias possíveis.
+
+`solver/g_ambiguity_matrixsum_attack.py` cobriu 8 rotas naturais (linear e grades 15×38/38×15,
+colunas e boustrophedon), 4 orientações da máscara, 2 polaridades, máscara alinhada ao início/fim,
+as 8 terminações de 3 bits e descarte dos 3 símbolos iniciais/finais. Foram **1.152 atribuições**,
+29.592 materiais únicos, **532.656 testes AES** (senha crua, SHA-256 hexadecimal e digest cru;
+EVP-MD5/SHA256; SMALL/COSMIC/TAIL32) e **1.317.336 janelas** secp256k1 contra o alvo e seu ponto
+negado. O controle abriu a fase 2 com `sha256(causality)` e 98,1% de bytes imprimíveis.
+
+Resultado: **0 hits duros**. Os 2.084 paddings válidos coincidem quase exatamente com os
+2.080,69 esperados ao acaso. A melhor saída decimal→hex teve 53,3% de bytes imprimíveis e score
+−7,90 (texto real ≈ −3), portanto também é ruído. Fica fechada a leitura em que a máscara ASCII
+`matrixsumlist` resolve diretamente a ambiguidade 0/7 dos `g`. Relatório:
+`_work/new_approach_claude/g_ambiguity_matrixsum_attack.json`.
+
+## Sessão 2026-09-04 (b) — varredura do Telegram Desktop pós-export e o "YOUWON" da comunidade
+
+O export `result.json` termina em 2026-07-08. O grupo foi lido diretamente no Telegram Desktop
+(filtro "From: Jrk Bgrt"); o criador voltou em **12/07, 16/07 e 01/09/2026**. Transcrição das
+falas relevantes em `_work/tg2026_scan_attack.jsonl` (campo `creator_msgs`). O que muda o mapa:
+
+- **"My close friends have the best chance of solving it (a few tried). But they don't have the
+  skills some of you do." → "NOTE: that is a hint."** (12/07). Leitura direta: o passo final exige
+  algo que os amigos próximos sabem e a comunidade não — conhecimento pessoal, não criptoanálise.
+  Combina com "THE PRIVATE KEYS BELONG TO HALF AND BETTER HALF" (3.2.2) e com o criador chamando a
+  parceira de "the better half" (2025, 2026): *half & better half* = o criador e a parceira.
+- **"Couple hours, and no."** (01/09) para "quanto tempo levou para criar o puzzle / estava
+  sozinho?". A mecânica do endgame foi montada em poucas horas, com ferramentas online (como as
+  fases 1–3.2: sha256, openssl, dcode, CyberChef). Isso desfavorece qualquer família de decodificação
+  elaborada e favorece: substituição dígito→letra (como `shabef` e os z-segmentos), sha256 de palavras.
+- "salphaseion is 100% solveable?" → **"Yes"**; "it's all still solvable" (12/07). "I have a hidden
+  laptop which I haven't touched in years. On that thing... is the actual answer." "The '5' btc was
+  never the actual prize. That was only a tiny fraction." "Some already found it. And understood not
+  to risk it..." — o prêmio real não é (só) o endereço 1GSMG; não é acionável.
+- Perguntado se `dbbi`/`faed` devem ser decodificados como os outros segmentos ou são só
+  "ingrediente": respondeu com o emoji de boca fechada (01/09). Sem informação.
+- 16/07 é conversa sobre BIP360/drogas ("Lately, I'm working with many NOTES", "You have to be in
+  your prime for that", "Meta hunting. Like it.") — sem conteúdo.
+
+**Achado comunitário avaliado — "YOU WON" (Vasilis Dragon, 12–13/07).** `M91` = plaintext da
+3.2.2 (`INCASEYOUMANAGE…FUNDSTOLIVE`) tem **exatamente 91 letras = len(dbbi)** (notado desde 2023).
+`(dbbi[a=0..i=8] − M91) mod 26` = `VOZIJBDTIQBRGVEOMZNBC**YOUWON**XCPKWGBNAXDGJGDUNNVMPABTAFPAAXMJYLZBUWERDNXYDESKUOBXCAMVDJLQTSGA`
+(índice 21). Reproduzido em `solver/tg2026_youwon_m91.py`. Nulo sem rótulo
+(`solver/tg2026_youwon_null.py`): melhor score de quadgramas nas 8 variantes naturais (±chave, ±M,
+a=0/1) = **−5,63**; 3.000 embaralhamentos de `dbbi` → máximo nulo −7,00 (p < 3,3·10⁻⁴); 3.000 de
+`M91` → idem. Mas o estatístico é dominado pelas 6 letras: P(alguma palavra BIP39 ≥6 letras em
+alguma das 8 variantes) = 0,001 por acaso, e escalando para as ~20 mil palavras/frases de 6 letras
+que um humano aceitaria, **p ≈ 3%**. Os 85 caracteres restantes são ruído (−7,7 a −8,1 nas outras
+variantes); `dbbi` tem 9 símbolos, logo `dbbi = (P + M91) mod 26` não pode ser cifra de um P
+arbitrário; e o criador respondeu **"Pfff. Coincidence."** (01/09). Os passos seguintes da cadeia
+("borrow rail" → DEL, `KMODEST` → "BE MODEST", sha256(YOUWONBEMODEST)) são numerologia. Fechado
+como senha: 72 formas × 3 blobs = 216 AES (3 paddings = acaso) + sha256(frase)→privkey: **0**.
+Derivados de Diego Schmidt (31/08: "Yellow BLUE primes = DEL FE", `enter`→13224→EO 13224) vêm da
+mesma cadeia.
+
+**Três leituras baratas do material novo (todas negativas):**
+- `firsthint_hash` (27): "our first hint" = o primeiro hint literal do criador no Telegram
+  (2019-04-20), o hash `5ac407…` = sha256(`theflowerblossomsthroughwhatseemstobeaconcretesurface`);
+  cru/upper/sha256/digest/+\n nos 3 blobs: 0 paddings.
+- `matrix_zeros_fill` (1.024): "zeroed out" como *os 1s da matriz viram 0 e os 91 zeros dos 192 bits
+  recebem dbbi* (4 ordens × 2 matrizes × 192/196 × polaridade × a=0/1 × preenchimento × alinhamento ×
+  reverso) → z-method + senha: melhor 54% imprimível, 0 hits.
+- `base9_int` (168): dbbi/faed/metades/concatenações como inteiro em base 9/10/16/26 → bytes,
+  privkey em toda janela e senha crua/hex: 0 hits (o 0,83 do base-16 é tautologia de nibbles 1–9).
+
+**Leads que sobram (não computacionais):** (1) o hint "close friends" aponta para conhecimento
+pessoal do criador — o único vocabulário público é o do próprio Telegram (Jacque Fresco/Venus
+Project, Mr. Robot, Cyberpunk 2077, GSMG = "Globally supporting my generation", "the better half",
+Ibiza/Roterdã, Blueprint/NAD, passaporte do Neo), já minerado em `brainwallet`/`pop_culture` sem
+hits; identidade real do criador ou da parceira **não** deve ser perseguida. (2) "Couple hours"
+impõe um teto de complexidade: qualquer nova hipótese deve ser executável em minutos com CyberChef/
+dcode/openssl.
