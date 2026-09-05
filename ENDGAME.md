@@ -2408,3 +2408,44 @@ O próprio Codex reportou BIP38 (comum e EC-multiply) nos 35 blocos e o bloco de
 OpenSSL: 0. Os 35 blocos são a cadeia-miragem (pad 0x01, EVP-MD5) — ver "A fronteira real".
 **Fechado.** Aviso operacional: Codex e Claude controlando o mesmo desktop ao mesmo tempo disputam
 a janela do Telegram; rodar um de cada vez.
+
+## Sessão 2026-09-05 — o "Bingo" de 2026-03-03 = *Looking Forward* (Fresco & Keyes, 1969)
+
+**Releitura do hint primário.** A sequência exata do Telegram em 2026-03-03 é: Denis Golovkin
+pergunta *"Wasn't 'it's in front of your eyes but you're not seeing it' a recommendation to read
+**Looking Forward** btw.?"* (22:22) → criador: *"Looks at gnomad 👀"* (22:27) → gnomad: *"Looks at
+DG's comment 'its in front of your eyes but you're not seeing it'"* (22:27) → criador: **"Bingo"**
+(22:29). Três minutos antes ele havia dito *"Jacque was quite an inspiring lad"*. Ou seja, o "Bingo"
+endossa o comentário do DG, e o comentário do DG **é** a sugestão do livro. Nenhum membro do grupo
+levou isso adiante em nenhum momento (48 menções a Fresco/Venus Project no export, zero testes do
+livro), e "running key EXTERNA ao corpus" era a única família principiada que sobrevivera às
+rodadas 1–3. Texto obtido do PDF público da Universidade de Edimburgo (121 páginas, 294.341 letras,
+`_work/looking_forward.txt`).
+
+**As três leituras naturais do livro, todas com nulo casado, todas negativas:**
+
+1. `looking_forward_password` (`solver/lf_password_attack.py`) — a gramática provada da fase 1 é uma
+   frase **verbatim** de uma obra (letra de *The Warning*), minúscula e sem espaços → sha256. Foram
+   varridas todas as 3.298 sentenças, todos os n-gramas de 2 a 12 palavras e os títulos de capítulo:
+   **641.668 candidatos × 3 formas × 3 blobs = 5.775.012 testes AES** (oráculo rápido de 1 AES-ECB no
+   último bloco; controle positivo abriu a fase 2 com `sha256(causality)`, 98,1% imprimível).
+   Paddings válidos **22.710 contra 22.559 esperados** ao acaso (razão 1,007) e **0 hits duros**.
+2. `looking_forward_runningkey` (`solver/lf_runningkey_attack.py`) — o livro como chave corrente
+   sobre `faed`, reaproveitando o gate calibrado da rodada 3: 2 mapas × 4 configs × 3 modos ×
+   293.772 alinhamentos = **7.050.528 streams**. Melhor z de entropia condicional **−9,35** contra
+   **−8,03** do nulo casado (`faed` embaralhado) e −30,5 do controle com a chave certa. Nenhum passou
+   o gate |z| ≥ 10.
+3. `looking_forward_bookcipher` (`solver/lf_bookcipher_attack.py`) — a leitura nova: `faed` são
+   570 dígitos 1..9 e comporta-se como i.i.d., que é o que se espera de um fluxo de **índices**;
+   570 = 3×190 = 2×285. Grupos de 2 e 3 dígitos, decimal e base 9, base 0/1, direto e reverso,
+   sobre palavras/linhas/sentenças/letras, iniciais e palavras inteiras = 168 leituras. Melhor
+   quadgrama −4,25, mas o nulo casado (200 embaralhamentos do `faed`, mesmo pipeline) dá média −4,26
+   e máximo −4,15: **z = +0,26, p = 0,375**. O texto "legível" é artefato de concatenar sentenças
+   inteiras de um livro em inglês, independente dos índices. 480 AES nos 40 melhores: 0.
+
+**Conclusão.** O melhor hint objetivo disponível do criador está testado e fechado nas três formas
+em que um livro pode servir a este puzzle. O livro também não tem sobreposição de vocabulário: zero
+ocorrências de *yang*, *salvation*, *matrix*, *rabbit*, *architect*; *cosmic* aparece 1 vez. Se
+*Looking Forward* é mesmo a resposta ao "in front of your eyes", o elo que falta não é o texto do
+livro, mas algo específico dentro dele (uma ilustração de Fresco, uma página nomeada por um hint)
+que nenhuma fonte pública identifica.
