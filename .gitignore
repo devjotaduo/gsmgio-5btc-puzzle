@@ -14,3 +14,12 @@ solver/*.log
 solver/quadgram.pkl
 solver/__pycache__/
 solver/out_run.log
+
+# exports do Telegram e dumps grandes (sessão 2026-09-08)
+ChatExport_*/
+_work/tg_export_*.json
+_work/tg_*_dump.txt
+_work/gsmg_live_2026-09/*.ttf
+_work/gsmg_live_2026-09/body_puzzle
+_work/screencast_frames/
+_work/mindmap_*.png

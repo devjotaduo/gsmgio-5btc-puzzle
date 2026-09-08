@@ -2671,3 +2671,130 @@ densidade medida (0,211), **P(as 7 contagens caírem todas em 1..9) = 0,82** —
 **Conclusão.** O "whole lot more" no ninho do coelho não é dado extraível: nem bit, nem contagem,
 nem bitmap. Junto com (1), a primeira peça do puzzle está exaurida — a única mensagem que ela
 carrega é a URL. Se a "segunda via" existe, ela não está na imagem inicial.
+
+## Sessão 2026-09-08 — dois exports novos do Telegram, o site revivido e o lead "dbbi = 64/16"
+
+### Insumo
+
+- **Export A** (`ChatExport_2026-09-08/` no repositório, JSON truncado no fim): 2.553 mensagens de
+  2025-09-01 a 2025-11-05 — **100 % já estavam no `result.json`**. O que era novo eram os 24 anexos
+  (Mind Map do Alex, `puzzle.xlsx` do Человек, `MISC.txt` do k1ng, scripts `*Hush.py` do Septa, o
+  PDF da cifra MadHatter, o `-.js` do puzzle-rickroll de 2019, relatórios de bitplane do Jacob).
+- **Export B** (`Downloads/Telegram Desktop/ChatExport_2026-09-08/`, íntegro, 114 anexos): 19.711
+  mensagens de 2025-09-01 a **2026-09-08**; **4.416 posteriores ao `result.json`** (que parava em
+  2026-07-08), com **65 do criador**, agora verbatim em `_work/creator_msgs_2026-07_09.txt` (a sessão
+  de 04/09 só as tinha lido por tela). Resumos completos por subagente, com id de mensagem para tudo:
+  `_work/tg_2026-07_09_summary.md` (período novo) e `_work/tg_2025-09_11_summary.md`.
+
+### Criador — o que é novo verbatim (Export B)
+
+- 12/07 #66589: *"And IIFF I'm somehow still wrong, which I'm most likely not as I've verified many
+  times back then after some sad rushed mistakes, it's all still solvable with a few stable qubits."*
+- 12/07 #66592/#66593/#66600: *"I held quite a secret in my head which I seriously wanted to share
+  with the planet"*; *"The '5' btc was never the actual prize. That was only a tiny fraction."*;
+  *"Some already found it. And understood not to risk it... 🤐"* → #66604 *"Iykyk"*.
+- 16/07 #66903 (sobre o laptop): *"it's hidden in a room with a hidden door."*; #66961: *"Give
+  yourself yourself and yourself will be given yourself."* (resposta a um pedido de 1 BTC); #66962:
+  *"Latetly, I'm working with many NOTES."* — conversacionais, não operacionais.
+- 01/09 #70311 (a "como pôde bancar isso?"): *"A. I rushed (t)it. B. Yes, have quite some time for
+  stupid stuff."*; #70325: 🤐 para "dbbi/faed devem ser decodificados como os outros segmentos ou são
+  só ingrediente?"; #70336 *"Couple hours, and no."*; #70377 *"Same same"* (vs. "two sloppy days").
+- Nenhum hint técnico. Nenhuma alegação de blob aberto foi validada por ele (as de Anderson #69905,
+  MrNobody #68249–#68259, Andy "DBBI & FAED Research" — que vende "ZION" por 1 ETH — e Kashin caem
+  sozinhas; ver o resumo).
+
+### O site voltou — fato duro, verificado byte a byte (`_work/gsmg_live_2026-09/`)
+
+O criador **renovou o domínio** (gnomad #68869, whois) e `gsmg.io` responde de novo desde
+**2026-08-15 23:16 UTC** (`Last-Modified` das páginas; a raiz é de 17/08 03:22). O que existe:
+
+| caminho | bytes | conteúdo |
+|---|---|---|
+| `/` | 35.785 | "shutdown sequence": logo azul se estilhaça → terminal `WARNING: carrier anomaly` / `Trace program: running` → 80 grades aleatórias 14×14 → `finalGrid` + `SYSTEM FAILURE` → chuva Matrix → finale: logo dourado "restored", **"2017 — 2026 / The lights are off. / Nine years of chaos ended. One mystery remains. / Follow the white rabbit →"** (link para `/puzzle`) |
+| `/puzzle` | 29.931 | o PNG completo 1048×1556, **sha256 `38125bbd…` = `_work/archive/Puzzle_full.png`** |
+| `/theseedisplanted` | 832 | idêntico ao arquivo de jan/2026, incl. `<!-- Nice to see you around! Good luck little bunny hunter ;) -->` |
+| `/choiceisanillusion…` | 9.207 | textareas idênticas ao Wayback 2020-11-12; **comentário novo** `<!-- You made it to the next step! Good luck little bunny hunter ;) -->` |
+| `/89727c…` (endgame) | 4.536 | `dbbi`, `faed`, blobs e binários **idênticos** ao Wayback 2024-11-23; `<H1>` voltou a `<h1>`; sem comentário |
+| `/img/follow_the_white_rabbit.png` | 1.958 | idêntico ao Wayback (`5e8d84b8…`) |
+| `/img/logo_GSMG.png` / `_restored.png` | 8.590 / 8.128 | mesmo alfa em 310.000 px; "restored" = recoloração dourada (505 deltas RGB, todos tonais) — é o logo de 2017 |
+| `/font/vt323-regular.ttf` | 149.688 | VT323 v2.000 de Peter Hull; vs. cópia do Google só diferem `f_i`, `f_l`, `zero.zero` (ligaduras padrão) e a tabela `name` |
+| `/robots.txt` | 1.379 | coelho em ASCII + banner "Follow the white rabbit"; `Disallow: /` |
+| `/sitemap.xml`, `/register`, `/help-center`, `/phase1verification` | 9 | **404** — o corpo do 404 é `Hello :-)` (o "sitemap = Hello ;)" do grupo era isso) |
+
+- O `finalGrid` do JavaScript é **a matriz original** (101 uns; espiral anti-horária → `gsmg.io/theseedisplanted`; diff célula a célula contra a matriz do README: **nenhuma** diferença).
+- Chuva de glifos = `"0101…01" + "GSMG.IO5BTCPUZZLECHALLENGE"` (o texto da fase 0 já consumido). Constantes: 3400, 1441, 2442, 13950, 5000, 4100 ms.
+- O nginx novo dá **404 limpo** (o antigo dava falso-200 em tudo), então sondagem de caminhos passou a valer: **71 caminhos temáticos** (`/salphaseion`, `/yinyang`, `/anotherdoor`, `/hint`, `/2026`, `/thelightsareoff`, `/btcseed`, `/img/door.png`, `/.well-known/`, o endereço-prêmio…) → **todos 404**.
+- **Conclusão:** o "new hint on the main page is crazy" (#69031) é a encenação de despedida. Nenhum byte de puzzle mudou; nenhuma página nova existe. O `CLAUDE.md` foi corrigido (o domínio não está mais parqueado).
+
+### Lead novo testado e FECHADO — `dbbi` como digest SHA-256 (PROGRESS.md de X, #70983, 04/09)
+
+Alegação: lendo `dbbi` (91) com `b` e `g` (2 e 7, primos) como prefixos de 2 caracteres, saem **64
+tokens com 16 códigos distintos** = forma de um SHA-256 em hex sob substituição.
+
+- **Reproduzido.** Tokens: `d bb i bf bh c c be gb i h a be be i h be gg e ge be bb ge h h e bh h f
+  ba bf d h be f f c d bb f c c c gb f be e gg e c be d c i bf bf f gi gb e e e a be`; padrão de
+  igualdade `01234556728966286abc61c88b48de3086dd501d5557d6bab5605233df7bbb96`. Entre os 36 pares,
+  `b/g` é o **único** com 64 tokens **e** 16 distintos. Nulo próprio (20.000 embaralhamentos que
+  preservam contagens): P(b/g dar 64) = 10,1 %, P(b/g dar 64 e 16) = **0,05 %**, P(algum par dar
+  64 e 16) = 0,27 %. A estrutura é real e rara.
+- **Pré-imagem por padrão de igualdade** (`solver/dbbi_hash_preimage.py`, `dbbi_hash_direct.py`): se
+  `dbbi = sha256(X)` sob bijeção token→nibble, a partição dos 64 nibbles de `sha256(X)` tem de ser a
+  mesma — teste sem falso-positivo (P ≈ 1e-50) e sem precisar do mapa. Candidatos: 81 curados +
+  serializações de `matrixsumlist` (linhas `[6,10,8,7,6,6,5,4,9,9,7,8,7,9]`, colunas
+  `[8,10,8,10,8,7,3,6,7,5,9,6,6,8]`, total 101, 5 separadores) + 2.048 BIP39 + **4,19 M pares BIP39**
+  + 7.472 termos do vocabulário do criador/plaintexts, singles e pares (**≈55,8 M**). Total ≈ 60 M
+  sha256, **0 padrões iguais** (nas duas orientações).
+- **Tokens como chave direta**: 7 mapeamentos naturais token→nibble (1ª ocorrência, alfabético,
+  frequência, rank a1z26, e reversos) × 2 sentidos → 64 hex como senha AES (SMALL/COSMIC, 2 KDF,
+  lower/upper), como privkey de 32 B e como entropia BIP39-24: **0**.
+- **Straddling checkerboard** (a MESMA família provada na 3.2.2, escapes 1 e 4): sob `b/g`, `faed`
+  dá **451 tokens com exatamente 25 símbolos** — capacidade cheia de um tabuleiro 7+9+9 = alfabeto
+  de 25 letras. Hill-climb de substituição (quadgramas, `solver/straddle_bg_attack.py`) com controle
+  no mesmo tamanho (**100 % de recuperação** em 451 caracteres de inglês): `faed` não sai
+  (`OTENDEENOAXTPIDATNAOENN…`). Varredura completa (`solver/straddle_sweep.py`): **todos** os
+  conjuntos de escape de 1–3 dígitos (99 para `dbbi`, 37 para `faed`) com nulo casado de 8
+  embaralhamentos → `dbbi` −0,0558 vs nulo-máx −0,0546, `faed` −0,0105 vs −0,0103: **dentro do
+  nulo, sem sinal**. Se os tokens forem material de chave (não inglês), o teste é cego por
+  construção — mas então a bijeção de 16! só sai com a pré-imagem, que não apareceu.
+
+### MadHatter (Kaeding 2020, `2020-301.pdf`, postado por E em 2025-09-03) — FECHADO
+
+Cifra que esconde **dois** textos num só cifrado com símbolos A–I (radices 2,2,2,3 → blocos de 4
+com exatamente um símbolo de cada grupo). Tema perfeito (Alice, dualidade, A–I), mas: `dbbi` tem
+runs `ccc`/`eee`, `faed` tem 7 runs ≥ 3 (até `ggggg`), e 91 e 570 não são múltiplos de 4. Teste
+exaustivo das **7.560 partições (2,2,2,3) × 4 offsets × 2 strings = 60.480 configurações: 0 válidas**.
+Denis Golovkin (#48711) tinha razão.
+
+### Textos do site novo como senha — FECHADO
+
+477 candidatos (finale, terminal, comentários, robots, glifos, falas novas do criador, permutações
+de E #71180/#71197 `título+enter+endereço`, minikey de Che #50514 `SDnA8pZCnGFRoEbAr4SWUQrF5v5Lpb`)
+como senha crua, sha256 (lower/upper) e HASHTHETEXT, nos **3 blobs (SMALL, COSMIC e TAIL32 da fase
+3.2, salt `b45a5e3d…`) × 2 KDF**: 9 paddings válidos (esperado 11,2), **0 legíveis**; minikey →
+privkey não bate. `solver/live_site_2026_attack.py`.
+
+### Também no material novo (para não reabrir)
+
+- `-.js` (Slack, 2019): puzzle-rickroll anterior do mesmo autor. Camadas: binário → palavras
+  invertidas ("HOW DID CAESAR SEND HIS MESSAGES? … 13 IS DEFAULT AND THE NUMBER C IS THE 2ND HINT?")
+  → César −3 (`removethecorrecthinttoproceedtothenextstage`, `reverse`) → binário interno invertido
+  → `BASE64aHR0cHM6…` → `https://www.youtube.com/watch?v=dQw4w9WgXcQ`. Confirma o estilo "ferramenta
+  online, poucas camadas", mas não é parte do puzzle (E #50192).
+- k1ng: blocos 75×75/72×72 da imagem e "QR de 25×25 do privkey na grade" — a grade é a URL, já
+  medida em sub-pixels na sessão 2026-09-05 (f). Bitplanes do Jacob: lixo (próprio autor).
+- Alegações de "solve" do período (Worldmaker `17CY5…`, Stake VIP, Jay Gudic — retratado em #50346,
+  jackdevs66 "XOR 7 passes → 1327 B" = a cadeia-miragem com pad 0x01 + MD5): nada validado.
+- Ideias baratas ainda não testadas, listadas nos resumos (A007522 vs índices espirais, filter
+  bytes/Adam7 do PNG, formato ckey do Core, "salphaseion" deduplicado = 9 letras, LSB `0xf73d92` do
+  Denis, leitura por colunas 16763473 do X, 6 salts do Kashin): numerologia sem predição — só rodar
+  se alguém escrever a hipótese em prosa com nulo antes.
+
+### Veredito
+
+Prêmio intacto: `1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe` com **1,25635374 BTC** (126 tx, mempool.space
+em 2026-09-08). Os dois exports acrescentam **um** fato duro (o site voltou, byte a byte igual, com
+uma despedida) e **um** lead estrutural real (dbbi 64/16), que foi fechado com ~60 M pré-imagens,
+mapas diretos e a família straddling inteira sob nulo. O criador reafirmou que a resposta está num
+laptop escondido, que "close friends" têm a melhor chance e que os 5 BTC "nunca foram o prêmio de
+verdade". A regra de parada (5 famílias negativas com nulo ⇒ esperar insumo novo) continua válida;
+o insumo desta vez chegou, foi consumido e não mudou o mapa.

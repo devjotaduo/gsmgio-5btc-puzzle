@@ -554,6 +554,16 @@ digit 2: 4
 output: IN CASE YOU MANAGE TO CRACK THIS THE PRIVATE KEYS BELONG TO HALF AND BETTER HALF AND THEY ALSO NEED FUNDS TO LIVE
 
 # Additional hints
+
+> **Atualização 2026-09-08 — o domínio voltou.** `gsmg.io` foi renovado pelo criador e responde de novo
+> desde 2026-08-15 (`Last-Modified`), servindo as páginas do puzzle **byte a byte idênticas** às
+> capturas do Wayback (`/puzzle` = o PNG 1048×1556, `/theseedisplanted`, `/choiceisanillusion…`,
+> `/89727c…`). A raiz virou uma animação de despedida ("2017 — 2026 / The lights are off. / Nine
+> years of chaos ended. One mystery remains. / Follow the white rabbit → /puzzle"); o `robots.txt`
+> traz um coelho em ASCII; o 404 responde `Hello :-)`. Só há dois comentários HTML, ambos sem valor
+> operacional: `<!-- Nice to see you around! Good luck little bunny hunter ;) -->` (theseedisplanted)
+> e `<!-- You made it to the next step! Good luck little bunny hunter ;) -->` (fase 2). Detalhes e
+> capturas em `ENDGAME.md` (sessão 2026-09-08) e `_work/gsmg_live_2026-09/`.
 - There's a hint from the creator of the puzzle on Decentraland:
 _(Cena no Decentraland — não é uma página web; texto legível na tela:)_
 

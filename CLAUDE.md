@@ -20,11 +20,12 @@ halving do Bitcoin).
   como material de consulta, não o commite (é grande demais e sensível).
 
 As imagens de cada fase foram **removidas** — o texto/cifra que elas mostravam
-agora está inline no README, transcrito verbatim do domínio via Wayback Machine
-(o `gsmg.io` original morreu e virou página parqueada). Para reobter o conteúdo
-de uma página: `curl "http://web.archive.org/web/<timestamp>id_/https://gsmg.io/<path>"`
-(use a CDX API `web.archive.org/cdx/search/cdx?url=gsmg.io/<path>` para achar um
-snapshot da era ativa, 2019–2021).
+agora está inline no README, transcrito verbatim do domínio via Wayback Machine.
+O `gsmg.io` ficou parqueado entre 2025 e ago/2026, mas o criador renovou o domínio e
+desde 2026-08-15 as páginas do puzzle estão de novo no ar, byte a byte iguais às
+capturas (a raiz virou uma animação de despedida; ver ENDGAME.md, sessão 2026-09-08).
+Para o histórico use o Wayback: `curl "http://web.archive.org/web/<timestamp>id_/https://gsmg.io/<path>"`
+(CDX API `web.archive.org/cdx/search/cdx?url=gsmg.io/<path>`, era ativa 2019–2021).
 
 ## Como o puzzle se resolve (padrão recorrente)
 

@@ -1,0 +1,943 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>GSMG | GSMG</title>
+<meta charset="utf-8">
+<link rel="icon" href="/img/favicon.png">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="GSMG">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            color-scheme: dark;
+            font-family: Arial, sans-serif;
+            --blue: #355da5;
+            --blue-light: #79a7e6;
+            --ink: #05070b;
+            --paper: #fff;
+        }
+        @font-face {
+            font-family: "VT323";
+            font-style: normal;
+            font-weight: 400;
+            font-display: block;
+            src: url("/font/vt323-regular.ttf") format("truetype");
+        }
+        * { box-sizing: border-box; }
+        html, body { min-height: 100%; }
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: var(--paper);
+        }
+        a { font: inherit; }
+        .stage {
+            position: relative;
+            min-height: 100vh;
+            min-height: 100svh;
+            overflow: hidden;
+            isolation: isolate;
+            background: #fff;
+            color: #111;
+        }
+        .legacy,.finale,.terminal {
+            position: absolute;
+            inset: 0;
+        }
+        .legacy {
+            display: grid;
+            place-content: center;
+            justify-items: center;
+            gap: 2rem;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            background: #fff;
+            z-index: 2;
+            perspective: 1100px;
+        }
+        .legacy::before {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            content: "";
+            opacity: 0;
+            pointer-events: none;
+            background: #020306;
+        }
+        .legacy > * {
+            position: relative;
+            z-index: 1;
+        }
+        .logo {
+            display: block;
+            width: min(350px, 72vw);
+            height: auto;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+        .logo-stage {
+            position: relative;
+            width: min(350px, 72vw);
+            transform-style: preserve-3d;
+            backface-visibility: visible;
+            will-change: transform;
+        }
+        .logo-stage__inner {
+            position: relative;
+            width: 100%;
+            transform-origin: 50% 47%;
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+        .logo-stage .logo {
+            width: 100%;
+        }
+        .logo--original {
+            position: relative;
+            z-index: 1;
+        }
+        .shard,
+        .fractures,
+        .energy-core,
+        .particle-field {
+            position: absolute;
+            inset: 0;
+        }
+        .shards,
+        .particle-field {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+        .shards { z-index: 3; }
+        .shard {
+            width: 100%;
+            height: auto;
+            opacity: 0;
+            will-change: transform, opacity, filter;
+        }
+        .shard:nth-child(1) { clip-path: polygon(0 0, 52% 0, 42% 34%, 0 50%); --dx: -72vw; --dy: -58vh; --rot: -34deg; }
+        .shard:nth-child(2) { clip-path: polygon(52% 0, 100% 0, 100% 43%, 62% 36%); --dx: 74vw; --dy: -62vh; --rot: 39deg; }
+        .shard:nth-child(3) { clip-path: polygon(0 50%, 42% 34%, 51% 57%, 31% 78%, 0 72%); --dx: -84vw; --dy: -8vh; --rot: -47deg; }
+        .shard:nth-child(4) { clip-path: polygon(42% 34%, 62% 36%, 71% 62%, 51% 57%); --dx: 12vw; --dy: -92vh; --rot: 26deg; }
+        .shard:nth-child(5) { clip-path: polygon(62% 36%, 100% 43%, 100% 76%, 71% 62%); --dx: 86vw; --dy: 10vh; --rot: 51deg; }
+        .shard:nth-child(6) { clip-path: polygon(0 72%, 31% 78%, 52% 100%, 0 100%); --dx: -76vw; --dy: 78vh; --rot: 42deg; }
+        .shard:nth-child(7) { clip-path: polygon(31% 78%, 71% 62%, 100% 76%, 100% 100%, 52% 100%); --dx: 72vw; --dy: 82vh; --rot: -44deg; }
+        .fractures {
+            z-index: 6;
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+            opacity: 0;
+            pointer-events: none;
+            filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 11px #99c7ff);
+        }
+        .fractures path {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 1.35;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 1;
+            stroke-dashoffset: 1;
+        }
+        .energy-core {
+            z-index: 7;
+            opacity: 0;
+            pointer-events: none;
+            background: radial-gradient(
+                circle at 50% 47%,
+                #fff 0 4%,
+                rgba(255, 255, 255, .96) 8%,
+                rgba(191, 224, 255, .72) 18%,
+                transparent 42%
+            );
+            mix-blend-mode: screen;
+        }
+        .particle-field {
+            z-index: 8;
+            left: 50%;
+            top: 47%;
+            width: 0;
+            height: 0;
+        }
+        .particle {
+            position: absolute;
+            width: var(--size);
+            height: var(--size);
+            border-radius: 50%;
+            opacity: 0;
+            background: #fff;
+            box-shadow: 0 0 7px #fff, 0 0 14px #8ec5ff;
+        }
+        .burst-flash {
+            position: absolute;
+            inset: 0;
+            z-index: 14;
+            opacity: 0;
+            pointer-events: none;
+            background: #fefefe;
+        }
+        .legacy__title {
+            position: relative;
+            margin: 0;
+            font-size: clamp(1.75rem, 5vw, 2.125rem);
+            font-weight: 400;
+            line-height: 1.2;
+            will-change: transform, opacity, filter;
+        }
+        .legacy__title::before,
+        .legacy__title::after {
+            position: absolute;
+            inset: 0;
+            content: attr(data-text);
+            pointer-events: none;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .legacy__title::before { color: #426fca; }
+        .legacy__title::after { color: #ac1837; }
+        .legacy__intro {
+            margin: 0;
+            font-size: .875rem;
+            font-weight: 500;
+            line-height: 1.6;
+            will-change: transform, opacity, filter;
+        }
+        .legacy a {
+            color: #2b4889;
+            text-underline-offset: .15em;
+        }
+        .vignette,
+        .scanlines,
+        .flash {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+        .vignette {
+            z-index: 5;
+            opacity: 0;
+            background: radial-gradient(circle at center, transparent 30%, rgba(0, 8, 28, .72) 100%);
+        }
+        .scanlines {
+            z-index: 11;
+            opacity: 0;
+            background: repeating-linear-gradient(
+                to bottom,
+                transparent 0,
+                transparent 3px,
+                rgba(116, 166, 255, .035) 4px
+            );
+            mix-blend-mode: screen;
+        }
+        .flash {
+            z-index: 12;
+            opacity: 0;
+            background: #d7e7ff;
+        }
+        .matrix-rain {
+            position: absolute;
+            inset: 0;
+            z-index: 7;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .terminal {
+            z-index: 8;
+            display: grid;
+            place-content: center;
+            padding: 2rem;
+            opacity: 0;
+            background: #030509;
+            color: #4cff70;
+            font-family: "VT323", "OCR A Extended", "Lucida Console", monospace;
+            font-synthesis: none;
+            text-rendering: geometricPrecision;
+            -webkit-font-smoothing: none;
+        }
+        .terminal__log {
+            width: min(660px, 88vw);
+            margin: 0;
+            font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+            line-height: 1.48;
+            letter-spacing: .035em;
+            text-shadow: 0 0 4px rgba(76, 255, 112, .72), 0 0 11px rgba(76, 255, 112, .28);
+        }
+        .terminal__line {
+            display: block;
+            opacity: 0;
+            transform: translateY(4px);
+            min-height: 1.85em;
+        }
+        .terminal__line.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+        .terminal__line.is-typing::after {
+            content: "█";
+            margin-left: .2em;
+            color: #d9ffe0;
+            animation: cursorBlink .7s step-end infinite;
+        }
+        .terminal__line.is-hacked {
+            color: #eaffed;
+            animation: hackedLine .16s steps(2, end) 6;
+        }
+        .finale {
+            z-index: 10;
+            display: grid;
+            place-content: center;
+            justify-items: center;
+            gap: 1.4rem;
+            padding: 3rem 1.5rem;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            text-align: center;
+            color: #e9f0ff;
+            background:
+                radial-gradient(
+                    circle at 50% 48%,
+                    rgba(2, 4, 3, .88) 0,
+                    rgba(2, 4, 3, .7) 14rem,
+                    rgba(2, 4, 3, .3) 25rem,
+                    transparent 38rem
+                );
+        }
+        .finale::before {
+            display: none;
+        }
+        .finale > * { position: relative; }
+        .finale__logo {
+            width: min(185px, 46vw);
+            opacity: .82;
+            filter: drop-shadow(0 0 19px rgba(229, 183, 73, .3));
+        }
+        .finale__years {
+            margin: 0;
+            color: #7084a8;
+            font: 700 .72rem/1.2 "Courier New", monospace;
+            letter-spacing: .24em;
+        }
+        .finale__title {
+            margin: 0;
+            font-size: clamp(2.1rem, 7vw, 4.7rem);
+            font-weight: 400;
+            line-height: .98;
+            letter-spacing: -.045em;
+        }
+        .finale__title span {
+            display: block;
+            margin-top: .2em;
+            color: #8ab4ff;
+        }
+        .finale__copy {
+            max-width: 38rem;
+            margin: 0;
+            color: #9ca9bd;
+            font-size: clamp(.9rem, 2.2vw, 1.05rem);
+            line-height: 1.6;
+        }
+        .finale__link {
+            display: inline-flex;
+            align-items: center;
+            gap: .75rem;
+            min-height: 48px;
+            padding: .75rem 1.15rem;
+            border: 1px solid rgba(123, 168, 250, .42);
+            border-radius: 2px;
+            color: #dfeaff;
+            text-decoration: none;
+            background: rgba(36, 66, 121, .18);
+            box-shadow: inset 0 0 20px rgba(91, 143, 240, .06), 0 0 20px rgba(70, 122, 218, .08);
+            transition: border-color .2s, background .2s, box-shadow .2s;
+        }
+        .finale__link:hover,
+        .finale__link:focus-visible {
+            border-color: #8ab4ff;
+            outline: none;
+            background: rgba(53, 93, 165, .3);
+            box-shadow: 0 0 28px rgba(70, 122, 218, .22);
+        }
+        .finale__arrow { transition: transform .2s; }
+        .finale__link:hover .finale__arrow { transform: translateX(4px); }
+        .status {
+            display: flex;
+            gap: 1.2rem;
+            margin: .4rem 0 0;
+            color: #59667c;
+            font: .68rem/1.2 "Courier New", monospace;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+        .status span::before {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            margin-right: .45rem;
+            border-radius: 50%;
+            content: "";
+            background: #253149;
+        }
+        .status .active::before {
+            background: #78a9ff;
+            box-shadow: 0 0 8px #5d91ef;
+        }
+        .stage.is-running .legacy::before {
+            animation: ambientFlicker 7.5s ease-in-out 3s forwards;
+        }
+        .stage.is-running .logo-stage {
+            animation: logoAccelerate 8.4s cubic-bezier(.52, .02, .87, .42) 2s forwards;
+        }
+        .stage.is-running .logo-stage__inner {
+            animation: preBurstShake .72s ease-in-out 9.68s forwards;
+        }
+        .stage.is-running .fractures {
+            animation:
+                fractureReveal .7s ease 5.15s forwards,
+                fractureVanish .28s ease 10.36s forwards;
+        }
+        .stage.is-running .fractures path {
+            animation: fractureSpread 4.65s cubic-bezier(.2, .58, .26, 1) 5.2s forwards;
+        }
+        .stage.is-running .fractures path:nth-child(2n) { animation-delay: 5.35s; }
+        .stage.is-running .fractures path:nth-child(3n) { animation-delay: 5.5s; }
+        .stage.is-running .energy-core {
+            animation: coreBuildBlast 3.5s cubic-bezier(.18, .62, .2, 1) 7.58s forwards;
+        }
+        .stage.is-running .burst-flash {
+            animation: burstFlash 1.15s ease-out 10.38s forwards;
+        }
+        .stage.is-running .logo--original {
+            animation: originalVanish .62s ease 10.38s forwards;
+        }
+        .stage.is-running .shard {
+            animation: shardBurst 2.35s cubic-bezier(.1, .78, .16, 1) 10.34s forwards;
+        }
+        .stage.is-running .particle {
+            animation: particleBurst 2.35s cubic-bezier(.1, .76, .15, 1) calc(10.38s + var(--delay)) forwards;
+        }
+        .stage.is-running .legacy__title {
+            animation: titleBlast 1.55s cubic-bezier(.12, .74, .16, 1) 10.34s forwards;
+        }
+        .stage.is-running .legacy__intro {
+            animation: introBlast 1.7s cubic-bezier(.12, .74, .16, 1) 10.36s forwards;
+        }
+        .stage.matrix-active {
+            background: #020403;
+        }
+        .stage.matrix-active .matrix-rain {
+            opacity: 1;
+            transition: opacity 1.5s ease;
+        }
+        .stage.is-running .terminal {
+            animation: terminalIn .7s ease 13.35s forwards;
+        }
+        .stage.is-running .scanlines {
+            animation: scanlineOn 2.8s linear 13.25s forwards;
+        }
+        .stage.is-ending .terminal {
+            animation: terminalOut .7s ease forwards;
+        }
+        .stage.is-ending .finale {
+            animation: finaleIn 3.5s ease-out .45s forwards;
+        }
+        .stage.is-finished .legacy,.stage.is-finished .terminal,.stage.is-finished .vignette,.stage.is-finished .flash,.stage.is-finished .burst-flash { display: none; }
+        .stage.is-finished .finale {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .stage.is-finished .matrix-rain { opacity: .42; } 
+        .stage.is-finished .scanlines { opacity: .35; }
+        .terminal__output--grid {
+            display: block;
+            width: max-content;
+            white-space: pre;
+            text-align: left;
+            font-variant-numeric: tabular-nums;
+            line-height: 1.2;
+        }
+        .terminal__line--grid {
+            position: relative;
+            width: max-content;
+            max-width: 100%;
+            margin-inline: auto;
+        }
+        .system-failure {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            padding: .25em .65em;
+            border: 1px solid #4cff70;
+            opacity: 0;
+            color: #4cff70;
+            background: #030509;
+            font-size: .85em;
+            letter-spacing: .08em;
+            white-space: nowrap;
+            text-shadow: 0 0 6px #4cff70;
+            box-shadow: 0 0 0 2px #030509, 0 0 0 3px #4cff70, 0 0 10px rgba(76, 255, 112, .5);
+            transform: translate(-50%, -50%);
+        }
+        .system-failure.is-visible {opacity: 1;}
+
+        @keyframes ambientFlicker {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        @keyframes logoAccelerate {
+            from { transform: rotateY(0deg) translateZ(0); }
+            to { transform: rotateY(22700deg) translateZ(0); }
+        }
+        @keyframes preBurstShake {
+            0% { transform: translate3d(0, 0, 0) rotate(0); }
+            12% { transform: translate3d(-1px, 1px, 0) rotate(-.12deg); }
+            27% { transform: translate3d(1.5px, -1px, 0) rotate(.2deg); }
+            43% { transform: translate3d(-2.5px, 1.5px, 0) rotate(-.3deg); }
+            59% { transform: translate3d(3.5px, -2px, 0) rotate(.42deg); }
+            75% { transform: translate3d(-4.5px, 2.5px, 0) rotate(-.54deg); }
+            89% { transform: translate3d(3px, -1.5px, 0) rotate(.34deg); }
+            100% { transform: translate3d(0, 0, 0) rotate(0); }
+        }
+        @keyframes fractureReveal {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fractureVanish {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        @keyframes fractureSpread {
+            from { stroke-dashoffset: 1; }
+            to { stroke-dashoffset: 0; }
+        }
+        @keyframes coreBuildBlast {
+              0% { opacity:   0; transform: scale(.025); filter: brightness(1)    blur(12px);  }
+             18% { opacity: .20; transform: scale(.075); filter: brightness(1.2)  blur(8px);   }
+             38% { opacity: .46; transform: scale(.14);  filter: brightness(1.55) blur(5px);   }
+             56% { opacity: .70; transform: scale(.22);  filter: brightness(2)    blur(3px);   }
+             68% { opacity: .86; transform: scale(.3);   filter: brightness(2.7)  blur(1.5px); }
+             74% { opacity: .72; transform: scale(.27);  filter: brightness(2.2)  blur(2px);   }
+             80% { opacity:   1; transform: scale(.42);  filter: brightness(4)    blur(0);     }
+             83% { opacity:   1; transform: scale(.58);  filter: brightness(6)    blur(0);     }
+             88% { opacity:   1; transform: scale(1.75); filter: brightness(8)    blur(1px);   }
+            100% { opacity:   0; transform: scale(4.2);  filter: brightness(10)   blur(15px);  }
+        }
+        @keyframes burstFlash {
+              0% { opacity: 0; }
+              8% { opacity: 1; }
+             55% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        @keyframes originalVanish {
+              0% { opacity: 1;   filter: brightness(1); }
+              8% { opacity: .35; filter: brightness(6)  blur(1px); }
+             15% { opacity: 0;   filter: brightness(10) blur(5px); }
+            100% { opacity: 0;   filter: brightness(10) blur(5px); }
+        }
+        @keyframes shardBurst {
+              0% { opacity: 0; transform: translate(0, 0) rotate(0) scale(1); filter: brightness(1); }
+              5% { opacity: 1; }
+             42% { opacity: 1; filter: brightness(3.4) drop-shadow(0 0 13px #fff); }
+             82% { opacity: .86; }
+            100% { opacity: 0; transform: translate(var(--dx), var(--dy)) rotate(var(--rot)) scale(.48); filter: brightness(5.5) blur(5px); }
+        }
+        @keyframes particleBurst {
+            0% { opacity: 0; transform: translate(0, 0) scale(.2); }
+            12% { opacity: 1; }
+            60% { opacity: .9; }
+            100% { opacity: 0; transform: translate(var(--x), var(--y)) scale(0); }
+        }
+        @keyframes titleBlast {
+            0% { opacity: 1; transform: translate3d(0, 0, 0) rotate(0) scale(1); filter: none; }
+            8% { opacity: 1; filter: brightness(3.5) drop-shadow(0 0 12px #fff); }
+            46% { opacity: .94; }
+            100% {
+                opacity: 0;
+                transform: translate3d(-92vw, -46vh, 0) rotate(-31deg) scale(.42);
+                filter: brightness(5) blur(6px);
+            }
+        }
+        @keyframes introBlast {
+            0% { opacity: 1; transform: translate3d(0, 0, 0) rotate(0) scale(1); filter: none; }
+            8% { opacity: 1; filter: brightness(3.2) drop-shadow(0 0 10px #fff); }
+            44% { opacity: .92; }
+            100% {
+                opacity: 0;
+                transform: translate3d(94vw, 52vh, 0) rotate(27deg) scale(.38);
+                filter: brightness(5) blur(6px);
+            }
+        }
+        @keyframes glitchBlue {
+            0%, 100% { opacity: 0; transform: none; clip-path: none; }
+            35% { opacity: .8; transform: translate(-3px, 1px); clip-path: inset(12% 0 57%); }
+            70% { opacity: .55; transform: translate(2px, -1px); clip-path: inset(64% 0 8%); }
+        }
+        @keyframes glitchRed {
+            0%, 100% { opacity: 0; transform: none; clip-path: none; }
+            40% { opacity: .7; transform: translate(3px, -1px); clip-path: inset(54% 0 17%); }
+            75% { opacity: .5; transform: translate(-2px, 1px); clip-path: inset(20% 0 54%); }
+        }
+        @keyframes vignetteFlicker {
+            0%, 28%, 48% { opacity: 0; }
+            18%, 36%, 62% { opacity: .65; }
+            75%, 100% { opacity: 1; background-color: #020306; }
+        }
+        @keyframes powerFlash {
+            0%, 24%, 35%, 69%, 100% { opacity: 0; }
+            25% { opacity: .2; }
+            36% { opacity: .45; }
+            70% { opacity: .85; }
+            72% { opacity: 0; }
+        }
+        @keyframes terminalIn {
+            from { opacity: 0; visibility: visible; }
+            to { opacity: 1; visibility: visible; }
+        }
+        @keyframes terminalOut {
+            0% { opacity: 1; visibility: visible; }
+            60% { opacity: .28; visibility: visible; }
+            100% { opacity: 0; visibility: hidden; }
+        }
+        @keyframes cursorBlink {
+            0%, 45% { opacity: 1; }
+            46%, 100% { opacity: 0; }
+        }
+        @keyframes hackedLine {
+            0%, 100% { transform: translateX(0); filter: none; }
+            35% { transform: translateX(-2px); filter: brightness(1.8); }
+            70% { transform: translateX(2px); filter: brightness(.65); }
+        }
+        @keyframes scanlineOn {
+            0% { opacity: 0; }
+            8%, 100% { opacity: .35; }
+        }
+        @keyframes finaleIn {
+            0% { opacity: 0; visibility: visible; transform: scale(1.015); }
+            100% { opacity: 1; visibility: visible; transform: none; }
+        }
+        @media (max-height: 720px) {
+            .finale { gap: .9rem; padding-block: 1.2rem; }
+            .finale__logo { width: min(128px, 35vw); }
+            .finale__title { font-size: clamp(1.9rem, 6vw, 3.8rem); }
+        }
+        @media (max-width: 560px) {
+            .legacy { gap: 1.4rem; }
+            .status { flex-direction: column; gap: .45rem; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .stage > :not(.finale, .scanlines) { display: none; }
+            .finale { opacity: 1; visibility: visible; pointer-events: auto; }
+            .scanlines { opacity: .2; }
+        }
+    </style>
+</head>
+
+<body>
+    <main id="stage" class="stage">
+        <section class="legacy" aria-label="Former GSMG homepage">
+            <div class="logo-stage">
+                <div class="logo-stage__inner">
+                    <img class="logo logo--original" src="/img/logo_GSMG.png" alt="GSMG" width="500" height="620">
+                    <div class="shards" aria-hidden="true">
+                        <img class="shard" src="/img/logo_GSMG.png" alt="">
+                        <img class="shard" src="/img/logo_GSMG.png" alt="">
+                        <img class="shard" src="/img/logo_GSMG.png" alt="">
+                        <img class="shard" src="/img/logo_GSMG.png" alt="">
+                        <img class="shard" src="/img/logo_GSMG.png" alt="">
+                        <img class="shard" src="/img/logo_GSMG.png" alt="">
+                        <img class="shard" src="/img/logo_GSMG.png" alt="">
+                    </div>
+
+                    <svg class="fractures" viewBox="0 0 500 620" aria-hidden="true">
+                        <path pathLength="1" d="M250 260 231 219 215 171 239 122 250 72 250 5"/>
+                        <path pathLength="1" d="M250 260 296 238 321 192 366 153 411 139 472 145"/>
+                        <path pathLength="1" d="M250 260 289 299 278 342 312 381 298 421 329 470 319 532"/>
+                        <path pathLength="1" d="M214 302 176 285 143 311 96 300 51 330 26 344"/>
+                        <path pathLength="1" d="M228 352 185 388 158 430 120 448 72 430 27 405"/>
+                        <path pathLength="1" d="M278 342 337 326 376 348 421 331 473 345"/>
+                        <path pathLength="1" d="M312 381 359 406 381 452 424 472 472 445"/>
+                        <path pathLength="1" d="M231 219 194 188 166 152 130 139 86 111 28 143"/>
+                        <path pathLength="1" d="M296 238 344 256 389 235 438 251 474 272"/>
+                        <path pathLength="1" d="M185 388 221 420 206 466 235 507 215 556 198 612"/>
+                        <path pathLength="1" d="M359 406 330 452 344 493 319 532 347 573 360 612"/>
+                        <path pathLength="1" d="M250 260 250 319 221 347 245 389 250 445 250 533"/>
+                    </svg>
+
+                    <div class="energy-core" aria-hidden="true"></div>
+                    <div id="particle-field" class="particle-field" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <h1 class="legacy__title" data-text="A fully automated crypto trading bot">
+                A fully automated crypto trading bot
+            </h1>
+
+            <p class="legacy__intro">
+                To start, <a href="/register">register</a> and check out the
+                <a href="/help-center">Help Center</a>.
+            </p>
+        </section>
+
+        <div class="vignette" aria-hidden="true"></div>
+        <div class="flash" aria-hidden="true"></div>
+        <div class="burst-flash" aria-hidden="true"></div>
+        <canvas id="matrix-rain" class="matrix-rain" aria-hidden="true"></canvas>
+
+        <section class="terminal" aria-label="GSMG shutdown sequence">
+            <p class="terminal__log">
+                <span class="terminal__line" data-command="WARNING: carrier anomaly "><span class="terminal__output"></span></span>
+                <span class="terminal__line" data-command="Trace program: running "><span class="terminal__output"></span></span>
+            </p>
+        </section>
+
+        <section class="finale" aria-labelledby="final-title">
+            <img class="logo finale__logo" src="/img/logo_GSMG_restored.png" alt="" width="500" height="620">
+            <p class="finale__years">2017 — 2026</p>
+
+            <h1 id="final-title" class="finale__title">
+                <span>The lights are off.</span>
+            </h1>
+
+            <p class="finale__copy">
+                Nine years of chaos ended. One mystery remains.
+            </p>
+
+            <a class="finale__link" href="/puzzle">
+                Follow the white rabbit
+                <span class="finale__arrow" aria-hidden="true">→</span>
+            </a>
+        </section>
+
+        <div class="scanlines" aria-hidden="true"></div>
+    </main>
+
+    <script>
+        const stage = document.querySelector("#stage");
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+        const rain = document.querySelector("#matrix-rain");
+        const context = rain.getContext("2d", {alpha: false});
+        const terminalLines = [...document.querySelectorAll(".terminal__line")];
+        const particleField = document.querySelector("#particle-field");
+        const glyphs = "01010101010101010101010101010101010101010101010101010101GSMG.IO5BTCPUZZLECHALLENGE";
+        let drops = [];
+        let rainFrame = 0;
+        let previousFrame = 0;
+        let rainStarted = false;
+
+        function sizeRain() {
+            const scale = Math.min(window.devicePixelRatio || 1, 2);
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            rain.width = Math.floor(width * scale);
+            rain.height = Math.floor(height * scale);
+            rain.style.width = `${width}px`;
+            rain.style.height = `${height}px`;
+            context.setTransform(scale, 0, 0, scale, 0, 0);
+
+            const fontSize = width < 600 ? 16 : 19;
+            const columns = Math.ceil(width / fontSize);
+            drops = Array.from({length: columns}, (_, column) => ({
+                x: column * fontSize,
+                y: -Math.random() * height,
+                speed: .45 + Math.random() * 1.05,
+                fontSize
+            }));
+
+            context.fillStyle = "#020403";
+            context.fillRect(0, 0, width, height);
+        }
+
+        function drawRain(time) {
+            if (time - previousFrame < 38) {
+                rainFrame = requestAnimationFrame(drawRain);
+                return;
+            }
+
+            previousFrame = time;
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            context.fillStyle = "rgba(2, 4, 3, .12)";
+            context.fillRect(0, 0, width, height);
+            context.textAlign = "center";
+
+            for (const drop of drops) {
+                const glyph = glyphs[Math.floor(Math.random() * glyphs.length)];
+
+                context.font = `${drop.fontSize}px monospace`;
+                context.shadowBlur = 10;
+                context.shadowColor = "rgba(76, 255, 112, .85)";
+                context.fillStyle = Math.random() > .9 ? "#effff2" : "#4cff70";
+                context.fillText(glyph, drop.x, drop.y);
+
+                context.shadowBlur = 0;
+                context.fillStyle = "rgba(46, 177, 76, .78)";
+                context.fillText(glyphs[Math.floor(Math.random() * glyphs.length)], drop.x, drop.y - drop.fontSize);
+
+                drop.y += drop.fontSize * drop.speed;
+
+                if (drop.y > height + 120 && Math.random() > .965) {
+                    drop.y = -Math.random() * height * .7;
+                    drop.speed = .45 + Math.random() * 1.05;
+                }
+            }
+
+            rainFrame = requestAnimationFrame(drawRain);
+        }
+
+        function startRain() {
+            if (rainStarted) {return;}
+            rainStarted = true;
+            sizeRain();
+            rainFrame = requestAnimationFrame(drawRain);
+        }
+
+        function wait(milliseconds) {
+            return new Promise(resolve => window.setTimeout(resolve, milliseconds));
+        }
+
+        function createParticles() {
+            const fragment = document.createDocumentFragment();
+            const viewportRadius = Math.hypot(window.innerWidth, window.innerHeight);
+
+            for (let index = 0; index < 110; index += 1) {
+                const particle = document.createElement("span");
+                const angle = Math.random() * Math.PI * 2;
+                const distance = viewportRadius * (.62 + Math.random() * .52);
+
+                particle.className = "particle";
+                particle.style.setProperty("--x", `${Math.cos(angle) * distance}px`);
+                particle.style.setProperty("--y", `${Math.sin(angle) * distance}px`);
+                particle.style.setProperty("--size", `${1 + Math.random() * 3.5}px`);
+                particle.style.setProperty("--delay", `${Math.random() * .32}s`);
+                fragment.append(particle);
+            }
+
+            particleField.append(fragment);
+        }
+
+        async function typeText(line, text) {
+            const output = line.querySelector(".terminal__output");
+            line.classList.add("is-visible", "is-typing");
+
+            for (const character of text) {
+                output.textContent += character;
+                const punctuationPause = ".:…".includes(character) ? 90 : 0;
+                await wait(28 + Math.random() * 31 + punctuationPause);
+            }
+
+            return output;
+        }
+
+        async function runCommand(line) {
+            const command = line.dataset.command.trimEnd();
+
+            await typeText(line, command);
+            await wait(1441);
+            line.classList.remove("is-typing");
+        }
+
+        async function rewriteLine(line, replacement) {
+            const output = line.querySelector(".terminal__output");
+
+            line.classList.add("is-visible", "is-typing");
+            output.textContent = "";
+            await typeText(line, replacement);
+            await wait(1441);
+            output.textContent = "";
+            line.classList.remove("is-typing");
+        }
+
+        async function typeTerminal() {
+            terminalLines[0].classList.add("is-visible", "is-typing");await wait(3400);
+            await runCommand(terminalLines[0]);
+            await rewriteLine(terminalLines[0], "Trace program: running");
+        }
+
+        async function runBinaryfun() {
+            const line = terminalLines[0];
+            const output = line.querySelector(".terminal__output");
+            line.classList.add("terminal__line--grid");
+
+            const failureBox = document.createElement("span");
+            failureBox.className = "system-failure";
+            failureBox.textContent = "SYSTEM FAILURE";
+            line.append(failureBox);
+            const finalGrid = [
+                "0 0 1 1 0 1 0 0 1 0 1 1 0 0",
+                "1 1 1 1 0 0 1 1 1 0 1 0 1 1",
+                "1 1 0 1 1 1 0 1 0 0 1 0 0 1",
+                "0 1 1 0 1 0 0 0 0 1 1 1 0 1",
+                "0 1 1 0 0 0 1 1 0 0 0 1 1 0",
+                "1 0 0 1 1 0 0 0 1 0 0 0 1 1",
+                "1 0 0 1 1 1 0 0 0 1 0 0 0 0",
+                "1 1 1 0 0 0 0 0 0 0 1 0 0 0",
+                "0 0 0 1 1 1 0 1 1 1 1 1 0 1",
+                "1 1 1 1 1 1 0 0 1 1 0 0 0 1",
+                "1 1 0 1 0 0 0 0 0 1 1 0 1 1",
+                "1 1 1 1 0 0 1 0 1 0 1 1 0 0",
+                "0 1 0 1 1 1 0 1 0 0 0 1 1 0",
+                "0 1 1 0 1 1 0 1 1 0 1 0 1 1"
+            ].join("\n");
+
+            function createRandomGrid() {
+                return Array.from({length: 14}, () => Array.from({length: 14}, () => Math.floor(Math.random() * 10)).join(" ")).join("\n");
+            }
+
+            line.classList.add("is-visible");
+            line.classList.remove("is-typing");
+            output.classList.add("terminal__output--grid");
+
+            for (let frame = 0; frame < 80; frame += 1) {
+                output.textContent = createRandomGrid();
+                await wait(50);
+            }
+
+            output.textContent = finalGrid;
+            failureBox.classList.add("is-visible");
+            await wait(2442);
+        }
+
+        function finish() {
+            stage.classList.remove("is-running", "is-ending");
+            stage.classList.add("is-finished");
+        }
+
+        if (reducedMotion.matches) {
+            finish();
+        } else {
+            createParticles();
+            requestAnimationFrame(() => stage.classList.add("is-running"));
+            window.setTimeout(async () => {
+                await typeTerminal();
+                await runBinaryfun();
+
+                startRain();
+                stage.classList.add("matrix-active");
+                await wait(5000);
+                stage.classList.add("is-ending");
+                window.setTimeout(finish, 4100);
+            }, 13950);
+        }
+
+        window.addEventListener("resize", sizeRain, {passive: true});
+        document.addEventListener("visibilitychange", () => {
+            if (document.hidden) {
+                cancelAnimationFrame(rainFrame);
+            } else if (!reducedMotion.matches && rainStarted) {
+                previousFrame = 0;
+                rainFrame = requestAnimationFrame(drawRain);
+            }
+        });
+    </script>
+</body>
+</html>
