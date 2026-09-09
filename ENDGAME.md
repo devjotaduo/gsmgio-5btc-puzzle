@@ -2798,3 +2798,43 @@ mapas diretos e a família straddling inteira sob nulo. O criador reafirmou que 
 laptop escondido, que "close friends" têm a melhor chance e que os 5 BTC "nunca foram o prêmio de
 verdade". A regra de parada (5 famílias negativas com nulo ⇒ esperar insumo novo) continua válida;
 o insumo desta vez chegou, foi consumido e não mudou o mapa.
+
+## Sessão 2026-09-08 (b) — abordagens novas: Decentraland, passphrase-XOR como chave, dbbi/faed como senha
+
+Pedido "tente outras abordagens". Três ângulos distintos dos sweeps anteriores, todos com
+oráculo duro; artefatos em `_work/decentraland/` e `solver/xor_key_attack.py`.
+
+**1. Decentraland (parcela −41,−17) — recuperada da fonte primária e FECHADA.** Baixada do
+catalyst (`peer.decentraland.org/content/entities/scene?pointer=-41,-17`, entity
+`QmRK2YoLei9…`, deploy 2020-02-20, owner `0x5D801b2B…`): `scene.json`, `bin/game.js` (164 KB) e
+`sounds/puzzlepiece.mp3` (212 KB, 5,2 s). O `game.js` desminificado contém o `game.ts` inteiro (via
+sourcemap): **9 cubos** decorativos nas posições `(8,{1,3,4,5,6,6,7,7,7.5},{8,8,8,9,6.75,9.5,7,9,8})`,
+um `AudioSource` que toca o mp3 ao clicar e um `TextShape("GSMG.IO \n5 BTC PUZZLE CHALLENGE")`. Sem
+hash, sem URL, sem `fetch`. **O mp3 é o hint conhecido**: canal MID = ruído de banda larga; canal
+SIDE (L−R) tem a mensagem **pintada no espectrograma na banda 0–300 Hz** = os bytes hex
+`48 41 53 48 54 48 45 54 45 58 54` = **HASHTHETEXT** (já no README como solução do áudio). Espectros
+por canal em `py_SIDE_*.png`. Nada além disso: sem impulsos, sem AM no envelope, sem banda alta.
+- Único subproduto: a assinatura ECDSA do deploy (`0xd0fce2cc…`) e o endereço do deployer
+  `0x5D801b2B0B216790A49898b322246282547b546b` (a carteira ETH do criador em 2020) — não é
+  acionável para o prêmio BTC (curva/uso diferentes) e perseguir identidade é fora de escopo.
+
+**2. "Seven intertwined passwords" como CHAVE AES crua (não senha) — FECHADO.** O XOR provado
+`a795de117e472590e572dc193130c763e3fb555ee5db9d34494e156152e50735` (32 B) é exatamente uma chave
+AES-256. Todos os sweeps o usaram como *senha* via EVP; aqui como `-K` cru contra SMALL/COSMIC/TAIL32
+com 8 IVs (zero, salt‖salt, salt‖zero, ct[:16], sha(key)[:16], key[:16], key[16:], ECB) × K5/K7
+(idênticos, o `matrixsumlist` duplicado cancela): **0**. Como privkey cru, sha256(key) e
+sha256(hexstr): **0**. Controle (blob cifrado por nós com a mesma chave) abre 100%. O header
+`Salted__` do COSMIC já implicava `-pass`, não `-K` — confirmado empiricamente.
+
+**3. `dbbi`/`faed` como o TEXTO que vira senha (não algo a "decodificar") — FECHADO.** O criador deu
+🤐 quando perguntaram se são ingrediente ou decodificáveis (#70325). Testado o mais literal: `dbbi`,
+`faed`, concatenações, formas a1z26 e decimais (g=0), e a transcrição inteira, cada uma crua +
+sha256 hex (lower/upper) + digest, nos 3 blobs × 2 KDF (48 testes): **0 paddings legíveis**;
+sha256(dbbi/faed)→privkey: **0**.
+
+**Veredito da sessão (b):** os três ângulos "novos" que restavam no material fresco estão fechados.
+O áudio da Decentraland era HASHTHETEXT (conhecido); a chave-XOR não é chave de bloco; dbbi/faed não
+são senha literal. Consistente com o resto: o que falta não é uma cifra a quebrar, é a informação que
+o criador guarda ("hidden laptop… the actual answer", "close friends have the best chance", "the 5
+btc was never the actual prize"). Sem um hint oficial novo que NOMEIE a operação/insumo final,
+nenhum sweep adicional tem valor esperado positivo.

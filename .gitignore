@@ -23,3 +23,11 @@ _work/gsmg_live_2026-09/*.ttf
 _work/gsmg_live_2026-09/body_puzzle
 _work/screencast_frames/
 _work/mindmap_*.png
+
+# Decentraland (recuperado do catalyst; mp3=HASHTHETEXT, cena decorativa)
+_work/decentraland/*.mp3
+_work/decentraland/*.wav
+_work/decentraland/*.png
+_work/decentraland/bin__game.js
+_work/decentraland/resp_*
+_work/decentraland/dep_*
