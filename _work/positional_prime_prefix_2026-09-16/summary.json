@@ -1,0 +1,13 @@
+{
+  "finished": true,
+  "cases": 13950,
+  "dominantValues": 27310080,
+  "coveredPairs": "118276063712",
+  "excludedPairs": "118276063712",
+  "unresolvedPairs": "0",
+  "completeExclusion": true,
+  "certificateBytes": 54620160,
+  "elapsedMs": 16338,
+  "casesSHA256": "3ccee8ef16f6e45f42151f89b5e3abe960c92dc3b27bbb191779c416efbd12d6",
+  "certificatesSHA256": "e4d1374fb39c10066ff14bdeffe032a7406536851a5c380a50a6a9c9805dc2c0"
+}

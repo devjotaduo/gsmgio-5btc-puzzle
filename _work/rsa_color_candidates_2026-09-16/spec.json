@@ -1,0 +1,56 @@
+{
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "validSHA256": "9ba1e7f8bd3b01b81ee01923447e28f0530ea99c3d943798ff6e5a353aae6f2d",
+  "formats": [
+    {
+      "name": "hex64",
+      "alphabet": "0123456789abcdefABCDEF",
+      "length": 64,
+      "prefix": []
+    },
+    {
+      "name": "prefixedHex66",
+      "alphabet": "0123456789abcdefABCDEF",
+      "length": 66,
+      "prefix": [
+        "0",
+        "xX"
+      ]
+    },
+    {
+      "name": "WIF51",
+      "alphabet": "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz",
+      "length": 51,
+      "prefix": [
+        "5"
+      ]
+    },
+    {
+      "name": "WIF52",
+      "alphabet": "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz",
+      "length": 52,
+      "prefix": [
+        "KL"
+      ]
+    }
+  ],
+  "orders": [
+    "BE",
+    "LE"
+  ],
+  "fixedSizes": [
+    1,
+    2,
+    3
+  ],
+  "controls": {
+    "planted": 16,
+    "exhaustive": 6
+  },
+  "sources": {
+    "rsa_color_candidates.cjs": "dbc7069cbbb5886b7780d2d98f30cd2409ff311483ec38e318d36ce2eed86e97",
+    "rsa_color_blocks.cjs": "ffc3ed6c6e93fc4503876c2896ae1e6c29a609ce4c72add01b2dcfb805b321d9",
+    "rsa_color_multibyte.cjs": "89481b06eeb43aa3655a3a9ac4901708f282bec08bc0edb1f62be41d4cd54875"
+  },
+  "scope": "Exact format feasibility over all previously ASCII-compatible paths; no spaces, line wrapping or suffixes for key formats. Fixed-size counts allow a shorter final block. Selected passwords are the first previously saved BE witness, plus paths minimizing (controls, nonletters, length) and (nonletters, length, controls), both without a block-size restriction and restricted to two-byte blocks. BE/LE is per block; these samples are not exhaustive plaintext/password enumeration."
+}

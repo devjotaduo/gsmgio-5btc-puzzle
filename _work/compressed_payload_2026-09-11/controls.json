@@ -1,0 +1,18 @@
+{
+  "roundTrips": 9,
+  "blockTypes": [
+    0,
+    1,
+    2
+  ],
+  "planted": 9,
+  "bruteForce": 9,
+  "rejectedIncomplete": 9,
+  "rejectedTrailing": 9,
+  "wrapperRoundTrips": 6,
+  "checksumRejections": 6,
+  "dictionaryControl": true,
+  "dictionarySearchControl": true,
+  "outputLimitIsNotAnExclusion": true,
+  "nodeLimitIsNotAnExclusion": true
+}

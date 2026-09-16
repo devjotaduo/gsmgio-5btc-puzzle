@@ -1,0 +1,213 @@
+{
+  "hypothesis": "The complete integer colour-weight residue family supplies a 14-digit repeating key K of the same decimal width L as C. Decode C+K, C-K, or K-C, either modulo 10^L or as an ordinary nonnegative integer. Every occurrence of any ONE selected source letter independently denotes zero or its a=1..i=9 value. Require all minimal bytes below 128.",
+  "scope": "All blue/yellow integer weights via residues modulo ten; black/white each fixed to zero or one; original row/column sums, both list directions and every cyclic alignment. Both complete fields and both source orders. Sums are reduced modulo ten BEFORE constructing the repeated key; full unreduced sum concatenations are not covered.",
+  "keyConstructions": 22400,
+  "keys": 22038,
+  "keyIDsSHA256": "1d4cdfbe478539747e4bd8c103232d3cbe727c7389051dde049995f60417f1a5",
+  "coefficients": {
+    "rows": [
+      [
+        1,
+        1,
+        5,
+        7
+      ],
+      [
+        2,
+        0,
+        8,
+        4
+      ],
+      [
+        1,
+        0,
+        7,
+        6
+      ],
+      [
+        1,
+        0,
+        6,
+        7
+      ],
+      [
+        1,
+        1,
+        5,
+        7
+      ],
+      [
+        0,
+        2,
+        6,
+        6
+      ],
+      [
+        1,
+        1,
+        4,
+        8
+      ],
+      [
+        1,
+        1,
+        3,
+        9
+      ],
+      [
+        2,
+        0,
+        7,
+        5
+      ],
+      [
+        1,
+        1,
+        8,
+        4
+      ],
+      [
+        0,
+        1,
+        7,
+        6
+      ],
+      [
+        1,
+        0,
+        7,
+        6
+      ],
+      [
+        1,
+        1,
+        6,
+        6
+      ],
+      [
+        2,
+        0,
+        7,
+        5
+      ]
+    ],
+    "columns": [
+      [
+        1,
+        0,
+        7,
+        6
+      ],
+      [
+        2,
+        0,
+        8,
+        4
+      ],
+      [
+        3,
+        0,
+        5,
+        6
+      ],
+      [
+        1,
+        0,
+        9,
+        4
+      ],
+      [
+        1,
+        0,
+        7,
+        6
+      ],
+      [
+        2,
+        0,
+        5,
+        7
+      ],
+      [
+        0,
+        2,
+        3,
+        9
+      ],
+      [
+        1,
+        1,
+        5,
+        7
+      ],
+      [
+        1,
+        0,
+        6,
+        7
+      ],
+      [
+        0,
+        2,
+        5,
+        7
+      ],
+      [
+        2,
+        1,
+        7,
+        4
+      ],
+      [
+        0,
+        1,
+        6,
+        7
+      ],
+      [
+        0,
+        1,
+        6,
+        7
+      ],
+      [
+        1,
+        1,
+        7,
+        5
+      ]
+    ]
+  },
+  "families": [
+    "modulo",
+    "nonnegative"
+  ],
+  "modes": [
+    "add",
+    "subtract",
+    "beaufort"
+  ],
+  "controls": {
+    "brute": 1350,
+    "planted": 204,
+    "plantedByModel": {
+      "modulo/add": 45,
+      "nonnegative/add": 33,
+      "modulo/subtract": 45,
+      "nonnegative/subtract": 24,
+      "modulo/beaufort": 45,
+      "nonnegative/beaufort": 12
+    }
+  },
+  "limits": {
+    "maxNodes": 200000,
+    "maxMs": 1500
+  },
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceSHA256": "2550946208c8486bccfb6ee18f1379a28397db3ee5c5441f7f0eaad1c7d70e79",
+  "helpers": {
+    "color_residue_decimal.cjs": "d5a6917d662b9ec73de697e4d46accbc0b48df16f98853002ef7842882862a41",
+    "zero_decimal_constraints.cjs": "21a6798ea81fedf38d042d29bb3cf9df56fd7a6b65baa8cb22cf8c6c9278ee2c",
+    "decimal_keystream_constraints.cjs": "07a7a6eba6185a490bbfa6f6f0084346318fd37ac132239dfcc6ca9a44824c8e"
+  }
+}

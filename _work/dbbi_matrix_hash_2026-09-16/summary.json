@@ -1,0 +1,18 @@
+{
+  "controls": {
+    "sha256ABC": true,
+    "patternPositive": 2,
+    "patternNegative": 1,
+    "binaryRoundTrips": true
+  },
+  "tokenParsesExamined": 72,
+  "targets": 2,
+  "weightPairs": 2118,
+  "groups": 4236,
+  "hashEvaluations": 525468,
+  "patternComparisons": 1050936,
+  "exactPatternHits": 0,
+  "groupsSHA256": "9d10d8cf36c8cc5afc26c326a8ca8ebd58306422a4b1fbca890837a0f51c82fb",
+  "aesTrials": 0,
+  "finalPasswordFound": false
+}

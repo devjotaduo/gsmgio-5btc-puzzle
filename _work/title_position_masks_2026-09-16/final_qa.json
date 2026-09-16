@@ -1,0 +1,16 @@
+{
+  "completedAt": "2026-09-16T13:31:20.277Z",
+  "hashes": {
+    "controls.json": "36a88adf24c028be6fc2079d833c7a5bd5cebb6be4e829e83070039b2b05e241",
+    "independent_verification.json": "eb979747ce4b466ad1c47d3f8728e704adfe11b406d0db587732323b16abe3d2",
+    "materials.json": "2a769f80a9f042ebc21a12b5f3a35b32570949d8023fa91bdea7b448ca374246",
+    "padding.json": "b9bf9f210f157caeaea7af39637318fec42cc5ca5153838d72ca41ceafa87b1a",
+    "RELATORIO.md": "a8f4f92c22a85be2f61a215e56384adce4dc61233a306c3c951a7c5d861b8ec7",
+    "spec.json": "12a17af17a562c6b8eaa83ffd0259593d216d7a143a72f7575ee31ba3afa4362",
+    "summary.json": "7ac067e3b1015b23ea7746c65a4490f5651b77ce7eb7f738e1f95797de2c8561",
+    "transforms.json": "c7cb4f091a42ed11bdccd9b8698468a081b97c61a8dd23b5485c2c2914a50b2d",
+    "solver/title_position_masks.cjs": "09ec6c531d74e2c4c9b417f1a5510118ca154bf6bf789b9a21ba9fab52dde1f8"
+  },
+  "noActiveProcess": true,
+  "finalPasswordFound": false
+}

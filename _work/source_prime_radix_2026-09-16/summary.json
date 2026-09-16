@@ -1,0 +1,13 @@
+{
+  "controls": {
+    "bruteCases": 150,
+    "plantedCases": 3
+  },
+  "cases": 1836,
+  "completed": 1836,
+  "nodes": 3200,
+  "certificates": 2518,
+  "hits": 0,
+  "aesTrials": 0,
+  "casesSHA256": "b2e1291b4c1d0ddb8cf0be2f4eb92d8294cf9132db12ce6193d1cd909059ca9f"
+}

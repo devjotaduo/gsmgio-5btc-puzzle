@@ -1,0 +1,74 @@
+{
+  "headerCases": 12,
+  "excludedHeaders": 12,
+  "raw": [
+    {
+      "field": "dbbi",
+      "dictionaryLength": 0,
+      "ambiguousDigits": 10,
+      "assignments": "1024",
+      "nodes": 1,
+      "complete": true,
+      "rejectionCertificates": 1,
+      "hits": 0,
+      "pendingAssignments": "0"
+    },
+    {
+      "field": "faed",
+      "dictionaryLength": 0,
+      "ambiguousDigits": 107,
+      "assignments": "162259276829213363391578010288128",
+      "nodes": 7,
+      "complete": true,
+      "rejectionCertificates": 4,
+      "hits": 0,
+      "pendingAssignments": "0"
+    },
+    {
+      "field": "faed",
+      "dictionaryLength": 38,
+      "ambiguousDigits": 107,
+      "assignments": "162259276829213363391578010288128",
+      "nodes": 13,
+      "complete": true,
+      "rejectionCertificates": 7,
+      "hits": 0,
+      "pendingAssignments": "0"
+    }
+  ],
+  "controls": {
+    "roundTrips": 9,
+    "blockTypes": [
+      0,
+      1,
+      2
+    ],
+    "planted": 9,
+    "bruteForce": 9,
+    "rejectedIncomplete": 9,
+    "rejectedTrailing": 9,
+    "wrapperRoundTrips": 6,
+    "checksumRejections": 6,
+    "dictionaryControl": true,
+    "dictionarySearchControl": true,
+    "outputLimitIsNotAnExclusion": true,
+    "nodeLimitIsNotAnExclusion": true
+  },
+  "dictionaryProbes": [
+    {
+      "dictionaryLength": 91,
+      "nodes": 256,
+      "complete": false,
+      "hits": 0,
+      "pendingAssignments": "29943293670234772825895706932409"
+    },
+    {
+      "dictionaryLength": 32768,
+      "nodes": 256,
+      "complete": false,
+      "hits": 0,
+      "pendingAssignments": "162258036471027290806496664485749"
+    }
+  ],
+  "conclusion": "No valid compressed payload in the explicitly tested complete models. No AES candidates derived."
+}

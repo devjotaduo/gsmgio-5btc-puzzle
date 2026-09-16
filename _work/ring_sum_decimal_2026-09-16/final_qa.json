@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-09-16T11:59:33.720Z",
+  "completeBoundedModel": true,
+  "finalPasswordFound": false,
+  "models": 1472,
+  "partitions": 64756,
+  "independentMethod": "residues modulo 10 and 100",
+  "hashes": {
+    "solver/ring_sum_decimal.cjs": "83cb88c6095e4869131646fe0c64e1cb6106907d4c969e025f4c7b35e1638666",
+    "solver/verify_ring_sum_decimal.cjs": "6184a6c2338c0949a8cdb871db29f5dda9d88e71cfd579306055836574c7e0cf",
+    "_work/ring_sum_decimal_2026-09-16/cases.jsonl": "5a7875bd233a57cc6e311d786baeedf0e9f518967ff2e98deefe862fbd012ed7",
+    "_work/ring_sum_decimal_2026-09-16/hits.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "_work/ring_sum_decimal_2026-09-16/independent_verification.json": "56855ef4169d6012db9c9555a543f113149a63004236d2e91e2801211764494e",
+    "_work/ring_sum_decimal_2026-09-16/RELATORIO.md": "d29ed07d93f786c5c5e2687e63af5328d6b03f68b07cd47aed129d3b727621cc",
+    "_work/ring_sum_decimal_2026-09-16/spec.json": "25bbb4ab36f21dd787a3cad5994253f8ae66d22d221bb93df37927c9e3a0087d",
+    "_work/ring_sum_decimal_2026-09-16/summary.json": "533918b6e4fe5dbefd14e8d1f4e1339138b642ebd4399cb0800d7dc3fed5bd64"
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "previousSpecSHA256": "c31c488a81147f8455af6c678ba72f64754a75ff3447e618695559920c4a07ad",
+  "moduli": [
+    {
+      "p": 2,
+      "q": 181,
+      "n": 362,
+      "lambda": 180,
+      "exponentClasses": 48,
+      "family": "RGB prime factors"
+    },
+    {
+      "p": 3,
+      "q": 2,
+      "n": 6,
+      "lambda": 2,
+      "exponentClasses": 1,
+      "family": "RGB prime factors"
+    },
+    {
+      "p": 3,
+      "q": 181,
+      "n": 543,
+      "lambda": 180,
+      "exponentClasses": 48,
+      "family": "RGB prime factors"
+    },
+    {
+      "p": 37,
+      "q": 2,
+      "n": 74,
+      "lambda": 36,
+      "exponentClasses": 12,
+      "family": "RGB prime factors"
+    },
+    {
+      "p": 37,
+      "q": 181,
+      "n": 6697,
+      "lambda": 180,
+      "exponentClasses": 48,
+      "family": "RGB prime factors"
+    },
+    {
+      "p": 9341,
+      "q": 2,
+      "n": 18682,
+      "lambda": 9340,
+      "exponentClasses": 3728,
+      "family": "RGB prime factors"
+    },
+    {
+      "p": 9341,
+      "q": 181,
+      "n": 1690721,
+      "lambda": 84060,
+      "exponentClasses": 22368,
+      "family": "RGB prime factors"
+    },
+    {
+      "p": 47,
+      "q": 23,
+      "n": 1081,
+      "lambda": 506,
+      "exponentClasses": 220,
+      "family": "Prime ordinals of colour counts"
+    }
+  ],
+  "models": [
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "format": "padded"
+    }
+  ],
+  "allowed": [
+    32,
+    101,
+    116,
+    97,
+    111,
+    105,
+    110,
+    115,
+    104,
+    114,
+    100,
+    108,
+    117,
+    99,
+    109,
+    102,
+    119,
+    121,
+    112,
+    118,
+    98,
+    103,
+    107,
+    106,
+    113,
+    120,
+    122,
+    69,
+    84,
+    65,
+    79,
+    73,
+    78,
+    83,
+    72,
+    82,
+    68,
+    76,
+    85,
+    67,
+    77,
+    70,
+    87,
+    89,
+    80,
+    86,
+    66,
+    71,
+    75,
+    74,
+    81,
+    88,
+    90,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    123,
+    124,
+    125,
+    126,
+    9,
+    10,
+    13
+  ],
+  "modes": [
+    "lettersSpace",
+    "ascii"
+  ],
+  "nodesPerSearch": 50000,
+  "controls": {
+    "planted": 12,
+    "exhaustiveSmall": 16
+  },
+  "sourceSHA256": "09112c4e55b962a3fd683e6be6d7c28a66cc8135284bbbe3bde1249f745ac594",
+  "scope": "One ASCII character per modular-power block, all listed invertible exponent classes. Unknown bijection a..i to 1..9, plus zero assigned at any occurrence of at most two letters. Full fields, both source directions, minimal or full-width decimal ciphertext. Exact existence search within declared domain; a reached node cap is UNKNOWN. No multi-character plaintext blocks, arbitrary moduli, transposition or digit deletion."
+}

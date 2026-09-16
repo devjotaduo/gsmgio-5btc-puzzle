@@ -1,0 +1,17 @@
+{
+  "lists": 27,
+  "distinctKeys": 2012,
+  "cases": 24144,
+  "complete": 24144,
+  "nodes": 43538,
+  "certificates": 33841,
+  "candidates": 0,
+  "partial": [],
+  "aesAttempts": 0,
+  "paddings": 0,
+  "controls": {
+    "planted": 36,
+    "bruteForce": 36,
+    "phase32PlaintextSHA256": "b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "sourceSHA256": "f7a29675225a1b2423398b8013db4efcecb3c523f63818fd945c294c20a9d5c4",
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "quadgramSHA256": "d2a64e70154725a0c0d1901690df47c73086e0bfc112ad419aad2eb069f89a43",
+  "baseline": -8.299555782132058,
+  "width": 1024,
+  "models": [
+    {
+      "reverse": false,
+      "alphabetId": 0
+    },
+    {
+      "reverse": false,
+      "alphabetId": 1
+    },
+    {
+      "reverse": false,
+      "alphabetId": 2
+    },
+    {
+      "reverse": false,
+      "alphabetId": 3
+    },
+    {
+      "reverse": true,
+      "alphabetId": 2
+    }
+  ],
+  "alphabets": [
+    " abcdefghijklmnopqrstuvwxyz.,",
+    "abcdefghijklmnopqrstuvwxyz .,",
+    " abcdefghijklmnopqrstuvwxyz.,-'",
+    "abcdefghijklmnopqrstuvwxyz .,-'",
+    " abcdefghijklmnopqrstuvwxyz0123456789",
+    "0123456789abcdefghijklmnopqrstuvwxyz "
+  ],
+  "hypothesis": "The five partial word-concatenation prime-radix FAED models. Each g independently 0/7; all other letters fixed a1..i9. Retain a beam of1024 partial masks at each g. Rank the radix prefix fixed by the entire remaining numeric interval using lowercase letter quadgrams, ignoring separators. Sum minus uniform-quadgram baseline per gram; deterministic lexical-mask tie break.",
+  "limits": "Heuristic ranking only, not proof of optimality, exhaustive coverage or English. One shuffled comparison per model is not a p-value. Only final retained actual-input candidates go to AES; controls/nulls are excluded."
+}

@@ -1,0 +1,29 @@
+{
+  "lists": 46,
+  "keys": 168,
+  "permutations": {
+    "dbbi": {
+      "proposed": 8064,
+      "unique": 6240
+    },
+    "faed": {
+      "proposed": 8064,
+      "unique": 6184
+    }
+  },
+  "cases": 111816,
+  "complete": 111816,
+  "nodes": 357956,
+  "certificates": 234886,
+  "candidates": 0,
+  "partial": [],
+  "passwords": 0,
+  "aesAttempts": 0,
+  "padding": 0,
+  "controls": {
+    "acaColumnar": true,
+    "acaMyszkowski": true,
+    "inversions": 72,
+    "planted": 54
+  }
+}

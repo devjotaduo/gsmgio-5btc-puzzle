@@ -1,0 +1,8 @@
+{
+  "sourceSHA256": "95a0026cf0052ef950fd95cf7486a4b0928ea89a77691773757eb85eedb84044",
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "successorSHA256": "21a6798ea81fedf38d042d29bb3cf9df56fd7a6b65baa8cb22cf8c6c9278ee2c",
+  "hypothesis": "A1..I9. Each occurrence of any ONE selected letter may independently be retained or deleted, and optionally zeroed as declared by allowZero. Complete original DBBI/FAED in both directions, interpreted as one decimal integer. All minimal bytes must be 0..127; no stripping.",
+  "allowZero": true,
+  "maxNodesPerCase": 1000000
+}

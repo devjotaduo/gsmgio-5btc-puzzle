@@ -1,0 +1,13 @@
+{
+  "scope": "Arbitrary permutation of the 14 positional row/column numbers. All other premises match positional_prime_prefix: prime radix, prime colour digits below radix, fixed binary backgrounds, both inner orientations, both field directions, unknown digit bijection and at most two zero aliases. First lines 0/13 reuse independently verified endpoint certificates; all other first lines searched here.",
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "boundsSHA256": "a8536dc55a67dbde4666a4f6364e2d0be433284daab58ecd9f7ddcb47b3c89fc",
+  "endpointSummarySHA256": "a4f8efb9b2eaad3eb837ff38e023f045b20fca68967f6eb0176c1c3e2a92999e",
+  "endpointVerificationSHA256": "5046e8ec3c07aed3a3b6b2a04fb6dc7620a3a8d0b3415de886dc9c77de0407d2",
+  "sources": {
+    "positional_prime_order.cjs": "653ae231d6ff08d539c279f06e3840b7c941c1f4d9e835adf95a1bb24160c6dd",
+    "positional_prime_prefix.cjs": "3995d7d28ec09a72e55295ad7a060cd08aa3d2a4295fc371a085af9de8fdadb7"
+  },
+  "certificateEncoding": "Two uint8 first-conflict positions per dominant prime; 0 references a residual secondary-prime table. In each residual qCodesLE is signed int16: >0 first-number rejection position; -1 full concatenation length is not 570; -2 a route certificate is supplied.",
+  "routeNodeLimit": 100000
+}

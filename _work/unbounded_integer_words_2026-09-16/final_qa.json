@@ -1,0 +1,23 @@
+{
+  "verificationComplete": true,
+  "when": "2026-09-16T10:52:09.816Z",
+  "checks": "18 historical/current case records verified independently; sixteen distinct models, ten complete and six partial; all found-candidate AES flags and scalar comparisons reproduced; known controls passed; hashes and report links checked; JavaScript syntax and scoped git diff whitespace checks passed.",
+  "modelsComplete": 10,
+  "modelsPartial": 6,
+  "activeProcess": false,
+  "hashes": {
+    "spec.json": "79e87177d30b733a45c016eb672319d8a4eb9cf64d486a66d86d9ce085f3f91c",
+    "summary.json": "1c2ecf2498defe70f666816f904ecbd50f1ef4e8055b78ce1d8e23561ad84e05",
+    "candidates.json": "1f5296602313faeb78dcf7c004e0cf0f01a9180d6d613be0631229e2eb01fc3f",
+    "wordcase_spec.json": "1c791a43e2020baedda422d01825a65973479e84e66e1e83c8c4a908644f4ba6",
+    "wordcase_summary.json": "b020d683a496d4c438562320a1ce346f7097e99895d038f8ba579a1afe3d3f64",
+    "wordcase_candidates.json": "9884edb8dc4782e15f00bff6811991cfe1810096ad631f30f5e8bf0df6bcec46",
+    "resume_summary.json": "0c47c72f1c9789a20a0988933ce77210198a25ed22086f438700a07f38924a58",
+    "resume_candidates.json": "e0047ec824bc75a385f4d734fc69a6f137dbc2e844c89d5e2435f08802d2d92b",
+    "latest_summary.json": "7bb593efbf2bbb8b672e0880af3eabe7656a7be096252b19e3e4ca5900de3071",
+    "verification.json": "f2d9cd0afe39ad17b7ec044c0800c11bd7b76c39d9a84db1d1bb07cb0b3a9292",
+    "oracles.json": "163333a4ab2e8d9bd9dddd885d297a6dba6dec404e2918f86ab520d28f24dd5d",
+    "oracle_verification.json": "fe19860a0da435c29ccb51aa6789632cf375769333f1e77494012197872c8b4b",
+    "RELATORIO.md": "ef34922697265ecf7807f24ff52c2bae5a4123fec0d99f4fd71f41f81cbe5535"
+  }
+}

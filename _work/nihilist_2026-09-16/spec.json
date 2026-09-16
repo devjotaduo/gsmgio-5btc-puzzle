@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-09-16T04:10:54.028Z",
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceSHA256": "d3a63240b4fa6250dc66fd438ccac4bab4c06fee774eff58ea4cbdf3e599f62c",
+  "reference": "https://www.cryptogram.org/downloads/aca.info/ciphers/NihilistSubstitution.pdf",
+  "model": "ACA 5x5 Nihilist substitution: C=(P+K) mod 100; P,K in {11..15,21..25,31..35,41..45,51..55}; two decimal digits per ciphertext number.",
+  "scope": "Entire FAED in both symbol orders; all bijections a..i -> 1..9; one chosen symbol may be 0 or its mapped value independently at each occurrence; all periods 1..285; unknown 25-letter square and arbitrary key coordinates.",
+  "reduction": "Every symbol appears in a units position. Unit 1 is impossible, hence the zero alias must map to 1 and all its unit occurrences must be 0. Ciphertext 20 is impossible, so the ordered symbol pair (digit2, zeroAlias) must be absent.",
+  "exclusionLimits": "Not 6x6 squares, untruncated three-digit sums, multiple zero aliases, transposed digits, homophones or binary encodings. DBBI itself has odd digit count and cannot be a complete stream of two-digit ciphertext numbers in this model.",
+  "acceptance": "Numeric compatibility is not English, a recovered password, or authenticated decryption."
+}

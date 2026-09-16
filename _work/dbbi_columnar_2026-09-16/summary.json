@@ -1,0 +1,19 @@
+{
+  "keyConstructions": 16384,
+  "rankKeys": 5694,
+  "proposed": 273312,
+  "permutations": 250400,
+  "overlapWithEarlierPermutations": 0,
+  "newPermutations": 250400,
+  "cases": 2253600,
+  "complete": 2253600,
+  "nodes": 6710826,
+  "certificates": 4482213,
+  "candidates": 0,
+  "partial": [],
+  "passwords": 0,
+  "aesAttempts": 0,
+  "scalarTests": 0,
+  "proposalCommitmentSHA256": "11364c52cccdece51053ecff944b0f9ad8efd6afcef4de41d091bd55960dfa2f",
+  "elapsedMs": 552518
+}

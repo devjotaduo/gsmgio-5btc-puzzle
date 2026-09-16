@@ -1,0 +1,26 @@
+{
+  "complete": true,
+  "when": "2026-09-16T11:09:18.631Z",
+  "checks": "All structural domains, lexical counts/optima, quadgram suffix optima, materials/passwords, every AES flag and scalar point independently verified. JS syntax and scoped whitespace checks passed. No matches. Compatible strings are not all authenticated.",
+  "configurations": 2592,
+  "lexicalCases": 10368,
+  "distinctTestedPasswords": 35328,
+  "activeProcess": false,
+  "hashes": {
+    "spec.json": "7d32b32e1807ff86eabfc6428470bfb4941016e6747e552cd0e85091b3fc0d72",
+    "results.json": "fe7e687b724a9b3cf3f83a20168f0ec3c638537cc068454fdb9d4358f6ecff84",
+    "summary.json": "95a5d2b1e553cb41037a561126d4e49109aeeb0d7718bd9f95b87f286a4ef3e7",
+    "selected.json": "e16c4d27a46033967accce137e6b7cd3c1760aaab81f612ea517ce59a870bb04",
+    "materials.json": "c3d634b381650ded6aae59968af9b0f6d08cdb9e91ffc6202b8bf2b31f784379",
+    "oracles.json": "e076d430177e3b59b91d5294fdb89482aebdebc501352e0e65b052210ca07e59",
+    "verification.json": "e5bb467307084d139a4f0590141ced887d337c61bdce429f703c37a3acfb5014",
+    "quadgrams.json": "74f2de4fe52da286b61befbc374c03a31ce6abead1cc53954192aad69e082aef",
+    "quadgram_materials.json": "8d6e53e471aed6ddd839c602dd6555ce32e15168de45264c3aded46ebd2747cc",
+    "quadgram_oracles.json": "f50098d0dac6243cfb369d77afaf93790754732eceb763c434806fb4b62ebcfa",
+    "quadgram_verification.json": "1bd2ac00ea87cc5da5ca0cc93bf8cd550b2c08a251d2c8a0ea9173389c9f2f0c",
+    "normalized_materials.json": "43ab3af114a6e0936619ec99363e9fec2bcb6edd3c869450ce17276a87ebdb8b",
+    "normalized_oracles.json": "fa9cc645a78379baaebf7784b04e3196cdbc17735fb70225644d0be26a61c248",
+    "normalized_verification.json": "e4410e96255385577d9069880c98be9b4065a359e396aab9d2f80a1302dfff03",
+    "RELATORIO.md": "3bf1b15e85f11c4e8b0df7559245975130ffffb5d8efd0b17753235d300cd90d"
+  }
+}

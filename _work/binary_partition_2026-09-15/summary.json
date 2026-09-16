@@ -1,0 +1,53 @@
+{
+  "hypothesis": "Every symbol has one fixed label 0,1,or deletion. Entire retained sequence, both directions, both bit endiannesses, 7/8-bit printable ASCII+TAB/LF/CR or specified 5-bit Bacon alphabet. Optional zero tail shorter than one code unit.",
+  "maps": 19683,
+  "decodings": 629856,
+  "grammarAcceptances": 32474,
+  "distinctCandidates": 23350,
+  "passwords": 92818,
+  "aesAttempts": 556908,
+  "padding": 2193,
+  "maxPrintable": 0.5822784810126582,
+  "controls": {
+    "formatAndHomophoneControls": 8
+  },
+  "countByMode": {
+    "dbbi/false/bacon26/false": 3624,
+    "dbbi/false/bacon26/true": 3771,
+    "dbbi/false/bacon24/false": 2563,
+    "dbbi/false/bacon24/true": 2760,
+    "dbbi/true/bacon26/false": 3446,
+    "dbbi/true/bacon26/true": 3086,
+    "dbbi/true/bacon24/false": 2440,
+    "dbbi/true/bacon24/true": 2106,
+    "faed/false/bacon26/false": 1156,
+    "faed/false/bacon26/true": 1146,
+    "faed/false/bacon24/false": 691,
+    "faed/false/bacon24/true": 693,
+    "faed/true/bacon26/false": 1100,
+    "faed/true/bacon26/true": 1077,
+    "faed/true/bacon24/false": 668,
+    "faed/true/bacon24/true": 677,
+    "dbbi/false/ascii7/false": 361,
+    "dbbi/true/ascii7/true": 333,
+    "dbbi/false/ascii7/true": 339,
+    "dbbi/true/ascii7/false": 368,
+    "dbbi/false/ascii8/false": 23,
+    "dbbi/true/ascii8/true": 13,
+    "dbbi/true/ascii8/false": 12,
+    "dbbi/false/ascii8/true": 12,
+    "faed/true/ascii7/true": 2,
+    "faed/false/ascii7/false": 1,
+    "faed/false/ascii7/true": 1,
+    "faed/false/ascii8/false": 1,
+    "faed/false/ascii8/true": 1,
+    "faed/true/ascii7/false": 1,
+    "faed/true/ascii8/false": 1,
+    "faed/true/ascii8/true": 1
+  },
+  "sourceSHA256": "e40dcfa412e24c269521a80d49523439c3e71f617701541e0e9946dec1a9bd51",
+  "fieldHashes": {
+    "dbbi": "71fe46259e270c113529dfaded4b59c59a9dffd826a7202ab07fc498b6a2c5ca",
+    "faed": "066191b4aafc114fbca7f0d168382f40129c4ff18490375b689741081d5ef3c2"
+  }
+}

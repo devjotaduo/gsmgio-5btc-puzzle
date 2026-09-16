@@ -1,0 +1,46 @@
+{
+  "lists": 43,
+  "seeds": 2204,
+  "matrixSeeds": 156,
+  "cases": 56640,
+  "complete": 56640,
+  "nodes": 105178,
+  "certificates": 80909,
+  "candidates": 0,
+  "partial": [],
+  "byKind": {
+    "chain-including-seed": {
+      "cases": 14160,
+      "partial": 0,
+      "candidates": 0,
+      "nodes": 23806
+    },
+    "chain-after-seed": {
+      "cases": 14160,
+      "partial": 0,
+      "candidates": 0,
+      "nodes": 29260
+    },
+    "plaintext-feedback": {
+      "cases": 14160,
+      "partial": 0,
+      "candidates": 0,
+      "nodes": 26104
+    },
+    "ciphertext-feedback": {
+      "cases": 14160,
+      "partial": 0,
+      "candidates": 0,
+      "nodes": 26008
+    }
+  },
+  "passwords": 0,
+  "aesAttempts": 0,
+  "padding": 0,
+  "controls": {
+    "acaNumericStream": "23452579772664982037023072537978066",
+    "planted": 108,
+    "bruteForce": 144,
+    "phase32SHA256": "b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34"
+  }
+}

@@ -1,5 +1,13 @@
 # Endgame — SalPhaseIon / Cosmic Duality (estado da resolução)
 
+> **Guia de leitura — revisão integral de 11/09/2026:** este arquivo preserva
+> conclusões históricas incompatíveis entre si. “Validado”, “provado” e “fechado”
+> devem ser lidos com o alcance dos testes e suas correções posteriores. Não há
+> abertura demonstrada de SMALL, TAIL32 ou COSMIC. A leitura das 2.923 linhas
+> anteriores a esta nota recuperou o script original de X e confirmou que ele
+> coincide com a reconstrução local. Ver
+> [reconciliação, fontes e limites](_work/endgame_review_2026-09-11/LEITURA_ENDGAME.md).
+
 Consolidação **verificada** do estado do endgame do puzzle GSMG.IO 5 BTC.
 Princípio: o puzzle **tem solução** — aqui se registra o que é sinal e o que já
 foi refutado, para não repetir becos. Negativos são reportados porque *estreitam*
@@ -642,10 +650,12 @@ Frente ECC (curva elíptica) e re-verificação da cadeia, tudo por oráculo dur
 **(1) ECC direto sobre a chave do prêmio — FECHADO.** O endereço `1GSMG1JC9…` **já gastou**
 (6 inputs em `88cdb3cd…` e `2aa9a4a9…`), revelando a pubkey
 `04f4d1bbd91e65…bf33559` (h160 `a9553269…` = `TARGET_H160`). Extraí `(r,s)` das 6 assinaturas:
-os **6 nonces `r` são distintos → sem reuso de nonce** → recuperação algébrica impossível.
-Só 6 assinaturas ⇒ lattice/nonce-enviesado inviável; ECDLP secp256k1 intacto ⇒ pubkey não
-ajuda. `solver/gsmg_sig_recover.py` (recuperação dos OP_RETURN `GSMGJH`/`GSMGBH`) → 0 matches.
-**Nenhuma rota de curva ajuda; a privkey só sai pela cadeia simétrica.** Ver [[ecc-attack-surface]].
+os seis valores `r` são distintos, portanto não fornecem o ataque usual por
+nonce reutilizado. Isso não demonstra impossibilidade de todo ataque algébrico
+nem identifica o caminho final. **Correção 2026-09-16:** o negativo antigo de
+`solver/gsmg_sig_recover.py` era inválido por erro de API e omissão do cabeçalho
+de `GSMGJH`. A repetição corrigida de 43 mensagens também teve zero correspondências;
+ver [auditoria](_work/signature_audit_2026-09-16/RELATORIO.md).
 
 **(2) Chain1→4 é REAL — validada por derivação nova.** `half` e `better_half` (os dois 32 B
 da matriz Cosmic base-38), usados como **chave privada**, derivam exatamente:
@@ -712,21 +722,25 @@ sha256 de cada) → **0 hits** em `check_privkey`. A cadeia pública é estéril
 3. **Varredura on-chain das 125 txs do prêmio** (nunca documentada aqui): OP_RETURNs são
    ruído de terceiros ("The answer is women", "There is no spoon", "THEMATRIXHASYOU",
    passwords candidatos pulverizados em 2026-02-24). **Achado real:** o endereço
-   **`3GSMG24TujqfMJG1kQoBX18DzJHQLeJYMK` é operacional do criador desde 2020-03**
+   **`3GSMG24TujqfMJG1kQoBX18DzJHQLeJYMK` aparece em transações desde 2020-03**
    (OP_RETURNs "GSMG.io: Right, this is causality", "phase3.2 pass OK", "You are here
    because 227 chars were correct", "Good job, Neo!", "Halving" 2020-05-11 — o dia do
    halving que reduziu o prêmio — e 2021-07-18 **"GSMG.io neighbors, half and double"**
    pagando 5000 sats a 4 endereços: `1G1kRAFR68…`, `16eEXbSuKN8…`, `1KHMK2C8uBpt…`,
-   `1PhXF3xVQ8Sg…`). Essa mensagem de 2021 é um hint primário pouco conhecido:
-   **"neighbors, half and double"** (cf. "HALF AND BETTER HALF").
+   `1PhXF3xVQ8Sg…`). **Correção 2026-09-16:** a autoria dessas mensagens não foi
+   autenticada. A frase **"neighbors, half and double"** não pode ser promovida
+   a hint primário somente por mencionar o puzzle.
 4. **Trilha 1GSMG9VDLTU6 (2026-05-15/16)**: vanity barato (1GSMG = ~minutos; comunidade,
    "ns": "don't believe the spam") enviou 5 OP_RETURNs (`hereismysecret`,
    `leavethematrix`, `isolveditwithanabacus`, `yourlastcommand`, `secondanswer`), depois
    **`GSMGJH`+65 B** (tx `808f812f…`, blk 949653) e **`GSMGBH`+65 B**, e um pointer
    `GSMG WITNESS BLK 949653 TX 808f812f` **para o endereço do prêmio**. Os 65 B têm
    formato de assinatura compacta Bitcoin (header 0x20/0x1f na faixa 27–34).
-   `gsmg_sig_recover.py`: recuperação ECDSA com 45 mensagens candidatas × todos os
-   headers → **0 endereços interessantes recuperados** (sem a mensagem exata, não fecha).
+   **Correção 2026-09-16:** `gsmg_sig_recover.py` tinha 43 mensagens, um argumento
+   de API inválido e o cabeçalho JH ausente. Seu resultado era inválido. A repetição
+   corrigida teve 688 configurações e 344 chaves recuperadas, todas conferidas por
+   verificadores independentes: **zero endereços procurados** nesse conjunto.
+   [Dados, limites e reprodução](_work/signature_audit_2026-09-16/RELATORIO.md).
    Bateria direta: 1195 candidatos (fatias 32 B, XOR JH^BH, sha256 de formas) →
    **0 privkey hits, 0 AES hits**. Veredito: provável cosplay/spam; mesmo se for hint,
    não decodifica sem a mensagem assinada.
@@ -1266,12 +1280,20 @@ documentados antes neste arquivo:**
 - 2023-01-09: **"@barrystyle provided a very specific hint already"** (refere-se
   ao post do barrystyle sobre a imagem/livro "Cosmic Duality", 2022-12-11:
   "you'll see how scary specific that is") + "prime number is very important".
-- Confirmações do criador: mensagens OP_RETURN na blockchain **não são dele nem
-  parte do puzzle** ("Correct", 2023-08-29); SHA256 do texto da fase 1 confirmado
+- Confirmações do criador: as mensagens na blockchain discutidas em agosto de 2023
+  **não eram dele nem parte do puzzle** ("Correct", 2023-08-29, resposta #12653
+  à #12580); isso não determina a autoria de posts posteriores. SHA256 do texto da fase 1 confirmado
   com "the author is a bit picky what he considers to be text" ("Good point");
   "Has anyone passed the salvation part?" → **"Partly"** (2023-08-06).
 
 ## Sessão 2026-08-30 — hint confirmado: p.39 "Le Miroir de la Vie et de la Mort" + oráculo-espelho (0 solves, 1 gap fechado)
+
+> **Correção de proveniência, 11/09/2026:** o anexo #8310 ao qual o criador
+> respondeu foi recuperado: é a **capa de Cosmic Duality com um yin-yang**, não
+> a página 39. O parêntese “Cosmic Duality Book Page — Life and Death” abaixo
+> aparece na compilação de Diego Schmidt (#43344), mas está ausente da mensagem
+> original do criador (#8328). Portanto, a página e o poema não são uma indicação
+> explícita dele. Ver [evidência e nova prioridade](docs/notes/ANALISE_PRIORIDADES.md).
 
 **Evidência primária NOVA (mineração própria do `result.json`, via citação de
 Diego Schmidt 2025-06-13):** Jrk Bgrt, **2023-01-08**: *"@barrystyle, provided
@@ -1416,6 +1438,15 @@ ser **uma gramática derivável dos tokens** (como SMALL=concat e COSMIC=XOR),
 ainda não encontrada.
 
 ## Sessão 2026-08-31 — candidato DBBI/FAED: `SEND THE BLUE TO SET HEX`
+
+> **Atualização de fonte, 11/09/2026:** o arquivo original `dbbi_sum_faed.py`
+> foi recuperado do export de Downloads: X, #63518, 22/05/2026, 1.899 bytes.
+> Sua matriz e suas três saídas coincidem exatamente com `blue_net_attack.py`.
+> A pendência histórica de código ausente está encerrada. Isso confirma a
+> reprodução, não a interpretação criptográfica dos fragmentos. Ver
+> [verificação](_work/endgame_review_2026-09-11/original_script_check.json).
+> O teste posterior que exclui `dbbi` como somas de pares de 14 valores não
+> exclui esta outra receita, que usa `dbbi` como pesos e depois soma as arestas.
 
 Um script compartilhado no Telegram por **X** em 2026-05-22 (mensagens 63504–63520,
 cópia pública em [Ideone fZkIsw](https://ideone.com/fZkIsw)) revelou um checkpoint
@@ -2012,9 +2043,18 @@ exatamente 0,00 ou 1,00; as sete restantes, todas no centro, dão valores interm
 
 O centro contém o **desenho de um coelho branco em resolução de 5 px** (orelhas, olho, corpo, cauda)
 que atravessa a grade de 25 px — o "white rabbit" do título da imagem. Não é dado binário de célula. A matriz de bits real é a do README, com
-**101 uns**. Descarte todo raciocínio construído sobre "102 uns", "espiral 193 é primo", "cauda
-central 0100" e "91 zeros nos índices 0..191". O bitmap do pictograma (270 bits) foi testado como
+**101 uns**. Descarte todo raciocínio construído sobre "102 uns", "espiral 193 é primo" e "cauda
+central 0100". O bitmap do pictograma (270 bits) foi testado como
 bits, bytes, decimal, SHA-256 e chave privada: negativo.
+
+**Correção de escopo em 16/09/2026:** os índices espirais `0..191` têm,
+de fato, **91 zeros e 101 uns**, os 24 bytes de `gsmg.io/theseedisplanted`.
+Os quatro bits centrais são zero; a matriz completa tem **95 zeros**.
+A diferença entre a matriz antiga e a atual fica somente em `[7,6]`,
+índice espiral 193, fora desse trecho. Portanto, ela não invalida a
+distribuição de DBBI nas 91 células zero da região da URL. A redação
+anterior deste parágrafo rejeitava também essa contagem correta.
+[Comparação das matrizes e testes subsequentes](_work/zero_cells_prime_sums_2026-09-16/RELATORIO.md).
 
 ### 4. O TAIL32 é real, nunca foi aberto, e agora está esgotado no vocabulário conhecido
 
@@ -2332,6 +2372,12 @@ Resultado: **0 hits duros**. Os 2.084 paddings válidos coincidem quase exatamen
 `_work/new_approach_claude/g_ambiguity_matrixsum_attack.json`.
 
 ## Sessão 2026-09-04 (b) — varredura do Telegram Desktop pós-export e o "YOUWON" da comunidade
+
+> **Ressalva de contexto, 11/09/2026:** “Pfff. Coincidence.” (#70307) não tem
+> `reply_to_message_id`. A conversa imediatamente anterior trata da numerologia
+> derivada por Diego Schmidt (#70303, incluindo 13224), não de uma pergunta
+> isolada sobre o YOUWON original. Não tratá-la como refutação formal desse
+> fragmento pelo criador; preservar separadamente os testes negativos abaixo.
 
 O export `result.json` termina em 2026-07-08. O grupo foi lido diretamente no Telegram Desktop
 (filtro "From: Jrk Bgrt"); o criador voltou em **12/07, 16/07 e 01/09/2026**. Transcrição das
@@ -2750,7 +2796,7 @@ tokens com 16 códigos distintos** = forma de um SHA-256 em hex sob substituiç�
 - **Straddling checkerboard** (a MESMA família provada na 3.2.2, escapes 1 e 4): sob `b/g`, `faed`
   dá **451 tokens com exatamente 25 símbolos** — capacidade cheia de um tabuleiro 7+9+9 = alfabeto
   de 25 letras. Hill-climb de substituição (quadgramas, `solver/straddle_bg_attack.py`) com controle
-  no mesmo tamanho (**100 % de recuperação** em 451 caracteres de inglês): `faed` não sai
+  de **387 caracteres**, não 451 como antes anunciado (correção 2026-09-16): `faed` não sai
   (`OTENDEENOAXTPIDATNAOENN…`). Varredura completa (`solver/straddle_sweep.py`): **todos** os
   conjuntos de escape de 1–3 dígitos (99 para `dbbi`, 37 para `faed`) com nulo casado de 8
   embaralhamentos → `dbbi` −0,0558 vs nulo-máx −0,0546, `faed` −0,0105 vs −0,0103: **dentro do
@@ -2804,7 +2850,7 @@ o insumo desta vez chegou, foi consumido e não mudou o mapa.
 Pedido "tente outras abordagens". Três ângulos distintos dos sweeps anteriores, todos com
 oráculo duro; artefatos em `_work/decentraland/` e `solver/xor_key_attack.py`.
 
-**1. Decentraland (parcela −41,−17) — recuperada da fonte primária e FECHADA.** Baixada do
+**1. Decentraland (parcela −41,−17) — fonte primária recuperada; mensagem conhecida confirmada.** Baixada do
 catalyst (`peer.decentraland.org/content/entities/scene?pointer=-41,-17`, entity
 `QmRK2YoLei9…`, deploy 2020-02-20, owner `0x5D801b2B…`): `scene.json`, `bin/game.js` (164 KB) e
 `sounds/puzzlepiece.mp3` (212 KB, 5,2 s). O `game.js` desminificado contém o `game.ts` inteiro (via
@@ -2813,7 +2859,9 @@ um `AudioSource` que toca o mp3 ao clicar e um `TextShape("GSMG.IO \n5 BTC PUZZL
 hash, sem URL, sem `fetch`. **O mp3 é o hint conhecido**: canal MID = ruído de banda larga; canal
 SIDE (L−R) tem a mensagem **pintada no espectrograma na banda 0–300 Hz** = os bytes hex
 `48 41 53 48 54 48 45 54 45 58 54` = **HASHTHETEXT** (já no README como solução do áudio). Espectros
-por canal em `py_SIDE_*.png`. Nada além disso: sem impulsos, sem AM no envelope, sem banda alta.
+por canal em `py_SIDE_*.png`. Essas inspeções não identificaram outra mensagem no sinal.
+Isso não constitui uma exclusão geral de esteganografia. A auditoria do contêiner em
+2026-09-16, descrita no fim deste arquivo, delimitou separadamente metadados e áreas não alocadas.
 - Único subproduto: a assinatura ECDSA do deploy (`0xd0fce2cc…`) e o endereço do deployer
   `0x5D801b2B0B216790A49898b322246282547b546b` (a carteira ETH do criador em 2020) — não é
   acionável para o prêmio BTC (curva/uso diferentes) e perseguir identidade é fora de escopo.
@@ -2838,3 +2886,1624 @@ são senha literal. Consistente com o resto: o que falta não é uma cifra a que
 o criador guarda ("hidden laptop… the actual answer", "close friends have the best chance", "the 5
 btc was never the actual prize"). Sem um hint oficial novo que NOMEIE a operação/insumo final,
 nenhum sweep adicional tem valor esperado positivo.
+
+## Sessão 2026-09-11 — teste exaustivo condicional de g→0/7
+
+**Resultado: não resolvido.** Nenhuma nova senha nem chave do endereço-prêmio foi
+encontrada. O negativo abaixo é uma exclusão de um modelo específico; não prova
+que falte informação pública, que o criador precise intervir, ou que todas as
+cifras possíveis tenham sido descartadas.
+
+### Fonte e controles
+
+A página final foi baixada novamente por HTTPS: 4.536 bytes, SHA256
+`a83d3de7810f26b19b4965339b76d403e44f6b6877e5d7de2555480ca1779d77`,
+idêntica à cópia local de 08/09. Fontes extraídas: `dbbi` 91 símbolos,
+`faed` 570; ciphertexts SMALL/TAIL32 com 80 bytes cada e COSMIC com 1.328.
+O self-test de `gsmg_common.py` passou. A fase 3.2 foi decifrada novamente com
+`SHA256(jacquefrescogiveitjustonesecondheisenbergsuncertaintyprinciple)`:
+EVP-SHA256 recupera o início publicado e padding válido; EVP-MD5 não.
+Isso confirma o controle conhecido, sem estabelecer o KDF dos blobs não abertos.
+
+### Hipótese → algoritmo → resultado
+
+**Hipótese explícita:** cada `g` representa, independentemente, 0 ou 7;
+os demais símbolos mantêm `a=1,…,i=9`. A sequência decimal inteira é convertida
+em bytes big-endian mínimos pelo método decimal→hex da própria página.
+Os testes anteriores escolheram máscaras; este teste cobre todas as escolhas
+sob duas restrições de saída: (1) ASCII imprimível mais TAB/LF/CR;
+(2) qualquer byte de 7 bits, inclusive todos os caracteres de controle.
+
+O algoritmo usa inteiros exatos. Em cada ramo, os `g` ainda indefinidos delimitam
+um intervalo mínimo/máximo. Calcula-se o menor inteiro desse intervalo cujos
+bytes pertencem ao alfabeto permitido. Se ele ultrapassa o máximo, nenhum
+descendente pode servir, e o ramo inteiro é descartado. Não há amostragem nem
+heurística de inglês. O limite de nós não foi atingido em nenhum caso.
+
+Leituras examinadas: `dbbi`, `dbbi[4:]`, `faed`, `faed[4:]`, as duas metades de
+285 símbolos, os símbolos pares e os ímpares de `faed`, cada uma também com
+a ordem de símbolos invertida: **16 leituras × 2 restrições, zero candidatos**.
+Os cortes e reversos são hipóteses auxiliares, não operações confirmadas do puzzle.
+
+Uma prova curta explica o caso mais importante. Para `faed` inteiro, todas as
+`2^107` escolhas estão entre números cujos bytes começam por
+`1bd4b0e6ea00079f…` e `1bd5951d3c34f95f…`. Portanto, o segundo byte é sempre
+`d4` ou `d5`: jamais ASCII de 7 bits. Em `dbbi`, os limites começam por
+`21380d6646a1dd3f…` e `21380d6646de5143…`; o sexto byte está sempre entre
+`a1` e `de`, também fora de ASCII. Isso independe da máscara de primos, cores
+ou matriz que se escolha para decidir quais `g` zerar.
+
+**Validação:** comparação com enumeração completa de cinco padrões pequenos nas
+duas restrições; testes independentes do sucessor de inteiros; recuperação de
+uma mensagem-controle com **59 posições ambíguas** entre `2^59` escolhas
+(o controle também admite duas variantes ASCII no final, distinguíveis pelo
+texto conhecido). Uma implementação independente enumerou as 1.024 escolhas
+de `dbbi` e confirmou zero saídas de 7 bits.
+
+Reprodução, sem dependências externas:
+
+```powershell
+node solver/zero_decimal_constraints.cjs
+```
+
+Código: [`solver/zero_decimal_constraints.cjs`](solver/zero_decimal_constraints.cjs).
+Relatórios locais: `_work/session_2026-09-11/zero_decimal_constraints.json` e
+`independent_checks.json`. **Limites:** não cobre UTF-8 com bytes altos, material
+binário, cabeçalhos removidos após a conversão, outros mapas símbolo→dígito,
+outras transposições, nem conversão em blocos de outros tamanhos. Não é uma
+refutação geral da pista de “zerar caracteres”. Nenhum candidato passou a ser
+testado em AES porque não houve saída que atendesse às restrições declaradas.
+
+### Atualização pública
+
+A discussão pública foi conferida até a mensagem de 11/09 às 01:43 UTC.
+Na [issue #99](https://github.com/puzzlehunt/gsmgio-5btc-puzzle/issues/99#issuecomment-5628153255),
+um participante voltou a alegar solução, mas ainda prometia apresentar uma
+assinatura; a alegação não veio acompanhada de prova verificável nessa consulta.
+Ela não altera o estado local. Tampouco se pode concluir, só pela ausência de
+prova pública, que ninguém possua a solução em privado.
+
+## Sessão 2026-09-11 — receita original de X: azul, primos e hexadecimal
+
+Após recuperar `dbbi_sum_faed.py` (#63518, X, 22/05/2026), foram testadas
+consequências novas da leitura comunitária `SEND THE BLUE TO SET HEX`.
+**Nenhuma abertura validada de SMALL, TAIL32 ou COSMIC.**
+
+1. As posições azuis por linhas/base 1 viram
+   `061119242f3a5863767e81a3aab9c1` em hex. Deduplicando por primeira
+   ocorrência e acrescentando o único dígito ausente, `d`, obtém-se
+   `061924f3a587ebcd`. Usar esse alfabeto nos 64 tokens/16 tipos da leitura
+   `b/g` de `dbbi`, com 144 variantes declaradas: 864 senhas, negativo.
+2. Os primos azuis `17,47,163,193`, reduzidos por `(p-1)%9+1` como no
+   script de X, dão **`8,2,1,4`**: quatro pesos binários. As somas de
+   subconjuntos fornecem o alfabeto `082a193b4c6e5d7f`. Todas as 24
+   ordens dos pesos × três ordens de tipos × dois sentidos dos tokens:
+   outras 864 senhas, negativo. A igualdade é real; sua intenção não foi
+   confirmada. O `163` por linhas é diferente do `163` espiral do pixel
+   `FEFEFE`.
+3. As somas, os XORs brutos e seus restos/quocientes antes da conversão
+   em letras de X geraram 17 listas, 81 materiais e 162 senhas: negativo.
+4. Os 288 hashes mapeados também foram inseridos na hipótese
+   `SHA256(dbbi + matriz + faed + últimas_palavras)`: 3.456 senhas,
+   negativo. Só cobre matriz total/linhas/colunas, `faed` literal ou
+   `a=1..i=9`, e `to` ou a oração iniciada por `reinserting` antes de
+   `SELECT`; essas interpretações não estão resolvidas.
+
+**Total:** 5.346 senhas distintas, 32.076 tentativas nos três blobs
+originais com EVP-SHA256/MD5, 129 paddings válidos, zero correspondências
+com a chave alvo ou sua negação. O máximo de ASCII foi 50,63%; nenhum
+dos formatos binários examinados validou as saídas. Os dois falsos
+marcadores gzip encontrados falharam na descompressão.
+
+Controles incluem a fase 3.2 original, 12 mensagens AES binárias e a
+chave pública conhecida do escalar 1. A conferência cruzada reproduziu
+todas as tentativas, positivas e negativas, e os plaintexts completos.
+Padding continua sendo apenas triagem. Estes resultados não refutam
+toda a receita de X, nem as pistas de cores/primos.
+
+Código: [`blue_hex_constraints.cjs`](solver/blue_hex_constraints.cjs),
+com opção `--prime-bits`, e
+[`verify_blue_hex.cjs`](solver/verify_blue_hex.cjs).
+Fórmulas, candidatos, pré-imagens e limites no
+[relatório](_work/blue_hex_2026-09-11/RELATORIO.md).
+
+A prioridade permanece **SalPhaseIon → SMALL**. Para avançar este ramo,
+falta deduzir das pistas o mapa dos tokens e o papel de `faed`; ampliar
+ordens de substituição sem essa ligação repetiria a mesma incerteza.
+
+## Sessão 2026-09-11 — mapa comum, ASCII 127 e bases primas
+
+**Sem abertura validada.** A fala sobre ASCII 127 foi localizada no export:
+Jrk Bgrt, #32613, 29/11/2024, respondendo à pergunta de ArchOptic (#32600)
+sobre qual personagem imaginar. X relacionou a fala a DEL na #32615, mas
+já registrara a mesma interpretação na #25419, em 06/05/2024. A origem
+da frase está confirmada; ela não especifica uma base numérica ou quais
+caracteres apagar/zerar. Contexto preservado no relatório abaixo.
+
+Os 36 pares de prefixos foram examinados na leitura gulosa original.
+Apenas `b/g` fornece 64 tokens/16 tipos em DBBI; os mesmos prefixos dão
+451 tokens/25 tipos em FAED. Isso exclui os dois campos como hexadecimal
+sob **uma única substituição bijetiva compartilhada**, sem excluir
+alfabetos ou funções diferentes para cada campo.
+
+Outra hipótese usou o inteiro decimal completo com `a=1..i=9`, permitindo
+cada `g` como 0 ou 7, convertido para dígitos em bases primas e depois
+ASCII direto. Foram examinados todos os 55 primos até 257, aceitando
+somente 32–126, TAB, LF e CR. As 55 bases de DBBI e 54 de FAED foram
+excluídas integralmente nesse modelo. **FAED/base127 continua parcial**:
+3.932.596 nós acumulados, ponto de retomada salvo, 177 candidatos ASCII
+de 271 caracteres. ASCII foi imposto como restrição, não descoberto
+como evidência de mensagem intencional.
+
+Esses 177 candidatos geraram 1.416 senhas distintas e 8.496 tentativas
+AES nos três blobs com EVP-SHA256/MD5. Houve 28 paddings válidos, nenhuma
+abertura validada e zero correspondências em 206.556 testes distintos
+de escalares contra o alvo ou sua negação. Um segundo verificador
+reproduziu todas as tentativas AES, inclusive falhas e plaintexts completos.
+
+Também foram excluídas todas as 1.024 máscaras de remoção/manutenção de
+`g` em DBBI nas 55 bases primas e na base 256; elas representam 576
+inteiros distintos. Doze máscaras determinísticas para FAED/base127,
+derivadas de primos ou bits da matriz, tampouco geraram ASCII completo.
+Esses resultados não excluem dados binários nem transformações diferentes.
+
+O [relatório desta sessão](_work/shared_numeric_2026-09-11/RELATORIO.md)
+reúne a fonte primária, os limites de cada exclusão, a triagem de fatores,
+os candidatos e os controles. Código: [`prime_radix_constraints.cjs`](solver/prime_radix_constraints.cjs)
+com `--resume` para continuar a busca parcial, e
+[`verify_prime_radix.cjs`](solver/verify_prime_radix.cjs) para conferir o
+conjunto já testado. Nenhum processo ficou executando em segundo plano.
+
+## Sessão 2026-09-11 — execução do plano: dependências da receita de X
+
+**Nenhuma abertura validada.** Foram executados os controles previstos no
+[plano](docs/notes/PLANO_PROXIMA_ETAPA.md): 5.288 alterações unitárias de símbolos e
+135 trocas entre uma célula azul e uma amarela. As 602.832 previsões de
+posição de saída concordaram com o recálculo; as funções originais de X
+confirmaram todas as alterações e trocas.
+
+Os fragmentos `SENDTHE`, `BLUE` e `TOSETHEX` dependem somente das linhas
+10–19 de FAED: 420 das 570 posições não entram nessas palavras. Das
+alterações unitárias, 48 em DBBI e 3.361 em FAED preservam os fragmentos;
+oito trocas de cores também os preservam. As três saídas completas são
+um critério diferente: nenhuma troca de cores as preserva, enquanto três
+alterações unitárias em FAED ficam escondidas pela transformação.
+
+Foi construída uma colisão que modifica quatro posições de DBBI e 442 de
+FAED, conservando as duas chaves, as duas listas de somas e todas as saídas.
+O posto das restrições lineares de DBBI é 22 para 91 pesos quando ambas
+as chaves são consideradas. Esses resultados medem a perda de informação
+das somas; **não provam que a receita seja falsa**.
+
+Três modelos delimitados foram implementados: OR dos valores zerados
+`1,2,4,8` como dígito hex; ocupação das quatro colunas `2,6,13,14` como
+quatro bits; e aplicação simultânea das duas zeragens de X. Os 11 materiais
+foram testados via SHA256, isoladamente ou com as somas de DBBI e duas
+extrações documentadas das últimas palavras. **55 senhas, 330 testes AES,
+um padding válido e zero correspondências em 7.769 testes de escalares.**
+A execução independente reproduziu os candidatos, todos os testes AES,
+o plaintext completo e as verificações de chave.
+
+O roteiro de 27/10/2001 foi consultado nas páginas digitalizadas: a fala
+sobre Hope ocorre depois de Neo começar a ir à porta esquerda. Isso limita
+sua interpretação como fala anterior à escolha nessa versão, sem excluir
+outros papéis. As quebras de linha do README não foram usadas como pista.
+
+O [relatório da execução](_work/recipe_audit_2026-09-11/RELATORIO.md) reúne
+as fontes, as dependências, os modelos e seus limites. Código:
+[`recipe_dependency_audit.cjs`](solver/recipe_dependency_audit.cjs) e
+[`recipe_consequences.cjs`](solver/recipe_consequences.cjs). SMALL permanece
+o alvo principal; novas variações de alfabetos de X ficam rebaixadas até
+surgir uma consequência independente. FAED/base127 não foi retomado.
+
+## Sessão 2026-09-11 — pista imprevista, somas e fatores primos
+
+**Nenhuma decifração nova.** A resposta #6509, de 14/03/2021, aponta para
+uma dica anterior sem identificá-la. O contexto recuperado contém dois
+antecedentes plausíveis: primos (#5966/#5969, 01/03) e `Infrared` (#6250,
+05/03). As propostas específicas de 2, 3, 5, 7, XOR e soma vieram de
+participantes. Isso não as torna instruções do criador.
+
+Foi invertido um modelo direto: um inteiro fixo por cor, células restantes
+com os bits originais/invertidos/zero, somas de 14 linhas ou colunas e
+concatenação decimal mínima, com 0 e 7 codificados por `g`. Os 24 casos
+foram excluídos para **todos os inteiros maiores ou iguais a 2**. Somas
+repetidas exigem trechos repetidos; o maior trecho repetido tem comprimento
+4 em DBBI e 5 em FAED. Isso limita os valores e o comprimento possível da
+saída, que fica abaixo de 91/570. Não é uma busca com teto de primos.
+
+Mais 90 casos foram concluídos: valores posicionais binários para DBBI,
+28 somas de linhas e colunas, e os grupos da espiral original. Nenhum
+reproduziu um campo completo. O teste adicional de `N*p` e `N/p`, para
+os 44 primos até 196, concluiu 176 casos sem saída inteiramente de sete
+bits. Limites sobre divisão, produto, soma, diferença e XOR de FAED com
+DBBI também forçam bytes maiores que 127, para todas as máscaras `g→0/7`.
+
+Os programas passaram por controles plantados e enumeração limitada; uma
+implementação independente reconstruiu os perfis, conferiu os limites e
+as buscas. Essas exclusões não abrangem o uso das somas como chave,
+fatores primos fora da faixa declarada ou saídas binárias.
+
+[Relatório com fontes, escopos e reprodução](_work/matrix_hint_2026-09-11/RELATORIO.md).
+Código: [`color_sum_constraints.cjs`](solver/color_sum_constraints.cjs),
+[`color_sum_extended.cjs`](solver/color_sum_extended.cjs) e
+[`prime_scale_constraints.cjs`](solver/prime_scale_constraints.cjs).
+Não foram geradas novas senhas AES nesta rodada. A transformação pretendida
+de `matrixsumlist` permanece desconhecida; SMALL continua a prioridade.
+
+## Sessão 2026-09-11 — DBBI/FAED como dados compactados
+
+**Implementado e executado; nenhuma saída válida recuperada.** O modelo
+interpreta o campo original inteiro como decimal, com cada `g` podendo
+ser 0 ou 7, e converte o número em bytes mínimos big-endian. A saída da
+descompactação pode ser binária; não existe filtro ASCII nesta rodada.
+
+Os cabeçalhos zlib, gzip, ZIP, bzip2, XZ e 7z são incompatíveis com o
+primeiro byte fixo de DBBI (`21`) e de FAED (`1B`): 12 exclusões completas.
+DEFLATE sem cabeçalho e sem dicionário também é impossível: DBBI contém
+comprimento/complemento incompatíveis; FAED começa tentando copiar bytes
+anteriores inexistentes. Quatro prefixos cobrem todas as `2^107` máscaras
+de FAED. Não se enumeraram fisicamente todos esses arquivos.
+
+Como hipótese adicional, DBBI poderia servir de dicionário. Sua conversão
+decimal mede sempre 38 bytes. FAED continua inválido com qualquer conteúdo
+de dicionário até esse tamanho; sete ramos cobrem todas as máscaras.
+Dicionários de 91 e 32.768 bytes receberam sondagens de 256 nós cada,
+ambas **incompletas**. Seus estados pendentes foram preservados.
+
+O solucionador recuperou os controles de blocos armazenados, Huffman fixo
+e dinâmico, e rejeitou truncamentos, bytes excedentes e checksums alterados.
+Um segundo programa lê diretamente os bits dos blocos armazenados/fixos,
+confere os limites decimais e a cobertura sem sobreposição. Ele confirmou
+12 certificados dos modelos completos e os ramos eliminados das sondagens
+parciais, além de enumerar as 1.024 máscaras de DBBI separadamente.
+
+Código: [`compressed_payload_constraints.cjs`](solver/compressed_payload_constraints.cjs)
+e [`verify_compressed_payload.cjs`](solver/verify_compressed_payload.cjs).
+[Relatório, resultados e reprodução](_work/compressed_payload_2026-09-11/RELATORIO.md).
+Não houve material novo para derivar senhas AES. A exclusão não abrange
+todos os algoritmos de compressão, dicionários maiores, outros mapas/bases
+nem bytes removidos ou reordenados.
+
+## Sessão 2026-09-15 — qual símbolo pode ser zerado?
+
+**Não resolvido.** A pista #8000 não identifica os caracteres a zerar. Foi
+generalizado o teste anterior `g→0/7`: cada um dos nove símbolos `a..i`,
+isoladamente, pode valer zero ou seu dígito original em cada ocorrência.
+Os demais símbolos mantêm `a=1..i=9`. DBBI/FAED completos, originais e
+invertidos, são convertidos de decimal para bytes, exigindo todos menores
+que 128, inclusive controles.
+
+Os **36 casos foram excluídos integralmente**: 144 nós de busca e 90
+certificados de intervalos, sem candidatos ou ramos pendentes. Os quatro
+casos com `g` reproduzem a conclusão anterior. Zeros iniciais estão incluídos;
+inverter apenas os bytes não modifica a exclusão de texto de sete bits.
+
+Controle: 54 comparações exaustivas em entradas pequenas, 27 recuperações
+de mensagens plantadas e contabilização de busca interrompida. Um segundo
+programa, que não importa o buscador, conta os inteiros admissíveis em cada
+intervalo e confirma os limites, a ausência de sobreposição e a cobertura
+total. Passaram os 90 certificados, 65.536 controles pequenos e 600 controles
+de mudança de comprimento.
+
+Não surgiram senhas para testar em AES. A exclusão não abrange múltiplos
+símbolos ambíguos simultâneos, outras bases/mapas, listas, remoções, inserções
+ou camadas adicionais. FAED/base127 continua com o estado parcial anterior.
+
+Código: [`zero_symbol_constraints.cjs`](solver/zero_symbol_constraints.cjs)
+e [`verify_zero_symbol.cjs`](solver/verify_zero_symbol.cjs).
+[Relatório, limites e reprodução](_work/zero_symbol_2026-09-15/RELATORIO.md).
+
+## Sessão 2026-09-15 — continuação: listas, chaves periódicas e nove símbolos
+
+**Sem senha final ou decifração final validada.** A investigação acrescentou
+cinco famílias explícitas, preservando as entradas verbatim de DBBI/FAED e
+os três blobs originais. Os números abaixo são os modelos efetivamente
+executados, não uma alegação de esgotar todas as interpretações do puzzle.
+
+| Família | Espaço concluído | Resultado |
+|---|---:|---|
+| Listas da matriz, aritmética decimal por dígito | 2.012 chaves; 24.144 casos | Zero saídas inteiras em bytes de sete bits |
+| Listas/cores, aritmética decimal com transportes | 3.326 chaves; 39.912 casos | Zero saídas; 1.600 pré-imagens adicionais testadas em AES sem validação |
+| Todas as chaves decimais de comprimentos 1–6 em FAED | 4.444.440 combinações de chave/direção/operação | Zero saídas e zero casos pendentes |
+| Morbit/Pollux diretos, todas as substituições | 1.530.252 decodificações | Zero Morbit; 12 Pollux sem consequência validada |
+| Mapas fixos para 0/1/remoção, ASCII/Bacon | 629.856 decodificações | 23.350 saídas distintas; nenhuma abertura AES validada |
+
+As famílias decimais cobrem todas as escolhas independentes de `g=0/7`;
+exigem conversão do inteiro decimal para bytes mínimos big-endian menores
+que 128. As listas incluem cores, somas, posições e pesos primos declarados
+nos arquivos `spec.json`. Espectro e código de resistores são hipóteses de
+numeração das cores, não instruções confirmadas pelo criador.
+
+Os candidatos produzidos pelas três famílias com senhas resultaram em
+**567.084 tentativas AES**, usando SHA256 e MD5 no EVP_BytesToKey, e 2.229
+aceitações de padding. Nenhuma apresentou conteúdo coerente que confirmasse
+uma senha. As senhas foram deduplicadas dentro de cada família; não se alega
+deduplicação global. Não foram enviados candidatos a serviços externos.
+
+Um verificador de intervalos independente confirmou os 64.056 casos das
+listas, 91.519 certificados de exclusão e as 9.600 tentativas AES associadas.
+A busca de chaves curtas passou 240 comparações com outro buscador e recuperou
+12 mensagens plantadas; não recebeu uma segunda enumeração integral.
+Morbit/Pollux reproduziram os exemplos publicados pela ACA, além de controles
+próprios. A fase 3.2 conhecida é o controle positivo de AES.
+
+Outro verificador reenumerou todos os mapas Morse/binários e confirmou as
+557.484 tentativas AES restantes, inclusive os bytes das 2.198 saídas com
+padding aceito. Foram comparados hashes candidatos, pré-imagens de 32 bytes
+e todas as janelas consecutivas de 32 bytes das saídas com a coordenada x da
+chave pública do prêmio: **1.074.236 verificações, zero correspondências**,
+incluindo a possibilidade de chave negada. A comparação não abrange toda
+derivação possível nem afirma que os escalares verificados sejam distintos.
+[Conferência independente](_work/binary_partition_2026-09-15/independent_verification.json).
+
+[Relatório completo, scripts, fontes e reprodução](_work/decimal_keystream_2026-09-15/RELATORIO.md).
+A fronteira permanece a transformação operacional de `matrixsumlist` e a
+abertura autêntica de SMALL/TAIL32/COSMIC. Não há chave privada recuperada.
+
+## Sessão 2026-09-15 — substituição decimal desconhecida e segmentação
+
+**Objetivo final ainda não alcançado.** A skill `find-skills` solicitada foi
+usada para pesquisar criptanálise. `classical-cipher-analysis` já estava
+instalada; seu passo de identificar a representação motivou o teste de uma
+premissa que as rodadas anteriores mantinham fixa: `a=1..i=9`.
+
+Foram esgotadas todas as `9!` bijeções entre os símbolos e os dígitos 1–9,
+com qualquer um dos nove símbolos também podendo valer zero independentemente
+em cada ocorrência. Campos inteiros, originais e invertidos, convertidos de
+decimal para bytes mínimos big-endian menores que 128: **13.063.680 casos
+completos, 42.443.886 nós, sem casos pendentes**.
+
+FAED não tem candidatos. DBBI tem 183, todos com `b` ambíguo, nenhum totalmente
+imprimível mesmo admitindo TAB/LF/CR. Foram testados como 366 senhas diretas
+ou SHA256-hex nos três blobs e dois KDFs: 2.196 tentativas, seis paddings,
+zero decifrações validadas. Hashes e janelas binárias forneceram 7.509
+comparações com a pubkey, sem acerto. Um verificador com outro gerador de
+permutações e contagem aritmética de intervalos confirmou todos os casos e
+os 183 candidatos; outro caminho CBC/PKCS#7 confirmou os testes AES.
+
+Separadamente, conservando `a=1..i=9`, todas as larguras possíveis de blocos
+decimais e cada símbolo como possível zero foram examinados: **11.898
+modelos excluídos**, com 15.464 certificados conferidos por contagem.
+A leitura de códigos ASCII decimais de tamanho variável também não tem
+segmentação válida em nenhum dos 36 casos. Esses testes não combinam
+substituição desconhecida e segmentação simultaneamente.
+
+Uma hipótese adicional, numeração de Gödel de listas estritamente positivas,
+falha por paridade para os campos originais com o mapa conhecido e `g=0/7`:
+terminam em 5 e 3, enquanto a codificação usual contém uma potência positiva
+de 2. Não se excluem as variantes de lista/base/ordem não declaradas.
+
+[Relatório, controles, código e limites](_work/substituted_decimal_2026-09-15/RELATORIO.md).
+Não retomar simplesmente outras permutações ou outro símbolo para zero nessa
+mesma representação. É necessária uma hipótese que explique a operação
+adicional; a senha final continua pendente.
+
+## Sessão 2026-09-15 — sementes numéricas e ordem de colunas
+
+**Nenhuma senha final recuperada.** Foram concluídos e conferidos dois modelos
+adicionais do papel de `matrixsumlist`, mantendo como teste a representação do
+resultado decimal inteiro em bytes mínimos big-endian menores que 128.
+
+- **Chaves que crescem:** 43 listas produziram 156 sementes; as 1.024 máscaras
+  `g=0/7` de DBBI, diretas/invertidas, forneceram outras 2.048 para FAED.
+  Adição em cadeia com/sem semente inicial, realimentação pelo plaintext ou
+  ciphertext, três operações módulo 10, campos completos diretos/invertidos:
+  **56.640 casos**, 105.178 nós, 80.909 certificados, zero candidatos.
+- **Transposição:** as 43 listas e três rótulos decodificados produziram 168
+  chaves. Colunar incompleta com dois desempates e Myszkowski, ordens
+  ascendentes/descendentes, permutação/inversa e reversões de entrada/saída
+  deram 6.240 permutações distintas de DBBI e 6.184 de FAED. Qualquer um dos
+  nove símbolos pode, isoladamente, ser também zero em cada ocorrência:
+  **111.816 casos**, 357.956 nós, 234.886 certificados, zero candidatos.
+
+Não houve casos parciais. Dois verificadores sem importar os buscadores
+confirmaram todos os certificados por contagem aritmética, a completude dos
+modelos e, na segunda família, todas as permutações por outro algoritmo.
+Passaram controles com exemplos publicados pela ACA e 162 recuperações de
+mensagens plantadas. A fase 3.2 conhecida foi o controle positivo de AES.
+
+Não houve novos candidatos nem tentativas AES. As exclusões não cobrem chaves
+arbitrárias, todas as ordens de colunas, transposição dupla, outra base ou
+dados binários. O uso desses mecanismos é hipótese nossa, não orientação
+confirmada pelo criador. Não retomar as mesmas famílias apenas mudando as
+posições zeradas, já cobertas integralmente no modelo.
+
+[Relatório, fontes, controles, programas e reprodução](_work/feedback_decimal_2026-09-15/RELATORIO.md).
+
+## Sessão 2026-09-15 — XOR repetido após a conversão decimal
+
+**Nenhuma senha nem chave do prêmio recuperada.** Hipótese: campo inteiro
+como decimal com `a=1..i=9` e um único símbolo opcionalmente zero, convertido
+em bytes e decifrado por XOR repetido para obter sete bits por byte.
+
+Para plaintext de sete bits, os bits altos do ciphertext precisam repetir
+o padrão dos bits altos da chave. Isso permite excluir todas as chaves de
+um período, sem enumerar palavras ou bytes de chave. Campos originais e com
+a ordem dos símbolos invertida, períodos 1–32:
+
+- FAED: todos os nove símbolos isoladamente zeráveis, **576 casos excluídos**.
+- DBBI: `g=0/7`, **62 casos excluídos** nos períodos 1–31. No período 32,
+  32 máscaras diretas e 16 invertidas passam somente a condição de bits altos.
+- Todos os 640 casos terminaram, com 2.361.112 nós e 1.180.828 certificados.
+  Contagem aritmética independente confirmou todos os intervalos; enumeração
+  integral das máscaras de DBBI confirmou as 48 compatibilidades.
+
+Nenhum dos 48 casos de DBBI permite plaintext só com minúsculas, dígitos e
+whitespace. Letras maiúsculas/minúsculas são compatíveis, mas não revelam
+uma chave. Foram testadas 14.042 chaves SHA256 cruas de pré-imagens antigas
+derivadas de matrizes: nenhum dos 674.016 pares com essas máscaras gerou sete
+bits completos. Outra implementação conferiu os corpos XOR diretamente.
+
+DBBI foi então examinado com **qualquer um dos nove símbolos zerável** e as
+mesmas chaves: **252.756 casos completos**, 588.584 nós, 420.668 certificados.
+Só dois corpos de sete bits, ambos com `b=0/2`, nenhum imprimível. A chave
+vem da pré-imagem `OCSILOTAKOUTEZ`, uma extração histórica dependente das
+quebras editoriais já desautenticadas. Isso não valida uma mensagem.
+Quatro senhas derivadas dos corpos deram **24 testes AES, zero padding**;
+dez escalares candidatos não correspondem à pubkey. Um verificador separado
+confirmou toda a cobertura, candidatos, AES e comparação de escalares.
+
+Os dois testes com chaves fixas se sobrepõem no caso `g`; suas contagens não
+representam famílias disjuntas. Não foram excluídos XOR geral de período
+maior, outros alfabetos/bases, dados binários ou vários símbolos zeráveis.
+Para DBBI com símbolo diferente de `g`, a exclusão se limita às chaves fixadas.
+
+[Relatório, algoritmos, fontes, controles e reprodução](_work/xor_period_2026-09-15/RELATORIO.md).
+
+## Sessão 2026-09-15 — potências inteiras
+
+**Nenhuma senha nem chave do prêmio recuperada.** Hipótese: DBBI/FAED como
+decimal inteiro `N=P^e`, onde `e>=2` é inteiro e os bytes mínimos big-endian
+de `P` são todos menores que 128. A relação com primos como expoentes é
+conjectura; o teste inclui todos os expoentes inteiros possíveis.
+
+Com qualquer um dos nove símbolos isoladamente zerável e ambas as ordens
+dos símbolos, o limite aritmético dos expoentes é 301 em DBBI e 1.892 em
+FAED. **39.438 casos completos, 42.960 nós, 41.199 certificados, zero
+candidatos e zero tentativas AES.** Um verificador sem importar o buscador
+usou raízes por busca binária e contagem de inteiros de sete bits, confirmando
+todos os intervalos e a cobertura das máscaras. Passaram controles de raízes,
+mensagens plantadas e enumeração direta.
+
+Não exclui exponenciação modular/RSA, blocos, transposição ou outra codificação.
+[Relatório e reprodução](_work/integer_power_2026-09-15/RELATORIO.md).
+
+## Sessão 2026-09-15/16 — checkerboard com zeros ambíguos e viés do classificador
+
+**Nenhuma senha final ou chave do prêmio recuperada.** A leitura de
+checkerboard usada na fase 3.2 foi aplicada a DBBI/FAED mantendo as escolhas
+de zero dentro do parser. Foram examinados 38.880 modelos diretos (12
+alfabetos, todos os pares ordenados de prefixos, qualquer alias, ambas as
+direções/campos) e 16.848 modelos com 156 chaves decimais das listas da matriz,
+três operações módulo 10 e a tabela conhecida da fase 3.2. Alinhamento fixo;
+não é a cifra VIC completa com transposições.
+
+O classificador histórico treinado no Telegram **inclui as próprias cifras**:
+65 mensagens com fragmento longo de DBBI e 25 com início de FAED passam seu
+filtro. Reconstruir o treino reproduziu todos os valores do cache. A mesma
+busca foi então repetida com estatísticas gerais de inglês independentes.
+Não somar os dois perfis como famílias criptográficas distintas.
+
+Por perfil: **55.728 casos, 47.080 leituras completas de nota máxima e 8.648
+sem leitura completa**. Programação dinâmica cobre todas as escolhas de zero
+para maximizar a média de quadgramas. Uma implementação separada confirmou
+os caminhos, notas, limites ótimos e impossibilidades de leitura.
+Maximizar a nota não garante a frase verdadeira: o perfil geral recuperou
+exatamente só 25 das 72 mensagens plantadas. Os outros caminhos não foram
+todos enviados aos oráculos. Nenhuma leitura dos campos reais é coerente.
+
+A união dos dois perfis produziu **946.400 senhas distintas, 5.678.400 testes
+AES e 473.200 escalares**, sem correspondência com a pubkey ou decifração
+validada. Os 22.153 paddings isolados têm no máximo 59,50% de bytes imprimíveis/
+whitespace. Todos esses corpos foram reproduzidos integralmente com
+PyCryptodome; essa segunda conferência não repetiu as rejeições nem os pontos
+da curva. O controle positivo AES foi a fase 3.2 conhecida.
+
+Esta rodada não cobre alfabetos arbitrários, todas as fases do VIC, todos os
+deslocamentos das chaves, descarte de padding da cifra clássica ou todas as
+leituras de nota menor. Usar o novo modelo geral em futuras classificações;
+preservar o antigo para reproduzir resultados históricos.
+
+[Relatório, fontes, controles e reprodução](_work/ambiguous_checkerboard_2026-09-15/RELATORIO.md).
+
+## Sessão 2026-09-16 — alfabeto desconhecido junto com os zeros
+
+**Nenhuma senha final ou chave do prêmio recuperada.** Foi implementada
+busca conjunta do alfabeto A–Z com duas posições reservadas e das escolhas
+independentes `g=0/7` em FAED. Usa o modelo geral de inglês, todos os 45
+pares não ordenados de prefixos e ambas as direções. Permutar as linhas
+absorve a troca de ordem dos prefixos. Não inclui outras chaves/transposições.
+
+O protótipo que ignorava pontos favorecia apagar letras raras. A campanha
+principal exige texto A–Z contínuo. O otimizador de zeros passou 288 modelos
+pequenos comparados com enumeração de 816 máscaras. Nos três controles
+longos, as distâncias de edição foram 0,72%, 29,50% e 73,86%: **o método não
+é confiável para excluir as configurações difíceis de separação ambígua**.
+
+Com oito reinícios de 20.000 iterações por configuração, foram executadas
+90 configurações reais e 270 de embaralhamentos de controle. As 47.831.645
+avaliações e 1.312.343 otimizações de máscaras são busca heurística, não
+enumeração integral dos alfabetos. Melhor nota real: `-5,082816`; melhores
+notas dos três embaralhamentos: `-5,061486`, `-5,051942`, `-5,114248`.
+Não há separação útil nem mensagem coerente. Outro programa conferiu os
+18.449 caminhos salvos, suas notas e a viabilidade das posições reservadas.
+
+Os 4.269 textos reais de melhorias globais/melhores reinícios produziram
+17.076 senhas, **102.456 testes AES e 8.538 escalares**. Nenhuma correspondência
+com a pubkey e nenhuma decifração validada. Os 412 paddings isolados têm
+no máximo 56,97% de bytes imprimíveis/whitespace. PyCryptodome e coincurve
+reproduziram todas as decisões AES, incluindo rejeições, e todas as
+comparações de pontos. Não foram testados textos dos embaralhamentos como senhas.
+
+Não prolongar esta mesma busca apenas porque ela é incompleta. A operação
+entre as pistas e os campos continua ausente; VIC completo e outros
+mapeamentos permanecem fora da exclusão.
+[Relatório, controles, limites e reprodução](_work/joint_checkerboard_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — leitura decimal, UTF‑8 e dois símbolos zeráveis
+
+**Nenhuma senha encontrada.** Os testes de leitura decimal anteriores
+restringiam a saída a sete bits. Esta rodada admite toda a gramática UTF‑8,
+inclusive acentos, pontuação Unicode e controles, sem decoder permissivo.
+Compara a representação mínima do inteiro em big-endian e little-endian,
+para os campos completos nas duas ordens de símbolos. Não é uma busca de
+variantes de senha normalizadas nem de texto truncado.
+
+Todas as ocorrências de uma letra escolhida, ou de duas letras escolhidas,
+podem independentemente virar zero ou manter seu dígito `a=1..i=9`.
+As nove escolhas isoladas e os 36 pares produzem **360 casos completos**,
+318.942 nós e 126.243 intervalos excluídos. FAED não admite UTF‑8. As 33.408
+sequências UTF‑8 de DBBI contêm controles C0/C1 além de TAB/LF/CR; nenhuma
+forma texto comum sem esses controles. Não houve descarte desses bytes.
+
+Um verificador por contagem de sequências de valores Unicode, sem importar
+os autômatos do buscador, conferiu cada intervalo e a cobertura das máscaras.
+O buscador recuperou 270 controles conhecidos, incluindo texto não ASCII,
+e passou 270 comparações com enumeração; ambas as implementações também
+foram comparadas com decoders estritos para entradas curtas.
+
+Os bytes completos e seus hashes SHA256 hexadecimais geraram **66.816 senhas,
+400.896 decisões AES e 33.408 comparações secp256k1**. Nenhuma decifração
+validada nem chave-alvo. Os 1.487 paddings aceitos tiveram no máximo 56,97%
+de bytes ASCII imprimíveis/whitespace. PyCryptodome e coincurve reproduziram
+todas as decisões, incluindo rejeições e comparação com a negação do alvo.
+
+Essa exclusão é condicionada ao mapa decimal e à zeragem especificados;
+não cobre outra cifra, três ou mais letras zeráveis ou outro charset. A falta
+de ASCII por si só não explica os resultados anteriores de FAED. Não ampliar
+automaticamente a zeragem: o modelo mais flexível multiplicou candidatos de
+DBBI sem produzir uma mensagem. A operação anterior continua desconhecida.
+[Relatório e reprodução](_work/utf8_decimal_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — números primos das contagens amarelo/azul
+
+**Nenhuma senha final.** A consulta pública não encontrou comentários novos
+após o último item de 11/09 já examinado. O fork de Naddiseo, fixado no commit
+`81f68e5073a7ad0a002acd2a2db0b6bcfa0570ac`, também deixa DBBI e FAED sem
+solução. [Escopo da consulta](_work/public_recheck_2026-09-16/RELATORIO.md).
+
+Testou-se a inferência `9 amarelos → 9º primo = 23`, `15 azuis → 15º primo = 47`,
+atribuindo os pesos às células e somando linhas/colunas. Os demais pixels
+mantêm seus bits ou viram zero. As quatro listas deram 352 chaves decimais
+distintas, sem coincidências com as chaves das 43 listas anteriores.
+
+Adição/subtração/Beaufort digitais e com transporte, todos os alinhamentos
+cíclicos, ambas as ordens dos campos e dos bytes e todas as escolhas `g=0/7`
+deram **16.896 casos completos, 32.740 certificados e zero saídas UTF‑8**.
+Um contador independente verificou cada intervalo e a cobertura das máscaras,
+além de reconstruir as cores, primos, listas e chaves.
+
+As representações diretas das listas e composições explícitas com as últimas
+palavras foram também conferidas: **500 pré-imagens, 1.000 senhas, 6.000
+decisões AES e 500 escalares**, sem abertura validada nem chave-alvo. Os 18
+paddings não passaram de 49,37% ASCII/whitespace. PyCryptodome e coincurve
+reproduziram todas as decisões, inclusive rejeições e comparações de pontos.
+
+Essas exclusões não eliminam os pesos 23/47 sob outros algoritmos nem a
+pista de cores/primos em geral. Não ampliar automaticamente dicionários ou
+valores: a operação que falta continua sem identificação.
+[Relatório e reprodução](_work/count_prime_matrix_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — substituição de dígitos e códigos ASCII variáveis
+
+**Nenhuma senha final.** A rodada combinou duas escolhas antes examinadas
+separadamente: qualquer bijeção `a..i → 1..9` e uma concatenação dos códigos
+decimais de TAB/LF/CR/ASCII 32..126, permitindo uma letra também significar
+zero por ocorrência. Inclui ambos os campos completos nas duas direções.
+
+Foram decididos **13.063.680 modelos** com cobertura de todas as máscaras
+e segmentações. **FAED é incompatível com todos**; DBBI admite 50.808 modelos.
+Um decoder aritmético independente, percorrendo as permutações em outra
+ordem, conferiu todas as decisões e todas as contagens.
+
+A contagem de DBBI é 1.208.192.544 pares modelo/caminho, não necessariamente
+textos distintos. Nenhum caminho contém apenas letras/espaços; todos exigem
+pelo menos sete outros caracteres. Somente **3.600 caminhos inteiramente
+imprimíveis** existem, e foram todos enumerados. O grande restante, com
+TAB/LF/CR, foi contado e não testado integralmente como senha.
+
+As 3.600 sequências imprimíveis geraram **7.200 senhas, 43.200 decisões AES e
+3.600 escalares**. Nenhuma abertura validada nem correspondência com a chave
+do prêmio. Os 165 paddings tiveram no máximo 53,16% ASCII/whitespace.
+PyCryptodome e coincurve reproduziram todas as decisões, incluindo falhas.
+
+Uma codificação comum dos dois campos por esse mecanismo fica excluída
+pelo resultado de FAED. Não se afirma exclusão geral de DBBI, de gramáticas
+com outros caracteres ou de mais de uma letra zerável. Nenhum classificador
+de linguagem foi usado para decidir a impossibilidade de FAED.
+[Relatório e reprodução](_work/substituted_codepoints_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — base prima de origem e prefixos em base 127
+
+**Nenhuma senha final.** Foi distinguida a leitura do campo numa base prima
+da conversão de um inteiro decimal para essa base. A primeira hipótese foi
+conferida para os 51 primos de 11 a 257, ambos os campos e sentidos e todas
+as nove letras como possível zero por ocorrência. Os **1.836 casos** foram
+inteiramente rejeitados sob a condição ampla de todos os bytes estarem em
+0..127, incluindo controles. A prova tem 3.200 nós e 2.518 intervalos; outro
+programa reconstruiu e contou os intervalos e conferiu a cobertura completa.
+Não surgiram candidatos para AES ou para a chave do prêmio.
+
+Na operação inversa já pesquisada, decimal → base127 com `g=0/7`, DBBI nos
+dois sentidos começa obrigatoriamente com controle 1. FAED inverso contém
+controles fixos 23/27; FAED original começa necessariamente com `9i` ou
+`9j`. Isso exclui a leitura textual direta nas três primeiras situações,
+mas mantém aberto FAED original com números/pontuação. Os 177 candidatos e
+a busca parcial anterior foram preservados, sem nova enumeração.
+
+Não há exclusão geral de bases primas, outras codificações ou mecanismos
+com uma transformação anterior. [Relatório e reprodução](_work/source_prime_radix_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — Nihilist e o tamanho mínimo da chave
+
+**Nenhuma senha final.** A pista `matrixsumlist` foi confrontada com uma
+operação ainda não examinada nos scripts consultados: soma das coordenadas
+de texto e chave numa grade 5×5, como na Nihilist da ACA. A associação é
+hipotética; a cifra não foi identificada como método do criador.
+
+Na forma de dois dígitos, os 285 pares de FAED exigem período de chave de
+pelo menos **277 na ordem original ou 275 na inversa**, mesmo permitindo
+qualquer bijeção `a..i → 1..9` e qualquer letra adicionalmente zerável por
+ocorrência. Todos os períodos 1..285 foram decididos. Outro programa
+percorreu todas as 362.880 bijeções por sentido e reproduziu integralmente
+as listas de mapas viáveis; as 22 testemunhas dos períodos mínimos foram
+recifradas. Elas comprovam viabilidade numérica, não uma mensagem original.
+
+A variante de somas não reduzidas, escritas com dois ou três dígitos e
+concatenadas, foi examinada sem sequer exigir repetição da chave:
+**13.063.680 modelos, zero segmentações válidas** nos campos completos,
+com todos os mapas, letras zeráveis e sentidos. Um parser aritmético
+independente confirmou todas as decisões do autômato.
+
+Não houve candidatos de senha nem testes AES nessa rodada. A interpretação
+direta com chave curta fica excluída; outras dimensões de grade, mais letras
+zeráveis e transformações anteriores permanecem fora desse alcance.
+[Relatório, fonte e reprodução](_work/nihilist_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — paridade das distâncias entre vetores
+
+**Nenhuma senha final.** Foi ampliado o teste geométrico de DBBI para
+distâncias entre vetores inteiros, usando `91 = C(14,2)`. Nas oito leituras
+triangulares declaradas, todas as letras são forçadas a valores pares.
+Mesmo ignorando integralmente qualquer uma das nove letras, as outras
+oito continuam obrigatoriamente pares. Isso é incompatível com qualquer
+bijeção `a..i → 1..9`, que só dispõe de quatro valores pares.
+
+A propriedade vale para Hamming binário, Manhattan e distância euclidiana
+ao quadrado entre vetores inteiros, inclusive com pesos inteiros por
+coordenada. A liberação de uma letra é mais ampla que escolher quais de
+suas ocorrências viram zero. A prova cobre qualquer permutação dos 14
+vértices; não cobre permutações arbitrárias das 91 arestas.
+
+Foram gerados **648 certificados para 80 modelos**. O verificador conferiu
+as somas de arestas e enumerou independentemente **655.360 atribuições de
+paridade** dos vértices. Controles com vetores conhecidos passaram.
+
+Sem letra indeterminada, até uma renomeação injetiva por valores arbitrários
+exigiria dimensão de pelo menos 18 para Hamming: são nove distâncias pares
+positivas distintas, e não há vértices compatíveis com vetores idênticos.
+Isso exclui a matriz binária 14×14 como origem direta dessas distâncias,
+sem excluir DBBI como pesos de entrada, produtos internos ou outras cifras.
+[Relatório e reprodução](_work/dbbi_distance_parity_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — somas da matriz como pré-imagem do possível hash DBBI
+
+**Nenhuma senha final.** O padrão completo dos 64 tokens/16 tipos de DBBI
+foi usado como restrição de SHA256, sem adivinhar sua substituição por hex.
+Os 72 parses com dois prefixos, nos dois sentidos, confirmaram somente
+`b/g` original nesse formato; as duas ordens dos tokens foram consideradas.
+
+Os pesos azul/amarelo foram todos os pares de `0`, `1` e primos até 196,
+mais os pares de divisores primos dos respectivos inteiros RGB. A fatoração
+azul contém 9341, acrescentando dois pares à grade finita de pesos. Foram
+**2.118 pares e 4.236 matrizes**, mantendo os bits não coloridos ou zerando-os.
+
+Listas de somas por linhas/colunas, suas concatenações, intercalação e total,
+em duas direções e representações textuais/binárias declaradas, produziram
+**525.468 avaliações SHA256 e 1.050.936 comparações**. Nenhuma correspondência
+completa de padrão. As contagens incluem representações eventualmente iguais.
+
+Um verificador independente reconstruiu cada matriz e pré-imagem, calculou
+os hashes e comparou padrões por outro mecanismo, reproduzindo integralmente
+os 4.236 resumos das avaliações. Não houve candidato para teste AES.
+Isso elimina somente essas pré-imagens no modelo DBBI=hash substituído;
+não elimina outras funções das listas nem confirma que DBBI seja um hash.
+[Relatório e reprodução](_work/dbbi_matrix_hash_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — DBBI como chave colunar de FAED
+
+**Nenhuma senha final.** Foi testada uma composição ausente das campanhas
+consultadas: listas derivadas de DBBI ordenam colunas de FAED, e o resultado
+é interpretado como inteiro decimal convertido em bytes de sete bits.
+Os testes anteriores com essas listas usavam Bifid/checkerboard; o teste
+colunar seguido de decimal→bytes usava listas da matriz inicial.
+
+As dez ocorrências de `g` em DBBI receberam todas as escolhas 0/7. Para
+cada máscara, a sequência literal, quatro listas das grades 7×13/13×7 e
+três listas do triângulo superior 14×14 foram usadas em ambos os sentidos.
+As 16.384 construções se reduziram a **5.694 padrões de chave**. Foram
+incluídas transposição colunar com dois critérios de empate e Myszkowski,
+ordens crescente/decrescente, operação direta/inversa e reversões de FAED.
+
+Isso gerou **250.400 permutações distintas**, sem sobreposição com as do
+teste colunar anterior de FAED. Cada uma foi examinada com todas as nove
+letras como alias adicional de zero, independentemente por ocorrência:
+**2.253.600 casos completos, zero candidatos, zero casos parciais**.
+Consequentemente, não houve testes AES nem de escalares nesta rodada.
+
+Um verificador independente regenerou todas as listas e permutações e
+conferiu os **4.482.213 certificados de exclusão**, contando os inteiros
+com bytes válidos nos intervalos e demonstrando cobertura de todas as
+máscaras. Todos os resultados coincidiram, com controles positivos.
+
+O alias `g` em DBBI, o uso das listas como chaves e a representação final
+são hipóteses declaradas. O resultado não exclui outros aliases em DBBI,
+alfabetos, rotas, dupla transposição ou transformações adicionais.
+[Relatório e reprodução](_work/dbbi_columnar_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — todos os pesos inteiros das cores numa chave decimal
+
+**Nenhuma senha final.** A busca foi ampliada de listas com pesos
+específicos para uma classe inteira: azul e amarelo recebem quaisquer
+inteiros fixos; preto e branco recebem, independentemente, 0 ou 1. As
+somas das 14 linhas ou colunas são reduzidas módulo 10 e usadas como
+chave periódica de adição, subtração ou Beaufort decimal.
+
+Somente os restos dos valores das cores influenciam essa operação.
+Portanto, os cem pares de restos cobrem inclusive **todos os primos,
+sem teto numérico**. Essa redução não se aplica a hashes das somas ou
+à concatenação de suas representações decimais completas.
+
+As duas ordens e todos os alinhamentos das listas produziram 22.038
+chaves e 60.695 operadores distintos. Com ambos os campos, seus dois
+sentidos e qualquer uma das nove letras adicionalmente zerável por
+ocorrência, foram **2.185.020 casos completos**, nenhum interrompido.
+
+FAED não produziu bytes de sete bits. DBBI produziu 39 candidatos,
+todos com controles além de TAB/LF/CR e todos usando `b=0/2`. As duas
+ordens de bytes geraram 78 materiais e 156 senhas: **936 decisões AES**,
+dois paddings sem estrutura autenticada e **356 escalares**, sem acerto
+na chave pública-alvo ou na sua negação.
+
+O verificador reconstruiu todas as matrizes e operadores e conferiu
+**4.536.865 certificados**, cobertura das máscaras e todos os candidatos.
+PyCryptodome e coincurve reproduziram todas as decisões AES, os dois
+corpos completos e todas as comparações de pontos. Os controles passaram.
+
+O resultado limita essa cifra aditiva com a representação declarada;
+outras operações de `matrixsumlist` continuam abertas.
+[Relatório e reprodução](_work/color_residue_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — transporte decimal nas chaves das cores
+
+**Nenhuma senha final.** As mesmas 22.038 listas de resíduos, cobrindo
+todos os pesos inteiros de azul/amarelo e quatro fundos binários, foram
+usadas como inteiros periódicos `K` da largura de DBBI ou FAED. Examinaram-se
+`C+K`, `C-K` e `K-C`, tanto módulo `10^L` quanto como resultados inteiros
+não negativos. Isso cobre transporte entre casas, ausente da rodada anterior.
+
+Foram **4.760.208 casos completos**, com ambos os campos, sentidos e
+qualquer uma das nove letras adicionalmente zerável. FAED não teve saída
+de sete bits. DBBI teve 55 caminhos, correspondentes a **38 sequências
+distintas**, todas com controles não usuais e sem sobreposição com as
+39 saídas da rodada sem transporte.
+
+As duas ordens de bytes produziram 76 materiais e 152 senhas: **912
+decisões AES**, três paddings sem estrutura autenticada e **342 escalares**,
+sem correspondência com a pubkey-alvo ou sua negação. PyCryptodome e
+coincurve reproduziram todas essas decisões e todos os corpos/pontos.
+
+O verificador independente reconstruiu as chaves, dividiu intervalos nas
+fronteiras aritméticas e conferiu **9.218.926 certificados**, cobertura
+completa das máscaras e todos os candidatos. Controles de enumeração,
+mensagens plantadas e intervalos com transporte passaram.
+
+O resultado limita as operações com as somas já reduzidas módulo 10;
+não abrange concatenar as somas completas nem outras representações.
+[Relatório e reprodução](_work/color_carry_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — produtos internos como os 91 pares de DBBI
+
+**Nenhuma senha final.** Foi examinada uma lacuna da análise de distâncias:
+DBBI como os produtos internos entre as 14 linhas ou colunas da matriz
+inicial, incluindo pesos independentes para azul, amarelo, preto, branco
+e a célula quase branca. A codificação admite qualquer bijeção dos nove
+dígitos positivos e uma letra adicionalmente zerável por ocorrência.
+
+Para pesos inteiros não negativos, a exigência de produtos no máximo 9
+impõe pesos `0..3` às quatro cores repetidas. O quase branco usa `0..9`
+quando influencia os produtos e pode ser representado por zero quando
+inerte. Essa redução cobre todos os pesos da família: **5.120 casos,
+zero histogramas compatíveis**, mesmo permutando arbitrariamente os
+91 pares. Os limites possuem testemunhas explícitas na matriz.
+
+Módulo 10, os cinco pesos inteiros se reduzem a cem mil vetores de restos
+por orientação. Dos **200.000 casos**, quatro têm frequências compatíveis,
+todos nas colunas, com `b` representando zero em 13 de suas 25 ocorrências.
+Os quatro vetores e todas as bijeções estão preservados no relatório.
+
+Esses candidatos foram comparados com oito ordens triangulares. Todos
+os **128 casos**, equivalentes a 32 grafos com ordem após deduplicação,
+falham no conjunto de contagens de cores incidentes em cada vértice.
+Esse certificado exclui qualquer permutação dos 14 vértices. Não exclui
+uma permutação arbitrária e independente das 91 arestas; frequências
+compatíveis sozinhas não constituem uma decifração.
+
+Verificadores independentes reconstruíram todos os produtos por
+coordenadas, regeneraram as bijeções e validaram cada certificado.
+Controles positivos e dos limites passaram. Nenhum candidato a texto,
+teste AES ou teste de chave privada foi produzido nesta rodada.
+[Relatório e reprodução](_work/dbbi_gram_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — campos concatenados e primos espectrais
+
+**Nenhuma senha final.** Foram examinadas duas interpretações adicionais.
+
+Na primeira, DBBI e FAED formam um único número decimal, em qualquer
+ordem e com inversões independentes. Cada campo admite até duas letras
+zeráveis por ocorrência. A decomposição `A × 10^L + B` permite relaxar
+todo o segundo campo para um intervalo de valores.
+
+Uma prova de **180 árvores, 1.274 nós e 727 certificados**, conferida por
+um contador independente, exclui todos os 32.400 modelos quando os bytes
+da saída devem ser inferiores a 128. O segundo campo pode inclusive ser
+qualquer número do comprimento declarado, não apenas uma máscara de FAED
+ou DBBI.
+
+Para UTF-8 completo, os prefixos excluem **32.130 modelos**. Restam 270,
+todos começando por DBBI e usando `b,d` ou `b,e` como letras zeráveis.
+As árvores de prefixos foram integralmente verificadas. A busca residual
+foi interrompida por custo; seus 9.837 registros completos foram
+preservados, sem candidatos, mas não receberam verificação independente
+completa. Não constituem uma exclusão adicional certificada de Unicode.
+[Relatório dos campos concatenados](_work/joined_fields_2026-09-16/RELATORIO.md).
+
+Na segunda interpretação, os pesos azul/amarelo são os 21 pares de primos
+nas faixas convencionais 450–495 nm e 570–590 nm. A ligação com “Infrared”
+é uma hipótese, não uma instrução confirmada do criador. As 42 matrizes
+geraram 168 listas e 5.880 materiais de senha, incluindo duas leituras
+de `lastwordsbeforearchichoice`.
+
+Foram **70.560 decisões AES**: 281 paddings, nenhum corpo autenticado.
+Os 5.880 hashes das preimagens não atingiram a pubkey. Todas as matrizes,
+senhas, decisões AES e pontos foram reconstruídos com implementação
+independente. Nos corpos com padding aceito, 264.375 escalares derivados
+de hashes e janelas de 32 bytes também não corresponderam à pubkey-alvo
+ou à sua negação.
+[Relatório dos comprimentos de onda](_work/wavelength_primes_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — frequências primas e auditoria de assinaturas
+
+**Nenhuma senha final.** A hipótese espectral foi estendida para frequências
+inteiras em THz, com limites exatos derivados das mesmas faixas de azul e
+amarelo. Os 33 pares de primos produziram 264 listas, 9.240 materiais,
+18.480 senhas e **110.880 decisões AES**. Houve 439 paddings sem plaintext
+autenticado; os hashes das preimagens e 399.509 escalares derivados dos
+corpos também não corresponderam à pubkey-alvo ou à sua negação.
+Todos os limites, materiais, decisões AES e pontos receberam conferência
+independente. Os 15.120 materiais das duas rodadas espectrais também
+falharam no padrão condicional DBBI = hash hexadecimal por substituição.
+[Relatório das frequências](_work/frequency_primes_2026-09-16/RELATORIO.md).
+
+O teste histórico dos OP_RETURNs `GSMGJH/GSMGBH` continha dois defeitos:
+argumento `recid` inválido para a API de coincurve e ausência do cabeçalho
+`0x20` de JH. Os bytes das duas transações foram recuperados e seus txids
+recalculados. As 43 mensagens antigas, com os oito cabeçalhos, produziram
+688 configurações: 344 recuperações e 344 ramos matematicamente impossíveis.
+Todas as assinaturas recuperadas foram verificadas por Python/ecdsa e
+Node/OpenSSL, com endereços recalculados: **zero correspondências** no
+conjunto declarado. A autoria dos OP_RETURNs continua sem autenticação;
+o negativo não exclui outras mensagens. As afirmações antigas acima foram
+corrigidas. [Auditoria e artefatos](_work/signature_audit_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — somas diretas com alfabetos e ordem desconhecidos
+
+**Nenhuma senha final.** A exclusão das 14 somas decimais foi ampliada
+para qualquer bijeção de `a..i` com os nove dígitos positivos e até duas
+letras adicionalmente zeráveis por ocorrência. Os pesos uniformes das
+cores são quaisquer inteiros `p,q≥2`, abrangendo todos os primos. Preto
+e branco usam independentemente 0 ou 1.
+
+Normalizar os aliases de zero preserva a igualdade entre somas repetidas.
+O maior par de substrings iguais sem sobreposição limita essas somas e,
+consequentemente, os pesos. Dos 2.944 casos com linhas/colunas e ambos os
+sentidos dos campos e listas, **2.896 falham por comprimento e 48 por
+segmentação**, com 620 nós e nenhum sobrevivente. Um verificador
+independente conferiu todos os limites e casos, com 4.092 controles
+exaustivos de rotinas e 24 controles plantados.
+
+A extensão para **qualquer permutação das 14 somas** reduz o problema a
+736 combinações: 724 falham pelo comprimento. Nas 12 restantes, nenhuma
+disposição de substrings iguais permite acomodar os grupos repetidos
+em intervalos disjuntos com comprimento suficiente. Dois algoritmos
+independentes enumeraram os mesmos posicionamentos e validaram o negativo.
+
+Isso exclui a concatenação decimal direta no modelo declarado; não
+exclui usar as somas como chave, outras bases ou outras operações. Não
+houve candidato AES ou escalar nesta rodada.
+[Prova, limites e reprodução](_work/symbolic_color_sums_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — bases primas posicionais e rotas dos tokens
+
+**Nenhuma senha final.** Foi examinada a leitura de cada linha/coluna como
+um número em base prima `r`, com dígitos primos uniformes azul/amarelo
+`2≤p,q<r` e fundos binários. Limites monótonos de comprimento cobrem
+bases arbitrariamente grandes. DBBI falha em 14 perfis por comprimento;
+nos dois restantes, `r=3` e `p=q=2`. Seus histogramas permitem no máximo
+24 ou 20 ocorrências de uma letra, mesmo dando a ela todos os zeros;
+DBBI possui 25 letras `b`. Isso exclui esses perfis sob qualquer bijeção
+dos dígitos, ordem das 14 somas e sentido do campo. Para FAED há apenas
+limites necessários, não uma busca completa. A conferência independente
+reconstruiu todos os 32 conjuntos de limites e os dois histogramas.
+[Relatório das bases posicionais](_work/positional_prime_bases_2026-09-16/RELATORIO.md).
+
+Na outra frente, FAED foi tokenizado com prefixos `b,g`, nas duas direções:
+451 tokens e 25 tipos em cada caso. Grades 11×41 e 41×11, com linhas,
+colunas, alternância, espirais, reflexões e inversas, geraram 70 rotas.
+Depois de cada rota, buscou-se um alfabeto de substituição desconhecido.
+Três controles de exatamente 451 letras foram recuperados integralmente.
+
+As 140 configurações reais e 280 embaralhamentos receberam o mesmo esforço:
+**96.921.451 avaliações**. Em ambas as direções, a nota real ficou entre
+as notas dos dois controles. Nenhuma saída formou texto coerente. O
+verificador independente conferiu os 420 casos, as rotas e 25.502 caminhos
+guardados. A busca de alfabetos é heurística, não uma exclusão global.
+
+Os 8.120 textos reais distintos geraram **194.880 decisões AES**, com 816
+paddings sem plaintext autenticado, e 16.240 hashes escalares sem acerto.
+Outros 723.118 escalares dos corpos também não corresponderam à pubkey-alvo
+ou sua negação. PyCryptodome e coincurve reproduziram todas as decisões,
+corpos e comparações declarados. O controle histórico de 387 letras,
+anteriormente descrito como tendo 451, foi corrigido acima.
+[Relatório das rotas de tokens](_work/checkerboard_token_routes_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — símbolos nulos opcionais e zeros
+
+**Nenhuma senha final.** A interpretação de “zeroed out” como remoção,
+não confirmada pelo criador, foi testada em três modelos decimais com
+`a=1,…,i=9`, nos dois campos e sentidos. Cada ocorrência da letra escolhida
+pode ser mantida/removida (36 casos) ou mantida/zerada/removida (36 casos).
+Uma terceira família tem uma letra sempre zero e outra removível, cobrindo
+as 72 escolhas distintas para cada campo/sentido (288 casos).
+
+A busca agrupa pelo número de remoções e usa extremos exatos de sufixos.
+Todos os **360 casos** foram concluídos: **62.687 nós, 40.802 certificados
+e 13.580 raízes**. O verificador independente refez os extremos com strings,
+contou inteiros de sete bits nos intervalos e conferiu cobertura completa
+das máscaras, incluindo estados compartilhados. Controles exaustivos do
+contador e dos extremos, além de mensagens plantadas, passaram.
+
+FAED não teve saída de sete bits. DBBI teve **22 saídas**, somente na
+direção original com `b` podendo valer 2, zero ou remoção; todas contêm
+controles não usuais. As duas ordens de bytes geraram 44 materiais e
+88 senhas: **528 decisões AES**, dois paddings sem plaintext autenticado,
+e 352 escalares sem correspondência com a pubkey-alvo ou sua negação.
+PyCryptodome e coincurve conferiram os materiais, decisões, corpos e pontos.
+
+O negativo não cobre alfabetos diferentes, várias letras removíveis,
+Unicode completo ou uma letra removível com outra independentemente
+zerável. [Modelos, provas e reprodução](_work/optional_null_decimal_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — pista EBCDIC 1141 nas leituras decimais
+
+**Nenhuma senha final.** A referência a EBCDIC 1141 da fase 3.2 motivou
+verificar uma limitação dos testes de ASCII. A tabela foi obtida em .NET;
+seus 98 bytes para ASCII 32–126 e TAB/LF/CR coincidem com a implementação
+cp273 do Python. As duas diferenças fora desse repertório foram registradas.
+Reaplicar a pista à SalPhaseIon continua sendo hipótese.
+
+Cada leitura cobre DBBI/FAED nos dois sentidos, `a=1,…,i=9` com até duas
+letras zeráveis, e todas as bijeções para `1..9` com uma letra zerável.
+Como inteiro decimal completo, **13.063.864 configurações** e 19.018.074 nós
+não produziram bytes integralmente pertencentes ao repertório EBCDIC.
+O resultado é invariante pela ordem dos bytes. Um contador independente
+de inteiros permitidos confirmou todos os casos e nós.
+
+Duas leituras adicionais concatenam os códigos decimais de cada byte:
+códigos mínimos ou sempre preenchidos para três dígitos. Seus
+**26.127.728 casos** não tiveram segmentação completa. Outro algoritmo,
+baseado em fronteiras de códigos e tabelas numéricas, confirmou a cobertura
+e o negativo. Controles exaustivos das rotinas e mensagens plantadas passaram.
+
+Não houve candidato para AES. Os testes não excluem EBCDIC com outros
+caracteres, transformações adicionais ou os modelos de zero fora do escopo.
+[Resultados, fontes e reprodução](_work/ebcdic_decimal_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — máscaras exatas e palavras no checkerboard
+
+**Nenhuma senha final.** A baixa recuperação dos controles anteriores foi
+investigada: mesmo com o alfabeto verdadeiro, o melhor caminho de quadgramas
+pode conter palavras incorretas. A nova busca otimiza a máscara em cada
+proposta de alfabeto e depois usa um vocabulário independente do Telegram
+para otimizar simultaneamente palavras, fronteiras e zeros. O alfabeto é
+refinado por até vinte rodadas completas de trocas entre posições.
+
+Dos três controles antigos, dois foram recuperados integralmente; o terceiro
+ficou a nove edições do texto correto. Três recortes com exatamente 570
+símbolos tiveram distâncias 0, 7 e 274. Portanto, ainda há falha importante
+de recuperação; o método continua sendo heurístico para o alfabeto.
+O verificador independente conferiu 12 modelos pequenos por 303 máscaras,
+184 saídas com palavras, 376 caminhos de quadgramas e 18 ótimos com
+alfabeto fixo. A mensagem conhecida da fase 3.2 também foi recuperada
+exatamente quando seu alfabeto foi fornecido ao decodificador de palavras.
+
+Foi iniciada uma campanha de 180 configurações: 45 pares de prefixos,
+duas direções, FAED real e um embaralhamento, com os mesmos parâmetros.
+Os 90 casos reais já foram conferidos: 4.745 saídas com palavras, 4.986 caminhos
+de quadgramas e 314 ótimos para alfabetos fixos, incluindo a calibração.
+Os 10.330 textos distintos geraram **247.920 decisões AES**, com 954 paddings
+sem mensagem autenticada, e **919.404 escalares**, sem correspondência com a
+pubkey-alvo ou sua negação. PyCryptodome e coincurve reproduziram todos os
+candidatos, decisões, corpos, escalares e pontos.
+
+A campanha inteira terminou com saída 0. Foram 2.261.344 avaliações de
+quadgramas e 1.041.193 de palavras. A conferência completa validou 9.468 saídas
+com palavras, 9.459 caminhos de quadgramas e 610 ótimos para alfabetos fixos,
+incluindo a calibração. O embaralhamento superou a nota real nos dois sentidos;
+nenhuma saída formou mensagem coerente. Não há processo desta rodada ativo.
+[Calibração, resultados e limites](_work/checkerboard_exact_mask_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — cabeçalhos compactados com dígitos desconhecidos
+
+**Nenhuma senha final.** DBBI e FAED, nos dois sentidos, foram tratados como
+inteiros decimais com qualquer bijeção `a..i → 1..9` e ocorrências opcionais
+de zero para até duas letras. Os bytes mínimos, do mais significativo para
+o menos significativo, precisariam começar pela assinatura de um arquivo.
+
+Todos os **1.104 casos**, cobrindo seis formatos, foram conferidos por um
+verificador independente de intervalos, testemunhas e certificados: 7.460
+intervalos e 28.281 nós. GZIP/DEFLATE, ZIP, bzip2, XZ e 7z não são compatíveis
+nesse modelo. Zlib tem 110 casos compatíveis pelo cabeçalho, o que não comprova
+a existência de um fluxo válido.
+[Escopo, provas e formatos](_work/substituted_format_headers_2026-09-16/RELATORIO.md).
+
+Para zlib **sem zeros e sem dicionário prévio**, os nove intervalos restantes
+foram rejeitados em 1.391 nós. Uma enumeração independente em Python conferiu
+as **1.451.520 configurações** dos quatro campos/sentidos e de todas as
+bijeções. Os 1.320 inteiros com cabeçalho compatível falharam na descompactação.
+
+A ampliação com até duas letras zeráveis ficou **inconclusiva**. Doze
+intervalos atingiram 100.000 nós cada, sem solução e com 502 estados pendentes;
+outros 534 não foram pesquisados integralmente. A execução foi interrompida,
+preservando os registros. Uma implementação independente conferiu a cobertura,
+os extremos e os 599.978 certificados desses doze intervalos, incluindo
+599.846 decisões zlib. Essa verificação não encerra os estados pendentes.
+Não há processo zlib ativo nem conclusão negativa para o modelo com zeros.
+[Piloto concluído e ampliação interrompida](_work/substituted_zlib_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — fechamento da leitura posicional de FAED
+
+**Nenhuma senha final.** Os limites necessários das bases primas, registrados
+anteriormente, foram completados por uma prova dos prefixos decimais. Cada
+linha/coluna vale `A(r)·B + C(r)·Y + D(r)`. Fixar o primo de uma cor e variar
+a outra por todos os seus primos delimita um intervalo. Dígitos iniciais
+comuns que contradigam a bijeção de símbolos rejeitam o intervalo inteiro.
+
+Na ordem original ou inversa das linhas/colunas, os 13.950 casos de perfil,
+base e primeira linha produziram **54.620.160 certificados**. Todos foram
+conferidos independentemente, inclusive os limites que cobrem bases sem teto
+arbitrário. Nenhum caso permaneceu compatível. A implementação passou por
+3.072 modelos pequenos e 96 números plantados.
+[Prova dos prefixos](_work/positional_prime_prefix_2026-09-16/RELATORIO.md).
+
+A extensão para **qualquer permutação dos 14 números** examinou as outras
+doze possibilidades de primeira linha, além das duas já rejeitadas. Seus
+83.700 casos adicionais deram 327.720.907 rejeições por intervalo. Somente
+53 intervalos exigiram resolver o valor da outra cor: de 108.710 atribuições,
+3.861 falharam no primeiro número e 103.693 no comprimento total. Nos 1.156
+casos restantes, todas as 13 possibilidades de segunda linha contradisseram
+FAED. Nenhuma ordem do restante pode reparar essas contradições.
+
+Outra implementação conferiu todos os certificados, atribuições e árvores;
+dezesseis controles de ordens plantadas também passaram. As duas buscas e
+seus verificadores terminaram com saída 0. Não há processos ou casos pendentes
+desta rodada, nem candidato para AES.
+
+O negativo mantém premissas explícitas: base prima uniforme, dígitos primos
+das cores menores que a base, pesos 0/1 para preto/branco, orientação interna
+uniforme e concatenação decimal mínima. Cobre ambos os sentidos do campo,
+qualquer bijeção dos dígitos positivos e até duas letras zeráveis. Não cobre
+cores fora da base, transposições dentro de cada número ou transformações
+anteriores. [Ordem livre, resultados e verificação](_work/positional_prime_order_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — RSA e fatores primos das cores
+
+**Nenhuma senha final.** Foram testados módulos `p·q` com fatores primos
+distintos dos dois números RGB, incluindo o fator 2 como relaxamento, e
+todas as classes invertíveis de expoentes. A leitura por caractere cobre
+ASCII 32–126, TAB/LF/CR, decimal mínimo ou preenchido, `a=1,…,i=9`, até
+duas letras zeráveis por ocorrência e ambos os sentidos de DBBI/FAED.
+Seus **9.661.104 modelos** não têm caminho completo. Outra implementação
+conferiu todas as decisões; Python também conferiu 2.572.060 códigos e
+suas inversões. [Domínio e provas](_work/rsa_color_blocks_2026-09-16/RELATORIO.md).
+
+A extensão para blocos de vários bytes incluiu o par `47,23`, derivado
+das contagens 15/9 de células coloridas. Seus **9.742.064 modelos** têm
+9.924 compatibilidades pelo repertório ASCII, das quais 4.068 admitem
+somente caracteres imprimíveis e nenhuma admite só letras/espaços.
+Nos módulos com dois primos ímpares selecionados, as únicas dez
+compatibilidades pertencem a DBBI com expoente da classe identidade.
+Todos os onze modelos FAED compatíveis usam `9341·2`.
+
+Os caminhos restantes são numerosos e não constituem uma decifração.
+Todas as decisões, contagens, comprimentos e 9.924 testemunhas foram
+conferidos independentemente. [Blocos de vários bytes](_work/rsa_color_multibyte_2026-09-16/RELATORIO.md).
+
+Um filtro exato de todos esses caminhos rejeitou os formatos de chave
+hexadecimal, com ou sem `0x`, e WIF de 51/52 caracteres, em BE/LE por
+bloco: **79.392 decisões** conferidas. Com tamanhos uniformes e um possível
+bloco final menor, apenas blocos de dois bytes ficaram compatíveis,
+em 8.058 modelos DBBI e seis FAED.
+
+A seleção delimitada por contagens mínimas de controles e caracteres
+fora de letras/espaços produziu **51.335 textos distintos**. Os 616.020
+testes AES de textos diretos e seus hashes, nos três blobs com SHA256/MD5,
+foram reproduzidos em PyCryptodome. Os 2.421 paddings aceitos não produziram
+texto reconhecível; a maior fração imprimível foi 58,23%. Os 2.389.116
+escalares derivados foram comparados com a chave pública do prêmio por
+libsecp256k1, sem correspondência ou negativo correspondente.
+
+Os negativos de formato são exatos dentro do domínio; os testes de senha
+são uma amostra, não uma exclusão de todos os textos possíveis. Todos os
+processos da rodada terminaram com saída 0.
+[Candidatos, testes e verificações](_work/rsa_color_candidates_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — dígitos desconhecidos e produto de primos
+
+**Nenhuma senha final.** A busca RSA por caractere foi ampliada para qualquer
+bijeção de `a,…,i` em `1,…,9` e até duas letras zeráveis por ocorrência.
+Todos os 211.784 modelos com saída só de letras/espaços foram excluídos e
+conferidos. Para ASCII/TAB/LF/CR, o estado final desta rodada é **211.666
+negativas conferidas, 58 compatibilidades e 60 casos inconclusivos**.
+Nenhum processo permanece ativo; os casos inconclusivos estão preservados.
+
+Uma prova independente da busca resolveu a leitura de FAED em pares
+decimais abaixo de 74: as letras dos dígitos 8 e 9 precisam consumir as
+duas possibilidades de zero; a letra de 7 poderia ter no máximo cinco
+vizinhas, mas todas têm pelo menos sete. A contradição vale em ambos os
+sentidos e para qualquer expoente ou repertório de plaintext.
+
+As 71 testemunhas guardadas deram 57 textos distintos: **684 decisões AES**,
+um padding sem texto reconhecível e 212 comparações secp256k1, sem acerto.
+Os testes foram reproduzidos independentemente. Essa conferência confirma
+os resultados registrados, mas não elimina outros caminhos dos modelos compatíveis.
+[Escopo, estados e evidências](_work/rsa_substituted_digits_2026-09-16/RELATORIO.md).
+
+Outra hipótese interpreta a matriz como expoentes dos primeiros 196 primos:
+expoentes preto/branco em 0/1, azul/amarelo como dois primos uniformes >=2.
+O inteiro resultante seria o campo decimal completo. As 32 rotas de linhas,
+linhas alternadas e espirais, com reflexões/rotações/reversões, dão 256 casos
+com os fundos e campos. Limites inteiros exatos cobrem todos os expoentes
+primos que poderiam caber, sem um teto de busca arbitrário.
+
+DBBI não tem pares com o comprimento certo. FAED tem onze combinações
+compatíveis pelo comprimento; todas as 22 leituras diretas/inversas
+contradizem a bijeção dos símbolos ou os zeros permitidos. Os produtos,
+limites, rotas e contradições foram conferidos em outra implementação.
+Não há candidato AES nem caso pendente nesse modelo.
+[Produto de primos da matriz](_work/prime_product_matrix_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — fechamento da busca FAED/base 127
+
+**Nenhuma senha final.** A busca parcial registrada em 11/09 foi concluída.
+O modelo mantém `a=1,…,i=9`, cada `g` como 0/7 por ocorrência, o inteiro
+decimal completo e sua representação mínima em base 127, com dígitos
+restritos a TAB/LF/CR/ASCII 32–126. Não há cortes ou mapas adicionais.
+
+Uma implementação que reaproveita prefixos fixos gerou a prova do domínio
+inteiro: **4.176.355 nós, 2.087.990 intervalos rejeitados e exatamente 188
+saídas**, cobrindo todas as `2^107` máscaras. Outro programa usou contagem
+exata de cadeias por intervalo para verificar todos os nós, a cobertura e
+os candidatos. O produtor tem 1.600 intervalos de controle, dezoito casos
+de máscaras e três textos plantados; o verificador tem mil controles.
+
+Os 177 candidatos antigos foram recuperados byte a byte; os onze novos
+estão depois do checkpoint anterior. Os arquivos históricos foram
+preservados. As 44 formas de texto e 88 senhas novas deram **528 decisões
+AES**, cinco paddings sem resultado validado e 16.276 comparações de
+escalares, sem correspondência com a chave pública ou seu negativo.
+PyCryptodome e libsecp256k1 reproduziram os testes.
+
+Com a rodada anterior, as 188 saídas tiveram **1.504 senhas distintas e
+9.024 decisões AES**, sem abertura autenticada. Esse resultado fecha a
+enumeração do modelo, não todas as maneiras de interpretar as pistas.
+
+A conversão decimal direta em base 128 também falha no repertório textual:
+o primeiro código é fixo em 1 nos dois sentidos de DBBI, 6 em FAED original
+e 4 em FAED inverso. Não houve remoção desses controles nem deslocamento
+do início dos bits. Todos os processos terminaram; **FAED/base127 não tem
+mais máscaras pendentes** nesta hipótese.
+[Prova, candidatos e verificações](_work/radix127_completion_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — primos como códigos de caracteres
+
+**Nenhuma senha final.** Dez tabelas de primos indexados por letras ou
+códigos ASCII, duas direções, dois formatos decimais e três regras de
+dígitos/zeros resultaram em 240 modelos: 238 exclusões e duas
+compatibilidades, todos conferidos independentemente. Não há caso limitado
+pendente. Só DBBI aceita `A=2, B=3,...`, espaço=0, com mapa desconhecido.
+
+A exceção foi esgotada em **52.254.720 configurações** de bijeções, pares
+zeráveis e campos/sentidos. Há 498 configurações compatíveis em DBBI
+original, 42 em DBBI inverso e nenhuma em FAED. Outro autômato, com códigos
+revertidos, reproduziu todas as decisões, contagens e testemunhas.
+
+Nenhum caminho completo passa pelo filtro declarado de palavras do corpus
+Norvig. Isso não exclui texto sem espaços, nomes, outras línguas ou outra
+camada cifrada. A amostra de 530 testemunhas distintas teve 25.440 decisões
+AES, 106 paddings sem resultado autenticado e 234.488 comparações secp256k1
+sem acerto; tudo foi reproduzido com PyCryptodome/coincurve. Os demais
+caminhos dos modelos compatíveis não foram testados como senhas.
+[Modelo, limites e evidências](_work/prime_codepoints_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — conclusão dos sessenta casos RSA limitados
+
+**Nenhuma senha final.** Os sessenta casos inconclusivos da rodada RSA
+com dígitos desconhecidos foram concluídos: 58 incompatíveis e dois
+compatíveis. Autômatos que representam todos os cortes e zeros examinaram
+**653.184.000 configurações**. Outra implementação reverteu códigos e
+fontes, refez as potências e reproduziu todas as decisões. Os registros
+antigos permanecem preservados, com link para o estado atualizado.
+
+A classificação final dos 423.568 modelos dessa família é: **423.508
+excluídos e conferidos, 60 compatíveis, nenhum inconclusivo**. Os
+compatíveis são 59 de DBBI e um de FAED. Este último usa n=74/e=7,
+decimal mínimo e FAED inverso; suas 24 configurações admitem muitos
+caminhos, mas todos contêm ao menos nove TAB/LF/CR e 363 caracteres.
+Assim, nenhum modelo FAED dessa família gera somente ASCII 32–126.
+
+A nova compatibilidade DBBI, n=362/e=133, tem três mapas e exatamente
+360 caminhos, todos enumerados e conferidos. Com testemunhas e saídas
+ótimas declaradas de FAED, foram autenticados 465 textos distintos:
+**26.640 decisões AES**, 126 paddings sem validação e **391.340 escalares**,
+sem correspondência com o prêmio. PyCryptodome/coincurve reproduziram
+tudo. Os caminhos restantes de FAED não foram testados como senhas.
+
+Não há processo desta rodada em execução. O fechamento vale para os
+módulos, códigos e regras declarados, sem excluir outras cifras ou
+fornecer a chave final.
+[Prova e estado atualizado](_work/rsa_pending_dfa_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — códigos por caractere sem limite de letras zeráveis
+
+**Nenhuma senha final.** Foi removido o limite de duas letras zeráveis:
+qualquer ocorrência das nove letras pode valer zero ou seu dígito
+positivo, com todas as 9! bijeções. Treze tabelas de primos/ASCII,
+dois formatos e quatro campos/sentidos deram **37.739.520 decisões**,
+reproduzidas por um segundo autômato. Dos 104 modelos, 95 são incompatíveis.
+FAED não admite os códigos ASCII declarados mesmo nessa ampliação.
+
+A exceção A=2,...,Z=101 com espaço=0 admite saídas feitas só de espaços.
+Uma busca adicional, conferida em sentido inverso, mostra que FAED precisa
+de **ao menos cinco letras zeráveis** no decimal mínimo. As combinações
+de três e quatro deram 152.409.600 negativas adicionais; testemunhas
+recodificadas provam existência com cinco. Para três dígitos preenchidos,
+uma prova por pares de posições força todas as nove letras a serem
+zeráveis. Esses resultados delimitam compatibilidade; não recuperam texto.
+
+Os 3.600 mapas imprimíveis de DBBI foram contados exatamente, mas seus
+caminhos não foram enumerados por completo. Nenhum texto completo cabe
+nos cinco formatos declarados de chave de 32 bytes (direta ou Base64).
+Filtros de palavras produziram 107 candidatos selecionados: **4.644
+decisões AES**, doze paddings sem validação e **19.562 comparações
+secp256k1**, sem acerto. PyCryptodome/coincurve reproduziram tudo.
+Os demais caminhos continuam sem autenticação.
+[Escopo, provas e amostras](_work/unbounded_zero_codepoints_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — fatores das cores e listas de somas
+
+**Nenhuma senha final.** A revisão das fontes mantém cores, primos,
+`matrixsumlist` e últimas palavras como pistas, sem uma fórmula confirmada.
+Foi testada a escolha de fatores primos de três valores de cada cor:
+soma dos dígitos hexadecimais, soma R+G+B e inteiro RGB. As cores foram
+conferidas no PNG preservado do domínio restaurado.
+
+Os 14 pares de fatores, dois fundos e ordens explícitas de linhas/colunas
+deram 280 listas. Seis serializações e composições declaradas com as duas
+cláusulas já fixadas produziram **8.370 materiais, 16.740 senhas e
+100.440 decisões AES**. Houve 411 paddings sem resultado autenticado e
+**455.646 comparações de escalares** sem acerto. Outra implementação
+regenerou todos os materiais; PyCryptodome/coincurve reproduziram os testes.
+
+Também foram corrigidas afirmações antigas no README que promoviam
+igualdades e fragmentos da cadeia não autenticada a pistas confirmadas.
+Os resultados históricos foram preservados com seus limites.
+[Regras, fatores e conferências](_work/color_factor_sums_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — valores ASCII primos da URL inicial
+
+**Nenhuma senha final.** Foi testada uma interpretação distinta das posições
+primas: selecionar pela primalidade dos valores ASCII da URL que a imagem
+decodifica, recolocar esses valores nas células coloridas ou zerar bytes
+não selecionados e calcular listas de somas. A ligação entre células
+coloridas e bytes é verificável; a operação é uma hipótese do solver.
+
+Nove matrizes, 90 listas e composições fixas com as duas cláusulas de últimas
+palavras geraram 1.625 materiais e **3.250 senhas**. Foram conferidas
+**19.500 decisões AES**, com 80 paddings sem validação, e **3.250 escalares**
+sem acerto no prêmio. Outra implementação reconstruiu a espiral e todos
+os materiais; PyCryptodome e coincurve confirmaram os resultados.
+[Derivação, escopo e conferência](_work/url_prime_reinsertion_2026-09-16/RELATORIO.md).
+
+O plano da próxima etapa também foi atualizado para refletir o fechamento
+de FAED/base127: 188 candidatos, sem máscaras pendentes. Não há processo
+desta rodada em execução; a transformação que fornece a senha permanece
+sem identificação.
+
+## Sessão 2026-09-16 — Brotli e cabeçalhos Zstandard
+
+**Nenhuma senha ou conteúdo recuperado.** A conversão decimal original,
+com cada `g` independentemente 0/7, foi examinada como um fluxo Brotli
+completo. DBBI nos dois sentidos e FAED original foram excluídos por
+prefixos inválidos: a árvore de FAED original termina em 275 nós,
+cobrindo todas as `2^107` máscaras. FAED invertido atingiu o limite de
+200.000 nós e mantém 97 ramos pendentes; não foi declarado impossível.
+
+Python reconstruiu limites e cobertura de todos os certificados e os
+reexaminou via Brotli em modo de fluxo. As duas APIs usam a mesma
+biblioteca de descompressão; a conferência aritmética é independente.
+Uma leitura dos bits sem essa biblioteca confirmou os cinco certificados
+de DBBI. Quarenta e duas construções curtas tiveram seus conjuntos de
+resultados comparados com enumeração integral, incluindo controles positivos.
+
+Os cabeçalhos Zstandard e frames ignoráveis também contradizem os prefixos
+fixos nos quatro casos. Isso não cobre dados sem cabeçalho ou outras
+transformações. Não há processo desta rodada em execução.
+[Escopo, resultados e pendências](_work/brotli_decimal_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-16 — inteiro decimal sem limite de letras zeráveis
+
+**Nenhuma senha final.** A leitura do campo decimal inteiro foi ampliada
+para permitir que qualquer ocorrência de qualquer letra seja zero ou seu
+valor `a=1,...,i=9`. Vinte modelos, com cinco repertórios textuais em dois
+campos e sentidos, terminaram integralmente. Os repertórios e suas
+limitações constam no [relatório](_work/unbounded_zero_integer_2026-09-16/RELATORIO.md).
+
+Os 18.215 certificados cobrem `2^91` escolhas em cada caso DBBI e `2^570`
+em cada caso FAED. Outra implementação contou os inteiros admitidos em
+cada intervalo e conferiu cobertura e candidatos. A união tem 42 saídas
+de até 15 bytes; todas precisam zerar ocorrências das nove letras e
+longos prefixos. Não há lista de somas ou hash completo nesses candidatos.
+Suas composições declaradas deram 2.808 decisões AES e 468 escalares,
+sem resultado validado, com conferência PyCryptodome/coincurve.
+
+Dois pilotos de repertório mais amplo em FAED original permanecem parciais:
+ASCII imprimível/TAB/LF/CR e minúsculas/pontuação com dígitos. Seus 26.562
+candidatos encontrados geraram 318.744 decisões AES e 53.124 escalares,
+também conferidos e sem acerto. Isso não esgota as máscaras pendentes.
+Não há processo desta rodada em execução.
+
+## Sessão 2026-09-16 — inteiro zerável com restrições de palavras
+
+**Nenhuma senha final.** A conversão do inteiro decimal com todas as
+ocorrências zeráveis foi examinada com dois vocabulários e duas regras de
+caixa. Cada sequência máxima de letras deve ser uma entrada do corpus;
+dígitos e pontuação explícita separam essas sequências. O corpus também
+contém siglas e abreviações, portanto esse filtro não prova linguagem coerente.
+
+Dez dos dezesseis modelos terminaram: os oito de DBBI e os dois de FAED com
+vocabulário de maior contagem e caixa por palavra. As duas continuações
+executadas nesta rodada terminaram; seis outros modelos FAED permanecem
+parciais. Os estados atuais têm 2.754.072 certificados, incluindo máscaras
+pendentes. Outra implementação reconstruiu os vocabulários e verificou
+intervalos, cobertura e candidatos, sem reutilizar o algoritmo de sucessor.
+
+As listas encontradas têm 100.404 saídas distintas. Nas formas direta e
+SHA256 hexadecimal, elas geraram 200.808 senhas, **1.204.848 decisões AES**
+e **200.808 comparações de escalares**, sem resultado autenticado.
+PyCryptodome e coincurve reproduziram todas as decisões. As formas com
+cláusulas adicionais e os ramos ainda pendentes não foram esgotados.
+
+[Especificação, resultados atuais e conferências](_work/unbounded_integer_words_2026-09-16/RELATORIO.md).
+Não há processo desta rodada em execução.
+
+## Sessão 2026-09-16 — somas dos campos em tabelas retangulares
+
+**Nenhuma senha final.** A leitura literal dos campos como tabelas foi
+examinada em todas as dimensões retangulares exatas: 12 partições DBBI e
+84 FAED, somas de linhas/colunas e ambas as direções. Cada modelo permite
+zerar ocorrências de uma letra escolhida entre as nove, mantendo `a=1..i=9`.
+
+São 2.592 modelos estruturais. Todos os 864 que interpretam as somas como
+`A=2,...,Z=101`, com zero=espaço, falham antes do filtro lexical. A1Z26
+também falha em DBBI. Restam 302 modelos com domínios ASCII/A1Z26 não vazios.
+
+Dois vocabulários e regras com palavras separadas ou concatenadas deram
+10.368 casos completos e 490 compatíveis, com 355 melhores textos distintos.
+Uma otimização adicional por quadgramas, sem exigir o dicionário, selecionou
+uma saída por domínio não vazio. Controles e implementações independentes
+confirmaram as partições, somas, contagens e escores ótimos.
+
+Os textos selecionados, listas numéricas, composições com últimas palavras
+e normalizações declaradas geraram **35.328 senhas distintas**, sem abertura
+validada nem acerto na chave pública. PyCryptodome/coincurve reproduziram
+as decisões. Os caminhos compatíveis não foram todos autenticados; o
+resultado não exclui outras leituras de `matrixsumlist`.
+
+[Modelos, controles e resultados](_work/matrix_sum_words_2026-09-16/RELATORIO.md).
+Não há processo desta rodada em execução.
+
+## Sessão 2026-09-16 — DBBI como escalar com zeros ocultos
+
+**Nenhuma senha final.** Foi esgotada a interpretação do campo completo
+DBBI como inteiro decimal `a=1..i=9`, com ocorrências de até duas letras
+independentemente zeráveis, nos dois sentidos, reduzido pela ordem `n`
+ou pelo primo `p` da secp256k1. Nenhum escalar válido correspondeu à
+chave pública do prêmio ou à sua negação.
+
+Os 144 modelos somam 35.538.237.967.872 escolhas binárias, com
+sobreposições. Uma busca dividida em duas metades cobriu esse espaço
+usando 20.499.712 registros de tabela e 31.374.048 consultas de pontos.
+Essas contagens não representam chaves distintas ou senhas AES testadas.
+
+Uma enumeração independente por árvore binária reproduziu contagens,
+impressões digitais de todos os registros e ausência de correspondências.
+Ela compartilha libsecp256k1 com o produtor. Separadamente, Node/OpenSSL
+e adição afim JavaScript conferiram todas as 7.452 amostras preservadas.
+Os controles plantados incluem colisões, transportes e escalares inválidos.
+
+A hipótese não é uma instrução confirmada do criador. O negativo não cobre
+três ou mais letras zeráveis, FAED, hashing, outro mapa de dígitos ou
+transformações adicionais. SMALL, COSMIC e TAIL32 continuam sem abertura
+autenticada.
+
+[Especificação, método, controles e conferências](_work/dbbi_curve_zero_2026-09-16/RELATORIO.md).
+Não há processo desta rodada em execução.
+
+## Sessão 2026-09-16 — preencher os zeros e aplicar primos das cores
+
+**Nenhuma senha final.** A auditoria confirmou que os 192 bits da URL
+têm 91 zeros e 101 uns; a matriz completa tem 95 zeros. O único bit
+incorreto da matriz histórica fica no índice espiral 193. Corrigida a
+nota que rejeitava também a contagem válida de 91 zeros; a distribuição
+antiga de DBBI fora do centro não é invalidada por esse erro.
+
+Foi testada a combinação de preencher esses zeros com DBBI e substituir
+azul/amarelo pelos 14 pares de fatores primos RGB já declarados, preservando
+ou zerando o quase branco. As 56 matrizes geraram 560 listas, 16.800
+pré-imagens, 33.600 senhas e 201.600 decisões AES, sem abertura autenticada.
+Todos os resultados foram reproduzidos por uma implementação independente;
+34.351 escalares também não corresponderam à chave do prêmio.
+
+As listas como chaves decimais repetidas de FAED deram 249.408 casos
+completos, todos incompatíveis com UTF-8 nos modelos especificados.
+Foram conferidos os 552.652 certificados e a cobertura de todas as escolhas
+`g→0/7`. O resultado não exclui outras operações de `matrixsumlist`.
+
+[Fórmulas, auditoria, resultados e limites](_work/zero_cells_prime_sums_2026-09-16/RELATORIO.md).
+Não há processo desta rodada em execução.
+
+## Sessão 2026-09-16 — metadados e áreas não alocadas do MP3
+
+**Nenhuma senha final.** Os dois arquivos MP3 preservados são idênticos.
+O bloco ID3 contém apenas a versão do Logic Pro X, `iTunNORM` e `iTunSMPB`,
+seguido de 3.815 bytes zero. Há 199 frames contínuos, sem bytes anexados.
+FFprobe conferiu todos os limites, e FFmpeg decodificou todos os frames.
+
+Os bits privados dos cabeçalhos e de side info são zero. Os 179 bytes de
+padding MPEG seguem exatamente a compensação de tamanho `44/49`, fase 43.
+Os comprimentos de áudio declaram 199 regiões não alocadas, totalizando
+121.875 bits: todos zero. Outra implementação reproduziu essa contagem e
+todos os limites, comprimentos e backpointers; seis controles de corrupção
+deliberada verificaram a detecção de alterações.
+
+Essa auditoria não obteve outra mensagem além de `HASHTHETEXT`, já conhecida,
+nem um novo candidato fundamentado para AES. Não exclui esteganografia nos
+coeficientes ou outras transformações do sinal. Corrigida a caracterização
+antiga de Decentraland como inteiramente fechada.
+
+[Fonte, reprodução, resultados e limites](_work/mp3_container_2026-09-16/RELATORIO.md).
+Não há processo desta rodada em execução.
+
+## Sessão 2026-09-16 — somas decimais dos sete anéis
+
+**Nenhuma senha final.** A espiral da primeira fase motivou testar os sete
+anéis concêntricos como uma lista de somas. A leitura direta de DBBI/FAED
+como essa lista foi excluída para todos os pesos inteiros azul/amarelo
+`p,q ≥ 2`, incluindo todos os primos, sem teto arbitrário de busca.
+
+O modelo mantém `a=1,…,i=9`, permite até duas letras também representarem
+zero por ocorrência, ambas as direções dos campos e da lista, e quatro
+tratamentos 0/1 dos bits não coloridos. São 1.472 modelos: 1.144 falham
+no centro constante; os demais admitem 64.756 separações de comprimentos.
+Nenhuma produz as seis somas restantes. Os limites de comprimento são
+derivados das razões entre as expressões lineares dos anéis.
+
+Outro programa reconstruiu a geometria e todas as separações. Testando
+somente os restos dos pesos, rejeitou 64.749 casos módulo 10 e os sete
+restantes módulo 100. Vinte controles plantados e doze comparações
+exaustivas passaram no produtor; vinte controles passaram no verificador.
+Não houve candidato para AES. O resultado não exclui outras funções
+dos anéis ou outros mapas de caracteres.
+
+[Hipótese, prova, controles e reprodução](_work/ring_sum_decimal_2026-09-16/RELATORIO.md).
+Não há processo desta rodada em execução.
+
+## Sessão 2026-09-16 — bases 29/31/37 como alfabetos de letras
+
+**Nenhuma senha final.** Foi testado o inteiro decimal completo com
+`a=1,…,i=9`, todas as escolhas `g→0/7`, ambos os sentidos, e seis alfabetos
+explícitos nas bases 29/31/37. Isso difere de interpretar os dígitos como
+códigos ASCII. Exigindo palavras separadas do corpus de 333.296 entradas,
+todos os 24 modelos foram excluídos, com 39 intervalos conferidos por
+outro algoritmo e 12.288 máscaras DBBI também enumeradas diretamente.
+
+A extensão para palavras concatenadas usa 26.264 entradas de maior contagem.
+Terminou 19 de 24 modelos e encontrou 35.965 textos distintos. Cinco FAED
+permanecem parciais. Todos os candidatos foram reencodificados e conferidos
+por segmentação independente; a cobertura das máscaras foi conferida,
+mas as exclusões internas dos modelos parciais não foram certificadas
+independentemente. Siglas e abreviações explicam por que compatibilidade
+com esse vocabulário não é prova de mensagem legível.
+
+As formas declaradas deram 287.712 casos de senha, 1.726.272 decisões AES
+e 6.644 paddings, sem abertura autenticada. PyCryptodome reproduziu todas
+as decisões e os corpos. Com coincurve, 294.356 hashes escalares também
+não corresponderam ao prêmio ou à sua negação. Não foi alegada exclusão
+dos candidatos ainda desconhecidos nos cinco modelos parciais.
+
+[Alfabetos, gramáticas, cobertura, controles e resultados](_work/prime_alphabet_words_2026-09-16/RELATORIO.md).
+Não há processo desta rodada em execução.
+
+## Sessão 2026-09-16 — pontuação de linguagem nas bases primas parciais
+
+**Nenhuma senha final.** Os cinco modelos FAED parciais em bases 29/31
+foram examinados por uma busca que mantém 1.024 máscaras `g→0/7` por
+etapa, pontuando o prefixo já fixado na base de saída. Essa busca não
+exige o vocabulário anterior e não é exaustiva.
+
+Oito mensagens conhecidas foram recuperadas integralmente: sete em
+primeiro lugar, uma em segundo. Nas cinco entradas reais, as melhores
+médias de quadgramas ficaram de −6,397 a −6,244; nas cinco comparações
+embaralhadas, de −6,402 a −6,227. Os controles ficaram de −4,259 a −4,076.
+Os textos reais completos continuam sem mensagem coerente identificada.
+Uma comparação embaralhada por modelo não fornece significância estatística.
+
+Os 5.120 candidatos reais retidos, todos ausentes da lista lexical anterior,
+geraram 40.960 casos de senha e 245.760 decisões AES, sem abertura autenticada.
+Outra implementação reproduziu todas as decisões; 41.942 hashes escalares
+também não atingiram o prêmio ou sua negação. Os candidatos das calibrações
+e comparações embaralhadas não entraram nos testes AES.
+
+Foram conferidos a reconstrução e os escores de todos os 18.432 candidatos
+finais das 18 execuções, mais 704 atribuições em doze controles exaustivos
+pequenos. Isso não prova o ótimo global. Os cinco modelos anteriores
+permanecem parciais e não foram retomados pela busca lexical.
+
+[Algoritmo, controles, comparação, autenticação e limites](_work/prime_radix_beam_2026-09-16/RELATORIO.md).
+Não há processo desta rodada em execução.
+
+## Sessão 2026-09-16 — máscaras da capitalização dos títulos
+
+As seis cópias HTML examinadas preservam `SalPhaseIon` (maiúsculas em
+1,4,9) e `Cosmic Duality` (1,8, contando o espaço). A correspondência com
+quadrados e cubos é uma observação, sem confirmação como instrução.
+
+As máscaras dessas posições e da capitalização periódica dos títulos
+geraram 224 transformações de DBBI/FAED, 3.200 materiais e 6.400 casos de
+senha. As 38.400 decisões AES foram reproduzidas integralmente por outra
+implementação. Nenhuma saída coerente ou chave do prêmio foi obtida;
+6.554 escalares também não corresponderam ao ponto público ou à sua negação.
+
+[Fontes, família finita, controles e limites](_work/title_position_masks_2026-09-16/RELATORIO.md).

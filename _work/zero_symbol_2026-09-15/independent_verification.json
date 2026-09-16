@@ -1,0 +1,10 @@
+{
+  "method": "Independent counting of the 7-bit integer language inside every excluded interval; source-derived endpoints and complete prefix-free mask coverage.",
+  "cases": 36,
+  "certificates": 90,
+  "integerCountControls": 65536,
+  "largeWidthControls": 600,
+  "reportSHA256": "4362beed61e71a2e8de224c499cfc628a0bc6aa84f2611091d6d4ca0a14e7dd4",
+  "verifierSHA256": "df74339c4fd6b4a56205c9eaa6a21759ef69b4e44be4c21edf6d510482d6fb12",
+  "allPassed": true
+}

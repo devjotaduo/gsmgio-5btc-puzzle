@@ -1,0 +1,2242 @@
+[
+  {
+    "id": 0,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power2/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "0029062830257298025259825075752522750852886212648056634226333726055775325439262660972555125"
+  },
+  {
+    "id": 1,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power2/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "4223178227"
+  },
+  {
+    "id": 2,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power2/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "296283257298252598257575252275852886212648566342263337265577532543926266972555125"
+  },
+  {
+    "id": 3,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power2/origin0",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "4229262833250298125259825075752522058852886212648256634226333726255775325439262667902555125"
+  },
+  {
+    "id": 4,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power2/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "4200200003000000100000000700000000008000000000000200000000000000200000000000000007000000000"
+  },
+  {
+    "id": 5,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power2/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "296283257298252598257575252275852886212648566342263337265577532543926266972555125"
+  },
+  {
+    "id": 6,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power2/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "4223178227"
+  },
+  {
+    "id": 7,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power2/origin0",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "4229262833257298125259825705052522758852886212648256634226333026255005325439262660972555125"
+  },
+  {
+    "id": 8,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power2/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "0220262803257290125259820775752522708852886212640256634226333720255775325439262607972555125"
+  },
+  {
+    "id": 9,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power2/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "493855866"
+  },
+  {
+    "id": 10,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power2/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "2226283257291252598277575252278852886212642566342263337225577532543926267972555125"
+  },
+  {
+    "id": 11,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power2/origin1",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "4229262833250298125259825775052522758852886212648256634226333726255775325439262660972555125"
+  },
+  {
+    "id": 12,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power2/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "4009000030000008000000005000000000050000000000008000000000000006000000000000000060000000000"
+  },
+  {
+    "id": 13,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power2/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "2226283257291252598277575252278852886212642566342263337225577532543926267972555125"
+  },
+  {
+    "id": 14,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power2/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "493855866"
+  },
+  {
+    "id": 15,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power2/origin1",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "4229262833257298125259825005752522058852886212648256634226333026255005325439262667902555125"
+  },
+  {
+    "id": 16,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power3/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "0029262803257298125259825770752522758852886212648256634226333726055775325439262667972555125"
+  },
+  {
+    "id": 17,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power3/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "42352"
+  },
+  {
+    "id": 18,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power3/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "29262832572981252598257775252275885288621264825663422633372655775325439262667972555125"
+  },
+  {
+    "id": 19,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power3/origin0",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "4229262833250298125259825075752522758852886212648256634226333726255775325439262660972555125"
+  },
+  {
+    "id": 20,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power3/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "4200000030000000000000000005000000000000000000000000000000000000200000000000000000000000000"
+  },
+  {
+    "id": 21,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power3/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "29262832572981252598257775252275885288621264825663422633372655775325439262667972555125"
+  },
+  {
+    "id": 22,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power3/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "42352"
+  },
+  {
+    "id": 23,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power3/origin0",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "4229262833257298125259825705052522058852886212648256634226333026255005325439262667902555125"
+  },
+  {
+    "id": 24,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power3/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "0229262033257298125259825705752522758852886212648256634226333720255775325439262667972555125"
+  },
+  {
+    "id": 25,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power3/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "4876"
+  },
+  {
+    "id": 26,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power3/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "229262332572981252598257575252275885288621264825663422633372255775325439262667972555125"
+  },
+  {
+    "id": 27,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power3/origin1",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "4229262833250298125259825775752522758852886212648256634226333726255705325439262667972555125"
+  },
+  {
+    "id": 28,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power3/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "4000000800000000000000000070000000000000000000000000000000000006000000000000000000000000000"
+  },
+  {
+    "id": 29,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power3/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "229262332572981252598257575252275885288621264825663422633372255775325439262667972555125"
+  },
+  {
+    "id": 30,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power3/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "4876"
+  },
+  {
+    "id": 31,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "power3/origin1",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "4229262833257298125259825005052522058852886212648256634226333026255075325439262660902555125"
+  },
+  {
+    "id": 32,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/SalPhaseIon",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "0220262803207208125059025075750520750852806202608256034026033720250770325409202607972055025"
+  },
+  {
+    "id": 33,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/SalPhaseIon",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "4935928722881462365536651"
+  },
+  {
+    "id": 34,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/SalPhaseIon",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "222628327281255925757552758528622682563426337225773254922679725525"
+  },
+  {
+    "id": 35,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/SalPhaseIon",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "4229262833250298125259825775052522758852886212648256634226333726255775325439262660972555125"
+  },
+  {
+    "id": 36,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/SalPhaseIon",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "4009000030050090000200800700002002008000080010040000600200300006005005000030060060000500100"
+  },
+  {
+    "id": 37,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/SalPhaseIon",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "222628327281255925757552758528622682563426337225773254922679725525"
+  },
+  {
+    "id": 38,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/SalPhaseIon",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "4935928722881462365536651"
+  },
+  {
+    "id": 39,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/SalPhaseIon",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "4229262833257298125259825005752522058852886212648256634226333026255005325439262667902555125"
+  },
+  {
+    "id": 40,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/Cosmic Duality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "0229262033257208125250825775052522708852880212648056634206333720255775025439202667970555125"
+  },
+  {
+    "id": 41,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/Cosmic Duality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "4899756226362"
+  },
+  {
+    "id": 42,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/Cosmic Duality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "229262332572812525825775525227885288212648566342633372255775254392266797555125"
+  },
+  {
+    "id": 43,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/Cosmic Duality",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "4229262833250298125259825775752522758852886212648256634226333726255705325439262667972555125"
+  },
+  {
+    "id": 44,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/Cosmic Duality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "4000000800000090000009000000700000050000006000000200000020000006000000300000060000002000000"
+  },
+  {
+    "id": 45,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/Cosmic Duality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "229262332572812525825775525227885288212648566342633372255775254392266797555125"
+  },
+  {
+    "id": 46,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/Cosmic Duality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "4899756226362"
+  },
+  {
+    "id": 47,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/Cosmic Duality",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "4229262833257298125259825005052522058852886212648256634226333026255075325439262660902555125"
+  },
+  {
+    "id": 48,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/CosmicDuality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "0229260833257098125059825705752502758850886210648256034226033726205775305439260667970555125"
+  },
+  {
+    "id": 49,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/CosmicDuality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "42227222635222"
+  },
+  {
+    "id": 50,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/CosmicDuality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "22926833257981255982575752527588588621648256342263372625775354392666797555125"
+  },
+  {
+    "id": 51,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/CosmicDuality",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "4229262833250298125259825775752522758852886212648256634226333726255075325439262667972555125"
+  },
+  {
+    "id": 52,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/CosmicDuality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "4000002000000200000200000070000020000002000002000000600000300000050000020000002000002000000"
+  },
+  {
+    "id": 53,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/CosmicDuality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "22926833257981255982575752527588588621648256342263372625775354392666797555125"
+  },
+  {
+    "id": 54,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/CosmicDuality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "42227222635222"
+  },
+  {
+    "id": 55,
+    "field": "dbbi",
+    "reverse": false,
+    "rule": "periodic/CosmicDuality",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "4229262833257298125259825005052522058852886212648256634226333026255705325439262660902555125"
+  },
+  {
+    "id": 56,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power2/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "0015052790662629045235775026273336220366528462126082588572252575075289525218927520382629224"
+  },
+  {
+    "id": 57,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power2/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "5257354873"
+  },
+  {
+    "id": 58,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power2/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "155279662629452357752627333622366528462126825885722525757528952521892752382629224"
+  },
+  {
+    "id": 59,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power2/origin0",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "5215552090662629345235775526203336224366528462126882588572252575775289525218920523382629224"
+  },
+  {
+    "id": 60,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power2/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "5200500007000000300000000500000000004000000000000800000000000000700000000000000003000000000"
+  },
+  {
+    "id": 61,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power2/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "155279662629452357752627333622366528462126825885722525757528952521892752382629224"
+  },
+  {
+    "id": 62,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power2/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "5257354873"
+  },
+  {
+    "id": 63,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power2/origin0",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "5215552797662629345235005526273336224366528462126882588502252505005289525218927523382629224"
+  },
+  {
+    "id": 64,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power2/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "0210552707662620345235770526273336204366528462120882588572252570775289525218927503382629224"
+  },
+  {
+    "id": 65,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power2/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "559952652"
+  },
+  {
+    "id": 66,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power2/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "2155277662623452357752627333624366528462128825885722525777528952521892753382629224"
+  },
+  {
+    "id": 67,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power2/origin1",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "5215552097662629345235705526273336224366528462126882588572252575705289525218927523382629224"
+  },
+  {
+    "id": 68,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power2/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "5005000090000009000000005000000000020000000000006000000000000005000000000000000020000000000"
+  },
+  {
+    "id": 69,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power2/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "2155277662623452357752627333624366528462128825885722525777528952521892753382629224"
+  },
+  {
+    "id": 70,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power2/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "559952652"
+  },
+  {
+    "id": 71,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power2/origin1",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "5215552790662629345235075526203336224366528462126882588502252505075289525218920523382629224"
+  },
+  {
+    "id": 72,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power3/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "0015552707662629345235775520273336224366528462126882588572252575075289525218927523382629224"
+  },
+  {
+    "id": 73,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power3/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "52967"
+  },
+  {
+    "id": 74,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power3/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "15552776626293452357755227333622436652846212688258857225257575289525218927523382629224"
+  },
+  {
+    "id": 75,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power3/origin0",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "5215552090662629345235775526273336224366528462126882588572252575705289525218927523382629224"
+  },
+  {
+    "id": 76,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power3/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "5200000090000000000000000006000000000000000000000000000000000000700000000000000000000000000"
+  },
+  {
+    "id": 77,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power3/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "15552776626293452357755227333622436652846212688258857225257575289525218927523382629224"
+  },
+  {
+    "id": 78,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power3/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "52967"
+  },
+  {
+    "id": 79,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power3/origin0",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "5215552797662629345235005526203336224366528462126882588502252505075289525218920523382629224"
+  },
+  {
+    "id": 80,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power3/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "0215552097662629345235775506273336224366528462126882588572252570775289525218927523382629224"
+  },
+  {
+    "id": 81,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power3/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "5725"
+  },
+  {
+    "id": 82,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power3/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "215552976626293452357755627333622436652846212688258857225257775289525218927523382629224"
+  },
+  {
+    "id": 83,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power3/origin1",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "5215552097662629345235775526273336224366528462126882588572252575075289525218927523382629224"
+  },
+  {
+    "id": 84,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power3/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "5000000700000000000000000020000000000000000000000000000000000005000000000000000000000000000"
+  },
+  {
+    "id": 85,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power3/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "215552976626293452357755627333622436652846212688258857225257775289525218927523382629224"
+  },
+  {
+    "id": 86,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power3/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "5725"
+  },
+  {
+    "id": 87,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "power3/origin1",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "5215552790662629345235005526203336224366528462126882588502252505705289525218920523382629224"
+  },
+  {
+    "id": 88,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/SalPhaseIon",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "0210552707602609345035075026270330220366508402106882088072052570770280525208907503382029024"
+  },
+  {
+    "id": 89,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/SalPhaseIon",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "5596227536426255255912262"
+  },
+  {
+    "id": 90,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/SalPhaseIon",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "215527762693453575262733223665842168828872525777285252897533822924"
+  },
+  {
+    "id": 91,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/SalPhaseIon",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "5215552097662629345235705526273336224366528462126882588572252575705289525218927523382629224"
+  },
+  {
+    "id": 92,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/SalPhaseIon",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "5005000090060020000200700500003006004000020060020000500500200005005009000010020020000600200"
+  },
+  {
+    "id": 93,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/SalPhaseIon",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "215527762693453575262733223665842168828872525777285252897533822924"
+  },
+  {
+    "id": 94,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/SalPhaseIon",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "5596227536426255255912262"
+  },
+  {
+    "id": 95,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/SalPhaseIon",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "5215552790662629345235075526203336224366528462126882588502252505075289525218920523382629224"
+  },
+  {
+    "id": 96,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/Cosmic Duality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "0215552097662609345230775526073336204366520462126082588502252570775289025218907523380629224"
+  },
+  {
+    "id": 97,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/Cosmic Duality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "5725228875522"
+  },
+  {
+    "id": 98,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/Cosmic Duality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "215552976626934523775526733362436652462126825885225257775289252189752338629224"
+  },
+  {
+    "id": 99,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/Cosmic Duality",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "5215552097662629345235775526273336224366528462126882588572252575075289525218927523382629224"
+  },
+  {
+    "id": 100,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/Cosmic Duality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "5000000700000020000005000000200000020000008000000800000070000005000000500000020000002000000"
+  },
+  {
+    "id": 101,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/Cosmic Duality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "215552976626934523775526733362436652462126825885225257775289252189752338629224"
+  },
+  {
+    "id": 102,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/Cosmic Duality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "5725228875522"
+  },
+  {
+    "id": 103,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/Cosmic Duality",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "5215552790662629345235005526203336224366528462126882588502252505705289525218920523382629224"
+  },
+  {
+    "id": 104,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/CosmicDuality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "0215550797662029345035775506273306224360528460126882088572052575705289505218920523380629224"
+  },
+  {
+    "id": 105,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/CosmicDuality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "52622362527272"
+  },
+  {
+    "id": 106,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/CosmicDuality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "21555797662293453577556273362243652846126882885725257575289552189252338629224"
+  },
+  {
+    "id": 107,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/CosmicDuality",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "5215552097662629345235775526273336224366528462126882588572252505775289525218927523382629224"
+  },
+  {
+    "id": 108,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/CosmicDuality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "5000002000000600000200000020000030000006000002000000500000200000070000020000007000002000000"
+  },
+  {
+    "id": 109,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/CosmicDuality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "21555797662293453577556273362243652846126882885725257575289552189252338629224"
+  },
+  {
+    "id": 110,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/CosmicDuality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "52622362527272"
+  },
+  {
+    "id": 111,
+    "field": "dbbi",
+    "reverse": true,
+    "rule": "periodic/CosmicDuality",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "5215552790662629345235005526203336224366528462126882588502252575005289525218920523382629224"
+  },
+  {
+    "id": 112,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power2/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "005407554032412807731436504764727971054779161537807341985818218903596726756719612061715751372251767705771621376342596611609418745567883771574528057578357146249175639377904371177629719362853153235909352727953457767571547769939096968773767434775632559756927907778862379645854641793428937195405818788398478682993532993898999794075884643832167628185175753165873677703176887821989495886457747398777778141807972753754634771334589939762668771594225022599647648955595553964741849776857691669702323583512625429926264545587976119771725993805496258723318829929229243218194861899893"
+  },
+  {
+    "id": 113,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power2/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "617684177953861921479979"
+  },
+  {
+    "id": 114,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power2/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "547554324128773143654764727971547791615378734198581821893596726756719612617157513722517677577162137634259661169418745567883771574528575783571462491756393779437117762971936285315323599352727953457767571547769939969687737674347756325597569279777886237964585464179342893719545818788398478682993532993898999794758846438321676281851757531658736777317688782198949588645774739877777814187972753754634771334589939762668771594225225996476489555955539647418497768576916697232358351262542992626454558797611977172599385496258723318829929229243218194861899893"
+  },
+  {
+    "id": 115,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power2/origin0",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "615400554632412887731436544064727971154709161537877341985818218973596726756019612961715751372251767755771621306342596611639418745567883771574528857578357146249175639370964371177629719362853153235919352727953457767571547769939996968073767434775632559756927927778862379645854641793428937195415818788398408682993532993898999794475884643832167628185175753165873677773176887821989495886457747398707778141897972753754634771334589939762668771594225922599647648955595553964741849776857691669702323583512625429926264545587976119771725993895496258723318829929229243218194861899893"
+  },
+  {
+    "id": 116,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power2/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "610070000600000080000000040000000000100000000000070000000000000070000000000000000900000000000000000050000000000000000000030000000000000000000000800000000000000000000000060000000000000000000000000010000000000000000000000000000900000000000000000000000000000020000000000000000000000000000000010000000000000000000000000000000000400000000000000000000000000000000000070000000000000000000000000000000000000090000000000000000000000000000000000000000900000000000000000000000000000000000000000070000000000000000000000000000000000000000000090000000000000000000000000000000000000000"
+  },
+  {
+    "id": 117,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power2/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "547554324128773143654764727971547791615378734198581821893596726756719612617157513722517677577162137634259661169418745567883771574528575783571462491756393779437117762971936285315323599352727953457767571547769939969687737674347756325597569279777886237964585464179342893719545818788398478682993532993898999794758846438321676281851757531658736777317688782198949588645774739877777814187972753754634771334589939762668771594225225996476489555955539647418497768576916697232358351262542992626454558797611977172599385496258723318829929229243218194861899893"
+  },
+  {
+    "id": 118,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power2/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "617684177953861921479979"
+  },
+  {
+    "id": 119,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power2/origin0",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "615477554632412880031436544764020901154079161530800341985818218903596026056719612961015051302251060055001621376342596611639418045560883001504528850508350146249105639307964301100629019362853153235919352020953450060501540069939996968703060434005632559056920920008862309645854641093428930195415818088398478682993532993898999094405884643832160628185105053165803600003106880821989495886450040398070008141890902053054634001334589939062668001594225922599640648955595553964041849006850691669072323583512625429926264545580906119001025993895496258023318829929229243218194861899893"
+  },
+  {
+    "id": 120,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power2/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "015077550632412087731436044764727970154779161537077341985818218073596726756719610961715751372251767055771621376342596611039418745567883771574520857578357146249175639377064371177629719362853153235019352727953457767571547769930996968773767434775632559756927027778862379645854641793428937195015818788398478682993532993898999790475884643832167628185175753165873677073176887821989495886457747398777778141097972753754634771334589939762668771594220922599647648955595553964741849776857691669072323583512625429926264545587976119771725993095496258723318829929229243218194861899893"
+  },
+  {
+    "id": 121,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power2/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "64485189276899994478578"
+  },
+  {
+    "id": 122,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power2/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "1577556324128773143644764727971547791615377734198581821873596726756719619617157513722517675577162137634259661139418745567883771574528575783571462491756393776437117762971936285315323519352727953457767571547769939969687737674347756325597569272777886237964585464179342893719515818788398478682993532993898999794758846438321676281851757531658736777317688782198949588645774739877777814197972753754634771334589939762668771594229225996476489555955539647418497768576916697232358351262542992626454558797611977172599395496258723318829929229243218194861899893"
+  },
+  {
+    "id": 123,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power2/origin1",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "615407554632412887031436544764727971154079161537877341985818218973596726056719612961715751372251767755701621376342596611639418745567883771574528857578357146249175639307964371177629719362853153235919352727953457767571547069939996968773767434775632559756927927778862379645854641793428937195415818088398478682993532993898999794475884643832167628185175753165873677773176887821989495886457747398077778141897972753754634771334589939762668771594225922599647648955595553964741849776857691669072323583512625429926264545587976119771725993895496258723318829929229243218194861899893"
+  },
+  {
+    "id": 124,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power2/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "600400004000000800000000500000000001000000000000800000000000000900000000000000002000000000000000000700000000000000000000600000000000000000000008000000000000000000000000900000000000000000000000000900000000000000000000000000009000000000000000000000000000000900000000000000000000000000000000400000000000000000000000000000000004000000000000000000000000000000000000700000000000000000000000000000000000000800000000000000000000000000000000000000005000000000000000000000000000000000000000000700000000000000000000000000000000000000000000800000000000000000000000000000000000000000"
+  },
+  {
+    "id": 125,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power2/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "1577556324128773143644764727971547791615377734198581821873596726756719619617157513722517675577162137634259661139418745567883771574528575783571462491756393776437117762971936285315323519352727953457767571547769939969687737674347756325597569272777886237964585464179342893719515818788398478682993532993898999794758846438321676281851757531658736777317688782198949588645774739877777814197972753754634771334589939762668771594229225996476489555955539647418497768576916697232358351262542992626454558797611977172599395496258723318829929229243218194861899893"
+  },
+  {
+    "id": 126,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power2/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "64485189276899994478578"
+  },
+  {
+    "id": 127,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power2/origin1",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "615470554632412880731436544064020901154709161530800341985818218903596026756019612961015051302251060055071621306342596611639418045560883001504528850508350146249105639370964301100629019362853153235919352020953450060501540769939996968003060434005632559056920920008862309645854641093428930195415818788398408682993532993898999094405884643832160628185105053165803600003106880821989495886450040398700008141890902053054634001334589939062668001594225922599640648955595553964041849006850691669702323583512625429926264545580906119001025993895496258023318829929229243218194861899893"
+  },
+  {
+    "id": 128,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power3/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "005477550632412887731436544064727971154779161537877341985818218903596726756719612961715751372251767755771621376342596611639410745567883771574528857578357146249175639377964371177629719362853153235919352727953457767571047769939996968773767434775632559756927927778862379645854641793428937195415818788398478682993532993898999794475884643832167628105175753165873677773176887821989495886457747398777778141897972753754634771334589939762668771594225922599647648955595553964741849776857691669772323583512625429926264545580976119771725993895496258723318829929229243218194861899893"
+  },
+  {
+    "id": 129,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power3/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "614778587"
+  },
+  {
+    "id": 130,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power3/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "547755632412887731436544647279711547791615378773419858182189359672675671961296171575137225176775577162137634259661163941745567883771574528857578357146249175639377964371177629719362853153235919352727953457767571477699399969687737674347756325597569279277788623796458546417934289371954158187883984786829935329938989997944758846438321676281517575316587367777317688782198949588645774739877777814189797275375463477133458993976266877159422592259964764895559555396474184977685769166977232358351262542992626454558976119771725993895496258723318829929229243218194861899893"
+  },
+  {
+    "id": 131,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power3/origin0",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "615400554632412887731436544764727971154079161537877341985818218973596726756719612961715751372251767755771621376342596611639418745560883771574528857578357146249175639377964371177629719362853153235919352727953457767571547769939996968773767434775632559756927927778862379645854641793428937195415818788398408682993532993898999794475884643832167628185175753165873677773176887821989495886457747398777778141897972753754634771334589939762668771594225922599647648955595553964741849776857691669772323583512625429926264545587976119771725993895496258723318829929229243218194861899893"
+  },
+  {
+    "id": 132,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power3/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "610000004000000000000000000700000000000000000000000000000000000070000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007000000000000000000000000000000000000000000000000000000000"
+  },
+  {
+    "id": 133,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power3/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "547755632412887731436544647279711547791615378773419858182189359672675671961296171575137225176775577162137634259661163941745567883771574528857578357146249175639377964371177629719362853153235919352727953457767571477699399969687737674347756325597569279277788623796458546417934289371954158187883984786829935329938989997944758846438321676281517575316587367777317688782198949588645774739877777814189797275375463477133458993976266877159422592259964764895559555396474184977685769166977232358351262542992626454558976119771725993895496258723318829929229243218194861899893"
+  },
+  {
+    "id": 134,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power3/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "614778587"
+  },
+  {
+    "id": 135,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power3/origin0",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "615477554632412880031436544064020901154709161530800341985818218903596026056019612961015051302251060055001621306342596611639418045567883001504528850508350146249105639300964301100629019362853153235919352020953450060501540069939996968003060434005632559056920920008862309645854641093428930195415818088398478682993532993898999094405884643832160628185105053165803600003106880821989495886450040398000008141890902053054634001334589939062668001594225922599640648955595553964041849006850691669002323583512625429926264545580906119001025993895496258023318829929229243218194861899893"
+  },
+  {
+    "id": 136,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power3/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "015477504632412887731436540764727971154779161537877341985818218073596726756719612961715751372251767755771621376342596611639408745567883771574528857578357146249175639377964371177629719362853153235919352727953457767570547769939996968773767434775632559756927927778862379645854641793428937195415818788398478682993532993898999794475884643832167628085175753165873677773176887821989495886457747398777778141897972753754634771334589939762668771594225922599647648955595553964741849776857691669772323583512625429926264545507976119771725993895496258723318829929229243218194861899893"
+  },
+  {
+    "id": 137,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power3/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "65491118"
+  },
+  {
+    "id": 138,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power3/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "1547754632412887731436547647279711547791615378773419858182187359672675671961296171575137225176775577162137634259661163948745567883771574528857578357146249175639377964371177629719362853153235919352727953457767575477699399969687737674347756325597569279277788623796458546417934289371954158187883984786829935329938989997944758846438321676288517575316587367777317688782198949588645774739877777814189797275375463477133458993976266877159422592259964764895559555396474184977685769166977232358351262542992626454557976119771725993895496258723318829929229243218194861899893"
+  },
+  {
+    "id": 139,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power3/origin1",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "615407554632412887731436544764727901154779161537877341985818218973596726756719612961715751372251767755771621376342596611639418045567883771574528857578357146249175639377964371177629719362853153235919352727953457767571547769939996968773767434775632559756927927778862379645854641793428937195415818088398478682993532993898999794475884643832167628185175753165873677773176887821989495886457747398777778141897972753754634771334589939762668771594225922599647648955595553964741849776857691669772323583512625429926264545587976119771725993895496258723318829929229243218194861899893"
+  },
+  {
+    "id": 140,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power3/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "600000050000000000000000004000000000000000000000000000000000000900000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000"
+  },
+  {
+    "id": 141,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power3/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "1547754632412887731436547647279711547791615378773419858182187359672675671961296171575137225176775577162137634259661163948745567883771574528857578357146249175639377964371177629719362853153235919352727953457767575477699399969687737674347756325597569279277788623796458546417934289371954158187883984786829935329938989997944758846438321676288517575316587367777317688782198949588645774739877777814189797275375463477133458993976266877159422592259964764895559555396474184977685769166977232358351262542992626454557976119771725993895496258723318829929229243218194861899893"
+  },
+  {
+    "id": 142,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power3/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "65491118"
+  },
+  {
+    "id": 143,
+    "field": "faed",
+    "reverse": false,
+    "rule": "power3/origin1",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "615470554632412880031436544064020971154009161530800341985818218903596026056019612961015051302251060055001621306342596611639418745560883001504528850508350146249105639300964301100629019362853153235919352020953450060501540069939996968003060434005632559056920920008862309645854641093428930195415818788398408682993532993898999094405884643832160628185105053165803600003106880821989495886450040398000008141890902053054634001334589939062668001594225922599640648955595553964041849006850691669002323583512625429926264545580906119001025993895496258023318829929229243218194861899893"
+  },
+  {
+    "id": 144,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/SalPhaseIon",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "015077550630410887701406504764027071054770160530877301905808218073096026750710610961705701302251067055071620370340596601609408745067083071570520850578307106209175039077064370170620719302803103235019052027950450760571507709909996068073067430770630559706907907778062079045850640790428907105405818088098078680990530993808909704475084043032160620180175703105803677073076087820980490886407707308777078041097970750750634701304509939062068071590220920599607608905595053064041840770850691609702303583012025029920260540587906109701725093095096250720310829909209203218094061099890"
+  },
+  {
+    "id": 145,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/SalPhaseIon",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "644223347919174819576921577771621315874875446391796559373774639774525228364133917342329998687855677181955497182347387674524455979676725646457179848382241883"
+  },
+  {
+    "id": 146,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/SalPhaseIon",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "157755634188771465476427715477165387731958821873962675716196175713225167557162373459661694874567837157528557837162917539776437176271932831323519522795457657157799999668736743776355976979777862794585647942897154581888987868995399388997447584433216621817573158367773768782984988647773877778419797757563471345993962687159229259967689559553644184778569169723358312252992265458796197172593959625723182999292321894619989"
+  },
+  {
+    "id": 147,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/SalPhaseIon",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "615407554632412887031436544764727971154079161537807341985818218973596026756719612961715751302251767055771621306342596611639418745567883771504528857578350146249175639370964371177629719362853153235919352027953457067571540769939996968773760434775632559056927927078862379645854641793428937195415818088398478682993532993898999794405884643832167628185175053165873677703176887821989495886450747398077778141890972753054634771334589939062668771594225922599647648955595553964741849076857691669072323583512625429926264545587906119771725993895496258723318829929229243218194861899893"
+  },
+  {
+    "id": 148,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/SalPhaseIon",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "600400004002002000030030040000700900100009001007000040080010000900500700006009002000010050070000700700700001006002000010030010000500800700004008007000050040040000600300900001007009000060050050000900300700003007007000040060030000900700700004005002000050020020000800300600004001003000030090010000700300400002003002000090090090000800600800007008005000050060070000700100800001009005000050040090000700100800002003004000070030080000700600700004005002000040040050000500900700009006007000060070020000500600400006004005000070010070000900800400008003008000020020040000100800800003"
+  },
+  {
+    "id": 149,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/SalPhaseIon",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "157755634188771465476427715477165387731958821873962675716196175713225167557162373459661694874567837157528557837162917539776437176271932831323519522795457657157799999668736743776355976979777862794585647942897154581888987868995399388997447584433216621817573158367773768782984988647773877778419797757563471345993962687159229259967689559553644184778569169723358312252992265458796197172593959625723182999292321894619989"
+  },
+  {
+    "id": 150,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/SalPhaseIon",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "644223347919174819576921577771621315874875446391796559373774639774525228364133917342329998687855677181955497182347387674524455979676725646457179848382241883"
+  },
+  {
+    "id": 151,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/SalPhaseIon",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "615470554632412880731436544064020901154709161530870341985818218903596726056019612961015051372251060755001621376342596611639418045560883001574528850508357146249105639307964301100629019362853153235919352720953450760501547069939996968003067434005632559756920920708862309645854641093428930195415818788398408682993532993898999094475884643832160628185105753165803600073106880821989495886457040398700008141897902053754634001334589939762668001594225922599640648955595553964041849706850691669702323583512625429926264545580976119001025993895496258023318829929229243218194861899893"
+  },
+  {
+    "id": 152,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/Cosmic Duality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "015477504632410887731036544704727970154779061537807341980818218073596706756710612961015751302251760755771021376302596610639418045567803771570528857078357106249170639377064371107629710362853053235909352720953457067571507769930996968073767404775630559756027927708862370645854041793408937190415818088398408682990532993098999704475880643832067628105175750165873077773106887820989495086457707398770778141097972703754630771334089939702668770594225022599607648950595553064741809776850691669072323503512620429926064545507976110771725093895406258720318829029229203218190861899093"
+  },
+  {
+    "id": 153,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/Cosmic Duality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "6524611759297776417845459791177497329796257738941836718478545619459477852899939448"
+  },
+  {
+    "id": 154,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/Cosmic Duality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "15477546324188773136544747279715477961537873419881821873596767567161296115751322517675577121376325966163941845567837715752885778357162491763937764371176297136285353235993527295345767571577699399696873767447756355975627927788623764585441793489371941581888398486829953299398999744758864383267628151757516587377773168878298949586457773987777814197972737546377133489939726687759422522599676489559555364741897768569166972323535126242992664545579761177172593895462587231882929229232181986189993"
+  },
+  {
+    "id": 155,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/Cosmic Duality",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "615407554632412887731436544764727901154779161537877341985818218973596026756719612961715751372251760755771621376342596611639418745567883071574528857578357146249175639307964371177629719362853153235919352720953457767571547769939996968073767434775632559756920927778862379645854641793428937195415818088398478682993532993898999794475884643832167628185175753165803677773176887821989495886450747398777708141897972753754634771334589939062668771594225922599647648955595553964741849776850691669772323583512625429926264545587976119771025993895496258723318829929229243218194861899893"
+  },
+  {
+    "id": 156,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/Cosmic Duality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "600000050000002000000400000060000001000000100000070000005000000900000020000009000000700000070000007000000600000040000001000000700000080000004000000500000040000005000000900000070000009000000100000010000007000000700000040000009000000700000030000002000000900000070000009000000600000020000005000000700000070000003000000800000090000004000000100000080000003000000600000070000001000000800000040000007000000800000050000004000000500000060000001000000900000040000005000000900000040000007000000700000080000005000000200000080000009000000900000090000003000000900000040000004000000800"
+  },
+  {
+    "id": 157,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/Cosmic Duality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "15477546324188773136544747279715477961537873419881821873596767567161296115751322517675577121376325966163941845567837715752885778357162491763937764371176297136285353235993527295345767571577699399696873767447756355975627927788623764585441793489371941581888398486829953299398999744758864383267628151757516587377773168878298949586457773987777814197972737546377133489939726687759422522599676489559555364741897768569166972323535126242992664545579761177172593895462587231882929229232181986189993"
+  },
+  {
+    "id": 158,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/Cosmic Duality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "6524611759297776417845459791177497329796257738941836718478545619459477852899939448"
+  },
+  {
+    "id": 159,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/Cosmic Duality",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "615470554632412880031436544064020971154009161530800341985818218903596726056019612961015051302251067055001621306342596611639418045560883701504528850508350146249105639370964301100629019362853153235919352027953450060501540069939996968703060434005632559056927920008862309645854641093428930195415818788398408682993532993898999094405884643832160628185105053165873600003106880821989495886457040398000078141890902053054634001334589939762668001594225922599640648955595553964041849006857691669002323583512625429926264545580906119001725993895496258023318829929229243218194861899893"
+  },
+  {
+    "id": 160,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/CosmicDuality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "015477054632402887701436540764720971154079161037877301985808218970596720756719012961015751302251707755770621370342596011639018745507883701574520857570357146049175039377904371107629710362850153235019352027953407767501547760939990968773067434075632509756907927770862370645854041793028937105415808788390478680993532093898099794405884603832160628180175753065873077773106887801989490886450747398077778041897902753704634770334580939762068771094225902599607648950595550964741049776057691609772303583510625420926264045587076119701725903895490258720318829029229043218104861809893"
+  },
+  {
+    "id": 161,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/CosmicDuality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "6513477541366776166467882667939757967752896491829974751672577175196524538862295979639299"
+  },
+  {
+    "id": 162,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/CosmicDuality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "15477546324288771436547647297115479161378773198588218975967275671912961157513225177755776213734259611639187455788371574528575735714649175393779437117629713628515323519352279534776751547769399996877367434756325975697927778623764585441793289371541588788394786899353293898997944588463832166281817575365873777731688781989498864574739877778418979275374634773345893976268771942259259967648955955596474149776576916977233583516254292626445587761197172593895492587231882929229432181486189893"
+  },
+  {
+    "id": 163,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/CosmicDuality",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "615407554632412887731436544764720971154779161537877341985818218903596726756719612961715751302251767755771621376342596611639418045567883771574528857508357146249175639377964371170629719362853153235919352727953457760571547769939996968773760434775632559756927927078862379645854641793428937195415818788398478682993532993898999094475884643832167628185175753165873607773176887821989495886457047398777708141897972753754634771334589939062668771594225922599647648955595553964741849706857691669772323583512625429926264545587976119701725993895496258723318829929229243218194861899893"
+  },
+  {
+    "id": 164,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/CosmicDuality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "600000500000010000030000004000007000000700000500000040000010000003000006000000600000700000070000060000001000006000000600000400000060000070000008000008000000200000600000060000070000009000003000000900000700000050000070000009000006000000700000700000050000020000008000009000000600000400000090000010000008000002000000900000900000070000040000007000005000000100000600000070000020000005000007000000700000100000070000050000001000009000000600000500000020000040000005000003000000800000800000060000020000002000009000000500000900000070000090000006000003000000900000200000090000090000"
+  },
+  {
+    "id": 165,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/CosmicDuality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "15477546324288771436547647297115479161378773198588218975967275671912961157513225177755776213734259611639187455788371574528575735714649175393779437117629713628515323519352279534776751547769399996877367434756325975697927778623764585441793289371541588788394786899353293898997944588463832166281817575365873777731688781989498864574739877778418979275374634773345893976268771942259259967648955955596474149776576916977233583516254292626445587761197172593895492587231882929229432181486189893"
+  },
+  {
+    "id": 166,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/CosmicDuality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "6513477541366776166467882667939757967752896491829974751672577175196524538862295979639299"
+  },
+  {
+    "id": 167,
+    "field": "faed",
+    "reverse": false,
+    "rule": "periodic/CosmicDuality",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "615470554632412880031436544064027901154009161530800341985818218973596026056019612961015051372251060055001621306342596611639418745560883001504528850578350146249105639300964301107629019362853153235919352020953450067501540069939996968003067434005632559056920920708862309645854641093428930195415818088398408682993532993898999794405884643832160628185105053165803670003106880821989495886450740398000078141890902053054634001334589939762668001594225922599640648955595553964041849076850691669002323583512625429926264545580906119071025993895496258023318829929229243218194861899893"
+  },
+  {
+    "id": 168,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power2/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "008908168091812302922929908813327852094598399527107911679785545402629924526215385023277966196758677908147469355595559846706995229522495177866267039985433177436457357279708141877777893747754688594909128788671377776378561357571081826761238346488574497999898309235399286874893887818514591739804397146458546973268877729729657955036577434767377869699939967745175767704359727253919532351358263917926771173409773936571942641753875758825475177388765047814936116695243673126177557767152273157507169216917657627695379812818589143778735161907451179727467445634137788214236455774516"
+  },
+  {
+    "id": 169,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power2/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "399442676344998592256517"
+  },
+  {
+    "id": 170,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power2/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "898168918123292292998813327852945983995271791167978554542629924526215385232779661967586779814746935559555984676995229522495177866267399854331774364573572797814187777789374775468859499128788671377776378561357571818267612383464885744979998983923539928687489388781851459173984397146458546973268877729729657955365774347673778696999399677451757677435972725391953235135826391792677117349773936571942641753875758825475177388765478149361166952436731261775577671522731575716921691765762769537981281858914377873516197451179727467445634137788214236455774516"
+  },
+  {
+    "id": 171,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power2/origin0",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "398998168491812342922929928813320852694598399520177911609785545462629924526215385323277966196758607948147469355595559846746995229522495177866267939985433107436457357279798141877707893747754688594989128788671377776308561357571581826761238346488574497999898399235399286874893887818514591739824397146458546973268877029729657955236577434767377869699939967745175767754359027253919532351358263917926771173469773936571942641753875758825475177388765547814936116695243603126177557767152273157517169216917657627695379812818589143778735161977451179027467445634137788214236455774516"
+  },
+  {
+    "id": 172,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power2/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "390090000400000040000000020000000000600000000000070000000000000060000000000000000300000000000000000040000000000000000000040000000000000000000000900000000000000000000000090000000000000000000000000080000000000000000000000000000500000000000000000000000000000090000000000000000000000000000000020000000000000000000000000000000000200000000000000000000000000000000000050000000000000000000000000000000000000060000000000000000000000000000000000000000500000000000000000000000000000000000000000010000000000000000000000000000000000000000000070000000000000000000000000000000000000000"
+  },
+  {
+    "id": 173,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power2/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "898168918123292292998813327852945983995271791167978554542629924526215385232779661967586779814746935559555984676995229522495177866267399854331774364573572797814187777789374775468859499128788671377776378561357571818267612383464885744979998983923539928687489388781851459173984397146458546973268877729729657955365774347673778696999399677451757677435972725391953235135826391792677117349773936571942641753875758825475177388765478149361166952436731261775577671522731575716921691765762769537981281858914377873516197451179727467445634137788214236455774516"
+  },
+  {
+    "id": 174,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power2/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "399442676344998592256517"
+  },
+  {
+    "id": 175,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power2/origin0",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "398998168491812342922929928813327852694598399527100911679085545462629924526215385323200966196058670948140469355595559846046995229522495100866260939985433170436450350209098141800070893040054688594989128088601300006378561350501581826061238346488504490999898399235399286804893880818514591039824390146458546903268800729029650955236500434060300869699939960045105060054359720253919532351358263910926001103469003936501942641053805058825405100388065540814936116695243673126100550060152203150510169216910650620695309812818589143008035161900451109720460445634130088214236455004516"
+  },
+  {
+    "id": 176,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power2/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "098098160491812042922929028813327850694598399527077911679785545062629924526215380323277966196758677048147469355595559846046995229522495177866260939985433177436457357279098141877777893747754688594089128788671377776378561357570581826761238346488574497999898099235399286874893887818514591739024397146458546973268877729729657950236577434767377869699939967745175767054359727253919532351358263917926771173069773936571942641753875758825475177388760547814936116695243673126177557767152273157017169216917657627695379812818589143778735161077451179727467445634137788214236455774516"
+  },
+  {
+    "id": 177,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power2/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "39839214597779138574559"
+  },
+  {
+    "id": 178,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power2/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "9898164918124292292928813327856945983995277791167978554562629924526215383232779661967586774814746935559555984646995229522495177866269399854331774364573572799814187777789374775468859489128788671377776378561357575818267612383464885744979998989923539928687489388781851459173924397146458546973268877729729657952365774347673778696999399677451757675435972725391953235135826391792677117369773936571942641753875758825475177388765478149361166952436731261775577671522731571716921691765762769537981281858914377873516177451179727467445634137788214236455774516"
+  },
+  {
+    "id": 179,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power2/origin1",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "398998168491812342922929928813320852694598399527170911679785545462629924526215385323277966196058677948147469355595559846746995229522495177866260939985433177436457357279798141877077893747754688594989128788671377706378561357571581826761238346488574497999898399235399286874893887818514591739824397146458546973268870729729657955236577434767377869699939967745175767054359727253919532351358263917926771173469773936571942641753875758825475177388765540814936116695243673126177557767152273157517169216917657627695379812818589143778735161977451109727467445634137788214236455774516"
+  },
+  {
+    "id": 180,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power2/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "300900008000000300000000900000000002000000000000100000000000000400000000000000005000000000000000000900000000000000000000700000000000000000000007000000000000000000000000700000000000000000000000000900000000000000000000000000001000000000000000000000000000000300000000000000000000000000000000800000000000000000000000000000000005000000000000000000000000000000000000700000000000000000000000000000000000000400000000000000000000000000000000000000005000000000000000000000000000000000000000000500000000000000000000000000000000000000000000900000000000000000000000000000000000000000"
+  },
+  {
+    "id": 181,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power2/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "9898164918124292292928813327856945983995277791167978554562629924526215383232779661967586774814746935559555984646995229522495177866269399854331774364573572799814187777789374775468859489128788671377776378561357575818267612383464885744979998989923539928687489388781851459173924397146458546973268877729729657952365774347673778696999399677451757675435972725391953235135826391792677117369773936571942641753875758825475177388765478149361166952436731261775577671522731571716921691765762769537981281858914377873516177451179727467445634137788214236455774516"
+  },
+  {
+    "id": 182,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power2/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "39839214597779138574559"
+  },
+  {
+    "id": 183,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power2/origin1",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "398998168491812342922929928813327852694598399520107911609085545462629924526215385323200966196758600948140469355595559846046995229522495100866267939985433100436450350209098141800700893040054688594989128088601300076308561350501581826061238346488504490999898399235399286804893880818514591039824390146458546903268807029029650955236500434060300869699939960045105060754359020253919532351358263910926001103469003936501942641053805058825405100388065547814936116695243603126100550060152203150510169216910650620695309812818589143008035161900451179020460445634130088214236455004516"
+  },
+  {
+    "id": 184,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power3/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "008998160491812342922929928013327852694598399527177911679785545402629924526215385323277966196758677948147469355595559846746990229522495177866267939985433177436457357279798141877777893747754688594989128788671377776378061357571581826761238346488574497999898399235399286874893887818514591739824397146458546973268877729729657955236577434767377869609939967745175767754359727253919532351358263917926771173469773936571942641753875758825475177388765547814936116695243673126177557767152273157517169216917657627695379812810589143778735161977451179727467445634137788214236455774516"
+  },
+  {
+    "id": 185,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power3/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "398865598"
+  },
+  {
+    "id": 186,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power3/origin0",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "899816491812342922929928133278526945983995271779116797855454262992452621538532327796619675867794814746935559555984674699229522495177866267939985433177436457357279798141877777893747754688594989128788671377776378613575715818267612383464885744979998983992353992868748938878185145917398243971464585469732688777297296579552365774347673778696993996774517576775435972725391953235135826391792677117346977393657194264175387575882547517738876554781493611669524367312617755776715227315751716921691765762769537981281589143778735161977451179727467445634137788214236455774516"
+  },
+  {
+    "id": 187,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power3/origin0",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "398998168491812342922929928813320852694598399520177911679785545462629924526215385323277966196058677948147469355595559846746995229522495177866267939985433177436457357279798141877777893047754688594989128788671377776378561357571581826761238346488574497999898399235399286874893887818514591739824397146458546973268877729729657955236577434767377869699939967745175767754359027253919532351358263917926771173469773936571942641753875758825475177388765547814936116695243673126177557767152273157517169216917657627695379812818589143778735161977451179727467445634137788214236455774516"
+  },
+  {
+    "id": 188,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power3/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "390000008000000000000000000800000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000005000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000090000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000"
+  },
+  {
+    "id": 189,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power3/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "899816491812342922929928133278526945983995271779116797855454262992452621538532327796619675867794814746935559555984674699229522495177866267939985433177436457357279798141877777893747754688594989128788671377776378613575715818267612383464885744979998983992353992868748938878185145917398243971464585469732688777297296579552365774347673778696993996774517576775435972725391953235135826391792677117346977393657194264175387575882547517738876554781493611669524367312617755776715227315751716921691765762769537981281589143778735161977451179727467445634137788214236455774516"
+  },
+  {
+    "id": 190,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power3/origin0",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "398865598"
+  },
+  {
+    "id": 191,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power3/origin0",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "398998168491812342922929928813327852694598399527100911609085545462629924526215385323200966196758600948140469355595559846046995229522495100866260939985433100436450350209098141800000893740054688594989128088601300006308561350501581826061238346488504490999898399235399286804893880818514591039824390146458546903268800029029650955236500434060300869699939960045105060054359720253919532351358263910926001103469003936501942641053805058825405100388065540814936116695243603126100550060152203150510169216910650620695309812818589143008035161900451109020460445634130088214236455004516"
+  },
+  {
+    "id": 192,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power3/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "098998108491812342922929920813327852694598399527177911679785545062629924526215385323277966196758677948147469355595559846746905229522495177866267939985433177436457357279798141877777893747754688594989128788671377776370561357571581826761238346488574497999898399235399286874893887818514591739824397146458546973268877729729657955236577434767377869099939967745175767754359727253919532351358263917926771173469773936571942641753875758825475177388765547814936116695243673126177557767152273157517169216917657627695379812808589143778735161977451179727467445634137788214236455774516"
+  },
+  {
+    "id": 193,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power3/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "36849861"
+  },
+  {
+    "id": 194,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power3/origin1",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "9899818491812342922929928133278526945983995271779116797855456262992452621538532327796619675867794814746935559555984674695229522495177866267939985433177436457357279798141877777893747754688594989128788671377776375613575715818267612383464885744979998983992353992868748938878185145917398243971464585469732688777297296579552365774347673778699993996774517576775435972725391953235135826391792677117346977393657194264175387575882547517738876554781493611669524367312617755776715227315751716921691765762769537981288589143778735161977451179727467445634137788214236455774516"
+  },
+  {
+    "id": 195,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power3/origin1",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "398998168491812342922929928813320852694598399527177911679785545462629924526215385323270966196758677948147469355595559846746995229522495177866267939985433177436457357279798141877770893747754688594989128788671377776378561357571581826761238346488574497999898399235399286874893887818514591739824397146458546973268877729729657955236577434767377869699939967745175767054359727253919532351358263917926771173469773936571942641753875758825475177388765547814936116695243673126177557767152273157517169216917657627695379812818589143778735161977451179727467445634137788214236455774516"
+  },
+  {
+    "id": 196,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power3/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "300000060000000000000000008000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000090000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000"
+  },
+  {
+    "id": 197,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power3/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "9899818491812342922929928133278526945983995271779116797855456262992452621538532327796619675867794814746935559555984674695229522495177866267939985433177436457357279798141877777893747754688594989128788671377776375613575715818267612383464885744979998983992353992868748938878185145917398243971464585469732688777297296579552365774347673778699993996774517576775435972725391953235135826391792677117346977393657194264175387575882547517738876554781493611669524367312617755776715227315751716921691765762769537981288589143778735161977451179727467445634137788214236455774516"
+  },
+  {
+    "id": 198,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power3/origin1",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "36849861"
+  },
+  {
+    "id": 199,
+    "field": "faed",
+    "reverse": true,
+    "rule": "power3/origin1",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "398998168491812342922929928813327852694598399520100911609085545462629924526215385323207966196058600948140469355595559846046995229522495100866260939985433100436450350209098141800007893040054688594989128088601300006308561350501581826061238346488504490999898399235399286804893880818514591039824390146458546903268800029029650955236500434060300869699939960045105060754359020253919532351358263910926001103469003936501942641053805058825405100388065540814936116695243603126100550060152203150510169216910650620695309812818589143008035161900451109020460445634130088214236455004516"
+  },
+  {
+    "id": 200,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/SalPhaseIon",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "098098160490810342902909908813027052094590390520177901609705545062029024520210380323207906106758077048047460350590559806706905229022095077860260930985403107406457057079098140870770893707704608594089028088670370770378501307501581026061038340480570497909808309235099086074890880810514501709804397046058046970260870729709607905236077034067370860690939907705105767054059027250910530351308203907926071073069770930570942601703805758025075077380760540814906106605243073026077550760150273107507109216017057027690370810818509103708735061077051170720460445604107708214036055074510"
+  },
+  {
+    "id": 201,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/SalPhaseIon",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "398122223868971784696557696919554495416793733271774589171766578726849993283789321453872555477996477373925617143614578418573196117725169665928471949773382476"
+  },
+  {
+    "id": 202,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/SalPhaseIon",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "989816498134292999881327529459395217791697554562292452213832327961675877484746355955986769522922957786269398543174645757799814877789377746859489288867377737851375158126613834485749799883923599867489888151451798439746584697268772979679523677346737866993997751576754592725915335138239792671736977935794261738575825757738765481496166524373267755761527317571921617572769378181859137873561775117724644564177821436557451"
+  },
+  {
+    "id": 203,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/SalPhaseIon",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "398998168491812342922929928813320852694598399527170911679785545462629924526215385323277966196058677948140469355595559846746995229522495170866267939985433177436457350279798141807707893747754688594989128088671370776308561357571581826761238346488574490999898399235399286874893887818514591039824397146458546973268807729729657955236507434760377869699939960745175767054359727253919532351358263910926771103469773936571942641753805758825475107388765540814936116695243673126177557067152273150517169216917650627695379812818589143778035161977451109727460445634137788214236455774516"
+  },
+  {
+    "id": 204,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/SalPhaseIon",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "300900008001002000020020020000300800600008009007000010070080000400600900006005005000070060090000600900100009005005000040040090000500400100006007009000030070030000300200700001007007000040050080000900100700001007006000060050070000800700200006008004000090090090000300200800003007008000090030020000100400500003008007000020050050000500400700007009009000060040070000700300700003009002000050060010000700100400003006001000040050070000800400100008005007000030010090000600100100007007002000050010060000900600600005009002000080040070000100900400009007007000030030080000200400700006"
+  },
+  {
+    "id": 205,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/SalPhaseIon",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "989816498134292999881327529459395217791697554562292452213832327961675877484746355955986769522922957786269398543174645757799814877789377746859489288867377737851375158126613834485749799883923599867489888151451798439746584697268772979679523677346737866993997751576754592725915335138239792671736977935794261738575825757738765481496166524373267755761527317571921617572769378181859137873561775117724644564177821436557451"
+  },
+  {
+    "id": 206,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/SalPhaseIon",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "398122223868971784696557696919554495416793733271774589171766578726849993283789321453872555477996477373925617143614578418573196117725169665928471949773382476"
+  },
+  {
+    "id": 207,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/SalPhaseIon",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "398998168491812342922929928813327852694598399520107911609085545462629924526215385323200966196758600948147469355595559846046995229522495107866260939985433100436450357209098141870070893040054688594989128788601307006378561350501581826061238346488504497999898399235399286804893880818514591739824390146458546903268870029029650955236570434067300869699939967045105060754359020253919532351358263917926001173469003936501942641053875058825405170388065547814936116695243603126100550760152203157510169216910657620695309812818589143008735161900451179020467445634130088214236455004516"
+  },
+  {
+    "id": 208,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/Cosmic Duality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "098998108491810342922029928803327850694598099527107911670785545062629904526210385323077966106758670948147069355505559840746995029522405177860267939085433107436450357279098141807777890747754088594909128780671377076378501357570581826061238306488570497999098399205399280874893087818504591730824397046458506973260877729029657905236570434767077869609939960745175067754309727250919532051358203917920771173069773906571940641753075758805475170388765047814906116690243673026177507767150273157017169206917650627695079812808589140778735061977401179720467445034137708214230455774016"
+  },
+  {
+    "id": 209,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/Cosmic Duality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "3629123794252974962969777736887617448368191487573977533664328275351525173131576865"
+  },
+  {
+    "id": 210,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/Cosmic Duality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "98998184918134292229928833278569459899527179116778554562629945262138532377966167586794814769355555598474699529522451778626793985433174364535727998141877778974775488594991287867137776378513575758182661238364885749799998399253992887489387818545917382439746458569732687772929657952365743476777869699399674517567754397272591953251358239179277117369773965719464175375758854751738876547814961166924367326177577671527315717169269176562769579812885891477873561977411797246744534137782142345577416"
+  },
+  {
+    "id": 211,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/Cosmic Duality",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "398998168491812342922929928813320852694598399527177911679785545462629924526215385323270966196758677948147469355595559846746995229522495170866267939985433177436457357279098141877777893740754688594989128788671377706378561357571581826761238346488574497999898399235399286804893887818514591739824397146458546973268877029729657955236577434767307869699939967745175767054359727253919532351358263917926771173469073936571942641753875758825475107388765547814936116695243673126177550767152273157517169216917650627695379812818589143778735161970451179727467445634137788214236455074516"
+  },
+  {
+    "id": 212,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/Cosmic Duality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "300000060000002000000900000010000002000000300000070000009000000400000020000005000000200000090000007000000400000090000006000000200000090000006000000900000070000007000000700000070000003000000600000080000008000000700000060000001000000700000040000004000000800000030000006000000800000010000009000000100000040000008000000700000050000007000000300000090000007000000700000050000003000000300000060000006000000400000030000002000000800000020000007000000500000030000005000000100000050000002000000500000010000007000000300000010000003000000100000050000007000000600000080000006000000500"
+  },
+  {
+    "id": 213,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/Cosmic Duality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "98998184918134292229928833278569459899527179116778554562629945262138532377966167586794814769355555598474699529522451778626793985433174364535727998141877778974775488594991287867137776378513575758182661238364885749799998399253992887489387818545917382439746458569732687772929657952365743476777869699399674517567754397272591953251358239179277117369773965719464175375758854751738876547814961166924367326177577671527315717169269176562769579812885891477873561977411797246744534137782142345577416"
+  },
+  {
+    "id": 214,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/Cosmic Duality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "3629123794252974962969777736887617448368191487573977533664328275351525173131576865"
+  },
+  {
+    "id": 215,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/Cosmic Duality",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "398998168491812342922929928813327852694598399520100911609085545462629924526215385323207966196058600948140469355595559846046995229522495107866260939985433100436450350209798141800000893047054688594989128088601300076308561350501581826061238346488504490999898399235399286874893880818514591039824390146458546903268800729029650955236500434060370869699939960045105060754359020253919532351358263910926001103469703936501942641053805058825405170388065540814936116695243603126100557060152203150510169216910657620695309812818589143008035161907451109020460445634130088214236455704516"
+  },
+  {
+    "id": 216,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/CosmicDuality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "098998068491802342902929920813320852694098399027177901679705545460629920526215085323077966106758607948140469350595559046746095229502495107866260939980433177036457057279708141807777890747750688594089128088671307776308561350571580826761038346088574407999808399230399280874893087818014591709824307146450546970268877029729057955206577404767370869690939967045175067754309727203919530351350263917026771073469703936501942640753870758825075177088765507814906116690243670126177057767052273107517109216910657620695379012818089143708735101977450179720467445034137088214206455704516"
+  },
+  {
+    "id": 217,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/CosmicDuality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "3112875518243297758927754397349777712499568539837633797755289177154343535156778576176737"
+  },
+  {
+    "id": 218,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/CosmicDuality",
+    "complement": false,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "98998684918234292929928133285269498399271779167975545466299252621585323779661675867948144693559555946746952295249517866269399843317736457572797814187777897477568859489128886713777638561355715882676138346885744799988399233992887489387818145917982437146455469726887729729579552657744767378696993996745175677543972723919533513526391726771734697393651942647538775882575177887655781496116692436712617757767522731751719216916576269537912818891437873511977451797246744534137882142645574516"
+  },
+  {
+    "id": 219,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/CosmicDuality",
+    "complement": false,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "398998168491812342922929928813320852694598399527177911679785545462629924526215385323207966196758677948147469355595559846746995229522495107866267939985433177436457350279798141877770893747754688594989128788671307776378561357571581826061238346488574497999898399235399286874893887818514591739824390146458546973268877729729657955236507434767377869699939960745175767754359720253919532351358263917926771173469703936571942641753875758825475170388765547814936116695243673126177550767152273157517169216917650627695379812818589143778735161907451179727467445634137088214236455774516"
+  },
+  {
+    "id": 220,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/CosmicDuality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "zero",
+    "digits": "300000100000010000020000008000007000000500000500000010000080000002000004000000300000200000090000070000007000005000000800000900000020000070000007000005000000400000300000090000070000003000004000000900000700000070000070000007000001000000200000400000090000090000005000006000000800000500000030000090000008000003000000700000600000030000030000007000009000000700000700000050000050000002000008000000900000100000070000070000001000005000000400000300000040000030000005000003000000500000100000050000060000007000007000000800000500000070000060000001000007000000600000700000030000070000"
+  },
+  {
+    "id": 221,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/CosmicDuality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "keep",
+    "digits": "98998684918234292929928133285269498399271779167975545466299252621585323779661675867948144693559555946746952295249517866269399843317736457572797814187777897477568859489128886713777638561355715882676138346885744799988399233992887489387818145917982437146455469726887729729579552657744767378696993996745175677543972723919533513526391726771734697393651942647538775882575177887655781496116692436712617757767522731751719216916576269537912818891437873511977451797246744534137882142645574516"
+  },
+  {
+    "id": 222,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/CosmicDuality",
+    "complement": true,
+    "indexSpace": "field",
+    "action": "drop",
+    "digits": "3112875518243297758927754397349777712499568539837633797755289177154343535156778576176737"
+  },
+  {
+    "id": 223,
+    "field": "faed",
+    "reverse": true,
+    "rule": "periodic/CosmicDuality",
+    "complement": true,
+    "indexSpace": "g-occurrences",
+    "action": "zero",
+    "digits": "398998168491812342922929928813327852694598399520100911609085545462629924526215385323270966196058600948140469355595559846046995229522495170866260939985433100436450357209098141800007893040054688594989128088601370006308561350501581826761238346488504490999898399235399286804893880818514591039824397146458546903268800029029650955236570434060300869699939967045105060054359027253919532351358263910926001103469073936501942641053805058825405107388065540814936116695243603126100557060152203150510169216910657620695309812818589143008035161970451109020460445634130788214236455004516"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "controls": {
+    "exhaustiveSmallCases": 54,
+    "plantedRecoveries": 27,
+    "limitAccounting": true
+  },
+  "cases": 36,
+  "complete": 36,
+  "totalNodes": 144,
+  "certificates": 90,
+  "candidates": [],
+  "incomplete": []
+}

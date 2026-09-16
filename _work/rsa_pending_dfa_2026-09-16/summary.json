@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "groups": 26,
+  "decisions": 60,
+  "configurations": 653184000,
+  "excluded": 58,
+  "compatible": 2,
+  "elapsedMs": 30149,
+  "resultsSHA256": "adbd8f09c35b3d2811a1c6ae09fbee7a02335a3afdfba7f40a3cb88361cab687"
+}

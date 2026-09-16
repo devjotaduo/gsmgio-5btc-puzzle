@@ -1,0 +1,14 @@
+{
+  "createdAt": "2026-09-16T04:20:17.168Z",
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceSHA256": "5bd2d9daaa06fd3ce045bcd2872901228ec701cdfabd5ee297b3a079a27994ae",
+  "hypothesis": "DBBI is the 91 pairwise distances of 14 integer-coordinate vectors in one of eight listed triangular traversals. Any vertex permutation is allowed. Letter values may be permuted; one chosen letter may have arbitrary values per edge, including independent zero choices.",
+  "identities": [
+    "Integer L1: abs(a-b) mod 2 = (a+b) mod 2.",
+    "Squared Euclidean: (a-b)^2 mod 2 = (a+b) mod 2.",
+    "Binary Hamming is both of the preceding metrics. Integer coordinate weights preserve the parity identity."
+  ],
+  "model": "For every non-erased edge (i,j) with symbol s: vertexParity[i] XOR vertexParity[j] XOR symbolParity[s] = 0.",
+  "scope": "Actual distance values represented by a fixed bijection a..i -> 1..9, with at most one symbol allowed arbitrary edge values. Separately, arbitrary injective integer labels for unweighted binary Hamming distance. No deletions, nonlinear relabeling preserving neither integers nor parity, general real-coordinate distances, odd-modulus reductions, or arbitrary reordering of 91 edges.",
+  "parityConsequence": "If eight non-erased letters are forced even, no bijection to 1..9 can satisfy them, since only four of those digits are even."
+}

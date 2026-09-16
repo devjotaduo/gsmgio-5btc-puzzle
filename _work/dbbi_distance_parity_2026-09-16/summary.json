@@ -1,0 +1,20 @@
+{
+  "controls": {
+    "triangleControls": 3,
+    "plantedIntegerMetrics": 120,
+    "validCertificatesOnControls": 205
+  },
+  "cases": 80,
+  "orders": 8,
+  "certificates": 648,
+  "allNonErasedSymbolsForcedEven": true,
+  "allOrdersHaveNoTwins": true,
+  "consequences": {
+    "digitBijection1to9Impossible": true,
+    "oneArbitrarySymbolStillImpossible": true,
+    "hammingAnyInjectiveLabelsMinimumDimensionWithoutErasure": 18
+  },
+  "casesSHA256": "6e35501594042203f22c576153c90ce1241dd29f47ab278c889ccbb069876966",
+  "aesTrials": 0,
+  "finalPasswordFound": false
+}

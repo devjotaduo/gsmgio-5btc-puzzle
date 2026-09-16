@@ -1,0 +1,196 @@
+{
+  "hypothesis": "Blue and yellow have arbitrary fixed integer weights; original black and white each have one fixed value in {0,1}. Sum each original row/column, reduce modulo ten, repeat the 14 values as a digitwise additive/subtractive/Beaufort key. Either complete field/order and any one independent zero alias, then whole decimal -> seven-bit bytes.",
+  "reduction": "Only the residue of each colour weight modulo ten affects this operation. All 100 blue/yellow residue pairs therefore cover every integer pair, including primes of any size. This does not cover decimal concatenation of the unreduced sums or arbitrary cell-specific values.",
+  "keyConstructions": 22400,
+  "keys": 22038,
+  "operators": 60695,
+  "coefficients": {
+    "rows": [
+      [
+        1,
+        1,
+        5,
+        7
+      ],
+      [
+        2,
+        0,
+        8,
+        4
+      ],
+      [
+        1,
+        0,
+        7,
+        6
+      ],
+      [
+        1,
+        0,
+        6,
+        7
+      ],
+      [
+        1,
+        1,
+        5,
+        7
+      ],
+      [
+        0,
+        2,
+        6,
+        6
+      ],
+      [
+        1,
+        1,
+        4,
+        8
+      ],
+      [
+        1,
+        1,
+        3,
+        9
+      ],
+      [
+        2,
+        0,
+        7,
+        5
+      ],
+      [
+        1,
+        1,
+        8,
+        4
+      ],
+      [
+        0,
+        1,
+        7,
+        6
+      ],
+      [
+        1,
+        0,
+        7,
+        6
+      ],
+      [
+        1,
+        1,
+        6,
+        6
+      ],
+      [
+        2,
+        0,
+        7,
+        5
+      ]
+    ],
+    "columns": [
+      [
+        1,
+        0,
+        7,
+        6
+      ],
+      [
+        2,
+        0,
+        8,
+        4
+      ],
+      [
+        3,
+        0,
+        5,
+        6
+      ],
+      [
+        1,
+        0,
+        9,
+        4
+      ],
+      [
+        1,
+        0,
+        7,
+        6
+      ],
+      [
+        2,
+        0,
+        5,
+        7
+      ],
+      [
+        0,
+        2,
+        3,
+        9
+      ],
+      [
+        1,
+        1,
+        5,
+        7
+      ],
+      [
+        1,
+        0,
+        6,
+        7
+      ],
+      [
+        0,
+        2,
+        5,
+        7
+      ],
+      [
+        2,
+        1,
+        7,
+        4
+      ],
+      [
+        0,
+        1,
+        6,
+        7
+      ],
+      [
+        0,
+        1,
+        6,
+        7
+      ],
+      [
+        1,
+        1,
+        7,
+        5
+      ]
+    ]
+  },
+  "operatorIDsSHA256": "cc28c16edf8fba5ee76c8d6be566fac03b0d0cbd6b2975a1b05415c165f624bc",
+  "controls": {
+    "crossChecked": 90,
+    "planted": 54
+  },
+  "limits": {
+    "maxNodes": 200000,
+    "maxMs": 1500
+  },
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceSHA256": "d5a6917d662b9ec73de697e4d46accbc0b48df16f98853002ef7842882862a41",
+  "helpers": {
+    "zero_decimal_constraints.cjs": "21a6798ea81fedf38d042d29bb3cf9df56fd7a6b65baa8cb22cf8c6c9278ee2c",
+    "decimal_keystream_constraints.cjs": "07a7a6eba6185a490bbfa6f6f0084346318fd37ac132239dfcc6ca9a44824c8e"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "routes": 32,
+  "cases": 256,
+  "lengthCompatiblePrimePairs": 11,
+  "patternComparisons": 22,
+  "hits": 0,
+  "elapsedMs": 19,
+  "casesSHA256": "9de2c1340e0d95ea4306e776c90858918660ed77e35f0d351410b07e3340d854"
+}

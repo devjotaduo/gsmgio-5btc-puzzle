@@ -1,0 +1,24 @@
+{
+  "complete": true,
+  "keys": 26473,
+  "decisions": 423568,
+  "nodes": 41639592,
+  "tally": {
+    "dbbi/minimal/lettersSpace/unknown-cap": 10,
+    "dbbi/minimal/ascii/compatible": 25,
+    "dbbi/padded/lettersSpace/excluded": 52946,
+    "dbbi/padded/ascii/excluded": 52946,
+    "dbbi/minimal/lettersSpace/excluded": 52936,
+    "dbbi/minimal/ascii/unknown-cap": 197,
+    "faed/minimal/lettersSpace/excluded": 52944,
+    "faed/minimal/ascii/unknown-cap": 190,
+    "faed/padded/lettersSpace/excluded": 52946,
+    "faed/padded/ascii/excluded": 52922,
+    "dbbi/minimal/ascii/excluded": 52724,
+    "faed/minimal/ascii/excluded": 52756,
+    "faed/minimal/lettersSpace/unknown-cap": 2,
+    "faed/padded/ascii/unknown-cap": 24
+  },
+  "elapsedMs": 93117,
+  "casesSHA256": "57e23adceac4d74e96913431fda155ee7355e215c4a27933f11861d6e236f8c2"
+}

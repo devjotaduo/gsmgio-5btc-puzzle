@@ -1,0 +1,6623 @@
+{
+  "hypothesis": "Use matrix sum/index lists or adjacent decoded labels as a transposition key; undo/apply one columnar or Myszkowski permutation, then a=1..i=9 with any ONE alias also independently zero; whole decimal integer -> minimum big-endian bytes <128.",
+  "caveat": "No evidence selects these ciphers. Fixed declared keys only, not all column permutations, not double transposition. Input and output reversals are separate. No padding inserted or discarded.",
+  "lists": [
+    {
+      "name": "binary/rows",
+      "values": [
+        6,
+        10,
+        8,
+        7,
+        6,
+        6,
+        5,
+        4,
+        9,
+        9,
+        7,
+        8,
+        7,
+        9
+      ],
+      "reason": "The literal row/column sum lists of the original 14x14 matrix."
+    },
+    {
+      "name": "binary/columns",
+      "values": [
+        8,
+        10,
+        8,
+        10,
+        8,
+        7,
+        3,
+        6,
+        7,
+        5,
+        9,
+        6,
+        6,
+        8
+      ],
+      "reason": "The literal row/column sum lists of the original 14x14 matrix."
+    },
+    {
+      "name": "count-B/rows",
+      "values": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        2,
+        1,
+        0,
+        1,
+        1,
+        2
+      ],
+      "reason": "Row/column counts of the named colour."
+    },
+    {
+      "name": "count-B/columns",
+      "values": [
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        0,
+        1,
+        1,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "reason": "Row/column counts of the named colour."
+    },
+    {
+      "name": "count-Y/rows",
+      "values": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "reason": "Row/column counts of the named colour."
+    },
+    {
+      "name": "count-Y/columns",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "Row/column counts of the named colour."
+    },
+    {
+      "name": "colours-2-3/bits/rows",
+      "values": [
+        10,
+        12,
+        9,
+        8,
+        10,
+        12,
+        9,
+        8,
+        11,
+        13,
+        10,
+        9,
+        11,
+        11
+      ],
+      "reason": "Hypothesis: assign the two smallest primes to the two colours; retain original non-colour bits or zero them. Both colour assignments are explicit alternatives."
+    },
+    {
+      "name": "colours-2-3/bits/columns",
+      "values": [
+        9,
+        12,
+        11,
+        11,
+        9,
+        9,
+        9,
+        10,
+        8,
+        11,
+        14,
+        9,
+        9,
+        12
+      ],
+      "reason": "Hypothesis: assign the two smallest primes to the two colours; retain original non-colour bits or zero them. Both colour assignments are explicit alternatives."
+    },
+    {
+      "name": "colours-2-3/zero/rows",
+      "values": [
+        5,
+        4,
+        2,
+        2,
+        5,
+        6,
+        5,
+        5,
+        4,
+        5,
+        3,
+        2,
+        5,
+        4
+      ],
+      "reason": "Hypothesis: assign the two smallest primes to the two colours; retain original non-colour bits or zero them. Both colour assignments are explicit alternatives."
+    },
+    {
+      "name": "colours-2-3/zero/columns",
+      "values": [
+        2,
+        4,
+        6,
+        2,
+        2,
+        4,
+        6,
+        5,
+        2,
+        6,
+        7,
+        3,
+        3,
+        5
+      ],
+      "reason": "Hypothesis: assign the two smallest primes to the two colours; retain original non-colour bits or zero them. Both colour assignments are explicit alternatives."
+    },
+    {
+      "name": "colours-3-2/bits/rows",
+      "values": [
+        10,
+        14,
+        10,
+        9,
+        10,
+        10,
+        9,
+        8,
+        13,
+        13,
+        9,
+        10,
+        11,
+        13
+      ],
+      "reason": "Hypothesis: assign the two smallest primes to the two colours; retain original non-colour bits or zero them. Both colour assignments are explicit alternatives."
+    },
+    {
+      "name": "colours-3-2/bits/columns",
+      "values": [
+        10,
+        14,
+        14,
+        12,
+        10,
+        11,
+        7,
+        10,
+        9,
+        9,
+        15,
+        8,
+        8,
+        12
+      ],
+      "reason": "Hypothesis: assign the two smallest primes to the two colours; retain original non-colour bits or zero them. Both colour assignments are explicit alternatives."
+    },
+    {
+      "name": "colours-3-2/zero/rows",
+      "values": [
+        5,
+        6,
+        3,
+        3,
+        5,
+        4,
+        5,
+        5,
+        6,
+        5,
+        2,
+        3,
+        5,
+        6
+      ],
+      "reason": "Hypothesis: assign the two smallest primes to the two colours; retain original non-colour bits or zero them. Both colour assignments are explicit alternatives."
+    },
+    {
+      "name": "colours-3-2/zero/columns",
+      "values": [
+        3,
+        6,
+        9,
+        3,
+        3,
+        6,
+        4,
+        5,
+        3,
+        4,
+        8,
+        2,
+        2,
+        5
+      ],
+      "reason": "Hypothesis: assign the two smallest primes to the two colours; retain original non-colour bits or zero them. Both colour assignments are explicit alternatives."
+    },
+    {
+      "name": "binary-values/rows",
+      "values": [
+        3372,
+        15595,
+        14153,
+        6685,
+        6342,
+        9763,
+        10000,
+        14344,
+        1917,
+        16177,
+        13339,
+        15532,
+        5958,
+        7019
+      ],
+      "reason": "Interpret each full matrix row/column as a binary integer."
+    },
+    {
+      "name": "binary-values/columns",
+      "values": [
+        6620,
+        7775,
+        13909,
+        14782,
+        3507,
+        10419,
+        4612,
+        6691,
+        12597,
+        1208,
+        15469,
+        9766,
+        4875,
+        7481
+      ],
+      "reason": "Interpret each full matrix row/column as a binary integer."
+    },
+    {
+      "name": "prime-weighted/row-major/rows",
+      "values": [
+        116,
+        762,
+        1128,
+        1595,
+        1850,
+        2370,
+        2311,
+        2210,
+        5985,
+        6709,
+        5969,
+        7540,
+        7303,
+        10295
+      ],
+      "reason": "Hypothesis: replace each live bit by the prime at its 1-based cell rank before summing."
+    },
+    {
+      "name": "prime-weighted/row-major/columns",
+      "values": [
+        3898,
+        5732,
+        3834,
+        5180,
+        4718,
+        4161,
+        1327,
+        3400,
+        4049,
+        3035,
+        4837,
+        3360,
+        4038,
+        4574
+      ],
+      "reason": "Hypothesis: replace each live bit by the prime at its 1-based cell rank before summing."
+    },
+    {
+      "name": "colour-indexes/row-major/B",
+      "values": [
+        6,
+        17,
+        25,
+        36,
+        47,
+        58,
+        88,
+        99,
+        118,
+        126,
+        129,
+        163,
+        170,
+        185,
+        193
+      ],
+      "reason": "1-based positions of coloured cells."
+    },
+    {
+      "name": "prime-colour-indexes/row-major/B",
+      "values": [
+        17,
+        47,
+        163,
+        193
+      ],
+      "reason": "Only prime-valued positions of coloured cells."
+    },
+    {
+      "name": "colour-indexes/row-major/Y",
+      "values": [
+        14,
+        66,
+        77,
+        81,
+        96,
+        111,
+        133,
+        148,
+        178
+      ],
+      "reason": "1-based positions of coloured cells."
+    },
+    {
+      "name": "prime-weighted/spiral/rows",
+      "values": [
+        1254,
+        3722,
+        4044,
+        4347,
+        4014,
+        3448,
+        3877,
+        1716,
+        7745,
+        5811,
+        3327,
+        3972,
+        2397,
+        673
+      ],
+      "reason": "Hypothesis: replace each live bit by the prime at its 1-based cell rank before summing."
+    },
+    {
+      "name": "prime-weighted/spiral/columns",
+      "values": [
+        154,
+        2530,
+        3536,
+        6298,
+        5952,
+        4539,
+        2143,
+        3778,
+        4633,
+        4819,
+        5509,
+        3182,
+        2164,
+        1110
+      ],
+      "reason": "Hypothesis: replace each live bit by the prime at its 1-based cell rank before summing."
+    },
+    {
+      "name": "colour-indexes/spiral/B",
+      "values": [
+        8,
+        16,
+        24,
+        32,
+        48,
+        56,
+        64,
+        88,
+        96,
+        104,
+        112,
+        128,
+        136,
+        160,
+        184
+      ],
+      "reason": "1-based positions of coloured cells."
+    },
+    {
+      "name": "colour-indexes/spiral/Y",
+      "values": [
+        40,
+        72,
+        80,
+        120,
+        144,
+        152,
+        168,
+        176,
+        192
+      ],
+      "reason": "1-based positions of coloured cells."
+    },
+    {
+      "name": "nth-prime/binary/rows",
+      "values": [
+        13,
+        29,
+        19,
+        17,
+        13,
+        13,
+        11,
+        7,
+        23,
+        23,
+        17,
+        19,
+        17,
+        23
+      ],
+      "reason": "Hypothesis: replace each binary-matrix sum by that numbered prime."
+    },
+    {
+      "name": "nth-prime/binary/columns",
+      "values": [
+        19,
+        29,
+        19,
+        29,
+        19,
+        17,
+        5,
+        13,
+        17,
+        11,
+        23,
+        13,
+        13,
+        19
+      ],
+      "reason": "Hypothesis: replace each binary-matrix sum by that numbered prime."
+    },
+    {
+      "name": "spectrum-ranks/specified/rows",
+      "reason": "1-based red/orange/yellow/green/blue/indigo/violet ranks for colours; original bits elsewhere.",
+      "values": [
+        13,
+        18,
+        12,
+        11,
+        13,
+        12,
+        12,
+        11,
+        17,
+        16,
+        10,
+        12,
+        14,
+        17
+      ]
+    },
+    {
+      "name": "spectrum-ranks/specified/columns",
+      "reason": "1-based red/orange/yellow/green/blue/indigo/violet ranks for colours; original bits elsewhere.",
+      "values": [
+        12,
+        18,
+        20,
+        14,
+        12,
+        15,
+        9,
+        13,
+        11,
+        11,
+        20,
+        9,
+        9,
+        15
+      ]
+    },
+    {
+      "name": "spectrum-ranks/zero/rows",
+      "reason": "1-based red/orange/yellow/green/blue/indigo/violet ranks for colours; original bits elsewhere.",
+      "values": [
+        8,
+        10,
+        5,
+        5,
+        8,
+        6,
+        8,
+        8,
+        10,
+        8,
+        3,
+        5,
+        8,
+        10
+      ]
+    },
+    {
+      "name": "spectrum-ranks/zero/columns",
+      "reason": "1-based red/orange/yellow/green/blue/indigo/violet ranks for colours; original bits elsewhere.",
+      "values": [
+        5,
+        10,
+        15,
+        5,
+        5,
+        10,
+        6,
+        8,
+        5,
+        6,
+        13,
+        3,
+        3,
+        8
+      ]
+    },
+    {
+      "name": "spectrum-rank-primes/specified/rows",
+      "reason": "Replace the above colour ranks by the corresponding 5th and 3rd primes; original bits elsewhere.",
+      "values": [
+        21,
+        30,
+        18,
+        17,
+        21,
+        16,
+        20,
+        19,
+        29,
+        24,
+        12,
+        18,
+        22,
+        29
+      ]
+    },
+    {
+      "name": "spectrum-rank-primes/specified/columns",
+      "reason": "Replace the above colour ranks by the corresponding 5th and 3rd primes; original bits elsewhere.",
+      "values": [
+        18,
+        30,
+        38,
+        20,
+        18,
+        27,
+        13,
+        21,
+        17,
+        15,
+        34,
+        11,
+        11,
+        23
+      ]
+    },
+    {
+      "name": "spectrum-rank-primes/zero/rows",
+      "reason": "Replace the above colour ranks by the corresponding 5th and 3rd primes; original bits elsewhere.",
+      "values": [
+        16,
+        22,
+        11,
+        11,
+        16,
+        10,
+        16,
+        16,
+        22,
+        16,
+        5,
+        11,
+        16,
+        22
+      ]
+    },
+    {
+      "name": "spectrum-rank-primes/zero/columns",
+      "reason": "Replace the above colour ranks by the corresponding 5th and 3rd primes; original bits elsewhere.",
+      "values": [
+        11,
+        22,
+        33,
+        11,
+        11,
+        22,
+        10,
+        16,
+        11,
+        10,
+        27,
+        5,
+        5,
+        16
+      ]
+    },
+    {
+      "name": "resistor-code/specified/rows",
+      "reason": "Standard resistor digit values for all four colours.",
+      "values": [
+        73,
+        48,
+        60,
+        69,
+        73,
+        62,
+        82,
+        91,
+        57,
+        46,
+        58,
+        60,
+        64,
+        57
+      ]
+    },
+    {
+      "name": "resistor-code/specified/columns",
+      "reason": "Standard resistor digit values for all four colours.",
+      "values": [
+        60,
+        48,
+        72,
+        42,
+        60,
+        75,
+        89,
+        73,
+        69,
+        71,
+        52,
+        67,
+        67,
+        55
+      ]
+    },
+    {
+      "name": "resistor-code/zero/rows",
+      "reason": "Standard resistor digit values for all four colours.",
+      "values": [
+        10,
+        12,
+        6,
+        6,
+        10,
+        8,
+        10,
+        10,
+        12,
+        10,
+        4,
+        6,
+        10,
+        12
+      ]
+    },
+    {
+      "name": "resistor-code/zero/columns",
+      "reason": "Standard resistor digit values for all four colours.",
+      "values": [
+        6,
+        12,
+        18,
+        6,
+        6,
+        12,
+        8,
+        10,
+        6,
+        8,
+        16,
+        4,
+        4,
+        10
+      ]
+    },
+    {
+      "name": "resistor-code-primes/specified/rows",
+      "reason": "Replace nonzero resistor digits by the corresponding primes; leave zero zero.",
+      "values": [
+        181,
+        118,
+        151,
+        174,
+        181,
+        152,
+        204,
+        227,
+        141,
+        112,
+        145,
+        151,
+        158,
+        141
+      ]
+    },
+    {
+      "name": "resistor-code-primes/specified/columns",
+      "reason": "Replace nonzero resistor digits by the corresponding primes; leave zero zero.",
+      "values": [
+        151,
+        118,
+        177,
+        105,
+        151,
+        187,
+        221,
+        181,
+        174,
+        175,
+        125,
+        168,
+        168,
+        135
+      ]
+    },
+    {
+      "name": "resistor-code-primes/zero/rows",
+      "reason": "Replace nonzero resistor digits by the corresponding primes; leave zero zero.",
+      "values": [
+        20,
+        26,
+        13,
+        13,
+        20,
+        14,
+        20,
+        20,
+        26,
+        20,
+        7,
+        13,
+        20,
+        26
+      ]
+    },
+    {
+      "name": "resistor-code-primes/zero/columns",
+      "reason": "Replace nonzero resistor digits by the corresponding primes; leave zero zero.",
+      "values": [
+        13,
+        26,
+        39,
+        13,
+        13,
+        26,
+        14,
+        20,
+        13,
+        14,
+        33,
+        7,
+        7,
+        20
+      ]
+    },
+    {
+      "name": "literal/matrixsumlist",
+      "values": [
+        13,
+        1,
+        20,
+        18,
+        9,
+        24,
+        19,
+        21,
+        13,
+        12,
+        9,
+        19,
+        20
+      ],
+      "reason": "Decoded instruction next to the unknown fields, used as a literal trial transposition key."
+    },
+    {
+      "name": "literal/lastwordsbeforearchichoice",
+      "values": [
+        12,
+        1,
+        19,
+        20,
+        23,
+        15,
+        18,
+        4,
+        19,
+        2,
+        5,
+        6,
+        15,
+        18,
+        5,
+        1,
+        18,
+        3,
+        8,
+        9,
+        3,
+        8,
+        15,
+        9,
+        3,
+        5
+      ],
+      "reason": "Decoded instruction next to the unknown fields, used as a literal trial transposition key."
+    },
+    {
+      "name": "literal/thispassword",
+      "values": [
+        20,
+        8,
+        9,
+        19,
+        16,
+        1,
+        19,
+        19,
+        23,
+        15,
+        18,
+        4
+      ],
+      "reason": "Decoded instruction next to the unknown fields, used as a literal trial transposition key."
+    }
+  ],
+  "keys": [
+    {
+      "id": "6,10,8,7,6,6,5,4,9,9,7,8,7,9",
+      "values": [
+        6,
+        10,
+        8,
+        7,
+        6,
+        6,
+        5,
+        4,
+        9,
+        9,
+        7,
+        8,
+        7,
+        9
+      ],
+      "provenance": [
+        {
+          "list": "binary/rows",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "9,7,8,7,9,9,4,5,6,6,7,8,10,6",
+      "values": [
+        9,
+        7,
+        8,
+        7,
+        9,
+        9,
+        4,
+        5,
+        6,
+        6,
+        7,
+        8,
+        10,
+        6
+      ],
+      "provenance": [
+        {
+          "list": "binary/rows",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "6,1,0,8,7,6,6,5,4,9,9,7,8,7,9",
+      "values": [
+        6,
+        1,
+        0,
+        8,
+        7,
+        6,
+        6,
+        5,
+        4,
+        9,
+        9,
+        7,
+        8,
+        7,
+        9
+      ],
+      "provenance": [
+        {
+          "list": "binary/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "9,7,8,7,9,9,4,5,6,6,7,8,0,1,6",
+      "values": [
+        9,
+        7,
+        8,
+        7,
+        9,
+        9,
+        4,
+        5,
+        6,
+        6,
+        7,
+        8,
+        0,
+        1,
+        6
+      ],
+      "provenance": [
+        {
+          "list": "binary/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "8,10,8,10,8,7,3,6,7,5,9,6,6,8",
+      "values": [
+        8,
+        10,
+        8,
+        10,
+        8,
+        7,
+        3,
+        6,
+        7,
+        5,
+        9,
+        6,
+        6,
+        8
+      ],
+      "provenance": [
+        {
+          "list": "binary/columns",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "8,6,6,9,5,7,6,3,7,8,10,8,10,8",
+      "values": [
+        8,
+        6,
+        6,
+        9,
+        5,
+        7,
+        6,
+        3,
+        7,
+        8,
+        10,
+        8,
+        10,
+        8
+      ],
+      "provenance": [
+        {
+          "list": "binary/columns",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "8,1,0,8,1,0,8,7,3,6,7,5,9,6,6,8",
+      "values": [
+        8,
+        1,
+        0,
+        8,
+        1,
+        0,
+        8,
+        7,
+        3,
+        6,
+        7,
+        5,
+        9,
+        6,
+        6,
+        8
+      ],
+      "provenance": [
+        {
+          "list": "binary/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "8,6,6,9,5,7,6,3,7,8,0,1,8,0,1,8",
+      "values": [
+        8,
+        6,
+        6,
+        9,
+        5,
+        7,
+        6,
+        3,
+        7,
+        8,
+        0,
+        1,
+        8,
+        0,
+        1,
+        8
+      ],
+      "provenance": [
+        {
+          "list": "binary/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,2,1,1,1,0,1,1,2,1,0,1,1,2",
+      "values": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        2,
+        1,
+        0,
+        1,
+        1,
+        2
+      ],
+      "provenance": [
+        {
+          "list": "count-B/rows",
+          "representation": "integers",
+          "reverse": false
+        },
+        {
+          "list": "count-B/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "2,1,1,0,1,2,1,1,0,1,1,1,2,1",
+      "values": [
+        2,
+        1,
+        1,
+        0,
+        1,
+        2,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "count-B/rows",
+          "representation": "integers",
+          "reverse": true
+        },
+        {
+          "list": "count-B/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,2,3,1,1,2,0,1,1,0,2,0,0,1",
+      "values": [
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        0,
+        1,
+        1,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "count-B/columns",
+          "representation": "integers",
+          "reverse": false
+        },
+        {
+          "list": "count-B/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "1,0,0,2,0,1,1,0,2,1,1,3,2,1",
+      "values": [
+        1,
+        0,
+        0,
+        2,
+        0,
+        1,
+        1,
+        0,
+        2,
+        1,
+        1,
+        3,
+        2,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "count-B/columns",
+          "representation": "integers",
+          "reverse": true
+        },
+        {
+          "list": "count-B/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,0,0,0,1,2,1,1,0,1,1,0,1,0",
+      "values": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "provenance": [
+        {
+          "list": "count-Y/rows",
+          "representation": "integers",
+          "reverse": false
+        },
+        {
+          "list": "count-Y/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "0,1,0,1,1,0,1,1,2,1,0,0,0,1",
+      "values": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        2,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "count-Y/rows",
+          "representation": "integers",
+          "reverse": true
+        },
+        {
+          "list": "count-Y/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "0,0,0,0,0,0,2,1,0,2,1,1,1,1",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "count-Y/columns",
+          "representation": "integers",
+          "reverse": false
+        },
+        {
+          "list": "count-Y/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "1,1,1,1,2,0,1,2,0,0,0,0,0,0",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "provenance": [
+        {
+          "list": "count-Y/columns",
+          "representation": "integers",
+          "reverse": true
+        },
+        {
+          "list": "count-Y/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "10,12,9,8,10,12,9,8,11,13,10,9,11,11",
+      "values": [
+        10,
+        12,
+        9,
+        8,
+        10,
+        12,
+        9,
+        8,
+        11,
+        13,
+        10,
+        9,
+        11,
+        11
+      ],
+      "provenance": [
+        {
+          "list": "colours-2-3/bits/rows",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "11,11,9,10,13,11,8,9,12,10,8,9,12,10",
+      "values": [
+        11,
+        11,
+        9,
+        10,
+        13,
+        11,
+        8,
+        9,
+        12,
+        10,
+        8,
+        9,
+        12,
+        10
+      ],
+      "provenance": [
+        {
+          "list": "colours-2-3/bits/rows",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,0,1,2,9,8,1,0,1,2,9,8,1,1,1,3,1,0,9,1,1,1,1",
+      "values": [
+        1,
+        0,
+        1,
+        2,
+        9,
+        8,
+        1,
+        0,
+        1,
+        2,
+        9,
+        8,
+        1,
+        1,
+        1,
+        3,
+        1,
+        0,
+        9,
+        1,
+        1,
+        1,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "colours-2-3/bits/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "1,1,1,1,9,0,1,3,1,1,1,8,9,2,1,0,1,8,9,2,1,0,1",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        9,
+        0,
+        1,
+        3,
+        1,
+        1,
+        1,
+        8,
+        9,
+        2,
+        1,
+        0,
+        1,
+        8,
+        9,
+        2,
+        1,
+        0,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "colours-2-3/bits/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "9,12,11,11,9,9,9,10,8,11,14,9,9,12",
+      "values": [
+        9,
+        12,
+        11,
+        11,
+        9,
+        9,
+        9,
+        10,
+        8,
+        11,
+        14,
+        9,
+        9,
+        12
+      ],
+      "provenance": [
+        {
+          "list": "colours-2-3/bits/columns",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "12,9,9,14,11,8,10,9,9,9,11,11,12,9",
+      "values": [
+        12,
+        9,
+        9,
+        14,
+        11,
+        8,
+        10,
+        9,
+        9,
+        9,
+        11,
+        11,
+        12,
+        9
+      ],
+      "provenance": [
+        {
+          "list": "colours-2-3/bits/columns",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "9,1,2,1,1,1,1,9,9,9,1,0,8,1,1,1,4,9,9,1,2",
+      "values": [
+        9,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        9,
+        9,
+        9,
+        1,
+        0,
+        8,
+        1,
+        1,
+        1,
+        4,
+        9,
+        9,
+        1,
+        2
+      ],
+      "provenance": [
+        {
+          "list": "colours-2-3/bits/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "2,1,9,9,4,1,1,1,8,0,1,9,9,9,1,1,1,1,2,1,9",
+      "values": [
+        2,
+        1,
+        9,
+        9,
+        4,
+        1,
+        1,
+        1,
+        8,
+        0,
+        1,
+        9,
+        9,
+        9,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        9
+      ],
+      "provenance": [
+        {
+          "list": "colours-2-3/bits/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "5,4,2,2,5,6,5,5,4,5,3,2,5,4",
+      "values": [
+        5,
+        4,
+        2,
+        2,
+        5,
+        6,
+        5,
+        5,
+        4,
+        5,
+        3,
+        2,
+        5,
+        4
+      ],
+      "provenance": [
+        {
+          "list": "colours-2-3/zero/rows",
+          "representation": "integers",
+          "reverse": false
+        },
+        {
+          "list": "colours-2-3/zero/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "4,5,2,3,5,4,5,5,6,5,2,2,4,5",
+      "values": [
+        4,
+        5,
+        2,
+        3,
+        5,
+        4,
+        5,
+        5,
+        6,
+        5,
+        2,
+        2,
+        4,
+        5
+      ],
+      "provenance": [
+        {
+          "list": "colours-2-3/zero/rows",
+          "representation": "integers",
+          "reverse": true
+        },
+        {
+          "list": "colours-2-3/zero/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "2,4,6,2,2,4,6,5,2,6,7,3,3,5",
+      "values": [
+        2,
+        4,
+        6,
+        2,
+        2,
+        4,
+        6,
+        5,
+        2,
+        6,
+        7,
+        3,
+        3,
+        5
+      ],
+      "provenance": [
+        {
+          "list": "colours-2-3/zero/columns",
+          "representation": "integers",
+          "reverse": false
+        },
+        {
+          "list": "colours-2-3/zero/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "5,3,3,7,6,2,5,6,4,2,2,6,4,2",
+      "values": [
+        5,
+        3,
+        3,
+        7,
+        6,
+        2,
+        5,
+        6,
+        4,
+        2,
+        2,
+        6,
+        4,
+        2
+      ],
+      "provenance": [
+        {
+          "list": "colours-2-3/zero/columns",
+          "representation": "integers",
+          "reverse": true
+        },
+        {
+          "list": "colours-2-3/zero/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "10,14,10,9,10,10,9,8,13,13,9,10,11,13",
+      "values": [
+        10,
+        14,
+        10,
+        9,
+        10,
+        10,
+        9,
+        8,
+        13,
+        13,
+        9,
+        10,
+        11,
+        13
+      ],
+      "provenance": [
+        {
+          "list": "colours-3-2/bits/rows",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "13,11,10,9,13,13,8,9,10,10,9,10,14,10",
+      "values": [
+        13,
+        11,
+        10,
+        9,
+        13,
+        13,
+        8,
+        9,
+        10,
+        10,
+        9,
+        10,
+        14,
+        10
+      ],
+      "provenance": [
+        {
+          "list": "colours-3-2/bits/rows",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,0,1,4,1,0,9,1,0,1,0,9,8,1,3,1,3,9,1,0,1,1,1,3",
+      "values": [
+        1,
+        0,
+        1,
+        4,
+        1,
+        0,
+        9,
+        1,
+        0,
+        1,
+        0,
+        9,
+        8,
+        1,
+        3,
+        1,
+        3,
+        9,
+        1,
+        0,
+        1,
+        1,
+        1,
+        3
+      ],
+      "provenance": [
+        {
+          "list": "colours-3-2/bits/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "3,1,1,1,0,1,9,3,1,3,1,8,9,0,1,0,1,9,0,1,4,1,0,1",
+      "values": [
+        3,
+        1,
+        1,
+        1,
+        0,
+        1,
+        9,
+        3,
+        1,
+        3,
+        1,
+        8,
+        9,
+        0,
+        1,
+        0,
+        1,
+        9,
+        0,
+        1,
+        4,
+        1,
+        0,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "colours-3-2/bits/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "10,14,14,12,10,11,7,10,9,9,15,8,8,12",
+      "values": [
+        10,
+        14,
+        14,
+        12,
+        10,
+        11,
+        7,
+        10,
+        9,
+        9,
+        15,
+        8,
+        8,
+        12
+      ],
+      "provenance": [
+        {
+          "list": "colours-3-2/bits/columns",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "12,8,8,15,9,9,10,7,11,10,12,14,14,10",
+      "values": [
+        12,
+        8,
+        8,
+        15,
+        9,
+        9,
+        10,
+        7,
+        11,
+        10,
+        12,
+        14,
+        14,
+        10
+      ],
+      "provenance": [
+        {
+          "list": "colours-3-2/bits/columns",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,0,1,4,1,4,1,2,1,0,1,1,7,1,0,9,9,1,5,8,8,1,2",
+      "values": [
+        1,
+        0,
+        1,
+        4,
+        1,
+        4,
+        1,
+        2,
+        1,
+        0,
+        1,
+        1,
+        7,
+        1,
+        0,
+        9,
+        9,
+        1,
+        5,
+        8,
+        8,
+        1,
+        2
+      ],
+      "provenance": [
+        {
+          "list": "colours-3-2/bits/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "2,1,8,8,5,1,9,9,0,1,7,1,1,0,1,2,1,4,1,4,1,0,1",
+      "values": [
+        2,
+        1,
+        8,
+        8,
+        5,
+        1,
+        9,
+        9,
+        0,
+        1,
+        7,
+        1,
+        1,
+        0,
+        1,
+        2,
+        1,
+        4,
+        1,
+        4,
+        1,
+        0,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "colours-3-2/bits/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "5,6,3,3,5,4,5,5,6,5,2,3,5,6",
+      "values": [
+        5,
+        6,
+        3,
+        3,
+        5,
+        4,
+        5,
+        5,
+        6,
+        5,
+        2,
+        3,
+        5,
+        6
+      ],
+      "provenance": [
+        {
+          "list": "colours-3-2/zero/rows",
+          "representation": "integers",
+          "reverse": false
+        },
+        {
+          "list": "colours-3-2/zero/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "6,5,3,2,5,6,5,5,4,5,3,3,6,5",
+      "values": [
+        6,
+        5,
+        3,
+        2,
+        5,
+        6,
+        5,
+        5,
+        4,
+        5,
+        3,
+        3,
+        6,
+        5
+      ],
+      "provenance": [
+        {
+          "list": "colours-3-2/zero/rows",
+          "representation": "integers",
+          "reverse": true
+        },
+        {
+          "list": "colours-3-2/zero/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "3,6,9,3,3,6,4,5,3,4,8,2,2,5",
+      "values": [
+        3,
+        6,
+        9,
+        3,
+        3,
+        6,
+        4,
+        5,
+        3,
+        4,
+        8,
+        2,
+        2,
+        5
+      ],
+      "provenance": [
+        {
+          "list": "colours-3-2/zero/columns",
+          "representation": "integers",
+          "reverse": false
+        },
+        {
+          "list": "colours-3-2/zero/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "5,2,2,8,4,3,5,4,6,3,3,9,6,3",
+      "values": [
+        5,
+        2,
+        2,
+        8,
+        4,
+        3,
+        5,
+        4,
+        6,
+        3,
+        3,
+        9,
+        6,
+        3
+      ],
+      "provenance": [
+        {
+          "list": "colours-3-2/zero/columns",
+          "representation": "integers",
+          "reverse": true
+        },
+        {
+          "list": "colours-3-2/zero/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "3372,15595,14153,6685,6342,9763,10000,14344,1917,16177,13339,15532,5958,7019",
+      "values": [
+        3372,
+        15595,
+        14153,
+        6685,
+        6342,
+        9763,
+        10000,
+        14344,
+        1917,
+        16177,
+        13339,
+        15532,
+        5958,
+        7019
+      ],
+      "provenance": [
+        {
+          "list": "binary-values/rows",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "7019,5958,15532,13339,16177,1917,14344,10000,9763,6342,6685,14153,15595,3372",
+      "values": [
+        7019,
+        5958,
+        15532,
+        13339,
+        16177,
+        1917,
+        14344,
+        10000,
+        9763,
+        6342,
+        6685,
+        14153,
+        15595,
+        3372
+      ],
+      "provenance": [
+        {
+          "list": "binary-values/rows",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "3,3,7,2,1,5,5,9,5,1,4,1,5,3,6,6,8,5,6,3,4,2,9,7,6,3,1,0,0,0,0,1,4,3,4,4,1,9,1,7,1,6,1,7,7,1,3,3,3,9,1,5,5,3,2,5,9,5,8,7,0,1,9",
+      "values": [
+        3,
+        3,
+        7,
+        2,
+        1,
+        5,
+        5,
+        9,
+        5,
+        1,
+        4,
+        1,
+        5,
+        3,
+        6,
+        6,
+        8,
+        5,
+        6,
+        3,
+        4,
+        2,
+        9,
+        7,
+        6,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        4,
+        3,
+        4,
+        4,
+        1,
+        9,
+        1,
+        7,
+        1,
+        6,
+        1,
+        7,
+        7,
+        1,
+        3,
+        3,
+        3,
+        9,
+        1,
+        5,
+        5,
+        3,
+        2,
+        5,
+        9,
+        5,
+        8,
+        7,
+        0,
+        1,
+        9
+      ],
+      "provenance": [
+        {
+          "list": "binary-values/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "9,1,0,7,8,5,9,5,2,3,5,5,1,9,3,3,3,1,7,7,1,6,1,7,1,9,1,4,4,3,4,1,0,0,0,0,1,3,6,7,9,2,4,3,6,5,8,6,6,3,5,1,4,1,5,9,5,5,1,2,7,3,3",
+      "values": [
+        9,
+        1,
+        0,
+        7,
+        8,
+        5,
+        9,
+        5,
+        2,
+        3,
+        5,
+        5,
+        1,
+        9,
+        3,
+        3,
+        3,
+        1,
+        7,
+        7,
+        1,
+        6,
+        1,
+        7,
+        1,
+        9,
+        1,
+        4,
+        4,
+        3,
+        4,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        6,
+        7,
+        9,
+        2,
+        4,
+        3,
+        6,
+        5,
+        8,
+        6,
+        6,
+        3,
+        5,
+        1,
+        4,
+        1,
+        5,
+        9,
+        5,
+        5,
+        1,
+        2,
+        7,
+        3,
+        3
+      ],
+      "provenance": [
+        {
+          "list": "binary-values/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "6620,7775,13909,14782,3507,10419,4612,6691,12597,1208,15469,9766,4875,7481",
+      "values": [
+        6620,
+        7775,
+        13909,
+        14782,
+        3507,
+        10419,
+        4612,
+        6691,
+        12597,
+        1208,
+        15469,
+        9766,
+        4875,
+        7481
+      ],
+      "provenance": [
+        {
+          "list": "binary-values/columns",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "7481,4875,9766,15469,1208,12597,6691,4612,10419,3507,14782,13909,7775,6620",
+      "values": [
+        7481,
+        4875,
+        9766,
+        15469,
+        1208,
+        12597,
+        6691,
+        4612,
+        10419,
+        3507,
+        14782,
+        13909,
+        7775,
+        6620
+      ],
+      "provenance": [
+        {
+          "list": "binary-values/columns",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "6,6,2,0,7,7,7,5,1,3,9,0,9,1,4,7,8,2,3,5,0,7,1,0,4,1,9,4,6,1,2,6,6,9,1,1,2,5,9,7,1,2,0,8,1,5,4,6,9,9,7,6,6,4,8,7,5,7,4,8,1",
+      "values": [
+        6,
+        6,
+        2,
+        0,
+        7,
+        7,
+        7,
+        5,
+        1,
+        3,
+        9,
+        0,
+        9,
+        1,
+        4,
+        7,
+        8,
+        2,
+        3,
+        5,
+        0,
+        7,
+        1,
+        0,
+        4,
+        1,
+        9,
+        4,
+        6,
+        1,
+        2,
+        6,
+        6,
+        9,
+        1,
+        1,
+        2,
+        5,
+        9,
+        7,
+        1,
+        2,
+        0,
+        8,
+        1,
+        5,
+        4,
+        6,
+        9,
+        9,
+        7,
+        6,
+        6,
+        4,
+        8,
+        7,
+        5,
+        7,
+        4,
+        8,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "binary-values/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "1,8,4,7,5,7,8,4,6,6,7,9,9,6,4,5,1,8,0,2,1,7,9,5,2,1,1,9,6,6,2,1,6,4,9,1,4,0,1,7,0,5,3,2,8,7,4,1,9,0,9,3,1,5,7,7,7,0,2,6,6",
+      "values": [
+        1,
+        8,
+        4,
+        7,
+        5,
+        7,
+        8,
+        4,
+        6,
+        6,
+        7,
+        9,
+        9,
+        6,
+        4,
+        5,
+        1,
+        8,
+        0,
+        2,
+        1,
+        7,
+        9,
+        5,
+        2,
+        1,
+        1,
+        9,
+        6,
+        6,
+        2,
+        1,
+        6,
+        4,
+        9,
+        1,
+        4,
+        0,
+        1,
+        7,
+        0,
+        5,
+        3,
+        2,
+        8,
+        7,
+        4,
+        1,
+        9,
+        0,
+        9,
+        3,
+        1,
+        5,
+        7,
+        7,
+        7,
+        0,
+        2,
+        6,
+        6
+      ],
+      "provenance": [
+        {
+          "list": "binary-values/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "116,762,1128,1595,1850,2370,2311,2210,5985,6709,5969,7540,7303,10295",
+      "values": [
+        116,
+        762,
+        1128,
+        1595,
+        1850,
+        2370,
+        2311,
+        2210,
+        5985,
+        6709,
+        5969,
+        7540,
+        7303,
+        10295
+      ],
+      "provenance": [
+        {
+          "list": "prime-weighted/row-major/rows",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "10295,7303,7540,5969,6709,5985,2210,2311,2370,1850,1595,1128,762,116",
+      "values": [
+        10295,
+        7303,
+        7540,
+        5969,
+        6709,
+        5985,
+        2210,
+        2311,
+        2370,
+        1850,
+        1595,
+        1128,
+        762,
+        116
+      ],
+      "provenance": [
+        {
+          "list": "prime-weighted/row-major/rows",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,1,6,7,6,2,1,1,2,8,1,5,9,5,1,8,5,0,2,3,7,0,2,3,1,1,2,2,1,0,5,9,8,5,6,7,0,9,5,9,6,9,7,5,4,0,7,3,0,3,1,0,2,9,5",
+      "values": [
+        1,
+        1,
+        6,
+        7,
+        6,
+        2,
+        1,
+        1,
+        2,
+        8,
+        1,
+        5,
+        9,
+        5,
+        1,
+        8,
+        5,
+        0,
+        2,
+        3,
+        7,
+        0,
+        2,
+        3,
+        1,
+        1,
+        2,
+        2,
+        1,
+        0,
+        5,
+        9,
+        8,
+        5,
+        6,
+        7,
+        0,
+        9,
+        5,
+        9,
+        6,
+        9,
+        7,
+        5,
+        4,
+        0,
+        7,
+        3,
+        0,
+        3,
+        1,
+        0,
+        2,
+        9,
+        5
+      ],
+      "provenance": [
+        {
+          "list": "prime-weighted/row-major/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "5,9,2,0,1,3,0,3,7,0,4,5,7,9,6,9,5,9,0,7,6,5,8,9,5,0,1,2,2,1,1,3,2,0,7,3,2,0,5,8,1,5,9,5,1,8,2,1,1,2,6,7,6,1,1",
+      "values": [
+        5,
+        9,
+        2,
+        0,
+        1,
+        3,
+        0,
+        3,
+        7,
+        0,
+        4,
+        5,
+        7,
+        9,
+        6,
+        9,
+        5,
+        9,
+        0,
+        7,
+        6,
+        5,
+        8,
+        9,
+        5,
+        0,
+        1,
+        2,
+        2,
+        1,
+        1,
+        3,
+        2,
+        0,
+        7,
+        3,
+        2,
+        0,
+        5,
+        8,
+        1,
+        5,
+        9,
+        5,
+        1,
+        8,
+        2,
+        1,
+        1,
+        2,
+        6,
+        7,
+        6,
+        1,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "prime-weighted/row-major/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "3898,5732,3834,5180,4718,4161,1327,3400,4049,3035,4837,3360,4038,4574",
+      "values": [
+        3898,
+        5732,
+        3834,
+        5180,
+        4718,
+        4161,
+        1327,
+        3400,
+        4049,
+        3035,
+        4837,
+        3360,
+        4038,
+        4574
+      ],
+      "provenance": [
+        {
+          "list": "prime-weighted/row-major/columns",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "4574,4038,3360,4837,3035,4049,3400,1327,4161,4718,5180,3834,5732,3898",
+      "values": [
+        4574,
+        4038,
+        3360,
+        4837,
+        3035,
+        4049,
+        3400,
+        1327,
+        4161,
+        4718,
+        5180,
+        3834,
+        5732,
+        3898
+      ],
+      "provenance": [
+        {
+          "list": "prime-weighted/row-major/columns",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "3,8,9,8,5,7,3,2,3,8,3,4,5,1,8,0,4,7,1,8,4,1,6,1,1,3,2,7,3,4,0,0,4,0,4,9,3,0,3,5,4,8,3,7,3,3,6,0,4,0,3,8,4,5,7,4",
+      "values": [
+        3,
+        8,
+        9,
+        8,
+        5,
+        7,
+        3,
+        2,
+        3,
+        8,
+        3,
+        4,
+        5,
+        1,
+        8,
+        0,
+        4,
+        7,
+        1,
+        8,
+        4,
+        1,
+        6,
+        1,
+        1,
+        3,
+        2,
+        7,
+        3,
+        4,
+        0,
+        0,
+        4,
+        0,
+        4,
+        9,
+        3,
+        0,
+        3,
+        5,
+        4,
+        8,
+        3,
+        7,
+        3,
+        3,
+        6,
+        0,
+        4,
+        0,
+        3,
+        8,
+        4,
+        5,
+        7,
+        4
+      ],
+      "provenance": [
+        {
+          "list": "prime-weighted/row-major/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "4,7,5,4,8,3,0,4,0,6,3,3,7,3,8,4,5,3,0,3,9,4,0,4,0,0,4,3,7,2,3,1,1,6,1,4,8,1,7,4,0,8,1,5,4,3,8,3,2,3,7,5,8,9,8,3",
+      "values": [
+        4,
+        7,
+        5,
+        4,
+        8,
+        3,
+        0,
+        4,
+        0,
+        6,
+        3,
+        3,
+        7,
+        3,
+        8,
+        4,
+        5,
+        3,
+        0,
+        3,
+        9,
+        4,
+        0,
+        4,
+        0,
+        0,
+        4,
+        3,
+        7,
+        2,
+        3,
+        1,
+        1,
+        6,
+        1,
+        4,
+        8,
+        1,
+        7,
+        4,
+        0,
+        8,
+        1,
+        5,
+        4,
+        3,
+        8,
+        3,
+        2,
+        3,
+        7,
+        5,
+        8,
+        9,
+        8,
+        3
+      ],
+      "provenance": [
+        {
+          "list": "prime-weighted/row-major/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "6,17,25,36,47,58,88,99,118,126,129,163,170,185,193",
+      "values": [
+        6,
+        17,
+        25,
+        36,
+        47,
+        58,
+        88,
+        99,
+        118,
+        126,
+        129,
+        163,
+        170,
+        185,
+        193
+      ],
+      "provenance": [
+        {
+          "list": "colour-indexes/row-major/B",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "193,185,170,163,129,126,118,99,88,58,47,36,25,17,6",
+      "values": [
+        193,
+        185,
+        170,
+        163,
+        129,
+        126,
+        118,
+        99,
+        88,
+        58,
+        47,
+        36,
+        25,
+        17,
+        6
+      ],
+      "provenance": [
+        {
+          "list": "colour-indexes/row-major/B",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "6,1,7,2,5,3,6,4,7,5,8,8,8,9,9,1,1,8,1,2,6,1,2,9,1,6,3,1,7,0,1,8,5,1,9,3",
+      "values": [
+        6,
+        1,
+        7,
+        2,
+        5,
+        3,
+        6,
+        4,
+        7,
+        5,
+        8,
+        8,
+        8,
+        9,
+        9,
+        1,
+        1,
+        8,
+        1,
+        2,
+        6,
+        1,
+        2,
+        9,
+        1,
+        6,
+        3,
+        1,
+        7,
+        0,
+        1,
+        8,
+        5,
+        1,
+        9,
+        3
+      ],
+      "provenance": [
+        {
+          "list": "colour-indexes/row-major/B",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "3,9,1,5,8,1,0,7,1,3,6,1,9,2,1,6,2,1,8,1,1,9,9,8,8,8,5,7,4,6,3,5,2,7,1,6",
+      "values": [
+        3,
+        9,
+        1,
+        5,
+        8,
+        1,
+        0,
+        7,
+        1,
+        3,
+        6,
+        1,
+        9,
+        2,
+        1,
+        6,
+        2,
+        1,
+        8,
+        1,
+        1,
+        9,
+        9,
+        8,
+        8,
+        8,
+        5,
+        7,
+        4,
+        6,
+        3,
+        5,
+        2,
+        7,
+        1,
+        6
+      ],
+      "provenance": [
+        {
+          "list": "colour-indexes/row-major/B",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "17,47,163,193",
+      "values": [
+        17,
+        47,
+        163,
+        193
+      ],
+      "provenance": [
+        {
+          "list": "prime-colour-indexes/row-major/B",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "193,163,47,17",
+      "values": [
+        193,
+        163,
+        47,
+        17
+      ],
+      "provenance": [
+        {
+          "list": "prime-colour-indexes/row-major/B",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,7,4,7,1,6,3,1,9,3",
+      "values": [
+        1,
+        7,
+        4,
+        7,
+        1,
+        6,
+        3,
+        1,
+        9,
+        3
+      ],
+      "provenance": [
+        {
+          "list": "prime-colour-indexes/row-major/B",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "3,9,1,3,6,1,7,4,7,1",
+      "values": [
+        3,
+        9,
+        1,
+        3,
+        6,
+        1,
+        7,
+        4,
+        7,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "prime-colour-indexes/row-major/B",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "14,66,77,81,96,111,133,148,178",
+      "values": [
+        14,
+        66,
+        77,
+        81,
+        96,
+        111,
+        133,
+        148,
+        178
+      ],
+      "provenance": [
+        {
+          "list": "colour-indexes/row-major/Y",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "178,148,133,111,96,81,77,66,14",
+      "values": [
+        178,
+        148,
+        133,
+        111,
+        96,
+        81,
+        77,
+        66,
+        14
+      ],
+      "provenance": [
+        {
+          "list": "colour-indexes/row-major/Y",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,4,6,6,7,7,8,1,9,6,1,1,1,1,3,3,1,4,8,1,7,8",
+      "values": [
+        1,
+        4,
+        6,
+        6,
+        7,
+        7,
+        8,
+        1,
+        9,
+        6,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        1,
+        4,
+        8,
+        1,
+        7,
+        8
+      ],
+      "provenance": [
+        {
+          "list": "colour-indexes/row-major/Y",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "8,7,1,8,4,1,3,3,1,1,1,1,6,9,1,8,7,7,6,6,4,1",
+      "values": [
+        8,
+        7,
+        1,
+        8,
+        4,
+        1,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        6,
+        9,
+        1,
+        8,
+        7,
+        7,
+        6,
+        6,
+        4,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "colour-indexes/row-major/Y",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1254,3722,4044,4347,4014,3448,3877,1716,7745,5811,3327,3972,2397,673",
+      "values": [
+        1254,
+        3722,
+        4044,
+        4347,
+        4014,
+        3448,
+        3877,
+        1716,
+        7745,
+        5811,
+        3327,
+        3972,
+        2397,
+        673
+      ],
+      "provenance": [
+        {
+          "list": "prime-weighted/spiral/rows",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "673,2397,3972,3327,5811,7745,1716,3877,3448,4014,4347,4044,3722,1254",
+      "values": [
+        673,
+        2397,
+        3972,
+        3327,
+        5811,
+        7745,
+        1716,
+        3877,
+        3448,
+        4014,
+        4347,
+        4044,
+        3722,
+        1254
+      ],
+      "provenance": [
+        {
+          "list": "prime-weighted/spiral/rows",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,2,5,4,3,7,2,2,4,0,4,4,4,3,4,7,4,0,1,4,3,4,4,8,3,8,7,7,1,7,1,6,7,7,4,5,5,8,1,1,3,3,2,7,3,9,7,2,2,3,9,7,6,7,3",
+      "values": [
+        1,
+        2,
+        5,
+        4,
+        3,
+        7,
+        2,
+        2,
+        4,
+        0,
+        4,
+        4,
+        4,
+        3,
+        4,
+        7,
+        4,
+        0,
+        1,
+        4,
+        3,
+        4,
+        4,
+        8,
+        3,
+        8,
+        7,
+        7,
+        1,
+        7,
+        1,
+        6,
+        7,
+        7,
+        4,
+        5,
+        5,
+        8,
+        1,
+        1,
+        3,
+        3,
+        2,
+        7,
+        3,
+        9,
+        7,
+        2,
+        2,
+        3,
+        9,
+        7,
+        6,
+        7,
+        3
+      ],
+      "provenance": [
+        {
+          "list": "prime-weighted/spiral/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "3,7,6,7,9,3,2,2,7,9,3,7,2,3,3,1,1,8,5,5,4,7,7,6,1,7,1,7,7,8,3,8,4,4,3,4,1,0,4,7,4,3,4,4,4,0,4,2,2,7,3,4,5,2,1",
+      "values": [
+        3,
+        7,
+        6,
+        7,
+        9,
+        3,
+        2,
+        2,
+        7,
+        9,
+        3,
+        7,
+        2,
+        3,
+        3,
+        1,
+        1,
+        8,
+        5,
+        5,
+        4,
+        7,
+        7,
+        6,
+        1,
+        7,
+        1,
+        7,
+        7,
+        8,
+        3,
+        8,
+        4,
+        4,
+        3,
+        4,
+        1,
+        0,
+        4,
+        7,
+        4,
+        3,
+        4,
+        4,
+        4,
+        0,
+        4,
+        2,
+        2,
+        7,
+        3,
+        4,
+        5,
+        2,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "prime-weighted/spiral/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "154,2530,3536,6298,5952,4539,2143,3778,4633,4819,5509,3182,2164,1110",
+      "values": [
+        154,
+        2530,
+        3536,
+        6298,
+        5952,
+        4539,
+        2143,
+        3778,
+        4633,
+        4819,
+        5509,
+        3182,
+        2164,
+        1110
+      ],
+      "provenance": [
+        {
+          "list": "prime-weighted/spiral/columns",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "1110,2164,3182,5509,4819,4633,3778,2143,4539,5952,6298,3536,2530,154",
+      "values": [
+        1110,
+        2164,
+        3182,
+        5509,
+        4819,
+        4633,
+        3778,
+        2143,
+        4539,
+        5952,
+        6298,
+        3536,
+        2530,
+        154
+      ],
+      "provenance": [
+        {
+          "list": "prime-weighted/spiral/columns",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,5,4,2,5,3,0,3,5,3,6,6,2,9,8,5,9,5,2,4,5,3,9,2,1,4,3,3,7,7,8,4,6,3,3,4,8,1,9,5,5,0,9,3,1,8,2,2,1,6,4,1,1,1,0",
+      "values": [
+        1,
+        5,
+        4,
+        2,
+        5,
+        3,
+        0,
+        3,
+        5,
+        3,
+        6,
+        6,
+        2,
+        9,
+        8,
+        5,
+        9,
+        5,
+        2,
+        4,
+        5,
+        3,
+        9,
+        2,
+        1,
+        4,
+        3,
+        3,
+        7,
+        7,
+        8,
+        4,
+        6,
+        3,
+        3,
+        4,
+        8,
+        1,
+        9,
+        5,
+        5,
+        0,
+        9,
+        3,
+        1,
+        8,
+        2,
+        2,
+        1,
+        6,
+        4,
+        1,
+        1,
+        1,
+        0
+      ],
+      "provenance": [
+        {
+          "list": "prime-weighted/spiral/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "0,1,1,1,4,6,1,2,2,8,1,3,9,0,5,5,9,1,8,4,3,3,6,4,8,7,7,3,3,4,1,2,9,3,5,4,2,5,9,5,8,9,2,6,6,3,5,3,0,3,5,2,4,5,1",
+      "values": [
+        0,
+        1,
+        1,
+        1,
+        4,
+        6,
+        1,
+        2,
+        2,
+        8,
+        1,
+        3,
+        9,
+        0,
+        5,
+        5,
+        9,
+        1,
+        8,
+        4,
+        3,
+        3,
+        6,
+        4,
+        8,
+        7,
+        7,
+        3,
+        3,
+        4,
+        1,
+        2,
+        9,
+        3,
+        5,
+        4,
+        2,
+        5,
+        9,
+        5,
+        8,
+        9,
+        2,
+        6,
+        6,
+        3,
+        5,
+        3,
+        0,
+        3,
+        5,
+        2,
+        4,
+        5,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "prime-weighted/spiral/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "8,16,24,32,48,56,64,88,96,104,112,128,136,160,184",
+      "values": [
+        8,
+        16,
+        24,
+        32,
+        48,
+        56,
+        64,
+        88,
+        96,
+        104,
+        112,
+        128,
+        136,
+        160,
+        184
+      ],
+      "provenance": [
+        {
+          "list": "colour-indexes/spiral/B",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "184,160,136,128,112,104,96,88,64,56,48,32,24,16,8",
+      "values": [
+        184,
+        160,
+        136,
+        128,
+        112,
+        104,
+        96,
+        88,
+        64,
+        56,
+        48,
+        32,
+        24,
+        16,
+        8
+      ],
+      "provenance": [
+        {
+          "list": "colour-indexes/spiral/B",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "8,1,6,2,4,3,2,4,8,5,6,6,4,8,8,9,6,1,0,4,1,1,2,1,2,8,1,3,6,1,6,0,1,8,4",
+      "values": [
+        8,
+        1,
+        6,
+        2,
+        4,
+        3,
+        2,
+        4,
+        8,
+        5,
+        6,
+        6,
+        4,
+        8,
+        8,
+        9,
+        6,
+        1,
+        0,
+        4,
+        1,
+        1,
+        2,
+        1,
+        2,
+        8,
+        1,
+        3,
+        6,
+        1,
+        6,
+        0,
+        1,
+        8,
+        4
+      ],
+      "provenance": [
+        {
+          "list": "colour-indexes/spiral/B",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "4,8,1,0,6,1,6,3,1,8,2,1,2,1,1,4,0,1,6,9,8,8,4,6,6,5,8,4,2,3,4,2,6,1,8",
+      "values": [
+        4,
+        8,
+        1,
+        0,
+        6,
+        1,
+        6,
+        3,
+        1,
+        8,
+        2,
+        1,
+        2,
+        1,
+        1,
+        4,
+        0,
+        1,
+        6,
+        9,
+        8,
+        8,
+        4,
+        6,
+        6,
+        5,
+        8,
+        4,
+        2,
+        3,
+        4,
+        2,
+        6,
+        1,
+        8
+      ],
+      "provenance": [
+        {
+          "list": "colour-indexes/spiral/B",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "40,72,80,120,144,152,168,176,192",
+      "values": [
+        40,
+        72,
+        80,
+        120,
+        144,
+        152,
+        168,
+        176,
+        192
+      ],
+      "provenance": [
+        {
+          "list": "colour-indexes/spiral/Y",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "192,176,168,152,144,120,80,72,40",
+      "values": [
+        192,
+        176,
+        168,
+        152,
+        144,
+        120,
+        80,
+        72,
+        40
+      ],
+      "provenance": [
+        {
+          "list": "colour-indexes/spiral/Y",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "4,0,7,2,8,0,1,2,0,1,4,4,1,5,2,1,6,8,1,7,6,1,9,2",
+      "values": [
+        4,
+        0,
+        7,
+        2,
+        8,
+        0,
+        1,
+        2,
+        0,
+        1,
+        4,
+        4,
+        1,
+        5,
+        2,
+        1,
+        6,
+        8,
+        1,
+        7,
+        6,
+        1,
+        9,
+        2
+      ],
+      "provenance": [
+        {
+          "list": "colour-indexes/spiral/Y",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "2,9,1,6,7,1,8,6,1,2,5,1,4,4,1,0,2,1,0,8,2,7,0,4",
+      "values": [
+        2,
+        9,
+        1,
+        6,
+        7,
+        1,
+        8,
+        6,
+        1,
+        2,
+        5,
+        1,
+        4,
+        4,
+        1,
+        0,
+        2,
+        1,
+        0,
+        8,
+        2,
+        7,
+        0,
+        4
+      ],
+      "provenance": [
+        {
+          "list": "colour-indexes/spiral/Y",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "13,29,19,17,13,13,11,7,23,23,17,19,17,23",
+      "values": [
+        13,
+        29,
+        19,
+        17,
+        13,
+        13,
+        11,
+        7,
+        23,
+        23,
+        17,
+        19,
+        17,
+        23
+      ],
+      "provenance": [
+        {
+          "list": "nth-prime/binary/rows",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "23,17,19,17,23,23,7,11,13,13,17,19,29,13",
+      "values": [
+        23,
+        17,
+        19,
+        17,
+        23,
+        23,
+        7,
+        11,
+        13,
+        13,
+        17,
+        19,
+        29,
+        13
+      ],
+      "provenance": [
+        {
+          "list": "nth-prime/binary/rows",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,3,2,9,1,9,1,7,1,3,1,3,1,1,7,2,3,2,3,1,7,1,9,1,7,2,3",
+      "values": [
+        1,
+        3,
+        2,
+        9,
+        1,
+        9,
+        1,
+        7,
+        1,
+        3,
+        1,
+        3,
+        1,
+        1,
+        7,
+        2,
+        3,
+        2,
+        3,
+        1,
+        7,
+        1,
+        9,
+        1,
+        7,
+        2,
+        3
+      ],
+      "provenance": [
+        {
+          "list": "nth-prime/binary/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "3,2,7,1,9,1,7,1,3,2,3,2,7,1,1,3,1,3,1,7,1,9,1,9,2,3,1",
+      "values": [
+        3,
+        2,
+        7,
+        1,
+        9,
+        1,
+        7,
+        1,
+        3,
+        2,
+        3,
+        2,
+        7,
+        1,
+        1,
+        3,
+        1,
+        3,
+        1,
+        7,
+        1,
+        9,
+        1,
+        9,
+        2,
+        3,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "nth-prime/binary/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "19,29,19,29,19,17,5,13,17,11,23,13,13,19",
+      "values": [
+        19,
+        29,
+        19,
+        29,
+        19,
+        17,
+        5,
+        13,
+        17,
+        11,
+        23,
+        13,
+        13,
+        19
+      ],
+      "provenance": [
+        {
+          "list": "nth-prime/binary/columns",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "19,13,13,23,11,17,13,5,17,19,29,19,29,19",
+      "values": [
+        19,
+        13,
+        13,
+        23,
+        11,
+        17,
+        13,
+        5,
+        17,
+        19,
+        29,
+        19,
+        29,
+        19
+      ],
+      "provenance": [
+        {
+          "list": "nth-prime/binary/columns",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,9,2,9,1,9,2,9,1,9,1,7,5,1,3,1,7,1,1,2,3,1,3,1,3,1,9",
+      "values": [
+        1,
+        9,
+        2,
+        9,
+        1,
+        9,
+        2,
+        9,
+        1,
+        9,
+        1,
+        7,
+        5,
+        1,
+        3,
+        1,
+        7,
+        1,
+        1,
+        2,
+        3,
+        1,
+        3,
+        1,
+        3,
+        1,
+        9
+      ],
+      "provenance": [
+        {
+          "list": "nth-prime/binary/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "9,1,3,1,3,1,3,2,1,1,7,1,3,1,5,7,1,9,1,9,2,9,1,9,2,9,1",
+      "values": [
+        9,
+        1,
+        3,
+        1,
+        3,
+        1,
+        3,
+        2,
+        1,
+        1,
+        7,
+        1,
+        3,
+        1,
+        5,
+        7,
+        1,
+        9,
+        1,
+        9,
+        2,
+        9,
+        1,
+        9,
+        2,
+        9,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "nth-prime/binary/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "13,18,12,11,13,12,12,11,17,16,10,12,14,17",
+      "values": [
+        13,
+        18,
+        12,
+        11,
+        13,
+        12,
+        12,
+        11,
+        17,
+        16,
+        10,
+        12,
+        14,
+        17
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-ranks/specified/rows",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "17,14,12,10,16,17,11,12,12,13,11,12,18,13",
+      "values": [
+        17,
+        14,
+        12,
+        10,
+        16,
+        17,
+        11,
+        12,
+        12,
+        13,
+        11,
+        12,
+        18,
+        13
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-ranks/specified/rows",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,3,1,8,1,2,1,1,1,3,1,2,1,2,1,1,1,7,1,6,1,0,1,2,1,4,1,7",
+      "values": [
+        1,
+        3,
+        1,
+        8,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        7,
+        1,
+        6,
+        1,
+        0,
+        1,
+        2,
+        1,
+        4,
+        1,
+        7
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-ranks/specified/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "7,1,4,1,2,1,0,1,6,1,7,1,1,1,2,1,2,1,3,1,1,1,2,1,8,1,3,1",
+      "values": [
+        7,
+        1,
+        4,
+        1,
+        2,
+        1,
+        0,
+        1,
+        6,
+        1,
+        7,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        3,
+        1,
+        1,
+        1,
+        2,
+        1,
+        8,
+        1,
+        3,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-ranks/specified/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "12,18,20,14,12,15,9,13,11,11,20,9,9,15",
+      "values": [
+        12,
+        18,
+        20,
+        14,
+        12,
+        15,
+        9,
+        13,
+        11,
+        11,
+        20,
+        9,
+        9,
+        15
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-ranks/specified/columns",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "15,9,9,20,11,11,13,9,15,12,14,20,18,12",
+      "values": [
+        15,
+        9,
+        9,
+        20,
+        11,
+        11,
+        13,
+        9,
+        15,
+        12,
+        14,
+        20,
+        18,
+        12
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-ranks/specified/columns",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,2,1,8,2,0,1,4,1,2,1,5,9,1,3,1,1,1,1,2,0,9,9,1,5",
+      "values": [
+        1,
+        2,
+        1,
+        8,
+        2,
+        0,
+        1,
+        4,
+        1,
+        2,
+        1,
+        5,
+        9,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        9,
+        9,
+        1,
+        5
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-ranks/specified/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "5,1,9,9,0,2,1,1,1,1,3,1,9,5,1,2,1,4,1,0,2,8,1,2,1",
+      "values": [
+        5,
+        1,
+        9,
+        9,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        9,
+        5,
+        1,
+        2,
+        1,
+        4,
+        1,
+        0,
+        2,
+        8,
+        1,
+        2,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-ranks/specified/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "8,10,5,5,8,6,8,8,10,8,3,5,8,10",
+      "values": [
+        8,
+        10,
+        5,
+        5,
+        8,
+        6,
+        8,
+        8,
+        10,
+        8,
+        3,
+        5,
+        8,
+        10
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-ranks/zero/rows",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "10,8,5,3,8,10,8,8,6,8,5,5,10,8",
+      "values": [
+        10,
+        8,
+        5,
+        3,
+        8,
+        10,
+        8,
+        8,
+        6,
+        8,
+        5,
+        5,
+        10,
+        8
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-ranks/zero/rows",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "8,1,0,5,5,8,6,8,8,1,0,8,3,5,8,1,0",
+      "values": [
+        8,
+        1,
+        0,
+        5,
+        5,
+        8,
+        6,
+        8,
+        8,
+        1,
+        0,
+        8,
+        3,
+        5,
+        8,
+        1,
+        0
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-ranks/zero/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "0,1,8,5,3,8,0,1,8,8,6,8,5,5,0,1,8",
+      "values": [
+        0,
+        1,
+        8,
+        5,
+        3,
+        8,
+        0,
+        1,
+        8,
+        8,
+        6,
+        8,
+        5,
+        5,
+        0,
+        1,
+        8
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-ranks/zero/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "5,10,15,5,5,10,6,8,5,6,13,3,3,8",
+      "values": [
+        5,
+        10,
+        15,
+        5,
+        5,
+        10,
+        6,
+        8,
+        5,
+        6,
+        13,
+        3,
+        3,
+        8
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-ranks/zero/columns",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "8,3,3,13,6,5,8,6,10,5,5,15,10,5",
+      "values": [
+        8,
+        3,
+        3,
+        13,
+        6,
+        5,
+        8,
+        6,
+        10,
+        5,
+        5,
+        15,
+        10,
+        5
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-ranks/zero/columns",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "5,1,0,1,5,5,5,1,0,6,8,5,6,1,3,3,3,8",
+      "values": [
+        5,
+        1,
+        0,
+        1,
+        5,
+        5,
+        5,
+        1,
+        0,
+        6,
+        8,
+        5,
+        6,
+        1,
+        3,
+        3,
+        3,
+        8
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-ranks/zero/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "8,3,3,3,1,6,5,8,6,0,1,5,5,5,1,0,1,5",
+      "values": [
+        8,
+        3,
+        3,
+        3,
+        1,
+        6,
+        5,
+        8,
+        6,
+        0,
+        1,
+        5,
+        5,
+        5,
+        1,
+        0,
+        1,
+        5
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-ranks/zero/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "21,30,18,17,21,16,20,19,29,24,12,18,22,29",
+      "values": [
+        21,
+        30,
+        18,
+        17,
+        21,
+        16,
+        20,
+        19,
+        29,
+        24,
+        12,
+        18,
+        22,
+        29
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-rank-primes/specified/rows",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "29,22,18,12,24,29,19,20,16,21,17,18,30,21",
+      "values": [
+        29,
+        22,
+        18,
+        12,
+        24,
+        29,
+        19,
+        20,
+        16,
+        21,
+        17,
+        18,
+        30,
+        21
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-rank-primes/specified/rows",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "2,1,3,0,1,8,1,7,2,1,1,6,2,0,1,9,2,9,2,4,1,2,1,8,2,2,2,9",
+      "values": [
+        2,
+        1,
+        3,
+        0,
+        1,
+        8,
+        1,
+        7,
+        2,
+        1,
+        1,
+        6,
+        2,
+        0,
+        1,
+        9,
+        2,
+        9,
+        2,
+        4,
+        1,
+        2,
+        1,
+        8,
+        2,
+        2,
+        2,
+        9
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-rank-primes/specified/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "9,2,2,2,8,1,2,1,4,2,9,2,9,1,0,2,6,1,1,2,7,1,8,1,0,3,1,2",
+      "values": [
+        9,
+        2,
+        2,
+        2,
+        8,
+        1,
+        2,
+        1,
+        4,
+        2,
+        9,
+        2,
+        9,
+        1,
+        0,
+        2,
+        6,
+        1,
+        1,
+        2,
+        7,
+        1,
+        8,
+        1,
+        0,
+        3,
+        1,
+        2
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-rank-primes/specified/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "18,30,38,20,18,27,13,21,17,15,34,11,11,23",
+      "values": [
+        18,
+        30,
+        38,
+        20,
+        18,
+        27,
+        13,
+        21,
+        17,
+        15,
+        34,
+        11,
+        11,
+        23
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-rank-primes/specified/columns",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "23,11,11,34,15,17,21,13,27,18,20,38,30,18",
+      "values": [
+        23,
+        11,
+        11,
+        34,
+        15,
+        17,
+        21,
+        13,
+        27,
+        18,
+        20,
+        38,
+        30,
+        18
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-rank-primes/specified/columns",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,8,3,0,3,8,2,0,1,8,2,7,1,3,2,1,1,7,1,5,3,4,1,1,1,1,2,3",
+      "values": [
+        1,
+        8,
+        3,
+        0,
+        3,
+        8,
+        2,
+        0,
+        1,
+        8,
+        2,
+        7,
+        1,
+        3,
+        2,
+        1,
+        1,
+        7,
+        1,
+        5,
+        3,
+        4,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-rank-primes/specified/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "3,2,1,1,1,1,4,3,5,1,7,1,1,2,3,1,7,2,8,1,0,2,8,3,0,3,8,1",
+      "values": [
+        3,
+        2,
+        1,
+        1,
+        1,
+        1,
+        4,
+        3,
+        5,
+        1,
+        7,
+        1,
+        1,
+        2,
+        3,
+        1,
+        7,
+        2,
+        8,
+        1,
+        0,
+        2,
+        8,
+        3,
+        0,
+        3,
+        8,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-rank-primes/specified/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "16,22,11,11,16,10,16,16,22,16,5,11,16,22",
+      "values": [
+        16,
+        22,
+        11,
+        11,
+        16,
+        10,
+        16,
+        16,
+        22,
+        16,
+        5,
+        11,
+        16,
+        22
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-rank-primes/zero/rows",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "22,16,11,5,16,22,16,16,10,16,11,11,22,16",
+      "values": [
+        22,
+        16,
+        11,
+        5,
+        16,
+        22,
+        16,
+        16,
+        10,
+        16,
+        11,
+        11,
+        22,
+        16
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-rank-primes/zero/rows",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,6,2,2,1,1,1,1,1,6,1,0,1,6,1,6,2,2,1,6,5,1,1,1,6,2,2",
+      "values": [
+        1,
+        6,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        6,
+        1,
+        0,
+        1,
+        6,
+        1,
+        6,
+        2,
+        2,
+        1,
+        6,
+        5,
+        1,
+        1,
+        1,
+        6,
+        2,
+        2
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-rank-primes/zero/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "2,2,6,1,1,1,5,6,1,2,2,6,1,6,1,0,1,6,1,1,1,1,1,2,2,6,1",
+      "values": [
+        2,
+        2,
+        6,
+        1,
+        1,
+        1,
+        5,
+        6,
+        1,
+        2,
+        2,
+        6,
+        1,
+        6,
+        1,
+        0,
+        1,
+        6,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        6,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-rank-primes/zero/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "11,22,33,11,11,22,10,16,11,10,27,5,5,16",
+      "values": [
+        11,
+        22,
+        33,
+        11,
+        11,
+        22,
+        10,
+        16,
+        11,
+        10,
+        27,
+        5,
+        5,
+        16
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-rank-primes/zero/columns",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "16,5,5,27,10,11,16,10,22,11,11,33,22,11",
+      "values": [
+        16,
+        5,
+        5,
+        27,
+        10,
+        11,
+        16,
+        10,
+        22,
+        11,
+        11,
+        33,
+        22,
+        11
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-rank-primes/zero/columns",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,1,2,2,3,3,1,1,1,1,2,2,1,0,1,6,1,1,1,0,2,7,5,5,1,6",
+      "values": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        0,
+        1,
+        6,
+        1,
+        1,
+        1,
+        0,
+        2,
+        7,
+        5,
+        5,
+        1,
+        6
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-rank-primes/zero/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "6,1,5,5,7,2,0,1,1,1,6,1,0,1,2,2,1,1,1,1,3,3,2,2,1,1",
+      "values": [
+        6,
+        1,
+        5,
+        5,
+        7,
+        2,
+        0,
+        1,
+        1,
+        1,
+        6,
+        1,
+        0,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "spectrum-rank-primes/zero/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "73,48,60,69,73,62,82,91,57,46,58,60,64,57",
+      "values": [
+        73,
+        48,
+        60,
+        69,
+        73,
+        62,
+        82,
+        91,
+        57,
+        46,
+        58,
+        60,
+        64,
+        57
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code/specified/rows",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "57,64,60,58,46,57,91,82,62,73,69,60,48,73",
+      "values": [
+        57,
+        64,
+        60,
+        58,
+        46,
+        57,
+        91,
+        82,
+        62,
+        73,
+        69,
+        60,
+        48,
+        73
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code/specified/rows",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "7,3,4,8,6,0,6,9,7,3,6,2,8,2,9,1,5,7,4,6,5,8,6,0,6,4,5,7",
+      "values": [
+        7,
+        3,
+        4,
+        8,
+        6,
+        0,
+        6,
+        9,
+        7,
+        3,
+        6,
+        2,
+        8,
+        2,
+        9,
+        1,
+        5,
+        7,
+        4,
+        6,
+        5,
+        8,
+        6,
+        0,
+        6,
+        4,
+        5,
+        7
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code/specified/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "7,5,4,6,0,6,8,5,6,4,7,5,1,9,2,8,2,6,3,7,9,6,0,6,8,4,3,7",
+      "values": [
+        7,
+        5,
+        4,
+        6,
+        0,
+        6,
+        8,
+        5,
+        6,
+        4,
+        7,
+        5,
+        1,
+        9,
+        2,
+        8,
+        2,
+        6,
+        3,
+        7,
+        9,
+        6,
+        0,
+        6,
+        8,
+        4,
+        3,
+        7
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code/specified/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "60,48,72,42,60,75,89,73,69,71,52,67,67,55",
+      "values": [
+        60,
+        48,
+        72,
+        42,
+        60,
+        75,
+        89,
+        73,
+        69,
+        71,
+        52,
+        67,
+        67,
+        55
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code/specified/columns",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "55,67,67,52,71,69,73,89,75,60,42,72,48,60",
+      "values": [
+        55,
+        67,
+        67,
+        52,
+        71,
+        69,
+        73,
+        89,
+        75,
+        60,
+        42,
+        72,
+        48,
+        60
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code/specified/columns",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "6,0,4,8,7,2,4,2,6,0,7,5,8,9,7,3,6,9,7,1,5,2,6,7,6,7,5,5",
+      "values": [
+        6,
+        0,
+        4,
+        8,
+        7,
+        2,
+        4,
+        2,
+        6,
+        0,
+        7,
+        5,
+        8,
+        9,
+        7,
+        3,
+        6,
+        9,
+        7,
+        1,
+        5,
+        2,
+        6,
+        7,
+        6,
+        7,
+        5,
+        5
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code/specified/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "5,5,7,6,7,6,2,5,1,7,9,6,3,7,9,8,5,7,0,6,2,4,2,7,8,4,0,6",
+      "values": [
+        5,
+        5,
+        7,
+        6,
+        7,
+        6,
+        2,
+        5,
+        1,
+        7,
+        9,
+        6,
+        3,
+        7,
+        9,
+        8,
+        5,
+        7,
+        0,
+        6,
+        2,
+        4,
+        2,
+        7,
+        8,
+        4,
+        0,
+        6
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code/specified/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "10,12,6,6,10,8,10,10,12,10,4,6,10,12",
+      "values": [
+        10,
+        12,
+        6,
+        6,
+        10,
+        8,
+        10,
+        10,
+        12,
+        10,
+        4,
+        6,
+        10,
+        12
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code/zero/rows",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "12,10,6,4,10,12,10,10,8,10,6,6,12,10",
+      "values": [
+        12,
+        10,
+        6,
+        4,
+        10,
+        12,
+        10,
+        10,
+        8,
+        10,
+        6,
+        6,
+        12,
+        10
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code/zero/rows",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,0,1,2,6,6,1,0,8,1,0,1,0,1,2,1,0,4,6,1,0,1,2",
+      "values": [
+        1,
+        0,
+        1,
+        2,
+        6,
+        6,
+        1,
+        0,
+        8,
+        1,
+        0,
+        1,
+        0,
+        1,
+        2,
+        1,
+        0,
+        4,
+        6,
+        1,
+        0,
+        1,
+        2
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code/zero/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "2,1,0,1,6,4,0,1,2,1,0,1,0,1,8,0,1,6,6,2,1,0,1",
+      "values": [
+        2,
+        1,
+        0,
+        1,
+        6,
+        4,
+        0,
+        1,
+        2,
+        1,
+        0,
+        1,
+        0,
+        1,
+        8,
+        0,
+        1,
+        6,
+        6,
+        2,
+        1,
+        0,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code/zero/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "6,12,18,6,6,12,8,10,6,8,16,4,4,10",
+      "values": [
+        6,
+        12,
+        18,
+        6,
+        6,
+        12,
+        8,
+        10,
+        6,
+        8,
+        16,
+        4,
+        4,
+        10
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code/zero/columns",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "10,4,4,16,8,6,10,8,12,6,6,18,12,6",
+      "values": [
+        10,
+        4,
+        4,
+        16,
+        8,
+        6,
+        10,
+        8,
+        12,
+        6,
+        6,
+        18,
+        12,
+        6
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code/zero/columns",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "6,1,2,1,8,6,6,1,2,8,1,0,6,8,1,6,4,4,1,0",
+      "values": [
+        6,
+        1,
+        2,
+        1,
+        8,
+        6,
+        6,
+        1,
+        2,
+        8,
+        1,
+        0,
+        6,
+        8,
+        1,
+        6,
+        4,
+        4,
+        1,
+        0
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code/zero/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "0,1,4,4,6,1,8,6,0,1,8,2,1,6,6,8,1,2,1,6",
+      "values": [
+        0,
+        1,
+        4,
+        4,
+        6,
+        1,
+        8,
+        6,
+        0,
+        1,
+        8,
+        2,
+        1,
+        6,
+        6,
+        8,
+        1,
+        2,
+        1,
+        6
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code/zero/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "181,118,151,174,181,152,204,227,141,112,145,151,158,141",
+      "values": [
+        181,
+        118,
+        151,
+        174,
+        181,
+        152,
+        204,
+        227,
+        141,
+        112,
+        145,
+        151,
+        158,
+        141
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code-primes/specified/rows",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "141,158,151,145,112,141,227,204,152,181,174,151,118,181",
+      "values": [
+        141,
+        158,
+        151,
+        145,
+        112,
+        141,
+        227,
+        204,
+        152,
+        181,
+        174,
+        151,
+        118,
+        181
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code-primes/specified/rows",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,8,1,1,1,8,1,5,1,1,7,4,1,8,1,1,5,2,2,0,4,2,2,7,1,4,1,1,1,2,1,4,5,1,5,1,1,5,8,1,4,1",
+      "values": [
+        1,
+        8,
+        1,
+        1,
+        1,
+        8,
+        1,
+        5,
+        1,
+        1,
+        7,
+        4,
+        1,
+        8,
+        1,
+        1,
+        5,
+        2,
+        2,
+        0,
+        4,
+        2,
+        2,
+        7,
+        1,
+        4,
+        1,
+        1,
+        1,
+        2,
+        1,
+        4,
+        5,
+        1,
+        5,
+        1,
+        1,
+        5,
+        8,
+        1,
+        4,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code-primes/specified/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "1,4,1,8,5,1,1,5,1,5,4,1,2,1,1,1,4,1,7,2,2,4,0,2,2,5,1,1,8,1,4,7,1,1,5,1,8,1,1,1,8,1",
+      "values": [
+        1,
+        4,
+        1,
+        8,
+        5,
+        1,
+        1,
+        5,
+        1,
+        5,
+        4,
+        1,
+        2,
+        1,
+        1,
+        1,
+        4,
+        1,
+        7,
+        2,
+        2,
+        4,
+        0,
+        2,
+        2,
+        5,
+        1,
+        1,
+        8,
+        1,
+        4,
+        7,
+        1,
+        1,
+        5,
+        1,
+        8,
+        1,
+        1,
+        1,
+        8,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code-primes/specified/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "151,118,177,105,151,187,221,181,174,175,125,168,168,135",
+      "values": [
+        151,
+        118,
+        177,
+        105,
+        151,
+        187,
+        221,
+        181,
+        174,
+        175,
+        125,
+        168,
+        168,
+        135
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code-primes/specified/columns",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "135,168,168,125,175,174,181,221,187,151,105,177,118,151",
+      "values": [
+        135,
+        168,
+        168,
+        125,
+        175,
+        174,
+        181,
+        221,
+        187,
+        151,
+        105,
+        177,
+        118,
+        151
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code-primes/specified/columns",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,5,1,1,1,8,1,7,7,1,0,5,1,5,1,1,8,7,2,2,1,1,8,1,1,7,4,1,7,5,1,2,5,1,6,8,1,6,8,1,3,5",
+      "values": [
+        1,
+        5,
+        1,
+        1,
+        1,
+        8,
+        1,
+        7,
+        7,
+        1,
+        0,
+        5,
+        1,
+        5,
+        1,
+        1,
+        8,
+        7,
+        2,
+        2,
+        1,
+        1,
+        8,
+        1,
+        1,
+        7,
+        4,
+        1,
+        7,
+        5,
+        1,
+        2,
+        5,
+        1,
+        6,
+        8,
+        1,
+        6,
+        8,
+        1,
+        3,
+        5
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code-primes/specified/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "5,3,1,8,6,1,8,6,1,5,2,1,5,7,1,4,7,1,1,8,1,1,2,2,7,8,1,1,5,1,5,0,1,7,7,1,8,1,1,1,5,1",
+      "values": [
+        5,
+        3,
+        1,
+        8,
+        6,
+        1,
+        8,
+        6,
+        1,
+        5,
+        2,
+        1,
+        5,
+        7,
+        1,
+        4,
+        7,
+        1,
+        1,
+        8,
+        1,
+        1,
+        2,
+        2,
+        7,
+        8,
+        1,
+        1,
+        5,
+        1,
+        5,
+        0,
+        1,
+        7,
+        7,
+        1,
+        8,
+        1,
+        1,
+        1,
+        5,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code-primes/specified/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "20,26,13,13,20,14,20,20,26,20,7,13,20,26",
+      "values": [
+        20,
+        26,
+        13,
+        13,
+        20,
+        14,
+        20,
+        20,
+        26,
+        20,
+        7,
+        13,
+        20,
+        26
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code-primes/zero/rows",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "26,20,13,7,20,26,20,20,14,20,13,13,26,20",
+      "values": [
+        26,
+        20,
+        13,
+        7,
+        20,
+        26,
+        20,
+        20,
+        14,
+        20,
+        13,
+        13,
+        26,
+        20
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code-primes/zero/rows",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "2,0,2,6,1,3,1,3,2,0,1,4,2,0,2,0,2,6,2,0,7,1,3,2,0,2,6",
+      "values": [
+        2,
+        0,
+        2,
+        6,
+        1,
+        3,
+        1,
+        3,
+        2,
+        0,
+        1,
+        4,
+        2,
+        0,
+        2,
+        0,
+        2,
+        6,
+        2,
+        0,
+        7,
+        1,
+        3,
+        2,
+        0,
+        2,
+        6
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code-primes/zero/rows",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "6,2,0,2,3,1,7,0,2,6,2,0,2,0,2,4,1,0,2,3,1,3,1,6,2,0,2",
+      "values": [
+        6,
+        2,
+        0,
+        2,
+        3,
+        1,
+        7,
+        0,
+        2,
+        6,
+        2,
+        0,
+        2,
+        0,
+        2,
+        4,
+        1,
+        0,
+        2,
+        3,
+        1,
+        3,
+        1,
+        6,
+        2,
+        0,
+        2
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code-primes/zero/rows",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "13,26,39,13,13,26,14,20,13,14,33,7,7,20",
+      "values": [
+        13,
+        26,
+        39,
+        13,
+        13,
+        26,
+        14,
+        20,
+        13,
+        14,
+        33,
+        7,
+        7,
+        20
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code-primes/zero/columns",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "20,7,7,33,14,13,20,14,26,13,13,39,26,13",
+      "values": [
+        20,
+        7,
+        7,
+        33,
+        14,
+        13,
+        20,
+        14,
+        26,
+        13,
+        13,
+        39,
+        26,
+        13
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code-primes/zero/columns",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,3,2,6,3,9,1,3,1,3,2,6,1,4,2,0,1,3,1,4,3,3,7,7,2,0",
+      "values": [
+        1,
+        3,
+        2,
+        6,
+        3,
+        9,
+        1,
+        3,
+        1,
+        3,
+        2,
+        6,
+        1,
+        4,
+        2,
+        0,
+        1,
+        3,
+        1,
+        4,
+        3,
+        3,
+        7,
+        7,
+        2,
+        0
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code-primes/zero/columns",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "0,2,7,7,3,3,4,1,3,1,0,2,4,1,6,2,3,1,3,1,9,3,6,2,3,1",
+      "values": [
+        0,
+        2,
+        7,
+        7,
+        3,
+        3,
+        4,
+        1,
+        3,
+        1,
+        0,
+        2,
+        4,
+        1,
+        6,
+        2,
+        3,
+        1,
+        3,
+        1,
+        9,
+        3,
+        6,
+        2,
+        3,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "resistor-code-primes/zero/columns",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "13,1,20,18,9,24,19,21,13,12,9,19,20",
+      "values": [
+        13,
+        1,
+        20,
+        18,
+        9,
+        24,
+        19,
+        21,
+        13,
+        12,
+        9,
+        19,
+        20
+      ],
+      "provenance": [
+        {
+          "list": "literal/matrixsumlist",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "20,19,9,12,13,21,19,24,9,18,20,1,13",
+      "values": [
+        20,
+        19,
+        9,
+        12,
+        13,
+        21,
+        19,
+        24,
+        9,
+        18,
+        20,
+        1,
+        13
+      ],
+      "provenance": [
+        {
+          "list": "literal/matrixsumlist",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,3,1,2,0,1,8,9,2,4,1,9,2,1,1,3,1,2,9,1,9,2,0",
+      "values": [
+        1,
+        3,
+        1,
+        2,
+        0,
+        1,
+        8,
+        9,
+        2,
+        4,
+        1,
+        9,
+        2,
+        1,
+        1,
+        3,
+        1,
+        2,
+        9,
+        1,
+        9,
+        2,
+        0
+      ],
+      "provenance": [
+        {
+          "list": "literal/matrixsumlist",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "0,2,9,1,9,2,1,3,1,1,2,9,1,4,2,9,8,1,0,2,1,3,1",
+      "values": [
+        0,
+        2,
+        9,
+        1,
+        9,
+        2,
+        1,
+        3,
+        1,
+        1,
+        2,
+        9,
+        1,
+        4,
+        2,
+        9,
+        8,
+        1,
+        0,
+        2,
+        1,
+        3,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "literal/matrixsumlist",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "12,1,19,20,23,15,18,4,19,2,5,6,15,18,5,1,18,3,8,9,3,8,15,9,3,5",
+      "values": [
+        12,
+        1,
+        19,
+        20,
+        23,
+        15,
+        18,
+        4,
+        19,
+        2,
+        5,
+        6,
+        15,
+        18,
+        5,
+        1,
+        18,
+        3,
+        8,
+        9,
+        3,
+        8,
+        15,
+        9,
+        3,
+        5
+      ],
+      "provenance": [
+        {
+          "list": "literal/lastwordsbeforearchichoice",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "5,3,9,15,8,3,9,8,3,18,1,5,18,15,6,5,2,19,4,18,15,23,20,19,1,12",
+      "values": [
+        5,
+        3,
+        9,
+        15,
+        8,
+        3,
+        9,
+        8,
+        3,
+        18,
+        1,
+        5,
+        18,
+        15,
+        6,
+        5,
+        2,
+        19,
+        4,
+        18,
+        15,
+        23,
+        20,
+        19,
+        1,
+        12
+      ],
+      "provenance": [
+        {
+          "list": "literal/lastwordsbeforearchichoice",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "1,2,1,1,9,2,0,2,3,1,5,1,8,4,1,9,2,5,6,1,5,1,8,5,1,1,8,3,8,9,3,8,1,5,9,3,5",
+      "values": [
+        1,
+        2,
+        1,
+        1,
+        9,
+        2,
+        0,
+        2,
+        3,
+        1,
+        5,
+        1,
+        8,
+        4,
+        1,
+        9,
+        2,
+        5,
+        6,
+        1,
+        5,
+        1,
+        8,
+        5,
+        1,
+        1,
+        8,
+        3,
+        8,
+        9,
+        3,
+        8,
+        1,
+        5,
+        9,
+        3,
+        5
+      ],
+      "provenance": [
+        {
+          "list": "literal/lastwordsbeforearchichoice",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "5,3,9,5,1,8,3,9,8,3,8,1,1,5,8,1,5,1,6,5,2,9,1,4,8,1,5,1,3,2,0,2,9,1,1,2,1",
+      "values": [
+        5,
+        3,
+        9,
+        5,
+        1,
+        8,
+        3,
+        9,
+        8,
+        3,
+        8,
+        1,
+        1,
+        5,
+        8,
+        1,
+        5,
+        1,
+        6,
+        5,
+        2,
+        9,
+        1,
+        4,
+        8,
+        1,
+        5,
+        1,
+        3,
+        2,
+        0,
+        2,
+        9,
+        1,
+        1,
+        2,
+        1
+      ],
+      "provenance": [
+        {
+          "list": "literal/lastwordsbeforearchichoice",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "20,8,9,19,16,1,19,19,23,15,18,4",
+      "values": [
+        20,
+        8,
+        9,
+        19,
+        16,
+        1,
+        19,
+        19,
+        23,
+        15,
+        18,
+        4
+      ],
+      "provenance": [
+        {
+          "list": "literal/thispassword",
+          "representation": "integers",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "4,18,15,23,19,19,1,16,19,9,8,20",
+      "values": [
+        4,
+        18,
+        15,
+        23,
+        19,
+        19,
+        1,
+        16,
+        19,
+        9,
+        8,
+        20
+      ],
+      "provenance": [
+        {
+          "list": "literal/thispassword",
+          "representation": "integers",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "id": "2,0,8,9,1,9,1,6,1,1,9,1,9,2,3,1,5,1,8,4",
+      "values": [
+        2,
+        0,
+        8,
+        9,
+        1,
+        9,
+        1,
+        6,
+        1,
+        1,
+        9,
+        1,
+        9,
+        2,
+        3,
+        1,
+        5,
+        1,
+        8,
+        4
+      ],
+      "provenance": [
+        {
+          "list": "literal/thispassword",
+          "representation": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "id": "4,8,1,5,1,3,2,9,1,9,1,1,6,1,9,1,9,8,0,2",
+      "values": [
+        4,
+        8,
+        1,
+        5,
+        1,
+        3,
+        2,
+        9,
+        1,
+        9,
+        1,
+        1,
+        6,
+        1,
+        9,
+        1,
+        9,
+        8,
+        0,
+        2
+      ],
+      "provenance": [
+        {
+          "list": "literal/thispassword",
+          "representation": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    }
+  ],
+  "limits": {
+    "maxNodes": 200000,
+    "maxMs": 1000
+  },
+  "controls": {
+    "acaColumnar": true,
+    "acaMyszkowski": true,
+    "inversions": 72,
+    "planted": 54
+  },
+  "sourceSHA256": "51e3e5636812d619e6e538bd7d03ad6a95bc147e3822e802404bcae9a40c90a9",
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceURLs": [
+    "https://www.cryptogram.org/downloads/aca.info/ciphers/IncompleteColTransposition.pdf",
+    "https://www.cryptogram.org/downloads/aca.info/ciphers/Myszkowski.pdf"
+  ]
+}

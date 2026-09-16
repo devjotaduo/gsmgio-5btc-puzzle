@@ -1,0 +1,42 @@
+{
+  "complete": true,
+  "checkedAt": "2026-09-16T11:41:21.365Z",
+  "allProcessesTerminal": true,
+  "geometry": {
+    "urlZeros": 91,
+    "fullZeros": 95,
+    "ones": 101,
+    "legacyDifferenceSpiral": 193
+  },
+  "matrices": 56,
+  "lists": 560,
+  "materials": 16800,
+  "passwords": 33600,
+  "aesDecisions": 201600,
+  "scalars": 34351,
+  "matches": 0,
+  "streamCases": 249408,
+  "streamCertificates": 552652,
+  "streamCandidates": 0,
+  "streamPending": 0,
+  "hashes": {
+    "spec.json": "002399ce655a0fe0c1310b84f20dec4c205275ea5d5345bdfe1470cac6c197a6",
+    "matrices.json": "8b204edfc93f7570477edfb7c9ae8e16287bddb267582419022df6e7632d409f",
+    "lists.json": "f4a4f0c316c39e42c680012bd67f4c576c091004c2faa0c093617b3d09b441b2",
+    "materials.json": "465b8f74bfe3e6eb613413ce3c07665b7ad744cc2c36b7a8452b310ce6b7304a",
+    "oracles.json": "5c3ddba0036cca4638ff9946b45b9ffdcfca2877b152fb6272066ce1d6bb0ec4",
+    "verification.json": "612a63ace9b3425dd5d9dba5c5d489899c6f1ff1bc0422331169dd28fb57f5b6",
+    "stream_spec.json": "16bf17d3a06e38a0ba65da6916d7ede5ccc18c69bfbb2d60f2769d25515ee2c3",
+    "stream_cases.jsonl": "058eee2a0fcc113009b48fb9d98f136fc6ecb1f6b80ef9a2285981c0338a5775",
+    "stream_summary.json": "4cf9e9892bbce8f4983df52abca7fefa4fa8fb8bc22b7a815bf87f7d2c35b58e",
+    "stream_verification.json": "523cde6f8e11db7b70da8ec0f3603b6e4b395fb179d6a81d99e8d132d9e9d116",
+    "RELATORIO.md": "993fa770e0407f8655f2890fde21ce92eb02dbbe259f3d6b4c649ed0827e0d29"
+  },
+  "sourceHashes": {
+    "solver/zero_cells_prime_sums.cjs": "a709c4354e74f914bb2d3e01c125a6b0be50b2e208502734dc744026eaba6965",
+    "solver/zero_cells_prime_stream.cjs": "7096f14c8e276ab4ccf58676edeef0fc9d2025fff8d187ea11c12ac5c7ec5439",
+    "solver/verify_zero_cells_prime_stream.cjs": "c3e1cd1457f408b0bb03976231c89296f1adf10eb67abc57f276cef4d5c75e81",
+    "README.md": "32fc92d092f44dae2f8d51ea3efb97f45d77a0ba51a52c1ced94806031acf972",
+    "ENDGAME.md": "b38c29bff3b7ae692618aa5dbcfc7fd5d427f761bf48ee600275805a59fd055e"
+  }
+}

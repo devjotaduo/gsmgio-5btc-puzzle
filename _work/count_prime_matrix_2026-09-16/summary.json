@@ -1,0 +1,18 @@
+{
+  "cases": 16896,
+  "complete": 16896,
+  "nodes": 48584,
+  "certificates": 32740,
+  "candidates": [],
+  "partial": [],
+  "keys": 352,
+  "priorKeyOverlap": 0,
+  "preimages": 500,
+  "passwords": 1000,
+  "aesAttempts": 6000,
+  "paddings": 18,
+  "maxPrintable": 0.4936708860759494,
+  "scalarChecks": 500,
+  "pubHits": [],
+  "casesSHA256": "85d82ad51be44975a7ebb2fe78a817eec19f9d0efaf263aafb3540c8f34a6f89"
+}

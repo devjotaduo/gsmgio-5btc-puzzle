@@ -1,0 +1,51 @@
+{
+  "canonical": {
+    "blueHex": "061119242f3a5863767e81a3aab9c1",
+    "seenHex": "061924f3a587ebc",
+    "missing": "d",
+    "bluePrimes": [
+      17,
+      47,
+      163,
+      193
+    ],
+    "primeWeights": [
+      8,
+      2,
+      1,
+      4
+    ],
+    "alphabet": "061924f3a587ebcd",
+    "tokenOrder": [
+      "d",
+      "bb",
+      "i",
+      "bf",
+      "bh",
+      "c",
+      "be",
+      "gb",
+      "h",
+      "a",
+      "gg",
+      "e",
+      "ge",
+      "f",
+      "ba",
+      "gi"
+    ],
+    "candidate": "0619244f31a5ff1af87ef6eaa72abc90afbb406b4443bf7874f04199bd37775f"
+  },
+  "mappingVariants": 144,
+  "distinctMappedHashes": 144,
+  "passwords": 864,
+  "keyCandidates": 1152,
+  "attempts": 5184,
+  "padding": 16,
+  "expectedRandomPadding": 20.32941176470588,
+  "maxAscii": 0.4936708860759494,
+  "textTriage": 0,
+  "keyHits": [],
+  "controls": "Real phase 3.2 + 12 binary AES round trips + scalar 1 public key",
+  "limitation": "Negative is limited to these declared mappings and encodings. Full plaintext window/hex/WIF key checks are recorded separately."
+}

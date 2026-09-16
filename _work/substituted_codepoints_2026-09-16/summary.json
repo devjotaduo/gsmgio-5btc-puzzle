@@ -1,0 +1,299 @@
+{
+  "configs": 13063680,
+  "groups": [
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "a",
+      "models": 362880,
+      "accepted": 3600,
+      "decisionsSHA256": "d5b43b347e36560511fde91754c679f85ec15c70246c31aed98ee95a06a701fa"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "b",
+      "models": 362880,
+      "accepted": 7560,
+      "decisionsSHA256": "07dc981189e899e77c4a6b09826c560c1a53dc250635472869608ef3e2eb0ddf"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "c",
+      "models": 362880,
+      "accepted": 3000,
+      "decisionsSHA256": "f6fa93c65f79015a603d93c8d07ca6ae6a454a28839abba0ace0cb6a10f7fe18"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "d",
+      "models": 362880,
+      "accepted": 5400,
+      "decisionsSHA256": "667e447a73c5fc33c6529980eba9f575f31847d8100986af562b8f2e423cbb94"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "e",
+      "models": 362880,
+      "accepted": 3840,
+      "decisionsSHA256": "6ecdbdf50e10ff422e9870fc59652e6ee1c069492c2d83a42e243e38213e95bb"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "f",
+      "models": 362880,
+      "accepted": 3600,
+      "decisionsSHA256": "1c51af4dafcf6efc2860b5d461f6444c1edf2ab2f4945bd7712a072594810566"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "models": 362880,
+      "accepted": 5400,
+      "decisionsSHA256": "df7b948b6fe4c07aa64c9e20d409ee7f7d37eb1278121caa93572f9ea54365c3"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "h",
+      "models": 362880,
+      "accepted": 4080,
+      "decisionsSHA256": "14e1f7a1dcedf819fe3431bcf3783bfa4e86100e5550dec1d5db7f38066d215f"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "i",
+      "models": 362880,
+      "accepted": 3600,
+      "decisionsSHA256": "fc811664069f2df9d23105f20a090c02067f2d2679647311dc5dab8ba52f076f"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "a",
+      "models": 362880,
+      "accepted": 672,
+      "decisionsSHA256": "e5b3b66bee2c4cabee34347e4b1f6698168776d4a3cdf00358be6226ce668d2e"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "b",
+      "models": 362880,
+      "accepted": 2640,
+      "decisionsSHA256": "5fbb9cafeab45f56c09ab80e467577d9a86ed85682a7ce21e1b1ff29421f7255"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "c",
+      "models": 362880,
+      "accepted": 1152,
+      "decisionsSHA256": "4f3c078db23dee6f3828273df523c63a7ad21b6380e8f8a37df52c963c10eadc"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "d",
+      "models": 362880,
+      "accepted": 720,
+      "decisionsSHA256": "095bda2e7b56ad26ebc63f429273caecb5b35bf04afd65958ed99ee690da0745"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "e",
+      "models": 362880,
+      "accepted": 1224,
+      "decisionsSHA256": "cb55784aa4384bf4944a0a96be15a058bef67e0530e70be2439701b748a58834"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "f",
+      "models": 362880,
+      "accepted": 1488,
+      "decisionsSHA256": "c467310ab11bd21eed508db52f9a54dc00de449445c97576dd54ccb0f3ac93da"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "models": 362880,
+      "accepted": 792,
+      "decisionsSHA256": "73603bd124fd8bb13df9b061aecdf28f8cdf63f63505c1e4b2f723ecb1f09f67"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "h",
+      "models": 362880,
+      "accepted": 1248,
+      "decisionsSHA256": "957fb091cbf9f333555fe3eed424a7e382872eff02275fd5953f2d1207510973"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "i",
+      "models": 362880,
+      "accepted": 792,
+      "decisionsSHA256": "57fac60cc8eafb0335b1b506220aaa396af6cfba2cd9aea6c3ff79ab230f9ef8"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "models": 362880,
+      "accepted": 0,
+      "decisionsSHA256": "e224efc68429e9febca695d9f2ef0f456d4e0b9e522d7f7a4a2af44b5b8bb940"
+    }
+  ],
+  "acceptedModels": 50808,
+  "totalParsePaths": "1208192544",
+  "totalControlFreePaths": "3600",
+  "savedTexts": 3600,
+  "partialModels": [],
+  "acceptedSHA256": "cfb0d53d4d80ea2b84cddc99cabbae7607fac8a8e209f7912fb5116c25cb6cc0"
+}

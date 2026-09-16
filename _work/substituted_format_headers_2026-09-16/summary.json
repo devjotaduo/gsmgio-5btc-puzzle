@@ -1,0 +1,45 @@
+{
+  "complete": true,
+  "cases": 1104,
+  "rangeCases": 7460,
+  "nodes": 28281,
+  "groups": [
+    {
+      "format": "gzip",
+      "cases": 184,
+      "compatible": 0,
+      "excluded": 184
+    },
+    {
+      "format": "zlib",
+      "cases": 184,
+      "compatible": 110,
+      "excluded": 74
+    },
+    {
+      "format": "zip",
+      "cases": 184,
+      "compatible": 0,
+      "excluded": 184
+    },
+    {
+      "format": "bzip2",
+      "cases": 184,
+      "compatible": 0,
+      "excluded": 184
+    },
+    {
+      "format": "xz",
+      "cases": 184,
+      "compatible": 0,
+      "excluded": 184
+    },
+    {
+      "format": "7z",
+      "cases": 184,
+      "compatible": 0,
+      "excluded": 184
+    }
+  ],
+  "casesSHA256": "06e030ae52019395159f4bd7b2604b425528fc59c5ee984fdfbd44b06c6f884a"
+}

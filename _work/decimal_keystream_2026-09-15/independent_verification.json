@@ -1,0 +1,27 @@
+{
+  "controls": {
+    "integerCounts": 65536,
+    "largeWidths": 300
+  },
+  "families": {
+    "digits": {
+      "cases": 24144,
+      "certificates": 33841,
+      "allExcluded": true,
+      "casesSHA256": "190a64426297b7c7769adb432347fe6bf255a22541b2c07791298ca68eb3cde0"
+    },
+    "carry_color": {
+      "cases": 39912,
+      "certificates": 57678,
+      "allExcluded": true,
+      "casesSHA256": "4e8123ce6d3cb17169660470ffa10fa4093957255afcdc5bcca1fe23fcb47577"
+    }
+  },
+  "aes": {
+    "attempts": 9600,
+    "paddings": 31,
+    "allSuccessesAndFailuresMatched": true,
+    "phase32Control": true
+  },
+  "verifierSHA256": "ed776c03595fbd8ac06e4ebd1292c44c34cf6557063378432d58b29eb9d4c5ec"
+}

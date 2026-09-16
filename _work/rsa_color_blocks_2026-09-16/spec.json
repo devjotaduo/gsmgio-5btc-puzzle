@@ -1,0 +1,2400 @@
+{
+  "scope": "Per-character modular exponentiation c=m^e mod p*q. Distinct prime factors p of blue RGB and q of yellow RGB; all exponent classes coprime to lambda. ASCII TAB/LF/CR/32..126 with m<n. Cipher integers concatenated in minimal decimal or padded to digits(n-1). a..i=1..9, with zero/one/two chosen letters optionally representing 0. Both full fields and source directions. Includes p=2 and exponent class 1 as explicit relaxations beyond standard RSA; no OAEP/PKCS padding, multiple plaintext bytes per block, digit permutation or leading/trailing removal.",
+  "blue": {
+    "hex": "3f48cc",
+    "value": 4147404,
+    "factors": [
+      2,
+      2,
+      3,
+      37,
+      9341
+    ]
+  },
+  "yellow": {
+    "hex": "fff200",
+    "value": 16773632,
+    "factors": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      181,
+      181
+    ]
+  },
+  "moduli": [
+    {
+      "p": 2,
+      "q": 181,
+      "n": 362,
+      "lambda": 180,
+      "exponentClasses": 48
+    },
+    {
+      "p": 3,
+      "q": 2,
+      "n": 6,
+      "lambda": 2,
+      "exponentClasses": 1
+    },
+    {
+      "p": 3,
+      "q": 181,
+      "n": 543,
+      "lambda": 180,
+      "exponentClasses": 48
+    },
+    {
+      "p": 37,
+      "q": 2,
+      "n": 74,
+      "lambda": 36,
+      "exponentClasses": 12
+    },
+    {
+      "p": 37,
+      "q": 181,
+      "n": 6697,
+      "lambda": 180,
+      "exponentClasses": 48
+    },
+    {
+      "p": 9341,
+      "q": 2,
+      "n": 18682,
+      "lambda": 9340,
+      "exponentClasses": 3728
+    },
+    {
+      "p": 9341,
+      "q": 181,
+      "n": 1690721,
+      "lambda": 84060,
+      "exponentClasses": 22368
+    }
+  ],
+  "models": [
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "a",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "a",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "b",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "b",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "c",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "c",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "d",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "d",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "e",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "e",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "f",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "f",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "g",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "g",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "h",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "h",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "i",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "i",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ab",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ab",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ac",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ac",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ad",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ad",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ae",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ae",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "af",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "af",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ag",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ag",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ah",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ah",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ai",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ai",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "bc",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "bc",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "bd",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "bd",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "be",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "be",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "bf",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "bf",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "bg",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "bg",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "bh",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "bh",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "bi",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "bi",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "cd",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "cd",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ce",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ce",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "cf",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "cf",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "cg",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "cg",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ch",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ch",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ci",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ci",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "de",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "de",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "df",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "df",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "dg",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "dg",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "dh",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "dh",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "di",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "di",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ef",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ef",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "eg",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "eg",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "eh",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "eh",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ei",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "ei",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "fg",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "fg",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "fh",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "fh",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "fi",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "fi",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "gh",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "gh",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "gi",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "gi",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "hi",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "aliases": "hi",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "a",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "a",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "b",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "b",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "c",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "c",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "d",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "d",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "e",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "e",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "f",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "f",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "g",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "g",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "h",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "h",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "i",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "i",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ab",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ab",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ac",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ac",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ad",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ad",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ae",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ae",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "af",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "af",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ag",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ag",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ah",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ah",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ai",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ai",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "bc",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "bc",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "bd",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "bd",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "be",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "be",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "bf",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "bf",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "bg",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "bg",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "bh",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "bh",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "bi",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "bi",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "cd",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "cd",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ce",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ce",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "cf",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "cf",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "cg",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "cg",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ch",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ch",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ci",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ci",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "de",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "de",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "df",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "df",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "dg",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "dg",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "dh",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "dh",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "di",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "di",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ef",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ef",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "eg",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "eg",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "eh",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "eh",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ei",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "ei",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "fg",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "fg",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "fh",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "fh",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "fi",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "fi",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "gh",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "gh",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "gi",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "gi",
+      "format": "padded"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "hi",
+      "format": "minimal"
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "aliases": "hi",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "a",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "a",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "b",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "b",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "c",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "c",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "d",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "d",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "e",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "e",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "f",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "f",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "g",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "g",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "h",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "h",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "i",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "i",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ab",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ab",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ac",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ac",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ad",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ad",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ae",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ae",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "af",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "af",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ag",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ag",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ah",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ah",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ai",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ai",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "bc",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "bc",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "bd",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "bd",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "be",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "be",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "bf",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "bf",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "bg",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "bg",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "bh",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "bh",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "bi",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "bi",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "cd",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "cd",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ce",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ce",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "cf",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "cf",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "cg",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "cg",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ch",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ch",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ci",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ci",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "de",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "de",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "df",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "df",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "dg",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "dg",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "dh",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "dh",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "di",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "di",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ef",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ef",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "eg",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "eg",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "eh",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "eh",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ei",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "ei",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "fg",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "fg",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "fh",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "fh",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "fi",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "fi",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "gh",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "gh",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "gi",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "gi",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "hi",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "aliases": "hi",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "a",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "a",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "b",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "b",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "c",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "c",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "d",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "d",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "e",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "e",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "f",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "f",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "g",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "g",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "h",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "h",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "i",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "i",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ab",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ab",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ac",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ac",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ad",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ad",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ae",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ae",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "af",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "af",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ag",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ag",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ah",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ah",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ai",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ai",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "bc",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "bc",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "bd",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "bd",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "be",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "be",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "bf",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "bf",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "bg",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "bg",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "bh",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "bh",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "bi",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "bi",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "cd",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "cd",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ce",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ce",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "cf",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "cf",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "cg",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "cg",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ch",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ch",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ci",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ci",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "de",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "de",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "df",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "df",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "dg",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "dg",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "dh",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "dh",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "di",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "di",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ef",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ef",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "eg",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "eg",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "eh",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "eh",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ei",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "ei",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "fg",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "fg",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "fh",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "fh",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "fi",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "fi",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "gh",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "gh",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "gi",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "gi",
+      "format": "padded"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "hi",
+      "format": "minimal"
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "aliases": "hi",
+      "format": "padded"
+    }
+  ],
+  "allowed": [
+    9,
+    10,
+    13,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126
+  ],
+  "controls": {
+    "planted": 12,
+    "exhaustiveMaskAndSegmentationCases": 24
+  },
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceSHA256": "ffc3ed6c6e93fc4503876c2896ae1e6c29a609ce4c72add01b2dcfb805b321d9",
+  "reference": "https://www.rfc-editor.org/rfc/rfc8017.html",
+  "flags": "Key order: moduli as listed, exponent classes ascending; then models in listed order. Bit 0 ASCII path exists, bit 1 fully printable path exists, bit 2 letters/space path exists."
+}

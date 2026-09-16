@@ -1,0 +1,265 @@
+{
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceSHA256": "83cb88c6095e4869131646fe0c64e1cb6106907d4c969e025f4c7b35e1638666",
+  "profiles": [
+    {
+      "id": 0,
+      "oneWeight": 0,
+      "zeroWeight": 0,
+      "sums": [
+        [
+          5,
+          1,
+          0
+        ],
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "minimumValues": [
+        12,
+        12,
+        8,
+        8,
+        4,
+        4,
+        0
+      ]
+    },
+    {
+      "id": 1,
+      "oneWeight": 0,
+      "zeroWeight": 1,
+      "sums": [
+        [
+          5,
+          1,
+          21
+        ],
+        [
+          4,
+          2,
+          17
+        ],
+        [
+          3,
+          1,
+          17
+        ],
+        [
+          2,
+          2,
+          14
+        ],
+        [
+          0,
+          2,
+          7
+        ],
+        [
+          1,
+          1,
+          6
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "minimumValues": [
+        33,
+        29,
+        25,
+        22,
+        11,
+        10,
+        4
+      ]
+    },
+    {
+      "id": 2,
+      "oneWeight": 1,
+      "zeroWeight": 0,
+      "sums": [
+        [
+          5,
+          1,
+          25
+        ],
+        [
+          4,
+          2,
+          21
+        ],
+        [
+          3,
+          1,
+          15
+        ],
+        [
+          2,
+          2,
+          10
+        ],
+        [
+          0,
+          2,
+          11
+        ],
+        [
+          1,
+          1,
+          4
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "minimumValues": [
+        37,
+        33,
+        23,
+        18,
+        15,
+        8,
+        0
+      ]
+    },
+    {
+      "id": 3,
+      "oneWeight": 1,
+      "zeroWeight": 1,
+      "sums": [
+        [
+          5,
+          1,
+          46
+        ],
+        [
+          4,
+          2,
+          38
+        ],
+        [
+          3,
+          1,
+          32
+        ],
+        [
+          2,
+          2,
+          24
+        ],
+        [
+          0,
+          2,
+          18
+        ],
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "minimumValues": [
+        58,
+        50,
+        40,
+        32,
+        22,
+        14,
+        4
+      ]
+    }
+  ],
+  "aliases": [
+    "",
+    "a",
+    "ab",
+    "ac",
+    "ad",
+    "ae",
+    "af",
+    "ag",
+    "ah",
+    "ai",
+    "b",
+    "bc",
+    "bd",
+    "be",
+    "bf",
+    "bg",
+    "bh",
+    "bi",
+    "c",
+    "cd",
+    "ce",
+    "cf",
+    "cg",
+    "ch",
+    "ci",
+    "d",
+    "de",
+    "df",
+    "dg",
+    "dh",
+    "di",
+    "e",
+    "ef",
+    "eg",
+    "eh",
+    "ei",
+    "f",
+    "fg",
+    "fh",
+    "fi",
+    "g",
+    "gh",
+    "gi",
+    "h",
+    "hi",
+    "i"
+  ],
+  "hypothesis": "Seven concentric ring sums, outer/inner order and both source directions. Every blue cell p>=2, yellow q>=2; uncoloured 1/0 weights independently 0 or 1. Minimal decimal sums concatenated. a..i=1..9; occurrences of at most two chosen letters may also denote zero.",
+  "method": "Exact length constraints from positive linear forms, then decimal carries for all p,q digits. All integer weights are covered; no prime ceiling. Full original DBBI/FAED only.",
+  "lengthProof": "For mixed rings i,j, Si<10*Sj after shifting p,q by 2. Their lengths are L or L+1. Ring 4 is <10*every mixed ring, so length<=L+1. Its length is fixed by total after the one-digit centre sum.",
+  "controls": {
+    "planted": 20,
+    "exhaustive": 12
+  }
+}

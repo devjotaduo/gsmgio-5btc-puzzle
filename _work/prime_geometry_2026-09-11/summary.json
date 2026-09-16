@@ -1,0 +1,89 @@
+{
+  "input_sha256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "source_sha256": "e97f4286c232a2c7a0f7bb822f221afc51ba61a12e504d2a8989f066017b7f1d",
+  "primes": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61,
+    67,
+    71,
+    73,
+    79,
+    83,
+    89
+  ],
+  "mechanism": "Place prime k or DBBI[prime k - indexBase] at coloured cell k in spiral order, then sum spatial rows/columns.",
+  "prime_order": [
+    "ascending",
+    "descending"
+  ],
+  "weight_modes": [
+    "prime",
+    "dbbi/index1/a1",
+    "dbbi/index1/a0",
+    "dbbi/index0/a1",
+    "dbbi/index0/a0"
+  ],
+  "masks": [
+    "both",
+    "B",
+    "Y",
+    "BminusY"
+  ],
+  "uncoloured": [
+    "zero",
+    "original bits"
+  ],
+  "extraction": "List serializations and list+lastwords; 14 sums select from 14 README line-final words, with explicit wrap/strict, 0/1 base and forward/backward. Also select from DBBI/FAED and local phase32 words, strictly in bounds.",
+  "caution": "The 14 line endings are README layout, not independently verified original wrapping. Each combination is a hypothesis, not an endorsed instruction.",
+  "acceptance": "Exact original Bitcoin target or coherent/independently verifiable full plaintext. Padding and short readable fragments are triage only.",
+  "controls": {
+    "phase32_sha256": true,
+    "phase32_md5_fails": true,
+    "binary_roundtrips": 12,
+    "graph_controls": 24
+  },
+  "matrices": 80,
+  "lists": 320,
+  "candidates": 12226,
+  "distinctPasswords": 45064,
+  "graphReadings": 8,
+  "graphSumExcluded": 8,
+  "graphDistanceExcluded": 8,
+  "pairHistogramTests": 1920,
+  "histogramSurvivors": [],
+  "aesAttempts": 270384,
+  "paddingOnlyCount": 1078,
+  "expectedRandomPadding": 1060.3294117647058,
+  "paddingByTarget": {
+    "COSMIC/sha256": 182,
+    "COSMIC/md5": 198,
+    "TAIL32/md5": 205,
+    "SMALL/md5": 159,
+    "TAIL32/sha256": 172,
+    "SMALL/sha256": 162
+  },
+  "semanticTriage": [],
+  "bitcoinValidation": {
+    "status": "complete for all full padding results",
+    "binary_32byte_windows_checked": 525982,
+    "exact_target_matches": 0,
+    "note": "big-endian 32-byte windows, overlapping hex64 and valid WIF; not all possible encodings"
+  },
+  "elapsedAESSeconds": 2.673
+}

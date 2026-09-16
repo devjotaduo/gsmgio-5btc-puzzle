@@ -1,0 +1,45 @@
+{
+  "hypothesis": "Test numeric values discarded by the mod26 letter output of the original X recipe, plus its row sums and removed contributions.",
+  "lists": [
+    "graph_base",
+    "graph_yellow",
+    "faed_base",
+    "faed_blue",
+    "removed_graph",
+    "removed_faed",
+    "base_xor",
+    "base_mod26",
+    "base_quotient26",
+    "blue_xor",
+    "blue_mod26",
+    "blue_quotient26",
+    "yellow_xor",
+    "yellow_mod26",
+    "yellow_quotient26",
+    "three_rails_xor",
+    "three_rails_quotient26"
+  ],
+  "order": "Original recipe only; whole lists only; no fitted offsets or permutations. Three-rail concatenation base,blue,yellow.",
+  "formats": [
+    "raw bytes",
+    "hex lowercase",
+    "hex uppercase",
+    "decimal compact",
+    "decimal comma"
+  ],
+  "passwords": [
+    "each serialized list directly",
+    "sha256 hex of each serialization"
+  ],
+  "targets": [
+    "SMALL",
+    "TAIL32",
+    "COSMIC"
+  ],
+  "kdf": [
+    "EVP-SHA256",
+    "EVP-MD5"
+  ],
+  "key_checks": "SHA256 of each password; every contiguous 32-byte BE/LE window and 64-hex candidate of each material and padded plaintext, target and negation",
+  "caution": "Padding is not acceptance. No statement that the recipe itself was intended."
+}

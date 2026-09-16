@@ -1,0 +1,30 @@
+{
+  "cases": 5120,
+  "totals": {
+    "range": 4852,
+    "distinct": 222,
+    "histogram": 46,
+    "survivors": 0
+  },
+  "byAxis": {
+    "rows": {
+      "range": 2413,
+      "distinct": 120,
+      "histogram": 27,
+      "survivors": 0
+    },
+    "columns": {
+      "range": 2439,
+      "distinct": 102,
+      "histogram": 19,
+      "survivors": 0
+    }
+  },
+  "controls": {
+    "histogramsComparedWithExplicitPermutations": 220,
+    "plantedGramMatrices": 3
+  },
+  "casesSHA256": "342e570f82d1c491c4c6760493885ac439fa242517a263ed07b558595b02419b",
+  "aesTrials": 0,
+  "finalPasswordFound": false
+}

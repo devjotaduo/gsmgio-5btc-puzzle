@@ -1,0 +1,20 @@
+{
+  "keyConstructions": 22400,
+  "keys": 22038,
+  "operators": 60695,
+  "records": 242780,
+  "cases": 2185020,
+  "complete": 2185020,
+  "nodes": 6888788,
+  "certificates": 4536865,
+  "candidates": 39,
+  "partial": [],
+  "materials": 78,
+  "passwords": 156,
+  "aesAttempts": 936,
+  "padding": 2,
+  "validScalars": 356,
+  "pointHits": [],
+  "casesSHA256": "4724a037f166ab1ff55e8a593b595846a13eeb15f0709f64f605c1aca0f66f47",
+  "elapsedMs": 73137
+}

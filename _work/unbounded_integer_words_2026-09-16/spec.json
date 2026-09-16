@@ -1,0 +1,68 @@
+{
+  "hypothesis": "Every occurrence independently becomes zero or a1..i9. Whole decimal integer -> minimal big-endian bytes. Every maximal ASCII alphabetic run must be a corpus word (length<=32, single letters a/i only), with arbitrary mixed case. Digits and listed punctuation separate words. Pure nonletter strings are also admitted. No unknown substitution, deletion, additional cipher or transposition.",
+  "separators": [
+    9,
+    10,
+    13,
+    32,
+    33,
+    34,
+    39,
+    40,
+    41,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    63
+  ],
+  "dictionaries": [
+    {
+      "name": "common",
+      "threshold": 1000000,
+      "words": 26264,
+      "nodes": 61743,
+      "corpusSHA256": "51df159fd3de12b20e403c108f526e96dbd723d9cabdd5f17955cdc16059e690",
+      "controls": {
+        "grammarChecks": 8,
+        "successorComparisons": 676,
+        "enumeratedAssignments": 640,
+        "exactCases": 4,
+        "planted": 5
+      }
+    },
+    {
+      "name": "full",
+      "threshold": 0,
+      "words": 333296,
+      "nodes": 805575,
+      "corpusSHA256": "51df159fd3de12b20e403c108f526e96dbd723d9cabdd5f17955cdc16059e690",
+      "controls": {
+        "grammarChecks": 8,
+        "successorComparisons": 676,
+        "enumeratedAssignments": 640,
+        "exactCases": 4,
+        "planted": 5
+      }
+    }
+  ],
+  "limits": {
+    "maxNodes": 200000,
+    "maxMs": 10000
+  },
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceSHA256": "8f99af655fa00b4fbc2eab0d5821ad17a2235e89d4640448f5cfa4016bf4591d",
+  "limitsOfConclusion": "Dictionary compatibility is not coherent language or authentication. Missing names, typos, joined words, other languages, punctuation outside the list and non-ASCII data are outside this model. Pending intervals remain unresolved."
+}

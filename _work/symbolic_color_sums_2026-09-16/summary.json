@@ -1,0 +1,13 @@
+{
+  "cases": 2944,
+  "lengthRejected": 2896,
+  "segmentationRejected": 48,
+  "segmentationNodes": 620,
+  "survivors": [],
+  "controls": {
+    "planted": 24,
+    "segmentation": 6
+  },
+  "casesSHA256": "8af07e3d7e630e9470a11604a465658fd6f35ac8172b7f239aeda7370c6a27a9",
+  "finalPasswordFound": false
+}

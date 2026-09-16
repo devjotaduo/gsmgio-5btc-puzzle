@@ -1,0 +1,40 @@
+{
+  "hypothesis": "Whole decimal integer, a=1..i=9 and any one symbol may independently be zero, then minimal big-endian ciphertext bytes; any repeated byte XOR key of periods 1..32 must produce seven-bit plaintext.",
+  "caveat": "Only an unconfirmed model. Matching the necessary MSB condition is not a recovered key or readable plaintext. FAED tests all 9 zero aliases, DBBI g only. No arbitrary encoding/transposition/padding.",
+  "periods": [
+    1,
+    32
+  ],
+  "fields": {
+    "dbbi": [
+      "g"
+    ],
+    "faed": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h",
+      "i"
+    ]
+  },
+  "directions": [
+    "original",
+    "reversed-symbols"
+  ],
+  "limits": {
+    "maxNodes": 5000000,
+    "maxMs": 15000
+  },
+  "controls": {
+    "successors": 262144,
+    "bruteForce": 32,
+    "planted": 3
+  },
+  "sourceSHA256": "7373e93a2e2f556fced5d3cfa44f8df6400c3a38e95b2b25dbec39bab363e82e",
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "reference": "https://cryptopals.com/sets/1/challenges/6"
+}

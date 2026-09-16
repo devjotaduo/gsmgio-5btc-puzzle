@@ -1,0 +1,17 @@
+{
+  "scope": "Every candidate obtained by the bounded prime radix search so far, not all potential FAED/base127 solutions.",
+  "normalizations": [
+    "raw ASCII",
+    "all whitespace removed",
+    "raw lowercase",
+    "raw uppercase"
+  ],
+  "password_forms": [
+    "direct",
+    "SHA256 lowercase hex"
+  ],
+  "aes": "Three original blobs, EVP-SHA256 and EVP-MD5, full plaintext after PKCS7 validation",
+  "keys": "SHA256 of each password and all BE/LE 32-byte windows of source materials and full plaintexts, plus hex and WIF candidates; target or its negation",
+  "inputs_candidates": 177,
+  "enumeration_complete": false
+}

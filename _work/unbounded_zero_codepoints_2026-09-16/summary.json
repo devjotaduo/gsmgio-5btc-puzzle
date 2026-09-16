@@ -1,0 +1,18 @@
+{
+  "complete": true,
+  "models": 104,
+  "decisions": 37739520,
+  "excludedModels": 95,
+  "compatibleModels": 9,
+  "printableMappings": 3600,
+  "printablePaths": "23750997348188160",
+  "distinctSavedPrintableWitnesses": 3600,
+  "priorDistinctPrintableTexts": 3600,
+  "newSavedPrintableWitnesses": 3600,
+  "printableEnumerationComplete": false,
+  "oldAcceptedSHA256": "cfb0d53d4d80ea2b84cddc99cabbae7607fac8a8e209f7912fb5116c25cb6cc0",
+  "flagsSHA256": "eb787a11752b920dbbb4b361b59fca99ec213604e590671a6d23276807a74aec",
+  "resultsSHA256": "ce93e942f7a358d978197f0d1bd6f478fa1e3aaac224f6f30102375706a55e3b",
+  "printableSHA256": "8a7aaa7cbaf7ad86e095746c89d641fbbd86f8123e81e869d497da4b20a480f4",
+  "elapsedMs": 4614
+}

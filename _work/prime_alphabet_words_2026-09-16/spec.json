@@ -1,0 +1,26 @@
+{
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "corpusSHA256": "51df159fd3de12b20e403c108f526e96dbd723d9cabdd5f17955cdc16059e690",
+  "words": 333296,
+  "alphabets": [
+    " abcdefghijklmnopqrstuvwxyz.,",
+    "abcdefghijklmnopqrstuvwxyz .,",
+    " abcdefghijklmnopqrstuvwxyz.,-'",
+    "abcdefghijklmnopqrstuvwxyz .,-'",
+    " abcdefghijklmnopqrstuvwxyz0123456789",
+    "0123456789abcdefghijklmnopqrstuvwxyz "
+  ],
+  "limits": {
+    "maxNodes": 500000,
+    "maxMs": 15000
+  },
+  "controls": {
+    "successors": 12336,
+    "planted": 18,
+    "bruteCases": 24
+  },
+  "sourceSHA256": "c8ff3dfdb155ab752ac1264450539f8a5d19d653b49ab9a441ae28ae2251b194",
+  "vocabularyLoaderSHA256": "8f99af655fa00b4fbc2eab0d5821ad17a2235e89d4640448f5cfa4016bf4591d",
+  "hypothesis": "a1..i9, each g independently 0/7. Full decimal integer represented in prime base29/31/37; digits index one of six stated alphabets. Both fields, both source directions. Each maximal run of letters must be a corpus word of length<=32; single letters only A/I. Nonletters separate words; strings containing only nonletters are admitted.",
+  "limitations": "A language-filtered conditional model, not confirmed by creator. Does not cover other zero aliases, alphabets, omitted leading radix-zero characters, joined words, missing words/names, typos, other languages or further ciphers. Pending states are explicitly incomplete."
+}

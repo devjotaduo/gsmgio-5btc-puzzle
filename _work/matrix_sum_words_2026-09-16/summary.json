@@ -1,0 +1,205 @@
+{
+  "complete": true,
+  "configurations": 10368,
+  "compatible": 490,
+  "alphabetExcluded": 9160,
+  "selected": 355,
+  "layoutCounts": {
+    "dbbi": 12,
+    "faed": 84
+  },
+  "byModel": [
+    {
+      "field": "dbbi",
+      "threshold": 1000000,
+      "grammar": "strict",
+      "format": "ascii",
+      "configurations": 108,
+      "compatible": 22
+    },
+    {
+      "field": "dbbi",
+      "threshold": 1000000,
+      "grammar": "strict",
+      "format": "a1z26",
+      "configurations": 108,
+      "compatible": 0
+    },
+    {
+      "field": "dbbi",
+      "threshold": 1000000,
+      "grammar": "strict",
+      "format": "prime-codepoint",
+      "configurations": 108,
+      "compatible": 0
+    },
+    {
+      "field": "dbbi",
+      "threshold": 1000000,
+      "grammar": "joined",
+      "format": "ascii",
+      "configurations": 108,
+      "compatible": 22
+    },
+    {
+      "field": "dbbi",
+      "threshold": 1000000,
+      "grammar": "joined",
+      "format": "a1z26",
+      "configurations": 108,
+      "compatible": 0
+    },
+    {
+      "field": "dbbi",
+      "threshold": 1000000,
+      "grammar": "joined",
+      "format": "prime-codepoint",
+      "configurations": 108,
+      "compatible": 0
+    },
+    {
+      "field": "dbbi",
+      "threshold": 0,
+      "grammar": "strict",
+      "format": "ascii",
+      "configurations": 108,
+      "compatible": 22
+    },
+    {
+      "field": "dbbi",
+      "threshold": 0,
+      "grammar": "strict",
+      "format": "a1z26",
+      "configurations": 108,
+      "compatible": 0
+    },
+    {
+      "field": "dbbi",
+      "threshold": 0,
+      "grammar": "strict",
+      "format": "prime-codepoint",
+      "configurations": 108,
+      "compatible": 0
+    },
+    {
+      "field": "dbbi",
+      "threshold": 0,
+      "grammar": "joined",
+      "format": "ascii",
+      "configurations": 108,
+      "compatible": 22
+    },
+    {
+      "field": "dbbi",
+      "threshold": 0,
+      "grammar": "joined",
+      "format": "a1z26",
+      "configurations": 108,
+      "compatible": 0
+    },
+    {
+      "field": "dbbi",
+      "threshold": 0,
+      "grammar": "joined",
+      "format": "prime-codepoint",
+      "configurations": 108,
+      "compatible": 0
+    },
+    {
+      "field": "faed",
+      "threshold": 1000000,
+      "grammar": "strict",
+      "format": "ascii",
+      "configurations": 756,
+      "compatible": 29
+    },
+    {
+      "field": "faed",
+      "threshold": 1000000,
+      "grammar": "strict",
+      "format": "a1z26",
+      "configurations": 756,
+      "compatible": 0
+    },
+    {
+      "field": "faed",
+      "threshold": 1000000,
+      "grammar": "strict",
+      "format": "prime-codepoint",
+      "configurations": 756,
+      "compatible": 0
+    },
+    {
+      "field": "faed",
+      "threshold": 1000000,
+      "grammar": "joined",
+      "format": "ascii",
+      "configurations": 756,
+      "compatible": 102
+    },
+    {
+      "field": "faed",
+      "threshold": 1000000,
+      "grammar": "joined",
+      "format": "a1z26",
+      "configurations": 756,
+      "compatible": 34
+    },
+    {
+      "field": "faed",
+      "threshold": 1000000,
+      "grammar": "joined",
+      "format": "prime-codepoint",
+      "configurations": 756,
+      "compatible": 0
+    },
+    {
+      "field": "faed",
+      "threshold": 0,
+      "grammar": "strict",
+      "format": "ascii",
+      "configurations": 756,
+      "compatible": 41
+    },
+    {
+      "field": "faed",
+      "threshold": 0,
+      "grammar": "strict",
+      "format": "a1z26",
+      "configurations": 756,
+      "compatible": 0
+    },
+    {
+      "field": "faed",
+      "threshold": 0,
+      "grammar": "strict",
+      "format": "prime-codepoint",
+      "configurations": 756,
+      "compatible": 0
+    },
+    {
+      "field": "faed",
+      "threshold": 0,
+      "grammar": "joined",
+      "format": "ascii",
+      "configurations": 756,
+      "compatible": 104
+    },
+    {
+      "field": "faed",
+      "threshold": 0,
+      "grammar": "joined",
+      "format": "a1z26",
+      "configurations": 756,
+      "compatible": 92
+    },
+    {
+      "field": "faed",
+      "threshold": 0,
+      "grammar": "joined",
+      "format": "prime-codepoint",
+      "configurations": 756,
+      "compatible": 0
+    }
+  ]
+}

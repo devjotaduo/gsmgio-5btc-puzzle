@@ -1,0 +1,152 @@
+{
+  "hypothesis": "The colour numbers are a hex-digit sum, RGB-channel sum or packed24-bit RGB integer. Distinct prime factors of each number become the corresponding colour weight in the original14x14 geometry. Other cells retain their original bits or become zero. Spatial row/column sum lists use five declared orders, optional reversal and six exact textual formats. Test list alone, list+one of two previously fixed last-word clauses, or yellow prime+blue prime+list+clause. This is a new hypothesis, not a creator-provided formula. No arbitrary colour swap, prime interval, value modulo reduction, cropped list or fitted text.",
+  "hex": {
+    "B": "3F48CC",
+    "Y": "FFF200"
+  },
+  "projections": [
+    {
+      "method": "hexDigitSum",
+      "values": {
+        "B": 54,
+        "Y": 47
+      },
+      "factors": {
+        "B": [
+          2,
+          3,
+          3,
+          3
+        ],
+        "Y": [
+          47
+        ]
+      }
+    },
+    {
+      "method": "channelSum",
+      "values": {
+        "B": 339,
+        "Y": 497
+      },
+      "factors": {
+        "B": [
+          3,
+          113
+        ],
+        "Y": [
+          7,
+          71
+        ]
+      }
+    },
+    {
+      "method": "packedRGB",
+      "values": {
+        "B": 4147404,
+        "Y": 16773632
+      },
+      "factors": {
+        "B": [
+          2,
+          2,
+          3,
+          37,
+          9341
+        ],
+        "Y": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          181,
+          181
+        ]
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "method": "hexDigitSum",
+      "blue": 2,
+      "yellow": 47
+    },
+    {
+      "method": "hexDigitSum",
+      "blue": 3,
+      "yellow": 47
+    },
+    {
+      "method": "channelSum",
+      "blue": 3,
+      "yellow": 7
+    },
+    {
+      "method": "channelSum",
+      "blue": 3,
+      "yellow": 71
+    },
+    {
+      "method": "channelSum",
+      "blue": 113,
+      "yellow": 7
+    },
+    {
+      "method": "channelSum",
+      "blue": 113,
+      "yellow": 71
+    },
+    {
+      "method": "packedRGB",
+      "blue": 2,
+      "yellow": 2
+    },
+    {
+      "method": "packedRGB",
+      "blue": 2,
+      "yellow": 181
+    },
+    {
+      "method": "packedRGB",
+      "blue": 3,
+      "yellow": 2
+    },
+    {
+      "method": "packedRGB",
+      "blue": 3,
+      "yellow": 181
+    },
+    {
+      "method": "packedRGB",
+      "blue": 37,
+      "yellow": 2
+    },
+    {
+      "method": "packedRGB",
+      "blue": 37,
+      "yellow": 181
+    },
+    {
+      "method": "packedRGB",
+      "blue": 9341,
+      "yellow": 2
+    },
+    {
+      "method": "packedRGB",
+      "blue": 9341,
+      "yellow": 181
+    }
+  ],
+  "lastwords": [
+    "reinsertingtheprimebasicsafterwhichyouwillberequiredto",
+    "sheisgoingtodieandthereisnothingyoucandotostopit"
+  ],
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceSHA256": "9731b2f3d218772aa02aebac272b8e0a57697ebb9516782976542b88a4a74f87",
+  "helperSHA256": "07a7a6eba6185a490bbfa6f6f0084346318fd37ac132239dfcc6ca9a44824c8e"
+}

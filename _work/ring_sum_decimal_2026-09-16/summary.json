@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "models": 1472,
+  "fixedRejected": 1144,
+  "partitions": 64756,
+  "nodes": 64770,
+  "transitions": 14,
+  "matches": 0,
+  "controls": {
+    "planted": 20,
+    "exhaustive": 12
+  },
+  "casesSHA256": "5a7875bd233a57cc6e311d786baeedf0e9f518967ff2e98deefe862fbd012ed7",
+  "finalPasswordFound": false
+}

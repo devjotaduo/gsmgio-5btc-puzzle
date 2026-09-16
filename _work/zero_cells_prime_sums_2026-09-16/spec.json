@@ -1,0 +1,616 @@
+{
+  "hypothesis": "Fill the 91 zero cells of the known 192-bit URL spiral with complete DBBI under a1..i9, original/reversed. Replace blue/yellow cells by prime factors of hex-digit sums, RGB-channel sums or packed RGB values; all14 previously declared factor pairs. Preserve ordinary black bits and the four centre zeros. The9 DBBI digits on yellow cells are overwritten. Either preserve the DBBI digit at the near-white cell [7,4], spiral163, or set it to zero. Sum rows/columns, five orders, both directions, six exact text formats; list alone, list+one of two fixed last-word clauses, or yellow+blue+list+clause. Direct and SHA256-hex passwords. This formula is not confirmed by the creator.",
+  "geometry": {
+    "url": "gsmg.io/theseedisplanted",
+    "tail": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "ones": 101,
+    "fullZeros": 95,
+    "urlZeros": 91,
+    "zeros": [
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        12,
+        0
+      ],
+      [
+        13,
+        0
+      ],
+      [
+        13,
+        3
+      ],
+      [
+        13,
+        6
+      ],
+      [
+        13,
+        9
+      ],
+      [
+        13,
+        11
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        11,
+        13
+      ],
+      [
+        7,
+        13
+      ],
+      [
+        6,
+        13
+      ],
+      [
+        4,
+        13
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        12,
+        2
+      ],
+      [
+        12,
+        6
+      ],
+      [
+        12,
+        8
+      ],
+      [
+        12,
+        9
+      ],
+      [
+        12,
+        10
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        9,
+        12
+      ],
+      [
+        8,
+        12
+      ],
+      [
+        7,
+        12
+      ],
+      [
+        6,
+        12
+      ],
+      [
+        3,
+        12
+      ],
+      [
+        2,
+        12
+      ],
+      [
+        1,
+        11
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        8,
+        2
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        11,
+        4
+      ],
+      [
+        11,
+        5
+      ],
+      [
+        11,
+        7
+      ],
+      [
+        11,
+        9
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        7,
+        11
+      ],
+      [
+        6,
+        11
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        2,
+        11
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        7,
+        3
+      ],
+      [
+        10,
+        4
+      ],
+      [
+        10,
+        5
+      ],
+      [
+        10,
+        6
+      ],
+      [
+        10,
+        7
+      ],
+      [
+        10,
+        8
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        7,
+        4
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        9,
+        7
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        7,
+        5
+      ],
+      [
+        8,
+        6
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "overwrites": [
+      {
+        "i": 15,
+        "r": 0,
+        "c": 13,
+        "original": "h",
+        "reversed": "i"
+      },
+      {
+        "i": 28,
+        "r": 12,
+        "c": 9,
+        "original": "g",
+        "reversed": "b"
+      },
+      {
+        "i": 33,
+        "r": 7,
+        "c": 12,
+        "original": "b",
+        "reversed": "f"
+      },
+      {
+        "i": 53,
+        "r": 6,
+        "c": 11,
+        "original": "c",
+        "reversed": "h"
+      },
+      {
+        "i": 65,
+        "r": 10,
+        "c": 7,
+        "original": "e",
+        "reversed": "g"
+      },
+      {
+        "i": 69,
+        "r": 5,
+        "c": 10,
+        "original": "e",
+        "reversed": "i"
+      },
+      {
+        "i": 77,
+        "r": 9,
+        "c": 6,
+        "original": "f",
+        "reversed": "b"
+      },
+      {
+        "i": 81,
+        "r": 4,
+        "c": 9,
+        "original": "g",
+        "reversed": "c"
+      },
+      {
+        "i": 90,
+        "r": 5,
+        "c": 6,
+        "original": "e",
+        "reversed": "d"
+      }
+    ],
+    "nearWhiteIndex": 76
+  },
+  "derivation": {
+    "hex": {
+      "B": "3F48CC",
+      "Y": "FFF200"
+    },
+    "projections": [
+      {
+        "method": "hexDigitSum",
+        "values": {
+          "B": 54,
+          "Y": 47
+        },
+        "factors": {
+          "B": [
+            2,
+            3,
+            3,
+            3
+          ],
+          "Y": [
+            47
+          ]
+        }
+      },
+      {
+        "method": "channelSum",
+        "values": {
+          "B": 339,
+          "Y": 497
+        },
+        "factors": {
+          "B": [
+            3,
+            113
+          ],
+          "Y": [
+            7,
+            71
+          ]
+        }
+      },
+      {
+        "method": "packedRGB",
+        "values": {
+          "B": 4147404,
+          "Y": 16773632
+        },
+        "factors": {
+          "B": [
+            2,
+            2,
+            3,
+            37,
+            9341
+          ],
+          "Y": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            181,
+            181
+          ]
+        }
+      }
+    ],
+    "pairs": [
+      {
+        "method": "hexDigitSum",
+        "blue": 2,
+        "yellow": 47
+      },
+      {
+        "method": "hexDigitSum",
+        "blue": 3,
+        "yellow": 47
+      },
+      {
+        "method": "channelSum",
+        "blue": 3,
+        "yellow": 7
+      },
+      {
+        "method": "channelSum",
+        "blue": 3,
+        "yellow": 71
+      },
+      {
+        "method": "channelSum",
+        "blue": 113,
+        "yellow": 7
+      },
+      {
+        "method": "channelSum",
+        "blue": 113,
+        "yellow": 71
+      },
+      {
+        "method": "packedRGB",
+        "blue": 2,
+        "yellow": 2
+      },
+      {
+        "method": "packedRGB",
+        "blue": 2,
+        "yellow": 181
+      },
+      {
+        "method": "packedRGB",
+        "blue": 3,
+        "yellow": 2
+      },
+      {
+        "method": "packedRGB",
+        "blue": 3,
+        "yellow": 181
+      },
+      {
+        "method": "packedRGB",
+        "blue": 37,
+        "yellow": 2
+      },
+      {
+        "method": "packedRGB",
+        "blue": 37,
+        "yellow": 181
+      },
+      {
+        "method": "packedRGB",
+        "blue": 9341,
+        "yellow": 2
+      },
+      {
+        "method": "packedRGB",
+        "blue": 9341,
+        "yellow": 181
+      }
+    ]
+  },
+  "lastwords": [
+    "reinsertingtheprimebasicsafterwhichyouwillberequiredto",
+    "sheisgoingtodieandthereisnothingyoucandotostopit"
+  ],
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceSHA256": "a709c4354e74f914bb2d3e01c125a6b0be50b2e208502734dc744026eaba6965",
+  "dependencies": {
+    "color_factor_sum_passwords.cjs": "9731b2f3d218772aa02aebac272b8e0a57697ebb9516782976542b88a4a74f87",
+    "decimal_keystream_constraints.cjs": "07a7a6eba6185a490bbfa6f6f0084346318fd37ac132239dfcc6ca9a44824c8e"
+  },
+  "historicalAudit": {
+    "file": "solver/experiments/claude_endgame_2026_09_02/gsmg_common.py",
+    "SHA256": "abccd1ea5c180dd2b026e772eab3dec31fb4c2a334b1d857add689ffca6d9b78",
+    "differences": [
+      {
+        "r": 7,
+        "c": 6,
+        "old": 1,
+        "current": 0,
+        "spiral": 193
+      }
+    ],
+    "urlRegionIdentical": true,
+    "meaning": "The102/101 discrepancy does not invalidate the old91-zero fill outside the centre. The old claim rejecting91 zeros in0..191 is incorrect; the full196 cells have95 zeros."
+  }
+}

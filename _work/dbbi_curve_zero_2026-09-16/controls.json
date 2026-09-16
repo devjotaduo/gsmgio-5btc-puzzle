@@ -1,0 +1,123 @@
+{
+  "complete": true,
+  "cases": [
+    {
+      "modulus": "101",
+      "planted": 0,
+      "enumerated": 1024,
+      "matches": 6,
+      "collisions": 8
+    },
+    {
+      "modulus": "101",
+      "planted": 1,
+      "enumerated": 1024,
+      "matches": 13,
+      "collisions": 8
+    },
+    {
+      "modulus": "101",
+      "planted": 341,
+      "enumerated": 1024,
+      "matches": 8,
+      "collisions": 8
+    },
+    {
+      "modulus": "101",
+      "planted": 1023,
+      "enumerated": 1024,
+      "matches": 6,
+      "collisions": 8
+    },
+    {
+      "modulus": "115792089237316195423570985008687907852837564279074904382605163141518161494337",
+      "planted": 0,
+      "enumerated": 1024,
+      "matches": 2,
+      "collisions": 8
+    },
+    {
+      "modulus": "115792089237316195423570985008687907852837564279074904382605163141518161494337",
+      "planted": 1,
+      "enumerated": 1024,
+      "matches": 6,
+      "collisions": 8
+    },
+    {
+      "modulus": "115792089237316195423570985008687907852837564279074904382605163141518161494337",
+      "planted": 341,
+      "enumerated": 1024,
+      "matches": 8,
+      "collisions": 8
+    },
+    {
+      "modulus": "115792089237316195423570985008687907852837564279074904382605163141518161494337",
+      "planted": 1023,
+      "enumerated": 1024,
+      "matches": 2,
+      "collisions": 8
+    },
+    {
+      "modulus": "115792089237316195423570985008687907853269984665640564039457584007908834671663",
+      "planted": 0,
+      "enumerated": 1024,
+      "matches": 2,
+      "collisions": 8
+    },
+    {
+      "modulus": "115792089237316195423570985008687907853269984665640564039457584007908834671663",
+      "planted": 1,
+      "enumerated": 1024,
+      "matches": 6,
+      "collisions": 8
+    },
+    {
+      "modulus": "115792089237316195423570985008687907853269984665640564039457584007908834671663",
+      "planted": 341,
+      "enumerated": 1024,
+      "matches": 8,
+      "collisions": 8
+    },
+    {
+      "modulus": "115792089237316195423570985008687907853269984665640564039457584007908834671663",
+      "planted": 1023,
+      "enumerated": 1024,
+      "matches": 2,
+      "collisions": 8
+    },
+    {
+      "invalidScalarCase": true,
+      "enumerated": 8,
+      "matches": 1
+    },
+    {
+      "dbbiPlanted": true,
+      "reverse": false,
+      "modulus": "115792089237316195423570985008687907852837564279074904382605163141518161494337",
+      "enumerated": 1024,
+      "matches": 1
+    },
+    {
+      "dbbiPlanted": true,
+      "reverse": false,
+      "modulus": "115792089237316195423570985008687907853269984665640564039457584007908834671663",
+      "enumerated": 1024,
+      "matches": 1
+    },
+    {
+      "dbbiPlanted": true,
+      "reverse": true,
+      "modulus": "115792089237316195423570985008687907852837564279074904382605163141518161494337",
+      "enumerated": 1024,
+      "matches": 1
+    },
+    {
+      "dbbiPlanted": true,
+      "reverse": true,
+      "modulus": "115792089237316195423570985008687907853269984665640564039457584007908834671663",
+      "enumerated": 1024,
+      "matches": 1
+    }
+  ],
+  "enumeratedAssignments": 16392
+}

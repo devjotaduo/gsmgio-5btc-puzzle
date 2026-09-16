@@ -1,0 +1,36 @@
+{
+  "complete": true,
+  "when": "2026-09-16T10:20:21.410Z",
+  "searchCompleteByCase": [
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "complete": true
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "complete": true
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "complete": true
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "complete": false
+    }
+  ],
+  "activeProcess": false,
+  "checks": "Completed verification artifacts and hashes; three complete negative searches, fourth explicitly partial; zero recovered payloads; supplemental header proofs verified",
+  "hashes": {
+    "spec.json": "19866a0fe307188961d36bd24c74f3a624f77229bca46f587e9e5a9e41b94944",
+    "cases.json": "d6b9f78b57b02c0ff2759b4167987a25ed1fef838056248590bf12f101223688",
+    "verification.json": "c93ea3b814ffd08fee13181f017a799bd9adef5cf9560aaba55a2de49c6db817",
+    "header_and_controls.json": "767bbd04f09b23b9d6d418eedc73c2a9be48b149f37441ca7c291a844441cd54",
+    "header_verification.json": "4d8b2f0879cdfe8fdf3ffc55a14abf161919165a90cc49bd41032922030a0d8d",
+    "RELATORIO.md": "e4e993aea7d311a67827c3edc6bcf67233a2e07995ceaf4d467cb7147c99f254"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "primePairs": 21,
+  "matrices": 42,
+  "lists": 168,
+  "constructions": 5880,
+  "materials": 5880,
+  "passwords": 11760,
+  "aesDecisions": 70560,
+  "paddings": 281,
+  "maxPrintable": 0.5569620253164557,
+  "scalarChecks": 5880,
+  "pubHits": [],
+  "materialsSHA256": "c9553e9077436e47ada73ff18445bdbea1babb684b7910fb9c43141a863a6997",
+  "oraclesSHA256": "0e05c84109fa4e902c0e92812544e7bcaff55b3d401a2dbc88b0510ce95527fd",
+  "finalPasswordFound": false
+}

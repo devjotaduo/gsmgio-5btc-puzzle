@@ -1,0 +1,136 @@
+{
+  "verifiedAt": "2026-09-16T12:09:09.227Z",
+  "cases": [
+    {
+      "file": "dbbi_forward_0.json",
+      "complete": true,
+      "hits": 0
+    },
+    {
+      "file": "dbbi_forward_1.json",
+      "complete": true,
+      "hits": 0
+    },
+    {
+      "file": "dbbi_forward_2.json",
+      "complete": true,
+      "hits": 0
+    },
+    {
+      "file": "dbbi_forward_3.json",
+      "complete": true,
+      "hits": 0
+    },
+    {
+      "file": "dbbi_forward_4.json",
+      "complete": true,
+      "hits": 0
+    },
+    {
+      "file": "dbbi_forward_5.json",
+      "complete": true,
+      "hits": 0
+    },
+    {
+      "file": "dbbi_reverse_0.json",
+      "complete": true,
+      "hits": 0
+    },
+    {
+      "file": "dbbi_reverse_1.json",
+      "complete": true,
+      "hits": 30
+    },
+    {
+      "file": "dbbi_reverse_2.json",
+      "complete": true,
+      "hits": 0
+    },
+    {
+      "file": "dbbi_reverse_3.json",
+      "complete": true,
+      "hits": 3
+    },
+    {
+      "file": "dbbi_reverse_4.json",
+      "complete": true,
+      "hits": 0
+    },
+    {
+      "file": "dbbi_reverse_5.json",
+      "complete": true,
+      "hits": 0
+    },
+    {
+      "file": "faed_forward_0.json",
+      "complete": false,
+      "hits": 5669
+    },
+    {
+      "file": "faed_forward_1.json",
+      "complete": false,
+      "hits": 5692
+    },
+    {
+      "file": "faed_forward_2.json",
+      "complete": false,
+      "hits": 2971
+    },
+    {
+      "file": "faed_forward_3.json",
+      "complete": false,
+      "hits": 2941
+    },
+    {
+      "file": "faed_forward_4.json",
+      "complete": true,
+      "hits": 0
+    },
+    {
+      "file": "faed_forward_5.json",
+      "complete": true,
+      "hits": 0
+    },
+    {
+      "file": "faed_reverse_0.json",
+      "complete": true,
+      "hits": 0
+    },
+    {
+      "file": "faed_reverse_1.json",
+      "complete": true,
+      "hits": 0
+    },
+    {
+      "file": "faed_reverse_2.json",
+      "complete": false,
+      "hits": 18659
+    },
+    {
+      "file": "faed_reverse_3.json",
+      "complete": true,
+      "hits": 0
+    },
+    {
+      "file": "faed_reverse_4.json",
+      "complete": true,
+      "hits": 0
+    },
+    {
+      "file": "faed_reverse_5.json",
+      "complete": true,
+      "hits": 0
+    }
+  ],
+  "allRecordedCandidatesVerified": true,
+  "uniqueCandidates": 35965,
+  "hits": 35965,
+  "bruteAssignments": 12288,
+  "verifiedCompleteCertificates": 13,
+  "partialUnverifiedExclusions": 234842,
+  "allRecordedMaskCoveragesVerified": true,
+  "controls": 150,
+  "method": "Word-boundary DP over a rebuilt vocabulary, full DBBI enumeration, both-bound interval feasibility for complete FAED cases. Every candidate reencoded and every partial case mask partition checked. Exclusions inside partial cases were not independently certified.",
+  "verifierSHA256": "8bc72a38e82356c70c9bf031389a253626ccd24a8f5afbc13f363436567c2237",
+  "candidatesSHA256": "9c342f507f2e73bb6799ea6900ce67f5543df6cfe9f0d8414b0a3f7dc8dea4cd"
+}

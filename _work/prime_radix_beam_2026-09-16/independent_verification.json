@@ -1,0 +1,40 @@
+{
+  "verifiedAt": "2026-09-16T12:17:38.478Z",
+  "plantedRecovered": 8,
+  "plantedRanks": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+  ],
+  "smallExhaustiveBeamComparisons": 12,
+  "bruteAssignments": 704,
+  "finalRetainedCandidatesReconstructed": 18432,
+  "actualUniqueCandidates": 5120,
+  "method": "Independent decimal reconstruction, radix conversion, sliced-quadgram scoring and small exhaustive rankings. Final candidates and control recovery verified; the heuristic beam is not an exhaustive search or a proof of global score optimum.",
+  "verifierSHA256": "ee4bc673ba0b0a66882722cad49c0870f694d4f1336dbe319d36322b9d93092d",
+  "files": {
+    "control_0_0.json": "677020f2889a3cac0b16ef43e59c28ce1b5918da88b5e4ae8aa20ef5c265fe41",
+    "control_0_1.json": "7fc04ce825582b7ba6d6ab9b0d5940bd7c224ef47b6e741cdd067845a68b38dc",
+    "control_1_0.json": "bf20035604ac7ff81cd614b19784aa680728eb66a538d2e643e6c8ee5e69c1aa",
+    "control_1_1.json": "065fd0164c0a3d95d1c1455095b3aa76e7a741d0b76ac7d19f4aabe33d4fb8e0",
+    "control_2_0.json": "4c712fdfb64570fe25c00de6515f3e3f23bf76010bbe0f75a268b72aeb903577",
+    "control_2_1.json": "fa5b33be471e5a701fb465dfb591d45ed9dc31a0b02d0475d9f226a44d300bb5",
+    "control_3_0.json": "a808fa5df810a569b2339c5cccc99c405d78009f0de25137b1b168c696bc7c69",
+    "control_3_1.json": "4f1a28990dbe99b6aee5add3d27343f62fd41fb870c2d4f0cc1faaeb639c1344",
+    "actual_0.json": "bbca74fa1dc8ddc62589999b82a2775acd3c8488425fd6b579ae28420006120d",
+    "shuffled_0.json": "2c5c66ad6066b77d06fe854a3eadc39cfbee8724ef517b1dcade72d5c71ad683",
+    "actual_1.json": "5d43134c3235768a8e7d57eb8a059f8a03f012cb8dbbb6c3f295cc65f36c8ba2",
+    "shuffled_1.json": "0f235ed740408479404bef607d443e979cdaed5a88c678c7c25e83628380229f",
+    "actual_2.json": "9a832d5d5b0d3b00aa8aec53d14a4ea92428423e8da4f21ab1ad9c01f60b2a28",
+    "shuffled_2.json": "fa7ffe36b0002e54bfe1e17319280b3c103bc6e4c0042d5708895b280206a8b2",
+    "actual_3.json": "81ac6b82fbf2d37a9b0ab9e03d07d43ff935c3988643a297fde63bf1677f1362",
+    "shuffled_3.json": "4f45c0daf25b872765cf386e957d661c72f20342d148eb7f815801b12da42218",
+    "actual_4.json": "0bbbc39458156aa3d94816111af85d287ef6d90be37ea5c1b543bd5bc6e7c21b",
+    "shuffled_4.json": "7dcba9015d3475cc3b9d5e9ce5c2e2a62d402fd809122891294541be68199e40"
+  }
+}

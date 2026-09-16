@@ -1,0 +1,12 @@
+{
+  "left_hashes": 288,
+  "passwords": 3456,
+  "attempts": 20736,
+  "padding": 75,
+  "expected_random_padding": 81.31764705882352,
+  "max_ascii": 0.5063291139240507,
+  "text_triage": 0,
+  "distinct_scalar_checks": 65566,
+  "hits": [],
+  "control": "Known original phase32"
+}

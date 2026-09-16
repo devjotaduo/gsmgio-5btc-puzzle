@@ -1,0 +1,285 @@
+{
+  "scope": "Fourteen positional row/column values concatenated as minimal decimal strings; natural or reversed line order, both field directions. Same prime radix r and prime colour digits 2<=B,Y<r. Fixed black/white weights 0 or 1 and both within-line orientations. Any fixed a..i to 1..9 bijection, each occurrence of at most two selected letters may also be zero. This screen constrains the first number only; unresolved entries are not solutions.",
+  "profiles": [
+    {
+      "field": "faed",
+      "length": 570,
+      "axis": "row",
+      "reversePositions": false,
+      "black": 0,
+      "white": 0,
+      "lower": 8377,
+      "upper": 21690,
+      "boundaryLengths": {
+        "maxAtLower": 571,
+        "maxBelowLower": 569,
+        "minAtUpper": 568,
+        "minAboveUpper": 571
+      },
+      "primeBaseCount": 1386
+    },
+    {
+      "field": "faed",
+      "length": 570,
+      "axis": "row",
+      "reversePositions": false,
+      "black": 0,
+      "white": 1,
+      "lower": 1585,
+      "upper": 1701,
+      "boundaryLengths": {
+        "maxAtLower": 570,
+        "maxBelowLower": 569,
+        "minAtUpper": 564,
+        "minAboveUpper": 571
+      },
+      "primeBaseCount": 16
+    },
+    {
+      "field": "faed",
+      "length": 570,
+      "axis": "row",
+      "reversePositions": false,
+      "black": 1,
+      "white": 0,
+      "lower": 1926,
+      "upper": 2169,
+      "boundaryLengths": {
+        "maxAtLower": 570,
+        "maxBelowLower": 568,
+        "minAtUpper": 569,
+        "minAboveUpper": 571
+      },
+      "primeBaseCount": 33
+    },
+    {
+      "field": "faed",
+      "length": 570,
+      "axis": "row",
+      "reversePositions": false,
+      "black": 1,
+      "white": 1,
+      "lower": 1194,
+      "upper": 1193,
+      "boundaryLengths": {
+        "maxAtLower": 577,
+        "maxBelowLower": 566,
+        "minAtUpper": 561,
+        "minAboveUpper": 574
+      },
+      "primeBaseCount": 0
+    },
+    {
+      "field": "faed",
+      "length": 570,
+      "axis": "row",
+      "reversePositions": true,
+      "black": 0,
+      "white": 0,
+      "lower": 8377,
+      "upper": 21745,
+      "boundaryLengths": {
+        "maxAtLower": 570,
+        "maxBelowLower": 569,
+        "minAtUpper": 570,
+        "minAboveUpper": 571
+      },
+      "primeBaseCount": 1391
+    },
+    {
+      "field": "faed",
+      "length": 570,
+      "axis": "row",
+      "reversePositions": true,
+      "black": 0,
+      "white": 1,
+      "lower": 1426,
+      "upper": 1701,
+      "boundaryLengths": {
+        "maxAtLower": 575,
+        "maxBelowLower": 567,
+        "minAtUpper": 570,
+        "minAboveUpper": 577
+      },
+      "primeBaseCount": 42
+    },
+    {
+      "field": "faed",
+      "length": 570,
+      "axis": "row",
+      "reversePositions": true,
+      "black": 1,
+      "white": 0,
+      "lower": 1760,
+      "upper": 1925,
+      "boundaryLengths": {
+        "maxAtLower": 571,
+        "maxBelowLower": 568,
+        "minAtUpper": 569,
+        "minAboveUpper": 571
+      },
+      "primeBaseCount": 19
+    },
+    {
+      "field": "faed",
+      "length": 570,
+      "axis": "row",
+      "reversePositions": true,
+      "black": 1,
+      "white": 1,
+      "lower": 1194,
+      "upper": 1193,
+      "boundaryLengths": {
+        "maxAtLower": 580,
+        "maxBelowLower": 569,
+        "minAtUpper": 562,
+        "minAboveUpper": 574
+      },
+      "primeBaseCount": 0
+    },
+    {
+      "field": "faed",
+      "length": 570,
+      "axis": "column",
+      "reversePositions": false,
+      "black": 0,
+      "white": 0,
+      "lower": 10001,
+      "upper": 29505,
+      "boundaryLengths": {
+        "maxAtLower": 570,
+        "maxBelowLower": 556,
+        "minAtUpper": 570,
+        "minAboveUpper": 571
+      },
+      "primeBaseCount": 1975
+    },
+    {
+      "field": "faed",
+      "length": 570,
+      "axis": "column",
+      "reversePositions": false,
+      "black": 0,
+      "white": 1,
+      "lower": 1702,
+      "upper": 1873,
+      "boundaryLengths": {
+        "maxAtLower": 572,
+        "maxBelowLower": 569,
+        "minAtUpper": 570,
+        "minAboveUpper": 571
+      },
+      "primeBaseCount": 21
+    },
+    {
+      "field": "faed",
+      "length": 570,
+      "axis": "column",
+      "reversePositions": false,
+      "black": 1,
+      "white": 0,
+      "lower": 1426,
+      "upper": 1701,
+      "boundaryLengths": {
+        "maxAtLower": 573,
+        "maxBelowLower": 564,
+        "minAtUpper": 568,
+        "minAboveUpper": 575
+      },
+      "primeBaseCount": 42
+    },
+    {
+      "field": "faed",
+      "length": 570,
+      "axis": "column",
+      "reversePositions": false,
+      "black": 1,
+      "white": 1,
+      "lower": 1179,
+      "upper": 1193,
+      "boundaryLengths": {
+        "maxAtLower": 570,
+        "maxBelowLower": 568,
+        "minAtUpper": 562,
+        "minAboveUpper": 574
+      },
+      "primeBaseCount": 3
+    },
+    {
+      "field": "faed",
+      "length": 570,
+      "axis": "column",
+      "reversePositions": true,
+      "black": 0,
+      "white": 0,
+      "lower": 10001,
+      "upper": 29505,
+      "boundaryLengths": {
+        "maxAtLower": 570,
+        "maxBelowLower": 556,
+        "minAtUpper": 570,
+        "minAboveUpper": 571
+      },
+      "primeBaseCount": 1975
+    },
+    {
+      "field": "faed",
+      "length": 570,
+      "axis": "column",
+      "reversePositions": true,
+      "black": 0,
+      "white": 1,
+      "lower": 1426,
+      "upper": 1701,
+      "boundaryLengths": {
+        "maxAtLower": 572,
+        "maxBelowLower": 565,
+        "minAtUpper": 570,
+        "minAboveUpper": 577
+      },
+      "primeBaseCount": 42
+    },
+    {
+      "field": "faed",
+      "length": 570,
+      "axis": "column",
+      "reversePositions": true,
+      "black": 1,
+      "white": 0,
+      "lower": 1702,
+      "upper": 1925,
+      "boundaryLengths": {
+        "maxAtLower": 573,
+        "maxBelowLower": 568,
+        "minAtUpper": 569,
+        "minAboveUpper": 571
+      },
+      "primeBaseCount": 27
+    },
+    {
+      "field": "faed",
+      "length": 570,
+      "axis": "column",
+      "reversePositions": true,
+      "black": 1,
+      "white": 1,
+      "lower": 1179,
+      "upper": 1193,
+      "boundaryLengths": {
+        "maxAtLower": 570,
+        "maxBelowLower": 568,
+        "minAtUpper": 562,
+        "minAboveUpper": 574
+      },
+      "primeBaseCount": 3
+    }
+  ],
+  "controls": {
+    "exhaustive": 3072,
+    "plants": 96
+  },
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "boundsSHA256": "a8536dc55a67dbde4666a4f6364e2d0be433284daab58ecd9f7ddcb47b3c89fc",
+  "sourceSHA256": "3995d7d28ec09a72e55295ad7a060cd08aa3d2a4295fc371a085af9de8fdadb7",
+  "certificateEncoding": "Two uint8 rejection positions per dominant prime, original then reversed field. Zero means unresolved; nonzero is the first contradiction within the common decimal prefix for ALL secondary primes. Offsets in cases.jsonl."
+}

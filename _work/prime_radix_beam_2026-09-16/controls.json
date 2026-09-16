@@ -1,0 +1,130 @@
+[
+  {
+    "alphabetId": 0,
+    "textId": 0,
+    "file": "control_0_0.json",
+    "rank": 0,
+    "firstTruthDrop": null,
+    "sourceLength": 637,
+    "ambiguities": 129,
+    "trueScore": {
+      "letters": 359,
+      "quadSum": -1516.030442237854,
+      "quadMean": -4.258512478196219,
+      "score": 1438.6114162011586
+    },
+    "bestScore": 1438.6114162011586
+  },
+  {
+    "alphabetId": 0,
+    "textId": 1,
+    "file": "control_0_1.json",
+    "rank": 0,
+    "firstTruthDrop": null,
+    "sourceLength": 640,
+    "ambiguities": 121,
+    "trueScore": {
+      "letters": 363,
+      "quadSum": -1467.2791321277618,
+      "quadMean": -4.075775367021561,
+      "score": 1520.560949439779
+    },
+    "bestScore": 1520.560949439779
+  },
+  {
+    "alphabetId": 1,
+    "textId": 0,
+    "file": "control_1_0.json",
+    "rank": 0,
+    "firstTruthDrop": null,
+    "sourceLength": 637,
+    "ambiguities": 133,
+    "trueScore": {
+      "letters": 359,
+      "quadSum": -1516.030442237854,
+      "quadMean": -4.258512478196219,
+      "score": 1438.6114162011586
+    },
+    "bestScore": 1438.6114162011586
+  },
+  {
+    "alphabetId": 1,
+    "textId": 1,
+    "file": "control_1_1.json",
+    "rank": 0,
+    "firstTruthDrop": null,
+    "sourceLength": 640,
+    "ambiguities": 119,
+    "trueScore": {
+      "letters": 363,
+      "quadSum": -1467.2791321277618,
+      "quadMean": -4.075775367021561,
+      "score": 1520.560949439779
+    },
+    "bestScore": 1520.560949439779
+  },
+  {
+    "alphabetId": 2,
+    "textId": 0,
+    "file": "control_2_0.json",
+    "rank": 0,
+    "firstTruthDrop": null,
+    "sourceLength": 651,
+    "ambiguities": 129,
+    "trueScore": {
+      "letters": 359,
+      "quadSum": -1516.030442237854,
+      "quadMean": -4.258512478196219,
+      "score": 1438.6114162011586
+    },
+    "bestScore": 1438.6114162011586
+  },
+  {
+    "alphabetId": 2,
+    "textId": 1,
+    "file": "control_2_1.json",
+    "rank": 0,
+    "firstTruthDrop": null,
+    "sourceLength": 653,
+    "ambiguities": 144,
+    "trueScore": {
+      "letters": 363,
+      "quadSum": -1467.2791321277618,
+      "quadMean": -4.075775367021561,
+      "score": 1520.560949439779
+    },
+    "bestScore": 1520.560949439779
+  },
+  {
+    "alphabetId": 3,
+    "textId": 0,
+    "file": "control_3_0.json",
+    "rank": 0,
+    "firstTruthDrop": null,
+    "sourceLength": 651,
+    "ambiguities": 135,
+    "trueScore": {
+      "letters": 359,
+      "quadSum": -1516.030442237854,
+      "quadMean": -4.258512478196219,
+      "score": 1438.6114162011586
+    },
+    "bestScore": 1438.6114162011586
+  },
+  {
+    "alphabetId": 3,
+    "textId": 1,
+    "file": "control_3_1.json",
+    "rank": 1,
+    "firstTruthDrop": null,
+    "sourceLength": 653,
+    "ambiguities": 127,
+    "trueScore": {
+      "letters": 363,
+      "quadSum": -1467.2791321277618,
+      "quadMean": -4.075775367021561,
+      "score": 1520.560949439779
+    },
+    "bestScore": 1524.5344861732206
+  }
+]

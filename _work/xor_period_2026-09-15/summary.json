@@ -1,0 +1,3981 @@
+{
+  "cases": 640,
+  "nodes": 2361112,
+  "certificates": 1180828,
+  "excluded": [
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 1
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 2
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 3
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 4
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 5
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 6
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 7
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 8
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 9
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 10
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 11
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 12
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 13
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 14
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 15
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 16
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 17
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 18
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 19
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 20
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 21
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 22
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 23
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 24
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 25
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 26
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 27
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 28
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 29
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 30
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 31
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 1
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 2
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 3
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 4
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 5
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 6
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 7
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 8
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 9
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 10
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 11
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 12
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 13
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 14
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 15
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 16
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 17
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 18
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 19
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 20
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 21
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 22
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 23
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 24
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 25
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 26
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 27
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 28
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 29
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 30
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "period": 32
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "period": 32
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "period": 32
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "period": 32
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "period": 32
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "period": 32
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "period": 32
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "period": 32
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "period": 32
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "period": 32
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "period": 32
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "period": 32
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "period": 32
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "period": 32
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "period": 32
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "period": 32
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "period": 32
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 1
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 2
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 3
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 4
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 5
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 6
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 7
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 8
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 9
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 10
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 11
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 12
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 13
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 14
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 15
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 16
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 17
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 18
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 19
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 20
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 21
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 22
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 23
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 24
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 25
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 26
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 27
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 28
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 29
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 30
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 31
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "period": 32
+    }
+  ],
+  "compatible": [
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "period": 32,
+      "witnesses": 32,
+      "firstOnly": false
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "period": 32,
+      "witnesses": 16,
+      "firstOnly": false
+    }
+  ],
+  "partial": [],
+  "byFamily": {
+    "dbbi-original-g": {
+      "cases": 32,
+      "excluded": 31,
+      "compatible": 1,
+      "partial": 0
+    },
+    "dbbi-reverse-g": {
+      "cases": 32,
+      "excluded": 31,
+      "compatible": 1,
+      "partial": 0
+    },
+    "faed-original-a": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    },
+    "faed-original-b": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    },
+    "faed-original-c": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    },
+    "faed-original-d": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    },
+    "faed-original-e": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    },
+    "faed-original-f": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    },
+    "faed-original-g": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    },
+    "faed-original-h": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    },
+    "faed-original-i": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    },
+    "faed-reverse-a": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    },
+    "faed-reverse-b": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    },
+    "faed-reverse-c": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    },
+    "faed-reverse-d": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    },
+    "faed-reverse-e": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    },
+    "faed-reverse-f": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    },
+    "faed-reverse-g": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    },
+    "faed-reverse-h": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    },
+    "faed-reverse-i": {
+      "cases": 32,
+      "excluded": 32,
+      "compatible": 0,
+      "partial": 0
+    }
+  },
+  "controls": {
+    "successors": 262144,
+    "bruteForce": 32,
+    "planted": 3
+  }
+}

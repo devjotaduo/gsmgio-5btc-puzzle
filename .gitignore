@@ -31,3 +31,48 @@ _work/decentraland/*.png
 _work/decentraland/bin__game.js
 _work/decentraland/resp_*
 _work/decentraland/dep_*
+
+# Ambientes e preferências locais (arquivos já versionados não são removidos).
+/puzzle-env/
+/.venv/
+/.ruff_cache/
+/.pytest_cache/
+**/__pycache__/
+*.py[cod]
+/node_modules/
+/.codex/
+/.agents/
+/.claude/
+/skills-lock.json
+
+# Bancada de pesquisa: publicar relatórios e checkpoints compactos.
+# Saídas volumosas, corpus, downloads e extratos de conversa ficam no disco.
+/_work/**/*
+!/_work/**/
+!/_work/**/*.md
+!/_work/**/summary.json
+!/_work/**/spec.json
+!/_work/**/controls.json
+!/_work/**/final_qa.json
+!/_work/**/independent_verification.json
+
+# Estes checkpoints contêm enumerações grandes; os relatórios resumem os dados.
+/_work/checkerboard_exact_mask_2026-09-16/controls.json
+/_work/dbbi_columnar_2026-09-16/spec.json
+/_work/decimal_keystream_2026-09-15/carry_color/spec.json
+/_work/decimal_keystream_2026-09-15/spec.json
+/_work/feedback_decimal_2026-09-15/spec.json
+/_work/matrix_sum_words_2026-09-16/spec.json
+/_work/utf8_decimal_2026-09-16/two_symbols/summary.json
+# Contém candidatos aleatórios, inclusive um padrão semelhante a credencial.
+/_work/ambiguous_checkerboard_2026-09-15/general_english/summary.json
+
+# Dados públicos pequenos necessários à reprodução da rodada dos títulos.
+!/_work/prime_geometry_2026-09-11/inputs.json
+!/_work/archive/endgame/*.html
+!/_work/title_position_masks_2026-09-16/transforms.json
+!/_work/title_position_masks_2026-09-16/padding.json
+
+# Material histórico/importado; os relatórios próprios apontam suas fontes.
+/_work/public_recheck_2026-09-16/unverified_*.md
+/_work/session_2026-09-11/github_*_body.md

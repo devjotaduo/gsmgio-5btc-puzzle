@@ -1,0 +1,5 @@
+# Preserve locally all recovered artifacts; version only code and documentation.
+*
+!*.py
+!*.md
+!.gitignore

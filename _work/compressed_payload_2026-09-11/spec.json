@@ -1,0 +1,36 @@
+{
+  "sourceSHA256": "6ec90fecaa2ee9e1d7ed81c90d79d444b3b61e1bf9d1395701be877cbbdda2dc",
+  "inputsSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "node": "v24.13.0",
+  "zlib": "1.3.1-470d3a2",
+  "hypothesis": "Original complete DBBI/FAED, a..i=1..9, every g independently 0/7, whole decimal integer to minimal big-endian bytes.",
+  "scope": "Headers of zlib/gzip/ZIP/bzip2/XZ/7z; raw DEFLATE with no dictionary. FAED also tested with any dictionary of at most 38 bytes (DBBI decimal representation length).",
+  "exclusionsNotClaimed": "Other symbol maps/bases, bytes removed/reordered, embedded streams at other offsets, Brotli, headerless LZMA, larger dictionaries, or all compression algorithms.",
+  "acceptance": "Complete decompression, all input bytes consumed, arbitrary binary output allowed. Dictionary-length probes validate structure, not dictionary contents.",
+  "limits": {
+    "maxNodes": 100000,
+    "maxMs": 30000,
+    "maxOutputLength": 1048576,
+    "maxHits": 1000
+  },
+  "optionalDictionaryProbes": {
+    "enabled": true,
+    "lengths": [
+      91,
+      32768
+    ],
+    "maxNodes": 256,
+    "maxMs": 30000
+  },
+  "proof": "Each decimal branch encloses all remaining masks in an integer interval. Equal prefix bytes of the interval endpoints are fixed for all integers inside. A malformed DEFLATE prefix excludes every completion of that branch.",
+  "references": [
+    "https://www.rfc-editor.org/rfc/rfc1951.html",
+    "https://www.rfc-editor.org/rfc/rfc1950.html",
+    "https://www.rfc-editor.org/rfc/rfc1952.html",
+    "https://raw.githubusercontent.com/nodejs/node/v24.13.0/doc/api/zlib.md",
+    "https://tukaani.org/xz/xz-file-format.txt",
+    "https://sourceware.org/bzip2/manual/manual.html",
+    "https://www.7-zip.org/recover.html",
+    "https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT"
+  ]
+}

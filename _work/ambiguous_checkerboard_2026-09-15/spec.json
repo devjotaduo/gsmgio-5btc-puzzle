@@ -1,0 +1,63 @@
+{
+  "hypothesis": "Direct straddling checkerboard; known A1..I9 values, independently ambiguous zero/nonzero at each occurrence of any one alias; all 90 ordered escape pairs, both field directions.",
+  "caveat": "Only the maximum mean quadgram-score path is recovered per model. Not an exhaustive authentication of all possible plaintexts. No transposition or keystream in this run.",
+  "alphabets": [
+    {
+      "name": "phase32",
+      "alpha": "FUBCDORA.LETHINGKYMVPS.JQZXW"
+    },
+    {
+      "name": "alphabetical",
+      "alpha": "ABCDEFGHIJKLMNOPQRSTUVWXYZ.."
+    },
+    {
+      "name": "frequent-top",
+      "alpha": "ETAONRISBCDFGHJKLMPQUVWXYZ.."
+    },
+    {
+      "name": "keyed:matrixsumlist",
+      "alpha": "MATRIXSULBCDEFGHJKNOPQVWYZ.."
+    },
+    {
+      "name": "keyed:lastwordsbeforearchichoice",
+      "alpha": "LASTWORDBEFCHIGJKMNPQUVXYZ.."
+    },
+    {
+      "name": "keyed:thispassword",
+      "alpha": "THISPAWORDBCEFGJKLMNQUVXYZ.."
+    },
+    {
+      "name": "keyed:cosmicduality",
+      "alpha": "COSMIDUALTYBEFGHJKNPQRVWXZ.."
+    },
+    {
+      "name": "keyed:salphaseion",
+      "alpha": "SALPHEIONBCDFGJKMQRTUVWXYZ.."
+    },
+    {
+      "name": "keyed:thematrixhasyou",
+      "alpha": "THEMARIXSYOUBCDFGJKLNPQVWZ.."
+    },
+    {
+      "name": "keyed:primebasics",
+      "alpha": "PRIMEBASCDFGHJKLNOQTUVWXYZ.."
+    },
+    {
+      "name": "keyed:halfandbetterhalf",
+      "alpha": "HALFNDBETRCGIJKMOPQSUVWXYZ.."
+    },
+    {
+      "name": "keyed:ourfirsthintisyourlastcommand",
+      "alpha": "OURFISTHNYLACMDBEGJKPQVWXZ.."
+    }
+  ],
+  "controls": {
+    "knownPhase32": true,
+    "planted": 18,
+    "exactRecovery": 15,
+    "exhaustive": 36
+  },
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "scorerSHA256": "937c8857c9640a38fe43cc82f3ae136074dd2096cf6789b615966dffddb834fc",
+  "sourceSHA256": "434bdd5f3d9c6ceb8d736727b53bf41c1e6b6f93d6fb2a9d90788fec11f54514"
+}

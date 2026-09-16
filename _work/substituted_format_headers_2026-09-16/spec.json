@@ -1,0 +1,112 @@
+{
+  "hypothesis": "Complete original/reversed DBBI and FAED are decimal integers under any bijection a..i to 1..9. Every occurrence of up to two chosen letters may independently be zero instead. Minimal big-endian bytes must start with a listed file signature.",
+  "limits": "Necessary header compatibility only. A witness is not decompressed data. No byte reversal, removed symbols, extra prefix/suffix bytes, three zero aliases, other numeral bases, or other file formats.",
+  "formats": {
+    "gzip": [
+      "1f8b08"
+    ],
+    "zlib": [
+      "081d",
+      "083c",
+      "085b",
+      "087a",
+      "0899",
+      "08b8",
+      "08d7",
+      "08f6",
+      "1819",
+      "1838",
+      "1857",
+      "1876",
+      "1895",
+      "18b4",
+      "18d3",
+      "18f2",
+      "2815",
+      "2834",
+      "2853",
+      "2872",
+      "2891",
+      "28b0",
+      "28cf",
+      "28ee",
+      "3811",
+      "3830",
+      "384f",
+      "386e",
+      "388d",
+      "38ac",
+      "38cb",
+      "38ea",
+      "480d",
+      "482c",
+      "484b",
+      "486a",
+      "4889",
+      "48a8",
+      "48c7",
+      "48e6",
+      "5809",
+      "5828",
+      "5847",
+      "5866",
+      "5885",
+      "58a4",
+      "58c3",
+      "58e2",
+      "6805",
+      "6824",
+      "6843",
+      "6862",
+      "6881",
+      "68a0",
+      "68bf",
+      "68de",
+      "68fd",
+      "7801",
+      "7820",
+      "783f",
+      "785e",
+      "787d",
+      "789c",
+      "78bb",
+      "78da",
+      "78f9"
+    ],
+    "zip": [
+      "504b"
+    ],
+    "bzip2": [
+      "425a6831",
+      "425a6832",
+      "425a6833",
+      "425a6834",
+      "425a6835",
+      "425a6836",
+      "425a6837",
+      "425a6838",
+      "425a6839"
+    ],
+    "xz": [
+      "fd377a585a00"
+    ],
+    "7z": [
+      "377abcaf271c"
+    ]
+  },
+  "controls": {
+    "bruteCases": 96,
+    "bruteAssignments": 4224,
+    "plantedExactIntegers": 36
+  },
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceSHA256": "bcbe50664809788f2f1fdbff6c6429b6ec6534d82c80757d8241d68fea0bddbb",
+  "references": [
+    "https://www.rfc-editor.org/rfc/rfc1952.html",
+    "https://www.rfc-editor.org/rfc/rfc1950.html",
+    "https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT",
+    "https://sourceware.org/bzip2/manual/manual.html",
+    "https://tukaani.org/xz/xz-file-format.txt",
+    "https://www.7-zip.org/recover.html"
+  ]
+}

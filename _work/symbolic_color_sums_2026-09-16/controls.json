@@ -1,0 +1,245 @@
+{
+  "planted": [
+    {
+      "axis": "row",
+      "black": 0,
+      "white": 0,
+      "p": "3",
+      "q": "17",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "row",
+      "black": 0,
+      "white": 0,
+      "p": "37",
+      "q": "101",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "row",
+      "black": 0,
+      "white": 0,
+      "p": "1000003",
+      "q": "1000033",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "row",
+      "black": 0,
+      "white": 1,
+      "p": "3",
+      "q": "17",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "row",
+      "black": 0,
+      "white": 1,
+      "p": "37",
+      "q": "101",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "row",
+      "black": 0,
+      "white": 1,
+      "p": "1000003",
+      "q": "1000033",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "row",
+      "black": 1,
+      "white": 0,
+      "p": "3",
+      "q": "17",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "row",
+      "black": 1,
+      "white": 0,
+      "p": "37",
+      "q": "101",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "row",
+      "black": 1,
+      "white": 0,
+      "p": "1000003",
+      "q": "1000033",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "row",
+      "black": 1,
+      "white": 1,
+      "p": "3",
+      "q": "17",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "row",
+      "black": 1,
+      "white": 1,
+      "p": "37",
+      "q": "101",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "row",
+      "black": 1,
+      "white": 1,
+      "p": "1000003",
+      "q": "1000033",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "column",
+      "black": 0,
+      "white": 0,
+      "p": "3",
+      "q": "17",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "column",
+      "black": 0,
+      "white": 0,
+      "p": "37",
+      "q": "101",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "column",
+      "black": 0,
+      "white": 0,
+      "p": "1000003",
+      "q": "1000033",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "column",
+      "black": 0,
+      "white": 1,
+      "p": "3",
+      "q": "17",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "column",
+      "black": 0,
+      "white": 1,
+      "p": "37",
+      "q": "101",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "column",
+      "black": 0,
+      "white": 1,
+      "p": "1000003",
+      "q": "1000033",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "column",
+      "black": 1,
+      "white": 0,
+      "p": "3",
+      "q": "17",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "column",
+      "black": 1,
+      "white": 0,
+      "p": "37",
+      "q": "101",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "column",
+      "black": 1,
+      "white": 0,
+      "p": "1000003",
+      "q": "1000033",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "column",
+      "black": 1,
+      "white": 1,
+      "p": "3",
+      "q": "17",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "column",
+      "black": 1,
+      "white": 1,
+      "p": "37",
+      "q": "101",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    },
+    {
+      "axis": "column",
+      "black": 1,
+      "white": 1,
+      "p": "1000003",
+      "q": "1000033",
+      "aliases": "be",
+      "alphabet": "ihgfedcba",
+      "passed": true
+    }
+  ],
+  "segmentationControls": 6
+}

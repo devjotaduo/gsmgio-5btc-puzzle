@@ -1,0 +1,102 @@
+{
+  "complete": true,
+  "keys": 26473,
+  "models": 9742064,
+  "valid": 9924,
+  "printable": 4068,
+  "lettersSpace": 0,
+  "decryptions": 14283397,
+  "groups": [
+    {
+      "n": 362,
+      "p": 2,
+      "q": 181,
+      "family": "RGB prime factors",
+      "keys": 48,
+      "models": 17664,
+      "valid": 0,
+      "printable": 0,
+      "lettersSpace": 0
+    },
+    {
+      "n": 6,
+      "p": 3,
+      "q": 2,
+      "family": "RGB prime factors",
+      "keys": 1,
+      "models": 368,
+      "valid": 0,
+      "printable": 0,
+      "lettersSpace": 0
+    },
+    {
+      "n": 543,
+      "p": 3,
+      "q": 181,
+      "family": "RGB prime factors",
+      "keys": 48,
+      "models": 17664,
+      "valid": 0,
+      "printable": 0,
+      "lettersSpace": 0
+    },
+    {
+      "n": 74,
+      "p": 37,
+      "q": 2,
+      "family": "RGB prime factors",
+      "keys": 12,
+      "models": 4416,
+      "valid": 0,
+      "printable": 0,
+      "lettersSpace": 0
+    },
+    {
+      "n": 6697,
+      "p": 37,
+      "q": 181,
+      "family": "RGB prime factors",
+      "keys": 48,
+      "models": 17664,
+      "valid": 0,
+      "printable": 0,
+      "lettersSpace": 0
+    },
+    {
+      "n": 18682,
+      "p": 9341,
+      "q": 2,
+      "family": "RGB prime factors",
+      "keys": 3728,
+      "models": 1371904,
+      "valid": 9914,
+      "printable": 4068,
+      "lettersSpace": 0
+    },
+    {
+      "n": 1690721,
+      "p": 9341,
+      "q": 181,
+      "family": "RGB prime factors",
+      "keys": 22368,
+      "models": 8231424,
+      "valid": 10,
+      "printable": 0,
+      "lettersSpace": 0
+    },
+    {
+      "n": 1081,
+      "p": 47,
+      "q": 23,
+      "family": "Prime ordinals of colour counts",
+      "keys": 220,
+      "models": 80960,
+      "valid": 0,
+      "printable": 0,
+      "lettersSpace": 0
+    }
+  ],
+  "elapsedMs": 10292,
+  "flagsSHA256": "9fd8b119e178e6c505116d77f36785889f8ce648c712b6a7f184f66ef05c3b7a",
+  "validSHA256": "9ba1e7f8bd3b01b81ee01923447e28f0530ea99c3d943798ff6e5a353aae6f2d"
+}

@@ -1,0 +1,10 @@
+{
+  "transforms": 224,
+  "distinctMaterials": 3200,
+  "passwordCases": 6400,
+  "attempts": 38400,
+  "padding": 152,
+  "maxPrintable": 0.5443037974683544,
+  "decisionsSHA256": "baa2ef57b6e06e37212be45421ad79f14e3cb44701c199423bdc76e1b320b095",
+  "warning": "Padding is not authentication. No coherent output or final key is implied by these counts."
+}

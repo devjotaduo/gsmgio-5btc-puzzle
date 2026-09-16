@@ -1,0 +1,18 @@
+{
+  "complete": true,
+  "when": "2026-09-16T10:34:09.175Z",
+  "checks": "Twenty complete exact-alphabet models, all candidate and verification hashes, every pilot found-candidate authentication, two source pilots still partial, no scalar match, all report links exist",
+  "activeProcess": false,
+  "hashes": {
+    "spec.json": "41dc163f8455da9dad063cf7512013ab6676b80691082497c78948d6e257a312",
+    "summary.json": "e4dcc27f5575ea61fb0d5c06cc9118bb1ef6057e406c836ee19ae37a8a138f8c",
+    "candidates.json": "a685832a7aaa93be06856245b7f51d5ed958a38fe92700e948e280d84cbe49d7",
+    "verification.json": "4cf14d21d64e7340bb4f070276ceee1ca7cb25db63b1d6b2918e20ad82f3163f",
+    "oracles.json": "1d182a65124b3ba27ec4c248d1c3f0fd4b281a9511e313c05915d840f2e90fdb",
+    "oracle_verification.json": "ac0320b44682e5f8cdea2e60d074357eb9ad3558df76906c898e3db35f42eaab",
+    "pilot_verification.json": "7d0d151133eb10abc7e82f6fab3bbb0e3bc2b8cf20a02a0568a5f70a63572485",
+    "pilot_oracles.json": "0fcc2b5a0c60a494d91cfea85c7dad7f0885c47c4f9a7308c73866232c1d8100",
+    "pilot_oracle_verification.json": "59072ad9febbecbb3f2f609233e5ef4aab18d451f3d885eae845a15cc76a1d1a",
+    "RELATORIO.md": "cdba36ae29c2b90b160458293642991844ea591a3d0e66d5c5b821f555442afc"
+  }
+}

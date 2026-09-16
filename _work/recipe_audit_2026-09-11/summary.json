@@ -1,0 +1,91 @@
+{
+  "expected": {
+    "base": "JLIQFOPGVBLSENDTHECZAGJJYDSWCGUDJNFTWB",
+    "blue": "JLUPFLPGLBLUENETDICZAGAJQDSWCGUDONFHWB",
+    "yellow": "OLIQUBROVQLTOSETHEXQYOJSSICJFGUDCCVBWQ"
+  },
+  "primaryMarkerScore": 19,
+  "stats": {
+    "dbbi": {
+      "mutations": 728,
+      "allRailsUnchanged": 0,
+      "primaryMarkersUnchanged": 48,
+      "rawChangesHiddenByMod26": 44,
+      "perRail": {
+        "base": {
+          "changedMutations": 728,
+          "changedOutputPositions": 3943
+        },
+        "blue": {
+          "changedMutations": 728,
+          "changedOutputPositions": 3946
+        },
+        "yellow": {
+          "changedMutations": 656,
+          "changedOutputPositions": 3539
+        }
+      }
+    },
+    "faed": {
+      "mutations": 4560,
+      "allRailsUnchanged": 3,
+      "primaryMarkersUnchanged": 3361,
+      "rawChangesHiddenByMod26": 85,
+      "perRail": {
+        "base": {
+          "changedMutations": 4534,
+          "changedOutputPositions": 4534
+        },
+        "blue": {
+          "changedMutations": 4460,
+          "changedOutputPositions": 4460
+        },
+        "yellow": {
+          "changedMutations": 4523,
+          "changedOutputPositions": 4523
+        }
+      }
+    }
+  },
+  "swaps": {
+    "tested": 135,
+    "primaryMarkersUnchanged": 8,
+    "allRailsUnchanged": 0,
+    "maxScore": 19
+  },
+  "markerColumns": {
+    "base": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "blue": [
+      10,
+      11,
+      12,
+      13
+    ],
+    "yellow": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ]
+  },
+  "faedPositionsOutsideAllPrimaryMarkerRows": 420,
+  "collision": {
+    "changedDBBI": 4,
+    "changedFAED": 442,
+    "sameFullPreModuloState": true
+  },
+  "analyticPredictionsChecked": 602832,
+  "interpretation": "All controls hold the published recipe fixed. Invariance of aggregates/markers measures information loss and is not evidence that a sum-based puzzle is invalid."
+}

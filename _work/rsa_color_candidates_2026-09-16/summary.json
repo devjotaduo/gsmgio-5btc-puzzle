@@ -1,0 +1,29 @@
+{
+  "complete": true,
+  "models": 9924,
+  "keyFormatDecisions": 79392,
+  "keyFormatHits": 0,
+  "fixedSizeModels": [
+    0,
+    8064,
+    0
+  ],
+  "fixedGroups": {
+    "dbbi/18682/2": {
+      "models": 8058,
+      "paths": "573784123439575537"
+    },
+    "faed/18682/2": {
+      "models": 6,
+      "paths": "92324258941903573264691581910131766122509124476827160536521113600000"
+    }
+  },
+  "selectedPaths": 35976,
+  "candidates": 51335,
+  "elapsedMs": 5207,
+  "files": {
+    "models.jsonl": "3369d8cad8ddf48b99bd5566e1180cf4cf7d9c5c35211db909e947853064b749",
+    "selected.jsonl": "141e9055c68e6a6b5a76e9ab63eecea7fc924b77088d0f593d35d0ba4ca96b11",
+    "candidates.jsonl": "e5d08132496b6a3bd3f36a75ed2a7d658088a4e7f11b046d6a0757965698cce1"
+  }
+}

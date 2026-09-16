@@ -1,0 +1,7 @@
+{
+  "hypothesis": "Each coloured cell marks the final bit of one byte of the original URL. Interpret primes as the values of those ASCII bytes, not as their positions. Select prime-valued bytes, nonprime-valued bytes, or all bytes. Either zero the unselected original bytes in the bitmap, or replace each coloured cell with the selected ASCII value while other cells keep bits or become zero. Compute row/column lists. Nonprime/all are declared comparison alternatives, not creator instructions.",
+  "scope": "Five list orders, reversal, six fixed formats; list alone or followed by one of two previously selected last-word clauses. Also filtered URL bytes and NUL-masked URL bytes. Direct and SHA256-hex passwords; EVP-SHA256/MD5 on three original blobs. SHA256 of each material and password as scalar, and complete 32-byte/64-hex plaintext only. No shifted positions, alternate URLs, arbitrary primes, new cipher layers or binary-window searches.",
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceSHA256": "ddfc69b786b9f419ae132c365e0d472499575eba426026f43b0ab6cb135651b8",
+  "helperSHA256": "07a7a6eba6185a490bbfa6f6f0084346318fd37ac132239dfcc6ca9a44824c8e"
+}

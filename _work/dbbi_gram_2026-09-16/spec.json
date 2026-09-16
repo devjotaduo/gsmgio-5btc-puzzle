@@ -1,0 +1,129 @@
+{
+  "createdAt": "2026-09-16T05:19:39.497Z",
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceSHA256": "70107c6c5d2303a3648fc94d39fa578bda0ddba42753e94543eca5ac908e1f1a",
+  "dbbiSHA256": "71fe46259e270c113529dfaded4b59c59a9dffd826a7202ab07fc498b6a2c5ca",
+  "colours": [
+    "blue",
+    "yellow",
+    "black",
+    "white",
+    "nearWhite"
+  ],
+  "dbbiCounts": [
+    3,
+    25,
+    8,
+    4,
+    18,
+    10,
+    10,
+    8,
+    5
+  ],
+  "hypothesis": "DBBI encodes the 91 off-diagonal row or column inner products of the original 14x14 matrix. Each colour has one nonnegative integer weight. The near-white cell at [7,4] may have its own weight. Any permutation of all 91 entries is allowed.",
+  "encoding": "Any bijection a..i -> 1..9; any ONE letter can independently denote zero or its assigned digit at each occurrence.",
+  "finiteReduction": {
+    "ordinaryColours": "For each axis and ordinary colour, two distinct vectors share that colour at a coordinate. That dot product is at least weight^2; all products are nonnegative. Thus every ordinary weight is at most 3.",
+    "squareWitnesses": {
+      "rows": [
+        {
+          "colour": "blue",
+          "vertices": [
+            0,
+            8
+          ],
+          "coordinate": 5
+        },
+        {
+          "colour": "yellow",
+          "vertices": [
+            4,
+            12
+          ],
+          "coordinate": 9
+        },
+        {
+          "colour": "black",
+          "vertices": [
+            0,
+            1
+          ],
+          "coordinate": 3
+        },
+        {
+          "colour": "white",
+          "vertices": [
+            0,
+            1
+          ],
+          "coordinate": 4
+        }
+      ],
+      "columns": [
+        {
+          "colour": "blue",
+          "vertices": [
+            2,
+            10
+          ],
+          "coordinate": 1
+        },
+        {
+          "colour": "yellow",
+          "vertices": [
+            6,
+            10
+          ],
+          "coordinate": 5
+        },
+        {
+          "colour": "black",
+          "vertices": [
+            0,
+            1
+          ],
+          "coordinate": 1
+        },
+        {
+          "colour": "white",
+          "vertices": [
+            0,
+            1
+          ],
+          "coordinate": 0
+        }
+      ]
+    },
+    "nearWhite": "The fifth colour occurs once. If another entry in its coordinate across vectors has positive weight, a dot product is at least its weight, so the weight is at most 9. Otherwise every off-diagonal product involving it is zero, and any larger weight is equivalent to zero.",
+    "nearWhiteCell": [
+      7,
+      4
+    ],
+    "weightDomains": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        9
+      ]
+    ],
+    "cases": 5120
+  },
+  "necessaryAndSufficientHistogramCondition": "All values in 0..9. For some d in 1..9, merging the zero count into the count of d makes the nine positive-digit counts a permutation of the nine DBBI letter counts. This is sufficient only because arbitrary pair reordering is allowed.",
+  "limits": "No negative weights/cancellation, modular dot products, arbitrary nondecimal labels, multiple independently zeroable letters, vector families other than original rows or columns, or general 196-entry row-column cross products."
+}

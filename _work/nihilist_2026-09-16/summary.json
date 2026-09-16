@@ -1,0 +1,113 @@
+{
+  "controls": {
+    "acaPublishedExample": true,
+    "plantedMappings": 3
+  },
+  "orientations": [
+    {
+      "reversed": false,
+      "reducedMappings": 20160,
+      "minimumPeriod": 277,
+      "knownMappingPeriods": [],
+      "compatiblePeriods": [
+        {
+          "period": 277,
+          "mappings": 19
+        },
+        {
+          "period": 278,
+          "mappings": 195
+        },
+        {
+          "period": 279,
+          "mappings": 250
+        },
+        {
+          "period": 280,
+          "mappings": 314
+        },
+        {
+          "period": 281,
+          "mappings": 2746
+        },
+        {
+          "period": 282,
+          "mappings": 3502
+        },
+        {
+          "period": 283,
+          "mappings": 4284
+        },
+        {
+          "period": 284,
+          "mappings": 10920
+        },
+        {
+          "period": 285,
+          "mappings": 20160
+        }
+      ],
+      "minimumWitnesses": 19
+    },
+    {
+      "reversed": true,
+      "reducedMappings": 20160,
+      "minimumPeriod": 275,
+      "knownMappingPeriods": [
+        282,
+        283,
+        285
+      ],
+      "compatiblePeriods": [
+        {
+          "period": 275,
+          "mappings": 3
+        },
+        {
+          "period": 276,
+          "mappings": 1
+        },
+        {
+          "period": 277,
+          "mappings": 26
+        },
+        {
+          "period": 278,
+          "mappings": 149
+        },
+        {
+          "period": 279,
+          "mappings": 211
+        },
+        {
+          "period": 280,
+          "mappings": 400
+        },
+        {
+          "period": 281,
+          "mappings": 2822
+        },
+        {
+          "period": 282,
+          "mappings": 3512
+        },
+        {
+          "period": 283,
+          "mappings": 4226
+        },
+        {
+          "period": 284,
+          "mappings": 10992
+        },
+        {
+          "period": 285,
+          "mappings": 20160
+        }
+      ],
+      "minimumWitnesses": 3
+    }
+  ],
+  "resultsSHA256": "bd977447d76c16dd131f99187f760f009b28f7ab2b2f44c7246553d5e7251e8b",
+  "aesTrials": 0,
+  "finalPasswordFound": false
+}

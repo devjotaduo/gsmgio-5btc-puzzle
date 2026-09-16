@@ -1,0 +1,13 @@
+{
+  "lists": 17,
+  "materials": 81,
+  "passwords": 162,
+  "attempts": 972,
+  "padding": 6,
+  "expected_random_padding": 3.8117647058823527,
+  "max_ascii": 0.4430379746835443,
+  "ascii_triage": 0,
+  "distinct_key_checks": 9363,
+  "hits": [],
+  "control": "Original phase32 SHA256 positive, MD5 negative, rails exactly match recovered X source"
+}

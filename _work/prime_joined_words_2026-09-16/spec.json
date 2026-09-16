@@ -1,0 +1,22 @@
+{
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "corpusSHA256": "51df159fd3de12b20e403c108f526e96dbd723d9cabdd5f17955cdc16059e690",
+  "threshold": 1000000,
+  "words": 26264,
+  "alphabets": [
+    " abcdefghijklmnopqrstuvwxyz.,",
+    "abcdefghijklmnopqrstuvwxyz .,",
+    " abcdefghijklmnopqrstuvwxyz.,-'",
+    "abcdefghijklmnopqrstuvwxyz .,-'",
+    " abcdefghijklmnopqrstuvwxyz0123456789",
+    "0123456789abcdefghijklmnopqrstuvwxyz "
+  ],
+  "controls": 18,
+  "limits": {
+    "maxNodes": 200000,
+    "maxMs": 15000
+  },
+  "sourceSHA256": "e639c5933f21a71b8fada5509e545a97c4ec09eacc3f4e0583e5d27b29aadd1e",
+  "searchSHA256": "c8ff3dfdb155ab752ac1264450539f8a5d19d653b49ab9a441ae28ae2251b194",
+  "hypothesis": "Same whole-integer prime-radix alphabets and g=0/7 masks as prime_alphabet_words; maximal letter runs may now be concatenations of corpus words with count>=1000000, length<=32, single letters A/I. Separators/digits permitted. No unknown-name or complete natural-language claim."
+}

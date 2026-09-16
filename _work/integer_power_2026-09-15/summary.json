@@ -1,0 +1,340 @@
+{
+  "cases": 39438,
+  "nodes": 42960,
+  "certificates": 41199,
+  "partial": [],
+  "candidates": 0,
+  "groups": [
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "a",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "b",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "c",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "d",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "e",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "f",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "h",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "i",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "a",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "b",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "c",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "d",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "e",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "f",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "h",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "i",
+      "maxExponent": 301,
+      "cases": 300,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "maxExponent": 1892,
+      "cases": 1891,
+      "partial": 0,
+      "candidates": 0
+    }
+  ],
+  "aesAttempts": 0,
+  "padding": 0,
+  "controls": {
+    "roots": 22450,
+    "planted": 12,
+    "bruteForce": 36
+  }
+}

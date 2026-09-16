@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "when": "2026-09-16T10:10:08.622Z",
+  "checks": "Safe-import regeneration, independent-verification artifact hashes, no scalar matches, stale resume instruction removed",
+  "hashes": {
+    "spec.json": "4e3edf775e5f2de5d152220421a64ee703f8e3a78ebee412ff22577cc55a7491",
+    "derivation.json": "a19f9513a7c6644231498ca127647d8d95c85464301174e718ef6a23aa415f90",
+    "oracles.json": "15ed40d88250ab2ea94f84b6d82db1895c3cba527cdd683ece1eb867e7f77693",
+    "verification.json": "63aa5fec2d2226ac01d6a0049a4b388900dc6c333774b40dec0cd937e65c3b1d",
+    "RELATORIO.md": "b40032bc572643741671a6290d336cd8aa55c7dbb6a7f73dad00f7f46d990dd8"
+  }
+}

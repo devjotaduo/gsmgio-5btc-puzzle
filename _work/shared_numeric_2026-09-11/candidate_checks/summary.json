@@ -1,0 +1,13 @@
+{
+  "candidates": 177,
+  "all_candidate_inverse_checks": 177,
+  "materials": 708,
+  "passwords": 1416,
+  "attempts": 8496,
+  "padding": 28,
+  "max_plaintext_ascii": 0.4810126582278481,
+  "ascii_triage": 0,
+  "distinct_scalar_checks": 206556,
+  "key_hits": [],
+  "search_complete": false
+}

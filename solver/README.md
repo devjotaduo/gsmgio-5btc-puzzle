@@ -1,63 +1,74 @@
-# Solver autônomo GSMG (Llama local + GPU)
+# Scripts de pesquisa GSMG
 
-Harness que trabalha **incansavelmente** no endgame (SalPhaseIon / Cosmic Duality):
-o modelo local **propõe** métodos, a máquina **executa** e **julga** contra
-**oráculos duros**. Nada que o modelo "diga" conta como solução — só um oráculo
-(endereço BTC batido, checksum BIP39, padding AES válido) pode declarar solve.
-Isso torna impossível um falso-solve por alucinação.
+A senha final e a chave do prêmio continuam sem validação. Esta pasta reúne
+experimentos independentes, verificadores e um harness histórico. O
+[índice de relatórios](../docs/RESEARCH-INDEX.md) é o ponto de entrada para
+escolher o que executar.
 
-## Arquitetura (divisão de trabalho)
+## Famílias de scripts
 
-```
-                    ┌─────────── oráculos DUROS (oracles.py) ───────────┐
-                    │  aes_open · check_privkey(addr) · check_mnemonic  │  ← única
-                    └────────────────────────────────────────────────────┘     verdade
-  llama3 (GPU)  ─┐        ▲                         ▲
-  propõe JSON    ├─► runner.py (CPU) ──► DSL ───────┘                 hard-oracle a cada
-  + alfabetos    │   enumerativo + feedback de becos                  novo melhor plaintext
-                 │                                                     ▲
-  GPU genética  ─┘        gpu_search.py (CUDA) ──► criptanálise Bifid ─┘
-                          milhares de quadrados/geração
-```
+| Prefixo ou grupo | Finalidade |
+| --- | --- |
+| `color_`, `matrix_`, `ring_`, `positional_` | Cores, geometria e listas de somas |
+| `decimal_`, `zero_`, `substituted_`, `unbounded_` | Dígitos, zeros e conversões de inteiros |
+| `prime_`, `radix127_`, `rsa_` | Primos, bases e hipóteses RSA |
+| `checkerboard_`, `joint_checkerboard_`, `nihilist_` | Cifras clássicas e análise de linguagem |
+| `xor_`, `feedback_`, `columnar_` | Fluxos, operações e transposições |
+| `compressed_`, `brotli_`, `mp3_`, `title_` | Formatos e pistas estruturais |
+| `verify_*.cjs` | Conferência independente de experimentos específicos |
+| `experiments/claude_endgame_2026_09_02/` | Snapshot histórico, com documentação própria |
 
-- **`oracles.py`** — fontes (dbbi/faed, blobs SMALL/COSMIC) + oráculos duros. Núcleo confiável.
-- **`dsl.py`** — interpreta cada hipótese JSON como pipeline executável e determinístico.
-- **`scorer.py`** — modelo de quadgramas EN (corpus = `result.json`) p/ sinal de legibilidade.
-- **`search.py`** — hill-climb Bifid em CPU (referência).
-- **`gpu_search.py`** — **algoritmo genético batelado na GPU** sobre quadrados Bifid.
-  O único motor com *gradiente*. Requer `torch`+CUDA.
-- **`runner.py`** — loop autônomo: llama3 propõe hipóteses/alfabetos + gerador
-  enumerativo temático; oráculos AES/priv/bip39; dedup; `journal.jsonl`; feedback de becos.
-- **`launch.py`** — sobe os dois motores juntos e para quando um oráculo fecha.
+Os nomes e caminhos foram mantidos: vários scripts importam outros módulos
+desta pasta ou usam entradas em `_work/`. Nem todo script é um comando
+isolado e nem todo resultado bruto faz parte do Git.
 
-## Como rodar (incansável)
+## Executar uma rodada
 
-```bash
-cd solver
-python selftest.py            # valida o núcleo (reproduz BTCSEED, rejeita lixo)
-python gpu_search.py --selftest   # valida o decode Bifid na GPU (GPU==CPU)
-python launch.py             # sobe GPU + CPU; roda até SOLVED ou Ctrl-C
-python launch.py --status    # heartbeats + candidatos
+Leia o relatório correspondente antes de executar. Use a raiz do repositório
+como diretório de trabalho, salvo indicação explícita. Alguns scripts
+aceitam uma nova pasta de saída; outros têm destinos fixos e podem
+sobrescrever evidências. Não execute a pasta inteira em lote.
+
+Exemplo de rodada que usa apenas módulos nativos do Node.js, validada com
+Node 24:
+
+```powershell
+node --check solver/title_position_masks.cjs
+node solver/title_position_masks.cjs _work/title_mask_reproduction
 ```
 
-Saídas em `solver/out/` (ignoradas pelo git):
-`SOLVED.json` (escrito 1× se um oráculo fechar), `journal.jsonl`, `gpu_candidates.jsonl`
-(plaintexts com legibilidade alta p/ revisão humana), `status.json`/`gpu_status.json`.
+O exemplo inclui um controle conhecido AES e salva parâmetros,
+transformações, materiais e resultados. Não encontrou uma senha válida.
+As fontes e entradas públicas necessárias estão no repositório; o arquivo
+grande de materiais pode ser regenerado pelo comando.
 
-## O que já se aprendeu com o harness (verificado)
+## Como interpretar os resultados
 
-- **Decode Bifid na GPU == CPU** e reproduz `BTCSEED` (marco verificado).
-- **Controle**: o GA recupera 100% de um inglês conhecido cifrado em Bifid de
-  **período curto** (ex.: 15). Logo o motor é capaz *quando existe solução*.
-- **Bifid de período completo (570) é indecifrável por busca de quadrado** — o
-  controle só recupera "THE…" e diverge. Portanto o quadrado (CANON) é *derivado
-  do dbbi*, não buscável; e o corpo pós-BTCSEED, se for inglês, usaria outro passo.
-- A busca sobre **todos os períodos curtos** do faed é o teste rigoroso pendente
-  (roda em `gpu_search.py`): se nenhum (quadrado,período) atingir nível de inglês,
-  é um negativo forte e *validado pelo controle*.
+- Um negativo exclui somente a hipótese e o espaço declarados no relatório.
+- Uma busca parcial não exclui os ramos pendentes.
+- Padding AES válido ocorre por acaso; não autentica uma senha.
+- Checksum BIP39 confirma um formato, não a carteira do prêmio.
+- Texto coerente precisa de derivação reproduzível; uma chave final deve
+  corresponder ao endereço ou ponto público do prêmio.
 
-## Requisitos
+O fragmento histórico `BTCSEED` e as cadeias binárias antigas não são
+soluções autenticadas. O modelo de linguagem treinado com `result.json`
+contém as próprias cifras; seus escores não são evidência independente.
+Consulte a [auditoria](../_work/ambiguous_checkerboard_2026-09-15/RELATORIO.md).
 
-Python 3.11+, `pip install pycryptodome ecdsa base58 mnemonic bip-utils numpy`,
-`torch` cu128 (RTX 50xx). Ollama com `llama3:latest` (roda 100% na GPU).
-Env: `GSMG_MODEL` p/ trocar o modelo (default `llama3:latest`).
+## Harness histórico Python/GPU
+
+`oracles.py`, `dsl.py`, `scorer.py`, `search.py`, `gpu_search.py`,
+`runner.py` e `launch.py` pertencem ao harness anterior. Suas saídas,
+inclusive um eventual `SOLVED.json`, exigem revisão dos critérios acima.
+A organização do repositório não revalidou todas as campanhas históricas.
+
+Esse grupo documentava Python 3.11+, PyCryptodome, ecdsa, base58, mnemonic,
+bip-utils e numpy; o motor GPU também utiliza PyTorch/CUDA, e o loop de
+propostas utiliza Ollama. Esses requisitos não se aplicam automaticamente
+aos scripts Node. Consulte os imports e o relatório do experimento antes
+de preparar um ambiente. `puzzle-env/` e `solver/out/` são locais.
+
+O [snapshot recuperado](experiments/claude_endgame_2026_09_02/README.md)
+preserva seu próprio briefing e código. Corpus e modelos grandes do
+snapshot permanecem fora do Git.

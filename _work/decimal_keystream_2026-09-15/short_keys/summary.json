@@ -1,0 +1,258 @@
+{
+  "hypothesis": "P digits = (C-K) or (K-C) mod10, a1z26 cipher digits with every g independently 0 or 7. Whole P decimal integer to bytes all <=127.",
+  "scope": "FAED only; both complete symbol orientations; ALL keys of lengths 1..maximum, including leading-zero keys. Longer keys and other transformations are not covered.",
+  "maximumPeriod": 6,
+  "maxNodesPerKey": 200000,
+  "controls": {
+    "referenceComparisons": 240,
+    "plantedRecoveries": 12
+  },
+  "sourceSHA256": "a92b16a68db21cc760dade6f2b76ad5091953084e1a7eebc1fe3e162d923a576",
+  "fieldSHA256": "066191b4aafc114fbca7f0d168382f40129c4ff18490375b689741081d5ef3c2",
+  "groups": [
+    {
+      "reverse": false,
+      "mode": "subtract",
+      "period": 1,
+      "keys": 10,
+      "nodes": 32,
+      "elapsedMs": 1,
+      "nodeCountsFile": "forward-subtract-1.nodes",
+      "nodeCountsSHA256": "c824c3e564ec8d47fa98a6e23a57447136b405e9b648f0c5fb33ea3c31296d53"
+    },
+    {
+      "reverse": false,
+      "mode": "subtract",
+      "period": 2,
+      "keys": 100,
+      "nodes": 330,
+      "elapsedMs": 7,
+      "nodeCountsFile": "forward-subtract-2.nodes",
+      "nodeCountsSHA256": "9fa167019da79bdea9e26d0d69e4ee0557bc93424564111ad8f4ba7ad25bd08e"
+    },
+    {
+      "reverse": false,
+      "mode": "subtract",
+      "period": 3,
+      "keys": 1000,
+      "nodes": 3308,
+      "elapsedMs": 22,
+      "nodeCountsFile": "forward-subtract-3.nodes",
+      "nodeCountsSHA256": "7f276dc7e82a2850e9cde40f62f1005a3f709bc1200dcf8001899e501a5df373"
+    },
+    {
+      "reverse": false,
+      "mode": "subtract",
+      "period": 4,
+      "keys": 10000,
+      "nodes": 33122,
+      "elapsedMs": 207,
+      "nodeCountsFile": "forward-subtract-4.nodes",
+      "nodeCountsSHA256": "08c085d496fc39d75aa85cdb519a69ac874c20851b58ec68f6498e0fc0a7697a"
+    },
+    {
+      "reverse": false,
+      "mode": "subtract",
+      "period": 5,
+      "keys": 100000,
+      "nodes": 333778,
+      "elapsedMs": 2359,
+      "nodeCountsFile": "forward-subtract-5.nodes",
+      "nodeCountsSHA256": "670fa44ab71c7c3abcbc42332b7118c40eb0cc6b0b1d26b051134c73097547d9"
+    },
+    {
+      "reverse": false,
+      "mode": "subtract",
+      "period": 6,
+      "keys": 1000000,
+      "nodes": 3329030,
+      "elapsedMs": 22869,
+      "nodeCountsFile": "forward-subtract-6.nodes",
+      "nodeCountsSHA256": "aa3f8a7bf01c5a6e379c2eae231a428626e539cd00c4bd9f1126176ab68c96f9"
+    },
+    {
+      "reverse": false,
+      "mode": "beaufort",
+      "period": 1,
+      "keys": 10,
+      "nodes": 38,
+      "elapsedMs": 1,
+      "nodeCountsFile": "forward-beaufort-1.nodes",
+      "nodeCountsSHA256": "5b01a31cde4e28f6dce5564d9963c5204b03d512d3bfe89b7c8fd168f6eee322"
+    },
+    {
+      "reverse": false,
+      "mode": "beaufort",
+      "period": 2,
+      "keys": 100,
+      "nodes": 286,
+      "elapsedMs": 2,
+      "nodeCountsFile": "forward-beaufort-2.nodes",
+      "nodeCountsSHA256": "7a160d6458a9ae3bd116c2741e7fbf57227ec74a07d48d73df4fe10174508126"
+    },
+    {
+      "reverse": false,
+      "mode": "beaufort",
+      "period": 3,
+      "keys": 1000,
+      "nodes": 3294,
+      "elapsedMs": 24,
+      "nodeCountsFile": "forward-beaufort-3.nodes",
+      "nodeCountsSHA256": "25369f69c5e896f13efbd54aa3e9cfaace44943bb456a0f9a7b602fac1695ac7"
+    },
+    {
+      "reverse": false,
+      "mode": "beaufort",
+      "period": 4,
+      "keys": 10000,
+      "nodes": 33496,
+      "elapsedMs": 221,
+      "nodeCountsFile": "forward-beaufort-4.nodes",
+      "nodeCountsSHA256": "7c98bdda185fa9f17a8961a99e70e85e3b204c2fffd48494df25d142151867a0"
+    },
+    {
+      "reverse": false,
+      "mode": "beaufort",
+      "period": 5,
+      "keys": 100000,
+      "nodes": 333032,
+      "elapsedMs": 2220,
+      "nodeCountsFile": "forward-beaufort-5.nodes",
+      "nodeCountsSHA256": "c02c05ea38c2e24b2972f8cb9cd063a15b16e1bda4f1e536e7a7efc4e86df36a"
+    },
+    {
+      "reverse": false,
+      "mode": "beaufort",
+      "period": 6,
+      "keys": 1000000,
+      "nodes": 3329012,
+      "elapsedMs": 25156,
+      "nodeCountsFile": "forward-beaufort-6.nodes",
+      "nodeCountsSHA256": "a41ae95c584868958e724279e883b653e89d94cc8a79181119e29498fb0c891e"
+    },
+    {
+      "reverse": true,
+      "mode": "subtract",
+      "period": 1,
+      "keys": 10,
+      "nodes": 10,
+      "elapsedMs": 1,
+      "nodeCountsFile": "reverse-subtract-1.nodes",
+      "nodeCountsSHA256": "8a1384fe2477382c02f91e861019ed88ae64c5a7c9199cf1e3b2d84ce5b6b9e6"
+    },
+    {
+      "reverse": true,
+      "mode": "subtract",
+      "period": 2,
+      "keys": 100,
+      "nodes": 100,
+      "elapsedMs": 1,
+      "nodeCountsFile": "reverse-subtract-2.nodes",
+      "nodeCountsSHA256": "2d55a4878d242c44de4302e4ceba7152737b0716b115d97331861c332e249a1d"
+    },
+    {
+      "reverse": true,
+      "mode": "subtract",
+      "period": 3,
+      "keys": 1000,
+      "nodes": 1000,
+      "elapsedMs": 9,
+      "nodeCountsFile": "reverse-subtract-3.nodes",
+      "nodeCountsSHA256": "ef2d9ea73cb0231d38dca545d371d5df089b08b23138859f4776eed870f76912"
+    },
+    {
+      "reverse": true,
+      "mode": "subtract",
+      "period": 4,
+      "keys": 10000,
+      "nodes": 10002,
+      "elapsedMs": 81,
+      "nodeCountsFile": "reverse-subtract-4.nodes",
+      "nodeCountsSHA256": "0e4759c7fda19466d18b6c24f69093c4c8fbe32ebc9c3ba446665a8f614b81f6"
+    },
+    {
+      "reverse": true,
+      "mode": "subtract",
+      "period": 5,
+      "keys": 100000,
+      "nodes": 100034,
+      "elapsedMs": 755,
+      "nodeCountsFile": "reverse-subtract-5.nodes",
+      "nodeCountsSHA256": "483ee0fc7861e9a166d20fe910c040d29410bcf2e666b8223d5fe263f430e0ca"
+    },
+    {
+      "reverse": true,
+      "mode": "subtract",
+      "period": 6,
+      "keys": 1000000,
+      "nodes": 1000356,
+      "elapsedMs": 8143,
+      "nodeCountsFile": "reverse-subtract-6.nodes",
+      "nodeCountsSHA256": "4998acbf0a97121683d91514e282f624a7e1d1a1b1e5a7782fea36985dc236c9"
+    },
+    {
+      "reverse": true,
+      "mode": "beaufort",
+      "period": 1,
+      "keys": 10,
+      "nodes": 10,
+      "elapsedMs": 1,
+      "nodeCountsFile": "reverse-beaufort-1.nodes",
+      "nodeCountsSHA256": "8a1384fe2477382c02f91e861019ed88ae64c5a7c9199cf1e3b2d84ce5b6b9e6"
+    },
+    {
+      "reverse": true,
+      "mode": "beaufort",
+      "period": 2,
+      "keys": 100,
+      "nodes": 100,
+      "elapsedMs": 1,
+      "nodeCountsFile": "reverse-beaufort-2.nodes",
+      "nodeCountsSHA256": "2d55a4878d242c44de4302e4ceba7152737b0716b115d97331861c332e249a1d"
+    },
+    {
+      "reverse": true,
+      "mode": "beaufort",
+      "period": 3,
+      "keys": 1000,
+      "nodes": 1000,
+      "elapsedMs": 7,
+      "nodeCountsFile": "reverse-beaufort-3.nodes",
+      "nodeCountsSHA256": "ef2d9ea73cb0231d38dca545d371d5df089b08b23138859f4776eed870f76912"
+    },
+    {
+      "reverse": true,
+      "mode": "beaufort",
+      "period": 4,
+      "keys": 10000,
+      "nodes": 10002,
+      "elapsedMs": 69,
+      "nodeCountsFile": "reverse-beaufort-4.nodes",
+      "nodeCountsSHA256": "8a95b6fa44e51dcd180175c692ec7bc6e7f7934250698945f8429b6b7b9e6d4f"
+    },
+    {
+      "reverse": true,
+      "mode": "beaufort",
+      "period": 5,
+      "keys": 100000,
+      "nodes": 100032,
+      "elapsedMs": 736,
+      "nodeCountsFile": "reverse-beaufort-5.nodes",
+      "nodeCountsSHA256": "4347097eb767478c2f14a963fcdb8fd6cdca840cda7c3458e2b9ad45f41d4942"
+    },
+    {
+      "reverse": true,
+      "mode": "beaufort",
+      "period": 6,
+      "keys": 1000000,
+      "nodes": 1000236,
+      "elapsedMs": 7349,
+      "nodeCountsFile": "reverse-beaufort-6.nodes",
+      "nodeCountsSHA256": "c0b96fb0eb92d17f2c75bab6ee85802894b45a8b354f22c4ea0807f75b36ddfa"
+    }
+  ],
+  "totalKeys": 4444440,
+  "totalNodes": 9621640,
+  "hits": [],
+  "partial": []
+}

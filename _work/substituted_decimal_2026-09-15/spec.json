@@ -1,0 +1,11 @@
+{
+  "hypothesis": "Every bijection a..i to 1..9, with the selected symbol independently 0 or its assigned digit; decimal integer to minimal big-endian bytes all below 128. Complete original/reversed DBBI and FAED only.",
+  "scope": "No other substitutions, byte encodings, interleaving, removed/inserted symbols, arithmetic keys, or transpositions are claimed.",
+  "sourceSHA256": "778f4c48ede0bc17c1c3f503ef2f3b1ae296d1fa2ee4dc0709f59a6425a37d8f",
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "controls": {
+    "bruteForceCases": 81,
+    "plantedRecoveries": 27,
+    "distinctPermutationControl": 362880
+  }
+}

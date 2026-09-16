@@ -1,0 +1,24 @@
+{
+  "hypothesis": "Whole DBBI/FAED decimal integers, a..i=1..9 and each g independently 0/7, become one complete RFC7932 Brotli stream in minimal big-endian bytes. Both symbol orders. Arbitrary binary output; all input consumed. Standard built-in dictionary, no external shared dictionary or Large Window extension.",
+  "proof": "At each assignment prefix the remaining values lie between exact integer bounds. The common big-endian byte prefix is fixed throughout that interval. Native format errors reject all completions; incomplete prefixes remain open. Resource/unrecognized errors are pending, never exclusions.",
+  "limits": {
+    "maxNodes": 200000,
+    "maxMs": 15000,
+    "maxOutputLength": 1048576
+  },
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceSHA256": "f7400c64ae05305219b4c3e0bcd0e4f501e196de33bb15b959d1a73fd94c77ec",
+  "node": "v24.13.0",
+  "brotli": "1.1.0",
+  "controls": {
+    "streams": 12,
+    "validPrefixes": 1028,
+    "plantedRecovered": 7,
+    "plantedTotal": 12
+  },
+  "references": [
+    "https://www.rfc-editor.org/rfc/rfc7932.html",
+    "https://raw.githubusercontent.com/google/brotli/master/c/include/brotli/decode.h",
+    "https://nodejs.org/api/zlib.html#zlibbrotlidecompresssyncbuffer-options"
+  ]
+}

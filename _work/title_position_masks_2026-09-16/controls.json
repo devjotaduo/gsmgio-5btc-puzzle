@@ -1,0 +1,30 @@
+[
+  {
+    "rule": "power2/origin0",
+    "firstHundredMaskVerified": true
+  },
+  {
+    "rule": "power2/origin1",
+    "firstHundredMaskVerified": true
+  },
+  {
+    "rule": "power3/origin0",
+    "firstHundredMaskVerified": true
+  },
+  {
+    "rule": "power3/origin1",
+    "firstHundredMaskVerified": true
+  },
+  {
+    "rule": "periodic/SalPhaseIon",
+    "firstHundredMaskVerified": true
+  },
+  {
+    "rule": "periodic/Cosmic Duality",
+    "firstHundredMaskVerified": true
+  },
+  {
+    "rule": "periodic/CosmicDuality",
+    "firstHundredMaskVerified": true
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "finished": true,
+  "cases": 83700,
+  "dominantValues": 163860480,
+  "firstIntervalCertificates": 327720907,
+  "secondaryCases": 108710,
+  "lengthRejected": 103693,
+  "routeCases": 1156,
+  "routeNodes": 16184,
+  "incompleteRoutes": 0,
+  "hits": 0,
+  "completeExclusion": true,
+  "certificateBytes": 327720960,
+  "elapsedMs": 95772,
+  "casesSHA256": "957dc8c6fa26982aaaf6f8bbe36f968b1179d4ce443ce33aeb556abbdf99ccb0",
+  "certificatesSHA256": "6b82e0af350cc68284cf4aaf6fe4d7eb17407d58fea37022367000f87e1a89fa"
+}

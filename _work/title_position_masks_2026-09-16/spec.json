@@ -1,0 +1,132 @@
+{
+  "createdAt": "2026-09-16T13:29:34.528Z",
+  "sourceSHA256": "09ec6c531d74e2c4c9b417f1a5510118ca154bf6bf789b9a21ba9fab52dde1f8",
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "pages": [
+    {
+      "file": "_work/salphaseion.html",
+      "sha256": "b13cbc5c2935dc3e9ff8bf71681f2ef61317fefdce04159129877244a92a3947",
+      "headings": [
+        "SalPhaseIon",
+        "Cosmic Duality"
+      ]
+    },
+    {
+      "file": "_work/archive/endgame/endgame_20230601222752.html",
+      "sha256": "18a8369df1364911d5e94fcac341ef85480ff194f4500f509fbed34f19e6308b",
+      "headings": [
+        "SalPhaseIon",
+        "Cosmic Duality"
+      ]
+    },
+    {
+      "file": "_work/archive/endgame/endgame_20231127181947.html",
+      "sha256": "ed6c395890553a2ef3e156f91111ef0ab503951c631717cb60ab1f72858459af",
+      "headings": [
+        "SalPhaseIon",
+        "Cosmic Duality"
+      ]
+    },
+    {
+      "file": "_work/archive/endgame/endgame_20241123015038.html",
+      "sha256": "0eeb42e361a2781846ce16d2fdadd1a879793d969aa624c5fa43552347d6c4d0",
+      "headings": [
+        "SalPhaseIon",
+        "Cosmic Duality"
+      ]
+    },
+    {
+      "file": "_work/archive/endgame/endgame_20251031153559.html",
+      "sha256": "af81c08fc26db392eec925ba22a8ba4f6abe03e5512344ca648d5cf136b30603",
+      "headings": [
+        "SalPhaseIon",
+        "Cosmic Duality"
+      ]
+    },
+    {
+      "file": "_work/archive/endgame/endgame_20260405154227.html",
+      "sha256": "b13cbc5c2935dc3e9ff8bf71681f2ef61317fefdce04159129877244a92a3947",
+      "headings": [
+        "SalPhaseIon",
+        "Cosmic Duality"
+      ]
+    }
+  ],
+  "titles": [
+    {
+      "text": "SalPhaseIon",
+      "length": 11,
+      "uppercasePositions": [
+        1,
+        4,
+        9
+      ]
+    },
+    {
+      "text": "Cosmic Duality",
+      "length": 14,
+      "uppercasePositions": [
+        1,
+        8
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "name": "power2/origin0",
+      "power": 2,
+      "origin": 0
+    },
+    {
+      "name": "power2/origin1",
+      "power": 2,
+      "origin": 1
+    },
+    {
+      "name": "power3/origin0",
+      "power": 3,
+      "origin": 0
+    },
+    {
+      "name": "power3/origin1",
+      "power": 3,
+      "origin": 1
+    },
+    {
+      "name": "periodic/SalPhaseIon",
+      "text": "SalPhaseIon",
+      "period": 11,
+      "positions": [
+        0,
+        3,
+        8
+      ]
+    },
+    {
+      "name": "periodic/Cosmic Duality",
+      "text": "Cosmic Duality",
+      "period": 14,
+      "positions": [
+        0,
+        7
+      ]
+    },
+    {
+      "name": "periodic/CosmicDuality",
+      "text": "CosmicDuality",
+      "period": 13,
+      "positions": [
+        0,
+        6
+      ]
+    }
+  ],
+  "contexts": [
+    "",
+    "reinsertingtheprimebasicsafterwhichyouwillberequiredto",
+    "sheisgoingtodieandthereisnothingyoucandotostopit"
+  ],
+  "hypothesis": "Uppercase positions 1,4,9 in SalPhaseIon match squares; 1,8 in Cosmic Duality match cubes only when the space is counted. These are observations, NOT confirmed instructions.",
+  "scope": "Both fields in both directions. Square/cube masks indexed from zero or one, or periodic exact title capitalization with/without the Cosmic space. Mask and complement. Whole-field zero/keep/drop, or zero selected g occurrences only. Decimal digits, canonical a1..i9/o0, uppercase, and minimal integer bytes. Bare or each of two fixed last-word clauses before/after. Direct and SHA256-hex passwords; three AES blobs and two EVP digests.",
+  "limitations": "No arbitrary offsets, unknown title spelling, transpositions, multiple operations, or claim that the finite family covers the intended puzzle."
+}

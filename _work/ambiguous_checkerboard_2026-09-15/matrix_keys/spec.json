@@ -1,0 +1,6144 @@
+{
+  "hypothesis": "Fixed-alignment cyclic decimal key from matrix lists, inverse mod10 add/subtract/Beaufort, then phase32 checkerboard alphabet with ordered escapes [1,4]. A1..I9, any single alias also zero; both full field directions.",
+  "caveat": "Highest mean quadgram-score plaintext only, not an exhaustive password search; no unknown alphabet, offset or transposition.",
+  "lists": [
+    {
+      "name": "binary/rows",
+      "values": [
+        6,
+        10,
+        8,
+        7,
+        6,
+        6,
+        5,
+        4,
+        9,
+        9,
+        7,
+        8,
+        7,
+        9
+      ],
+      "reason": "The literal row/column sum lists of the original 14x14 matrix."
+    },
+    {
+      "name": "binary/columns",
+      "values": [
+        8,
+        10,
+        8,
+        10,
+        8,
+        7,
+        3,
+        6,
+        7,
+        5,
+        9,
+        6,
+        6,
+        8
+      ],
+      "reason": "The literal row/column sum lists of the original 14x14 matrix."
+    },
+    {
+      "name": "count-B/rows",
+      "values": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        2,
+        1,
+        0,
+        1,
+        1,
+        2
+      ],
+      "reason": "Row/column counts of the named colour."
+    },
+    {
+      "name": "count-B/columns",
+      "values": [
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        0,
+        1,
+        1,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "reason": "Row/column counts of the named colour."
+    },
+    {
+      "name": "count-Y/rows",
+      "values": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "reason": "Row/column counts of the named colour."
+    },
+    {
+      "name": "count-Y/columns",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "Row/column counts of the named colour."
+    },
+    {
+      "name": "colours-2-3/bits/rows",
+      "values": [
+        10,
+        12,
+        9,
+        8,
+        10,
+        12,
+        9,
+        8,
+        11,
+        13,
+        10,
+        9,
+        11,
+        11
+      ],
+      "reason": "Hypothesis: assign the two smallest primes to the two colours; retain original non-colour bits or zero them. Both colour assignments are explicit alternatives."
+    },
+    {
+      "name": "colours-2-3/bits/columns",
+      "values": [
+        9,
+        12,
+        11,
+        11,
+        9,
+        9,
+        9,
+        10,
+        8,
+        11,
+        14,
+        9,
+        9,
+        12
+      ],
+      "reason": "Hypothesis: assign the two smallest primes to the two colours; retain original non-colour bits or zero them. Both colour assignments are explicit alternatives."
+    },
+    {
+      "name": "colours-2-3/zero/rows",
+      "values": [
+        5,
+        4,
+        2,
+        2,
+        5,
+        6,
+        5,
+        5,
+        4,
+        5,
+        3,
+        2,
+        5,
+        4
+      ],
+      "reason": "Hypothesis: assign the two smallest primes to the two colours; retain original non-colour bits or zero them. Both colour assignments are explicit alternatives."
+    },
+    {
+      "name": "colours-2-3/zero/columns",
+      "values": [
+        2,
+        4,
+        6,
+        2,
+        2,
+        4,
+        6,
+        5,
+        2,
+        6,
+        7,
+        3,
+        3,
+        5
+      ],
+      "reason": "Hypothesis: assign the two smallest primes to the two colours; retain original non-colour bits or zero them. Both colour assignments are explicit alternatives."
+    },
+    {
+      "name": "colours-3-2/bits/rows",
+      "values": [
+        10,
+        14,
+        10,
+        9,
+        10,
+        10,
+        9,
+        8,
+        13,
+        13,
+        9,
+        10,
+        11,
+        13
+      ],
+      "reason": "Hypothesis: assign the two smallest primes to the two colours; retain original non-colour bits or zero them. Both colour assignments are explicit alternatives."
+    },
+    {
+      "name": "colours-3-2/bits/columns",
+      "values": [
+        10,
+        14,
+        14,
+        12,
+        10,
+        11,
+        7,
+        10,
+        9,
+        9,
+        15,
+        8,
+        8,
+        12
+      ],
+      "reason": "Hypothesis: assign the two smallest primes to the two colours; retain original non-colour bits or zero them. Both colour assignments are explicit alternatives."
+    },
+    {
+      "name": "colours-3-2/zero/rows",
+      "values": [
+        5,
+        6,
+        3,
+        3,
+        5,
+        4,
+        5,
+        5,
+        6,
+        5,
+        2,
+        3,
+        5,
+        6
+      ],
+      "reason": "Hypothesis: assign the two smallest primes to the two colours; retain original non-colour bits or zero them. Both colour assignments are explicit alternatives."
+    },
+    {
+      "name": "colours-3-2/zero/columns",
+      "values": [
+        3,
+        6,
+        9,
+        3,
+        3,
+        6,
+        4,
+        5,
+        3,
+        4,
+        8,
+        2,
+        2,
+        5
+      ],
+      "reason": "Hypothesis: assign the two smallest primes to the two colours; retain original non-colour bits or zero them. Both colour assignments are explicit alternatives."
+    },
+    {
+      "name": "binary-values/rows",
+      "values": [
+        3372,
+        15595,
+        14153,
+        6685,
+        6342,
+        9763,
+        10000,
+        14344,
+        1917,
+        16177,
+        13339,
+        15532,
+        5958,
+        7019
+      ],
+      "reason": "Interpret each full matrix row/column as a binary integer."
+    },
+    {
+      "name": "binary-values/columns",
+      "values": [
+        6620,
+        7775,
+        13909,
+        14782,
+        3507,
+        10419,
+        4612,
+        6691,
+        12597,
+        1208,
+        15469,
+        9766,
+        4875,
+        7481
+      ],
+      "reason": "Interpret each full matrix row/column as a binary integer."
+    },
+    {
+      "name": "prime-weighted/row-major/rows",
+      "values": [
+        116,
+        762,
+        1128,
+        1595,
+        1850,
+        2370,
+        2311,
+        2210,
+        5985,
+        6709,
+        5969,
+        7540,
+        7303,
+        10295
+      ],
+      "reason": "Hypothesis: replace each live bit by the prime at its 1-based cell rank before summing."
+    },
+    {
+      "name": "prime-weighted/row-major/columns",
+      "values": [
+        3898,
+        5732,
+        3834,
+        5180,
+        4718,
+        4161,
+        1327,
+        3400,
+        4049,
+        3035,
+        4837,
+        3360,
+        4038,
+        4574
+      ],
+      "reason": "Hypothesis: replace each live bit by the prime at its 1-based cell rank before summing."
+    },
+    {
+      "name": "colour-indexes/row-major/B",
+      "values": [
+        6,
+        17,
+        25,
+        36,
+        47,
+        58,
+        88,
+        99,
+        118,
+        126,
+        129,
+        163,
+        170,
+        185,
+        193
+      ],
+      "reason": "1-based positions of coloured cells."
+    },
+    {
+      "name": "prime-colour-indexes/row-major/B",
+      "values": [
+        17,
+        47,
+        163,
+        193
+      ],
+      "reason": "Only prime-valued positions of coloured cells."
+    },
+    {
+      "name": "colour-indexes/row-major/Y",
+      "values": [
+        14,
+        66,
+        77,
+        81,
+        96,
+        111,
+        133,
+        148,
+        178
+      ],
+      "reason": "1-based positions of coloured cells."
+    },
+    {
+      "name": "prime-weighted/spiral/rows",
+      "values": [
+        1254,
+        3722,
+        4044,
+        4347,
+        4014,
+        3448,
+        3877,
+        1716,
+        7745,
+        5811,
+        3327,
+        3972,
+        2397,
+        673
+      ],
+      "reason": "Hypothesis: replace each live bit by the prime at its 1-based cell rank before summing."
+    },
+    {
+      "name": "prime-weighted/spiral/columns",
+      "values": [
+        154,
+        2530,
+        3536,
+        6298,
+        5952,
+        4539,
+        2143,
+        3778,
+        4633,
+        4819,
+        5509,
+        3182,
+        2164,
+        1110
+      ],
+      "reason": "Hypothesis: replace each live bit by the prime at its 1-based cell rank before summing."
+    },
+    {
+      "name": "colour-indexes/spiral/B",
+      "values": [
+        8,
+        16,
+        24,
+        32,
+        48,
+        56,
+        64,
+        88,
+        96,
+        104,
+        112,
+        128,
+        136,
+        160,
+        184
+      ],
+      "reason": "1-based positions of coloured cells."
+    },
+    {
+      "name": "colour-indexes/spiral/Y",
+      "values": [
+        40,
+        72,
+        80,
+        120,
+        144,
+        152,
+        168,
+        176,
+        192
+      ],
+      "reason": "1-based positions of coloured cells."
+    },
+    {
+      "name": "nth-prime/binary/rows",
+      "values": [
+        13,
+        29,
+        19,
+        17,
+        13,
+        13,
+        11,
+        7,
+        23,
+        23,
+        17,
+        19,
+        17,
+        23
+      ],
+      "reason": "Hypothesis: replace each binary-matrix sum by that numbered prime."
+    },
+    {
+      "name": "nth-prime/binary/columns",
+      "values": [
+        19,
+        29,
+        19,
+        29,
+        19,
+        17,
+        5,
+        13,
+        17,
+        11,
+        23,
+        13,
+        13,
+        19
+      ],
+      "reason": "Hypothesis: replace each binary-matrix sum by that numbered prime."
+    },
+    {
+      "name": "spectrum-ranks/specified/rows",
+      "reason": "1-based red/orange/yellow/green/blue/indigo/violet ranks for colours; original bits elsewhere.",
+      "values": [
+        13,
+        18,
+        12,
+        11,
+        13,
+        12,
+        12,
+        11,
+        17,
+        16,
+        10,
+        12,
+        14,
+        17
+      ]
+    },
+    {
+      "name": "spectrum-ranks/specified/columns",
+      "reason": "1-based red/orange/yellow/green/blue/indigo/violet ranks for colours; original bits elsewhere.",
+      "values": [
+        12,
+        18,
+        20,
+        14,
+        12,
+        15,
+        9,
+        13,
+        11,
+        11,
+        20,
+        9,
+        9,
+        15
+      ]
+    },
+    {
+      "name": "spectrum-ranks/zero/rows",
+      "reason": "1-based red/orange/yellow/green/blue/indigo/violet ranks for colours; original bits elsewhere.",
+      "values": [
+        8,
+        10,
+        5,
+        5,
+        8,
+        6,
+        8,
+        8,
+        10,
+        8,
+        3,
+        5,
+        8,
+        10
+      ]
+    },
+    {
+      "name": "spectrum-ranks/zero/columns",
+      "reason": "1-based red/orange/yellow/green/blue/indigo/violet ranks for colours; original bits elsewhere.",
+      "values": [
+        5,
+        10,
+        15,
+        5,
+        5,
+        10,
+        6,
+        8,
+        5,
+        6,
+        13,
+        3,
+        3,
+        8
+      ]
+    },
+    {
+      "name": "spectrum-rank-primes/specified/rows",
+      "reason": "Replace the above colour ranks by the corresponding 5th and 3rd primes; original bits elsewhere.",
+      "values": [
+        21,
+        30,
+        18,
+        17,
+        21,
+        16,
+        20,
+        19,
+        29,
+        24,
+        12,
+        18,
+        22,
+        29
+      ]
+    },
+    {
+      "name": "spectrum-rank-primes/specified/columns",
+      "reason": "Replace the above colour ranks by the corresponding 5th and 3rd primes; original bits elsewhere.",
+      "values": [
+        18,
+        30,
+        38,
+        20,
+        18,
+        27,
+        13,
+        21,
+        17,
+        15,
+        34,
+        11,
+        11,
+        23
+      ]
+    },
+    {
+      "name": "spectrum-rank-primes/zero/rows",
+      "reason": "Replace the above colour ranks by the corresponding 5th and 3rd primes; original bits elsewhere.",
+      "values": [
+        16,
+        22,
+        11,
+        11,
+        16,
+        10,
+        16,
+        16,
+        22,
+        16,
+        5,
+        11,
+        16,
+        22
+      ]
+    },
+    {
+      "name": "spectrum-rank-primes/zero/columns",
+      "reason": "Replace the above colour ranks by the corresponding 5th and 3rd primes; original bits elsewhere.",
+      "values": [
+        11,
+        22,
+        33,
+        11,
+        11,
+        22,
+        10,
+        16,
+        11,
+        10,
+        27,
+        5,
+        5,
+        16
+      ]
+    },
+    {
+      "name": "resistor-code/specified/rows",
+      "reason": "Standard resistor digit values for all four colours.",
+      "values": [
+        73,
+        48,
+        60,
+        69,
+        73,
+        62,
+        82,
+        91,
+        57,
+        46,
+        58,
+        60,
+        64,
+        57
+      ]
+    },
+    {
+      "name": "resistor-code/specified/columns",
+      "reason": "Standard resistor digit values for all four colours.",
+      "values": [
+        60,
+        48,
+        72,
+        42,
+        60,
+        75,
+        89,
+        73,
+        69,
+        71,
+        52,
+        67,
+        67,
+        55
+      ]
+    },
+    {
+      "name": "resistor-code/zero/rows",
+      "reason": "Standard resistor digit values for all four colours.",
+      "values": [
+        10,
+        12,
+        6,
+        6,
+        10,
+        8,
+        10,
+        10,
+        12,
+        10,
+        4,
+        6,
+        10,
+        12
+      ]
+    },
+    {
+      "name": "resistor-code/zero/columns",
+      "reason": "Standard resistor digit values for all four colours.",
+      "values": [
+        6,
+        12,
+        18,
+        6,
+        6,
+        12,
+        8,
+        10,
+        6,
+        8,
+        16,
+        4,
+        4,
+        10
+      ]
+    },
+    {
+      "name": "resistor-code-primes/specified/rows",
+      "reason": "Replace nonzero resistor digits by the corresponding primes; leave zero zero.",
+      "values": [
+        181,
+        118,
+        151,
+        174,
+        181,
+        152,
+        204,
+        227,
+        141,
+        112,
+        145,
+        151,
+        158,
+        141
+      ]
+    },
+    {
+      "name": "resistor-code-primes/specified/columns",
+      "reason": "Replace nonzero resistor digits by the corresponding primes; leave zero zero.",
+      "values": [
+        151,
+        118,
+        177,
+        105,
+        151,
+        187,
+        221,
+        181,
+        174,
+        175,
+        125,
+        168,
+        168,
+        135
+      ]
+    },
+    {
+      "name": "resistor-code-primes/zero/rows",
+      "reason": "Replace nonzero resistor digits by the corresponding primes; leave zero zero.",
+      "values": [
+        20,
+        26,
+        13,
+        13,
+        20,
+        14,
+        20,
+        20,
+        26,
+        20,
+        7,
+        13,
+        20,
+        26
+      ]
+    },
+    {
+      "name": "resistor-code-primes/zero/columns",
+      "reason": "Replace nonzero resistor digits by the corresponding primes; leave zero zero.",
+      "values": [
+        13,
+        26,
+        39,
+        13,
+        13,
+        26,
+        14,
+        20,
+        13,
+        14,
+        33,
+        7,
+        7,
+        20
+      ]
+    }
+  ],
+  "keys": [
+    {
+      "key": "60876654997879",
+      "values": [
+        6,
+        0,
+        8,
+        7,
+        6,
+        6,
+        5,
+        4,
+        9,
+        9,
+        7,
+        8,
+        7,
+        9
+      ],
+      "labels": [
+        {
+          "list": "binary/rows",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "97879945667806",
+      "values": [
+        9,
+        7,
+        8,
+        7,
+        9,
+        9,
+        4,
+        5,
+        6,
+        6,
+        7,
+        8,
+        0,
+        6
+      ],
+      "labels": [
+        {
+          "list": "binary/rows",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "610876654997879",
+      "values": [
+        6,
+        1,
+        0,
+        8,
+        7,
+        6,
+        6,
+        5,
+        4,
+        9,
+        9,
+        7,
+        8,
+        7,
+        9
+      ],
+      "labels": [
+        {
+          "list": "binary/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "978799456678016",
+      "values": [
+        9,
+        7,
+        8,
+        7,
+        9,
+        9,
+        4,
+        5,
+        6,
+        6,
+        7,
+        8,
+        0,
+        1,
+        6
+      ],
+      "labels": [
+        {
+          "list": "binary/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "80808736759668",
+      "values": [
+        8,
+        0,
+        8,
+        0,
+        8,
+        7,
+        3,
+        6,
+        7,
+        5,
+        9,
+        6,
+        6,
+        8
+      ],
+      "labels": [
+        {
+          "list": "binary/columns",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "86695763780808",
+      "values": [
+        8,
+        6,
+        6,
+        9,
+        5,
+        7,
+        6,
+        3,
+        7,
+        8,
+        0,
+        8,
+        0,
+        8
+      ],
+      "labels": [
+        {
+          "list": "binary/columns",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "8108108736759668",
+      "values": [
+        8,
+        1,
+        0,
+        8,
+        1,
+        0,
+        8,
+        7,
+        3,
+        6,
+        7,
+        5,
+        9,
+        6,
+        6,
+        8
+      ],
+      "labels": [
+        {
+          "list": "binary/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "8669576378018018",
+      "values": [
+        8,
+        6,
+        6,
+        9,
+        5,
+        7,
+        6,
+        3,
+        7,
+        8,
+        0,
+        1,
+        8,
+        0,
+        1,
+        8
+      ],
+      "labels": [
+        {
+          "list": "binary/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "12111011210112",
+      "values": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        2,
+        1,
+        0,
+        1,
+        1,
+        2
+      ],
+      "labels": [
+        {
+          "list": "count-B/rows",
+          "form": "residue10",
+          "reverse": false
+        },
+        {
+          "list": "count-B/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "21101211011121",
+      "values": [
+        2,
+        1,
+        1,
+        0,
+        1,
+        2,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "labels": [
+        {
+          "list": "count-B/rows",
+          "form": "residue10",
+          "reverse": true
+        },
+        {
+          "list": "count-B/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "12311201102001",
+      "values": [
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        0,
+        1,
+        1,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "labels": [
+        {
+          "list": "count-B/columns",
+          "form": "residue10",
+          "reverse": false
+        },
+        {
+          "list": "count-B/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "10020110211321",
+      "values": [
+        1,
+        0,
+        0,
+        2,
+        0,
+        1,
+        1,
+        0,
+        2,
+        1,
+        1,
+        3,
+        2,
+        1
+      ],
+      "labels": [
+        {
+          "list": "count-B/columns",
+          "form": "residue10",
+          "reverse": true
+        },
+        {
+          "list": "count-B/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "10001211011010",
+      "values": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "labels": [
+        {
+          "list": "count-Y/rows",
+          "form": "residue10",
+          "reverse": false
+        },
+        {
+          "list": "count-Y/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "01011011210001",
+      "values": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        2,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "labels": [
+        {
+          "list": "count-Y/rows",
+          "form": "residue10",
+          "reverse": true
+        },
+        {
+          "list": "count-Y/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "00000021021111",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "labels": [
+        {
+          "list": "count-Y/columns",
+          "form": "residue10",
+          "reverse": false
+        },
+        {
+          "list": "count-Y/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "11112012000000",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "labels": [
+        {
+          "list": "count-Y/columns",
+          "form": "residue10",
+          "reverse": true
+        },
+        {
+          "list": "count-Y/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "02980298130911",
+      "values": [
+        0,
+        2,
+        9,
+        8,
+        0,
+        2,
+        9,
+        8,
+        1,
+        3,
+        0,
+        9,
+        1,
+        1
+      ],
+      "labels": [
+        {
+          "list": "colours-2-3/bits/rows",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "11903189208920",
+      "values": [
+        1,
+        1,
+        9,
+        0,
+        3,
+        1,
+        8,
+        9,
+        2,
+        0,
+        8,
+        9,
+        2,
+        0
+      ],
+      "labels": [
+        {
+          "list": "colours-2-3/bits/rows",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "10129810129811131091111",
+      "values": [
+        1,
+        0,
+        1,
+        2,
+        9,
+        8,
+        1,
+        0,
+        1,
+        2,
+        9,
+        8,
+        1,
+        1,
+        1,
+        3,
+        1,
+        0,
+        9,
+        1,
+        1,
+        1,
+        1
+      ],
+      "labels": [
+        {
+          "list": "colours-2-3/bits/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "11119013111892101892101",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        9,
+        0,
+        1,
+        3,
+        1,
+        1,
+        1,
+        8,
+        9,
+        2,
+        1,
+        0,
+        1,
+        8,
+        9,
+        2,
+        1,
+        0,
+        1
+      ],
+      "labels": [
+        {
+          "list": "colours-2-3/bits/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "92119990814992",
+      "values": [
+        9,
+        2,
+        1,
+        1,
+        9,
+        9,
+        9,
+        0,
+        8,
+        1,
+        4,
+        9,
+        9,
+        2
+      ],
+      "labels": [
+        {
+          "list": "colours-2-3/bits/columns",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "29941809991129",
+      "values": [
+        2,
+        9,
+        9,
+        4,
+        1,
+        8,
+        0,
+        9,
+        9,
+        9,
+        1,
+        1,
+        2,
+        9
+      ],
+      "labels": [
+        {
+          "list": "colours-2-3/bits/columns",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "912111199910811149912",
+      "values": [
+        9,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        9,
+        9,
+        9,
+        1,
+        0,
+        8,
+        1,
+        1,
+        1,
+        4,
+        9,
+        9,
+        1,
+        2
+      ],
+      "labels": [
+        {
+          "list": "colours-2-3/bits/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "219941118019991111219",
+      "values": [
+        2,
+        1,
+        9,
+        9,
+        4,
+        1,
+        1,
+        1,
+        8,
+        0,
+        1,
+        9,
+        9,
+        9,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        9
+      ],
+      "labels": [
+        {
+          "list": "colours-2-3/bits/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "54225655453254",
+      "values": [
+        5,
+        4,
+        2,
+        2,
+        5,
+        6,
+        5,
+        5,
+        4,
+        5,
+        3,
+        2,
+        5,
+        4
+      ],
+      "labels": [
+        {
+          "list": "colours-2-3/zero/rows",
+          "form": "residue10",
+          "reverse": false
+        },
+        {
+          "list": "colours-2-3/zero/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "45235455652245",
+      "values": [
+        4,
+        5,
+        2,
+        3,
+        5,
+        4,
+        5,
+        5,
+        6,
+        5,
+        2,
+        2,
+        4,
+        5
+      ],
+      "labels": [
+        {
+          "list": "colours-2-3/zero/rows",
+          "form": "residue10",
+          "reverse": true
+        },
+        {
+          "list": "colours-2-3/zero/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "24622465267335",
+      "values": [
+        2,
+        4,
+        6,
+        2,
+        2,
+        4,
+        6,
+        5,
+        2,
+        6,
+        7,
+        3,
+        3,
+        5
+      ],
+      "labels": [
+        {
+          "list": "colours-2-3/zero/columns",
+          "form": "residue10",
+          "reverse": false
+        },
+        {
+          "list": "colours-2-3/zero/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "53376256422642",
+      "values": [
+        5,
+        3,
+        3,
+        7,
+        6,
+        2,
+        5,
+        6,
+        4,
+        2,
+        2,
+        6,
+        4,
+        2
+      ],
+      "labels": [
+        {
+          "list": "colours-2-3/zero/columns",
+          "form": "residue10",
+          "reverse": true
+        },
+        {
+          "list": "colours-2-3/zero/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "04090098339013",
+      "values": [
+        0,
+        4,
+        0,
+        9,
+        0,
+        0,
+        9,
+        8,
+        3,
+        3,
+        9,
+        0,
+        1,
+        3
+      ],
+      "labels": [
+        {
+          "list": "colours-3-2/bits/rows",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "31093389009040",
+      "values": [
+        3,
+        1,
+        0,
+        9,
+        3,
+        3,
+        8,
+        9,
+        0,
+        0,
+        9,
+        0,
+        4,
+        0
+      ],
+      "labels": [
+        {
+          "list": "colours-3-2/bits/rows",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "101410910109813139101113",
+      "values": [
+        1,
+        0,
+        1,
+        4,
+        1,
+        0,
+        9,
+        1,
+        0,
+        1,
+        0,
+        9,
+        8,
+        1,
+        3,
+        1,
+        3,
+        9,
+        1,
+        0,
+        1,
+        1,
+        1,
+        3
+      ],
+      "labels": [
+        {
+          "list": "colours-3-2/bits/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "311101931318901019014101",
+      "values": [
+        3,
+        1,
+        1,
+        1,
+        0,
+        1,
+        9,
+        3,
+        1,
+        3,
+        1,
+        8,
+        9,
+        0,
+        1,
+        0,
+        1,
+        9,
+        0,
+        1,
+        4,
+        1,
+        0,
+        1
+      ],
+      "labels": [
+        {
+          "list": "colours-3-2/bits/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "04420170995882",
+      "values": [
+        0,
+        4,
+        4,
+        2,
+        0,
+        1,
+        7,
+        0,
+        9,
+        9,
+        5,
+        8,
+        8,
+        2
+      ],
+      "labels": [
+        {
+          "list": "colours-3-2/bits/columns",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "28859907102440",
+      "values": [
+        2,
+        8,
+        8,
+        5,
+        9,
+        9,
+        0,
+        7,
+        1,
+        0,
+        2,
+        4,
+        4,
+        0
+      ],
+      "labels": [
+        {
+          "list": "colours-3-2/bits/columns",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "10141412101171099158812",
+      "values": [
+        1,
+        0,
+        1,
+        4,
+        1,
+        4,
+        1,
+        2,
+        1,
+        0,
+        1,
+        1,
+        7,
+        1,
+        0,
+        9,
+        9,
+        1,
+        5,
+        8,
+        8,
+        1,
+        2
+      ],
+      "labels": [
+        {
+          "list": "colours-3-2/bits/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "21885199017110121414101",
+      "values": [
+        2,
+        1,
+        8,
+        8,
+        5,
+        1,
+        9,
+        9,
+        0,
+        1,
+        7,
+        1,
+        1,
+        0,
+        1,
+        2,
+        1,
+        4,
+        1,
+        4,
+        1,
+        0,
+        1
+      ],
+      "labels": [
+        {
+          "list": "colours-3-2/bits/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "56335455652356",
+      "values": [
+        5,
+        6,
+        3,
+        3,
+        5,
+        4,
+        5,
+        5,
+        6,
+        5,
+        2,
+        3,
+        5,
+        6
+      ],
+      "labels": [
+        {
+          "list": "colours-3-2/zero/rows",
+          "form": "residue10",
+          "reverse": false
+        },
+        {
+          "list": "colours-3-2/zero/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "65325655453365",
+      "values": [
+        6,
+        5,
+        3,
+        2,
+        5,
+        6,
+        5,
+        5,
+        4,
+        5,
+        3,
+        3,
+        6,
+        5
+      ],
+      "labels": [
+        {
+          "list": "colours-3-2/zero/rows",
+          "form": "residue10",
+          "reverse": true
+        },
+        {
+          "list": "colours-3-2/zero/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "36933645348225",
+      "values": [
+        3,
+        6,
+        9,
+        3,
+        3,
+        6,
+        4,
+        5,
+        3,
+        4,
+        8,
+        2,
+        2,
+        5
+      ],
+      "labels": [
+        {
+          "list": "colours-3-2/zero/columns",
+          "form": "residue10",
+          "reverse": false
+        },
+        {
+          "list": "colours-3-2/zero/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "52284354633963",
+      "values": [
+        5,
+        2,
+        2,
+        8,
+        4,
+        3,
+        5,
+        4,
+        6,
+        3,
+        3,
+        9,
+        6,
+        3
+      ],
+      "labels": [
+        {
+          "list": "colours-3-2/zero/columns",
+          "form": "residue10",
+          "reverse": true
+        },
+        {
+          "list": "colours-3-2/zero/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "25352304779289",
+      "values": [
+        2,
+        5,
+        3,
+        5,
+        2,
+        3,
+        0,
+        4,
+        7,
+        7,
+        9,
+        2,
+        8,
+        9
+      ],
+      "labels": [
+        {
+          "list": "binary-values/rows",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "98297740325352",
+      "values": [
+        9,
+        8,
+        2,
+        9,
+        7,
+        7,
+        4,
+        0,
+        3,
+        2,
+        5,
+        3,
+        5,
+        2
+      ],
+      "labels": [
+        {
+          "list": "binary-values/rows",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "337215595141536685634297631000014344191716177133391553259587019",
+      "values": [
+        3,
+        3,
+        7,
+        2,
+        1,
+        5,
+        5,
+        9,
+        5,
+        1,
+        4,
+        1,
+        5,
+        3,
+        6,
+        6,
+        8,
+        5,
+        6,
+        3,
+        4,
+        2,
+        9,
+        7,
+        6,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        4,
+        3,
+        4,
+        4,
+        1,
+        9,
+        1,
+        7,
+        1,
+        6,
+        1,
+        7,
+        7,
+        1,
+        3,
+        3,
+        3,
+        9,
+        1,
+        5,
+        5,
+        3,
+        2,
+        5,
+        9,
+        5,
+        8,
+        7,
+        0,
+        1,
+        9
+      ],
+      "labels": [
+        {
+          "list": "binary-values/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "910785952355193331771617191443410000136792436586635141595512733",
+      "values": [
+        9,
+        1,
+        0,
+        7,
+        8,
+        5,
+        9,
+        5,
+        2,
+        3,
+        5,
+        5,
+        1,
+        9,
+        3,
+        3,
+        3,
+        1,
+        7,
+        7,
+        1,
+        6,
+        1,
+        7,
+        1,
+        9,
+        1,
+        4,
+        4,
+        3,
+        4,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        6,
+        7,
+        9,
+        2,
+        4,
+        3,
+        6,
+        5,
+        8,
+        6,
+        6,
+        3,
+        5,
+        1,
+        4,
+        1,
+        5,
+        9,
+        5,
+        5,
+        1,
+        2,
+        7,
+        3,
+        3
+      ],
+      "labels": [
+        {
+          "list": "binary-values/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "05927921789651",
+      "values": [
+        0,
+        5,
+        9,
+        2,
+        7,
+        9,
+        2,
+        1,
+        7,
+        8,
+        9,
+        6,
+        5,
+        1
+      ],
+      "labels": [
+        {
+          "list": "binary-values/columns",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "15698712972950",
+      "values": [
+        1,
+        5,
+        6,
+        9,
+        8,
+        7,
+        1,
+        2,
+        9,
+        7,
+        2,
+        9,
+        5,
+        0
+      ],
+      "labels": [
+        {
+          "list": "binary-values/columns",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "6620777513909147823507104194612669112597120815469976648757481",
+      "values": [
+        6,
+        6,
+        2,
+        0,
+        7,
+        7,
+        7,
+        5,
+        1,
+        3,
+        9,
+        0,
+        9,
+        1,
+        4,
+        7,
+        8,
+        2,
+        3,
+        5,
+        0,
+        7,
+        1,
+        0,
+        4,
+        1,
+        9,
+        4,
+        6,
+        1,
+        2,
+        6,
+        6,
+        9,
+        1,
+        1,
+        2,
+        5,
+        9,
+        7,
+        1,
+        2,
+        0,
+        8,
+        1,
+        5,
+        4,
+        6,
+        9,
+        9,
+        7,
+        6,
+        6,
+        4,
+        8,
+        7,
+        5,
+        7,
+        4,
+        8,
+        1
+      ],
+      "labels": [
+        {
+          "list": "binary-values/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "1847578466799645180217952119662164914017053287419093157770266",
+      "values": [
+        1,
+        8,
+        4,
+        7,
+        5,
+        7,
+        8,
+        4,
+        6,
+        6,
+        7,
+        9,
+        9,
+        6,
+        4,
+        5,
+        1,
+        8,
+        0,
+        2,
+        1,
+        7,
+        9,
+        5,
+        2,
+        1,
+        1,
+        9,
+        6,
+        6,
+        2,
+        1,
+        6,
+        4,
+        9,
+        1,
+        4,
+        0,
+        1,
+        7,
+        0,
+        5,
+        3,
+        2,
+        8,
+        7,
+        4,
+        1,
+        9,
+        0,
+        9,
+        3,
+        1,
+        5,
+        7,
+        7,
+        7,
+        0,
+        2,
+        6,
+        6
+      ],
+      "labels": [
+        {
+          "list": "binary-values/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "62850010599035",
+      "values": [
+        6,
+        2,
+        8,
+        5,
+        0,
+        0,
+        1,
+        0,
+        5,
+        9,
+        9,
+        0,
+        3,
+        5
+      ],
+      "labels": [
+        {
+          "list": "prime-weighted/row-major/rows",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "53099501005826",
+      "values": [
+        5,
+        3,
+        0,
+        9,
+        9,
+        5,
+        0,
+        1,
+        0,
+        0,
+        5,
+        8,
+        2,
+        6
+      ],
+      "labels": [
+        {
+          "list": "prime-weighted/row-major/rows",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "1167621128159518502370231122105985670959697540730310295",
+      "values": [
+        1,
+        1,
+        6,
+        7,
+        6,
+        2,
+        1,
+        1,
+        2,
+        8,
+        1,
+        5,
+        9,
+        5,
+        1,
+        8,
+        5,
+        0,
+        2,
+        3,
+        7,
+        0,
+        2,
+        3,
+        1,
+        1,
+        2,
+        2,
+        1,
+        0,
+        5,
+        9,
+        8,
+        5,
+        6,
+        7,
+        0,
+        9,
+        5,
+        9,
+        6,
+        9,
+        7,
+        5,
+        4,
+        0,
+        7,
+        3,
+        0,
+        3,
+        1,
+        0,
+        2,
+        9,
+        5
+      ],
+      "labels": [
+        {
+          "list": "prime-weighted/row-major/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "5920130370457969590765895012211320732058159518211267611",
+      "values": [
+        5,
+        9,
+        2,
+        0,
+        1,
+        3,
+        0,
+        3,
+        7,
+        0,
+        4,
+        5,
+        7,
+        9,
+        6,
+        9,
+        5,
+        9,
+        0,
+        7,
+        6,
+        5,
+        8,
+        9,
+        5,
+        0,
+        1,
+        2,
+        2,
+        1,
+        1,
+        3,
+        2,
+        0,
+        7,
+        3,
+        2,
+        0,
+        5,
+        8,
+        1,
+        5,
+        9,
+        5,
+        1,
+        8,
+        2,
+        1,
+        1,
+        2,
+        6,
+        7,
+        6,
+        1,
+        1
+      ],
+      "labels": [
+        {
+          "list": "prime-weighted/row-major/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "82408170957084",
+      "values": [
+        8,
+        2,
+        4,
+        0,
+        8,
+        1,
+        7,
+        0,
+        9,
+        5,
+        7,
+        0,
+        8,
+        4
+      ],
+      "labels": [
+        {
+          "list": "prime-weighted/row-major/columns",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "48075907180428",
+      "values": [
+        4,
+        8,
+        0,
+        7,
+        5,
+        9,
+        0,
+        7,
+        1,
+        8,
+        0,
+        4,
+        2,
+        8
+      ],
+      "labels": [
+        {
+          "list": "prime-weighted/row-major/columns",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "38985732383451804718416113273400404930354837336040384574",
+      "values": [
+        3,
+        8,
+        9,
+        8,
+        5,
+        7,
+        3,
+        2,
+        3,
+        8,
+        3,
+        4,
+        5,
+        1,
+        8,
+        0,
+        4,
+        7,
+        1,
+        8,
+        4,
+        1,
+        6,
+        1,
+        1,
+        3,
+        2,
+        7,
+        3,
+        4,
+        0,
+        0,
+        4,
+        0,
+        4,
+        9,
+        3,
+        0,
+        3,
+        5,
+        4,
+        8,
+        3,
+        7,
+        3,
+        3,
+        6,
+        0,
+        4,
+        0,
+        3,
+        8,
+        4,
+        5,
+        7,
+        4
+      ],
+      "labels": [
+        {
+          "list": "prime-weighted/row-major/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "47548304063373845303940400437231161481740815438323758983",
+      "values": [
+        4,
+        7,
+        5,
+        4,
+        8,
+        3,
+        0,
+        4,
+        0,
+        6,
+        3,
+        3,
+        7,
+        3,
+        8,
+        4,
+        5,
+        3,
+        0,
+        3,
+        9,
+        4,
+        0,
+        4,
+        0,
+        0,
+        4,
+        3,
+        7,
+        2,
+        3,
+        1,
+        1,
+        6,
+        1,
+        4,
+        8,
+        1,
+        7,
+        4,
+        0,
+        8,
+        1,
+        5,
+        4,
+        3,
+        8,
+        3,
+        2,
+        3,
+        7,
+        5,
+        8,
+        9,
+        8,
+        3
+      ],
+      "labels": [
+        {
+          "list": "prime-weighted/row-major/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "675678898693053",
+      "values": [
+        6,
+        7,
+        5,
+        6,
+        7,
+        8,
+        8,
+        9,
+        8,
+        6,
+        9,
+        3,
+        0,
+        5,
+        3
+      ],
+      "labels": [
+        {
+          "list": "colour-indexes/row-major/B",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "350396898876576",
+      "values": [
+        3,
+        5,
+        0,
+        3,
+        9,
+        6,
+        8,
+        9,
+        8,
+        8,
+        7,
+        6,
+        5,
+        7,
+        6
+      ],
+      "labels": [
+        {
+          "list": "colour-indexes/row-major/B",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "617253647588899118126129163170185193",
+      "values": [
+        6,
+        1,
+        7,
+        2,
+        5,
+        3,
+        6,
+        4,
+        7,
+        5,
+        8,
+        8,
+        8,
+        9,
+        9,
+        1,
+        1,
+        8,
+        1,
+        2,
+        6,
+        1,
+        2,
+        9,
+        1,
+        6,
+        3,
+        1,
+        7,
+        0,
+        1,
+        8,
+        5,
+        1,
+        9,
+        3
+      ],
+      "labels": [
+        {
+          "list": "colour-indexes/row-major/B",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "391581071361921621811998885746352716",
+      "values": [
+        3,
+        9,
+        1,
+        5,
+        8,
+        1,
+        0,
+        7,
+        1,
+        3,
+        6,
+        1,
+        9,
+        2,
+        1,
+        6,
+        2,
+        1,
+        8,
+        1,
+        1,
+        9,
+        9,
+        8,
+        8,
+        8,
+        5,
+        7,
+        4,
+        6,
+        3,
+        5,
+        2,
+        7,
+        1,
+        6
+      ],
+      "labels": [
+        {
+          "list": "colour-indexes/row-major/B",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "7733",
+      "values": [
+        7,
+        7,
+        3,
+        3
+      ],
+      "labels": [
+        {
+          "list": "prime-colour-indexes/row-major/B",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "3377",
+      "values": [
+        3,
+        3,
+        7,
+        7
+      ],
+      "labels": [
+        {
+          "list": "prime-colour-indexes/row-major/B",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "1747163193",
+      "values": [
+        1,
+        7,
+        4,
+        7,
+        1,
+        6,
+        3,
+        1,
+        9,
+        3
+      ],
+      "labels": [
+        {
+          "list": "prime-colour-indexes/row-major/B",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "3913617471",
+      "values": [
+        3,
+        9,
+        1,
+        3,
+        6,
+        1,
+        7,
+        4,
+        7,
+        1
+      ],
+      "labels": [
+        {
+          "list": "prime-colour-indexes/row-major/B",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "467161388",
+      "values": [
+        4,
+        6,
+        7,
+        1,
+        6,
+        1,
+        3,
+        8,
+        8
+      ],
+      "labels": [
+        {
+          "list": "colour-indexes/row-major/Y",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "883161764",
+      "values": [
+        8,
+        8,
+        3,
+        1,
+        6,
+        1,
+        7,
+        6,
+        4
+      ],
+      "labels": [
+        {
+          "list": "colour-indexes/row-major/Y",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "1466778196111133148178",
+      "values": [
+        1,
+        4,
+        6,
+        6,
+        7,
+        7,
+        8,
+        1,
+        9,
+        6,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        1,
+        4,
+        8,
+        1,
+        7,
+        8
+      ],
+      "labels": [
+        {
+          "list": "colour-indexes/row-major/Y",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "8718413311116918776641",
+      "values": [
+        8,
+        7,
+        1,
+        8,
+        4,
+        1,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        6,
+        9,
+        1,
+        8,
+        7,
+        7,
+        6,
+        6,
+        4,
+        1
+      ],
+      "labels": [
+        {
+          "list": "colour-indexes/row-major/Y",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "42474876517273",
+      "values": [
+        4,
+        2,
+        4,
+        7,
+        4,
+        8,
+        7,
+        6,
+        5,
+        1,
+        7,
+        2,
+        7,
+        3
+      ],
+      "labels": [
+        {
+          "list": "prime-weighted/spiral/rows",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "37271567847424",
+      "values": [
+        3,
+        7,
+        2,
+        7,
+        1,
+        5,
+        6,
+        7,
+        8,
+        4,
+        7,
+        4,
+        2,
+        4
+      ],
+      "labels": [
+        {
+          "list": "prime-weighted/spiral/rows",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "1254372240444347401434483877171677455811332739722397673",
+      "values": [
+        1,
+        2,
+        5,
+        4,
+        3,
+        7,
+        2,
+        2,
+        4,
+        0,
+        4,
+        4,
+        4,
+        3,
+        4,
+        7,
+        4,
+        0,
+        1,
+        4,
+        3,
+        4,
+        4,
+        8,
+        3,
+        8,
+        7,
+        7,
+        1,
+        7,
+        1,
+        6,
+        7,
+        7,
+        4,
+        5,
+        5,
+        8,
+        1,
+        1,
+        3,
+        3,
+        2,
+        7,
+        3,
+        9,
+        7,
+        2,
+        2,
+        3,
+        9,
+        7,
+        6,
+        7,
+        3
+      ],
+      "labels": [
+        {
+          "list": "prime-weighted/spiral/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "3767932279372331185547761717783844341047434440422734521",
+      "values": [
+        3,
+        7,
+        6,
+        7,
+        9,
+        3,
+        2,
+        2,
+        7,
+        9,
+        3,
+        7,
+        2,
+        3,
+        3,
+        1,
+        1,
+        8,
+        5,
+        5,
+        4,
+        7,
+        7,
+        6,
+        1,
+        7,
+        1,
+        7,
+        7,
+        8,
+        3,
+        8,
+        4,
+        4,
+        3,
+        4,
+        1,
+        0,
+        4,
+        7,
+        4,
+        3,
+        4,
+        4,
+        4,
+        0,
+        4,
+        2,
+        2,
+        7,
+        3,
+        4,
+        5,
+        2,
+        1
+      ],
+      "labels": [
+        {
+          "list": "prime-weighted/spiral/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "40682938399240",
+      "values": [
+        4,
+        0,
+        6,
+        8,
+        2,
+        9,
+        3,
+        8,
+        3,
+        9,
+        9,
+        2,
+        4,
+        0
+      ],
+      "labels": [
+        {
+          "list": "prime-weighted/spiral/columns",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "04299383928604",
+      "values": [
+        0,
+        4,
+        2,
+        9,
+        9,
+        3,
+        8,
+        3,
+        9,
+        2,
+        8,
+        6,
+        0,
+        4
+      ],
+      "labels": [
+        {
+          "list": "prime-weighted/spiral/columns",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "1542530353662985952453921433778463348195509318221641110",
+      "values": [
+        1,
+        5,
+        4,
+        2,
+        5,
+        3,
+        0,
+        3,
+        5,
+        3,
+        6,
+        6,
+        2,
+        9,
+        8,
+        5,
+        9,
+        5,
+        2,
+        4,
+        5,
+        3,
+        9,
+        2,
+        1,
+        4,
+        3,
+        3,
+        7,
+        7,
+        8,
+        4,
+        6,
+        3,
+        3,
+        4,
+        8,
+        1,
+        9,
+        5,
+        5,
+        0,
+        9,
+        3,
+        1,
+        8,
+        2,
+        2,
+        1,
+        6,
+        4,
+        1,
+        1,
+        1,
+        0
+      ],
+      "labels": [
+        {
+          "list": "prime-weighted/spiral/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "0111461228139055918433648773341293542595892663530352451",
+      "values": [
+        0,
+        1,
+        1,
+        1,
+        4,
+        6,
+        1,
+        2,
+        2,
+        8,
+        1,
+        3,
+        9,
+        0,
+        5,
+        5,
+        9,
+        1,
+        8,
+        4,
+        3,
+        3,
+        6,
+        4,
+        8,
+        7,
+        7,
+        3,
+        3,
+        4,
+        1,
+        2,
+        9,
+        3,
+        5,
+        4,
+        2,
+        5,
+        9,
+        5,
+        8,
+        9,
+        2,
+        6,
+        6,
+        3,
+        5,
+        3,
+        0,
+        3,
+        5,
+        2,
+        4,
+        5,
+        1
+      ],
+      "labels": [
+        {
+          "list": "prime-weighted/spiral/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "864286486428604",
+      "values": [
+        8,
+        6,
+        4,
+        2,
+        8,
+        6,
+        4,
+        8,
+        6,
+        4,
+        2,
+        8,
+        6,
+        0,
+        4
+      ],
+      "labels": [
+        {
+          "list": "colour-indexes/spiral/B",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "406824684682468",
+      "values": [
+        4,
+        0,
+        6,
+        8,
+        2,
+        4,
+        6,
+        8,
+        4,
+        6,
+        8,
+        2,
+        4,
+        6,
+        8
+      ],
+      "labels": [
+        {
+          "list": "colour-indexes/spiral/B",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "81624324856648896104112128136160184",
+      "values": [
+        8,
+        1,
+        6,
+        2,
+        4,
+        3,
+        2,
+        4,
+        8,
+        5,
+        6,
+        6,
+        4,
+        8,
+        8,
+        9,
+        6,
+        1,
+        0,
+        4,
+        1,
+        1,
+        2,
+        1,
+        2,
+        8,
+        1,
+        3,
+        6,
+        1,
+        6,
+        0,
+        1,
+        8,
+        4
+      ],
+      "labels": [
+        {
+          "list": "colour-indexes/spiral/B",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "48106163182121140169884665842342618",
+      "values": [
+        4,
+        8,
+        1,
+        0,
+        6,
+        1,
+        6,
+        3,
+        1,
+        8,
+        2,
+        1,
+        2,
+        1,
+        1,
+        4,
+        0,
+        1,
+        6,
+        9,
+        8,
+        8,
+        4,
+        6,
+        6,
+        5,
+        8,
+        4,
+        2,
+        3,
+        4,
+        2,
+        6,
+        1,
+        8
+      ],
+      "labels": [
+        {
+          "list": "colour-indexes/spiral/B",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "020042862",
+      "values": [
+        0,
+        2,
+        0,
+        0,
+        4,
+        2,
+        8,
+        6,
+        2
+      ],
+      "labels": [
+        {
+          "list": "colour-indexes/spiral/Y",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "268240020",
+      "values": [
+        2,
+        6,
+        8,
+        2,
+        4,
+        0,
+        0,
+        2,
+        0
+      ],
+      "labels": [
+        {
+          "list": "colour-indexes/spiral/Y",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "407280120144152168176192",
+      "values": [
+        4,
+        0,
+        7,
+        2,
+        8,
+        0,
+        1,
+        2,
+        0,
+        1,
+        4,
+        4,
+        1,
+        5,
+        2,
+        1,
+        6,
+        8,
+        1,
+        7,
+        6,
+        1,
+        9,
+        2
+      ],
+      "labels": [
+        {
+          "list": "colour-indexes/spiral/Y",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "291671861251441021082704",
+      "values": [
+        2,
+        9,
+        1,
+        6,
+        7,
+        1,
+        8,
+        6,
+        1,
+        2,
+        5,
+        1,
+        4,
+        4,
+        1,
+        0,
+        2,
+        1,
+        0,
+        8,
+        2,
+        7,
+        0,
+        4
+      ],
+      "labels": [
+        {
+          "list": "colour-indexes/spiral/Y",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "39973317337973",
+      "values": [
+        3,
+        9,
+        9,
+        7,
+        3,
+        3,
+        1,
+        7,
+        3,
+        3,
+        7,
+        9,
+        7,
+        3
+      ],
+      "labels": [
+        {
+          "list": "nth-prime/binary/rows",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "37973371337993",
+      "values": [
+        3,
+        7,
+        9,
+        7,
+        3,
+        3,
+        7,
+        1,
+        3,
+        3,
+        7,
+        9,
+        9,
+        3
+      ],
+      "labels": [
+        {
+          "list": "nth-prime/binary/rows",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "132919171313117232317191723",
+      "values": [
+        1,
+        3,
+        2,
+        9,
+        1,
+        9,
+        1,
+        7,
+        1,
+        3,
+        1,
+        3,
+        1,
+        1,
+        7,
+        2,
+        3,
+        2,
+        3,
+        1,
+        7,
+        1,
+        9,
+        1,
+        7,
+        2,
+        3
+      ],
+      "labels": [
+        {
+          "list": "nth-prime/binary/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "327191713232711313171919231",
+      "values": [
+        3,
+        2,
+        7,
+        1,
+        9,
+        1,
+        7,
+        1,
+        3,
+        2,
+        3,
+        2,
+        7,
+        1,
+        1,
+        3,
+        1,
+        3,
+        1,
+        7,
+        1,
+        9,
+        1,
+        9,
+        2,
+        3,
+        1
+      ],
+      "labels": [
+        {
+          "list": "nth-prime/binary/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "99999753713339",
+      "values": [
+        9,
+        9,
+        9,
+        9,
+        9,
+        7,
+        5,
+        3,
+        7,
+        1,
+        3,
+        3,
+        3,
+        9
+      ],
+      "labels": [
+        {
+          "list": "nth-prime/binary/columns",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "93331735799999",
+      "values": [
+        9,
+        3,
+        3,
+        3,
+        1,
+        7,
+        3,
+        5,
+        7,
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "labels": [
+        {
+          "list": "nth-prime/binary/columns",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "192919291917513171123131319",
+      "values": [
+        1,
+        9,
+        2,
+        9,
+        1,
+        9,
+        2,
+        9,
+        1,
+        9,
+        1,
+        7,
+        5,
+        1,
+        3,
+        1,
+        7,
+        1,
+        1,
+        2,
+        3,
+        1,
+        3,
+        1,
+        3,
+        1,
+        9
+      ],
+      "labels": [
+        {
+          "list": "nth-prime/binary/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "913131321171315719192919291",
+      "values": [
+        9,
+        1,
+        3,
+        1,
+        3,
+        1,
+        3,
+        2,
+        1,
+        1,
+        7,
+        1,
+        3,
+        1,
+        5,
+        7,
+        1,
+        9,
+        1,
+        9,
+        2,
+        9,
+        1,
+        9,
+        2,
+        9,
+        1
+      ],
+      "labels": [
+        {
+          "list": "nth-prime/binary/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "38213221760247",
+      "values": [
+        3,
+        8,
+        2,
+        1,
+        3,
+        2,
+        2,
+        1,
+        7,
+        6,
+        0,
+        2,
+        4,
+        7
+      ],
+      "labels": [
+        {
+          "list": "spectrum-ranks/specified/rows",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "74206712231283",
+      "values": [
+        7,
+        4,
+        2,
+        0,
+        6,
+        7,
+        1,
+        2,
+        2,
+        3,
+        1,
+        2,
+        8,
+        3
+      ],
+      "labels": [
+        {
+          "list": "spectrum-ranks/specified/rows",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "1318121113121211171610121417",
+      "values": [
+        1,
+        3,
+        1,
+        8,
+        1,
+        2,
+        1,
+        1,
+        1,
+        3,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        7,
+        1,
+        6,
+        1,
+        0,
+        1,
+        2,
+        1,
+        4,
+        1,
+        7
+      ],
+      "labels": [
+        {
+          "list": "spectrum-ranks/specified/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "7141210161711121213111218131",
+      "values": [
+        7,
+        1,
+        4,
+        1,
+        2,
+        1,
+        0,
+        1,
+        6,
+        1,
+        7,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        3,
+        1,
+        1,
+        1,
+        2,
+        1,
+        8,
+        1,
+        3,
+        1
+      ],
+      "labels": [
+        {
+          "list": "spectrum-ranks/specified/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "28042593110995",
+      "values": [
+        2,
+        8,
+        0,
+        4,
+        2,
+        5,
+        9,
+        3,
+        1,
+        1,
+        0,
+        9,
+        9,
+        5
+      ],
+      "labels": [
+        {
+          "list": "spectrum-ranks/specified/columns",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "59901139524082",
+      "values": [
+        5,
+        9,
+        9,
+        0,
+        1,
+        1,
+        3,
+        9,
+        5,
+        2,
+        4,
+        0,
+        8,
+        2
+      ],
+      "labels": [
+        {
+          "list": "spectrum-ranks/specified/columns",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "1218201412159131111209915",
+      "values": [
+        1,
+        2,
+        1,
+        8,
+        2,
+        0,
+        1,
+        4,
+        1,
+        2,
+        1,
+        5,
+        9,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        9,
+        9,
+        1,
+        5
+      ],
+      "labels": [
+        {
+          "list": "spectrum-ranks/specified/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "5199021111319512141028121",
+      "values": [
+        5,
+        1,
+        9,
+        9,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        9,
+        5,
+        1,
+        2,
+        1,
+        4,
+        1,
+        0,
+        2,
+        8,
+        1,
+        2,
+        1
+      ],
+      "labels": [
+        {
+          "list": "spectrum-ranks/specified/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "80558688083580",
+      "values": [
+        8,
+        0,
+        5,
+        5,
+        8,
+        6,
+        8,
+        8,
+        0,
+        8,
+        3,
+        5,
+        8,
+        0
+      ],
+      "labels": [
+        {
+          "list": "spectrum-ranks/zero/rows",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "08538088685508",
+      "values": [
+        0,
+        8,
+        5,
+        3,
+        8,
+        0,
+        8,
+        8,
+        6,
+        8,
+        5,
+        5,
+        0,
+        8
+      ],
+      "labels": [
+        {
+          "list": "spectrum-ranks/zero/rows",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "81055868810835810",
+      "values": [
+        8,
+        1,
+        0,
+        5,
+        5,
+        8,
+        6,
+        8,
+        8,
+        1,
+        0,
+        8,
+        3,
+        5,
+        8,
+        1,
+        0
+      ],
+      "labels": [
+        {
+          "list": "spectrum-ranks/zero/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "01853801886855018",
+      "values": [
+        0,
+        1,
+        8,
+        5,
+        3,
+        8,
+        0,
+        1,
+        8,
+        8,
+        6,
+        8,
+        5,
+        5,
+        0,
+        1,
+        8
+      ],
+      "labels": [
+        {
+          "list": "spectrum-ranks/zero/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "50555068563338",
+      "values": [
+        5,
+        0,
+        5,
+        5,
+        5,
+        0,
+        6,
+        8,
+        5,
+        6,
+        3,
+        3,
+        3,
+        8
+      ],
+      "labels": [
+        {
+          "list": "spectrum-ranks/zero/columns",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "83336586055505",
+      "values": [
+        8,
+        3,
+        3,
+        3,
+        6,
+        5,
+        8,
+        6,
+        0,
+        5,
+        5,
+        5,
+        0,
+        5
+      ],
+      "labels": [
+        {
+          "list": "spectrum-ranks/zero/columns",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "510155510685613338",
+      "values": [
+        5,
+        1,
+        0,
+        1,
+        5,
+        5,
+        5,
+        1,
+        0,
+        6,
+        8,
+        5,
+        6,
+        1,
+        3,
+        3,
+        3,
+        8
+      ],
+      "labels": [
+        {
+          "list": "spectrum-ranks/zero/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "833316586015551015",
+      "values": [
+        8,
+        3,
+        3,
+        3,
+        1,
+        6,
+        5,
+        8,
+        6,
+        0,
+        1,
+        5,
+        5,
+        5,
+        1,
+        0,
+        1,
+        5
+      ],
+      "labels": [
+        {
+          "list": "spectrum-ranks/zero/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "10871609942829",
+      "values": [
+        1,
+        0,
+        8,
+        7,
+        1,
+        6,
+        0,
+        9,
+        9,
+        4,
+        2,
+        8,
+        2,
+        9
+      ],
+      "labels": [
+        {
+          "list": "spectrum-rank-primes/specified/rows",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "92824990617801",
+      "values": [
+        9,
+        2,
+        8,
+        2,
+        4,
+        9,
+        9,
+        0,
+        6,
+        1,
+        7,
+        8,
+        0,
+        1
+      ],
+      "labels": [
+        {
+          "list": "spectrum-rank-primes/specified/rows",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "2130181721162019292412182229",
+      "values": [
+        2,
+        1,
+        3,
+        0,
+        1,
+        8,
+        1,
+        7,
+        2,
+        1,
+        1,
+        6,
+        2,
+        0,
+        1,
+        9,
+        2,
+        9,
+        2,
+        4,
+        1,
+        2,
+        1,
+        8,
+        2,
+        2,
+        2,
+        9
+      ],
+      "labels": [
+        {
+          "list": "spectrum-rank-primes/specified/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "9222812142929102611271810312",
+      "values": [
+        9,
+        2,
+        2,
+        2,
+        8,
+        1,
+        2,
+        1,
+        4,
+        2,
+        9,
+        2,
+        9,
+        1,
+        0,
+        2,
+        6,
+        1,
+        1,
+        2,
+        7,
+        1,
+        8,
+        1,
+        0,
+        3,
+        1,
+        2
+      ],
+      "labels": [
+        {
+          "list": "spectrum-rank-primes/specified/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "80808731754113",
+      "values": [
+        8,
+        0,
+        8,
+        0,
+        8,
+        7,
+        3,
+        1,
+        7,
+        5,
+        4,
+        1,
+        1,
+        3
+      ],
+      "labels": [
+        {
+          "list": "spectrum-rank-primes/specified/columns",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "31145713780808",
+      "values": [
+        3,
+        1,
+        1,
+        4,
+        5,
+        7,
+        1,
+        3,
+        7,
+        8,
+        0,
+        8,
+        0,
+        8
+      ],
+      "labels": [
+        {
+          "list": "spectrum-rank-primes/specified/columns",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "1830382018271321171534111123",
+      "values": [
+        1,
+        8,
+        3,
+        0,
+        3,
+        8,
+        2,
+        0,
+        1,
+        8,
+        2,
+        7,
+        1,
+        3,
+        2,
+        1,
+        1,
+        7,
+        1,
+        5,
+        3,
+        4,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3
+      ],
+      "labels": [
+        {
+          "list": "spectrum-rank-primes/specified/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "3211114351711231728102830381",
+      "values": [
+        3,
+        2,
+        1,
+        1,
+        1,
+        1,
+        4,
+        3,
+        5,
+        1,
+        7,
+        1,
+        1,
+        2,
+        3,
+        1,
+        7,
+        2,
+        8,
+        1,
+        0,
+        2,
+        8,
+        3,
+        0,
+        3,
+        8,
+        1
+      ],
+      "labels": [
+        {
+          "list": "spectrum-rank-primes/specified/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "62116066265162",
+      "values": [
+        6,
+        2,
+        1,
+        1,
+        6,
+        0,
+        6,
+        6,
+        2,
+        6,
+        5,
+        1,
+        6,
+        2
+      ],
+      "labels": [
+        {
+          "list": "spectrum-rank-primes/zero/rows",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "26156266061126",
+      "values": [
+        2,
+        6,
+        1,
+        5,
+        6,
+        2,
+        6,
+        6,
+        0,
+        6,
+        1,
+        1,
+        2,
+        6
+      ],
+      "labels": [
+        {
+          "list": "spectrum-rank-primes/zero/rows",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "162211111610161622165111622",
+      "values": [
+        1,
+        6,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        6,
+        1,
+        0,
+        1,
+        6,
+        1,
+        6,
+        2,
+        2,
+        1,
+        6,
+        5,
+        1,
+        1,
+        1,
+        6,
+        2,
+        2
+      ],
+      "labels": [
+        {
+          "list": "spectrum-rank-primes/zero/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "226111561226161016111112261",
+      "values": [
+        2,
+        2,
+        6,
+        1,
+        1,
+        1,
+        5,
+        6,
+        1,
+        2,
+        2,
+        6,
+        1,
+        6,
+        1,
+        0,
+        1,
+        6,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        6,
+        1
+      ],
+      "labels": [
+        {
+          "list": "spectrum-rank-primes/zero/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "12311206107556",
+      "values": [
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        0,
+        6,
+        1,
+        0,
+        7,
+        5,
+        5,
+        6
+      ],
+      "labels": [
+        {
+          "list": "spectrum-rank-primes/zero/columns",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "65570160211321",
+      "values": [
+        6,
+        5,
+        5,
+        7,
+        0,
+        1,
+        6,
+        0,
+        2,
+        1,
+        1,
+        3,
+        2,
+        1
+      ],
+      "labels": [
+        {
+          "list": "spectrum-rank-primes/zero/columns",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "11223311112210161110275516",
+      "values": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        0,
+        1,
+        6,
+        1,
+        1,
+        1,
+        0,
+        2,
+        7,
+        5,
+        5,
+        1,
+        6
+      ],
+      "labels": [
+        {
+          "list": "spectrum-rank-primes/zero/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "61557201116101221111332211",
+      "values": [
+        6,
+        1,
+        5,
+        5,
+        7,
+        2,
+        0,
+        1,
+        1,
+        1,
+        6,
+        1,
+        0,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1
+      ],
+      "labels": [
+        {
+          "list": "spectrum-rank-primes/zero/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "38093221768047",
+      "values": [
+        3,
+        8,
+        0,
+        9,
+        3,
+        2,
+        2,
+        1,
+        7,
+        6,
+        8,
+        0,
+        4,
+        7
+      ],
+      "labels": [
+        {
+          "list": "resistor-code/specified/rows",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "74086712239083",
+      "values": [
+        7,
+        4,
+        0,
+        8,
+        6,
+        7,
+        1,
+        2,
+        2,
+        3,
+        9,
+        0,
+        8,
+        3
+      ],
+      "labels": [
+        {
+          "list": "resistor-code/specified/rows",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "7348606973628291574658606457",
+      "values": [
+        7,
+        3,
+        4,
+        8,
+        6,
+        0,
+        6,
+        9,
+        7,
+        3,
+        6,
+        2,
+        8,
+        2,
+        9,
+        1,
+        5,
+        7,
+        4,
+        6,
+        5,
+        8,
+        6,
+        0,
+        6,
+        4,
+        5,
+        7
+      ],
+      "labels": [
+        {
+          "list": "resistor-code/specified/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "7546068564751928263796068437",
+      "values": [
+        7,
+        5,
+        4,
+        6,
+        0,
+        6,
+        8,
+        5,
+        6,
+        4,
+        7,
+        5,
+        1,
+        9,
+        2,
+        8,
+        2,
+        6,
+        3,
+        7,
+        9,
+        6,
+        0,
+        6,
+        8,
+        4,
+        3,
+        7
+      ],
+      "labels": [
+        {
+          "list": "resistor-code/specified/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "08220593912775",
+      "values": [
+        0,
+        8,
+        2,
+        2,
+        0,
+        5,
+        9,
+        3,
+        9,
+        1,
+        2,
+        7,
+        7,
+        5
+      ],
+      "labels": [
+        {
+          "list": "resistor-code/specified/columns",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "57721939502280",
+      "values": [
+        5,
+        7,
+        7,
+        2,
+        1,
+        9,
+        3,
+        9,
+        5,
+        0,
+        2,
+        2,
+        8,
+        0
+      ],
+      "labels": [
+        {
+          "list": "resistor-code/specified/columns",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "6048724260758973697152676755",
+      "values": [
+        6,
+        0,
+        4,
+        8,
+        7,
+        2,
+        4,
+        2,
+        6,
+        0,
+        7,
+        5,
+        8,
+        9,
+        7,
+        3,
+        6,
+        9,
+        7,
+        1,
+        5,
+        2,
+        6,
+        7,
+        6,
+        7,
+        5,
+        5
+      ],
+      "labels": [
+        {
+          "list": "resistor-code/specified/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "5576762517963798570624278406",
+      "values": [
+        5,
+        5,
+        7,
+        6,
+        7,
+        6,
+        2,
+        5,
+        1,
+        7,
+        9,
+        6,
+        3,
+        7,
+        9,
+        8,
+        5,
+        7,
+        0,
+        6,
+        2,
+        4,
+        2,
+        7,
+        8,
+        4,
+        0,
+        6
+      ],
+      "labels": [
+        {
+          "list": "resistor-code/specified/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "02660800204602",
+      "values": [
+        0,
+        2,
+        6,
+        6,
+        0,
+        8,
+        0,
+        0,
+        2,
+        0,
+        4,
+        6,
+        0,
+        2
+      ],
+      "labels": [
+        {
+          "list": "resistor-code/zero/rows",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "20640200806620",
+      "values": [
+        2,
+        0,
+        6,
+        4,
+        0,
+        2,
+        0,
+        0,
+        8,
+        0,
+        6,
+        6,
+        2,
+        0
+      ],
+      "labels": [
+        {
+          "list": "resistor-code/zero/rows",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "10126610810101210461012",
+      "values": [
+        1,
+        0,
+        1,
+        2,
+        6,
+        6,
+        1,
+        0,
+        8,
+        1,
+        0,
+        1,
+        0,
+        1,
+        2,
+        1,
+        0,
+        4,
+        6,
+        1,
+        0,
+        1,
+        2
+      ],
+      "labels": [
+        {
+          "list": "resistor-code/zero/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "21016401210101801662101",
+      "values": [
+        2,
+        1,
+        0,
+        1,
+        6,
+        4,
+        0,
+        1,
+        2,
+        1,
+        0,
+        1,
+        0,
+        1,
+        8,
+        0,
+        1,
+        6,
+        6,
+        2,
+        1,
+        0,
+        1
+      ],
+      "labels": [
+        {
+          "list": "resistor-code/zero/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "62866280686440",
+      "values": [
+        6,
+        2,
+        8,
+        6,
+        6,
+        2,
+        8,
+        0,
+        6,
+        8,
+        6,
+        4,
+        4,
+        0
+      ],
+      "labels": [
+        {
+          "list": "resistor-code/zero/columns",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "04468608266826",
+      "values": [
+        0,
+        4,
+        4,
+        6,
+        8,
+        6,
+        0,
+        8,
+        2,
+        6,
+        6,
+        8,
+        2,
+        6
+      ],
+      "labels": [
+        {
+          "list": "resistor-code/zero/columns",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "61218661281068164410",
+      "values": [
+        6,
+        1,
+        2,
+        1,
+        8,
+        6,
+        6,
+        1,
+        2,
+        8,
+        1,
+        0,
+        6,
+        8,
+        1,
+        6,
+        4,
+        4,
+        1,
+        0
+      ],
+      "labels": [
+        {
+          "list": "resistor-code/zero/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "01446186018216681216",
+      "values": [
+        0,
+        1,
+        4,
+        4,
+        6,
+        1,
+        8,
+        6,
+        0,
+        1,
+        8,
+        2,
+        1,
+        6,
+        6,
+        8,
+        1,
+        2,
+        1,
+        6
+      ],
+      "labels": [
+        {
+          "list": "resistor-code/zero/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "18141247125181",
+      "values": [
+        1,
+        8,
+        1,
+        4,
+        1,
+        2,
+        4,
+        7,
+        1,
+        2,
+        5,
+        1,
+        8,
+        1
+      ],
+      "labels": [
+        {
+          "list": "resistor-code-primes/specified/rows",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "18152174214181",
+      "values": [
+        1,
+        8,
+        1,
+        5,
+        2,
+        1,
+        7,
+        4,
+        2,
+        1,
+        4,
+        1,
+        8,
+        1
+      ],
+      "labels": [
+        {
+          "list": "resistor-code-primes/specified/rows",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "181118151174181152204227141112145151158141",
+      "values": [
+        1,
+        8,
+        1,
+        1,
+        1,
+        8,
+        1,
+        5,
+        1,
+        1,
+        7,
+        4,
+        1,
+        8,
+        1,
+        1,
+        5,
+        2,
+        2,
+        0,
+        4,
+        2,
+        2,
+        7,
+        1,
+        4,
+        1,
+        1,
+        1,
+        2,
+        1,
+        4,
+        5,
+        1,
+        5,
+        1,
+        1,
+        5,
+        8,
+        1,
+        4,
+        1
+      ],
+      "labels": [
+        {
+          "list": "resistor-code-primes/specified/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "141851151541211141722402251181471151811181",
+      "values": [
+        1,
+        4,
+        1,
+        8,
+        5,
+        1,
+        1,
+        5,
+        1,
+        5,
+        4,
+        1,
+        2,
+        1,
+        1,
+        1,
+        4,
+        1,
+        7,
+        2,
+        2,
+        4,
+        0,
+        2,
+        2,
+        5,
+        1,
+        1,
+        8,
+        1,
+        4,
+        7,
+        1,
+        1,
+        5,
+        1,
+        8,
+        1,
+        1,
+        1,
+        8,
+        1
+      ],
+      "labels": [
+        {
+          "list": "resistor-code-primes/specified/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "18751711455885",
+      "values": [
+        1,
+        8,
+        7,
+        5,
+        1,
+        7,
+        1,
+        1,
+        4,
+        5,
+        5,
+        8,
+        8,
+        5
+      ],
+      "labels": [
+        {
+          "list": "resistor-code-primes/specified/columns",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "58855411715781",
+      "values": [
+        5,
+        8,
+        8,
+        5,
+        5,
+        4,
+        1,
+        1,
+        7,
+        1,
+        5,
+        7,
+        8,
+        1
+      ],
+      "labels": [
+        {
+          "list": "resistor-code-primes/specified/columns",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "151118177105151187221181174175125168168135",
+      "values": [
+        1,
+        5,
+        1,
+        1,
+        1,
+        8,
+        1,
+        7,
+        7,
+        1,
+        0,
+        5,
+        1,
+        5,
+        1,
+        1,
+        8,
+        7,
+        2,
+        2,
+        1,
+        1,
+        8,
+        1,
+        1,
+        7,
+        4,
+        1,
+        7,
+        5,
+        1,
+        2,
+        5,
+        1,
+        6,
+        8,
+        1,
+        6,
+        8,
+        1,
+        3,
+        5
+      ],
+      "labels": [
+        {
+          "list": "resistor-code-primes/specified/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "531861861521571471181122781151501771811151",
+      "values": [
+        5,
+        3,
+        1,
+        8,
+        6,
+        1,
+        8,
+        6,
+        1,
+        5,
+        2,
+        1,
+        5,
+        7,
+        1,
+        4,
+        7,
+        1,
+        1,
+        8,
+        1,
+        1,
+        2,
+        2,
+        7,
+        8,
+        1,
+        1,
+        5,
+        1,
+        5,
+        0,
+        1,
+        7,
+        7,
+        1,
+        8,
+        1,
+        1,
+        1,
+        5,
+        1
+      ],
+      "labels": [
+        {
+          "list": "resistor-code-primes/specified/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "06330400607306",
+      "values": [
+        0,
+        6,
+        3,
+        3,
+        0,
+        4,
+        0,
+        0,
+        6,
+        0,
+        7,
+        3,
+        0,
+        6
+      ],
+      "labels": [
+        {
+          "list": "resistor-code-primes/zero/rows",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "60370600403360",
+      "values": [
+        6,
+        0,
+        3,
+        7,
+        0,
+        6,
+        0,
+        0,
+        4,
+        0,
+        3,
+        3,
+        6,
+        0
+      ],
+      "labels": [
+        {
+          "list": "resistor-code-primes/zero/rows",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "202613132014202026207132026",
+      "values": [
+        2,
+        0,
+        2,
+        6,
+        1,
+        3,
+        1,
+        3,
+        2,
+        0,
+        1,
+        4,
+        2,
+        0,
+        2,
+        0,
+        2,
+        6,
+        2,
+        0,
+        7,
+        1,
+        3,
+        2,
+        0,
+        2,
+        6
+      ],
+      "labels": [
+        {
+          "list": "resistor-code-primes/zero/rows",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "620231702620202410231316202",
+      "values": [
+        6,
+        2,
+        0,
+        2,
+        3,
+        1,
+        7,
+        0,
+        2,
+        6,
+        2,
+        0,
+        2,
+        0,
+        2,
+        4,
+        1,
+        0,
+        2,
+        3,
+        1,
+        3,
+        1,
+        6,
+        2,
+        0,
+        2
+      ],
+      "labels": [
+        {
+          "list": "resistor-code-primes/zero/rows",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "36933640343770",
+      "values": [
+        3,
+        6,
+        9,
+        3,
+        3,
+        6,
+        4,
+        0,
+        3,
+        4,
+        3,
+        7,
+        7,
+        0
+      ],
+      "labels": [
+        {
+          "list": "resistor-code-primes/zero/columns",
+          "form": "residue10",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "07734304633963",
+      "values": [
+        0,
+        7,
+        7,
+        3,
+        4,
+        3,
+        0,
+        4,
+        6,
+        3,
+        3,
+        9,
+        6,
+        3
+      ],
+      "labels": [
+        {
+          "list": "resistor-code-primes/zero/columns",
+          "form": "residue10",
+          "reverse": true
+        }
+      ]
+    },
+    {
+      "key": "13263913132614201314337720",
+      "values": [
+        1,
+        3,
+        2,
+        6,
+        3,
+        9,
+        1,
+        3,
+        1,
+        3,
+        2,
+        6,
+        1,
+        4,
+        2,
+        0,
+        1,
+        3,
+        1,
+        4,
+        3,
+        3,
+        7,
+        7,
+        2,
+        0
+      ],
+      "labels": [
+        {
+          "list": "resistor-code-primes/zero/columns",
+          "form": "decimal-digits",
+          "reverse": false
+        }
+      ]
+    },
+    {
+      "key": "02773341310241623131936231",
+      "values": [
+        0,
+        2,
+        7,
+        7,
+        3,
+        3,
+        4,
+        1,
+        3,
+        1,
+        0,
+        2,
+        4,
+        1,
+        6,
+        2,
+        3,
+        1,
+        3,
+        1,
+        9,
+        3,
+        6,
+        2,
+        3,
+        1
+      ],
+      "labels": [
+        {
+          "list": "resistor-code-primes/zero/columns",
+          "form": "decimal-digits",
+          "reverse": true
+        }
+      ]
+    }
+  ],
+  "alphabet": "FUBCDORA.LETHINGKYMVPS.JQZXW",
+  "esc": [
+    1,
+    4
+  ],
+  "controls": {
+    "planted": 54,
+    "exactRecovery": 50
+  },
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceSHA256": "c73203dcc4af33d3ff7a6800b42e7e328a458c55a0932779c3015f152aae3072",
+  "optimizerSHA256": "434bdd5f3d9c6ceb8d736727b53bf41c1e6b6f93d6fb2a9d90788fec11f54514"
+}

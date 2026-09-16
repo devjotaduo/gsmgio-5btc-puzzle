@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-09-16T11:50:28.767Z",
+  "result": "No new password or payload obtained",
+  "status": "completed bounded container audit; puzzle unsolved",
+  "parserControls": 6,
+  "ffprobePackets": 199,
+  "independentFrameComparisons": 199,
+  "unusedMainBits": 121875,
+  "unusedNonzeroBits": 0,
+  "hashes": {
+    "solver/mp3_container_audit.cjs": "b381ea20301b717d65c5f6117693127383ccc0ca842ad0b2cc2eaa6279f894a2",
+    "_work/mp3_container_2026-09-16/audit.json": "5ffb3a3493194480a91bbc8ecb8b89c2951233b7f5920ad8548c3895f1df08e2",
+    "_work/mp3_container_2026-09-16/ffprobe.json": "47a0b8d3354b718d645cd149d67d293b07cfa789f5eca4d82605d852af49a53f",
+    "_work/mp3_container_2026-09-16/frames.json": "45be270716e2a4bd970b94cd70937b73a82c6dc57419f16224ae44a5c4a32648",
+    "_work/mp3_container_2026-09-16/independent_verification.json": "7ee81337efbdabdd8fc36de10c83ec2841a944870ca7e97f7349bb4ac9b6b5f9",
+    "_work/mp3_container_2026-09-16/RELATORIO.md": "e06d62fe84de64059cb7a25f6028176ff9c1879b989fead2f58ea4e02142d4b1",
+    "_work/mp3_container_2026-09-16/unused_main_data.json": "7bf281c9b1566c0fca2b45516afef0ada18efe7477b1491ce22439f55ec842d5"
+  }
+}

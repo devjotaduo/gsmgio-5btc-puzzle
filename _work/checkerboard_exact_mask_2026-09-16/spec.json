@@ -1,0 +1,36 @@
+{
+  "hypothesis": "Same FAED straddling-checkerboard family as the previous joint search: all 45 escape pairs, both source directions, g independently 0/7, unknown A-Z plus two reserved slots. Exact mask optimization at each new quadgram proposal; word-unigram coordinate refinement from new and historical alphabets.",
+  "scope": "Heuristic alphabet inference; at most 20 full swap sweeps per start. A no-word result only rejects that alphabet under this vocabulary. No cipher-family exclusion or password authentication follows from a score.",
+  "options": {
+    "restarts": 4,
+    "iterations": 4000,
+    "dpEvery": 0,
+    "tempStart": 0.04,
+    "tempEnd": 0.0001,
+    "optimizeMaskEveryKey": true
+  },
+  "maxSweeps": 20,
+  "datasets": [
+    {
+      "name": "real",
+      "source": "faedggeedfcbdabhhggcadcfeddgfdgbgigaaedggiafaecghggcdaihehahbahigceifgbfgefgaifabifagaegeacgbbeagfggeeggafbacgfcdbeiffaafcidahgdeefghhcggaegdebhhegeghcegadfbdiagefcicggifdcgaaggfbigaicfbhecaecbceiaicebgbgiecdeggfgegaedggfiiciiififhggcgfgdcdggefcbeeigefibgibggghhfbcgifdehedfdagicdbhicgaiedaehahghhcihdghfhbiicecbiichihiiigiddgehhdfdchcbafgfbhaheagegecafehgcfggggcagfhhghbaihidiehhfdeggdgcihggggghadahigigbgecgedfcdggaccdehiicigfbffhggaeidbbeibbeiifdgfdhieeeieeecifdgdahdiggfhegfiaffiggbcbcehceabfbedbiibfbfdedeehgigfaaiggagbeiichiedifbehgbccahhbiibibbibdcbahaidhfahiihic"
+    },
+    {
+      "name": "shuffle1",
+      "seed": 77100,
+      "source": "efhgadebihfgedhdgghahgdgebfggedahiieififfchbgabffgefedgfeeigbcgdgfiibaihidefdbibggbfceigcgghggbieegdiiiciacbcefcgaifieieefighgedbieehbchehhggghiaegddccggcaagfdfbhhceidgfbaegbbfgaifdhaadgbeiehcggaffeggcddecgbdgehfbhceiahegdcghiihcdhbggieffahcccciiebaaacgdfhgibibdgfhfieiiafggiabecagcachbbfibgihgfaeigacihgibibciagefiiagidbigeebcefcbahgahfhfedeaiiidgfeigdhigbggcghfghihbibcgaehaaagihbiahfcegbidgedhgfdhfgbihcgggfibfdcaggaaiigfgbfeighgccfegcdfbcdadggedeeeefegbgaaggfdaadaigcibgghdaegfhaebhighdedchfagcaghidfihgfabfcdhfaeahfibcfceaehhdeidcidgcdbdcbegggaeceggeecgiihgegghcied"
+    }
+  ],
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "priorSpecSHA256": "183bc7d607253248232121648ea8f301edd34c4ebbfb456677fb36e9d58e1e16",
+  "priorCasesSHA256": "248d009efa786300a52c8f7f711551cd31a59f34beda72402f5071942cfb6e6d",
+  "controlsSHA256": "b49309f5aa8e1ca06b6c1560abc11517376fdf558bdc81021d31d6c297868e7c",
+  "sources": {
+    "checkerboard_word_search.cjs": "29dc93dbbb7f8a991ebd0bb1c7cc01e4790cb3452e4a5deff15b2c5163ad2a76",
+    "checkerboard_word_decoder.cjs": "b693f782e36b016199fde27ecbc1a9dbb5bd90597562a94f8954f419ad359c10",
+    "joint_checkerboard_search.cjs": "786855078bf8b351c385bc0d7469e723d9b614e86e796694a67309ee452b5f90",
+    "ambiguous_checkerboard.cjs": "434bdd5f3d9c6ceb8d736727b53bf41c1e6b6f93d6fb2a9d90788fec11f54514"
+  },
+  "wordDataSHA256": "51df159fd3de12b20e403c108f526e96dbd723d9cabdd5f17955cdc16059e690",
+  "quadgramSHA256": "d2a64e70154725a0c0d1901690df47c73086e0bfc112ad419aad2eb069f89a43"
+}

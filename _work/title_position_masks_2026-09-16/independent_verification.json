@@ -1,0 +1,11 @@
+{
+  "transformsIndependentlyReconstructed": 224,
+  "distinctMaterialsIndependentlyReconstructed": 3200,
+  "aesDecisionsReproduced": 38400,
+  "paddingsReproduced": 152,
+  "decisionsSHA256": "baa2ef57b6e06e37212be45421ad79f14e3cb44701c199423bdc76e1b320b095",
+  "distinctScalarsComparedWithTargetAndNegative": 6554,
+  "scalarHits": [],
+  "sourceSHA256": "09ec6c531d74e2c4c9b417f1a5510118ca154bf6bf789b9a21ba9fab52dde1f8",
+  "limit": "Only the finite title-mask family and scalar derivations stated in spec.json."
+}

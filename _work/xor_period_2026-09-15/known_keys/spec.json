@@ -1,0 +1,15 @@
+{
+  "hypothesis": "DBBI a=1..i=9, any ONE symbol independently zero, both original and reversed symbol order, whole decimal integer -> bytes XOR repeated raw SHA256 of exactly the previously saved matrix candidates; all output bytes <128.",
+  "keyFileSHA256": "6dc48cba5e659780c1f06dedcd6413ef77f1e26fc3b1f66504a0d4dd68e330ae",
+  "keyCount": 14042,
+  "sourceSHA256": "0feb0118e337808758598da7b3df5be1290fb187519dda63749ce6ebf0642bdd",
+  "controls": {
+    "successors": 327680,
+    "planted": 9,
+    "phase32Control": true
+  },
+  "limits": {
+    "maxNodes": 50000,
+    "maxMs": 500
+  }
+}

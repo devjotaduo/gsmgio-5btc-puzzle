@@ -1,0 +1,14 @@
+{
+  "frames": 199,
+  "bytes": 212031,
+  "all_frame_offsets_sizes_part23_and_backpointers_match": true,
+  "unused_main_bits": 121875,
+  "unused_main_nonzero_bits": 0,
+  "id3_padding_zero": 3815,
+  "method": "Python integer/bitstring side-info extraction; full per-bit allocation mask, without importing the JS parser",
+  "inputs_sha256": {
+    "_work\\decentraland\\puzzlepiece.mp3": "ef17a96dce37b4dd7cbf79f210c5cbaf37fcae60e5faf8004de4e0832bd0dfee",
+    "_work\\mp3_container_2026-09-16\\frames.json": "45be270716e2a4bd970b94cd70937b73a82c6dc57419f16224ae44a5c4a32648",
+    "_work\\mp3_container_2026-09-16\\audit.json": "5ffb3a3493194480a91bbc8ecb8b89c2951233b7f5920ad8548c3895f1df08e2"
+  }
+}

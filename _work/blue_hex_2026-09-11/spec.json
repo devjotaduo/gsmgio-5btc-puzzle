@@ -1,0 +1,68 @@
+{
+  "source_sha256": "900dcacada7b9c7a662eb32562158b7bb86fc8060041871512d9ae9e3526bb2a",
+  "inputs_sha256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "hypothesis": "Order of first distinct hex digits in blue cell indices supplies a substitution alphabet for DBBI prefix tokens.",
+  "status": "Hypothesis; neither the b/g parse nor this alphabet operation is creator-confirmed.",
+  "canonical": {
+    "blueHex": "061119242f3a5863767e81a3aab9c1",
+    "seenHex": "061924f3a587ebc",
+    "missing": "d",
+    "bluePrimes": [
+      17,
+      47,
+      163,
+      193
+    ],
+    "primeWeights": [
+      8,
+      2,
+      1,
+      4
+    ],
+    "alphabet": "061924f3a587ebcd",
+    "tokenOrder": [
+      "d",
+      "bb",
+      "i",
+      "bf",
+      "bh",
+      "c",
+      "be",
+      "gb",
+      "h",
+      "a",
+      "gg",
+      "e",
+      "ge",
+      "f",
+      "ba",
+      "gi"
+    ],
+    "candidate": "0619244f31a5ff1af87ef6eaa72abc90afbb406b4443bf7874f04199bd37775f"
+  },
+  "variants": {
+    "alphabet_construction": "First distinct hex digits of blue indices; three traversals (row/column/known URL spiral), forward/backward, row-major numbering 0/1-based; append/prepend missing digits in 0..f order.",
+    "token_order": [
+      "first occurrence",
+      "lexicographic",
+      "single symbols then pairs, lexicographic"
+    ],
+    "token_traversal": [
+      "forward",
+      "backward"
+    ],
+    "password_forms": [
+      "hex lowercase",
+      "hex uppercase",
+      "raw 32 bytes",
+      "sha256hex of each preceding form"
+    ],
+    "key_tests": [
+      "raw mapped 32 bytes",
+      "reversed mapped bytes",
+      "sha256 of every password"
+    ],
+    "aes": "All three original blobs, AES-256-CBC, EVP_BytesToKey SHA256 and MD5. No invented IV or derived ciphertext."
+  },
+  "acceptance": "Exact prize public key (or its negation, invertible), or independently verifiable complete plaintext. Padding/printable ratio are triage only."
+}

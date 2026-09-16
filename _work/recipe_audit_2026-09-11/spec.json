@@ -1,0 +1,24 @@
+{
+  "sourceSHA256": "53d31ae38aa1126dab16715aa6382c8aa8ffb7c194edefdbe8ab9e9858eccd64",
+  "inputsSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "originalSourceSHA256": "e4496050bb1424b87964949b160a1ac3ddc826958e0a86c89373b3d6a8ea9642",
+  "alphabet": "abcdefghi",
+  "unitMutations": 5288,
+  "colorSwaps": 135,
+  "markers": {
+    "base": [
+      11,
+      "SENDTHE"
+    ],
+    "blue": [
+      9,
+      "BLUE"
+    ],
+    "yellow": [
+      11,
+      "TOSETHEX"
+    ]
+  },
+  "scope": "All 661 positions changed to each other symbol, one position at a time. Every blue/yellow pair swapped. Recipe otherwise fixed. Marker scores are diagnostic, not a solution test.",
+  "indexing": "Saved input and output positions are 1-based; array entries are 0-based."
+}

@@ -1,0 +1,14 @@
+{
+  "morseChecks": 1530252,
+  "morseHits": 12,
+  "binaryChecks": 629856,
+  "binaryHits": 32474,
+  "distinctBinaryCandidates": 23350,
+  "aesChecks": 557484,
+  "paddingChecks": 2198,
+  "keyChecks": 1074236,
+  "keyHits": [],
+  "scope": "Full independent re-enumeration and decryption. Key scan: SHA256 candidate preimages, raw 32-byte candidate preimages, every 32-byte big-endian padded-output window, and 64-hex runs; compares target x-coordinate to include the negated key. No other key derivations claimed.",
+  "verifierSHA256": "3b31074a1f9d86a44a7d7063bf53c59726dd320f130538cb6d971393d3679f2e",
+  "allPassed": true
+}

@@ -1,0 +1,22 @@
+{
+  "method": "Python independent reconstruction; repeated substring sets; inverse allows all offsets for second line, a superset of actual placements. Full input comparison.",
+  "python": "3.12.10",
+  "reconstructedProfiles": 69,
+  "verifiedSearches": 114,
+  "longestRepeatedSubstring": {
+    "dbbi": 4,
+    "faed": 5
+  },
+  "inverseSearches": 53,
+  "supersetIntegerPairs": 10518,
+  "matches": [],
+  "verifiedArtifactSHA256": {
+    "color_sum_controls.json": "f902c67f727cd31f266e4781b3ac00c4166aa9ccae7b7955b2e2abbdc1959319",
+    "color_sum_extended_results.json": "61b2b5cbe7c67d3259aaba8df29911093879e51bb2c59de0bb22db7568a52cf2",
+    "color_sum_extended_spec.json": "07cf82e0cf232d29d1ade45ce364657467a48cbfe8e2d7cf6f55cd0286a49208",
+    "color_sum_extended_summary.json": "74e437bf0e4599e194142fa019611feb92339d4f6f9e6e5d9c8a3ba984e9955b",
+    "color_sum_results.json": "1c9244fc1e25e8d22e3b6ed00b4684a48721d416a904ce7c936feca11e19856e",
+    "color_sum_spec.json": "7d0624c49382747c908bb648a06c17654f11643154b830bbb21a92d7adb2aa17",
+    "color_sum_summary.json": "32d20d6dbb76731575e00d297ebb17963099d98a06ae33e1fe4f539a6c63ad26"
+  }
+}

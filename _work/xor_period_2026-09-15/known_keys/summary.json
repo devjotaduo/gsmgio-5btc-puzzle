@@ -1,0 +1,16 @@
+{
+  "cases": 252756,
+  "nodes": 588584,
+  "certificates": 420668,
+  "partial": [],
+  "candidates": 2,
+  "fullyPrintable": 0,
+  "passwords": 4,
+  "aesAttempts": 24,
+  "padding": 0,
+  "controls": {
+    "successors": 327680,
+    "planted": 9,
+    "phase32Control": true
+  }
+}

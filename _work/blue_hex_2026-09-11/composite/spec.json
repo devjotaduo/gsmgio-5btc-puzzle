@@ -1,0 +1,19 @@
+{
+  "hypothesis": "Mapped DBBI might be one component, not the complete password. Test the visible order DBBI + matrixsumlist + FAED + lastwordsbeforearchichoice, then SHA256 hex.",
+  "left": "All distinct mapped hashes from the two finite alphabet families; lowercase hex.",
+  "matrix": {
+    "total": "101",
+    "rows": "610876654997879",
+    "columns": "8108108736759668"
+  },
+  "faed": [
+    "literal",
+    "a1_digits"
+  ],
+  "lastwords": {
+    "last_word": "to",
+    "reinserting_clause": "reinsertingtheprimebasicsafterwhichyouwillberequiredto"
+  },
+  "scope": "Literal FAED and a1-digit FAED are hypotheses, not solved interpretations. No claim that this order or these components are confirmed.",
+  "normalization": "No separators; lowercase source letters; SHA256 lowercase hex password. All three original blobs, EVP-SHA256 then EVP-MD5."
+}

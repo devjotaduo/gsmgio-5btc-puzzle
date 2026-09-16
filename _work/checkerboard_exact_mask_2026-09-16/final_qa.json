@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-09-16T07:30:37.736Z",
+  "reportLocalLinks": 25,
+  "sourceHashes": true,
+  "all180CasesVerified": true,
+  "realSnapshotMatchesCompletedJournal": true,
+  "oraclesIndependentlyVerified": true,
+  "observedMainExitCode": 0,
+  "observedVerifierExitCode": 0,
+  "mainSessionId": 49709,
+  "casesSHA256": "2f87f89d025db6cd9929f88ba6afc020098618146605efe2591604ca0df01620",
+  "verificationSHA256": "209aa52e0845cec416fba721708650af210e36095fcb63c6cb132a07eac701a5",
+  "independentOraclesSHA256": "4f38662662f1f2452f9a4ae4c6c9c554013acb8470153365f89d3a136d423345"
+}

@@ -1,0 +1,39 @@
+{
+  "hypothesis": "Unknown A-Z plus two reserved checkerboard slots; reserved slots forbidden in plaintext. FAED g independently 0/7, two escape digits and whole original/reversed symbol order. Alphabet/masks sought jointly by simulated annealing and periodic exact mask optimization.",
+  "caveat": "Heuristic alphabet search; full alphabet space NOT exhausted. Three matched frequency-preserving shuffle controls, not proof of impossibility. g alias is a hypothesis consistent with digit counts, not an author-confirmed mapping.",
+  "options": {
+    "restarts": 8,
+    "iterations": 20000,
+    "dpEvery": 500,
+    "tempStart": 0.09,
+    "tempEnd": 0.0001,
+    "optimizeMaskEveryKey": false
+  },
+  "datasets": [
+    {
+      "name": "real",
+      "source": "faedggeedfcbdabhhggcadcfeddgfdgbgigaaedggiafaecghggcdaihehahbahigceifgbfgefgaifabifagaegeacgbbeagfggeeggafbacgfcdbeiffaafcidahgdeefghhcggaegdebhhegeghcegadfbdiagefcicggifdcgaaggfbigaicfbhecaecbceiaicebgbgiecdeggfgegaedggfiiciiififhggcgfgdcdggefcbeeigefibgibggghhfbcgifdehedfdagicdbhicgaiedaehahghhcihdghfhbiicecbiichihiiigiddgehhdfdchcbafgfbhaheagegecafehgcfggggcagfhhghbaihidiehhfdeggdgcihggggghadahigigbgecgedfcdggaccdehiicigfbffhggaeidbbeibbeiifdgfdhieeeieeecifdgdahdiggfhegfiaffiggbcbcehceabfbedbiibfbfdedeehgigfaaiggagbeiichiedifbehgbccahhbiibibbibdcbahaidhfahiihic"
+    },
+    {
+      "name": "shuffle1",
+      "seed": 77100,
+      "source": "efhgadebihfgedhdgghahgdgebfggedahiieififfchbgabffgefedgfeeigbcgdgfiibaihidefdbibggbfceigcgghggbieegdiiiciacbcefcgaifieieefighgedbieehbchehhggghiaegddccggcaagfdfbhhceidgfbaegbbfgaifdhaadgbeiehcggaffeggcddecgbdgehfbhceiahegdcghiihcdhbggieffahcccciiebaaacgdfhgibibdgfhfieiiafggiabecagcachbbfibgihgfaeigacihgibibciagefiiagidbigeebcefcbahgahfhfedeaiiidgfeigdhigbggcghfghihbibcgaehaaagihbiahfcegbidgedhgfdhfgbihcgggfibfdcaggaaiigfgbfeighgccfegcdfbcdadggedeeeefegbgaaggfdaadaigcibgghdaegfhaebhighdedchfagcaghidfihgfabfcdhfaeahfibcfceaehhdeidcidgcdbdcbegggaeceggeecgiihgegghcied"
+    },
+    {
+      "name": "shuffle2",
+      "seed": 77101,
+      "source": "gfcgdgibdiedgdiaefiagadiaedhebgecfbcdgaiahcfheabgdhibgighggagfechgcieddahdabbbgeggfgdeaegfhfcefgchccfdfdagaiediahgidagdighdggdgcbigigefbbffafgiefbgaaggggihhefcgeeagdbaiighhigbgeeaabeebgbiighaihihebcebadedfhieggggageabdifiebehihbaegieibbhhfcfbigifcebabcdggaifggdficgfchbiciaghghghggdiighafefchdifdeacediiegagicfgghgifheageggiecgcffhcibcehiggdiaihdcaibcfegfbfcbbcaddaiddedichaihaggadiffcfhghbifiehdedgeiebgbiffeifigfadfehieeghfceccbagbghdgeegeegaehhcbiaidchbggghbdgadadbcfcbaicefheiaichdaegiigefhbegfhiddeacacigcefgifggfifgheceiigccbhhacgeggcahbgbgggigfcgbhhcifebhhffegecd"
+    },
+    {
+      "name": "shuffle3",
+      "seed": 77102,
+      "source": "gefedgeiiacfffecgibeaifcgaaidiihgffhfigghbggedghedegbefegeiabhieeigeigagaaebihdddhdbfeagfhgaheicgcedihgigbcigcicbgcceaahihciggheciadigdfieghihhibcddbdcbgadgcbgabfefgcabghccchbceieiebeiggfdbgagfcifdgfchegacfdfcbifgieaeebgbdgdegbgbgihagcicfhghggeecagcigihhggahhcdedgeahgggegefigiiihhdiagdhghgiedagbcigaiafichdehgeficfggffgaaibiieeefdaggcfbaedghfgaagbeechddcchhhagihgcdbeffbigehbfeebgihabegeiacfbdccheicbhdheaiebggddgifahdggfhggahifgeiabfbdigaeafiifiggighibaacbfdccfaeggdgdhgiedheffiibhaceebfagiagfgbifgfacddbggacgbhagifdhfcdfbegcfgbhegebgdibdhhefbidiieaicacgebcihgfghffead"
+    }
+  ],
+  "alias": "g",
+  "scorer": "Independent general-English quadgrams",
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "searchSHA256": "786855078bf8b351c385bc0d7469e723d9b614e86e796694a67309ee452b5f90",
+  "runnerSHA256": "11421ff794ac4ed679a68af440c4c42c83bb43a96f6911ba701f44549fa7e541",
+  "controlsSHA256": "c33b0cdfd2d4a05a8b0751d375792c28a7c4a67a28292c3745e034e21223d110"
+}

@@ -1,0 +1,194 @@
+{
+  "verifiedAt": "2026-09-16T11:57:15.619Z",
+  "method": "Independent ring geometry, first-length enumeration, all p/q residues mod10 and mod100; no decimal-carry recursion",
+  "models": 1472,
+  "constantCenterRejected": 1144,
+  "partitions": 64756,
+  "unitsRejected": 64749,
+  "tensRejected": 7,
+  "controls": 20,
+  "lastDigitSurvivors": [
+    {
+      "field": "faed",
+      "profile": 0,
+      "sourceReverse": false,
+      "ringReverse": false,
+      "aliases": "ci",
+      "lengths": [
+        112,
+        111,
+        112,
+        111,
+        12,
+        111
+      ],
+      "units": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          5
+        ]
+      ]
+    },
+    {
+      "field": "faed",
+      "profile": 0,
+      "sourceReverse": false,
+      "ringReverse": false,
+      "aliases": "ci",
+      "lengths": [
+        112,
+        111,
+        112,
+        112,
+        11,
+        111
+      ],
+      "units": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          5
+        ]
+      ]
+    },
+    {
+      "field": "faed",
+      "profile": 0,
+      "sourceReverse": false,
+      "ringReverse": false,
+      "aliases": "ci",
+      "lengths": [
+        112,
+        112,
+        111,
+        111,
+        12,
+        111
+      ],
+      "units": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          5
+        ]
+      ]
+    },
+    {
+      "field": "faed",
+      "profile": 0,
+      "sourceReverse": false,
+      "ringReverse": false,
+      "aliases": "ci",
+      "lengths": [
+        112,
+        112,
+        111,
+        112,
+        11,
+        111
+      ],
+      "units": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          5
+        ]
+      ]
+    },
+    {
+      "field": "faed",
+      "profile": 0,
+      "sourceReverse": false,
+      "ringReverse": true,
+      "aliases": "cf",
+      "lengths": [
+        108,
+        109,
+        109,
+        109,
+        26,
+        108
+      ],
+      "units": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          5
+        ]
+      ]
+    },
+    {
+      "field": "faed",
+      "profile": 0,
+      "sourceReverse": true,
+      "ringReverse": false,
+      "aliases": "af",
+      "lengths": [
+        103,
+        102,
+        103,
+        103,
+        55,
+        103
+      ],
+      "units": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          5
+        ]
+      ]
+    },
+    {
+      "field": "faed",
+      "profile": 0,
+      "sourceReverse": true,
+      "ringReverse": true,
+      "aliases": "ce",
+      "lengths": [
+        101,
+        101,
+        101,
+        101,
+        64,
+        101
+      ],
+      "units": [
+        [
+          2,
+          6
+        ],
+        [
+          7,
+          1
+        ]
+      ]
+    }
+  ],
+  "conclusion": "Every possible partition in this model is inconsistent already modulo 100. No integer p,q>=2 solution, and hence no prime-weight solution.",
+  "hashes": {
+    "spec.json": "25bbb4ab36f21dd787a3cad5994253f8ae66d22d221bb93df37927c9e3a0087d",
+    "cases.jsonl": "5a7875bd233a57cc6e311d786baeedf0e9f518967ff2e98deefe862fbd012ed7",
+    "summary.json": "533918b6e4fe5dbefd14e8d1f4e1339138b642ebd4399cb0800d7dc3fed5bd64"
+  },
+  "verifierSHA256": "6184a6c2338c0949a8cdb871db29f5dda9d88e71cfd579306055836574c7e0cf"
+}

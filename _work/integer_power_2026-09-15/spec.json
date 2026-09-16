@@ -1,0 +1,16 @@
+{
+  "hypothesis": "N=P**e, e>=2 integer, P minimum big-endian bytes all <=127. All a=1..i=9 except any ONE alias may independently be zero. Whole original or reverse-symbol DBBI/FAED.",
+  "caveat": "A conjectured use of prime numbers as exponents, generalized to all integers. Not modular exponentiation/RSA, not arbitrary byte encodings.",
+  "upperBound": "e<=floor(log2(max N)); any larger e requires P<2 and cannot yield N>1.",
+  "limits": {
+    "maxNodes": 200000,
+    "maxMs": 2000
+  },
+  "controls": {
+    "roots": 22450,
+    "planted": 12,
+    "bruteForce": 36
+  },
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceSHA256": "8acb669c34b6104edbdc25691f2c322af3b4a15cb74c46ba640af8f75727cda2"
+}

@@ -1,0 +1,91 @@
+{
+  "complete": true,
+  "keys": 26253,
+  "models": 9661104,
+  "valid": 0,
+  "printable": 0,
+  "lettersSpace": 0,
+  "groups": [
+    {
+      "p": 2,
+      "q": 181,
+      "n": 362,
+      "lambda": 180,
+      "keys": 48,
+      "models": 17664,
+      "valid": 0,
+      "printable": 0,
+      "lettersSpace": 0
+    },
+    {
+      "p": 3,
+      "q": 2,
+      "n": 6,
+      "lambda": 2,
+      "keys": 1,
+      "models": 368,
+      "valid": 0,
+      "printable": 0,
+      "lettersSpace": 0
+    },
+    {
+      "p": 3,
+      "q": 181,
+      "n": 543,
+      "lambda": 180,
+      "keys": 48,
+      "models": 17664,
+      "valid": 0,
+      "printable": 0,
+      "lettersSpace": 0
+    },
+    {
+      "p": 37,
+      "q": 2,
+      "n": 74,
+      "lambda": 36,
+      "keys": 12,
+      "models": 4416,
+      "valid": 0,
+      "printable": 0,
+      "lettersSpace": 0
+    },
+    {
+      "p": 37,
+      "q": 181,
+      "n": 6697,
+      "lambda": 180,
+      "keys": 48,
+      "models": 17664,
+      "valid": 0,
+      "printable": 0,
+      "lettersSpace": 0
+    },
+    {
+      "p": 9341,
+      "q": 2,
+      "n": 18682,
+      "lambda": 9340,
+      "keys": 3728,
+      "models": 1371904,
+      "valid": 0,
+      "printable": 0,
+      "lettersSpace": 0
+    },
+    {
+      "p": 9341,
+      "q": 181,
+      "n": 1690721,
+      "lambda": 84060,
+      "keys": 22368,
+      "models": 8231424,
+      "valid": 0,
+      "printable": 0,
+      "lettersSpace": 0
+    }
+  ],
+  "codebooksSHA256": "1561102f64bfe283e2f69f0f1b7cf8ae49e5568ad1bac2b12459ea52877ee4b3",
+  "flagsSHA256": "420d2ab472f71414c55e841a333aafc5ab4afe9dabc670e337c6704562898f61",
+  "validSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "elapsedMs": 584
+}

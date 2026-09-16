@@ -1,0 +1,16 @@
+{
+  "scope": "Complete DBBI/FAED in both source directions. Any bijection a..i to 1..9; every occurrence of zero, one or two selected letters may instead be zero. Zlib without a preset dictionary; minimal big-endian bytes, complete consumption required. A bounded case remains inconclusive with all frontier states saved.",
+  "options": {
+    "maxNodes": 100000,
+    "maxMs": 15000,
+    "maxOutputLength": 1048576
+  },
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "headerCasesSHA256": "06e030ae52019395159f4bd7b2604b425528fc59c5ee984fdfbd44b06c6f884a",
+  "sources": {
+    "substituted_zlib_campaign.cjs": "2cadac48b96d901fc31ae4fde279ea038cba1d7bef519fb4e09a610a22de508a",
+    "substituted_zlib_search.cjs": "721c076b54aab53a84bc86a581b6d25c2e0486d237bfe7e692f873bbde5889ae",
+    "compressed_payload_constraints.cjs": "6ec90fecaa2ee9e1d7ed81c90d79d444b3b61e1bf9d1395701be877cbbdda2dc"
+  },
+  "pilotSummarySHA256": "0779d42ff3c5afec619b98461df3030f14fc252d3312dfdc83ec7cbddf367812"
+}

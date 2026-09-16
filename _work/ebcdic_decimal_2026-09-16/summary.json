@@ -1,0 +1,2210 @@
+{
+  "groups": [
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "a",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "b",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "c",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "d",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "e",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "f",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "h",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "i",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "ab",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "ac",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "ad",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "ae",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "af",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "ag",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "ah",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "ai",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "bc",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "bd",
+      "cases": 1,
+      "nodes": 7,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "be",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "bf",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "bg",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "bh",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "bi",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "cd",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "ce",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "cf",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "cg",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "ch",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "ci",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "de",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "df",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "dg",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "dh",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "di",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "ef",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "eg",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "eh",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "ei",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "fg",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "fh",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "fi",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "gh",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "gi",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "hi",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "a",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "b",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "c",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "d",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "e",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "f",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "h",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "i",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "ab",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "ac",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "ad",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "ae",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "af",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "ag",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "ah",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "ai",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "bc",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "bd",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "be",
+      "cases": 1,
+      "nodes": 5,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "bf",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "bg",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "bh",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "bi",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "cd",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "ce",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "cf",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "cg",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "ch",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "ci",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "de",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "df",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "dg",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "dh",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "di",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "ef",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "eg",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "eh",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "ei",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "fg",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "fh",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "fi",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "gh",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "gi",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "hi",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "ab",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "ac",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "ad",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "ae",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "af",
+      "cases": 1,
+      "nodes": 5,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "ag",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "ah",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "ai",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "bc",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "bd",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "be",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "bf",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "bg",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "bh",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "bi",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "cd",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "ce",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "cf",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "cg",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "ch",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "ci",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "de",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "df",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "dg",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "dh",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "di",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "ef",
+      "cases": 1,
+      "nodes": 13,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "eg",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "eh",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "ei",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "fg",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "fh",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "fi",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "gh",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "gi",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": false,
+      "alias": "hi",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "cases": 1,
+      "nodes": 7,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "ab",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "ac",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "ad",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "ae",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "af",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "ag",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "ah",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "ai",
+      "cases": 1,
+      "nodes": 17,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "bc",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "bd",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "be",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "bf",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "bg",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "bh",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "bi",
+      "cases": 1,
+      "nodes": 7,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "cd",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "ce",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "cf",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "cg",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "ch",
+      "cases": 1,
+      "nodes": 3,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "ci",
+      "cases": 1,
+      "nodes": 17,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "de",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "df",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "dg",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "dh",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "di",
+      "cases": 1,
+      "nodes": 7,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "ef",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "eg",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "eh",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "ei",
+      "cases": 1,
+      "nodes": 7,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "fg",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "fh",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "fi",
+      "cases": 1,
+      "nodes": 11,
+      "hits": 0,
+      "elapsedMs": 0
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "gh",
+      "cases": 1,
+      "nodes": 1,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "gi",
+      "cases": 1,
+      "nodes": 7,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "fixed",
+      "field": "faed",
+      "reverse": true,
+      "alias": "hi",
+      "cases": 1,
+      "nodes": 21,
+      "hits": 0,
+      "elapsedMs": 1
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "a",
+      "cases": 362880,
+      "nodes": 363266,
+      "hits": 0,
+      "elapsedMs": 1075
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "a",
+      "cases": 362880,
+      "nodes": 465120,
+      "hits": 0,
+      "elapsedMs": 1338
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": false,
+      "alias": "a",
+      "cases": 362880,
+      "nodes": 603152,
+      "hits": 0,
+      "elapsedMs": 7665
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": true,
+      "alias": "a",
+      "cases": 362880,
+      "nodes": 392028,
+      "hits": 0,
+      "elapsedMs": 5173
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "b",
+      "cases": 362880,
+      "nodes": 906428,
+      "hits": 0,
+      "elapsedMs": 2508
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "b",
+      "cases": 362880,
+      "nodes": 566626,
+      "hits": 0,
+      "elapsedMs": 1669
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": false,
+      "alias": "b",
+      "cases": 362880,
+      "nodes": 365540,
+      "hits": 0,
+      "elapsedMs": 4857
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": true,
+      "alias": "b",
+      "cases": 362880,
+      "nodes": 366388,
+      "hits": 0,
+      "elapsedMs": 4911
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "c",
+      "cases": 362880,
+      "nodes": 387120,
+      "hits": 0,
+      "elapsedMs": 1138
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "c",
+      "cases": 362880,
+      "nodes": 363432,
+      "hits": 0,
+      "elapsedMs": 1080
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": false,
+      "alias": "c",
+      "cases": 362880,
+      "nodes": 365936,
+      "hits": 0,
+      "elapsedMs": 4918
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": true,
+      "alias": "c",
+      "cases": 362880,
+      "nodes": 1090140,
+      "hits": 0,
+      "elapsedMs": 13033
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "d",
+      "cases": 362880,
+      "nodes": 1088640,
+      "hits": 0,
+      "elapsedMs": 2839
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "d",
+      "cases": 362880,
+      "nodes": 363152,
+      "hits": 0,
+      "elapsedMs": 1073
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": false,
+      "alias": "d",
+      "cases": 362880,
+      "nodes": 415960,
+      "hits": 0,
+      "elapsedMs": 5953
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": true,
+      "alias": "d",
+      "cases": 362880,
+      "nodes": 369780,
+      "hits": 0,
+      "elapsedMs": 5054
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "e",
+      "cases": 362880,
+      "nodes": 366792,
+      "hits": 0,
+      "elapsedMs": 1193
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "e",
+      "cases": 362880,
+      "nodes": 1891974,
+      "hits": 0,
+      "elapsedMs": 5117
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": false,
+      "alias": "e",
+      "cases": 362880,
+      "nodes": 461420,
+      "hits": 0,
+      "elapsedMs": 6229
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": true,
+      "alias": "e",
+      "cases": 362880,
+      "nodes": 362880,
+      "hits": 0,
+      "elapsedMs": 5171
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "f",
+      "cases": 362880,
+      "nodes": 402528,
+      "hits": 0,
+      "elapsedMs": 1217
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "f",
+      "cases": 362880,
+      "nodes": 374636,
+      "hits": 0,
+      "elapsedMs": 1167
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": false,
+      "alias": "f",
+      "cases": 362880,
+      "nodes": 1100080,
+      "hits": 0,
+      "elapsedMs": 13825
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": true,
+      "alias": "f",
+      "cases": 362880,
+      "nodes": 377712,
+      "hits": 0,
+      "elapsedMs": 5258
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "g",
+      "cases": 362880,
+      "nodes": 365158,
+      "hits": 0,
+      "elapsedMs": 1128
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "g",
+      "cases": 362880,
+      "nodes": 387000,
+      "hits": 0,
+      "elapsedMs": 1202
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": false,
+      "alias": "g",
+      "cases": 362880,
+      "nodes": 420352,
+      "hits": 0,
+      "elapsedMs": 6240
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": true,
+      "alias": "g",
+      "cases": 362880,
+      "nodes": 362884,
+      "hits": 0,
+      "elapsedMs": 5440
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "h",
+      "cases": 362880,
+      "nodes": 379782,
+      "hits": 0,
+      "elapsedMs": 1217
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "h",
+      "cases": 362880,
+      "nodes": 362880,
+      "hits": 0,
+      "elapsedMs": 1097
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": false,
+      "alias": "h",
+      "cases": 362880,
+      "nodes": 363904,
+      "hits": 0,
+      "elapsedMs": 5383
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": true,
+      "alias": "h",
+      "cases": 362880,
+      "nodes": 501388,
+      "hits": 0,
+      "elapsedMs": 6640
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": false,
+      "alias": "i",
+      "cases": 362880,
+      "nodes": 440680,
+      "hits": 0,
+      "elapsedMs": 1270
+    },
+    {
+      "family": "substituted",
+      "field": "dbbi",
+      "reverse": true,
+      "alias": "i",
+      "cases": 362880,
+      "nodes": 373840,
+      "hits": 0,
+      "elapsedMs": 1119
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": false,
+      "alias": "i",
+      "cases": 362880,
+      "nodes": 362880,
+      "hits": 0,
+      "elapsedMs": 5140
+    },
+    {
+      "family": "substituted",
+      "field": "faed",
+      "reverse": true,
+      "alias": "i",
+      "cases": 362880,
+      "nodes": 886232,
+      "hits": 0,
+      "elapsedMs": 11423
+    }
+  ],
+  "cases": 13063864,
+  "nodes": 19018074,
+  "hits": 0,
+  "partial": [],
+  "candidates": [],
+  "complete": true
+}

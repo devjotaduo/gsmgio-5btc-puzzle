@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "base": 127,
+  "length": 271,
+  "ambiguous": 107,
+  "assignments": "162259276829213363391578010288128",
+  "nodes": 4176355,
+  "excludedAssignments": "162259276829213363391578010287940",
+  "unresolvedAssignments": "0",
+  "pending": [],
+  "elapsedMs": 8733,
+  "hits": 188,
+  "oldCandidatesRecovered": 177,
+  "newCandidates": 11,
+  "treeSHA256": "a9945db649ba377d822eace4466f041907915475728f19d7dd479ece810a0db5",
+  "hitsSHA256": "9ed68adb451bacd5951820380bdd2693be753381330b00a1f39d3f5a4288f29c"
+}

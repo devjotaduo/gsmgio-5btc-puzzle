@@ -1,0 +1,338 @@
+{
+  "completedBeamRuns": true,
+  "exhaustive": false,
+  "controls": [
+    {
+      "alphabetId": 0,
+      "textId": 0,
+      "file": "control_0_0.json",
+      "rank": 0,
+      "firstTruthDrop": null,
+      "sourceLength": 637,
+      "ambiguities": 129,
+      "trueScore": {
+        "letters": 359,
+        "quadSum": -1516.030442237854,
+        "quadMean": -4.258512478196219,
+        "score": 1438.6114162011586
+      },
+      "bestScore": 1438.6114162011586
+    },
+    {
+      "alphabetId": 0,
+      "textId": 1,
+      "file": "control_0_1.json",
+      "rank": 0,
+      "firstTruthDrop": null,
+      "sourceLength": 640,
+      "ambiguities": 121,
+      "trueScore": {
+        "letters": 363,
+        "quadSum": -1467.2791321277618,
+        "quadMean": -4.075775367021561,
+        "score": 1520.560949439779
+      },
+      "bestScore": 1520.560949439779
+    },
+    {
+      "alphabetId": 1,
+      "textId": 0,
+      "file": "control_1_0.json",
+      "rank": 0,
+      "firstTruthDrop": null,
+      "sourceLength": 637,
+      "ambiguities": 133,
+      "trueScore": {
+        "letters": 359,
+        "quadSum": -1516.030442237854,
+        "quadMean": -4.258512478196219,
+        "score": 1438.6114162011586
+      },
+      "bestScore": 1438.6114162011586
+    },
+    {
+      "alphabetId": 1,
+      "textId": 1,
+      "file": "control_1_1.json",
+      "rank": 0,
+      "firstTruthDrop": null,
+      "sourceLength": 640,
+      "ambiguities": 119,
+      "trueScore": {
+        "letters": 363,
+        "quadSum": -1467.2791321277618,
+        "quadMean": -4.075775367021561,
+        "score": 1520.560949439779
+      },
+      "bestScore": 1520.560949439779
+    },
+    {
+      "alphabetId": 2,
+      "textId": 0,
+      "file": "control_2_0.json",
+      "rank": 0,
+      "firstTruthDrop": null,
+      "sourceLength": 651,
+      "ambiguities": 129,
+      "trueScore": {
+        "letters": 359,
+        "quadSum": -1516.030442237854,
+        "quadMean": -4.258512478196219,
+        "score": 1438.6114162011586
+      },
+      "bestScore": 1438.6114162011586
+    },
+    {
+      "alphabetId": 2,
+      "textId": 1,
+      "file": "control_2_1.json",
+      "rank": 0,
+      "firstTruthDrop": null,
+      "sourceLength": 653,
+      "ambiguities": 144,
+      "trueScore": {
+        "letters": 363,
+        "quadSum": -1467.2791321277618,
+        "quadMean": -4.075775367021561,
+        "score": 1520.560949439779
+      },
+      "bestScore": 1520.560949439779
+    },
+    {
+      "alphabetId": 3,
+      "textId": 0,
+      "file": "control_3_0.json",
+      "rank": 0,
+      "firstTruthDrop": null,
+      "sourceLength": 651,
+      "ambiguities": 135,
+      "trueScore": {
+        "letters": 359,
+        "quadSum": -1516.030442237854,
+        "quadMean": -4.258512478196219,
+        "score": 1438.6114162011586
+      },
+      "bestScore": 1438.6114162011586
+    },
+    {
+      "alphabetId": 3,
+      "textId": 1,
+      "file": "control_3_1.json",
+      "rank": 1,
+      "firstTruthDrop": null,
+      "sourceLength": 653,
+      "ambiguities": 127,
+      "trueScore": {
+        "letters": 363,
+        "quadSum": -1467.2791321277618,
+        "quadMean": -4.075775367021561,
+        "score": 1520.560949439779
+      },
+      "bestScore": 1524.5344861732206
+    }
+  ],
+  "cases": [
+    {
+      "modelId": 0,
+      "reverse": false,
+      "alphabetId": 0,
+      "kind": "actual",
+      "file": "actual_0.json",
+      "evaluated": 200702,
+      "retained": 1024,
+      "exhaustive": false,
+      "best": {
+        "mask": "00110100111111111000111100101110110111010100100101001000001010111001011111010110111011011000010001000010111",
+        "decimal": "615400554632412887731436544064720901154779161537877341985818218973596726756719612961015051302251767755701621306342596611639418745560883771574528850578357146249105639377964371107629019362853153235919352720953450760501547069939996968703067434005632559056920920708862379645854641093428937195415818788398478682993532993898999094405884643832167628185105753165873677703176880821989495886457740398777078141897902753754634001334589939062668071594225922599640648955595553964041849076850691669002323583512625429926264545580976119071725993895496258723318829929229243218194861899893",
+        "text": "hgej.djargyinoxpmiswasjyyiftxuaexpawidlps irgghratwsef tioborowelpedmbadw eepasreecsrsprfd,cphetpa.g,ipaopskyqjhe deiriauxfac yolakdbangtfaicalipt.uphotalllyrhnvcoc.to ntrsidbyomjzxotrwrzgoafaeycutqim,dpillyiinj,nwdismhofkrnur edcavlyoutdulitra,m,andflalcystracknctzotydlemokhwaidtagtyclavh,w bdonsfesbcripcavliaeinkafx i ctzhgnnjoplfhi ker,jdn,coxy.whytaywdeassd areu.ngh, csmasawka,aigehy",
+        "letters": 360,
+        "quadSum": -2283.5524945259094,
+        "quadMean": -6.39650558690731,
+        "score": 679.3889196952355
+      },
+      "sha256": "bbca74fa1dc8ddc62589999b82a2775acd3c8488425fd6b579ae28420006120d"
+    },
+    {
+      "modelId": 0,
+      "reverse": false,
+      "alphabetId": 0,
+      "kind": "shuffled",
+      "file": "shuffled_0.json",
+      "evaluated": 200702,
+      "retained": 1024,
+      "exhaustive": false,
+      "best": {
+        "mask": "10011100110011111001011010100100010011001111011101101110101111100110101000110011111101010001000001011001000",
+        "decimal": "615470554632412880764265539714730305849771569190107394111526859571462735761724661221025049676241057735073932902425389444924153729350555076801615280408937682199506958307852876300839759168196145819699994797424947017872917013551141648775067838779936152091187980778996673549843145745854687252893319054989801996563568665959599748174425339895450226235172099591478200076671680469895254366550717551777705234897406762022399005639298536716498002863925692118150351539132928692043432072960849843778183996138616313261253932850808595701052352643989834044889689336655913682538658841899",
+        "text": "hgfdwtblowocd,,cedrizdccc imeoakwfb b.asttfruhksangspmipuriovewa suvahondsc svamrcnaut,nulnhkmilhunddsjen a rk gadconji,suvonolkomjounratme.h,uldrroo,s hsllcic,onodnotmgenxflyifrapltnftsbizaeplidizf rjwaats.mprbcliecittesksmlbnnrstacse,hugrtedmonweshtutheuyycn.xmpeseiczbrcurbweflygeyeddcorundxammqitsciml sjap mzasommoagpvchrenelv,eco.bwfu lm pwoabhadco.reuinybytd,pyshadd  anesosueg,i,ihz",
+        "letters": 357,
+        "quadSum": -2250.8510262966156,
+        "quadMean": -6.358336232476315,
+        "score": 687.1917205781333
+      },
+      "sha256": "2c5c66ad6066b77d06fe854a3eadc39cfbee8724ef517b1dcade72d5c71ad683"
+    },
+    {
+      "modelId": 1,
+      "reverse": false,
+      "alphabetId": 1,
+      "kind": "actual",
+      "file": "actual_1.json",
+      "evaluated": 200702,
+      "retained": 1024,
+      "exhaustive": false,
+      "best": {
+        "mask": "01100110100011010000000101100010011100011110000110100000010001110010000011010010000110001000101100101100010",
+        "decimal": "615407554632412887031436544064727901154709161530807341985818218973596026756019612961015051302251060055701621376342596611639418745560883001574528850508357146249175639370964301107629719362853153235919352727953450060501547769939996968073060434005632559056920927008862309645854641793428937195415818788398408682993532993898999094475884643832160628185105053165803607703176880821989495886450740398000778141890902053754634001334589939062668701594225922599647648955595553964741849006857691669072323583512625429926264545587906119001725993895496258023318829929229243218194861899893",
+        "text": "ihfngor,xx.f,cgay,pof brpauetydxgioolenwilwocawdh,keccfkierarsbliwsstulatirajiw.tmtn blsw irg orojkim.ontyvroi,lhauletyathnigereohazam.t,lelsyqui u t, iol calioutwhost,s thghfusuh,lte.rewasvk.g,gunhvnjpwjeearbyordiromhcho,u,usajabr zlsubjlenurvhmaronr.olshphqanoufadjcritemjderadr,jo.rbli dewewgglyktsxdbaife..attughyletmxrobu.mue.xbgalaoylosal,antiacubctixhtdaispiruaacq sr eirmrmcoackryet",
+        "letters": 351,
+        "quadSum": -2224.9487116336823,
+        "quadMean": -6.393530780556558,
+        "score": 663.2967005482742
+      },
+      "sha256": "5d43134c3235768a8e7d57eb8a059f8a03f012cb8dbbb6c3f295cc65f36c8ba2"
+    },
+    {
+      "modelId": 1,
+      "reverse": false,
+      "alphabetId": 1,
+      "kind": "shuffled",
+      "file": "shuffled_1.json",
+      "evaluated": 200702,
+      "retained": 1024,
+      "exhaustive": false,
+      "best": {
+        "mask": "10011101110101110001001001100000001000111000010111111001101001101100111101110011000100010000100100011000010",
+        "decimal": "615470554632412880764265539714730375849771569190170394111526859571462735761024661221025049676241050735003932972425389444924153729350555006801615280408930682199576958300852806377839759168196145819699994090424940017802917713551141648775767838009936152791187980708996603549843145745854687252893319054989871996563568665959599748104425339895450226235172799591478270776671680469895254366550717551000705234890406762022399005639298536016498702863925692118150351539132928692743432002960849843778183996138616313261253932850808595001752352643989834044889689336655913682538658841899",
+        "text": "ihgexucmpxpde,,dfesj edhenflpolywlzjnrosbobhplanpomelohhyaroaoyafu sendspsy,,o,pen ygugharyloh mckfic e,dit ynlond,tdudcfifi.bnclo.ovledzungbigohhrsypmlad.atxecriuparifsuam,pwwausg,upal,dejrgtoanskifnta.hebfcctuespuhurunolcnheasxyiaandr,u wtvpfa,cotpkeyyomtifimpjoseaqh.bmittof,inid ote othojzgkg at hdnrplyharcwloalt,yissbomabahlnlelisr,k..attloyn ,sfempyaddvem awhohadmc.ale fjczwt,txstqo",
+        "letters": 351,
+        "quadSum": -2228.025997400284,
+        "quadMean": -6.402373555747942,
+        "score": 660.2194147816726
+      },
+      "sha256": "0f235ed740408479404bef607d443e979cdaed5a88c678c7c25e83628380229f"
+    },
+    {
+      "modelId": 2,
+      "reverse": false,
+      "alphabetId": 2,
+      "kind": "actual",
+      "file": "actual_2.json",
+      "evaluated": 200702,
+      "retained": 1024,
+      "exhaustive": false,
+      "best": {
+        "mask": "10001111000100110000111010110010100010000101010010100111010001101010110110011011000001111100100010001101101",
+        "decimal": "615470554632412880031436544764727971154009161530870341985818218903596726756019612961015051302251767755071621306342596611639418745567883001574528850578350146249105639307964301100629019362853153235919352720953457067501540769939996968073060434775632559756920927008862309645854641793428937195415818088398478682993532993898999094475884643832160628185175753165803677003176887821989495886450747398000008141897972753754634701334589939062668701594225922599640648955595553964041849706850691669072323583512625429926264545587906119771025993895496258723318829929229243218194861899893",
+        "text": "agau ,zyeyh zslhompalwsordeby'edtsvfieshkwoocorgdits-gogdwwkrg, .'mugla  .rmqubialb 'rbe dedmu lpt,ni-esslgasic ,yzurna-mthiaiiallachuunflwe.dpll-yp''zeyabeaprjnrurschestofin,oopajuwetbu,t,jyxaabular.y-rr jophyi rwomvpnxanh.h.avollysum,su,raamun''diu-lfwearp c-'ogb-yazleveeltaupopnimimb sc.gys..fehurookd'rjeaesgenucdsmudfupldkisslaimy,sw e.km'hoigwi  kkese'-cidont.fea -derozw,,nc-",
+        "letters": 321,
+        "quadSum": -1985.6043033599854,
+        "quadMean": -6.2440386898112745,
+        "score": 653.6544353580093
+      },
+      "sha256": "9a832d5d5b0d3b00aa8aec53d14a4ea92428423e8da4f21ab1ad9c01f60b2a28"
+    },
+    {
+      "modelId": 2,
+      "reverse": false,
+      "alphabetId": 2,
+      "kind": "shuffled",
+      "file": "shuffled_2.json",
+      "evaluated": 200702,
+      "retained": 1024,
+      "exhaustive": false,
+      "best": {
+        "mask": "00000111010111101111101011000000010111001111111000010010011000010110001111011111011101111010110001001100011",
+        "decimal": "615400554632412880064265539014737375849071569190177394111526859571462735061724661221725749676241750735073932972425389444924153029350555006801615280408937682199506958377852876300839759168196145819699994797424947717872910013551141648005760838079936152091180987708996603549843145045854680252893319754989801996563568665959599748174425339895450226235102099591478277706671687469895254366557717551077705234897476762722399075639298536016498772863925692118150351539132928692043432072960849843078183996138616313261253932857808595001752352643989834744889689336655913682538658841899",
+        "text": "agapz'yiefi-aha ms-wrzmusk,cfenoveezuypnulmm,a ts'amrywttruoan-wantawraxltm'efichala.mcndscf-wombefr o pswbjr shaseg'udt-e.agrm,mararkloem'cciatsp'e'tuanesassgatq-iogfltemolbetlarcwlkepbu-'julv'ogclan.ndk.oca-t-,-edbctorbzarqbzmiyerz,tjrulsupoongmergfreeputejitsajoswitsabmmgdoroaytdmbo-elultstijuwcwc'ylworheiciiskhokugri-eerif l,,j'hdcotsrxvakucjotengcanblms cios,eh'ipgbsr'ou.rpns",
+        "letters": 338,
+        "quadSum": -2135.6663217544556,
+        "quadMean": -6.375123348520763,
+        "score": 644.6848652597841
+      },
+      "sha256": "fa7ffe36b0002e54bfe1e17319280b3c103bc6e4c0042d5708895b280206a8b2"
+    },
+    {
+      "modelId": 3,
+      "reverse": false,
+      "alphabetId": 3,
+      "kind": "actual",
+      "file": "actual_3.json",
+      "evaluated": 200702,
+      "retained": 1024,
+      "exhaustive": false,
+      "best": {
+        "mask": "01100001000000101100001110100001100000100000101100000001011011011110011111111111111101111100000111001101111",
+        "decimal": "615407554632412887031436544064020971154009161530800341985818218903596726056719612961715051302251060755771621306342596611639418745560883001504528857578350146249105639300964301170629019362853153235919352020953450760571547069939996968003060434005632559756920927708862379645854641793428930195415818788398478682993532993898999794475884643832160628185105753165873677773176887821989495886457747398777708141897972753754634701334589939062668001594225922599640648955595553964741849776850691669072323583512625429926264545587906119771725993895496258723318829929229243218194861899893",
+        "text": "bhbri.qerutbybno.n k,badyarzdo,ttwesit-tedhesmu-vd.rdlxzvajrpiarfar.hrhimttaksetrlotukei,ortyiteluetsbrcsyy'ymytsuec ,l'thchlahmpsnoceudmyoamitsdlethecnr.pdbe'-fwasdribldotva'taslvqhdhombestgy,,nre' it,su,'gtlcje n,aresieglakbeklis egr.alstrayukdolswhmprlsetfh.k .b'ut'yengaeseasthi-whnfkbsoyalsyubapexaipaswi.fiwqq-ot-apnikmpilkyonbcqexnvetigagnscitsanoddomy'benh-c,kegf.l-awy.esaeb",
+        "letters": 339,
+        "quadSum": -2123.6188781261444,
+        "quadMean": -6.320294280137334,
+        "score": 665.0318646702272
+      },
+      "sha256": "81ac6b82fbf2d37a9b0ab9e03d07d43ff935c3988643a297fde63bf1677f1362"
+    },
+    {
+      "modelId": 3,
+      "reverse": false,
+      "alphabetId": 3,
+      "kind": "shuffled",
+      "file": "shuffled_3.json",
+      "evaluated": 200702,
+      "retained": 1024,
+      "exhaustive": false,
+      "best": {
+        "mask": "11111100011110111111111111011011111101110100111100001101101000001001101111111110110101101000111110100110001",
+        "decimal": "615477554632412887764265539714730305849071569197177394111526859501462735761724661221725749676241757735773932972425389444924153029357555706871615287478937682199576958370852876377839059168196145819699994790424940717872917013551141648005067838709936152791187980708996603549843145045854680252893319054989871996563568665959599048104425339895457226235172099591478277776671687469895254366557710551770705234897476062722399005639298536016498772863925692118157351539132928692743432702967849843008183996138616313261253932857878595001052352643989834744889689336655913682538658841899",
+        "text": "bhbvnzrusirettcux i.zsen-eweo pepz etypmo.rntm. poustl.o rahbed,yoggasdd-,npnhienveralityoel.t'nee-ramyapg-i cejistbsovkilalororg'mchanasolsrbuna'ie-dmto,zorkageelpsterbhngycgenycu to.ikuiaertmasaigbih.igr.vbcafzpl f'-ispu.ioe-jhacounophyl.elix ahyarqays,-wetrowdn dabhanr'ea stescfkfar'w-ew .elyuaddc''lexaana.ye.teu-,rtmyspavapynebmwpog'bi,'kuxcse,mreval'',tlerym,raplmbenlfscwatpb",
+        "letters": 327,
+        "quadSum": -2017.6237616539001,
+        "quadMean": -6.2272338322651235,
+        "score": 671.432311756887
+      },
+      "sha256": "4f45c0daf25b872765cf386e957d661c72f20342d148eb7f815801b12da42218"
+    },
+    {
+      "modelId": 4,
+      "reverse": true,
+      "alphabetId": 2,
+      "kind": "actual",
+      "file": "actual_4.json",
+      "evaluated": 200702,
+      "retained": 1024,
+      "exhaustive": false,
+      "best": {
+        "mask": "01010001111011101101111100111101010111100001011101000100000011000011100111001100011001010110010100011011010",
+        "decimal": "398998168491812342922929928813320852694598399527107911609085545462629924526215385323207966196758677948140469355595559846746995229522495177866260939985433177436450357279798141877007893747754688594989128088671307076378561357571581826061238346488504490999898399235399286804893887818514591039824397146458546973268870729029650955236507434060300869699939960045175760054359020253919532351358263917926771103469073936571942641753805058825475170388065540814936116695243673126170550760152273150517169216917650620695379812818589143078035161900451179720467445634137088214236455704516",
+        "text": "xtwt.iqqrpqjpnr.obi'capkwap,lrzw-wjnnnpwkyw-fm aedoagu'f ..xy,shebroofmensnerskr hd '-om,e-stid-sh rawj-wlhsi.nem- eesth',s'-efmenoeron.menigcm.n armwevomvasxqaxmeti.s.av'cmmofrukex-kl-doj ewmes,upi.sinoatraux wc.tanagrghoo v.edssuvajseetoa.sw onpleivhs-evenusbaxblrtr'ibpu,tvppetomfreh-lefteyvpeajpooffis qlwarriitoyery 'dtvienrgauoogrxalartoryorts'f.imikasfournwl.wimes,x ncoth-eb",
+        "letters": 324,
+        "quadSum": -2041.29678940773,
+        "quadMean": -6.35918002930757,
+        "score": 622.8606166566606
+      },
+      "sha256": "0bbbc39458156aa3d94816111af85d287ef6d90be37ea5c1b543bd5bc6e7c21b"
+    },
+    {
+      "modelId": 4,
+      "reverse": true,
+      "alphabetId": 2,
+      "kind": "shuffled",
+      "file": "shuffled_4.json",
+      "evaluated": 200702,
+      "retained": 1024,
+      "exhaustive": false,
+      "best": {
+        "mask": "01110111010111000011111010100100011010111010011011000111000011110100011010100010011000100000111101011110011",
+        "decimal": "398998168491812355923919982335320168119153685817877425109752249841644688849344434138577928685018470652587981699689525164742355158815395970616980268449348600352947827976748454970707815090736995856929848023908807708974526930573122924743639699248573250568591891363524522976612590348135951093669817542532143978258907754036140542818607286727900261916865440085678737786195037681654551512165939340253001873353703962371925335026676069261203207996055310855516664986165974924170590057998901650690926529510260287959971416486593929774018351270915473737647241549830013136895349773541",
+        "text": "xtwt.iqqrpq'-snwelryha  fhzkkb'ttowpaqca.nngvd'aupqofyundetwjewr'calrbmacape-iasbhs,hlttyli s k'o gw kofryeqeffedo.urhsle'wgarut,poi-a .ryri.nmognldloy-olxvk.wicknjesoic .--edb iggsdir omsbrji,xev.esom,ellppod-mopena-tjuglosste'cwiii-a'mh,zalcd'doin.'gesm,kss ilnaj ockskmcpa''rasgcroosahoseuparo nuafowbogomy-axinirecaiwsonz ot'kru,dooaffrmybkunknfbderyi n.aitbeimcb.ro'o-drmngalwh",
+        "letters": 324,
+        "quadSum": -2044.269909620285,
+        "quadMean": -6.368442086044501,
+        "score": 619.8874964441056
+      },
+      "sha256": "7dcba9015d3475cc3b9d5e9ce5c2e2a62d402fd809122891294541be68199e40"
+    }
+  ],
+  "candidates": 5120,
+  "finalPasswordFound": false
+}

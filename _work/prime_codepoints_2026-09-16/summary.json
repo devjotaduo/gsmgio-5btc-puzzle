@@ -1,0 +1,14 @@
+{
+  "complete": true,
+  "allModelsResolved": false,
+  "definitions": 10,
+  "decisions": 240,
+  "nodes": 2174556,
+  "tally": {
+    "excluded": 236,
+    "compatible": 2,
+    "unknown-cap": 2
+  },
+  "elapsedMs": 5163,
+  "casesSHA256": "c49b85b13654c63a23845a37659507e71fd715188f8e301f37d385f4048e19c2"
+}

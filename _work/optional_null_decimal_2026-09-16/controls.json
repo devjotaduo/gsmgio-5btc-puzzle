@@ -1,0 +1,27 @@
+{
+  "exactCases": 12,
+  "masks": 130,
+  "planted": [
+    {
+      "text": "lastwords",
+      "digits": "199999270944492609952900797959",
+      "optionalDigit": "9",
+      "decimal": "1999270444260952007795",
+      "recovered": true
+    },
+    {
+      "text": "matrixsumlist",
+      "digits": "896669030953596979925915192459621935994769",
+      "optionalDigit": "9",
+      "decimal": "8666030535697925151245621359476",
+      "recovered": true
+    },
+    {
+      "text": "thispassword",
+      "digits": "396029648974092479009997490349100969498",
+      "optionalDigit": "9",
+      "decimal": "36026487402470099740341006948",
+      "recovered": true
+    }
+  ]
+}

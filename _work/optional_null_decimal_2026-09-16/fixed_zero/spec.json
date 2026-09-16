@@ -1,0 +1,10 @@
+{
+  "sourceSHA256": "95a0026cf0052ef950fd95cf7486a4b0928ea89a77691773757eb85eedb84044",
+  "runnerSHA256": "38460836e0621a0c43751098e16050589f741661531786aa1e90e93e93d9e968",
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "successorSHA256": "21a6798ea81fedf38d042d29bb3cf9df56fd7a6b65baa8cb22cf8c6c9278ee2c",
+  "hypothesis": "Any one letter is always decimal zero; a distinct letter may independently be kept at its A1..I9 value or deleted per occurrence. Remaining letters use A1..I9. Complete fields, both directions, minimal integer bytes must be below 128.",
+  "allowZero": false,
+  "fixedZero": true,
+  "maxNodesPerCase": 1000000
+}

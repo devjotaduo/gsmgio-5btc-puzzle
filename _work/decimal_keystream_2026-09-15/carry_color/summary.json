@@ -1,0 +1,20 @@
+{
+  "lists": 43,
+  "distinctKeys": 3326,
+  "cases": 39912,
+  "complete": 39912,
+  "nodes": 75444,
+  "certificates": 57678,
+  "candidates": 0,
+  "partial": [],
+  "passwords": 1600,
+  "aesAttempts": 9600,
+  "padding": 31,
+  "maxPrintable": 0.4810126582278481,
+  "keysChecked": 16816,
+  "keyHits": [],
+  "controls": {
+    "planted": 36,
+    "bruteForce": 36
+  }
+}

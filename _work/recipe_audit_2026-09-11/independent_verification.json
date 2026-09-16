@@ -1,0 +1,6 @@
+{
+  "original_source_unit_mutations_verified": 5288,
+  "original_source_color_swaps_verified": 135,
+  "collision_verified": true,
+  "mechanism": "Execute unmodified source functions with modified A/B/G and refresh derived blue/yellow lists."
+}
