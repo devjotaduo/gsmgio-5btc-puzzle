@@ -86,3 +86,6 @@ _work/decentraland/dep_*
 /_work/diagonal_sum_inverse_2026-09-17/*.json
 !/_work/diagonal_sum_inverse_2026-09-17/final_qa.json
 !/_work/diagonal_sum_inverse_2026-09-17/final/cases.jsonl
+
+# Monitor de pistas (solver/monitor_pistas.py): digests, corpos alterados e estado ficam locais
+/_work/monitor_pistas/
