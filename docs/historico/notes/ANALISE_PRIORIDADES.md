@@ -7,7 +7,7 @@
 > Há um perfil de quadgramas gerais de inglês, sem o corpus do puzzle, em
 > `general_english/scorer.json` (arquivo local: `_work/ambiguous_checkerboard_2026-09-15/general_english/scorer.json`).
 > Preservar o cache antigo para reprodução e usar o perfil independente em
-> novas classificações. [Auditoria e limites](../../_work/ambiguous_checkerboard_2026-09-15/RELATORIO.md).
+> novas classificações. [Auditoria e limites](../../../_work/ambiguous_checkerboard_2026-09-15/RELATORIO.md).
 
 **Escolha: avançar a SalPhaseIon até abrir autenticamente o blob SMALL.**
 Dentro dessa etapa, priorizar o significado operacional de
@@ -168,7 +168,7 @@ estruturais e auditoria da hipótese de hash. **Nenhuma senha final foi encontra
 ## Investigação executada em 11/09/2026
 
 A linha escolhida foi executada em
-[`prime_geometry_constraints.cjs`](../../solver/prime_geometry_constraints.cjs).
+[`prime_geometry_constraints.cjs`](../../../solver/prime_geometry_constraints.cjs).
 Os 24 primos até 91 e os dígitos de `dbbi` que eles indexam foram recolocados
 nas 24 coordenadas coloridas e somados por linha/coluna. As 80 matrizes geraram
 320 listas e 45.064 senhas distintas, testadas nos três blobs com EVP-SHA256 e
@@ -184,7 +184,7 @@ dependem do layout do README. O bloco original recuperado tem 1.539 bytes sem
 espaços ou quebras internas; Beaufort reproduz as 1.539 letras da fala, não suas
 14 divisões editoriais. Esse alinhamento não deve ser tratado como pista
 autenticada. Detalhes, controles e limites no
-[relatório de execução](../../_work/prime_geometry_2026-09-11/RELATORIO.md).
+[relatório de execução](../../../_work/prime_geometry_2026-09-11/RELATORIO.md).
 
 ## ENDGAME lido integralmente
 
@@ -194,7 +194,7 @@ recuperado e comparado com a reconstrução: mesmos dados e mesmas três saídas
 Isso fecha a lacuna de fonte, sem produzir senha nova. O teste de `dbbi` como
 somas de pares não refuta a receita inversa de X, que usa `dbbi` como pesos.
 A prioridade de SalPhaseIon/SMALL permanece, com os limites e correções no
-[registro da leitura integral](../../_work/endgame_review_2026-09-11/LEITURA_ENDGAME.md).
+[registro da leitura integral](../../../_work/endgame_review_2026-09-11/LEITURA_ENDGAME.md).
 
 ## Continuação da receita original de X
 
@@ -206,7 +206,7 @@ novos candidatos com matriz, `faed` e últimas palavras. **5.346 senhas,
 
 O elo `17,47,163,193 → 8,2,1,4 → 16 valores hexadecimais` é aritmeticamente
 exato, mas sua aplicação aos tokens `b/g` não foi autenticada. A prioridade
-SalPhaseIon/SMALL permanece. O [relatório desta continuação](../../_work/blue_hex_2026-09-11/RELATORIO.md)
+SalPhaseIon/SMALL permanece. O [relatório desta continuação](../../../_work/blue_hex_2026-09-11/RELATORIO.md)
 preserva as fórmulas, as pré-imagens e os limites, evitando repetir essas buscas.
 
 ## ASCII 127: fonte recuperada e modelos delimitados
@@ -232,7 +232,7 @@ hipótese do mapa compartilhado, sem refutar funções ou mapas diferentes.
 A prioridade continua SalPhaseIon → SMALL. A próxima ligação precisa
 explicar como as pistas selecionam a transformação e usam os campos
 completos; ampliar listas de senhas por si só não resolve essa lacuna.
-[Fontes, resultados completos e ponto de retomada](../../_work/shared_numeric_2026-09-11/RELATORIO.md).
+[Fontes, resultados completos e ponto de retomada](../../../_work/shared_numeric_2026-09-11/RELATORIO.md).
 
 ## Plano executado: dependências de X e consequências delimitadas
 
@@ -253,7 +253,7 @@ A identificação das últimas palavras pretendidas pelo puzzle permanece aberta
 alfabetos baseadas somente nos fragmentos de X. Priorizar a fonte que
 determine a operação entre cores/primos e `matrixsumlist`, incluindo o
 contexto da resposta #6509 sobre uma pista imprevista. FAED/base127 continua
-secundário e parcial. [Evidências, código e verificação](../../_work/recipe_audit_2026-09-11/RELATORIO.md).
+secundário e parcial. [Evidências, código e verificação](../../../_work/recipe_audit_2026-09-11/RELATORIO.md).
 
 ## Continuação: contexto de #6509 e exclusões exatas
 
@@ -274,7 +274,7 @@ As duas famílias tiveram conferência independente. Esses resultados não
 excluem o uso das somas como chave, fatores fora da faixa pesquisada,
 dados binários ou outras transformações. SMALL permanece o alvo, mas a
 operação anterior ao hash continua desconhecida. Não ampliar buscas já
-contraditas pelos limites. [Fontes, provas e código](../../_work/matrix_hint_2026-09-11/RELATORIO.md).
+contraditas pelos limites. [Fontes, provas e código](../../../_work/matrix_hint_2026-09-11/RELATORIO.md).
 
 ## Continuação: representação compactada
 
@@ -289,4 +289,4 @@ Dicionários de 91 e 32.768 bytes receberam sondagens parciais; não estão
 excluídos. Nenhum payload ou senha foi recuperado. Outros formatos, mapas,
 bases e deslocamentos continuam fora do escopo. SMALL permanece o alvo,
 sem uma transformação nova sustentada pelas pistas nesta rodada.
-[Implementação, controles e limites](../../_work/compressed_payload_2026-09-11/RELATORIO.md).
+[Implementação, controles e limites](../../../_work/compressed_payload_2026-09-11/RELATORIO.md).

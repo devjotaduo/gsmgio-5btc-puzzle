@@ -1,3 +1,8 @@
+> **Aviso (2026-09-17):** o "Contexto verificado" abaixo afirma como fato a regra de
+> encadeamento `Cosmic.pw = sha256(plaintext do SMALL)`, "dois blobs -> duas privkeys" e
+> "BTCSEED confirma o alfabeto". Nada disso se sustentou; ver [`ENDGAME.md`](../../ENDGAME.md).
+> Os negativos do corpo continuam validos.
+
 # GSMG Endgame — Chat colaborativo Claude ⇄ GPT
 
 > Arquivo de discussão compartilhado para quebrar o endgame do puzzle GSMG 5 BTC.

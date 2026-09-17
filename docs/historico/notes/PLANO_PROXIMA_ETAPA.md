@@ -11,18 +11,18 @@ ampliar dicionários de senhas ou retomar FAED/base127.
 A investigação seguinte, de dados compactados, também foi implementada e
 executada. Os modelos completos foram negativos; dicionários de compressão
 maiores receberam apenas sondagens parciais. Ver o
-[relatório de compressão](../../_work/compressed_payload_2026-09-11/RELATORIO.md).
+[relatório de compressão](../../../_work/compressed_payload_2026-09-11/RELATORIO.md).
 
 **Estado após a execução:** a primeira rodada abaixo foi concluída. Os controles,
-as três hipóteses e os testes AES estão no [relatório de execução](../../_work/recipe_audit_2026-09-11/RELATORIO.md).
+as três hipóteses e os testes AES estão no [relatório de execução](../../../_work/recipe_audit_2026-09-11/RELATORIO.md).
 Nenhum blob foi aberto de forma validada; a identificação da senha continua pendente.
 
 ## Base já disponível
 
-- [Análise de prioridades](ANALISE_PRIORIDADES.md) e [revisão integral do ENDGAME](../../_work/endgame_review_2026-09-11/LEITURA_ENDGAME.md).
+- [Análise de prioridades](ANALISE_PRIORIDADES.md) e [revisão integral do ENDGAME](../../../_work/endgame_review_2026-09-11/LEITURA_ENDGAME.md).
 - Script original de X (arquivo local: `_work/endgame_review_2026-09-11/original_dbbi_sum_faed.py`): três resultados reproduzidos; a leitura `SEND THE BLUE TO SET HEX` continua sendo interpretação comunitária.
-- [Testes dos alfabetos azuis e das composições](../../_work/blue_hex_2026-09-11/RELATORIO.md): 5.346 senhas, nenhuma abertura validada.
-- [Mapa comum, ASCII 127 e bases primas](../../_work/shared_numeric_2026-09-11/RELATORIO.md): autoria da frase recuperada. A busca FAED/base127 foi [concluída em 16/09](../../_work/radix127_completion_2026-09-16/RELATORIO.md): exatamente 188 candidatos e 1.504 senhas nas formas declaradas, sem abertura validada. O estado anterior de 177 candidatos era parcial e foi preservado como histórico.
+- [Testes dos alfabetos azuis e das composições](../../../_work/blue_hex_2026-09-11/RELATORIO.md): 5.346 senhas, nenhuma abertura validada.
+- [Mapa comum, ASCII 127 e bases primas](../../../_work/shared_numeric_2026-09-11/RELATORIO.md): autoria da frase recuperada. A busca FAED/base127 foi [concluída em 16/09](../../../_work/radix127_completion_2026-09-16/RELATORIO.md): exatamente 188 candidatos e 1.504 senhas nas formas declaradas, sem abertura validada. O estado anterior de 177 candidatos era parcial e foi preservado como histórico.
 - Os dois controles de embaralhamento da receita de X já existem em blue_net_attack.json (arquivo local: `_work/blue_net_attack.json`), com 20.000 amostras cada. Eles condicionam a receita e os fragmentos já escolhidos; não medem a probabilidade de a interpretação ser a solução.
 
 ## Sequência de trabalho
@@ -160,7 +160,7 @@ divisão por primos até 196, além de cinco limites sobre operações conjuntas
 entre DBBI e FAED. Nenhuma correspondência completa. Os modelos de 14 somas
 diretas foram excluídos para todos os inteiros por limites de repetição e
 comprimento. As demais exclusões têm os escopos explícitos no
-[relatório](../../_work/matrix_hint_2026-09-11/RELATORIO.md).
+[relatório](../../../_work/matrix_hint_2026-09-11/RELATORIO.md).
 
 A continuação precisa justificar uma transformação das somas ou outro papel
 para os campos completos. Repetir as mesmas concatenações com primos maiores
@@ -184,7 +184,7 @@ em `solver/verify_compressed_payload.cjs`.
 
 Nenhuma saída compactada válida foi recuperada, portanto a etapa condicional
 de derivar e testar novas senhas não foi acionada. O
-[relatório](../../_work/compressed_payload_2026-09-11/RELATORIO.md) registra os
+[relatório](../../../_work/compressed_payload_2026-09-11/RELATORIO.md) registra os
 formatos não abrangidos e a fronteira pendente. Não retomar as buscas
 parciais apenas por existirem; é necessário justificar o dicionário ou a
 transformação adicional com uma pista independente.

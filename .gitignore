@@ -42,7 +42,11 @@ _work/decentraland/dep_*
 /node_modules/
 /.codex/
 /.agents/
-/.claude/
+/.claude/*
+!/.claude/agents/
+!/.claude/skills/
+/.claude/skills/*
+!/.claude/skills/solve-phase/
 /skills-lock.json
 
 # Bancada de pesquisa: publicar relatórios e checkpoints compactos.

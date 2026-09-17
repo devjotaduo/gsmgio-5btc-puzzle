@@ -1,6 +1,6 @@
 # Execução do plano: dependências de X e três consequências
 
-11/09/2026. **Primeira rodada do [plano](../../docs/notes/PLANO_PROXIMA_ETAPA.md) executada; nenhuma abertura validada de SMALL, TAIL32 ou COSMIC.** Foram concluídos os controles de símbolos/cores, a conferência com o script original, três modelos delimitados, duas extrações textuais e seus testes AES. A busca FAED/base127 permaneceu no ponto salvo, conforme o plano.
+11/09/2026. **Primeira rodada do [plano](../../docs/historico/notes/PLANO_PROXIMA_ETAPA.md) executada; nenhuma abertura validada de SMALL, TAIL32 ou COSMIC.** Foram concluídos os controles de símbolos/cores, a conferência com o script original, três modelos delimitados, duas extrações textuais e seus testes AES. A busca FAED/base127 permaneceu no ponto salvo, conforme o plano.
 
 ## 1. O que as fontes sustentam
 

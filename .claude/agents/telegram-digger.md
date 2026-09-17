@@ -21,6 +21,13 @@ menções). Há ~1 milhão de linhas; **nunca leia o arquivo inteiro**.
    para recuperar a mensagem completa e as vizinhas (contexto da conversa).
 3. Reconstrua o fio da discussão a partir dessas janelas.
 
+## Exports posteriores ao result.json
+`result.json` termina em 2026-07-08. Mensagens posteriores estao em
+`_work/tg_2025-09_11_summary.md` e `_work/tg_2026-07_09_summary.md` (resumos com ids),
+em `_work/creator_msgs_2026-07_09.txt` (falas do criador verbatim) e nos exports locais
+`ChatExport_*/result.json` (ignorados pelo git). Consulte-os antes de dizer que um
+assunto nao foi discutido.
+
 ## O que devolver
 - **A conclusão**, direta: o que a comunidade concluiu/tentou/descartou sobre o
   tópico pedido.

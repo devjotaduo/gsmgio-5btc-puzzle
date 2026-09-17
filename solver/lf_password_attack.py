@@ -1,3 +1,4 @@
+import os
 # -*- coding: utf-8 -*-
 """Looking Forward (Keyes & Fresco, 1969) como FONTE DE SENHA.
 
@@ -46,7 +47,7 @@ pt = full(ctrl, s2, c2); assert b"keymaker" in pt.lower(), "controle não abriu"
 print("CONTROLE OK: fase 2 aberta, printable", round(G.printable(pt), 3))
 
 # ---------------- corpus
-txt = io.open(r"C:\Users\ruthe\AppData\Local\Temp\claude\C--Users-ruthe-Desktop-puzzle-gsmgio-5btc-puzzle\e6b07645-ce08-4b50-be07-c055b0360d9d\scratchpad\lf.txt", encoding="utf-8", errors="ignore").read()
+txt = io.open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "_work", "looking_forward.txt"), encoding="utf-8", errors="ignore").read()
 txt = txt.replace("-\n", "").replace("\n", " ")
 norm = lambda s: re.sub(r"[^a-z0-9]", "", s.lower())
 sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", txt) if 8 <= len(s.strip()) <= 400]
