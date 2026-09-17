@@ -1,0 +1,9 @@
+{
+  "AESDecisionsVerified": 3408,
+  "paddingBodiesVerified": 12,
+  "distinctValidScalarsChecked": 9226,
+  "keyHits": [],
+  "decisionsSHA256": "aff57883b9507344cd235ce0b69fb1f419a67b1d596f9251a499a553249f5017",
+  "implementation": "PyCryptodome, hashlib, coincurve",
+  "scope": "SHA256 of both password forms, raw 32-byte/hex64 materials, all 32-byte windows of outputs and reversals, SHA256 of outputs; target public point and negation."
+}

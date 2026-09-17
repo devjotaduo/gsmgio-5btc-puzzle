@@ -1,0 +1,440 @@
+{
+  "inputs": {
+    "sourceSHA256": "e36de17027c4dea6719a0901cba5d83c6a460c00a9ced7d788c6d06ef401b1fb",
+    "createdAt": "2026-09-17T18:03:39.849Z",
+    "transactions": [
+      {
+        "txid": "88cdb3cdca12b471551b1b26188508a14ca5fd8a415223ffb7c190381c9b9df3",
+        "rawSHA256": "b1653abd30454dc647ddee19ad1b846568ffecc31868eed773167d7308906352",
+        "inputCount": 3
+      },
+      {
+        "txid": "2aa9a4a90be819d5122d70c993280785a0508f163521e7b38cebb4db0b071b13",
+        "rawSHA256": "6865119e0a5de3d81268b535662b4a00f2da07eba948ce9a8ef7464d92df9a04",
+        "inputCount": 3
+      }
+    ],
+    "signatures": 6,
+    "allVerifiedWithOpenSSL": true,
+    "repeatedR": false,
+    "targetPublicKey": "04f4d1bbd91e65e2a019566a17574e97dae908b784b388891848007e4f55d5a4649c73d25fc5ed8fd7227cab0be4e576c0c6404db5aa546286563e4be12bf33559",
+    "scope": "Six legacy P2PKH SIGHASH_ALL signatures spending the public puzzle prize address; no transaction created or broadcast."
+  },
+  "search32": {
+    "babySteps": 65536,
+    "bits": 32,
+    "controls": {
+      "allPassed": true,
+      "largeNoncePairSignCases": 4,
+      "outsideBoundRejected": 4,
+      "signedBoundaryControls": 11,
+      "smallNonceKeyRecovered": true
+    },
+    "elapsedMs": 4701,
+    "giantStepsPerTarget": 131071,
+    "hits": [],
+    "inputSHA256": "e7cd81b001b5b345a111f35cec90c3aee24ed2274fe4e59e0c1f4211714208c8",
+    "recoveredKeys": [],
+    "scope": "Signed nonce scalars, pairwise differences and sums; does not exclude arbitrary nonces, larger offsets or general affine relations.",
+    "signatures": 6,
+    "signedInterval": "-4294967296 < k < 4294967296",
+    "targets": [
+      {
+        "found": false,
+        "name": "nonce[0]",
+        "point": "021df5cf8403c9309aba324ef94a43551a32a258326009abb4ac1153c06de327d0"
+      },
+      {
+        "found": false,
+        "name": "nonce[1]",
+        "point": "024c18f2f20ea146ad2e4accaa0094d7b52bf4da5322e78fd1a651a526fdc43dae"
+      },
+      {
+        "found": false,
+        "name": "nonce[2]",
+        "point": "02429e4e8f162b0dafc1ca9f2b13e4e0fa57a26c2b9f2bf5a3ae934c40ea1f7845"
+      },
+      {
+        "found": false,
+        "name": "nonce[3]",
+        "point": "02dbe31ca9440892abcec35c0aa83380e1c35d2a33ea99fc314e6bcaf299b8847a"
+      },
+      {
+        "found": false,
+        "name": "nonce[4]",
+        "point": "03fce22a0a026a33197ae65efa47420aa1c4efdbf95f8370f4da22802392ab2db2"
+      },
+      {
+        "found": false,
+        "name": "nonce[5]",
+        "point": "02776706ca3039c2e127aff3f144333e9afc6c4dcf5ba2dd9243268324622d65f6"
+      },
+      {
+        "found": false,
+        "name": "nonce[1] - (-1)*nonce[0]",
+        "point": "0321268d94619c7fcf4f9bc4afff6276f9e9fcb3dc3ab4c11f855d1525d1174c58"
+      },
+      {
+        "found": false,
+        "name": "nonce[1] - (1)*nonce[0]",
+        "point": "02f68f8270277b57388094dfc8db5a7790fa1d08e45ce4a6c39e44ebb81fc09534"
+      },
+      {
+        "found": false,
+        "name": "nonce[2] - (-1)*nonce[0]",
+        "point": "02fbbd7347ac50ecb170f5c5404a343ceae6c837225429e72cdd019d3ba6b5763a"
+      },
+      {
+        "found": false,
+        "name": "nonce[2] - (1)*nonce[0]",
+        "point": "028b867a6922dadecd7b7d8b48609beae03c239ed4006dea20ebb635c405f6854b"
+      },
+      {
+        "found": false,
+        "name": "nonce[2] - (-1)*nonce[1]",
+        "point": "02377f6040041011461f68b0fca973d40b90b76d1c48312b58d10d872287c7eb7e"
+      },
+      {
+        "found": false,
+        "name": "nonce[2] - (1)*nonce[1]",
+        "point": "03dd1ec4adf3449a05406605e11f33af5f00e608bd3d3c4c7d96fe2ee88306da07"
+      },
+      {
+        "found": false,
+        "name": "nonce[3] - (-1)*nonce[0]",
+        "point": "0335d8b31cf407917afe40d2ed88899a70d397954cd6ce3f1aa672f883bf4a0cd8"
+      },
+      {
+        "found": false,
+        "name": "nonce[3] - (1)*nonce[0]",
+        "point": "03e0a031d40f23a9998375d5fce5fd391bce714ddbe1190f6918ab1a51962829a2"
+      },
+      {
+        "found": false,
+        "name": "nonce[3] - (-1)*nonce[1]",
+        "point": "0364b08dedce058508f3a24240b258323415b30b1add71d806097cc5dce5e95162"
+      },
+      {
+        "found": false,
+        "name": "nonce[3] - (1)*nonce[1]",
+        "point": "022800c361925948bf68b78b03e604a907932f010b9fb03e479a67dbcc720cef34"
+      },
+      {
+        "found": false,
+        "name": "nonce[3] - (-1)*nonce[2]",
+        "point": "0324bf068c35da2eca829261f060cf26664108c38288bc05af2bc896b3102f2d45"
+      },
+      {
+        "found": false,
+        "name": "nonce[3] - (1)*nonce[2]",
+        "point": "0232ab744738bbf66faeeffd2a34e1799f372cc975e28774e4d2abd17727a6df6d"
+      },
+      {
+        "found": false,
+        "name": "nonce[4] - (-1)*nonce[0]",
+        "point": "021427d31962c294ac9cc3793c727189c6f4dbee80729380831047cbc871af803c"
+      },
+      {
+        "found": false,
+        "name": "nonce[4] - (1)*nonce[0]",
+        "point": "029f514c11b01ef38de8012dca6c5d9672a17c34674d48a0da8f164988b8cb55e3"
+      },
+      {
+        "found": false,
+        "name": "nonce[4] - (-1)*nonce[1]",
+        "point": "02f6fb54e2e6e41cd3f3b5832e11ade1b03bd78d5ea6ae61a7d6aa4c340d2909cf"
+      },
+      {
+        "found": false,
+        "name": "nonce[4] - (1)*nonce[1]",
+        "point": "02b48ecd9093b9dbe349884be0218ae4b7de3dd42998a77f78e983a4b332725fdc"
+      },
+      {
+        "found": false,
+        "name": "nonce[4] - (-1)*nonce[2]",
+        "point": "0216035f710daa113dd83b60b8988402f9bde5edfef7bcf2e91f33bca13db9519e"
+      },
+      {
+        "found": false,
+        "name": "nonce[4] - (1)*nonce[2]",
+        "point": "03cb462b583c3a56f64a0871e3e1737a5466923e2334d764bcd924a9a755d747e7"
+      },
+      {
+        "found": false,
+        "name": "nonce[4] - (-1)*nonce[3]",
+        "point": "0256aa62a0dc331d1950798dbca05d2d33c7630aaf2fb5bd06e6b9edce8e1e8ab1"
+      },
+      {
+        "found": false,
+        "name": "nonce[4] - (1)*nonce[3]",
+        "point": "03e18141ae5148e89df9278bbb3e5323b37e066f4459b8df653ac98d86fc27e0ee"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (-1)*nonce[0]",
+        "point": "03350bde4782a15aa1d752ab9e145ceaf6d557ac75b5a03b87a6192ef8e9bddd5b"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (1)*nonce[0]",
+        "point": "0211888fc1aabbf0fbb0f006bfd8310820ea7e8726fbdaa46ca08ccf8d3707eb82"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (-1)*nonce[1]",
+        "point": "03ba1cc9404a37196ff42da242a1760a0618290bf6f2b2e6efa9921613456ef5fc"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (1)*nonce[1]",
+        "point": "03e34a0980fd6b2382e768b5f7b8fb43db9e54c184ff3c8d11a1da7ed83d92d738"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (-1)*nonce[2]",
+        "point": "03229ed945b86fa47fb0e5f46f481bbb9678e1c2c85db2636caa1eba321152e6eb"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (1)*nonce[2]",
+        "point": "028f0fcec7f8489e7a26891194b9b42124ffcf7ae9c2187843bb65a9527732552c"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (-1)*nonce[3]",
+        "point": "02d3d5ba8fe72280c2bf8dcff9968acad717d5e7090b99eeee0d1ea565e60080a6"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (1)*nonce[3]",
+        "point": "03e37438295e95012c13647b08d07129462f0215aea030c1ba0002e674b3cef227"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (-1)*nonce[4]",
+        "point": "02e4f75cc18c2ef581fc1ba6fc933790b3be078d15e42b59855e1d751d8f285cba"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (1)*nonce[4]",
+        "point": "03e027af235e55a5fa6012f608d0f672d001895d42f75d01984cfaed032155e9a0"
+      }
+    ]
+  },
+  "search40": {
+    "babySteps": 1048576,
+    "bits": 40,
+    "controls": {
+      "allPassed": true,
+      "largeNoncePairSignCases": 4,
+      "outsideBoundRejected": 4,
+      "signedBoundaryControls": 11,
+      "smallNonceKeyRecovered": true
+    },
+    "elapsedMs": 94803,
+    "giantStepsPerTarget": 2097151,
+    "hits": [],
+    "inputSHA256": "e7cd81b001b5b345a111f35cec90c3aee24ed2274fe4e59e0c1f4211714208c8",
+    "recoveredKeys": [],
+    "scope": "Signed nonce scalars, pairwise differences and sums; does not exclude arbitrary nonces, larger offsets or general affine relations.",
+    "signatures": 6,
+    "signedInterval": "-1099511627776 < k < 1099511627776",
+    "targets": [
+      {
+        "found": false,
+        "name": "nonce[0]",
+        "point": "021df5cf8403c9309aba324ef94a43551a32a258326009abb4ac1153c06de327d0"
+      },
+      {
+        "found": false,
+        "name": "nonce[1]",
+        "point": "024c18f2f20ea146ad2e4accaa0094d7b52bf4da5322e78fd1a651a526fdc43dae"
+      },
+      {
+        "found": false,
+        "name": "nonce[2]",
+        "point": "02429e4e8f162b0dafc1ca9f2b13e4e0fa57a26c2b9f2bf5a3ae934c40ea1f7845"
+      },
+      {
+        "found": false,
+        "name": "nonce[3]",
+        "point": "02dbe31ca9440892abcec35c0aa83380e1c35d2a33ea99fc314e6bcaf299b8847a"
+      },
+      {
+        "found": false,
+        "name": "nonce[4]",
+        "point": "03fce22a0a026a33197ae65efa47420aa1c4efdbf95f8370f4da22802392ab2db2"
+      },
+      {
+        "found": false,
+        "name": "nonce[5]",
+        "point": "02776706ca3039c2e127aff3f144333e9afc6c4dcf5ba2dd9243268324622d65f6"
+      },
+      {
+        "found": false,
+        "name": "nonce[1] - (-1)*nonce[0]",
+        "point": "0321268d94619c7fcf4f9bc4afff6276f9e9fcb3dc3ab4c11f855d1525d1174c58"
+      },
+      {
+        "found": false,
+        "name": "nonce[1] - (1)*nonce[0]",
+        "point": "02f68f8270277b57388094dfc8db5a7790fa1d08e45ce4a6c39e44ebb81fc09534"
+      },
+      {
+        "found": false,
+        "name": "nonce[2] - (-1)*nonce[0]",
+        "point": "02fbbd7347ac50ecb170f5c5404a343ceae6c837225429e72cdd019d3ba6b5763a"
+      },
+      {
+        "found": false,
+        "name": "nonce[2] - (1)*nonce[0]",
+        "point": "028b867a6922dadecd7b7d8b48609beae03c239ed4006dea20ebb635c405f6854b"
+      },
+      {
+        "found": false,
+        "name": "nonce[2] - (-1)*nonce[1]",
+        "point": "02377f6040041011461f68b0fca973d40b90b76d1c48312b58d10d872287c7eb7e"
+      },
+      {
+        "found": false,
+        "name": "nonce[2] - (1)*nonce[1]",
+        "point": "03dd1ec4adf3449a05406605e11f33af5f00e608bd3d3c4c7d96fe2ee88306da07"
+      },
+      {
+        "found": false,
+        "name": "nonce[3] - (-1)*nonce[0]",
+        "point": "0335d8b31cf407917afe40d2ed88899a70d397954cd6ce3f1aa672f883bf4a0cd8"
+      },
+      {
+        "found": false,
+        "name": "nonce[3] - (1)*nonce[0]",
+        "point": "03e0a031d40f23a9998375d5fce5fd391bce714ddbe1190f6918ab1a51962829a2"
+      },
+      {
+        "found": false,
+        "name": "nonce[3] - (-1)*nonce[1]",
+        "point": "0364b08dedce058508f3a24240b258323415b30b1add71d806097cc5dce5e95162"
+      },
+      {
+        "found": false,
+        "name": "nonce[3] - (1)*nonce[1]",
+        "point": "022800c361925948bf68b78b03e604a907932f010b9fb03e479a67dbcc720cef34"
+      },
+      {
+        "found": false,
+        "name": "nonce[3] - (-1)*nonce[2]",
+        "point": "0324bf068c35da2eca829261f060cf26664108c38288bc05af2bc896b3102f2d45"
+      },
+      {
+        "found": false,
+        "name": "nonce[3] - (1)*nonce[2]",
+        "point": "0232ab744738bbf66faeeffd2a34e1799f372cc975e28774e4d2abd17727a6df6d"
+      },
+      {
+        "found": false,
+        "name": "nonce[4] - (-1)*nonce[0]",
+        "point": "021427d31962c294ac9cc3793c727189c6f4dbee80729380831047cbc871af803c"
+      },
+      {
+        "found": false,
+        "name": "nonce[4] - (1)*nonce[0]",
+        "point": "029f514c11b01ef38de8012dca6c5d9672a17c34674d48a0da8f164988b8cb55e3"
+      },
+      {
+        "found": false,
+        "name": "nonce[4] - (-1)*nonce[1]",
+        "point": "02f6fb54e2e6e41cd3f3b5832e11ade1b03bd78d5ea6ae61a7d6aa4c340d2909cf"
+      },
+      {
+        "found": false,
+        "name": "nonce[4] - (1)*nonce[1]",
+        "point": "02b48ecd9093b9dbe349884be0218ae4b7de3dd42998a77f78e983a4b332725fdc"
+      },
+      {
+        "found": false,
+        "name": "nonce[4] - (-1)*nonce[2]",
+        "point": "0216035f710daa113dd83b60b8988402f9bde5edfef7bcf2e91f33bca13db9519e"
+      },
+      {
+        "found": false,
+        "name": "nonce[4] - (1)*nonce[2]",
+        "point": "03cb462b583c3a56f64a0871e3e1737a5466923e2334d764bcd924a9a755d747e7"
+      },
+      {
+        "found": false,
+        "name": "nonce[4] - (-1)*nonce[3]",
+        "point": "0256aa62a0dc331d1950798dbca05d2d33c7630aaf2fb5bd06e6b9edce8e1e8ab1"
+      },
+      {
+        "found": false,
+        "name": "nonce[4] - (1)*nonce[3]",
+        "point": "03e18141ae5148e89df9278bbb3e5323b37e066f4459b8df653ac98d86fc27e0ee"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (-1)*nonce[0]",
+        "point": "03350bde4782a15aa1d752ab9e145ceaf6d557ac75b5a03b87a6192ef8e9bddd5b"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (1)*nonce[0]",
+        "point": "0211888fc1aabbf0fbb0f006bfd8310820ea7e8726fbdaa46ca08ccf8d3707eb82"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (-1)*nonce[1]",
+        "point": "03ba1cc9404a37196ff42da242a1760a0618290bf6f2b2e6efa9921613456ef5fc"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (1)*nonce[1]",
+        "point": "03e34a0980fd6b2382e768b5f7b8fb43db9e54c184ff3c8d11a1da7ed83d92d738"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (-1)*nonce[2]",
+        "point": "03229ed945b86fa47fb0e5f46f481bbb9678e1c2c85db2636caa1eba321152e6eb"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (1)*nonce[2]",
+        "point": "028f0fcec7f8489e7a26891194b9b42124ffcf7ae9c2187843bb65a9527732552c"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (-1)*nonce[3]",
+        "point": "02d3d5ba8fe72280c2bf8dcff9968acad717d5e7090b99eeee0d1ea565e60080a6"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (1)*nonce[3]",
+        "point": "03e37438295e95012c13647b08d07129462f0215aea030c1ba0002e674b3cef227"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (-1)*nonce[4]",
+        "point": "02e4f75cc18c2ef581fc1ba6fc933790b3be078d15e42b59855e1d751d8f285cba"
+      },
+      {
+        "found": false,
+        "name": "nonce[5] - (1)*nonce[4]",
+        "point": "03e027af235e55a5fa6012f608d0f672d001895d42f75d01984cfaed032155e9a0"
+      }
+    ]
+  },
+  "recurrence": {
+    "cases": 2304,
+    "withRoots": 1200,
+    "distinctRootCandidates": 100,
+    "identicallyZeroCases": [],
+    "hits": [],
+    "authenticatedSolution": false,
+    "elapsedMs": 752
+  },
+  "sourceSHA256": {
+    "extractor": "e36de17027c4dea6719a0901cba5d83c6a460c00a9ced7d788c6d06ef401b1fb",
+    "bsgsGo": "7ebaae441bef696014dba4167e823c07a2e2423b0c72225a11ea8b2fc0cef652",
+    "recurrence": "7073a23fa1f3409f66b5d0ba9baf9e4123f5601c214ddf3c5521b32dc445ce6b"
+  },
+  "authenticatedSolution": false
+}

@@ -4623,3 +4623,92 @@ metodológico: `solver/scorer.py` aprendeu os quadgramas de `dbbi` (DIFH −5,13
 a–i pontuam z +6,9 com ele e z 1,5 com o scorer limpo (`solver/primos_2026_09_17/clean_scorer.py`).
 Veredito: fato estrutural intencional e robusto; como caminho para a senha, esgotado sem saber
 qual segmentação é a pretendida e o que "zeroed out" zera. Ver relatório §4d.
+
+## Sessão 2026-09-17 — export novo, marcadores primos e referência do coelho
+
+**Nenhuma solução final.** O export fornecido pelo usuário contém 1.209
+mensagens de 04–17/09 e o `GSMG IO ATLAS.pdf` de Doober (#71971). Não há
+novas falas do criador nesse intervalo. O atlas foi tratado como pesquisa
+da comunidade, com reprodução local de suas afirmações.
+
+A gramática `b|be` nas posições lógicas primas consome DBBI integralmente
+de exatamente duas formas: 83 posições (15/8 marcadores, resíduo de 60)
+ou 84 (16/7, resíduo de 61). Recursão e programação dinâmica concordam.
+**Ressalva nova:** além da seleção 84/{22,25}, a seleção 83/{22,24}
+também representa 23 bytes distintos da figura. A primeira usa bytes
+1–23; a segunda, 1–22 e 24. “Um representante por byte” não escolhe 84
+sem a exigência adicional de descartar o byte 24.
+
+Os resíduos, coordenadas das cinco seleções compatíveis, novas listas de
+somas e a hipótese `DBBI + matrixsumlist binário + zero` em 14×14 deram
+17.003 materiais e 204.036 decisões AES, sem resultado autenticado.
+PyCryptodome reproduziu todas as decisões; 786.312 escalares não
+corresponderam ao ponto público do prêmio ou à sua negação. A continuação
+com 1.067 chaves decimais dessas listas sobre FAED excluiu todos os
+6.402 modelos de sete bits, com 10.088 certificados conferidos.
+
+A foto #72118 corresponde ao item 541878964 de paramouse no catálogo
+Shutterstock. A comparação geométrica, limitada às 144 subcélulas com
+fundo conhecido, encontrou sete diferenças visíveis no coelho. Elas
+geraram mais 3.408 decisões AES e 9.226 comparações de escalares,
+também negativas, com conferência criptográfica independente.
+O JPEG não permite determinar a origem do RGB exato de FEFEFE.
+
+[Fontes, modelos, controles, reprodução e limites](_work/prime_host_delta_2026-09-17/RELATORIO.md).
+As operações faltantes continuam desconhecidas; nenhum processo desta
+rodada permanece em execução.
+
+## Sessão 2026-09-17 — L84/16+7 adotado para teste
+
+O usuário pediu que a leitura de 84 posições fosse escolhida e testada.
+A rodada fixou L84 e a seleção A: FEFEFE azul, eventos 22/25 omitidos,
+um representante de cada byte 1–23. A ambiguidade não impediu a execução.
+
+Os sete marcadores amarelos selecionam `TO PRIVATE KEYS BETTER THEY ALSO TO`
+na mensagem de 23 palavras. Seus caracteres foram entrelaçados nas 7!
+ordens. Na construção Bifid comunitária, os mesmos marcadores, agora como
+posições lógicas, selecionam sete D nos pares 39/91/113/164/207/224/269;
+testaram-se os intervalos vizinhos, concatenados ou entrelaçados. Por fim,
+as duas vistas de L84 em sete fluxos de 12 caracteres foram permutadas e
+testadas como inteiros decimais, com todas as escolhas independentes g=0/7.
+
+Resultado: 40.320 modelos decimais completos sem saída de sete bits;
+13.539 materiais, 27.078 casos de senha e 162.468 decisões AES sem
+abertura reconhecida. Uma implementação independente reproduziu todos
+os modelos e decisões. Os 640.486 escalares derivados não correspondem
+ao ponto público do prêmio ou à sua negação. **A solução segue não validada;
+o negativo se limita às consequências declaradas desse ramo.**
+
+[Modelos, controles, reprodução e limites](_work/prime_host_l84_2026-09-17/RELATORIO.md).
+
+## Sessão 2026-09-17 — caminhos sem as escolhas da comunidade
+
+**A solução continua não validada.** A rodada deixou de fixar L84/Bifid ou
+selecionar palavras do Telegram e derivou modelos do alfabeto de nove
+símbolos e das assinaturas públicas do próprio prêmio.
+
+Base 9 bijetiva, códigos ASCII/CP1141 decimais com todos os zeros apagados
+e agrupamento de cinco trits por byte produziram 11.612.160 decisões de
+compatibilidade. Uma implementação independente reproduziu todas. FAED
+não admitiu texto de sete bits nesses modelos diretos. DBBI admitiu
+192.969 gramáticas de códigos sem zero; os nove modelos CP1141 tiveram
+todos os 10.356 textos enumerados, mas os caminhos ASCII permaneceram
+ambíguos. Testou-se um caminho escolhido por dicionário em cada modelo
+compatível, sem afirmar que os demais caminhos foram esgotados.
+
+Os 123.464 materiais distintos geraram 1.481.568 decisões AES, reproduzidas
+por PyCryptodome, sem abertura reconhecida. Nenhum dos 5.485.056 escalares
+comparados com a chave pública do prêmio correspondeu. Os formatos
+hexadecimal de 64 caracteres, inclusive caixa mista, e WIF 51/52 foram
+incompatíveis com esses modelos. [Modelos e limites](_work/zero_free_numerals_2026-09-17/RELATORIO.md).
+
+As seis assinaturas de gasto do endereço do prêmio foram reconstruídas a
+partir das transações brutas e validadas com OpenSSL e libsecp256k1. A
+busca algébrica não encontrou nonces, diferenças ou somas de nonces no
+intervalo assinado de módulo menor que 2^40. Uma hipótese adicional de
+recorrência afim com multiplicador desconhecido compartilhado pelos dois
+lotes gerou 2.304 casos, resolvidos integralmente, e 100 candidatos
+distintos; nenhum correspondeu à chave pública. Os 36 pontos da busca
+limitada e todos os casos da recorrência foram conferidos independentemente;
+o percurso BSGS de 40 bits não foi repetido em outra biblioteca.
+[Assinaturas, controles, reprodução e limites](_work/prize_nonce_2026-09-17/RELATORIO.md).

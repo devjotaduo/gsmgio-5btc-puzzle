@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "AESImplementation": "PyCryptodome; independent EVP_BytesToKey implementation",
+  "AESDecisions": 162468,
+  "padding": 609,
+  "decisionsSHA256": "b2838b333a14b47708a129025bc25cfda7a27133e9dd665ee98b6cba783551fa",
+  "phase32Control": true,
+  "BifidReencodedExactly": true,
+  "sevenDNoteSelectionVerified": true,
+  "decimalModelsReconstructedAndCertified": 40320,
+  "decimalNodes": 123556,
+  "decimalHits": 0,
+  "privateKeyScalars": 640486,
+  "privateKeyHits": [],
+  "privateKeyScope": "SHA256 and SHA256d of candidate material, each direct/hash-hex passphrase and padding plaintext; raw32 and hex64; every padding-plaintext 32-byte window in both byte orders. Exact secp256k1 target point or negation.",
+  "materialsSHA256": "26e137d714b2d922e089d1decd8fb9ec518b6c88de138b58452ca60dfa4f1224",
+  "integerModelsSHA256": "225b7623e7f78490b6d418b570bdfbd917ae30606e488e2f228e1b409e5f2def",
+  "elapsedSeconds": 73.838
+}

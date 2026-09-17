@@ -1,0 +1,213 @@
+{
+  "completeFeasibility": true,
+  "permutations": 362880,
+  "bijectiveCases": 1451520,
+  "bijective": [
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "cases": 362880,
+      "sevenBit": 0,
+      "checksum": 0
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "cases": 362880,
+      "sevenBit": 0,
+      "checksum": 0
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "cases": 362880,
+      "sevenBit": 0,
+      "checksum": 0
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "cases": 362880,
+      "sevenBit": 0,
+      "checksum": 0
+    }
+  ],
+  "omittedZeroCases": 8709120,
+  "omittedZero": [
+    {
+      "encoding": "ASCII",
+      "repertoire": "lower-space",
+      "field": "dbbi",
+      "reverse": false,
+      "compatible": 0
+    },
+    {
+      "encoding": "ASCII",
+      "repertoire": "lower-space",
+      "field": "dbbi",
+      "reverse": true,
+      "compatible": 0
+    },
+    {
+      "encoding": "ASCII",
+      "repertoire": "lower-space",
+      "field": "faed",
+      "reverse": false,
+      "compatible": 0
+    },
+    {
+      "encoding": "ASCII",
+      "repertoire": "lower-space",
+      "field": "faed",
+      "reverse": true,
+      "compatible": 0
+    },
+    {
+      "encoding": "ASCII",
+      "repertoire": "upper-space",
+      "field": "dbbi",
+      "reverse": false,
+      "compatible": 0
+    },
+    {
+      "encoding": "ASCII",
+      "repertoire": "upper-space",
+      "field": "dbbi",
+      "reverse": true,
+      "compatible": 0
+    },
+    {
+      "encoding": "ASCII",
+      "repertoire": "upper-space",
+      "field": "faed",
+      "reverse": false,
+      "compatible": 0
+    },
+    {
+      "encoding": "ASCII",
+      "repertoire": "upper-space",
+      "field": "faed",
+      "reverse": true,
+      "compatible": 0
+    },
+    {
+      "encoding": "ASCII",
+      "repertoire": "printable-controls",
+      "field": "dbbi",
+      "reverse": false,
+      "compatible": 78480
+    },
+    {
+      "encoding": "ASCII",
+      "repertoire": "printable-controls",
+      "field": "dbbi",
+      "reverse": true,
+      "compatible": 114480
+    },
+    {
+      "encoding": "ASCII",
+      "repertoire": "printable-controls",
+      "field": "faed",
+      "reverse": false,
+      "compatible": 0
+    },
+    {
+      "encoding": "ASCII",
+      "repertoire": "printable-controls",
+      "field": "faed",
+      "reverse": true,
+      "compatible": 0
+    },
+    {
+      "encoding": "CP1141",
+      "repertoire": "lower-space",
+      "field": "dbbi",
+      "reverse": false,
+      "compatible": 0
+    },
+    {
+      "encoding": "CP1141",
+      "repertoire": "lower-space",
+      "field": "dbbi",
+      "reverse": true,
+      "compatible": 0
+    },
+    {
+      "encoding": "CP1141",
+      "repertoire": "lower-space",
+      "field": "faed",
+      "reverse": false,
+      "compatible": 0
+    },
+    {
+      "encoding": "CP1141",
+      "repertoire": "lower-space",
+      "field": "faed",
+      "reverse": true,
+      "compatible": 0
+    },
+    {
+      "encoding": "CP1141",
+      "repertoire": "upper-space",
+      "field": "dbbi",
+      "reverse": false,
+      "compatible": 0
+    },
+    {
+      "encoding": "CP1141",
+      "repertoire": "upper-space",
+      "field": "dbbi",
+      "reverse": true,
+      "compatible": 0
+    },
+    {
+      "encoding": "CP1141",
+      "repertoire": "upper-space",
+      "field": "faed",
+      "reverse": false,
+      "compatible": 0
+    },
+    {
+      "encoding": "CP1141",
+      "repertoire": "upper-space",
+      "field": "faed",
+      "reverse": true,
+      "compatible": 0
+    },
+    {
+      "encoding": "CP1141",
+      "repertoire": "printable-controls",
+      "field": "dbbi",
+      "reverse": false,
+      "compatible": 0
+    },
+    {
+      "encoding": "CP1141",
+      "repertoire": "printable-controls",
+      "field": "dbbi",
+      "reverse": true,
+      "compatible": 9
+    },
+    {
+      "encoding": "CP1141",
+      "repertoire": "printable-controls",
+      "field": "faed",
+      "reverse": false,
+      "compatible": 0
+    },
+    {
+      "encoding": "CP1141",
+      "repertoire": "printable-controls",
+      "field": "faed",
+      "reverse": true,
+      "compatible": 0
+    }
+  ],
+  "omittedZeroCompatible": 192969,
+  "flagsSHA256": "ce47ec5c502ef1e7428a028d5d5a634c9a6c3da35807c830582eb659aeaf7122",
+  "radixFlagsSHA256": "8365553a32e1234ae7517eebee482cb4b4104431aafc0ff2db5d67e013987c97",
+  "acceptedSHA256": "59659a593a8fca75a62a0c9f94f5a5f4d5f8aa88825a0fdddd56045a751e0e22",
+  "authenticatedSolution": false,
+  "status": "Feasibility is not plaintext authentication. Any positive grammar models still need decoding and cryptographic checks.",
+  "elapsedMs": 10189
+}

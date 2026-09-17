@@ -1,0 +1,23 @@
+{
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceSHA256": "012b8b1aeb7f3f1141a4faf4342813d054f1564a35bef78457777bb798b346bc",
+  "publicSources": {
+    "export": "Telegram Desktop/ChatExport_2026-09-17/result.json",
+    "messageIDs": [
+      71413,
+      71971,
+      71986
+    ],
+    "atlasPages": [
+      13,
+      36,
+      37,
+      38,
+      39
+    ],
+    "note": "Community claims, not creator instructions. Raw export and PDF remain local."
+  },
+  "hypothesis": "Prime-host b|be segmentation of DBBI; residues and coordinate witnesses feed page codecs, matrix sums and SHA256/AES. Separate exploratory 195+1 full annotated matrix.",
+  "scope": "Both exact parses. Six token views, both directions, all g=0/7 masks for seven-bit whole-decimal decoding. Direct views and seven-bit candidates as literal, uppercase, digits and integer bytes. Factor-rectangle sums with g globally 0 or 7. All five picture witnesses and their coordinates/prime reinsertion. Prepend/append zero to DBBI+104-bit label, rows/columns/spiral, select original 0/1/B/Y/colours and sum. Enumerated serializations, two declared clauses. Raw and SHA256-hex passwords, all three original blobs, EVP-SHA256 and EVP-MD5.",
+  "limitations": "No arbitrary digit permutation, no exhaustive binary-payload search, no arbitrary transposition/geometry/key derivation; a negative only covers the declared materials."
+}

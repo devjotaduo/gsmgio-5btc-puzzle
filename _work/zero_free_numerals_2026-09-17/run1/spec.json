@@ -1,0 +1,1666 @@
+{
+  "hypotheses": [
+    "Bijective base 9 uses digits 1..9, with no zero digit; whole-field value n = 9*n + digit. All 9! symbol assignments.",
+    "Each ASCII or CP1141 code is written in decimal, all decimal zero digits are removed, remaining digits concatenated and substituted by a..i. All 9! assignments and all code boundaries."
+  ],
+  "fields": [
+    {
+      "field": "dbbi",
+      "reverse": false,
+      "length": 91
+    },
+    {
+      "field": "dbbi",
+      "reverse": true,
+      "length": 91
+    },
+    {
+      "field": "faed",
+      "reverse": false,
+      "length": 570
+    },
+    {
+      "field": "faed",
+      "reverse": true,
+      "length": 570
+    }
+  ],
+  "outputRequirements": [
+    "Bijective: all whole-number minimal bytes <128, or a complete 36-byte key/checksum frame SHA256d(key32)[:4]. Both byte orders for the checksum.",
+    "Zero-omitted: lower+space, upper+space, or ASCII32..126 and TAB/LF/CR. Feasibility is exact; large ambiguous plaintext sets require subsequent analysis."
+  ],
+  "exclusions": "No prime-host parse, no Bifid square, no selected substrings, no insertion of arbitrary nonzero digits, no extra cipher, no arbitrary trimming. Does not exhaust arbitrary binary passwords.",
+  "models": [
+    {
+      "encoding": "ASCII",
+      "repertoire": "lower-space",
+      "codes": [
+        {
+          "m": 32,
+          "value": 32,
+          "word": "32"
+        },
+        {
+          "m": 97,
+          "value": 97,
+          "word": "97"
+        },
+        {
+          "m": 98,
+          "value": 98,
+          "word": "98"
+        },
+        {
+          "m": 99,
+          "value": 99,
+          "word": "99"
+        },
+        {
+          "m": 100,
+          "value": 100,
+          "word": "1"
+        },
+        {
+          "m": 101,
+          "value": 101,
+          "word": "11"
+        },
+        {
+          "m": 102,
+          "value": 102,
+          "word": "12"
+        },
+        {
+          "m": 103,
+          "value": 103,
+          "word": "13"
+        },
+        {
+          "m": 104,
+          "value": 104,
+          "word": "14"
+        },
+        {
+          "m": 105,
+          "value": 105,
+          "word": "15"
+        },
+        {
+          "m": 106,
+          "value": 106,
+          "word": "16"
+        },
+        {
+          "m": 107,
+          "value": 107,
+          "word": "17"
+        },
+        {
+          "m": 108,
+          "value": 108,
+          "word": "18"
+        },
+        {
+          "m": 109,
+          "value": 109,
+          "word": "19"
+        },
+        {
+          "m": 110,
+          "value": 110,
+          "word": "11"
+        },
+        {
+          "m": 111,
+          "value": 111,
+          "word": "111"
+        },
+        {
+          "m": 112,
+          "value": 112,
+          "word": "112"
+        },
+        {
+          "m": 113,
+          "value": 113,
+          "word": "113"
+        },
+        {
+          "m": 114,
+          "value": 114,
+          "word": "114"
+        },
+        {
+          "m": 115,
+          "value": 115,
+          "word": "115"
+        },
+        {
+          "m": 116,
+          "value": 116,
+          "word": "116"
+        },
+        {
+          "m": 117,
+          "value": 117,
+          "word": "117"
+        },
+        {
+          "m": 118,
+          "value": 118,
+          "word": "118"
+        },
+        {
+          "m": 119,
+          "value": 119,
+          "word": "119"
+        },
+        {
+          "m": 120,
+          "value": 120,
+          "word": "12"
+        },
+        {
+          "m": 121,
+          "value": 121,
+          "word": "121"
+        },
+        {
+          "m": 122,
+          "value": 122,
+          "word": "122"
+        }
+      ],
+      "prefixes": [
+        "",
+        "3",
+        "9",
+        "1",
+        "11",
+        "12"
+      ]
+    },
+    {
+      "encoding": "ASCII",
+      "repertoire": "upper-space",
+      "codes": [
+        {
+          "m": 32,
+          "value": 32,
+          "word": "32"
+        },
+        {
+          "m": 65,
+          "value": 65,
+          "word": "65"
+        },
+        {
+          "m": 66,
+          "value": 66,
+          "word": "66"
+        },
+        {
+          "m": 67,
+          "value": 67,
+          "word": "67"
+        },
+        {
+          "m": 68,
+          "value": 68,
+          "word": "68"
+        },
+        {
+          "m": 69,
+          "value": 69,
+          "word": "69"
+        },
+        {
+          "m": 70,
+          "value": 70,
+          "word": "7"
+        },
+        {
+          "m": 71,
+          "value": 71,
+          "word": "71"
+        },
+        {
+          "m": 72,
+          "value": 72,
+          "word": "72"
+        },
+        {
+          "m": 73,
+          "value": 73,
+          "word": "73"
+        },
+        {
+          "m": 74,
+          "value": 74,
+          "word": "74"
+        },
+        {
+          "m": 75,
+          "value": 75,
+          "word": "75"
+        },
+        {
+          "m": 76,
+          "value": 76,
+          "word": "76"
+        },
+        {
+          "m": 77,
+          "value": 77,
+          "word": "77"
+        },
+        {
+          "m": 78,
+          "value": 78,
+          "word": "78"
+        },
+        {
+          "m": 79,
+          "value": 79,
+          "word": "79"
+        },
+        {
+          "m": 80,
+          "value": 80,
+          "word": "8"
+        },
+        {
+          "m": 81,
+          "value": 81,
+          "word": "81"
+        },
+        {
+          "m": 82,
+          "value": 82,
+          "word": "82"
+        },
+        {
+          "m": 83,
+          "value": 83,
+          "word": "83"
+        },
+        {
+          "m": 84,
+          "value": 84,
+          "word": "84"
+        },
+        {
+          "m": 85,
+          "value": 85,
+          "word": "85"
+        },
+        {
+          "m": 86,
+          "value": 86,
+          "word": "86"
+        },
+        {
+          "m": 87,
+          "value": 87,
+          "word": "87"
+        },
+        {
+          "m": 88,
+          "value": 88,
+          "word": "88"
+        },
+        {
+          "m": 89,
+          "value": 89,
+          "word": "89"
+        },
+        {
+          "m": 90,
+          "value": 90,
+          "word": "9"
+        }
+      ],
+      "prefixes": [
+        "",
+        "3",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "encoding": "ASCII",
+      "repertoire": "printable-controls",
+      "codes": [
+        {
+          "m": 9,
+          "value": 9,
+          "word": "9"
+        },
+        {
+          "m": 10,
+          "value": 10,
+          "word": "1"
+        },
+        {
+          "m": 13,
+          "value": 13,
+          "word": "13"
+        },
+        {
+          "m": 32,
+          "value": 32,
+          "word": "32"
+        },
+        {
+          "m": 33,
+          "value": 33,
+          "word": "33"
+        },
+        {
+          "m": 34,
+          "value": 34,
+          "word": "34"
+        },
+        {
+          "m": 35,
+          "value": 35,
+          "word": "35"
+        },
+        {
+          "m": 36,
+          "value": 36,
+          "word": "36"
+        },
+        {
+          "m": 37,
+          "value": 37,
+          "word": "37"
+        },
+        {
+          "m": 38,
+          "value": 38,
+          "word": "38"
+        },
+        {
+          "m": 39,
+          "value": 39,
+          "word": "39"
+        },
+        {
+          "m": 40,
+          "value": 40,
+          "word": "4"
+        },
+        {
+          "m": 41,
+          "value": 41,
+          "word": "41"
+        },
+        {
+          "m": 42,
+          "value": 42,
+          "word": "42"
+        },
+        {
+          "m": 43,
+          "value": 43,
+          "word": "43"
+        },
+        {
+          "m": 44,
+          "value": 44,
+          "word": "44"
+        },
+        {
+          "m": 45,
+          "value": 45,
+          "word": "45"
+        },
+        {
+          "m": 46,
+          "value": 46,
+          "word": "46"
+        },
+        {
+          "m": 47,
+          "value": 47,
+          "word": "47"
+        },
+        {
+          "m": 48,
+          "value": 48,
+          "word": "48"
+        },
+        {
+          "m": 49,
+          "value": 49,
+          "word": "49"
+        },
+        {
+          "m": 50,
+          "value": 50,
+          "word": "5"
+        },
+        {
+          "m": 51,
+          "value": 51,
+          "word": "51"
+        },
+        {
+          "m": 52,
+          "value": 52,
+          "word": "52"
+        },
+        {
+          "m": 53,
+          "value": 53,
+          "word": "53"
+        },
+        {
+          "m": 54,
+          "value": 54,
+          "word": "54"
+        },
+        {
+          "m": 55,
+          "value": 55,
+          "word": "55"
+        },
+        {
+          "m": 56,
+          "value": 56,
+          "word": "56"
+        },
+        {
+          "m": 57,
+          "value": 57,
+          "word": "57"
+        },
+        {
+          "m": 58,
+          "value": 58,
+          "word": "58"
+        },
+        {
+          "m": 59,
+          "value": 59,
+          "word": "59"
+        },
+        {
+          "m": 60,
+          "value": 60,
+          "word": "6"
+        },
+        {
+          "m": 61,
+          "value": 61,
+          "word": "61"
+        },
+        {
+          "m": 62,
+          "value": 62,
+          "word": "62"
+        },
+        {
+          "m": 63,
+          "value": 63,
+          "word": "63"
+        },
+        {
+          "m": 64,
+          "value": 64,
+          "word": "64"
+        },
+        {
+          "m": 65,
+          "value": 65,
+          "word": "65"
+        },
+        {
+          "m": 66,
+          "value": 66,
+          "word": "66"
+        },
+        {
+          "m": 67,
+          "value": 67,
+          "word": "67"
+        },
+        {
+          "m": 68,
+          "value": 68,
+          "word": "68"
+        },
+        {
+          "m": 69,
+          "value": 69,
+          "word": "69"
+        },
+        {
+          "m": 70,
+          "value": 70,
+          "word": "7"
+        },
+        {
+          "m": 71,
+          "value": 71,
+          "word": "71"
+        },
+        {
+          "m": 72,
+          "value": 72,
+          "word": "72"
+        },
+        {
+          "m": 73,
+          "value": 73,
+          "word": "73"
+        },
+        {
+          "m": 74,
+          "value": 74,
+          "word": "74"
+        },
+        {
+          "m": 75,
+          "value": 75,
+          "word": "75"
+        },
+        {
+          "m": 76,
+          "value": 76,
+          "word": "76"
+        },
+        {
+          "m": 77,
+          "value": 77,
+          "word": "77"
+        },
+        {
+          "m": 78,
+          "value": 78,
+          "word": "78"
+        },
+        {
+          "m": 79,
+          "value": 79,
+          "word": "79"
+        },
+        {
+          "m": 80,
+          "value": 80,
+          "word": "8"
+        },
+        {
+          "m": 81,
+          "value": 81,
+          "word": "81"
+        },
+        {
+          "m": 82,
+          "value": 82,
+          "word": "82"
+        },
+        {
+          "m": 83,
+          "value": 83,
+          "word": "83"
+        },
+        {
+          "m": 84,
+          "value": 84,
+          "word": "84"
+        },
+        {
+          "m": 85,
+          "value": 85,
+          "word": "85"
+        },
+        {
+          "m": 86,
+          "value": 86,
+          "word": "86"
+        },
+        {
+          "m": 87,
+          "value": 87,
+          "word": "87"
+        },
+        {
+          "m": 88,
+          "value": 88,
+          "word": "88"
+        },
+        {
+          "m": 89,
+          "value": 89,
+          "word": "89"
+        },
+        {
+          "m": 90,
+          "value": 90,
+          "word": "9"
+        },
+        {
+          "m": 91,
+          "value": 91,
+          "word": "91"
+        },
+        {
+          "m": 92,
+          "value": 92,
+          "word": "92"
+        },
+        {
+          "m": 93,
+          "value": 93,
+          "word": "93"
+        },
+        {
+          "m": 94,
+          "value": 94,
+          "word": "94"
+        },
+        {
+          "m": 95,
+          "value": 95,
+          "word": "95"
+        },
+        {
+          "m": 96,
+          "value": 96,
+          "word": "96"
+        },
+        {
+          "m": 97,
+          "value": 97,
+          "word": "97"
+        },
+        {
+          "m": 98,
+          "value": 98,
+          "word": "98"
+        },
+        {
+          "m": 99,
+          "value": 99,
+          "word": "99"
+        },
+        {
+          "m": 100,
+          "value": 100,
+          "word": "1"
+        },
+        {
+          "m": 101,
+          "value": 101,
+          "word": "11"
+        },
+        {
+          "m": 102,
+          "value": 102,
+          "word": "12"
+        },
+        {
+          "m": 103,
+          "value": 103,
+          "word": "13"
+        },
+        {
+          "m": 104,
+          "value": 104,
+          "word": "14"
+        },
+        {
+          "m": 105,
+          "value": 105,
+          "word": "15"
+        },
+        {
+          "m": 106,
+          "value": 106,
+          "word": "16"
+        },
+        {
+          "m": 107,
+          "value": 107,
+          "word": "17"
+        },
+        {
+          "m": 108,
+          "value": 108,
+          "word": "18"
+        },
+        {
+          "m": 109,
+          "value": 109,
+          "word": "19"
+        },
+        {
+          "m": 110,
+          "value": 110,
+          "word": "11"
+        },
+        {
+          "m": 111,
+          "value": 111,
+          "word": "111"
+        },
+        {
+          "m": 112,
+          "value": 112,
+          "word": "112"
+        },
+        {
+          "m": 113,
+          "value": 113,
+          "word": "113"
+        },
+        {
+          "m": 114,
+          "value": 114,
+          "word": "114"
+        },
+        {
+          "m": 115,
+          "value": 115,
+          "word": "115"
+        },
+        {
+          "m": 116,
+          "value": 116,
+          "word": "116"
+        },
+        {
+          "m": 117,
+          "value": 117,
+          "word": "117"
+        },
+        {
+          "m": 118,
+          "value": 118,
+          "word": "118"
+        },
+        {
+          "m": 119,
+          "value": 119,
+          "word": "119"
+        },
+        {
+          "m": 120,
+          "value": 120,
+          "word": "12"
+        },
+        {
+          "m": 121,
+          "value": 121,
+          "word": "121"
+        },
+        {
+          "m": 122,
+          "value": 122,
+          "word": "122"
+        },
+        {
+          "m": 123,
+          "value": 123,
+          "word": "123"
+        },
+        {
+          "m": 124,
+          "value": 124,
+          "word": "124"
+        },
+        {
+          "m": 125,
+          "value": 125,
+          "word": "125"
+        },
+        {
+          "m": 126,
+          "value": 126,
+          "word": "126"
+        }
+      ],
+      "prefixes": [
+        "",
+        "1",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "11",
+        "12"
+      ]
+    },
+    {
+      "encoding": "CP1141",
+      "repertoire": "lower-space",
+      "codes": [
+        {
+          "m": 32,
+          "value": 64,
+          "word": "64"
+        },
+        {
+          "m": 97,
+          "value": 129,
+          "word": "129"
+        },
+        {
+          "m": 98,
+          "value": 130,
+          "word": "13"
+        },
+        {
+          "m": 99,
+          "value": 131,
+          "word": "131"
+        },
+        {
+          "m": 100,
+          "value": 132,
+          "word": "132"
+        },
+        {
+          "m": 101,
+          "value": 133,
+          "word": "133"
+        },
+        {
+          "m": 102,
+          "value": 134,
+          "word": "134"
+        },
+        {
+          "m": 103,
+          "value": 135,
+          "word": "135"
+        },
+        {
+          "m": 104,
+          "value": 136,
+          "word": "136"
+        },
+        {
+          "m": 105,
+          "value": 137,
+          "word": "137"
+        },
+        {
+          "m": 106,
+          "value": 145,
+          "word": "145"
+        },
+        {
+          "m": 107,
+          "value": 146,
+          "word": "146"
+        },
+        {
+          "m": 108,
+          "value": 147,
+          "word": "147"
+        },
+        {
+          "m": 109,
+          "value": 148,
+          "word": "148"
+        },
+        {
+          "m": 110,
+          "value": 149,
+          "word": "149"
+        },
+        {
+          "m": 111,
+          "value": 150,
+          "word": "15"
+        },
+        {
+          "m": 112,
+          "value": 151,
+          "word": "151"
+        },
+        {
+          "m": 113,
+          "value": 152,
+          "word": "152"
+        },
+        {
+          "m": 114,
+          "value": 153,
+          "word": "153"
+        },
+        {
+          "m": 115,
+          "value": 162,
+          "word": "162"
+        },
+        {
+          "m": 116,
+          "value": 163,
+          "word": "163"
+        },
+        {
+          "m": 117,
+          "value": 164,
+          "word": "164"
+        },
+        {
+          "m": 118,
+          "value": 165,
+          "word": "165"
+        },
+        {
+          "m": 119,
+          "value": 166,
+          "word": "166"
+        },
+        {
+          "m": 120,
+          "value": 167,
+          "word": "167"
+        },
+        {
+          "m": 121,
+          "value": 168,
+          "word": "168"
+        },
+        {
+          "m": 122,
+          "value": 169,
+          "word": "169"
+        }
+      ],
+      "prefixes": [
+        "",
+        "6",
+        "1",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ]
+    },
+    {
+      "encoding": "CP1141",
+      "repertoire": "upper-space",
+      "codes": [
+        {
+          "m": 32,
+          "value": 64,
+          "word": "64"
+        },
+        {
+          "m": 65,
+          "value": 193,
+          "word": "193"
+        },
+        {
+          "m": 66,
+          "value": 194,
+          "word": "194"
+        },
+        {
+          "m": 67,
+          "value": 195,
+          "word": "195"
+        },
+        {
+          "m": 68,
+          "value": 196,
+          "word": "196"
+        },
+        {
+          "m": 69,
+          "value": 197,
+          "word": "197"
+        },
+        {
+          "m": 70,
+          "value": 198,
+          "word": "198"
+        },
+        {
+          "m": 71,
+          "value": 199,
+          "word": "199"
+        },
+        {
+          "m": 72,
+          "value": 200,
+          "word": "2"
+        },
+        {
+          "m": 73,
+          "value": 201,
+          "word": "21"
+        },
+        {
+          "m": 74,
+          "value": 209,
+          "word": "29"
+        },
+        {
+          "m": 75,
+          "value": 210,
+          "word": "21"
+        },
+        {
+          "m": 76,
+          "value": 211,
+          "word": "211"
+        },
+        {
+          "m": 77,
+          "value": 212,
+          "word": "212"
+        },
+        {
+          "m": 78,
+          "value": 213,
+          "word": "213"
+        },
+        {
+          "m": 79,
+          "value": 214,
+          "word": "214"
+        },
+        {
+          "m": 80,
+          "value": 215,
+          "word": "215"
+        },
+        {
+          "m": 81,
+          "value": 216,
+          "word": "216"
+        },
+        {
+          "m": 82,
+          "value": 217,
+          "word": "217"
+        },
+        {
+          "m": 83,
+          "value": 226,
+          "word": "226"
+        },
+        {
+          "m": 84,
+          "value": 227,
+          "word": "227"
+        },
+        {
+          "m": 85,
+          "value": 228,
+          "word": "228"
+        },
+        {
+          "m": 86,
+          "value": 229,
+          "word": "229"
+        },
+        {
+          "m": 87,
+          "value": 230,
+          "word": "23"
+        },
+        {
+          "m": 88,
+          "value": 231,
+          "word": "231"
+        },
+        {
+          "m": 89,
+          "value": 232,
+          "word": "232"
+        },
+        {
+          "m": 90,
+          "value": 233,
+          "word": "233"
+        }
+      ],
+      "prefixes": [
+        "",
+        "6",
+        "1",
+        "19",
+        "2",
+        "21",
+        "22",
+        "23"
+      ]
+    },
+    {
+      "encoding": "CP1141",
+      "repertoire": "printable-controls",
+      "codes": [
+        {
+          "m": 9,
+          "value": 5,
+          "word": "5"
+        },
+        {
+          "m": 10,
+          "value": 37,
+          "word": "37"
+        },
+        {
+          "m": 13,
+          "value": 13,
+          "word": "13"
+        },
+        {
+          "m": 32,
+          "value": 64,
+          "word": "64"
+        },
+        {
+          "m": 33,
+          "value": 79,
+          "word": "79"
+        },
+        {
+          "m": 34,
+          "value": 127,
+          "word": "127"
+        },
+        {
+          "m": 35,
+          "value": 123,
+          "word": "123"
+        },
+        {
+          "m": 36,
+          "value": 91,
+          "word": "91"
+        },
+        {
+          "m": 37,
+          "value": 108,
+          "word": "18"
+        },
+        {
+          "m": 38,
+          "value": 80,
+          "word": "8"
+        },
+        {
+          "m": 39,
+          "value": 125,
+          "word": "125"
+        },
+        {
+          "m": 40,
+          "value": 77,
+          "word": "77"
+        },
+        {
+          "m": 41,
+          "value": 93,
+          "word": "93"
+        },
+        {
+          "m": 42,
+          "value": 92,
+          "word": "92"
+        },
+        {
+          "m": 43,
+          "value": 78,
+          "word": "78"
+        },
+        {
+          "m": 44,
+          "value": 107,
+          "word": "17"
+        },
+        {
+          "m": 45,
+          "value": 96,
+          "word": "96"
+        },
+        {
+          "m": 46,
+          "value": 75,
+          "word": "75"
+        },
+        {
+          "m": 47,
+          "value": 97,
+          "word": "97"
+        },
+        {
+          "m": 48,
+          "value": 240,
+          "word": "24"
+        },
+        {
+          "m": 49,
+          "value": 241,
+          "word": "241"
+        },
+        {
+          "m": 50,
+          "value": 242,
+          "word": "242"
+        },
+        {
+          "m": 51,
+          "value": 243,
+          "word": "243"
+        },
+        {
+          "m": 52,
+          "value": 244,
+          "word": "244"
+        },
+        {
+          "m": 53,
+          "value": 245,
+          "word": "245"
+        },
+        {
+          "m": 54,
+          "value": 246,
+          "word": "246"
+        },
+        {
+          "m": 55,
+          "value": 247,
+          "word": "247"
+        },
+        {
+          "m": 56,
+          "value": 248,
+          "word": "248"
+        },
+        {
+          "m": 57,
+          "value": 249,
+          "word": "249"
+        },
+        {
+          "m": 58,
+          "value": 122,
+          "word": "122"
+        },
+        {
+          "m": 59,
+          "value": 94,
+          "word": "94"
+        },
+        {
+          "m": 60,
+          "value": 76,
+          "word": "76"
+        },
+        {
+          "m": 61,
+          "value": 126,
+          "word": "126"
+        },
+        {
+          "m": 62,
+          "value": 110,
+          "word": "11"
+        },
+        {
+          "m": 63,
+          "value": 111,
+          "word": "111"
+        },
+        {
+          "m": 64,
+          "value": 181,
+          "word": "181"
+        },
+        {
+          "m": 65,
+          "value": 193,
+          "word": "193"
+        },
+        {
+          "m": 66,
+          "value": 194,
+          "word": "194"
+        },
+        {
+          "m": 67,
+          "value": 195,
+          "word": "195"
+        },
+        {
+          "m": 68,
+          "value": 196,
+          "word": "196"
+        },
+        {
+          "m": 69,
+          "value": 197,
+          "word": "197"
+        },
+        {
+          "m": 70,
+          "value": 198,
+          "word": "198"
+        },
+        {
+          "m": 71,
+          "value": 199,
+          "word": "199"
+        },
+        {
+          "m": 72,
+          "value": 200,
+          "word": "2"
+        },
+        {
+          "m": 73,
+          "value": 201,
+          "word": "21"
+        },
+        {
+          "m": 74,
+          "value": 209,
+          "word": "29"
+        },
+        {
+          "m": 75,
+          "value": 210,
+          "word": "21"
+        },
+        {
+          "m": 76,
+          "value": 211,
+          "word": "211"
+        },
+        {
+          "m": 77,
+          "value": 212,
+          "word": "212"
+        },
+        {
+          "m": 78,
+          "value": 213,
+          "word": "213"
+        },
+        {
+          "m": 79,
+          "value": 214,
+          "word": "214"
+        },
+        {
+          "m": 80,
+          "value": 215,
+          "word": "215"
+        },
+        {
+          "m": 81,
+          "value": 216,
+          "word": "216"
+        },
+        {
+          "m": 82,
+          "value": 217,
+          "word": "217"
+        },
+        {
+          "m": 83,
+          "value": 226,
+          "word": "226"
+        },
+        {
+          "m": 84,
+          "value": 227,
+          "word": "227"
+        },
+        {
+          "m": 85,
+          "value": 228,
+          "word": "228"
+        },
+        {
+          "m": 86,
+          "value": 229,
+          "word": "229"
+        },
+        {
+          "m": 87,
+          "value": 230,
+          "word": "23"
+        },
+        {
+          "m": 88,
+          "value": 231,
+          "word": "231"
+        },
+        {
+          "m": 89,
+          "value": 232,
+          "word": "232"
+        },
+        {
+          "m": 90,
+          "value": 233,
+          "word": "233"
+        },
+        {
+          "m": 91,
+          "value": 99,
+          "word": "99"
+        },
+        {
+          "m": 92,
+          "value": 236,
+          "word": "236"
+        },
+        {
+          "m": 93,
+          "value": 252,
+          "word": "252"
+        },
+        {
+          "m": 94,
+          "value": 95,
+          "word": "95"
+        },
+        {
+          "m": 95,
+          "value": 109,
+          "word": "19"
+        },
+        {
+          "m": 96,
+          "value": 121,
+          "word": "121"
+        },
+        {
+          "m": 97,
+          "value": 129,
+          "word": "129"
+        },
+        {
+          "m": 98,
+          "value": 130,
+          "word": "13"
+        },
+        {
+          "m": 99,
+          "value": 131,
+          "word": "131"
+        },
+        {
+          "m": 100,
+          "value": 132,
+          "word": "132"
+        },
+        {
+          "m": 101,
+          "value": 133,
+          "word": "133"
+        },
+        {
+          "m": 102,
+          "value": 134,
+          "word": "134"
+        },
+        {
+          "m": 103,
+          "value": 135,
+          "word": "135"
+        },
+        {
+          "m": 104,
+          "value": 136,
+          "word": "136"
+        },
+        {
+          "m": 105,
+          "value": 137,
+          "word": "137"
+        },
+        {
+          "m": 106,
+          "value": 145,
+          "word": "145"
+        },
+        {
+          "m": 107,
+          "value": 146,
+          "word": "146"
+        },
+        {
+          "m": 108,
+          "value": 147,
+          "word": "147"
+        },
+        {
+          "m": 109,
+          "value": 148,
+          "word": "148"
+        },
+        {
+          "m": 110,
+          "value": 149,
+          "word": "149"
+        },
+        {
+          "m": 111,
+          "value": 150,
+          "word": "15"
+        },
+        {
+          "m": 112,
+          "value": 151,
+          "word": "151"
+        },
+        {
+          "m": 113,
+          "value": 152,
+          "word": "152"
+        },
+        {
+          "m": 114,
+          "value": 153,
+          "word": "153"
+        },
+        {
+          "m": 115,
+          "value": 162,
+          "word": "162"
+        },
+        {
+          "m": 116,
+          "value": 163,
+          "word": "163"
+        },
+        {
+          "m": 117,
+          "value": 164,
+          "word": "164"
+        },
+        {
+          "m": 118,
+          "value": 165,
+          "word": "165"
+        },
+        {
+          "m": 119,
+          "value": 166,
+          "word": "166"
+        },
+        {
+          "m": 120,
+          "value": 167,
+          "word": "167"
+        },
+        {
+          "m": 121,
+          "value": 168,
+          "word": "168"
+        },
+        {
+          "m": 122,
+          "value": 169,
+          "word": "169"
+        },
+        {
+          "m": 123,
+          "value": 67,
+          "word": "67"
+        },
+        {
+          "m": 124,
+          "value": 187,
+          "word": "187"
+        },
+        {
+          "m": 125,
+          "value": 220,
+          "word": "22"
+        },
+        {
+          "m": 126,
+          "value": 89,
+          "word": "89"
+        }
+      ],
+      "prefixes": [
+        "",
+        "3",
+        "1",
+        "6",
+        "7",
+        "12",
+        "9",
+        "2",
+        "24",
+        "11",
+        "18",
+        "19",
+        "21",
+        "22",
+        "23",
+        "25",
+        "13",
+        "14",
+        "15",
+        "16",
+        "8"
+      ]
+    }
+  ],
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "encodingTableSHA256": "91dbd5a1b13c4144967b65abb775b478c92574431149632d774ab99500762179",
+  "sourceSHA256": "ab5b2db6f94c5f6040b52e6c94d76d1f99716ddb6373f973c7adae82cbf7ccd4",
+  "permutationOrder": "Heap; rank0 maps a..i to1..9"
+}

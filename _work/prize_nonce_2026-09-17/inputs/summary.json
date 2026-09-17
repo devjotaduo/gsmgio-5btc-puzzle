@@ -1,0 +1,21 @@
+{
+  "sourceSHA256": "e36de17027c4dea6719a0901cba5d83c6a460c00a9ced7d788c6d06ef401b1fb",
+  "createdAt": "2026-09-17T18:03:39.849Z",
+  "transactions": [
+    {
+      "txid": "88cdb3cdca12b471551b1b26188508a14ca5fd8a415223ffb7c190381c9b9df3",
+      "rawSHA256": "b1653abd30454dc647ddee19ad1b846568ffecc31868eed773167d7308906352",
+      "inputCount": 3
+    },
+    {
+      "txid": "2aa9a4a90be819d5122d70c993280785a0508f163521e7b38cebb4db0b071b13",
+      "rawSHA256": "6865119e0a5de3d81268b535662b4a00f2da07eba948ce9a8ef7464d92df9a04",
+      "inputCount": 3
+    }
+  ],
+  "signatures": 6,
+  "allVerifiedWithOpenSSL": true,
+  "repeatedR": false,
+  "targetPublicKey": "04f4d1bbd91e65e2a019566a17574e97dae908b784b388891848007e4f55d5a4649c73d25fc5ed8fd7227cab0be4e576c0c6404db5aa546286563e4be12bf33559",
+  "scope": "Six legacy P2PKH SIGHASH_ALL signatures spending the public puzzle prize address; no transaction created or broadcast."
+}

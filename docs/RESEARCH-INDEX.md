@@ -21,6 +21,7 @@ Os dados brutos mencionados nos relatórios podem ser locais. Consulte o
 
 ## Dígitos, zeros e codificações
 
+- [Codificações sem zero, sem escolha de palavras da comunidade — 17/09/2026](../_work/zero_free_numerals_2026-09-17/RELATORIO.md).
 - [Brotli e cabeçalhos Zstandard na conversão decimal](../_work/brotli_decimal_2026-09-16/RELATORIO.md).
 - [DBBI como escalar secp256k1 com zeros ocultos](../_work/dbbi_curve_zero_2026-09-16/RELATORIO.md).
 - [SalPhaseIon: listas, chaves decimais e alfabetos de nove símbolos](../_work/decimal_keystream_2026-09-15/RELATORIO.md).
@@ -38,6 +39,8 @@ Os dados brutos mencionados nos relatórios podem ser locais. Consulte o
 
 ## Fontes, formatos e auditorias
 
+- [Assinaturas do prêmio: nonces pequenos, relacionados ou recorrentes — 17/09/2026](../_work/prize_nonce_2026-09-17/RELATORIO.md).
+- [Telegram de 17/09: marcadores primos, matriz anotada e diferenças do coelho](../_work/prime_host_delta_2026-09-17/RELATORIO.md).
 - [DBBI/FAED como dados compactados — 11/09/2026](../_work/compressed_payload_2026-09-11/RELATORIO.md).
 - [DBBI como tabela de distâncias: contradição de paridade](../_work/dbbi_distance_parity_2026-09-16/RELATORIO.md).
 - [DBBI como produtos internos das linhas ou colunas](../_work/dbbi_gram_2026-09-16/RELATORIO.md).
@@ -57,6 +60,8 @@ Os dados brutos mencionados nos relatórios podem ser locais. Consulte o
 - [Primos em faixas convencionais de azul e amarelo](../_work/wavelength_primes_2026-09-16/RELATORIO.md).
 
 ## Matriz, cores e geometria
+
+- [L84 escolhido: teste das consequências de 16/7](../_work/prime_host_l84_2026-09-17/RELATORIO.md).
 
 - [Somas diagonais: inversão aritmética com alfabeto desconhecido](../_work/diagonal_sum_inverse_2026-09-17/RELATORIO.md).
 - [Continuação da receita de X — 11/09/2026](../_work/blue_hex_2026-09-11/RELATORIO.md).

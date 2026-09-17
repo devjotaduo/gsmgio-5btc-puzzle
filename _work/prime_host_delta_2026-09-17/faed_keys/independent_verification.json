@@ -1,0 +1,10 @@
+{
+  "modelsVerified": 6402,
+  "prefixCertificatesVerified": 10088,
+  "fullMaskSpacesCovered": true,
+  "sevenBitSuccessor": "integer carry across each forbidden high-bit byte range",
+  "residualModelsEnumerated": 24,
+  "residualAssignmentsEnumerated": 20484,
+  "newCandidates": 0,
+  "runsSHA256": "6d2eca5eccbe998b50f0779c150d8361e5cca8824aaae1930ea4ceb3ead6656e"
+}

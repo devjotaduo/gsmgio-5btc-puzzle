@@ -1,0 +1,14 @@
+{
+  "lists": 539,
+  "excludedOld": 0,
+  "keys": 1067,
+  "models": 6402,
+  "complete": 6402,
+  "partial": 0,
+  "nodes": 13774,
+  "certificates": 10088,
+  "hits": 0,
+  "passwords": 0,
+  "AESAttempts": 0,
+  "paddings": 0
+}

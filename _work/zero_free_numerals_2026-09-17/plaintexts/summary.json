@@ -1,0 +1,19 @@
+{
+  "models": 192969,
+  "dictionaryCompatibleModels": 113108,
+  "dictionaryCompatiblePaths": "309717866762148758807",
+  "dictionaryBestPathsAuthenticated": 113108,
+  "CP1141Models": 9,
+  "CP1141AllPlaintextPaths": 10356,
+  "keyFormatModels": 0,
+  "keyFormatPartial": [],
+  "materials": 123464,
+  "attempts": 1481568,
+  "padding": 5772,
+  "maxPrintable": 0.5822784810126582,
+  "semanticCandidates": 0,
+  "decisionsSHA256": "250ce858019d381edd0e9b76ac4f4b33163d2aafa0cb171be953943a048faab2",
+  "authenticatedSolution": false,
+  "limit": "Arbitrary ASCII ambiguous paths and non-optimal dictionary paths were not all tested as passwords; key-format completeness is recorded separately.",
+  "elapsedMs": 63132
+}

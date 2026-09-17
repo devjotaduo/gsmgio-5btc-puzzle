@@ -1,5 +1,6 @@
 # Estes arquivos são usados em conferências SHA256: conservar os bytes,
 # inclusive quebras de linha, em qualquer plataforma.
 /solver/*.cjs -text
+/solver/prize_nonce_bsgs/* -text
 /_work/*_2026-09-1*/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 /_work/archive/endgame/*.html -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

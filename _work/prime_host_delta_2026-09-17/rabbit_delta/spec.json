@@ -1,0 +1,74 @@
+{
+  "sourceSHA256": "1cb2056f41197aaea4cb5bafab06cfea68160bdd88fac941e14d7bf2b8d0093d",
+  "changes": [
+    [
+      6,
+      12,
+      0,
+      1
+    ],
+    [
+      6,
+      13,
+      0,
+      1
+    ],
+    [
+      7,
+      12,
+      1,
+      0
+    ],
+    [
+      8,
+      12,
+      0,
+      1
+    ],
+    [
+      9,
+      8,
+      0,
+      1
+    ],
+    [
+      9,
+      9,
+      0,
+      1
+    ],
+    [
+      9,
+      12,
+      1,
+      0
+    ]
+  ],
+  "source": {
+    "messageID": 72118,
+    "date": "2026-09-17",
+    "author": "Boulayo",
+    "url": "https://www.shutterstock.com/image-vector/pixelated-bunny-8-bit-pixel-art-541878964",
+    "assetAuthor": "paramouse",
+    "catalogDate": "2016-12-23",
+    "referencePhotoSHA256": "5483649c1a9fd5a67f85d6ff963c38077aa7e2225c56f3dd16f6dd8ba0228b87",
+    "registration": {
+      "puzzleSubcellOrigin": [
+        30,
+        32
+      ],
+      "puzzlePitch": 15,
+      "referenceBoxXYWH": [
+        64,
+        69,
+        132,
+        122
+      ],
+      "rows": 13,
+      "cols": 14
+    },
+    "referenceSampleChecks": 27
+  },
+  "scope": "Seven visible differing subcells. XOR and signed difference, whole registered glyph or minimum bounding rectangle. Row/column sums, coordinates, indices, row/column bit reads, reversal, complement, integer/hex/bytes. Raw and SHA256-hex passwords, three original blobs, EVP-SHA256 and EVP-MD5.",
+  "limitations": "Reference is a Telegram JPEG, not a pristine vector/PNG. Only 144 cells with a known white puzzle background were compared; 38 hidden cells are unknown. No claim that these changes encode a message or establish FEFEFE origin."
+}

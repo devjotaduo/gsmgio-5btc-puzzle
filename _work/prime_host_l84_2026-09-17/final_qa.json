@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "branch": "L84/A",
+  "attempts": 162468,
+  "independentAESMatch": true,
+  "decimalModels": 40320,
+  "independentDecimalMatch": true,
+  "privateKeyScalars": 640486,
+  "privateKeyHits": 0,
+  "authenticatedSolution": false,
+  "sourceHashesMatch": true,
+  "localReportLinks": 5,
+  "sourceSHA256": "2ca5bec700420eb4a873d3fb29958ec2d2d02c995ef11dcfa157f8feaaee37ea",
+  "reportSHA256": "6e5450ee3b9aa3fc1c2b55104646d660b34040c86ec164bcb07ac31792f3235e"
+}

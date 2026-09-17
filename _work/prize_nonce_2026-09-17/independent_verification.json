@@ -1,0 +1,28 @@
+{
+  "points": {
+    "implementation": "coincurve/libsecp256k1",
+    "signaturesReconstructed": 6,
+    "targetPointsReconstructed": 36,
+    "allTargetPointsMatchGo": true,
+    "fullBSGS40Repeated": false,
+    "reason": "Curve equations independently reconstructed; bounded-search code uses known-key and signed boundary controls.",
+    "inputSHA256": "e7cd81b001b5b345a111f35cec90c3aee24ed2274fe4e59e0c1f4211714208c8"
+  },
+  "recurrence": {
+    "implementation": "Python modular arithmetic; curve comparisons with coincurve/libsecp256k1",
+    "casesVerified": 2304,
+    "ordersAndSignsComplete": true,
+    "quadraticCoefficientsVerifiedByEvaluation": true,
+    "allFiniteFieldRootsVerifiedAndComplete": true,
+    "distinctRootCandidates": 100,
+    "keyHits": [],
+    "plantedRecurrenceMultiplierVerified": "81985529216486895",
+    "casesSHA256": "191b791fc01aafe72e3c4864198325d61ae4cd42c2db1e9af07361898f9af934"
+  },
+  "ECDSAIndependentVerification": {
+    "implementation": "Node/OpenSSL and coincurve/libsecp256k1",
+    "signatures": 6,
+    "allVerified": true
+  },
+  "searchLimit": "The40-bit BSGS traversal itself was not repeated in a second library. All36 target points were independently verified; BSGS passed signed boundary and planted recovery controls."
+}

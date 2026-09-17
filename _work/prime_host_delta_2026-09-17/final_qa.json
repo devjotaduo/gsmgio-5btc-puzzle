@@ -1,0 +1,59 @@
+{
+  "createdAt": "2026-09-17T17:14:45.965Z",
+  "runs": [
+    {
+      "dir": "run1",
+      "script": "solver/prime_host_delta.cjs",
+      "sourceHashVerified": true,
+      "summarySHA256": "ea8bd9e0c481e0a68f0b85d3b77bf58fe57b44b5ab7df475839177e5e043b2dc",
+      "independentVerificationSHA256": "8582078e17b7bfe91416014b8a714a940c87a41b98ad5f4e8f4e6f9007ab7c60"
+    },
+    {
+      "dir": "faed_keys",
+      "script": "solver/prime_host_faed_keys.cjs",
+      "sourceHashVerified": true,
+      "summarySHA256": "e18a4511b54455e5d16686aa553bab475fcd1c23bd549231d4c163c40e469ffb",
+      "independentVerificationSHA256": "782974587f0f1c428922dce4b41c83477861ea441b95b77c8172853b645dac59"
+    },
+    {
+      "dir": "rabbit_delta",
+      "script": "solver/rabbit_reference_delta.cjs",
+      "sourceHashVerified": true,
+      "summarySHA256": "a22729e5a24d21dc5ef346de52abe890aacf036c325ab09c7c79e87ed4077b81",
+      "independentVerificationSHA256": "6795ef70f43967849dc7e3e21ee8558cdda4c7d6a05aebf28facf8b30e4ccfab"
+    }
+  ],
+  "reportLinks": [
+    {
+      "path": "run1/spec.json",
+      "exists": true
+    },
+    {
+      "path": "run1/summary.json",
+      "exists": true
+    },
+    {
+      "path": "run1/independent_verification.json",
+      "exists": true
+    },
+    {
+      "path": "faed_keys/summary.json",
+      "exists": true
+    },
+    {
+      "path": "faed_keys/independent_verification.json",
+      "exists": true
+    },
+    {
+      "path": "rabbit_delta/summary.json",
+      "exists": true
+    },
+    {
+      "path": "rabbit_delta/independent_verification.json",
+      "exists": true
+    }
+  ],
+  "AESTotal": 207444,
+  "authenticatedSolution": false,
+  "backgroundProcessesLeft": 0
+}

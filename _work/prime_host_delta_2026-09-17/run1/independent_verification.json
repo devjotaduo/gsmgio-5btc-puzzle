@@ -1,0 +1,11 @@
+{
+  "implementation": "PyCryptodome CBC+unpad; hashlib EVP expansion; coincurve public-point check",
+  "AESDecisionsVerified": 204036,
+  "paddingBodiesVerified": 808,
+  "decisionsSHA256": "8b14517166882991d3010ea18ded175af87326959cdd41000c5987c008b652b7",
+  "phase32Control": true,
+  "distinctValidScalarsChecked": 786312,
+  "keyHits": [],
+  "keyScope": "SHA256 of both password forms; raw 32-byte and hex64 materials; every 32-byte window of padded outputs in both byte orders, SHA256 of outputs, embedded hex64 and Base58Check WIF. Match target public point or its negation.",
+  "noSolution": true
+}

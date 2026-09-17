@@ -1,0 +1,9 @@
+{
+  "parseRoundtrips": 2,
+  "independentParseCounts": {
+    "83": 1,
+    "84": 1
+  },
+  "syntheticParses": 9,
+  "phase32": true
+}

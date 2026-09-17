@@ -1,0 +1,65 @@
+[
+  {
+    "key": [
+      2,
+      3,
+      5,
+      7
+    ],
+    "mode": "subtract",
+    "recovered": true
+  },
+  {
+    "key": [
+      2,
+      3,
+      5,
+      7
+    ],
+    "mode": "add",
+    "recovered": true
+  },
+  {
+    "key": [
+      2,
+      3,
+      5,
+      7
+    ],
+    "mode": "beaufort",
+    "recovered": true
+  },
+  {
+    "key": [
+      1,
+      0,
+      1,
+      6,
+      7
+    ],
+    "mode": "subtract",
+    "recovered": true
+  },
+  {
+    "key": [
+      1,
+      0,
+      1,
+      6,
+      7
+    ],
+    "mode": "add",
+    "recovered": true
+  },
+  {
+    "key": [
+      1,
+      0,
+      1,
+      6,
+      7
+    ],
+    "mode": "beaufort",
+    "recovered": true
+  }
+]

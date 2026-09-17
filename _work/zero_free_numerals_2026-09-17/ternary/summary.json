@@ -1,0 +1,14 @@
+{
+  "complete": true,
+  "cases": 1451520,
+  "permutations": 362880,
+  "compatible": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "candidates": 0,
+  "flagsSHA256": "8365553a32e1234ae7517eebee482cb4b4104431aafc0ff2db5d67e013987c97",
+  "authenticatedSolution": false
+}

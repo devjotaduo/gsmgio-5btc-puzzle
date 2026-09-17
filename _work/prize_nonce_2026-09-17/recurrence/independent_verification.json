@@ -1,0 +1,11 @@
+{
+  "implementation": "Python modular arithmetic; curve comparisons with coincurve/libsecp256k1",
+  "casesVerified": 2304,
+  "ordersAndSignsComplete": true,
+  "quadraticCoefficientsVerifiedByEvaluation": true,
+  "allFiniteFieldRootsVerifiedAndComplete": true,
+  "distinctRootCandidates": 100,
+  "keyHits": [],
+  "plantedRecurrenceMultiplierVerified": "81985529216486895",
+  "casesSHA256": "191b791fc01aafe72e3c4864198325d61ae4cd42c2db1e9af07361898f9af934"
+}

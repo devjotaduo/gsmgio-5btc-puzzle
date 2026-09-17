@@ -1,0 +1,21 @@
+{
+  "createdAt": "2026-09-17T18:18:23.756Z",
+  "newNodeScriptsSyntaxChecked": 6,
+  "sourceSHA256": {
+    "solver/zero_free_numerals.cjs": "ab5b2db6f94c5f6040b52e6c94d76d1f99716ddb6373f973c7adae82cbf7ccd4",
+    "solver/zero_free_plaintexts.cjs": "919facb97e738ef7edc3e7c44be5944a3d255bac27031529d59eb4be5629a999",
+    "solver/ternary_byte_packing.cjs": "6b0a0e2ed90f00f61d067b7512d2cb4f572d0324de15c1b131ce3649d5165ea1",
+    "solver/verify_zero_free_numerals.cjs": "172a12a278d99c431c3f8ecb5809e2f3a9fbcdd9f38257d90434da5414b49446",
+    "solver/prize_signature_inputs.cjs": "e36de17027c4dea6719a0901cba5d83c6a460c00a9ced7d788c6d06ef401b1fb",
+    "solver/prize_nonce_recurrence.cjs": "7073a23fa1f3409f66b5d0ba9baf9e4123f5601c214ddf3c5521b32dc445ce6b",
+    "solver/prize_nonce_bsgs/main.go": "7ebaae441bef696014dba4167e823c07a2e2423b0c72225a11ea8b2fc0cef652"
+  },
+  "publicTransactionFixtureReproducesAllSignatureBytes": true,
+  "goVetPassed": true,
+  "knownAESControlPassed": true,
+  "numeralDecisionsIndependentlyVerified": 11612160,
+  "AESDecisionsIndependentlyVerified": 1481568,
+  "keyScalarsCompared": 5485056,
+  "solutionFound": false,
+  "runningExperimentProcesses": 0
+}

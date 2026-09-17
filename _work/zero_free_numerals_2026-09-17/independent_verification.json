@@ -1,0 +1,64 @@
+{
+  "numerals": {
+    "createdAt": "2026-09-17T18:09:00.077Z",
+    "sourceSHA256": "172a12a278d99c431c3f8ecb5809e2f3a9fbcdd9f38257d90434da5414b49446",
+    "permutations": 362880,
+    "independentBoundaryDPDecisions": 8709120,
+    "independentChunkedRadixDecisions": 1451520,
+    "independentFiveSymbolTernaryDecisions": 1451520,
+    "everyDecisionMatched": true,
+    "counts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      78480,
+      114480,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      9,
+      0,
+      0
+    ],
+    "elapsedMs": 12503,
+    "limit": "Verifies feasibility and arithmetic, not an exhaustive search of ambiguous plaintext paths or arbitrary binary payloads."
+  },
+  "crypto": {
+    "createdAt": "2026-09-17T18:11:59Z",
+    "implementation": "PyCryptodome AES and coincurve/libsecp256k1 public-key comparison",
+    "AESDecisions": 1481568,
+    "decisionsSHA256": "250ce858019d381edd0e9b76ac4f4b33163d2aafa0cb171be953943a048faab2",
+    "padding": 5772,
+    "allNodeAESDecisionsMatch": true,
+    "ECDSAPrizeSignaturesIndependentlyVerified": 6,
+    "distinctPrivateScalarsTested": 5485056,
+    "keyHits": [],
+    "keyScope": "SHA256(material), SHA256(ASCII hex SHA256(material)), direct whole material if32 bytes; every32-byte window in each padding output in both byte orders, plus its two hashes. Not every ambiguous ASCII plaintext path.",
+    "elapsedSeconds": 285.61
+  },
+  "mixedHex": {
+    "models": 192969,
+    "format": "64 hex characters with arbitrarily mixed upper/lower case",
+    "grammarCompatibleBeforeLength": 0,
+    "keyFormatModels": 0,
+    "hits": [],
+    "complete": true
+  },
+  "knownAESControl": {
+    "plaintextBytes": 2422,
+    "plaintextSHA256": "b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34"
+  }
+}

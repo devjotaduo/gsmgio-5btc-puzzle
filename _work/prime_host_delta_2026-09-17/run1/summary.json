@@ -1,0 +1,73 @@
+{
+  "parses": [
+    {
+      "logicalLength": 83,
+      "residualLength": 60,
+      "blue": 15,
+      "yellow": 8
+    },
+    {
+      "logicalLength": 84,
+      "residualLength": 61,
+      "blue": 16,
+      "yellow": 7
+    }
+  ],
+  "witnesses": [
+    {
+      "length": 83,
+      "omitted": [
+        22,
+        24
+      ],
+      "distinctBytes": 23
+    },
+    {
+      "length": 84,
+      "omitted": [
+        22,
+        25
+      ],
+      "distinctBytes": 23
+    },
+    {
+      "length": 83,
+      "omitted": [
+        23,
+        24
+      ],
+      "distinctBytes": 22
+    },
+    {
+      "length": 84,
+      "omitted": [
+        23,
+        25
+      ],
+      "distinctBytes": 22
+    },
+    {
+      "length": 83,
+      "omitted": [
+        24,
+        25
+      ],
+      "distinctBytes": 22
+    }
+  ],
+  "materials": 17003,
+  "passwordCases": 34006,
+  "attempts": 204036,
+  "padding": 808,
+  "maxPrintable": 0.569620253164557,
+  "semanticCandidates": 0,
+  "integerModels": 24,
+  "integerModelsComplete": 24,
+  "integerCandidates": 0,
+  "fixedGrammarNull": {
+    "randomSamples": 20000,
+    "randomAccepted": 0
+  },
+  "decisionsSHA256": "8b14517166882991d3010ea18ded175af87326959cdd41000c5987c008b652b7",
+  "status": "No authenticated solution implied. See independent_verification.json for cross-library checks and private-key validation."
+}

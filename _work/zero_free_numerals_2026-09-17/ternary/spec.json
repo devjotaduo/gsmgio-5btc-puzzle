@@ -1,0 +1,28 @@
+{
+  "hypothesis": "Unknown bijection a..i to coordinate pairs00..22. Concatenate each pair or the complete row-coordinate stream followed by the column-coordinate stream. Read consecutive five-trit groups as complete bytes0..242; require every byte<128.",
+  "fields": [
+    "FAED entire570 symbols, original and reversed"
+  ],
+  "cases": [
+    {
+      "reverse": false,
+      "layout": "adjacent"
+    },
+    {
+      "reverse": false,
+      "layout": "coordinate-halves"
+    },
+    {
+      "reverse": true,
+      "layout": "adjacent"
+    },
+    {
+      "reverse": true,
+      "layout": "coordinate-halves"
+    }
+  ],
+  "permutationOrder": "Heap; rank0 maps a..i to1..9 then subtracts1",
+  "limits": "No guessed keyword or decoded BTCSEED prefix; no skipped symbols, leftover trits or further cipher. DBBI is outside this exact layout because its 182 trits are not divisible by5. No binary-password or UTF8 exclusion claimed.",
+  "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+  "sourceSHA256": "6b0a0e2ed90f00f61d067b7512d2cb4f572d0324de15c1b131ce3649d5165ea1"
+}

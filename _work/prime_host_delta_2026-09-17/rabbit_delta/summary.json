@@ -1,0 +1,12 @@
+{
+  "visibleCellsCompared": 144,
+  "hiddenCellsUnknown": 38,
+  "visibleDifferences": 7,
+  "materials": 284,
+  "passwordCases": 568,
+  "attempts": 3408,
+  "padding": 12,
+  "maxPrintable": 0.4936708860759494,
+  "semanticCandidates": 0,
+  "decisionsSHA256": "aff57883b9507344cd235ce0b69fb1f419a67b1d596f9251a499a553249f5017"
+}

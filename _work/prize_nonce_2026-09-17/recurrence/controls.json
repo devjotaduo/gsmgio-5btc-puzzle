@@ -1,0 +1,43 @@
+{
+  "squareRootControls": 100,
+  "nonresidueRejected": true,
+  "quadraticRootsVerified": true,
+  "plantedUnknownMultiplierKeyRecovered": true,
+  "distinctBatchIncrementsSupported": true,
+  "positivePrivateKey": "75bcd15",
+  "positiveTriples": [
+    [
+      [
+        "3bc147cc5d5f9df17d0d3316d08257931893e1d241c94d951221dc6aa008883",
+        "416158532472d02f5109283b70e0f0a9515203c0d7df87471be9b5544bb56174"
+      ],
+      [
+        "6242d6406f1e2d3ba2d14692164ee4182b0e5d2de655024fc0f7d81c39370205",
+        "92a20c8437283c8a94e68816faf911573329551463a7bb36a2a7626672ad2dd"
+      ],
+      [
+        "8914f65f7ad20c5cbb8da50d31e9b38edfc6e4da3210fdad87f55bbcc6b2c029",
+        "e177f015522707f4ef29e09c3afad20f199600b88133407a34d8f14e2bd22b0c"
+      ]
+    ],
+    [
+      [
+        "88fc36934a778302d8976ca6b6b7600d1bf2fac16f3ad0361ad8f559a9a3e6a6",
+        "489b7bb7b2d9f38fa678b66d3a57eaaad35b2ca334a7242ea14e7d20de9f2a83"
+      ],
+      [
+        "e4cac2288d5881c0cdbcfc1031753e95eee57da094923be0fd052faf76b8ead3",
+        "2248213ec3f16c7f3f72e1690054fa864811b9f41146fdad71af43c82035a20e"
+      ],
+      [
+        "434c5493915c9f9f3095931e3495238c550f4f4a14d2df6f84ad7a3b433fb001",
+        "c383a9298687fe0736c1b99a056b63f84ea42e0ecc4bf39e73422bb974f30180"
+      ]
+    ]
+  ],
+  "positivePolynomial": [
+    "524df1a5dc92391311db0494d3cae6602918804bfbb8805921e494d80ee58890",
+    "9c39e78cbab1e85beae9690d8ae66c8a50ef18c45ecb11d21b055b2d0c86c9f7",
+    "c5d5f12d63bed0d12e70e6c912659c553ff04d1fcb9b3675b8d804e5b20ad4b1"
+  ]
+}

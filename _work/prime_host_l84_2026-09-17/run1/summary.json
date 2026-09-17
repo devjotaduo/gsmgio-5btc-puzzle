@@ -1,0 +1,20 @@
+{
+  "conditionalBranch": "L84/A",
+  "generatedMaterials": 13539,
+  "excludedPriorMaterials": 0,
+  "materials": 13539,
+  "passwordCases": 27078,
+  "attempts": 162468,
+  "padding": 609,
+  "maxPrintable": 0.5189873417721519,
+  "semanticCandidates": 0,
+  "integer": {
+    "models": 40320,
+    "nodes": 123556,
+    "complete": 40320,
+    "hits": 0
+  },
+  "decisionsSHA256": "b2838b333a14b47708a129025bc25cfda7a27133e9dd665ee98b6cba783551fa",
+  "authenticatedSolution": false,
+  "qualification": "Read independent_verification.json for cross-library AES and exact private-key checks. No finding is authenticated by padding."
+}

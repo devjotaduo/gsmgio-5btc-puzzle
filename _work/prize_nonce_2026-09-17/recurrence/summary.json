@@ -1,0 +1,9 @@
+{
+  "cases": 2304,
+  "withRoots": 1200,
+  "distinctRootCandidates": 100,
+  "identicallyZeroCases": [],
+  "hits": [],
+  "authenticatedSolution": false,
+  "elapsedMs": 752
+}

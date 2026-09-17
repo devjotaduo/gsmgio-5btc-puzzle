@@ -1,0 +1,7 @@
+{
+  "hypothesis": "Within each three-input transaction, nonce generation is k_next=A*k+B modulo secp256k1 order. A is shared between batches; B and initial seed may differ. Every internal order and every s-sign normalization is tested.",
+  "derivation": "For each signature k=(z+r*d)/s. Equal consecutive-difference ratios across the two batches give a quadratic in d. Solve all roots modulo the prime group order, then compare d*G with the original prize public key.",
+  "inputSHA256": "e7cd81b001b5b345a111f35cec90c3aee24ed2274fe4e59e0c1f4211714208c8",
+  "sourceSHA256": "7073a23fa1f3409f66b5d0ba9baf9e4123f5601c214ddf3c5521b32dc445ce6b",
+  "exclusions": "Does not cover different multipliers between batches, skipped generator outputs, nonlinear generators, or a recurrence modulo another integer."
+}

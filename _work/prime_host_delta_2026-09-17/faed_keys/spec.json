@@ -1,0 +1,14 @@
+{
+  "sourceMaterialsSHA256": "f24b70b01d7fb360e0026b2dcb99e93b1306558a1bca24e8feb6f63d9559c5ec",
+  "sourceSHA256": "45e9663959285857e3ec1d26e284447b7f74ef5e80d36cf88e14cf80e5a68ba1",
+  "hypothesis": "Prime-host logical matrices and picture-coordinate witnesses yield a decimal key for FAED, following the already tested decimal-keystream model but using newly derived keys.",
+  "scope": "All JSON list materials from the stated source. Literal decimal digits or each element modulo 10, original/reversed lists, no extra rotations. FAED forward/reversed, P=C-K, C+K, or K-C modulo10, all g choices 0/7, whole decimal integer to minimal big-endian seven-bit bytes. No other symbol renaming or chaining.",
+  "exclusion": "Exact keys from historical baseLists()/keysFromLists() omitted; this does not audit every historical corpus.",
+  "limits": {
+    "maxNodes": 200000,
+    "maxMs": 1000
+  },
+  "lists": 539,
+  "excludedOld": 0,
+  "distinctKeys": 1067
+}

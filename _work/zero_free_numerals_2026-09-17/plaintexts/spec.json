@@ -1,0 +1,33 @@
+{
+  "hypothesis": "Follow every compatible zero-omitted numeral model using a pre-existing non-Telegram English dictionary and exact Bitcoin key text grammars.",
+  "languageScope": "Every maximal alphabetic run must be a Norvig count_1w word, at most32 letters, singleton A/I only. Digits/punctuation/controls separate words. Count every compatible path; authenticate only the optimum per model (most letters, fewest nonletters, greatest unigram score). This is not exhaustion of ambiguous plaintexts.",
+  "formatSpecs": [
+    {
+      "name": "hex64-lower",
+      "alphabet": "0123456789abcdef",
+      "length": 64
+    },
+    {
+      "name": "hex64-upper",
+      "alphabet": "0123456789ABCDEF",
+      "length": 64
+    },
+    {
+      "name": "WIF-uncompressed",
+      "alphabet": "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz",
+      "length": 51,
+      "first": "5"
+    },
+    {
+      "name": "WIF-compressed",
+      "alphabet": "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz",
+      "length": 52,
+      "first": "KL"
+    }
+  ],
+  "CP1141Scope": "Enumerate every plaintext of all nine compatible CP1141 models.",
+  "formatLimit": 10000,
+  "priorAcceptedSHA256": "59659a593a8fca75a62a0c9f94f5a5f4d5f8aa88825a0fdddd56045a751e0e22",
+  "corpusSHA256": "51df159fd3de12b20e403c108f526e96dbd723d9cabdd5f17955cdc16059e690",
+  "sourceSHA256": "919facb97e738ef7edc3e7c44be5944a3d255bac27031529d59eb4be5629a999"
+}
