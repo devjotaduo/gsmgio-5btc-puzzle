@@ -76,3 +76,9 @@ _work/decentraland/dep_*
 # Material histórico/importado; os relatórios próprios apontam suas fontes.
 /_work/public_recheck_2026-09-16/unverified_*.md
 /_work/session_2026-09-11/github_*_body.md
+
+# Triagem preliminar das diagonais fica local; preservar a execução final.
+/_work/diagonal_sum_constraints_2026-09-17/**
+/_work/diagonal_sum_inverse_2026-09-17/*.json
+!/_work/diagonal_sum_inverse_2026-09-17/final_qa.json
+!/_work/diagonal_sum_inverse_2026-09-17/final/cases.jsonl

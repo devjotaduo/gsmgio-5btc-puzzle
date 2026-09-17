@@ -1,6 +1,6 @@
 # Índice dos experimentos
 
-Relatórios de pesquisa selecionados em 16/09/2026. **A senha final não foi
+Relatórios de pesquisa selecionados até 17/09/2026. **A senha final não foi
 validada.** Cada relatório define a cobertura do seu negativo e eventuais
 buscas parciais; a presença nesta lista não significa que uma família inteira
 esteja excluída. Os títulos foram preservados dos próprios documentos.
@@ -58,6 +58,7 @@ Os dados brutos mencionados nos relatórios podem ser locais. Consulte o
 
 ## Matriz, cores e geometria
 
+- [Somas diagonais: inversão aritmética com alfabeto desconhecido](../_work/diagonal_sum_inverse_2026-09-17/RELATORIO.md).
 - [Continuação da receita de X — 11/09/2026](../_work/blue_hex_2026-09-11/RELATORIO.md).
 - [Chaves das cores com transporte decimal](../_work/color_carry_2026-09-16/RELATORIO.md).
 - [Fatores primos das cores como pesos da matriz — 16/09/2026](../_work/color_factor_sums_2026-09-16/RELATORIO.md).

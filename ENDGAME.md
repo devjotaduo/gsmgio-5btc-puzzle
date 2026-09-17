@@ -4508,6 +4508,27 @@ implementação. Nenhuma saída coerente ou chave do prêmio foi obtida;
 
 [Fontes, família finita, controles e limites](_work/title_position_masks_2026-09-16/RELATORIO.md).
 
+## Sessão 2026-09-17 — somas diagonais com alfabeto desconhecido
+
+**Nenhuma senha final.** A leitura de DBBI/FAED como concatenação decimal
+de somas diagonais foi testada diretamente, sem usar palavras extraídas
+por receitas da comunidade como alvo. Foram incluídas as duas direções
+diagonais, com e sem continuação na borda oposta, pesos azul/amarelo
+inteiros `>=2`, fundos binários 0/1, uma bijeção desconhecida dos dígitos
+não nulos e até duas letras que também podem representar zero.
+
+Todos os 128 modelos terminaram. As restrições de comprimento e das
+diagonais constantes deixam 542 partições, mas nenhuma admite a aritmética
+das somas. Outra implementação reconstruiu a geometria e as partições:
+42 pares de resíduos sobrevivem módulo 10 e nenhum módulo 100.
+Ambos os programas recuperaram os 48 controles plantados.
+
+A conclusão cobre os pesos sem teto arbitrário, portanto também os primos,
+mas somente as ordens e representações declaradas. Não foi gerada senha
+AES; o significado de `matrixsumlist` permanece desconhecido.
+
+[Modelo, demonstração, controles e reprodução](_work/diagonal_sum_inverse_2026-09-17/RELATORIO.md).
+
 ## Sessão 2026-09-17 — fronteira comunitária refutada, nove famílias novas e correção do oráculo
 
 **Nenhuma senha final; prêmio intacto** (1,25635374 BTC, 126 tx). Dados atacados conferidos

@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "models": 128,
+  "capped": 0,
+  "partitions": 542,
+  "digitNodes": 584,
+  "hits": [],
+  "controls": {
+    "planted": 48,
+    "capControl": true,
+    "emptyAliasControl": true
+  },
+  "casesSHA256": "8b7bd42019fe28db4f09ff34d098eb2735d3dfe7fd2a56f045e9209cd5bbf49d",
+  "finalPasswordFound": false
+}

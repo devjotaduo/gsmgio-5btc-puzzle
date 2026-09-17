@@ -1,0 +1,87 @@
+{
+  "date": "2026-09-17",
+  "complete": true,
+  "source": {
+    "inputSHA256": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+    "htmlSHA256": "b13cbc5c2935dc3e9ff8bf71681f2ef61317fefdce04159129877244a92a3947",
+    "normalizedLength": 1075,
+    "dbbiRange": [
+      0,
+      91
+    ],
+    "matrixsumlistRange": [
+      91,
+      195
+    ],
+    "faedRange": [
+      195,
+      765
+    ],
+    "enterBetweenBase64Lines": true
+  },
+  "models": 128,
+  "partitions": 542,
+  "mod10Survivors": 42,
+  "mod100Survivors": 0,
+  "controls": {
+    "planted": 48,
+    "exactDigitBindings": true,
+    "nodeCapThrows": true,
+    "aliasAndBijectionChecks": true
+  },
+  "syntaxChecked": 3,
+  "localLinksChecked": 79,
+  "artifacts": [
+    {
+      "path": "solver/diagonal_sum_constraints.cjs",
+      "bytes": 9805,
+      "sha256": "79191c522342bd6589d6a0aeb66e94007d4e9f898d6ff23661a8e0e738dad0a9"
+    },
+    {
+      "path": "solver/diagonal_sum_inverse.cjs",
+      "bytes": 10093,
+      "sha256": "fefd4696e6f75193593638cbcd87947cbd210d2ca4cab6f84b247ce805014de3"
+    },
+    {
+      "path": "solver/verify_diagonal_sum_inverse.cjs",
+      "bytes": 12523,
+      "sha256": "a7a4cf803a65fb8717887d5b5aa8f7a461319698f359b0458ea0b951bb3bd82d"
+    },
+    {
+      "path": "solver/color_sum_symbolic.cjs",
+      "bytes": 9047,
+      "sha256": "b0ee1a9cb7609e3ebf8d6a464365295b188a6d9ab69dbe96942cc2cd317e1d52"
+    },
+    {
+      "path": "_work/diagonal_sum_inverse_2026-09-17/RELATORIO.md",
+      "bytes": 5347,
+      "sha256": "22b1be255e119c991647fa48e72fc321c908f9d4a2d8dfbdc60bbb3ede86a5b0"
+    },
+    {
+      "path": "_work/diagonal_sum_inverse_2026-09-17/final/spec.json",
+      "bytes": 22286,
+      "sha256": "dc4895ccbe99fcaf629dfa75b406973a15dfdc0778d9530e2630e82802ffa2a0"
+    },
+    {
+      "path": "_work/diagonal_sum_inverse_2026-09-17/final/controls.json",
+      "bytes": 71,
+      "sha256": "34ddf53b0afcb8dea776f14b9fe150c3e73a3621401c95d171d25445af72c3b6"
+    },
+    {
+      "path": "_work/diagonal_sum_inverse_2026-09-17/final/summary.json",
+      "bytes": 321,
+      "sha256": "e7b114d1b1ee78ecfac4e1a6786d2206b2249245b9c12c2459830cec0a87dd0f"
+    },
+    {
+      "path": "_work/diagonal_sum_inverse_2026-09-17/final/cases.jsonl",
+      "bytes": 22235,
+      "sha256": "8b7bd42019fe28db4f09ff34d098eb2735d3dfe7fd2a56f045e9209cd5bbf49d"
+    },
+    {
+      "path": "_work/diagonal_sum_inverse_2026-09-17/final/independent_verification.json",
+      "bytes": 37764,
+      "sha256": "bde9a087b5d5891d18ad7a6aaa69ecdb182fdcdb7d93a668de66aa555d89a9c0"
+    }
+  ],
+  "finalPasswordFound": false
+}
