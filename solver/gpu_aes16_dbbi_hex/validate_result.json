@@ -1,0 +1,34 @@
+{
+  "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "controle_A_ok": true,
+  "controle_A": "256 índices aleatórios: key/iv/P0/P3/P4 idênticos (pycryptodome) — OK",
+  "controle_B_normal_ok": true,
+  "controle_B_normal": "idx plantado=13397738068841 em [13397733068841,13397743068841); kernel devolveu 1 sobreviventes, contém o índice=True, Python reabriu a mensagem=True, overflow=False",
+  "controle_B_nested_ok": true,
+  "controle_B_nested": "idx aninhado=4636055103336; P0 começa com 'Salted__'; kernel devolveu 1 sobreviventes, contém o índice=True, overflow=False",
+  "throughput_Mps": 51.32,
+  "eta_horas_16fat": 113.25,
+  "bench": {
+    "2^24": {
+      "count": 16777216,
+      "s": 0.3269,
+      "Mps": 51.32
+    },
+    "2^25": {
+      "count": 33554432,
+      "s": 0.6719,
+      "Mps": 49.94
+    },
+    "2^26": {
+      "count": 67108864,
+      "s": 1.3921,
+      "Mps": 48.21
+    }
+  },
+  "throughput_Mps_burst_2^24": 51.32,
+  "throughput_Mps_sustentado_2^27x16": 44.0,
+  "eta_horas_16fat_sustentado": 132.1,
+  "lancado": false,
+  "pid": null,
+  "decisao": "throughput SUSTENTADO ~44 M/s (regime real de varredura de dias) < 50 M/s; burst por lote 48-51. Gate nao vencido de forma limpa -> NAO lancar (conforme instrucao). Scanner pronto: python launch.py"
+}

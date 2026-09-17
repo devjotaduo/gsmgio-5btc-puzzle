@@ -112,6 +112,40 @@ históricos de 2026-09-02 (`tail32_history.jsonl`) receberam a mesma varredura r
 - Subproduto reutilizável: corpus de 71.409 plaintexts únicos com padding válido
   (`rodada2_logs/rerun_ext__*`); qualquer oráculo futuro pode ser testado sobre ele em ~90 s.
 
+## 4b. `dbbi` como chave privada hex sob bijeção: as 16! bijeções esgotadas (0 hits)
+
+O sinal estrutural mais forte da página é que `dbbi` (91 símbolos), tokenizado com `b` e `g`
+como prefixos, dá **64 tokens de 16 tipos** (p = 0,05 % sob nulo que preserva contagens): a forma
+exata de uma chave de 32 bytes em hex. Até aqui só 7 mapas "naturais" token→dígito tinham sido
+testados (2026-09-08). Esta rodada esgotou **todas as 16! = 20.922.789.888.000 bijeções**, nas duas
+leituras que o criador autoriza — "Regular Bitcoin Private key" e "brute forcing might be required" —
+usando a linearidade da chave nos tokens:
+
+`d = Σ_t π(t)·W_t (mod n)`, com `W_t = Σ 16^(63−j)` sobre as posições `j` do token `t`, logo
+`pub = Σ_t π(t)·(W_t·G)`. Meet-in-the-middle no grupo da curva: lado A = 7 tokens (57.657.600
+somas, tabela ordenada por x-low64 + bitmap de 2³² bits, 14 s), lado B = 9 tokens (4.151.347.200
+folhas × 2 sinais, uma adição jacobiana por folha, inversão em lote de Montgomery, 20 CPUs,
+~15 min por ordem). Cada colisão de 64 bits é reconstruída em π, convertida em `d` e verificada
+por `d·G == pub`. Código: `solver/mitm16_dbbi_hex/` (Go + dcrd/secp256k1; `make_config.py` gera os
+pesos e o controle).
+
+| Execução | Alvo | Candidatos de 64 bits | Verificados | Tempo |
+|---|---|---|---|---|
+| **Controle** (bijeção aleatória plantada, seed 163) | pub da chave plantada | **1** | **1 = a chave plantada** `b06a811c…773c`, π idêntica | 915 s |
+| `fwd` (dígito 0 = 1.º token) | pub do prêmio e −pub | 0 | 0 | 971 s |
+| `rev` (dígitos invertidos) | idem | 0 | 0 | 895 s |
+| `byterev` (bytes invertidos) | idem | 0 | 0 | 923 s |
+| `byterev_swap` (bytes invertidos, nibbles trocados) | idem | 0 | 0 | 929 s |
+
+Cobertura: 4 ordens × 2 sinais × 16! = **1,67 × 10¹⁴ chaves lógicas**, exaustiva (não amostrada).
+Falsas colisões esperadas por acaso ≈ 0,013 por ordem; observadas 0. **Veredito:** sob a
+tokenização `b/g`, `dbbi` **não** é uma chave privada em hex sob nenhuma bijeção, em nenhuma
+dessas ordens. A leitura irmã — `dbbi` como **senha** sha256-hex do SMALL (a página diz `shabef`
+= sha256 logo antes do blob) — não tem estrutura linear e exige força bruta AES nas mesmas 16!
+bijeções: o kernel OpenCL foi construído e validado ponta a ponta (`solver/gpu_aes16_dbbi_hex/`,
+controles A e B exatos, blob aninhado incluído), mas rende 44 M/s sustentados nesta RTX 5060 →
+**132 h por variante**; não foi disparado (decisão do usuário; `python launch.py` retoma por checkpoint).
+
 ## 5. O que ficou declaradamente de fora
 
 - Candidatos das rodadas 1 (~17 M senhas, não logadas) × montagem do CT com o `blockscan`
@@ -120,6 +154,9 @@ históricos de 2026-09-02 (`tail32_history.jsonl`) receberam a mesma varredura r
 - Braço AES da família "seleção de 256 bits" (o braço privkey, que é o certo para o alvo, está fechado).
 - Concatenação ordenada de 7 sobre os 16 tokens b/g de `dbbi` (P(16,7) = 57,7 M ordens; 0,4 % coberto).
 - Encriptação aninhada com `openssl -nosalt` (sem header não há oráculo; intestável por construção).
+- `dbbi` (tokens b/g) como **senha** sha256-hex do SMALL sob as 16! bijeções: kernel pronto e
+  validado, 132 h de GPU por variante (fwd/minúsculo/SMALL); reverso, maiúsculo, TAIL32 e COSMIC
+  são só parametrização. Não disparado.
 
 ## 6. Estado do endgame após esta sessão
 

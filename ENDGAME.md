@@ -4583,3 +4583,15 @@ blockscan (~10 min, prior baixo); braço AES da seleção de 256 bits; P(16,7) d
 Nove famílias negativas consecutivas com nulo casado e verificação adversarial independente: a regra
 de parada está satisfeita com folga. Só insumo novo de senha move a fronteira.
 [Relatório completo, tabelas e artefatos](_work/frontier_2026-09-17/RELATORIO.md).
+
+**Adendo (mesma sessão) — `dbbi` como chave privada hex: as 16! bijeções esgotadas, 0 hits.**
+Os 64 tokens `b/g` de `dbbi` (16 tipos) foram tratados como os 64 dígitos hex de uma "Regular
+Bitcoin Private key" sob bijeção desconhecida. Como `d = Σ π(t)·W_t (mod n)`, um meet-in-the-middle
+na curva (A = 7 tokens, 57,7 M pontos; B = 9 tokens, 4,15 bi folhas × 2 sinais; Go + dcrd/secp256k1,
+20 CPUs, ~15 min por ordem) cobre as 20,9 trilhões de bijeções de forma **exaustiva**. Controle:
+bijeção aleatória plantada recuperada exatamente (1 candidato = a chave plantada). Real: 4 ordens de
+leitura (direta, invertida, bytes invertidos, bytes invertidos com nibbles trocados) × {d, n−d} =
+**1,67 × 10¹⁴ chaves lógicas, 0 candidatos de 64 bits, 0 verificados**. Código em
+`solver/mitm16_dbbi_hex/`. A leitura irmã (`dbbi` como **senha** sha256-hex do SMALL) exige força
+bruta AES nas mesmas 16!: kernel OpenCL validado em `solver/gpu_aes16_dbbi_hex/`, 44 M/s → 132 h por
+variante, **não disparado**.
