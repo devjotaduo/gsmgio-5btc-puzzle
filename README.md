@@ -672,9 +672,18 @@ mzRYrGnz9eBtepkJXDRjD6yvhNfQMCSkm6l9zMWxKvFbv5g2ae2SLrEt/x3MP2/G
 
 ## Salphaseion
 
-> **Estado verificado em 2026-09-11:** ainda não há solução final validada neste
+> **Estado verificado em 2026-09-17:** ainda não há solução final validada neste
 > repositório. SMALL, COSMIC e o blob final da fase 3.2 continuam sem decifração
-> demonstrada. A cadeia histórica abaixo não constitui solução. O teste novo de
+> demonstrada; o prêmio segue intacto. As alegações mais recentes da comunidade
+> (issues #108 "dois typos no blob", #111 FirstHalf/BetterHalf, #110/#99 extração
+> de endereços) foram testadas com oráculo duro e caem: a página **já** contém os
+> caracteres que a #108 chama de correção, e o `gros` de 2432 B da #111 não é
+> reproduzível. A hipótese de o ciphertext estar publicado com os blocos fora de
+> ordem foi refutada com cobertura completa (1,22 bilhão de testes lógicos sobre o
+> corpus histórico de 1,27 M formas de senha); os negativos históricos são de senha.
+> [Relatório](_work/frontier_2026-09-17/RELATORIO.md) e `ENDGAME.md`, sessão 2026-09-17.
+>
+> **Estado verificado em 2026-09-11:** a cadeia histórica abaixo não constitui solução. O teste novo de
 > todas as escolhas `g→0/7` por restrições ASCII também foi negativo nas 16
 > leituras examinadas; reprodução e limites em [`ENDGAME.md`](ENDGAME.md#sessão-2026-09-11--teste-exaustivo-condicional-de-g07).
 >

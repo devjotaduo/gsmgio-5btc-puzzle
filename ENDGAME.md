@@ -4507,3 +4507,58 @@ implementação. Nenhuma saída coerente ou chave do prêmio foi obtida;
 6.554 escalares também não corresponderam ao ponto público ou à sua negação.
 
 [Fontes, família finita, controles e limites](_work/title_position_masks_2026-09-16/RELATORIO.md).
+
+## Sessão 2026-09-17 — fronteira comunitária refutada, nove famílias novas e correção do oráculo
+
+**Nenhuma senha final; prêmio intacto** (1,25635374 BTC, 126 tx). Dados atacados conferidos
+byte a byte contra a página ao vivo (`Last-Modified` 2026-08-15, inalterado).
+
+**Alegações da comunidade de jul–set/2026 (issues #99/#108/#110/#111) caem.** A #108 ("dois typos
+no blob SMALL") está refutada com precisão de caractere: a página **já** tem `J` na posição 18 e `s`
+na 51 e **já** tem o salt `3ab585348552415d` que a issue chama de corrigido; o "decrypt" é a Chain1
+conhecida (só EVP-MD5, pad `0x01`, ASCII 0,38). O `gros` de 2432 B da #111 não é reproduzível
+(2432 é o tamanho do **ciphertext** da fase 3.2; nenhum blob gera plaintext desse tamanho), logo
+FirstHalf/BetterHalf/`Reduction` não têm ancoragem. #110/#99 operam sobre o cosmic da cadeia
+não autenticada. Script: `solver/verify_community_claims_2026_09.py`.
+
+**Rodada 1 (6 agentes + crítico, ~17,1 M AES + 6 M privkey, 0 hits):** TAIL32 por tabuleiro
+(a frase "sad board… as wide as the first one seen" é autodescritiva do tabuleiro 3.2.2); seleção
+de 256 bits do `faed` (fechada no braço privkey); cor como seletor sobre `dbbi` em primos (24 = 24);
+inversão yin-yang/"Infrared"; gramática "our first hint is your last command"; "seven intertwined"
+(concatenação, XOR, encadeado e entrelaçamento). Crítico calibrou o ruído com 720 k senhas
+aleatórias: z de padding entre −1,2 e +2,1 e `printable` ≤ 0,60 são o esperado por acaso; todos os
+melhores resultados ficaram dentro disso.
+
+**Rodada 2 (3 agentes + crítico, 0 hits):**
+- **Montagem do CT × corpus histórico — REFUTADA com cobertura completa.** 120 permutações dos 5
+  blocos × salt cruzado SMALL↔TAIL32 × 2 KDF × 1.272.149 formas do corpus regenerado (466.310
+  senhas-base, idêntico a 2026-09-02) = 1,22 bilhão de testes lógicos (203,5 M checagens de padding;
+  12,75 M montagens decifradas; 339,5 M janelas de privkey). Controle recupera a ordem exata na fase 2
+  embaralhada. O crítico foi além com um oráculo **por bloco**, agnóstico a IV/ordem/padding:
+  10.177.192 pares chave×CT, **0** com ≥ 2 blocos limpos (esperado 7e-5). Os ~700 k negativos
+  históricos são negativos de **senha**; o `enter` entre as linhas base64 não é marca de reordenação.
+- Números das cores (479/484 e derivados) como largura/rotação/decimação e a célula 163 como
+  ponteiro (símbolos e bits), mais 15 variantes da URL com os bits azuis zerados: negativo, dentro do
+  nulo de 100 réplicas.
+- Re-execução das 6 famílias com oráculo estendido: os 66.945 plaintexts com padding válido
+  (contagens idênticas à rodada 1) + os 9.967 históricos de 2026-09-02 varridos por `Salted__`/
+  `U2FsdGVk` em qualquer offset, base64 puro, privkey em 33 M janelas, hex64/WIF e
+  `sha256(plaintext)`: **0** em tudo. "SIXTEEN ENCRYPTIONS" como encriptação aninhada com header
+  está fechado.
+
+**Fato novo (único):** `#FEFEFE` é uma **célula inteira** (25×25 px) em (7,4) = índice espiral 163 =
+byte 20, bit 3 da URL — a imagem tem 25 marcas, não 24; enfraquece o pareamento "24 primos < 91".
+Como ponteiro já está fechado.
+
+**Kit corrigido (`gsmg_common.py`):** `nested_blob()` em `semantic()` (0 falsos positivos em 200 k),
+`try_password_all()` varre privkey em todo padding válido e devolve o plaintext em `hex`,
+`checkerboard_encode()` (inverso validado contra os 149 dígitos da 3.2.2). Scripts decisivos em
+`solver/ct_montage_attack.py`, `ct_montage_corpus_collect.py`, `ct_blockscan_oracle.py`.
+
+**Ficou de fora, declarado:** candidatos da rodada 1 (~17 M, não logados) × montagem com o
+blockscan (~10 min, prior baixo); braço AES da seleção de 256 bits; P(16,7) dos tokens b/g
+(0,4 % coberto); encriptação aninhada com `-nosalt` (intestável por construção).
+
+Nove famílias negativas consecutivas com nulo casado e verificação adversarial independente: a regra
+de parada está satisfeita com folga. Só insumo novo de senha move a fronteira.
+[Relatório completo, tabelas e artefatos](_work/frontier_2026-09-17/RELATORIO.md).

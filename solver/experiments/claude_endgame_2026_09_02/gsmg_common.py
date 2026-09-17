@@ -153,11 +153,22 @@ def aes_rawkey(key32, blob="SMALL", iv=None):
     salt, ct = BLOBS[blob]
     p = unpad(AES.new(key32, AES.MODE_CBC, iv or b"\x00" * 16).decrypt(ct))
     return p
+_B64_RE = re.compile(rb"^[A-Za-z0-9+/]+={0,2}\s*$")
+def nested_blob(p):
+    """Oráculo de ENCRIPTAÇÃO ANINHADA ("SIXTEEN ENCRYPTIONS"): plaintext que é ele mesmo um blob
+    openssl (`Salted__` cru ou em armadura base64 de 'U2FsdGVk'). P(falso positivo) ≈ 2^-64 — grátis.
+    Adicionado em 2026-09-17: 67 mil plaintexts com padding válido nunca tinham sido checados nisto."""
+    if p is None or len(p) < 32: return False
+    if p[:8] == b"Salted__": return True
+    if p[:8] == b"U2FsdGVk" and _B64_RE.match(p): return True
+    return False
 def semantic(p, thr=0.85):
-    """Triagem de plaintext AES: True se parece mensagem real (ascii alto, ou WIF/hex64 plausível).
+    """Triagem de plaintext AES: True se parece mensagem real (ascii alto, WIF/hex64 plausível, ou
+    um blob openssl aninhado — ver nested_blob).
     ATENÇÃO: só use em saídas de AES/decifração binária. Para decoders que emitem SÓ bytes 32..126 por
     construção (a1z26, pares+32, etc.) o teste de printable é tautológico — use semantic_text."""
     if p is None or not p: return False
+    if nested_blob(p): return True
     if printable(p) >= thr: return True
     t = p.decode("latin-1")
     return bool(wif_candidates(t) or hex64_candidates(t))
@@ -171,14 +182,20 @@ def semantic_text(t, min_score=-4.5, min_words=2):
     if hex64_candidates(t) and re.search(r"[^0-9a-fA-F\s]", t): return True
     if english_score(t) > min_score: return True
     return len(word_hits(t, 6)) >= min_words
-def try_password_all(pw, blobs=("SMALL", "COSMIC", "TAIL32")):
-    """Roda aes_try em todos os blobs; devolve hits SEMANTICOS + paddings (soft)."""
+def try_password_all(pw, blobs=("SMALL", "COSMIC", "TAIL32"), kdf="both"):
+    """Roda aes_try em todos os blobs; devolve hits SEMANTICOS + paddings (soft).
+    Desde 2026-09-17: todo plaintext com padding válido também é varrido por privkey embutida
+    (fast_priv_scan) e por blob aninhado (nested_blob), e o plaintext completo vai no registro
+    (`hex`) para permitir varredura retroativa — antes os plaintexts eram descartados."""
     hard, soft = [], []
     for b in blobs:
-        for kdf, p in aes_try(pw, b):
-            (hard if semantic(p) else soft).append({"blob": b, "kdf": kdf, "len": len(p),
-                                                    "printable": round(printable(p), 3),
-                                                    "head": p[:48].decode("latin-1")})
+        for k, p in aes_try(pw, b, kdf):
+            rec = {"blob": b, "kdf": k, "len": len(p), "printable": round(printable(p), 3),
+                   "head": p[:48].decode("latin-1"), "hex": p.hex()}
+            priv = fast_priv_scan(p, f"{b}/{k}") if len(p) >= 32 else []
+            if priv: rec["privkey"] = priv
+            if nested_blob(p): rec["nested"] = True
+            (hard if (semantic(p) or priv) else soft).append(rec)
     return hard, soft
 
 # ------------------------------------------------------------------ privkey
@@ -280,6 +297,18 @@ def checkerboard_decode(digs, alphabet, escapes, universe="123456789"):
         else:
             out.append(table.get((d,), "?")); i += 1
     return "".join(out)
+def checkerboard_encode(text, alphabet, escapes, universe="123456789"):
+    """Inverso exato de checkerboard_decode (mesmo layout de tabela). Devolve a string de dígitos.
+    Adicionado em 2026-09-17 (validado: reproduz os 149 dígitos da fase 3.2.2 a partir do plaintext).
+    Permite re-codificar qualquer texto em qualquer tabuleiro para gerar material numérico de senha."""
+    top = [int(d) for d in universe if int(d) not in escapes]
+    need = len(top) + 2 * len(universe)
+    alphabet = (alphabet + "." * need)[:need]
+    enc = {}; k = 0
+    for d in top: enc.setdefault(alphabet[k], (d,)); k += 1
+    for e in escapes:
+        for d in universe: enc.setdefault(alphabet[k], (e, int(d))); k += 1
+    return "".join("".join(map(str, enc[c])) for c in text if c in enc)
 
 # ------------------------------------------------------------------ scorer de ingles
 _SC = None
@@ -322,6 +351,11 @@ if __name__ == "__main__":
     digs = [int(c) for c in "15165943121972409169171213758951813141543131412428154191312181219433121171617137149110916631213131281491109166131412199114371612126021664313711154112"]
     pt = checkerboard_decode(digs, alpha322, escapes=(1, 4), universe="0123456789")
     assert pt.startswith("INCASEYOUMANAGETOCRACKTHIS"), pt[:40]
+    # controle inverso: o encoder reproduz os 149 dígitos exatos da fase 3.2.2
+    assert checkerboard_encode(pt, alpha322, (1, 4), "0123456789") == "".join(map(str, digs))
+    # oráculo de blob aninhado: pega Salted__ cru e em base64, e não dispara em ruído
+    assert nested_blob(b"Salted__" + b"\x00" * 24) and nested_blob(b"U2FsdGVkX18" + b"A" * 40)
+    assert not nested_blob(b"\x01" * 64)
     # controle de KDF: fase 2 abre com sha256hex('causality') via EVP-SHA256 (e NAO via MD5)
     raw = base64.b64decode(PHASE2_B64); s2, c2 = raw[8:16], raw[16:]
     pw = shahex("causality").encode(); res = {}

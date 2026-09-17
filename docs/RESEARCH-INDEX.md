@@ -45,6 +45,7 @@ Os dados brutos mencionados nos relatórios podem ser locais. Consulte o
 - [Frequências inteiras primas como pesos das cores](../_work/frequency_primes_2026-09-16/RELATORIO.md).
 - [Contêiner do áudio Decentraland — 2026-09-16](../_work/mp3_container_2026-09-16/RELATORIO.md).
 - [Conferência pública — 16/09/2026](../_work/public_recheck_2026-09-16/RELATORIO.md).
+- [Fronteira comunitária refutada (#108/#111), montagem do CT × corpus e oráculo estendido — 17/09/2026](../_work/frontier_2026-09-17/RELATORIO.md).
 - [`lastwordsbeforearchichoice`: fronteiras verificadas](../_work/recipe_audit_2026-09-11/FRONTEIRA_TEXTUAL.md).
 - [Operações da receita de X e suas fontes](../_work/recipe_audit_2026-09-11/OPERACOES_E_FONTES.md).
 - [Execução do plano: dependências de X e três consequências](../_work/recipe_audit_2026-09-11/RELATORIO.md).
