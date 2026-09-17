@@ -4595,3 +4595,22 @@ leitura (direta, invertida, bytes invertidos, bytes invertidos com nibbles troca
 `solver/mitm16_dbbi_hex/`. A leitura irmã (`dbbi` como **senha** sha256-hex do SMALL) exige força
 bruta AES nas mesmas 16!: kernel OpenCL validado em `solver/gpu_aes16_dbbi_hex/`, 44 M/s → 132 h por
 variante, **não disparado**.
+
+**Adendo (mesma sessão) — rodada de premissas, 0 hits em ~148 M testes.** Cinco famílias que
+questionam premissas em vez de decodificar: a cifra (16 cifras/modos do `openssl enc` × corpus de
+1,27 M formas = 122 M testes, controle por cifra com o CLI real); a senha como ARQUIVO
+(`-kfile`/`-pass file:` = 1.ª linha; 89 artefatos públicos, chunks PNG, digests dos bytes,
+128 k linhas de texto); "Infrared" como alfabeto de espectro (a–i ↔ IR…UV, 11,9 M testes);
+senhas Unicode (☯, CJK, emojis; 4,5 M AES); forense de bytes dos plaintexts autênticos (nada além
+de CRLF e do segmento EBCDIC, que é bijeção exata cp273). Achado metodológico: o plaintext real da
+fase 3.2 (printable 0,589) era descartado pelo oráculo; `ebcdic_sig()` entrou em `G.semantic` e
+431 k plaintexts foram re-varridos (0). Inspeção visual do PNG/QR/HTML: nada oculto.
+[Tabela completa](_work/frontier_2026-09-17/RELATORIO.md#4c-rodada-de-premissas).
+
+**Adendo — lead do export de 17/09 (atlas comunitário), reproduzido:** `dbbi` com `b`/`be` nas
+posições lógicas primas segmenta-se de exatamente 2 formas (L83/L84) e 0/20.000 embaralhamentos;
+L84 tem 16 `b` + 7 `be` = 23 marcadores (os números do Arquiteto), cujos tipos casam com as cores
+dos eventos da matriz omitindo 2 eventos (= `yellowblueprimes`). Resíduo L84 (61 símbolos) sob
+testes rápidos (bases 9/10, zeros, keystream `matrixsumlist`, grades vs somas da matriz, coluna = letra
+do rótulo): negativo. Campanha sobre o resíduo em curso; ver relatório §4d.
+

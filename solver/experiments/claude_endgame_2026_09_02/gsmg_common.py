@@ -162,14 +162,22 @@ def nested_blob(p):
     if p[:8] == b"Salted__": return True
     if p[:8] == b"U2FsdGVk" and _B64_RE.match(p): return True
     return False
+_EBCDIC_AZ = {bytes([ord(c)]).decode("cp273").encode("latin-1")[0] for c in "abcdefghijklmnopqrstuvwxyz"}
+def ebcdic_sig(p):
+    """Assinatura de um plaintext 'estilo fase 3.2': fração dos bytes >= 0x80 que caem na imagem
+    cp273 de a–z (17 valores). O plaintext REAL da fase 3.2 tem printable 0,589 e era descartado
+    pelo oráculo histórico; sua assinatura é ~1,0 e o máximo em ruído calibrado é 0,46 (2026-09-17)."""
+    hi = [x for x in p if x >= 0x80]
+    return (sum(x in _EBCDIC_AZ for x in hi) / len(hi)) if len(hi) >= 8 else 0.0
 def semantic(p, thr=0.85):
-    """Triagem de plaintext AES: True se parece mensagem real (ascii alto, WIF/hex64 plausível, ou
-    um blob openssl aninhado — ver nested_blob).
+    """Triagem de plaintext AES: True se parece mensagem real (ascii alto, WIF/hex64 plausível,
+    um blob openssl aninhado — ver nested_blob — ou um segmento EBCDIC cp273 como o da fase 3.2).
     ATENÇÃO: só use em saídas de AES/decifração binária. Para decoders que emitem SÓ bytes 32..126 por
     construção (a1z26, pares+32, etc.) o teste de printable é tautológico — use semantic_text."""
     if p is None or not p: return False
     if nested_blob(p): return True
     if printable(p) >= thr: return True
+    if ebcdic_sig(p) >= 0.75: return True
     t = p.decode("latin-1")
     return bool(wif_candidates(t) or hex64_candidates(t))
 def semantic_text(t, min_score=-4.5, min_words=2):

@@ -146,6 +146,61 @@ bijeções: o kernel OpenCL foi construído e validado ponta a ponta (`solver/gp
 controles A e B exatos, blob aninhado incluído), mas rende 44 M/s sustentados nesta RTX 5060 →
 **132 h por variante**; não foi disparado (decisão do usuário; `python launch.py` retoma por checkpoint).
 
+## 4c. Rodada de premissas: cifra, `-pass file:`, espectro, Unicode, forense de bytes (0 hits)
+
+A pedido do usuário ("sem seguir a comunidade, tente caminhos diferentes"), cinco agentes
+questionaram premissas que nenhuma campanha havia tocado, em vez de decodificar `dbbi`/`faed`.
+Resultado bruto em `rodada3_resultado_bruto.json`; scripts em `rodada3_scripts/`; logs em
+`rodada3_logs/`. O crítico reproduziu cada cadeia com o kit e com o `openssl` 3.5.7 real.
+
+| Premissa atacada | Cobertura | Resultado |
+|---|---|---|
+| **A cifra é aes-256-cbc** (o `Salted__` só prova `-pass`) | corpus histórico de 1.272.149 formas × 3 blobs × 16 cifras/modos (aes-128/192/256-cbc, ecb, cfb, ofb, ctr, chacha20, bf, des-ede3, cast5, rc2, camellia, seed, idea, sm4) × 2 KDF = **122.126.304 testes**; controle por cifra com o CLI real (32/32) | 0 hits; 359.520 paddings vs 359.194 esperados; máx |z| 2,95 no envelope do nulo (2,99); fluxo: printable máx 0,675 vs 0,65 do nulo |
+| **A senha é texto digitado** (`-kfile`/`-pass file:` usa a 1.ª linha de um ARQUIVO) | 89 arquivos públicos (site, arquivo, Wayback, Decentraland), 138 chunks PNG e frames ID3, 934 materiais, 7 leituras de "1.ª linha" validadas contra o `openssl` real, digests dos bytes; mais 128.345 linhas de 57 arquivos de texto → **127.842 formas, 767.052 decifrações, 64.653 privkeys** | 0 hits; paddings no nulo (z < 1,6). Todo PNG dá `\x89PNG`; a fonte TTF é recusada (1.ª linha começa com NUL) |
+| **"Infrared" é tema, não operação** (a–i ↔ IR, R, O, Y, G, B, I, V, UV; valores em nm/THz; `len(faed)=570` = amarelo em nm) | 13 tabelas nomeadas + 1.152 combinações, 4 ordens, IR/UV zerados ou não, listas/somas/z-method → **11.879.120 testes**, nulo de 100 embaralhamentos | 0 hits; 39.310 paddings vs 39.311 esperados; tudo dentro de ±1,4σ |
+| **A senha é ASCII** (☯, trigramas, 陰陽/阴阳/太極/음양, taijitu, emojis do criador, UTF-8/UTF-16, NFC/NFD, combinações com os tokens) | agente morreu a 3,6 %; o crítico completou: **223 bases, 754.446 senhas únicas, 4.526.676 AES, 266.108 privkeys** | 0 hits; z +0,55; printable máx 0,595 |
+| **Os plaintexts autênticos escondem algo nos bytes** (fases 2, 3, 3.2; HTMLs) | todo byte fora de ASCII, whitespace/Bacon, trailing, BOM/zero-width, estrutura de linhas, o segmento EBCDIC cru, typos do Arquiteto como senha (630 bases × 6 formas) → **8.537.880 testes** | 0 anomalias exploráveis: só CRLF e o segmento EBCDIC; o segmento é bijeção exata cp273 de a–z; o `enter` do SalPhaseIon está inline numa única linha de 2.149 B |
+
+**Achado metodológico real (forense):** o plaintext autêntico da fase 3.2 tem `printable` 0,589
+por causa do segmento EBCDIC e **era descartado pelo oráculo histórico como ruído**. O kit ganhou
+`ebcdic_sig()` (fração dos bytes ≥ 0x80 na imagem cp273 de a–z; real ≈ 1,0, máximo em ruído 0,46)
+dentro de `semantic()`. O crítico re-varreu **431.164 plaintexts** com padding válido desta rodada
+com essa assinatura: 0.
+
+**Inspeção visual (orquestrador):** QR do rodapé = URL do endereço no blockchain.com; faixa
+vermelha uniforme (os 15 pixels brancos são a última coluna da imagem); alfa uniforme; matriz com
+exatamente 5 cores; coelho = pixel-art simples; capa endossada = yin-yang de campos estelares com
+uma estrela branca e uma amarela. HTML da página final: título, dois `<h1>`, dois `<textarea>`,
+nada mais.
+
+Conclusão desta rodada: a cadeia "senha-texto + `openssl enc`" está esgotada nas três dimensões
+(senha, cifra, KDF) para todo o insumo público. Ficaram de fora, com prior baixa: `aria-256-cbc`
+(só via ctypes em libcrypto), o produto cifra × KDF fora de MD5/SHA256 nas 15 cifras novas, rc4 e
+des simples, capturas Wayback de imagens (CDX fora do ar).
+
+## 4d. Lead novo do export de 17/09: `dbbi` segmentado por marcadores nos primos
+
+O usuário forneceu ao agente paralelo um export do Telegram até 17/09 (1.209 mensagens, nenhuma do
+criador). Nele, o atlas comunitário (Doober, 15/09) traz uma regra que **reproduzi e verifiquei**:
+numerando as posições lógicas de `dbbi` a partir de 1, em posição **prima** consome-se `b` ou `be`
+do texto físico, nas demais um símbolo, e exige-se consumo integral dos 91 símbolos. Há exatamente
+**duas** segmentações (L83 e L84, que diferem só no `e` final) e **0 em 20.000 embaralhamentos**
+preservando contagens. Na L84: 23 primos, **16 `b` + 7 `be`**, os números do Arquiteto
+("twenty-three ciphers, sixteen encryptions and or seven intertwined passwords"). Os 23 tipos
+(b=0, be=1 → `00001000110000100110010`) coincidem posição a posição com as cores dos 25 eventos da
+matriz em ordem espiral (`BBBBYBBBYYBBBBYBBYYBWYYBY`, #FEFEFE contado como azul) omitindo os eventos
+22 e 25: é o passo `yellowblueprimes` do roadmap. Resíduo L84 (61):
+`difhccgihaeeihggegebgehhehhfafdhffcdbfcccgfeggecdcifffgigeeae`.
+
+Testes rápidos do orquestrador sobre o resíduo, todos negativos: base 10 (a=1) e base 9 (a=0) →
+bytes, reversos; cada letra isolada como zero; keystream `matrixsumlist` (linhas, colunas, ambas,
+101; add/sub; mod 9/10) → bytes/decimal; resíduo cru/sha256 como senha; todas as grades exatas do
+resíduo e dos 84 tokens (marcadores = 0/2/5/25) contra as somas da matriz (nenhuma igualdade; o
+resíduo soma 337, a matriz 101); "coluna j = letra j do rótulo" em 7×13/13×7 e 15×38/38×15 (nenhum
+grupo idêntico para letras repetidas; coincidências mod 9 no nível do nulo). A campanha sobre o
+resíduo (decoders clássicos no resíduo, a regra aplicada a `faed`, `matrixsumlist` estrutural,
+marcadores/omissões) está registrada no adendo seguinte.
+
 ## 5. O que ficou declaradamente de fora
 
 - Candidatos das rodadas 1 (~17 M senhas, não logadas) × montagem do CT com o `blockscan`
