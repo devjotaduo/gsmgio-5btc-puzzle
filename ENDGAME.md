@@ -4612,5 +4612,14 @@ posições lógicas primas segmenta-se de exatamente 2 formas (L83/L84) e 0/20.0
 L84 tem 16 `b` + 7 `be` = 23 marcadores (os números do Arquiteto), cujos tipos casam com as cores
 dos eventos da matriz omitindo 2 eventos (= `yellowblueprimes`). Resíduo L84 (61 símbolos) sob
 testes rápidos (bases 9/10, zeros, keystream `matrixsumlist`, grades vs somas da matriz, coluna = letra
-do rótulo): negativo. Campanha sobre o resíduo em curso; ver relatório §4d.
-
+do rótulo): negativo. **Campanha sobre o resíduo (4 agentes + crítico, ~600 k testes, 0 hits):**
+decoders clássicos no resíduo (checkerboard/Polybius/Bifid/a1z26/bases/índices, 23 k configurações
+com nulo pareado); a regra aplicada a `faed` (4.248 variantes: nenhuma segmentação); `matrixsumlist`
+estrutural (48,5 k senhas, 81 k privkeys); marcadores/omissões/16-7-23 (209 k); gramática SHA256
+das fases 2–3.2 sobre o material novo (60.005 concatenações). Crítico: especificidade 1/2.925
+regras, bits↔cores p 6×10⁻⁴ (mas L83 e L84 casam: as cores não desambiguam), 4.384 paddings
+re-varridos, resíduo como chave sobre `faed` 0, **resíduo i.i.d.** (χ² p 0,11). Segundo achado
+metodológico: `solver/scorer.py` aprendeu os quadgramas de `dbbi` (DIFH −5,13); leituras ricas em
+a–i pontuam z +6,9 com ele e z 1,5 com o scorer limpo (`solver/primos_2026_09_17/clean_scorer.py`).
+Veredito: fato estrutural intencional e robusto; como caminho para a senha, esgotado sem saber
+qual segmentação é a pretendida e o que "zeroed out" zera. Ver relatório §4d.

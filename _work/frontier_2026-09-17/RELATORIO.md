@@ -199,7 +199,39 @@ resíduo e dos 84 tokens (marcadores = 0/2/5/25) contra as somas da matriz (nenh
 resíduo soma 337, a matriz 101); "coluna j = letra j do rótulo" em 7×13/13×7 e 15×38/38×15 (nenhum
 grupo idêntico para letras repetidas; coincidências mod 9 no nível do nulo). A campanha sobre o
 resíduo (decoders clássicos no resíduo, a regra aplicada a `faed`, `matrixsumlist` estrutural,
-marcadores/omissões) está registrada no adendo seguinte.
+marcadores/omissões) está registrada a seguir.
+
+**Campanha sobre o resíduo (4 agentes + crítico; scripts em `solver/primos_2026_09_17/`,
+bruto em `rodada4_resultado_bruto.json`):**
+
+| Família | Cobertura | Resultado |
+|---|---|---|
+| Decoders clássicos no resíduo/sequências lógicas | checkerboard (todos os escapes 1–9 e 0–9, 27 alfabetos), Polybius/Bifid 3×3, a1z26/a0z25, bases 9/10→26/27/36/58, índices em 3 textos; 23.114 configurações × 200 embaralhamentos pareados; top-20 por família como senha/privkey | 0; contagens de p<0,005 = esperado por acaso |
+| A regra aplicada a `faed` | 4.248 variantes (81 pares, sufixos livres, triplas; primos 1/0-based, do fim, compostos, físicos) + 459 sobre pares + 810 após keystream | **nenhuma** segmentação; maior substring segmentável 18/570 |
+| `matrixsumlist` estrutural | resíduo nas células 0/1/coloridas/primas da matriz → somas; somas de todas as grades; somas da matriz como ordem de leitura; 60/61 como parâmetros → 48.508 senhas, 291 k AES, 81 k privkeys | 0; nenhuma lista iguala as somas da matriz |
+| Marcadores e omissões | eventos 22/25 como parâmetro/senha; 23 bits como seleção/XOR/permutação/número; 16/7/23 como partições, XOR-de-sha256, sha256 iterado; primos `be` como índices → 209 k testes | 0; 834 paddings, printable ≤ 0,532 |
+| Gramática das fases 2–3.2 (orquestrador, sugerida pelo crítico) | concatenações ordenadas de 1–3 tokens (roadmap, resíduos, bits, somas, URL) × separadores × caixa → **60.005 senhas-base**, 180 k formas × 3 blobs × 2 KDF, 120 k privkeys | 0 |
+
+**Crítico (reproduziu tudo):** especificidade da segmentação = **1 família em 2.925 regras**
+(letra × sufixo × 11 esquemas de posição × contador lógico/físico), 0/5.000 no nulo da regra e
+0/1.000 no nulo familiar; "First or zero" com base 0 **mata** a segmentação. Bits ↔ cores da
+matriz: só a ordem espiral casa, **p familiar 6,3 × 10⁻⁴**, mas ambas as segmentações (L83/L84)
+casam, então as cores **não desambiguam** e não trazem informação além da própria segmentação.
+Re-varredura dos 4.384 paddings distintos da rodada com o oráculo completo (inclusive cadeia
+aninhada: cada plaintext como senha): 0. Resíduo como chave periódica sobre `faed` (287.496
+segmentações tentadas): 0. **O resíduo de 61 símbolos é indistinguível de i.i.d.** (χ² p 0,11,
+autocorrelação p 0,20, bigramas p 0,67), o que mata decodificação textual por construção.
+
+**Achado metodológico (segundo desta sessão):** `solver/scorer.py` está contaminado pelo corpus
+do Telegram e aprendeu os quadgramas do próprio `dbbi` (DIFH = −5,13, GEHH = −4,49 vs
+THEQ = −4,06); a leitura identidade do resíduo pontua z = +6,9 com ele e z = 1,48 (p 0,07) com o
+scorer limpo (`clean_scorer.py`). Todo `english_score` histórico sobre saídas ricas em a–i está
+inflado e deve ser relido com o scorer limpo.
+
+**Veredito do lead:** como fato estrutural, vivo e intencional (o autor inseriu `b`/`be` nos
+primos). Como caminho para a senha, esgotado com o insumo atual: falta saber qual segmentação
+(L83/L84) é a pretendida e o que "zeroed out" zera; sem isso todo decoder novo sobre um resíduo
+i.i.d. é gasto sem prior.
 
 ## 5. O que ficou declaradamente de fora
 
