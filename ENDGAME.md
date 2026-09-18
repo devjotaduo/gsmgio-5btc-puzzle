@@ -201,8 +201,10 @@ Exports do Telegram até 2026-09-17: nenhuma fala do criador depois de 2026-09-0
       bases, famílias `.cjs`, `prime_host`, `select256`): 0.
     - **Plaintexts de 17/09 deixados em `%TEMP%`**, que nenhuma re-varredura tinha lido (152.952
       conteúdos, 150 M janelas raw32 BE+LE): 0.
-    - **Continuam abertos:** modos de fluxo e raw32 sem unpad do corpus de 1,27 M em SMALL/TAIL32
-      (~499 M checagens). Os outros quatro abertos declarados aqui foram fechados na §3.15.
+    - **Continua aberto:** só os modos de fluxo. O raw32 sem unpad do corpus de 1,27 M em SMALL/TAIL32
+      foi fechado (498.682.408 janelas BE/LE contra os dois alvos, 0; z de padding −0,87), e os outros
+      quatro abertos declarados aqui foram fechados na §3.15.
+      [Relatório](_work/lacunas_2026-09-18/RELATORIO_A1_A2.md).
 
     [Relatório, frentes e revisões](_work/enxame_2026-09-18/RELATORIO.md).
 15. **Lacunas de 18/09: as quatro baratas fechadas, sem solução.**
@@ -269,7 +271,7 @@ experimento; a revisão de §3.12 amplia apenas a cobertura dos bytes preservado
 ### D. Premissas da ferramenta
 | Premissa | Cobertura | Resultado |
 |---|---|---|
-| A cifra é aes-256-cbc | 16 cifras/modos do `openssl enc` × corpus 1,27 M × 3 blobs × 2 KDF = 122 M, controle por cifra com o CLI real | 0 reconhecidos; filtro de modos de fluxo não cobre raw32 binário interior (§3.13); CBC sem padding: COSMIC por bloco e SMALL/TAIL32 com os 7 operandos fechados, raw32 do corpus em SMALL/TAIL32 aberto (§3.14) |
+| A cifra é aes-256-cbc | 16 cifras/modos do `openssl enc` × corpus 1,27 M × 3 blobs × 2 KDF = 122 M, controle por cifra com o CLI real | 0 reconhecidos; filtro de modos de fluxo não cobre raw32 binário interior (§3.13); CBC sem padding: fechado — COSMIC por bloco, SMALL/TAIL32 com os 7 operandos (§3.14) e o corpus de 1,27 M em SMALL/TAIL32 sem unpad (498,7 M janelas BE/LE, 0) |
 | Os blocos do ciphertext estão publicados fora de ordem (o `enter` como marca) | 120 permutações × salt cruzado SMALL↔TAIL32 × 2 KDF × 1,27 M = 1,22 bi lógicos; oráculo por bloco agnóstico a IV/ordem/padding: 0/10,18 M pares com ≥ 2 blocos limpos | refutada; os negativos são de **senha** |
 | KDF/IV alternativos, `-K` cru, chave = passphrase XOR | | 0 |
 
