@@ -1,0 +1,188 @@
+{
+ "alvos": {
+  "TARGET_H160S": [
+   "a9553269572a317e39f0f518cb87c1a0ee1dbae4",
+   "4bc468447fe1b048ad030a2f9a125478eabc4ed6"
+  ]
+ },
+ "raw32_plantado_via_trabalhar": {
+  "n": 24,
+  "casos": [
+   {
+    "pubkey": "comprimida",
+    "len": 79,
+    "ordem": "be",
+    "offset": 0,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 79,
+    "ordem": "be",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 79,
+    "ordem": "be",
+    "offset": 47,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 79,
+    "ordem": "le",
+    "offset": 0,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 79,
+    "ordem": "le",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 79,
+    "ordem": "le",
+    "offset": 47,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 1327,
+    "ordem": "be",
+    "offset": 0,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 1327,
+    "ordem": "be",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 1327,
+    "ordem": "be",
+    "offset": 1295,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 1327,
+    "ordem": "le",
+    "offset": 0,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 1327,
+    "ordem": "le",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 1327,
+    "ordem": "le",
+    "offset": 1295,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 79,
+    "ordem": "be",
+    "offset": 0,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 79,
+    "ordem": "be",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 79,
+    "ordem": "be",
+    "offset": 47,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 79,
+    "ordem": "le",
+    "offset": 0,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 79,
+    "ordem": "le",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 79,
+    "ordem": "le",
+    "offset": 47,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 1327,
+    "ordem": "be",
+    "offset": 0,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 1327,
+    "ordem": "be",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 1327,
+    "ordem": "be",
+    "offset": 1295,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 1327,
+    "ordem": "le",
+    "offset": 0,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 1327,
+    "ordem": "le",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 1327,
+    "ordem": "le",
+    "offset": 1295,
+    "hits": 1
+   }
+  ]
+ },
+ "filhos": {
+  "processos": 10,
+  "alvos_vistos": [
+   "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa",
+   "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe"
+  ]
+ }
+}

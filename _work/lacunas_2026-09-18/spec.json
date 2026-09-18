@@ -1,0 +1,34 @@
+{
+ "campanha": "lacunas_2026-09-18",
+ "coordenador": "Claude Code (branch claude/lacunas-2026-09-18)",
+ "entrada": "lacunas de cobertura declaradas em ENDGAME.md §3.14 (enxame de 18/09), regra 3 do AGENTS.md",
+ "oraculo": "regra 1 do AGENTS.md: privkey cujo h160 (pubkey comprimida ou não) bate com 1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe ou 17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa; sinais semânticos só marcam candidato",
+ "itens": {
+  "6_ebcdic_codepoints_inverso": {
+   "hipotese": "dbbi ou faed (originais ou invertidos) são a concatenação dos códigos decimais (mínimos ou de 3 dígitos) dos bytes de um texto guardado na direção autêntica da fase 3.2 (latin-1 → cp273 dá ASCII 32–126/TAB/LF/CR), com o alfabeto e as letras zeráveis da busca de 16/09",
+   "contra_hipotese": "nenhuma segmentação completa dá texto legível nem senha",
+   "conjunto": "os mesmos 26.127.728 casos de solver/ebcdic_codepoints.cjs, com o repertório inverso",
+   "controles": "repertório igual ao cp273 do Python e aos 1.539 B do segmento Beaufort da 3.2; controles plantados dos dois scripts históricos; recontagem pelo accepts() do verificador; textos plantados na prova de legibilidade",
+   "nulo": "N/A: enumeração determinística e completa; o limite de legibilidade vale para todos os caminhos"
+  },
+  "7_splitlines": {
+   "hipotese": "algum conteúdo hex que a recoleta da §3.11 perdeu por splitlines() tem chave de um dos alvos (BE/LE) ou sinal nas 7 visões",
+   "controles": "linha sintética com \\x85 perdida pela coleta antiga e achada pela corrigida; raw32 plantado pelo mesmo trabalhar()",
+   "nulo": "N/A: varredura finita"
+  },
+  "8_negacao": {
+   "hipotese": "N−k de algum escalar das 17 fontes do retro_17ucy é a chave de um dos alvos",
+   "controles": "fórmula da negação contra coincurve(N−k); em cada fonte, N−k plantado achado pelo lado N−k dentro do filho; os dois plantados de k do retro.py; amostra python-ecdsa",
+   "nulo": "N/A: varredura finita"
+  },
+  "9_orfaos_cd": {
+   "hipotese": "algum plaintext das camadas C (outras 15 cifras) ou D (montagens de blocos) do corpus órfão tem chave de 17ucy (BE/LE) ou de 1GSMG em LE",
+   "controles": "C: raw32 plantado via orfaos.trabalhar e alvos dos filhos; D: plantio BE/LE pelas mesmas funções, python-ecdsa, montagem 'best' refeita byte a byte e contagens iguais às do montage_summary.json",
+   "nulo": "N/A: varredura finita"
+  }
+ },
+ "parada": "cada item termina quando o conjunto declarado foi coberto e reconciliado; hit só vira solução por proof-certificate",
+ "processos": "no máximo 12 simultâneos (AGENTS.md, Ambiente)",
+ "donos": {"coordenador": ["spec.json", "RELATORIO.md", "ENDGAME.md", "docs/RESEARCH-INDEX.md"],
+           "scripts": "solver/lacunas_2026_09_18/", "saidas": "_work/lacunas_2026-09-18/<item>/"}
+}

@@ -1,0 +1,155 @@
+{
+ "item": 7,
+ "commit_antigo": "2a535c6",
+ "raiz": "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle",
+ "coleta_antiga": 837728,
+ "coleta_corrigida": 839451,
+ "so_na_corrigida": 1723,
+ "so_na_antiga": 0,
+ "bytes_so_na_corrigida": 774293,
+ "linhas_partidas_pelo_splitlines": {
+  "arquivos": 32,
+  "linhas": 7279,
+  "ilegiveis": []
+ },
+ "nos_corpora_3.12_3.13": 814,
+ "varredura": {
+  "n": 1723,
+  "bytes": 774293,
+  "raw32_janelas": 1441760,
+  "raw32_validos": 1441760,
+  "validos_hexwif": 0,
+  "artefatos": 0,
+  "tentativas_hexwif": {},
+  "motivos": {},
+  "novos": {}
+ },
+ "hits": [],
+ "candidatos": [
+  {
+   "sha256": "32ce710d9841894291e64d2d59f710bc2252c84c2df5815fa2fc3aa34dd6fcde",
+   "len": 32,
+   "triagem": "a examinar: motivo na visão original",
+   "orig_reasons": [
+    "semantic_whole",
+    "sem:printable"
+   ],
+   "visoes": {},
+   "texto": "*`*c\u001cERTT88*:U\u001d10_Y^>>\u0013X,:+Bb\"C@"
+  },
+  {
+   "sha256": "877818e2248dde42ee4f17a2823946daa36a02cf0cfb9d7eb47c4ea360d127d8",
+   "len": 32,
+   "triagem": "a examinar: motivo na visão original",
+   "orig_reasons": [
+    "semantic_whole",
+    "sem:printable"
+   ],
+   "visoes": {},
+   "texto": ";,E0E\u0018YY`*^-DT\\@DEb\u001a\u001a_^b`1;/-^\u001dO"
+  },
+  {
+   "sha256": "178e68b31f937f180bb9e9a561b37ae499e360cec8a8e402a7df6aadaaf456c9",
+   "len": 32,
+   "triagem": "a examinar: motivo na visão original",
+   "orig_reasons": [
+    "semantic_whole",
+    "sem:printable"
+   ],
+   "visoes": {},
+   "texto": "E.?)=\u0018cT`>`7O`!@Dc[$>_^\u0013.=EC0_\u001dJ"
+  },
+  {
+   "sha256": "3d8d8e77a607d81a49fc55caca528293f5896fe10cd0a059dcefc1e724f23009",
+   "len": 32,
+   "triagem": "a examinar: motivo na visão original",
+   "orig_reasons": [
+    "semantic_whole",
+    "sem:printable"
+   ],
+   "visoes": {},
+   "texto": "K'#`]V6'T>T3$&LR-!5!\u0015EBB\u0010]b4\\;# "
+  },
+  {
+   "sha256": "955f5f1b8901aefa3e8f21a9fbff75ef0e2ab0292f567154b43268eb9ba4d506",
+   "len": 32,
+   "triagem": "a examinar: motivo na visão original",
+   "orig_reasons": [
+    "semantic_whole",
+    "sem:printable"
+   ],
+   "visoes": {},
+   "texto": "ObR$\u0017\u0013O\\7\u001f!\u001daB93:ETQ,^3OE^b;']&$"
+  },
+  {
+   "sha256": "d99ea995b36a6d267fddaa3efff49632705b23fd496b81ec5ac8f355d05fa071",
+   "len": 32,
+   "triagem": "a examinar: motivo na visão original",
+   "orig_reasons": [
+    "semantic_whole",
+    "sem:printable"
+   ],
+   "visoes": {},
+   "texto": "Q3G39#[^M])`Yc\u0011KO\u0018GM#8_O/aR\u00124\u001d$S"
+  },
+  {
+   "sha256": "aec3e5a0ef4221b92bef682f3b46062f5ef689bfea3e0cbd67fff52bc25cacb0",
+   "len": 32,
+   "triagem": "a examinar: motivo na visão original",
+   "orig_reasons": [
+    "semantic_whole",
+    "sem:printable"
+   ],
+   "visoes": {},
+   "texto": "^.^V\\0bc@\u001d,8X1\u001a.VcR>E;1Y@_^J;*a`"
+  },
+  {
+   "sha256": "d5f1eb5d7edc1235333a728ea03ccc17141944ef1e4b64458d53e5208f67abe3",
+   "len": 32,
+   "triagem": "a examinar: motivo na visão original",
+   "orig_reasons": [
+    "semantic_whole",
+    "sem:printable"
+   ],
+   "visoes": {},
+   "texto": "aMT7BIa4\u001a>ca&c \\caa\u000eb\"!\u001f#$OJX*Jb"
+  },
+  {
+   "sha256": "c5dc32eec9cd95a50fadcac4d4e3f12601bbae4a0024e2001aaf52c0f2eb7a8b",
+   "len": 32,
+   "triagem": "a examinar: motivo na visão original",
+   "orig_reasons": [
+    "semantic_whole",
+    "sem:printable"
+   ],
+   "visoes": {},
+   "texto": "ac=]#La$?;C\u0011?\"BV\rc;c;Y\u001a\"$`^Gc\u0013[$"
+  },
+  {
+   "sha256": "a3dd289894cdb697a7efb561d4a58fbff075856133a9c4838c69aa8d334c9d6e",
+   "len": 32,
+   "triagem": "a examinar: motivo na visão original",
+   "orig_reasons": [
+    "semantic_whole",
+    "sem:printable"
+   ],
+   "visoes": {},
+   "texto": "c4\u001a\\K![\u0015'\u001ac@#c\\ccc\\S\"\u0015? _$+'Ec']"
+  },
+  {
+   "sha256": "d8198b55a7216bcb268e31a25b1bfe253dc5570c3fe0f510772933cdda928aa9",
+   "len": 32,
+   "triagem": "a examinar: motivo na visão original",
+   "orig_reasons": [
+    "semantic_whole",
+    "sem:printable"
+   ],
+   "visoes": {},
+   "texto": "cO`\u0013!9EIB#`GL!.D='_c_b\\?+EE/\u0013[c\r"
+  }
+ ],
+ "sha256_conteudos": "a50eef7510f358eb3b805b8eb7e4f33c6b2a936d2d9183514ef82ca803b67f4d",
+ "script_sha256": "5057940063b3f296c283b951d733964c3d31d30b3e36a54896707370ce36945c",
+ "retro_dois_alvos_sha256": "f76cef6c6e23346d74e70c7bd4f5c3d2a091489fcdec6e21871061fb096e7e7c",
+ "segundos": 184.0
+}

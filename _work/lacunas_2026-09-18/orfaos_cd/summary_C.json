@@ -1,0 +1,51 @@
+{
+ "camada": "C",
+ "extracao": {
+  "arquivos": 20,
+  "manifesto_sha256": "469ae190c730f0aa1f8a2b2b5223fcd2cb4bf6f0c43579e24353454e6697828a",
+  "linhas_invalidas": 0,
+  "campos": 330613,
+  "por_cifra": {
+   "aes-256-cfb": 270,
+   "aes-256-ctr": 276,
+   "chacha20": 262,
+   "aes-128-cbc": 30204,
+   "sm4-cbc": 29596,
+   "idea-cbc": 29961,
+   "aes-256-ofb": 310,
+   "camellia-256-cbc": 30072,
+   "seed-cbc": 29832,
+   "des-ede3-cbc": 30173,
+   "bf-cbc": 29801,
+   "aes-256-ecb": 30158,
+   "cast5-cbc": 29890,
+   "rc2-cbc": 30030,
+   "aes-192-cbc": 29778
+  },
+  "conteudos": 330037,
+  "janelas_BE_LE": 305725358
+ },
+ "varredura": {
+  "n": 330037,
+  "bytes": 163093826,
+  "raw32_janelas": 305725358,
+  "raw32_validos": 305725358,
+  "validos_hexwif": 0,
+  "artefatos": 0,
+  "candidatos": 0,
+  "tent": {},
+  "motivos": {},
+  "novos": {},
+  "orig": {},
+  "triagem": {},
+  "hits": [],
+  "segundos": 1311.3
+ },
+ "alvos": {
+  "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe": "a9553269572a317e39f0f518cb87c1a0ee1dbae4",
+  "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa": "4bc468447fe1b048ad030a2f9a125478eabc4ed6"
+ },
+ "workers": 10,
+ "script_sha256": "026fcc42ef3ecc550fa5954248541a98aa314bb2d9a220992b528ab597198377",
+ "orfaos_sha256": "04f2b0122817beef6f6764338faae12dbfc97c5a99067823e5b81be98cc94f95"
+}

@@ -1,0 +1,34 @@
+{
+ "alvos": {
+  "TARGET_H160S": [
+   "a9553269572a317e39f0f518cb87c1a0ee1dbae4",
+   "4bc468447fe1b048ad030a2f9a125478eabc4ed6"
+  ]
+ },
+ "plantio_e_ecdsa": {
+  "plantio_be_comprimida_e_le_nao_comprimida": [
+   [
+    "PLANTADO_BE",
+    "be",
+    true,
+    "5e64c5044b135af5eadd9446ee8f9d20bcc0e44fdddd6660254c5d879c6741b1"
+   ],
+   [
+    "PLANTADO_LE",
+    "le",
+    false,
+    "a52c55d914955317c0ffaf4fc21a05ff9b055d92f17d8979dec5044b135af5ea"
+   ]
+  ],
+  "janelas_do_sobrevivente": 426,
+  "ecdsa_amostra": 200,
+  "ecdsa_divergencias": 0
+ },
+ "filhos": {
+  "processos": 10,
+  "alvos_vistos": [
+   "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa",
+   "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe"
+  ]
+ }
+}

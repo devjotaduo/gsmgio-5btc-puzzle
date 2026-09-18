@@ -173,17 +173,24 @@ Exports do Telegram até 2026-09-17: nenhuma fala do criador depois de 2026-09-0
       bases, famílias `.cjs`, `prime_host`, `select256`): 0.
     - **Plaintexts de 17/09 deixados em `%TEMP%`**, que nenhuma re-varredura tinha lido (152.952
       conteúdos, 150 M janelas raw32 BE+LE): 0.
-    - **Continuam abertos:**
-      - modos de fluxo;
-      - raw32 sem unpad do corpus de 1,27 M em SMALL/TAIL32 (~499 M checagens);
-      - a leitura EBCDIC por códigos concatenados (`ebcdic_codepoints.cjs`, mesmo repertório
-        errado);
-      - as camadas C/D do corpus órfão contra `17ucy`;
-      - a negação N−k contra `17ucy`;
-      - 772 conteúdos que a recoleta da §3.11 perdeu por `splitlines()`, cobertos só pela
-        §3.12/§3.13.
+    - **Continuam abertos:** modos de fluxo e raw32 sem unpad do corpus de 1,27 M em SMALL/TAIL32
+      (~499 M checagens). Os outros quatro abertos declarados aqui foram fechados na §3.15.
 
     [Relatório, frentes e revisões](_work/enxame_2026-09-18/RELATORIO.md).
+15. **Lacunas de 18/09: as quatro baratas fechadas, sem solução.**
+    - **EBCDIC por códigos decimais na direção autêntica da 3.2** (os 26.127.728 casos de 16/09, com
+      os scripts históricos intactos): 45 casos segmentáveis e 58.232.392 caminhos, mas nenhum passa
+      de 52 % de letras e espaço nem de 58 % de letras e dígitos (máximo exato por DP sobre todos os
+      caminhos). As três leituras decimais de 16/09 ficam cobertas nas duas direções.
+    - **Recoleta da §3.11 corrigida:** `retro_dois_alvos.collect()` perdia linhas de `.jsonl` por
+      `splitlines()` (quebra em `\x85`/U+2028). Hoje são 1.723 conteúdos, 909 fora de qualquer
+      corpus; raw32 BE/LE e 7 visões: 0.
+    - **N−k** dos 11.188.119 escalares do `retro_17ucy`, contra os dois alvos: 0.
+    - **Corpus órfão, camadas C e D** (outras 15 cifras; 797.172 sobreviventes e 12.754.752
+      montagens de blocos, com as contagens de 17/09 reconciliadas): 0 em ~985 M testes BE/LE contra
+      os dois alvos. O corpus órfão inteiro (A a D) está coberto contra os dois alvos.
+
+    [Relatório](_work/lacunas_2026-09-18/RELATORIO.md).
 
 ## 4. O que foi refutado, por família
 
@@ -207,7 +214,7 @@ experimento; a revisão de §3.12 amplia apenas a cobertura dos bytes preservado
 ### B. Decodificação de `dbbi` e `faed`
 | Família | Cobertura | Resultado |
 |---|---|---|
-| Decimal → hex → ASCII (o método da página) com zeros: cada letra, até duas, **todas** as ocorrências, `g→0/7`, UTF-8, EBCDIC 1141, bases primas 11–257, base 127, bases 29/31/37 com alfabetos, potências, Brotli/Zstd/zlib/gzip | certificados de cobertura integral (2^107 máscaras etc.); EBCDIC por inteiro completo refeito na direção autêntica da 3.2 (§3.14), por códigos concatenados ainda não | 0 |
+| Decimal → hex → ASCII (o método da página) com zeros: cada letra, até duas, **todas** as ocorrências, `g→0/7`, UTF-8, EBCDIC 1141, bases primas 11–257, base 127, bases 29/31/37 com alfabetos, potências, Brotli/Zstd/zlib/gzip | certificados de cobertura integral (2^107 máscaras etc.); EBCDIC por inteiro completo e por códigos concatenados refeito na direção autêntica da 3.2 (§3.14, §3.15) | 0 |
 | Straddling checkerboard / VIC direto e permutado, Bifid 3×3 exaustivo (60.480 classes) e 5×5, Trifid, Bazeries, Nihilist, Polybius, MadHatter | 104 M decodes + hill-climb GPU com controles | 0 |
 | Transposições por `matrixsumlist`/`lastwords…`/`dbbi`, keystreams mod 9/10 (listas, tokens, cores, primos), running keys do corpus e do livro (6,4 M alinhamentos) | | 0 |
 | RSA por caractere com primos das cores, `dbbi` como escalar secp256k1, `dbbi` como SHA256 de listas (525 k pré-imagens), somas de linhas/colunas/anéis/diagonais/retângulos em todas as dimensões, produtos internos, distâncias | | 0 |

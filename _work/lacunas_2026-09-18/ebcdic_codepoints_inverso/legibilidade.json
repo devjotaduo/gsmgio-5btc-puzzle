@@ -1,0 +1,938 @@
+{
+ "controle_plantado": {
+  "palavras": {
+   "texto": "Follow the white rabbit Neo",
+   "digitos": 74,
+   "caminhos": 6144,
+   "achado": "Follow the white rabbit Neo"
+  },
+  "prosa": {
+   "texto": "Follow the white rabbit, Neo.",
+   "digitos": 78,
+   "caminhos": 30720,
+   "achado": "Follow ?.he whi?.e rabbi?., Neo."
+  },
+  "senha": {
+   "texto": "0f3a9c52e1d8b7a6",
+   "digitos": 42,
+   "caminhos": 6,
+   "achado": "0f3a9c52e1d8b7a6"
+  }
+ },
+ "casos_aceitos": 45,
+ "caminhos_total": 58232392,
+ "caminhos_conferidos_com_o_buscador": true,
+ "fracao_maxima_global": {
+  "palavras": 0.5217,
+  "prosa": 0.8393,
+  "senha": 0.5763
+ },
+ "classes": {
+  "palavras": " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+  "prosa": "\t\n\r !\"'(),-.:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+  "senha": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+ },
+ "script_sha256": "27e5069a42f3a207bd7421657b9d93e8f526e00e19de70b91493fa16032dda88",
+ "casos": [
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "a",
+   "mapping": "852167349",
+   "count": "108",
+   "caminhos": 108,
+   "palavras": {
+    "fracao_maxima": 0.2063,
+    "texto_ascii": ";m/-7Eo^M-.-._-.Oo.-.--[7K-7az-/1.//=--/2S/-..On-.!-/-//}{..L-."
+   },
+   "prosa": {
+    "fracao_maxima": 0.6984,
+    "texto_ascii": ";m/-7Eo^M-.-._-.Oo.-.--[k.-7az-/1.//=--/2S/-..On-.!-/-//}{..L-."
+   },
+   "senha": {
+    "fracao_maxima": 0.2857,
+    "texto_ascii": ";m/-7Eo^M-.-._-.Oo.-.--[7K-7az-/1.//=--/2S/-..On-.!-/-//}{..L-."
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "a",
+   "mapping": "834127659",
+   "count": "480",
+   "caminhos": 480,
+   "palavras": {
+    "fracao_maxima": 0.4082,
+    "texto_ascii": "\r}l{7N?}z@@m@.n.TOn--S-/Pl9'/7\rlkKl@?n7@5ll/.y@Z@"
+   },
+   "prosa": {
+    "fracao_maxima": 0.6327,
+    "texto_ascii": "\r}l{7N?}z@@m@..?TOn--S-/Pl9'/7\rlkKl@?n7@5ll/.y@Z@"
+   },
+   "senha": {
+    "fracao_maxima": 0.52,
+    "texto_ascii": "\r}l{7N?}z@@m@.n.TOn--S-/Pl9'/7\rl77Kl@?n7@5ll/.y@Z@"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "a",
+   "mapping": "864921357",
+   "count": "2304",
+   "caminhos": 2304,
+   "palavras": {
+    "fracao_maxima": 0.3269,
+    "texto_ascii": "y./~.-7KX/znn/-nOTn..@--?--A.f.=5.~kN~n&@7n_/~~)[2<n"
+   },
+   "prosa": {
+    "fracao_maxima": 0.6538,
+    "texto_ascii": "y./~.-k.X/z.?'-.QT.?.@--?--A.f.=5..0N~n&@7n_/~~)[2<n"
+   },
+   "senha": {
+    "fracao_maxima": 0.4151,
+    "texto_ascii": "y./~.-7KX/znn/-nOTn..@--?--A.f.=5.~77N~n&@7n_/~~)[2<n"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "a",
+   "mapping": "869321457",
+   "count": "108",
+   "caminhos": 108,
+   "palavras": {
+    "fracao_maxima": 0.3137,
+    "texto_ascii": "[./~.^yj/znn/-n7\\\\n..\\--?--A~{.=e..h_~.D\\yW/~~37nZn"
+   },
+   "prosa": {
+    "fracao_maxima": 0.6538,
+    "texto_ascii": "[./~.^yj/z.?'-n7\\7??.\\--?--A.\r-.=e..h_~.D\\yW/~~37nZn"
+   },
+   "senha": {
+    "fracao_maxima": 0.3846,
+    "texto_ascii": "[./~.^yj/znn/-n7\\7??.\\--?--A~{.=e..h_~.27\\yW/~~37nZn"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "a",
+   "mapping": "864753921",
+   "count": "1728",
+   "caminhos": 1728,
+   "palavras": {
+    "fracao_maxima": 0.4464,
+    "texto_ascii": "/.~on7K-y .-.-Y^mm.-..mEn&L.l?-Oa.o7ky[-^mK-/]o.Ocy--z.-"
+   },
+   "prosa": {
+    "fracao_maxima": 0.8393,
+    "texto_ascii": "/.~onk.-y .-.-Y^mm.-..mEn&L.l?-Oa.o7ky[-^mK-/]o.Ocy--z.-"
+   },
+   "senha": {
+    "fracao_maxima": 0.4821,
+    "texto_ascii": "/.~on7K^~v-.-Y^mm.-..mEn&L.l?-Oa.o777y[-^mK-/]o.Ocy--z.-"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "a",
+   "mapping": "864752931",
+   "count": "4320",
+   "caminhos": 4320,
+   "palavras": {
+    "fracao_maxima": 0.375,
+    "texto_ascii": "/.~no7K-y\".-.-(^mm.-..mO-o@Ln/[-2a.n7ky?-^mK-/]n.GJ--z.-"
+   },
+   "prosa": {
+    "fracao_maxima": 0.8246,
+    "texto_ascii": "/.~nok.-y\".-.-\r.^mm.-..mO-o@L.'[-2a.n7ky?-^mK-/].?GJ--z.-"
+   },
+   "senha": {
+    "fracao_maxima": 0.4483,
+    "texto_ascii": "/.~no7K-y\".-.-(^mm.-..mO-o@Ln/[-2a.n777y?-^mK-/]n.2cy--z.-"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "a",
+   "mapping": "862754931",
+   "count": "3840",
+   "caminhos": 3840,
+   "palavras": {
+    "fracao_maxima": 0.3276,
+    "texto_ascii": "/.~.7oB-y\".-.-(^mm.-..mO-.O7L.a[-k'..\\2yK-^m?-/=.Kkcy--z.-"
+   },
+   "prosa": {
+    "fracao_maxima": 0.8305,
+    "texto_ascii": "/.~.7oB-y\".-.-\r.^mm.-..mO-.O7L.a[-k'..\\G.K-^m?-/=.Kkcy--z.-"
+   },
+   "senha": {
+    "fracao_maxima": 0.4,
+    "texto_ascii": "/.~.7oB-y\".-.-(^mm.-..mO-.O7L.a[-77'..\\2yK-^m?-/=.K77cy--z.-"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "a",
+   "mapping": "864257931",
+   "count": "2880",
+   "caminhos": 2880,
+   "palavras": {
+    "fracao_maxima": 0.3167,
+    "texto_ascii": "?.|o7K-y\".-.-(^mm.-..mO-olL./X-//7?./7ky/.-^mK-I././/cy--z.-"
+   },
+   "prosa": {
+    "fracao_maxima": 0.7869,
+    "texto_ascii": "?.|ok.-y\".-.-\r.^mm.-..mO-olL./X-//7?./7ky/.-^mK-I././/cy--z.-"
+   },
+   "senha": {
+    "fracao_maxima": 0.377,
+    "texto_ascii": "?.|o7K-y\".-.-(^mm.-..mO-olL./X-//7?./777y/.-^mK-I././/cy--z.-"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "a",
+   "mapping": "842751936",
+   "count": "4320",
+   "caminhos": 4320,
+   "palavras": {
+    "fracao_maxima": 0.3137,
+    "texto_ascii": "-M---7yc\tK'-\\^m-752=7a=:l,]O`O^k-7^^mN.-`M[7m\\&]K7a"
+   },
+   "prosa": {
+    "fracao_maxima": 0.5849,
+    "texto_ascii": "-M---7yc\tK'-\\^m-752=7a=:l,]O7-O^k-7^^mN.-7-M[7m\\&]K7a"
+   },
+   "senha": {
+    "fracao_maxima": 0.5273,
+    "texto_ascii": "-M---7yc\t7n/-\\^m-752=7a=:l4]O7-O^77-7^^m7[-7-M[7m\\&]K7a"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "b",
+   "mapping": "847652931",
+   "count": "3538944",
+   "caminhos": 3538944,
+   "palavras": {
+    "fracao_maxima": 0.3673,
+    "texto_ascii": ".M%<l/7^]P``\"^mm`MmO-7Op\\o`F.M'//_u^m/`./%<Gb--z`"
+   },
+   "prosa": {
+    "fracao_maxima": 0.6182,
+    "texto_ascii": ".M\n7l/7-_*7-7-\"^mm7-MmO-7Op\\o7-F.M'//_u^m/7-./\n7Gb--z7-"
+   },
+   "senha": {
+    "fracao_maxima": 0.5614,
+    "texto_ascii": "L7\n7l/7^7*7-7-\r7^mm7-77mO-7Op\\o7-FL7'//_u^m/7-./\n7Gb--z7-"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "b",
+   "mapping": "856942713",
+   "count": "52254720",
+   "caminhos": 52254720,
+   "palavras": {
+    "fracao_maxima": 0.4314,
+    "texto_ascii": "7zkM/lZs._-.a/7Mw...ty2Mdz-=%]3--Maa/M\rM7z\"/M..%s-^"
+   },
+   "prosa": {
+    "fracao_maxima": 0.7547,
+    "texto_ascii": "7zkM/lZs._-.a/k-w..n--yD-dz-=%]3--Maa/M\rM7z\r-/M..%s-^"
+   },
+   "senha": {
+    "fracao_maxima": 0.5385,
+    "texto_ascii": "7z77M/lZs._-.a/7Mw...ty2Mdz-=%]3--Maa/M\rM7z\"/M..%s-^"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "b",
+   "mapping": "854962713",
+   "count": "976896",
+   "caminhos": 976896,
+   "palavras": {
+    "fracao_maxima": 0.4038,
+    "texto_ascii": ".z..L/lZs7y-K//.Lw7kt_2Ldz-=%~|--L././/L\rL.z\"/Lk%s-^"
+   },
+   "prosa": {
+    "fracao_maxima": 0.7333,
+    "texto_ascii": ".z...-/lZs7y-K//..-wk\\--_B-dz-=%~|--.-././/.-\r.-.z\r-/.-k%s-^"
+   },
+   "senha": {
+    "fracao_maxima": 0.4815,
+    "texto_ascii": ".z..L/lZs7y-K//.Lw777t_2Ldz-=%~|--L././/L\rL.z\"/L77%s-^"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "b",
+   "mapping": "854961237",
+   "count": "58800",
+   "caminhos": 58800,
+   "palavras": {
+    "fracao_maxima": 0.36,
+    "texto_ascii": ".z..L'=%%/7y-KBL87k%^]A}>-\r{o[tLn.2LlL.zl-?-k{%/-^"
+   },
+   "prosa": {
+    "fracao_maxima": 0.7193,
+    "texto_ascii": ".z...-'=%%/7y-KB.-8k]-^]A}>-\r{.On--.-.?B-l.-.zl-?-7N-%/-^"
+   },
+   "senha": {
+    "fracao_maxima": 0.4615,
+    "texto_ascii": ".z..L'=%%/7y-KBL8777%^]A}>-\r{o[tLn.2LlL.zl-?-77{%/-^"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "b",
+   "mapping": "853976241",
+   "count": "62208",
+   "caminhos": 62208,
+   "palavras": {
+    "fracao_maxima": 0.3158,
+    "texto_ascii": "/z///-=?LL+/-lF/-L&OL^[./-7yz-.7M/7at/-/'F-]/-/z7%'-OML%^"
+   },
+   "prosa": {
+    "fracao_maxima": 0.629,
+    "texto_ascii": "/z///-=?.-.-+/-lF/-.-&O.-^[./-7yz-.k-/7at/-/'F-]/-/z]-'-OM.-%^"
+   },
+   "senha": {
+    "fracao_maxima": 0.4035,
+    "texto_ascii": "/z///-=?LL+/-lF/-L&OL^[./-7yz-.7M/7at/-/'F-]/-/z78/-OML%^"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "d",
+   "mapping": "847952631",
+   "count": "49152",
+   "caminhos": 49152,
+   "palavras": {
+    "fracao_maxima": 0.1579,
+    "texto_ascii": "_7\n7l/`.]P``\r`..-.-`7K-O-7Op7s`F_7'//.\\`-..-/7^/\n72~.`-z`"
+   },
+   "prosa": {
+    "fracao_maxima": 0.5758,
+    "texto_ascii": "_7\n7l/7-.]P7-7-\r7-..-.-7-k.-O-7Op7s7-F_7'//.\\7--..-/7^/\n72~.7--z7-"
+   },
+   "senha": {
+    "fracao_maxima": 0.4091,
+    "texto_ascii": "_7\n7l/7-.7*7-7-\r7-..-.-7-7K-O-7Op7s7-F_7'//.\\7--..-/7^/\n72~.7--z7-"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "d",
+   "mapping": "742851936",
+   "count": "1280",
+   "caminhos": 1280,
+   "palavras": {
+    "fracao_maxima": 0.34,
+    "texto_ascii": "-a---7yc\tKu\\^m-752=7M=:P3]O`O^k-7^^mN.-`a[7m\\&]K7M"
+   },
+   "prosa": {
+    "fracao_maxima": 0.5577,
+    "texto_ascii": "-a---7yc\tKu\\^m-752=7M=:P3]O7-O^k-7^^mN.-7-a[7m\\&]K7M"
+   },
+   "senha": {
+    "fracao_maxima": 0.5472,
+    "texto_ascii": "-a---7yc\tKu\\^m-752=7M=:P3]O7-O^77-7^^m7[-7-a[7m\\&]K7M"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "d",
+   "mapping": "143869527",
+   "count": "3072",
+   "caminhos": 3072,
+   "palavras": {
+    "fracao_maxima": 0.2203,
+    "texto_ascii": ".]...`/^__/P.N.--..7_-O}7M}y7i752KB-7KK-.--.7'.K]'`.N@7_/7M"
+   },
+   "prosa": {
+    "fracao_maxima": 0.623,
+    "texto_ascii": ".]...7-/^__/P.N.--..7_-O}7M}y7i75D.B-k.K-.--.7'.K]'7-.N@7_/7M"
+   },
+   "senha": {
+    "fracao_maxima": 0.4098,
+    "texto_ascii": ".]...7-/^__/P.7[--..7_-O}7M}y7i752KB-7KK-.--.7'.K]'7-.N@7_/7M"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "d",
+   "mapping": "146972538",
+   "count": "21504",
+   "caminhos": 21504,
+   "palavras": {
+    "fracao_maxima": 0.386,
+    "texto_ascii": "/]///7z-DpL/K/--//\\`..nkyF7}I7QaO/-7aa-/--/7P/a]P`/Ko7p7M"
+   },
+   "prosa": {
+    "fracao_maxima": 0.5593,
+    "texto_ascii": "/]///7z-DpL/K/--//\\7-..nkyF7}I7QaO/-7aa-/--/7P/a]P7-/Ko7p7M"
+   },
+   "senha": {
+    "fracao_maxima": 0.541,
+    "texto_ascii": "/]///7z-27pL/K/--//\\7-..n77yF7}I7QaO/-7aa-/--/7P/a7*7-/Ko7p7M"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "d",
+   "mapping": "837962541",
+   "count": "864",
+   "caminhos": 864,
+   "palavras": {
+    "fracao_maxima": 0.3455,
+    "texto_ascii": ".P..o-8&H/yl.--.oS///&}/2oMV@k[7K-Oo.-.--o]o.P]{.l/N&\r}"
+   },
+   "prosa": {
+    "fracao_maxima": 0.7018,
+    "texto_ascii": ".P..o-8&H/yl.--.oS///&}/2oMV@7N.k.-Oo.-.--o]o.P7\r-.l/N&\r}"
+   },
+   "senha": {
+    "fracao_maxima": 0.4211,
+    "texto_ascii": ".P..o-8&H/yl.--.oS///&}/2oMV@77[7K-Oo.-.--o]o.P7\r-.l/N&\r}"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "d",
+   "mapping": "837942561",
+   "count": "2560",
+   "caminhos": 2560,
+   "palavras": {
+    "fracao_maxima": 0.3725,
+    "texto_ascii": "7PkN-8&H/_l`-7NS///&}/2NLV@.oK.`ON``-N~N7P~{7l/o&\r}"
+   },
+   "prosa": {
+    "fracao_maxima": 0.5714,
+    "texto_ascii": "7PkN-8&H/_l7--7NS///&}/2NLV@.oK.7-ON7-7--N~N7P.\r-7l/o&\r}"
+   },
+   "senha": {
+    "fracao_maxima": 0.5357,
+    "texto_ascii": "7P777{8&H/_l7--7NS///&}/2NLV@.oK.7-ON7-7--N~N7P~{7l/o&\r}"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "f",
+   "mapping": "846951732",
+   "count": "691200",
+   "caminhos": 691200,
+   "palavras": {
+    "fracao_maxima": 0.2281,
+    "texto_ascii": "_7IN..`/7V``R-//-/-`7a-O-7O47e`%._M.../M`-//-.`yI7%/'`-z`"
+   },
+   "prosa": {
+    "fracao_maxima": 0.5758,
+    "texto_ascii": "_7IN..7-/7V7-7-R-//-/-7-7a-O-7O47e7-%._M.../M7--//-.7-yI7%/'7--z7-"
+   },
+   "senha": {
+    "fracao_maxima": 0.4462,
+    "texto_ascii": "_7I7[.7-/7V7-7-R-//-/-7-7a-O-7O47e7-%._M.../71-//-.7-yI7%/'7--z7-"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "f",
+   "mapping": "847651932",
+   "count": "65536",
+   "caminhos": 65536,
+   "palavras": {
+    "fracao_maxima": 0.38,
+    "texto_ascii": ".kI7l/`_V``R^mm`kmO-7O4Mo`%/.7M///_1^m/`./IMd_--z`"
+   },
+   "prosa": {
+    "fracao_maxima": 0.5614,
+    "texto_ascii": ".kI7l/7-_V7-7-R^mm7-kmO-7O4Mo7-%/.7M///_1^m/7-./IMd_--z7-"
+   },
+   "senha": {
+    "fracao_maxima": 0.5763,
+    "texto_ascii": ".77I7l/7^7V7-7-R^mm7-77mO-7O4Mo7-%/.7M///_1^m/7-./IMd_--z7-"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "f",
+   "mapping": "847951632",
+   "count": "276480",
+   "caminhos": 276480,
+   "palavras": {
+    "fracao_maxima": 0.2241,
+    "texto_ascii": "_7I7l/`.7V``R-..-.-`7K-O-7O47e`%/_M///.M`-..-/7^/I7%n.`-z`"
+   },
+   "prosa": {
+    "fracao_maxima": 0.5758,
+    "texto_ascii": "_7I7l/7-.7V7-7-R-..-.-7-k.-O-7O47e7-%/_M///.M7--..-/7^/I7%.?7--z7-"
+   },
+   "senha": {
+    "fracao_maxima": 0.4615,
+    "texto_ascii": "_7I7l/7-.7V7-7-R-..-.-7-7K-O-7O47e7-%/_M///.71-..-/7^/I7%n.7--z7-"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "g",
+   "mapping": "964325871",
+   "count": "36",
+   "caminhos": 36,
+   "palavras": {
+    "fracao_maxima": 0.3393,
+    "texto_ascii": "[~.-./7K<~/y?=/.trn.L'/?//-.y-ln--N..-kM.-ntj&].-.-z%nGn"
+   },
+   "prosa": {
+    "fracao_maxima": 0.75,
+    "texto_ascii": "[~.-./k.<~/y?=/.tr.?L'/?//-.y-ln--N..-kM.-ntj&].-.-z%nGn"
+   },
+   "senha": {
+    "fracao_maxima": 0.3684,
+    "texto_ascii": "[~.-./7K<~/y?=/.trn.L'/?//-.y-ln--7[.-77M.-ntj&].-.-z%nGn"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "h",
+   "mapping": "837425619",
+   "count": "972",
+   "caminhos": 972,
+   "palavras": {
+    "fracao_maxima": 0.3878,
+    "texto_ascii": "V2Xy--{}/7U?nS[///-Oa--H`P{%@%?OTn..&d@Penl/\r-}O7"
+   },
+   "prosa": {
+    "fracao_maxima": 0.62,
+    "texto_ascii": "V2Xy--{}/7U?nS[///-Oa--H7-P{%@%?OT.?.&d@Pe.U/\r-}O7"
+   },
+   "senha": {
+    "fracao_maxima": 0.46,
+    "texto_ascii": "V2Xy--{}/7U?nS[///-Oa--H7-P{%@%?OTn..&d@Penl/\r-}O7"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "h",
+   "mapping": "834725619",
+   "count": "7560",
+   "caminhos": 7560,
+   "palavras": {
+    "fracao_maxima": 0.4348,
+    "texto_ascii": "V2Xy--{}aR?nS[k`O/`-H/-P{%@%?OTn..&d@Pe.RM{}O/"
+   },
+   "prosa": {
+    "fracao_maxima": 0.6531,
+    "texto_ascii": "V2Xy--{}aR?nS[7k-O/7--H/-P{%@%?OT.?.&d@Pe.&k\r-}O/"
+   },
+   "senha": {
+    "fracao_maxima": 0.4898,
+    "texto_ascii": "V2Xy--{}aR?nS[777-O/7--H/-P{%@%?OTn..&d@Pe.RM{}O/"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "h",
+   "mapping": "834527619",
+   "count": "10800",
+   "caminhos": 10800,
+   "palavras": {
+    "fracao_maxima": 0.5217,
+    "texto_ascii": "V2Xy//l}`R?nU[kaO-a/H-/Pl%@%?OTn..&d@Pe.RMl}O-"
+   },
+   "prosa": {
+    "fracao_maxima": 0.7021,
+    "texto_ascii": "V2Xy//l}7-R?nU[kaO-a/H-/Pl%@%?OT.?.&d@Pe.RMl}O-"
+   },
+   "senha": {
+    "fracao_maxima": 0.5625,
+    "texto_ascii": "V2Xy//l}7-R?nU[77aO-a/H-/Pl%@%?OTn..&d@Pe.RMl}O-"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "h",
+   "mapping": "835427619",
+   "count": "1944",
+   "caminhos": 1944,
+   "palavras": {
+    "fracao_maxima": 0.4167,
+    "texto_ascii": "V2Xy//l}-7S?nU[---/O`//HaPl%@%?OTn..&d@Pe.S-)}O7"
+   },
+   "prosa": {
+    "fracao_maxima": 0.6531,
+    "texto_ascii": "V2Xy//l}-7S?nU[---/O7-//HaPl%@%?OT.?.&d@Pe.S-)}O7"
+   },
+   "senha": {
+    "fracao_maxima": 0.4898,
+    "texto_ascii": "V2Xy//l}-7S?nU[---/O7-//HaPl%@%?OTn..&d@Pe.S-)}O7"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "h",
+   "mapping": "852467319",
+   "count": "48",
+   "caminhos": 48,
+   "palavras": {
+    "fracao_maxima": 0.2295,
+    "texto_ascii": ".z...-}l/-/^j-?O..-/-@F--7'/.-3z-/%-.%o--.-oo[-J-.zf[-Z-/-m-7"
+   },
+   "prosa": {
+    "fracao_maxima": 0.7581,
+    "texto_ascii": ".z...-}l/-/^j-?O..-/-@F--7'/.-3z-/%-.%o--.-o.O.-J-.zf[-Z-/-m-7"
+   },
+   "senha": {
+    "fracao_maxima": 0.2787,
+    "texto_ascii": ".z...-}l/-/^j-?O..-/-@F--7'/.-3z-/%-.%o--.-oo[-J-.zf[-Z-/-m-7"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "h",
+   "mapping": "837562419",
+   "count": "2592",
+   "caminhos": 2592,
+   "palavras": {
+    "fracao_maxima": 0.4038,
+    "texto_ascii": ".P..o7_2@}/-.l.7Ko&a//Q-/2o8P@%[%.7Oo.KkoJ[PeKl/\rWO-"
+   },
+   "prosa": {
+    "fracao_maxima": 0.6346,
+    "texto_ascii": ".P..o7_2@}/-.l.k.o&a//Q-/2o8P@%[%.7Oo.KkoJ[PeKl/\rWO-"
+   },
+   "senha": {
+    "fracao_maxima": 0.5283,
+    "texto_ascii": ".P..o7_2@}/-.l.7Ko&a//Q-/2o8P@%[%.7Oo.K77oJ[PeKl/\rWO-"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "h",
+   "mapping": "832467519",
+   "count": "144",
+   "caminhos": 144,
+   "palavras": {
+    "fracao_maxima": 0.3704,
+    "texto_ascii": ".P..o-m//l}j@.--..l{2'O7'/o3Pl%[%.-Oo.-.--oJ[Pe-oZl}O7"
+   },
+   "prosa": {
+    "fracao_maxima": 0.7222,
+    "texto_ascii": ".P..o-m//l}j@.--..l{2'O7'/o3Pl%[%.-Oo.-.--oJ[Pe-oZl}O7"
+   },
+   "senha": {
+    "fracao_maxima": 0.4444,
+    "texto_ascii": ".P..o-m//l}j@.--..l{2'O7'/o3Pl%[%.-Oo.-.--oJ[Pe-oZl}O7"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "h",
+   "mapping": "837462519",
+   "count": "432",
+   "caminhos": 432,
+   "palavras": {
+    "fracao_maxima": 0.3704,
+    "texto_ascii": ".P..o-m2@}/Kl.--.oS///Qa2o\nP@%[%.-Oo.-.--oJ[Pe-.l/\rWO7"
+   },
+   "prosa": {
+    "fracao_maxima": 0.7222,
+    "texto_ascii": ".P..o-m2@}/Kl.--.oS///Qa2o\nP@%[%.-Oo.-.--oJ[Pe-.l/\rWO7"
+   },
+   "senha": {
+    "fracao_maxima": 0.4259,
+    "texto_ascii": ".P..o-m2@}/Kl.--.oS///Qa2o\nP@%[%.-Oo.-.--oJ[Pe-.l/\rWO7"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "h",
+   "mapping": "852967413",
+   "count": "864",
+   "caminhos": 864,
+   "palavras": {
+    "fracao_maxima": 0.2097,
+    "texto_ascii": ".z...-Na/-/-@y-?7K.-/-\\F-^'/.-gz-/%-.%.`-.-.K7K-(-.z\r-K-Z-/-{^"
+   },
+   "prosa": {
+    "fracao_maxima": 0.7812,
+    "texto_ascii": ".z...-Na/-/-@y-?k..-/-\\F-^'/.-gz-/%-.%.7--.-.Kk.-\r.-.z\r-K-Z-/-{^"
+   },
+   "senha": {
+    "fracao_maxima": 0.2656,
+    "texto_ascii": ".z...-Na/-/-@y-?7K.-/-72'-^'/.-gz-/%-.%.7--.-.K7K-(-.z\r-K-Z-/-{^"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "h",
+   "mapping": "852947613",
+   "count": "23040",
+   "caminhos": 23040,
+   "palavras": {
+    "fracao_maxima": 0.2456,
+    "texto_ascii": "7zk`o.//-/-@_-j.k-/-nF-^'/`gz-/%-7%K--`KK.`\r`7z\r-.`Z-/-{^"
+   },
+   "prosa": {
+    "fracao_maxima": 0.6349,
+    "texto_ascii": "7z7k-o.//-/-@_-j.k-/-nF-^'/7-gz-/%-7%K--7-KK.7-\r7-7z\r-.7-Z-/-{^"
+   },
+   "senha": {
+    "fracao_maxima": 0.3846,
+    "texto_ascii": "7z777-o.//-/-@_-j.77-/-nF-^'/7-gz-/%-7%K--7-KK.7-\r7-7z\r-.7-Z-/-{^"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "h",
+   "mapping": "857964213",
+   "count": "2160",
+   "caminhos": 2160,
+   "palavras": {
+    "fracao_maxima": 0.2203,
+    "texto_ascii": ".z...-Tk-`ly-/.B.-`'//`^/7K-bz-7%-.%n--.-n.B-(-.z\r-?-//:-{^"
+   },
+   "prosa": {
+    "fracao_maxima": 0.7619,
+    "texto_ascii": ".z...-Tk-7-ly-/.B.-7-'//7-^/k.-bz-7%-.%n--.-.?B-\r.-.z\r-?-//:-{^"
+   },
+   "senha": {
+    "fracao_maxima": 0.3016,
+    "texto_ascii": ".z...-T77-7-ly-/.B.-7-'//7-^/7K-bz-7%-.%n--.-n.B-(-.z\r-?-//:-{^"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "i",
+   "mapping": "943761258",
+   "count": "108864",
+   "caminhos": 108864,
+   "palavras": {
+    "fracao_maxima": 0.38,
+    "texto_ascii": "/7M71OKp^K7L-KB?Kk?--.`-5]/-7~)k\rOIK.2oK/P7\t j.._."
+   },
+   "prosa": {
+    "fracao_maxima": 0.6981,
+    "texto_ascii": "/7M]7-OKp-_.7L-KB?Kk?--.7--5]/-7~)k\rOIK.2oK/P7\t j.._."
+   },
+   "senha": {
+    "fracao_maxima": 0.5636,
+    "texto_ascii": "/7M71O7nM^K7L-K2n.K77?--.7--5]/-7~)77\rOIK.2oK/P7\t j.._."
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "i",
+   "mapping": "952346178",
+   "count": "9216",
+   "caminhos": 9216,
+   "palavras": {
+    "fracao_maxima": 0.2321,
+    "texto_ascii": "{z-.-/E]z/m`M/-]\t``-3/`//.-m.l-K.S-.2=-.-7]\n-Nu.-..%:km7"
+   },
+   "prosa": {
+    "fracao_maxima": 0.6667,
+    "texto_ascii": "{z-.-/E]z/m7-M/-]\t7-7--3/7-//.-m.l-K.S-.2=-.-7]\n-Nu.-..%:km7"
+   },
+   "senha": {
+    "fracao_maxima": 0.377,
+    "texto_ascii": "{z-.-/E76/m7-M/-]\t7-7--3/7-//.-m.l-K.S-.2=-.-7]\n-Nu.-..%:77m7"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "i",
+   "mapping": "952643178",
+   "count": "1536",
+   "caminhos": 1536,
+   "palavras": {
+    "fracao_maxima": 0.2308,
+    "texto_ascii": ".-z-{/E]z/m`M/-]\t``-3/`//{m[/-7O?--@29-7]\n-Ku{O%:km7"
+   },
+   "prosa": {
+    "fracao_maxima": 0.5357,
+    "texto_ascii": ".-z-{/E]z/m7-M/-]\t7-7--3/7-//{m[/-7O?--@29-7]\n-Ku{O%:km7"
+   },
+   "senha": {
+    "fracao_maxima": 0.4211,
+    "texto_ascii": ".-z-{/E76/m7-M/-]\t7-7--3/7-//{m[/-7O?--@29-7]\n-Ku{O%:77m7"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": false,
+   "aliases": "i",
+   "mapping": "943561278",
+   "count": "18144",
+   "caminhos": 18144,
+   "palavras": {
+    "fracao_maxima": 0.3846,
+    "texto_ascii": "-7M]aOKp/_.7L/KB?Kk?//.a/5]-/7~\r-k\rOIK.2oK-P7\t j.._."
+   },
+   "prosa": {
+    "fracao_maxima": 0.6731,
+    "texto_ascii": "-7M]aOKp/_.7L/KB?Kk?//.a/5]-/7~\r-k\rOIK.2oK-P7\t j.._."
+   },
+   "senha": {
+    "fracao_maxima": 0.5357,
+    "texto_ascii": "-7M73O7nM/_.7L/K2n.K77?//.a/5]-/7~\r-77\rOIK.2oK-P7\t j.._."
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "i",
+   "mapping": "167392548",
+   "count": "96",
+   "caminhos": 96,
+   "palavras": {
+    "fracao_maxima": 0.4364,
+    "texto_ascii": "yhyz-2nL/}./m^y?-///?.l2y7@~n7K_7m..ymm-yMyy,.-y//7nL.o"
+   },
+   "prosa": {
+    "fracao_maxima": 0.7091,
+    "texto_ascii": "yhyz-2nL/}./m^y?-///?.lG.7@~nk._7m..ymm-yMyy,.-y//7nL.o"
+   },
+   "senha": {
+    "fracao_maxima": 0.5636,
+    "texto_ascii": "yhyz-2nL/}./m^y?-///?.l2y7@~n7K_7m..ymm-yMyy4.-y//7nL.o"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "i",
+   "mapping": "163297548",
+   "count": "576",
+   "caminhos": 576,
+   "palavras": {
+    "fracao_maxima": 0.4727,
+    "texto_ascii": "yhyz-//./L@y}-^y/.-Ol.nl/y7'.|7K_7m..ymm-yMyy,.-yOK/L.n"
+   },
+   "prosa": {
+    "fracao_maxima": 0.7636,
+    "texto_ascii": "yhyz-//./L@y}-^y/.-Ol..U/y7'.|k._7m..ymm-yMyy,.-yOK/L.n"
+   },
+   "senha": {
+    "fracao_maxima": 0.5455,
+    "texto_ascii": "yhyz-//./L@y}-^y/.-Ol.nl/y7'.|7K_7m..ymm-yMyy4.-yOK/L.n"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "i",
+   "mapping": "162397548",
+   "count": "672",
+   "caminhos": 672,
+   "palavras": {
+    "fracao_maxima": 0.4717,
+    "texto_ascii": "yhyz-//./LWnm^y/.-2'.o'/y7l.|7K_7m..ymm-yMyy,.^nj/L.o"
+   },
+   "prosa": {
+    "fracao_maxima": 0.7778,
+    "texto_ascii": "yhyz-//./LWnm^y/.-2'.o'/y7l.|k._7m..ymm-yMyy,.-yD./L.o"
+   },
+   "senha": {
+    "fracao_maxima": 0.5741,
+    "texto_ascii": "yhyz-//./LWnm^y/.-2'.o'/y7l.|7K_7m..ymm-yMyy4.-y2K/L.o"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "i",
+   "mapping": "124967358",
+   "count": "11520",
+   "caminhos": 11520,
+   "palavras": {
+    "fracao_maxima": 0.48,
+    "texto_ascii": ".=..nPl/'xyjO.n/&kaGa/n^/='--?--o2no.Onznn6&nk-'<G"
+   },
+   "prosa": {
+    "fracao_maxima": 0.7843,
+    "texto_ascii": ".=...Vl/'xyjO..'&kaGa/n^/='--?--o2no.Onz.?=z&nk-'<G"
+   },
+   "senha": {
+    "fracao_maxima": 0.549,
+    "texto_ascii": ".=..nPl/'xyjO.n/R7aGa/n^/='--?--o2no.Onznn6&n77-'<G"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "i",
+   "mapping": "143297568",
+   "count": "3840",
+   "caminhos": 3840,
+   "palavras": {
+    "fracao_maxima": 0.3922,
+    "texto_ascii": "_h_z-//aM@_}-^_/`OlkU/_n/]a..7y.mk_mm-_L__A7^N[aM7\\"
+   },
+   "prosa": {
+    "fracao_maxima": 0.566,
+    "texto_ascii": "_h_z-//aM@_}-^_/7-OlkU/_.']a..7y.mk_mm-_L__A7-_O.aM7\\"
+   },
+   "senha": {
+    "fracao_maxima": 0.5273,
+    "texto_ascii": "_h_z-//aM@_}-^_/7-Ol77U/_n/73..7y.m77_mm^7L__A7^7O.aM7\\"
+   }
+  },
+  {
+   "field": "dbbi",
+   "reverse": true,
+   "aliases": "i",
+   "mapping": "142397568",
+   "count": "4032",
+   "caminhos": 4032,
+   "palavras": {
+    "fracao_maxima": 0.4,
+    "texto_ascii": "_h_z-//aMW\\m^_/`2'7N'/_.l]a..7y.mk_mm-_L__A`_BaM7N"
+   },
+   "prosa": {
+    "fracao_maxima": 0.5769,
+    "texto_ascii": "_h_z-//aMW\\m^_/7-2'7N'/_.l]a..7y.mk_mm-_L__A7-_BaM7N"
+   },
+   "senha": {
+    "fracao_maxima": 0.566,
+    "texto_ascii": "_h_z-//aMW\\m^_/7-2'7N'/_.l73..7y.m77_mm^7L__A7^7BaM7N"
+   }
+  }
+ ]
+}

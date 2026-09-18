@@ -1,0 +1,7 @@
+{
+ "conferido": true,
+ "casos": 26127728,
+ "aceitos": 45,
+ "grupos": 440,
+ "metodo": "accepts() de verify_ebcdic_codepoints.cjs (tabelas de 1–3 dígitos), mapeamentos aceitos iguais grupo a grupo"
+}
