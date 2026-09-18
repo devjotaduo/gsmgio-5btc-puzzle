@@ -1,0 +1,41 @@
+{
+ "hipotese": "classe de senha do hint marcado: registro pessoal-informal do criador",
+ "fonte": "falas públicas no grupo (creator_msgs_2026-07_09.txt), regra 6 respeitada",
+ "itens_ineditos": 41,
+ "disjuncao_com_familia6": "garantida: 0 colisões de item e todo candidato contém ao menos um item inédito",
+ "itens_prioritarios_antigos_reusados_em_pares": 44,
+ "candidatos": 19913,
+ "por_subfamilia": {
+  "F1_single": 131,
+  "F2_par_low": 1560,
+  "F2_par_verbatim": 1550,
+  "F2x_antigo_novo": 1760,
+  "F2x_novo_antigo": 1760,
+  "F3_tripla_prio": 12144,
+  "F4_roadmap": 1008
+ },
+ "controle_positivo_fase2": true,
+ "aes": 358434,
+ "senhas": 59739,
+ "paddings": 1449,
+ "paddings_esperados": 1405.62,
+ "z_padding": 1.16,
+ "candidatos_hard": [],
+ "brainwallet": {
+  "escalares": 19913,
+  "hits": []
+ },
+ "nulo": {
+  "senhas": 9000,
+  "aes": 54000,
+  "paddings": 220,
+  "paddings_esperados": 211.76,
+  "z_padding": 0.57
+ },
+ "nulo_candidatos": [],
+ "kit": {
+  "commit": "17be54b4f357f903301a030648b1b195c8d6267b",
+  "kit_sha256": "3810cbafa1936652bd6c30fc36b908453036d7d685ecd7f3ec0b33dba9cc1e67"
+ },
+ "script_sha256": "43cec7445392f29921eb8365d1339bf935d752b712501d769496138b3843b836"
+}
