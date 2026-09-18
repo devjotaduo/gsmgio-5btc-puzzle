@@ -1,0 +1,112 @@
+{
+ "principio": "o rótulo nomeia um objeto a construir; o resíduo seria esse objeto codificado",
+ "teto_algebrico": "o resíduo não tem `o`, logo sua string de dígitos não tem 0; em a1z26 só j(10) e t(20) geram 0 -> o texto-fonte não pode conter j nem t",
+ "controle": {
+  "sem_jt_nao_gera_zero": true,
+  "com_t_gera_zero": true,
+  "residuo_sem_zero": true
+ },
+ "alvos": [
+  "L84",
+  "L84_rev",
+  "L83",
+  "L83_rev"
+ ],
+ "fontes": {
+  "MISC.txt": {
+   "sha256": "223d7f7687bda05a",
+   "ocorrencias_de_choice": 5,
+   "janelas": 200,
+   "sobrevivem_ao_filtro_j_t": 13,
+   "fracao_que_sobrevive": 0.065,
+   "com_comprimento_60_ou_61": 0,
+   "reconstroem_o_residuo": 0,
+   "exemplos_sobreviventes": [
+    "neo",
+    "youneo",
+    "killyouneo",
+    "fuckinkillyouneo",
+    "llfuckinkillyouneo"
+   ]
+  },
+  "architect.txt": {
+   "sha256": "9c9f628ce1d5142f",
+   "ocorrencias_de_choice": 0,
+   "janelas": 0,
+   "sobrevivem_ao_filtro_j_t": 0,
+   "fracao_que_sobrevive": 0.0,
+   "com_comprimento_60_ou_61": 0,
+   "reconstroem_o_residuo": 0,
+   "exemplos_sobreviventes": []
+  }
+ },
+ "totais": {
+  "janelas": 200,
+  "sem_j_nem_t": 13,
+  "comprimento_compativel": 0,
+  "reconstrucoes": 0
+ },
+ "rotulos_literais": {
+  "lastwordsbeforearchichoice": {
+   "digitos": 37,
+   "tem_zero": true,
+   "letras_proibidas": [
+    "t"
+   ],
+   "reconstroi": false
+  },
+  "thispassword": {
+   "digitos": 20,
+   "tem_zero": true,
+   "letras_proibidas": [
+    "t"
+   ],
+   "reconstroi": false
+  },
+  "matrixsumlist": {
+   "digitos": 23,
+   "tem_zero": true,
+   "letras_proibidas": [
+    "t"
+   ],
+   "reconstroi": false
+  },
+  "yellowblueprimes": {
+   "digitos": 27,
+   "tem_zero": false,
+   "letras_proibidas": [],
+   "reconstroi": false
+  },
+  "causality": {
+   "digitos": 14,
+   "tem_zero": true,
+   "letras_proibidas": [
+    "t"
+   ],
+   "reconstroi": false
+  },
+  "thematrixhasyou": {
+   "digitos": 24,
+   "tem_zero": true,
+   "letras_proibidas": [
+    "t"
+   ],
+   "reconstroi": false
+  },
+  "enter": {
+   "digitos": 8,
+   "tem_zero": true,
+   "letras_proibidas": [
+    "t"
+   ],
+   "reconstroi": false
+  },
+  "yinyang": {
+   "digitos": 11,
+   "tem_zero": false,
+   "letras_proibidas": [],
+   "reconstroi": false
+  }
+ },
+ "script_sha256": "96df7f9250f2f02e741ef5e9c6eabf2da2640de30dde929237d2b00f76bfc412"
+}
