@@ -1,7 +1,9 @@
 {
  "roadmap": "yellowblueprimes -> matrixsumlist -> lastwords -> yinyang (encadeado)",
  "controle": {
-  "fusao_do_par_ok": true
+  "par_completo_dispara": true,
+  "acerto_isolado_registrado": true,
+  "regressao_do_bug_da_PR6": "coberta"
  },
  "pipelines_testados": 144,
  "leituras_faed": [
@@ -16,7 +18,16 @@
   "faed_h2/int10",
   "faed_h2/sha"
  ],
- "criterio": "par: {addr(dbbi), addr(faed)} superset {1GSMG, 17ucy}",
- "hits": [],
- "script_sha256": "af23fdb7f8a17ee79d1f579dca348a2f6157774c6cd8ae0968bd1692f6ba7aa9"
+ "criterio": "regra 1: TODO acerto isolado é registrado; o par é classificação adicional",
+ "hits_isolados": [],
+ "hits_par": [],
+ "limites_declarados": [
+  "o lado faed é FIXO: as 10 leituras não passam pelas transformações do roadmap",
+  "yinyang aqui NÃO mistura bytes dos dois campos; só reúne os alvos reconhecidos",
+  "lastwords entra como as LETRAS do rótulo, não como as palavras que ele referencia",
+  "não testa abertura AES das saídas dos pipelines, só o oráculo de chave",
+  "a correspondência dbbi->um alvo e faed->o outro é ASSUNÇÃO, não instrução demonstrada",
+  "ENDGAME §6: #39237 situa yin-yang na fase SEGUINTE à abertura AES; aqui ele entra antes"
+ ],
+ "script_sha256": "06097ad85e2c1a1baacda5872372bf754ec49b54cb00208e455c7672aeefb34d"
 }

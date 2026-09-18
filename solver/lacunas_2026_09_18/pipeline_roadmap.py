@@ -95,32 +95,54 @@ FAED = None
 
 
 def par(sec_d):
-    """addr do lado dbbi e de cada leitura faed; True se juntos cobrem os dois alvos."""
+    """Devolve (isolados, par). CORREÇÃO 2026-09-18 (auditoria da PR #6): a versão original só
+    devolvia o par completo, então um acerto de UM alvo pelo lado dbbi era descartado em silêncio —
+    violação da regra 1 do AGENTS.md, que manda o oráculo duro declarar qualquer privkey que bata com
+    um dos endereços. Agora todo acerto isolado é registrado, e o par é só uma classificação a mais."""
     ad = P.addr_de(sec_d)
+    isolados = [{"lado": "dbbi", "alvo": a, "sec": sec_d.hex()} for a in sorted(ad)]
+    achado = None
     for fn, sf in FAED.items():
-        juntos = ad | P.addr_de(sf)
-        if P.GSMG in juntos and P.UCY in juntos:
-            return {"faed_leitura": fn, "dbbi_da": sorted(ad), "faed_da": sorted(P.addr_de(sf))}
-    return None
+        af = P.addr_de(sf)
+        isolados += [{"lado": "faed", "leitura": fn, "alvo": a, "sec": sf.hex()} for a in sorted(af)]
+        if achado is None and P.GSMG in (ad | af) and P.UCY in (ad | af):
+            achado = {"faed_leitura": fn, "dbbi_da": sorted(ad), "faed_da": sorted(af)}
+    return isolados, achado
+
+
+def _limpar_plantios():
+    reais = {bytes.fromhex(x) for x in P.G.O.TARGET_H160S}
+    for h in [h for h in list(P.TGT) if h not in reais]:
+        del P.TGT[h]
 
 
 def controle():
-    """Planta os h160 de dois secrets como alvos e confirma que a fusão do par dispara."""
+    """(a) o par completo dispara; (b) CORREÇÃO: um acerto de UM só alvo, sem o outro lado, também
+    é registrado — era exatamente o caso que a versão original engolia."""
     global FAED
     sd = hashlib.sha256(b"pipe-d").digest()
     sf = hashlib.sha256(b"pipe-f").digest()
     P.TGT[P.h160(P.PublicKey.from_valid_secret(sd).format(True))] = P.GSMG
-    hf = P.h160(P.PublicKey.from_valid_secret(sf).format(False))
-    P.TGT[hf] = P.UCY
+    P.TGT[P.h160(P.PublicKey.from_valid_secret(sf).format(False))] = P.UCY
     FAED = {"plantado": sf}
     try:
-        ok = par(sd)
+        iso, achado = par(sd)
     finally:
-        for h in [h for h, a in list(P.TGT.items()) if a in (P.GSMG, P.UCY) and h not in
-                  {bytes.fromhex(x) for x in P.G.O.TARGET_H160S}]:
-            del P.TGT[h]
-    assert ok, "controle do pipeline falhou"
-    return {"fusao_do_par_ok": True}
+        _limpar_plantios()
+    assert achado and iso, "controle do par falhou"
+    # (b) só o lado dbbi acerta; o faed não tem nada plantado
+    so_d = hashlib.sha256(b"pipe-so-dbbi").digest()
+    P.TGT[P.h160(P.PublicKey.from_valid_secret(so_d).format(True))] = P.GSMG
+    FAED = {"nada": hashlib.sha256(b"pipe-nada").digest()}
+    try:
+        iso2, achado2 = par(so_d)
+    finally:
+        _limpar_plantios()
+    assert achado2 is None and any(x["lado"] == "dbbi" and x["alvo"] == P.GSMG for x in iso2), \
+        "o acerto isolado NÃO foi registrado — o bug da PR #6 persiste"
+    assert len(P.TGT) == 2, P.TGT
+    return {"par_completo_dispara": True, "acerto_isolado_registrado": True,
+            "regressao_do_bug_da_PR6": "coberta"}
 
 
 def main():
@@ -128,19 +150,30 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     ctl = controle()
     FAED = escalares_faed()
-    hits, n_pipelines = [], 0
+    hits, isolados, n_pipelines = [], [], 0
     for p1n, L1 in passo1().items():
         for p2n, L2 in passo2(L1):
             for p3n, L3 in passo3(L2):
                 for rn, sec in reduzir(L3).items():
                     n_pipelines += 1
-                    got = par(sec)
+                    iso, got = par(sec)
+                    nome = f"{p1n}|{p2n}|{p3n}|{rn}"
+                    isolados += [{"pipeline": nome, **x} for x in iso]
                     if got:
-                        hits.append({"pipeline": f"{p1n}|{p2n}|{p3n}|{rn}", **got})
+                        hits.append({"pipeline": nome, **got})
     res = {"roadmap": "yellowblueprimes -> matrixsumlist -> lastwords -> yinyang (encadeado)",
            "controle": ctl, "pipelines_testados": n_pipelines,
-           "leituras_faed": list(FAED), "criterio": "par: {addr(dbbi), addr(faed)} superset {1GSMG, 17ucy}",
-           "hits": hits, "script_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
+           "leituras_faed": list(FAED),
+           "criterio": "regra 1: TODO acerto isolado é registrado; o par é classificação adicional",
+           "hits_isolados": isolados, "hits_par": hits,
+           "limites_declarados": [
+               "o lado faed é FIXO: as 10 leituras não passam pelas transformações do roadmap",
+               "yinyang aqui NÃO mistura bytes dos dois campos; só reúne os alvos reconhecidos",
+               "lastwords entra como as LETRAS do rótulo, não como as palavras que ele referencia",
+               "não testa abertura AES das saídas dos pipelines, só o oráculo de chave",
+               "a correspondência dbbi->um alvo e faed->o outro é ASSUNÇÃO, não instrução demonstrada",
+               "ENDGAME §6: #39237 situa yin-yang na fase SEGUINTE à abertura AES; aqui ele entra antes"],
+           "script_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
     json.dump(res, open(OUT / "pipeline_summary.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(json.dumps(res, ensure_ascii=False, indent=1))
 

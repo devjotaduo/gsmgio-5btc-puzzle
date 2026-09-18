@@ -1,0 +1,41 @@
+{
+ "item": "A1: raw32 sem unpad do corpus em SMALL/TAIL32",
+ "corpus_pkl_sha256": "a8dc8c5d1e11bcce56bea132e2211855bd89d5367b297845c4e205040a34b350",
+ "bases": 466310,
+ "formas": 1272149,
+ "blobs": [
+  "SMALL",
+  "TAIL32"
+ ],
+ "kdf": [
+  "sha256",
+  "md5"
+ ],
+ "aes": 5088596,
+ "raw32_janelas": 498682408,
+ "paddings": 19833,
+ "paddings_esperados": 19955.28,
+ "z_padding": -0.87,
+ "candidatos": [],
+ "controles": {
+  "alvos": [
+   "a9553269572a317e39f0f518cb87c1a0ee1dbae4",
+   "4bc468447fe1b048ad030a2f9a125478eabc4ed6"
+  ],
+  "raw32_plantado_em_plaintext_sem_unpad": {
+   "offset": 17,
+   "orient": "BE",
+   "achado": true
+  }
+ },
+ "alvos": {
+  "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe": "a9553269572a317e39f0f518cb87c1a0ee1dbae4",
+  "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa": "4bc468447fe1b048ad030a2f9a125478eabc4ed6"
+ },
+ "scan_sha256": "17e2b3f571524130001b2354e5f73f0eeb54362bcee410ef55cfd7fb7026fdc8",
+ "script_sha256": "ca64847ec715b605eba8783c3d190530c31c77d93358e8469b9ce1d3165f94f9",
+ "kit": {
+  "sha256": "3810cbafa1936652bd6c30fc36b908453036d7d685ecd7f3ec0b33dba9cc1e67"
+ },
+ "segundos": 1577.2
+}

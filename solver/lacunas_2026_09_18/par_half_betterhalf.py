@@ -104,14 +104,18 @@ def fontes():
 
 
 def par_bate(secs_d, secs_f):
-    """Para cada op comum às duas fontes, o conjunto {addr(O(dbbi)), addr(O(faed))} contém os dois alvos?"""
-    achados = []
+    """Devolve (isolados, pares). CORREÇÃO 2026-09-18 (auditoria da PR #6, mesmo defeito aqui): antes
+    só o par completo era devolvido, então um acerto de UM alvo por um dos lados sumia — a regra 1 do
+    AGENTS.md manda declarar qualquer privkey que bata com um dos endereços. Agora todo acerto isolado
+    é registrado e o par é só uma classificação adicional."""
+    isolados, achados = [], []
     for op in secs_d.keys() & secs_f.keys():
         ad, af = addr_de(secs_d[op]), addr_de(secs_f[op])
-        juntos = ad | af
-        if GSMG in juntos and UCY in juntos:
+        isolados += [{"op": op, "lado": "dbbi", "alvo": a, "sec": secs_d[op].hex()} for a in sorted(ad)]
+        isolados += [{"op": op, "lado": "faed", "alvo": a, "sec": secs_f[op].hex()} for a in sorted(af)]
+        if GSMG in (ad | af) and UCY in (ad | af):
             achados.append({"op": op, "dbbi_da": sorted(ad), "faed_da": sorted(af)})
-    return achados
+    return isolados, achados
 
 
 def controle():
@@ -123,33 +127,49 @@ def controle():
     TGT[hd] = GSMG
     TGT[hf] = UCY
     try:
-        ok = par_bate({"id/id": sd}, {"id/id": sf})
+        iso, ok = par_bate({"id/id": sd}, {"id/id": sf})
     finally:
         del TGT[hd], TGT[hf]
-    assert len(ok) == 1, ok
-    return {"detector_do_par_ok": True}
+    assert len(ok) == 1 and len(iso) == 2, (iso, ok)
+    # regressão do bug: só um lado acerta -> sem par, MAS o isolado tem de ser registrado
+    so_d = hashlib.sha256(b"par-controle-so-dbbi").digest()
+    h = h160(PublicKey.from_valid_secret(so_d).format(True))
+    TGT[h] = GSMG
+    try:
+        iso2, ok2 = par_bate({"id/id": so_d}, {"id/id": hashlib.sha256(b"nada").digest()})
+    finally:
+        del TGT[h]
+    assert not ok2 and any(x["lado"] == "dbbi" and x["alvo"] == GSMG for x in iso2), (iso2, ok2)
+    assert len(TGT) == 2, TGT
+    return {"detector_do_par_ok": True, "acerto_isolado_registrado": True,
+            "regressao_do_bug_da_PR6": "coberta"}
 
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     ctl = controle()
     d_src, f_src = fontes()
-    hits, pares_testados = [], 0
+    hits, isolados, pares_testados = [], [], 0
     detalhe = {}
     for (dn, ds), (fn, fs) in product(d_src.items(), f_src.items()):
         secs_d, secs_f = escalares(ds), escalares(fs)
         comuns = secs_d.keys() & secs_f.keys()
         pares_testados += len(comuns)
-        got = par_bate(secs_d, secs_f)
+        iso, got = par_bate(secs_d, secs_f)
         detalhe[f"{dn}×{fn}"] = len(comuns)
+        isolados += [{"dbbi_fonte": dn, "faed_fonte": fn, **x} for x in iso]
         for g in got:
             hits.append({"dbbi_fonte": dn, "faed_fonte": fn, **g})
     res = {"reframe": "half and better half = 1GSMG (half) e 17ucy (better half); a fase dá o PAR de chaves",
            "alvos": {"half_1GSMG": GSMG, "better_half_17ucy": UCY},
            "controle": ctl, "pares_de_fontes": len(d_src) * len(f_src),
            "operacoes_por_par": detalhe, "ops_de_par_testadas": pares_testados,
-           "criterio": "mesma operação O: {addr(O(dbbi)), addr(O(faed))} ⊇ {1GSMG, 17ucy} (inclui cruzado)",
-           "hits": hits, "kit": G.__file__,
+           "criterio": "regra 1: TODO acerto isolado é registrado; o par é classificação adicional",
+           "hits_isolados": isolados, "hits_par": hits,
+           "assuncao_nao_demonstrada": "que 'half'=1GSMG e 'better half'=17ucy, e que dbbi e faed "
+           "correspondam a cada um: o criador glosou 'better half' como a esposa, o que fala de "
+           "PERTENCIMENTO e não especifica formato nem qual campo gera qual chave",
+           "kit": G.__file__,
            "script_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
     json.dump(res, open(OUT / "summary.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(json.dumps({k: v for k, v in res.items() if k != "operacoes_por_par"}, ensure_ascii=False, indent=1))

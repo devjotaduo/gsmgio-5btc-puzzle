@@ -17,10 +17,20 @@ Chaves no plural. E o prêmio tem **dois** endereços:
 - `1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe` — 1,25 BTC, 126 transações → a *half*;
 - `17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa` — 3,75 BTC, nunca gastou, 3× maior → a *better half*.
 
-Consequência que nunca foi o centro de uma frente: **a SalPhaseIon não produz uma senha para abrir um
-blob AES — produz duas chaves privadas de uma vez.** Toda campanha até 18/09 tratou os dois endereços
-como filtro de saída de escalares soltos (a §3.11 e a frente `retro_17ucy` inclusive). Ninguém montou
-uma operação que emita o **par** `(chave de 1GSMG, chave de 17ucy)` e o valide junto.
+Consequência **hipotética** (e é aqui que este relatório errou na primeira versão): que a SalPhaseIon
+produza duas chaves de uma vez, `dbbi` gerando uma e `faed` a outra. Toda campanha até 18/09 tratou os
+dois endereços como filtro de saída de escalares soltos, e ninguém montou uma operação que emita o
+**par** e o valide junto — isso continua verdade. Mas a ponte entre a frase e o formato **não está
+demonstrada**, e o próprio `ENDGAME.md` §3.11 já advertia:
+
+> que a chave do segundo endereço esteja em algum envelope **não** está provado: o endereço é de 2020
+> e o criador glosou "better half" como a esposa.
+
+Ou seja, a frase fala de **pertencimento** — de quem são as chaves —, não de formato. Dela não se
+deduz que os dois endereços observados sejam as duas saídas exigidas, nem que `dbbi` e `faed`
+correspondam respectivamente a cada uma. Essa correspondência foi **assunção deste modelo**, e está
+marcada como tal no `summary.json`. É exatamente o tipo de leitura que converte uma expressão pessoal
+em especificação técnica sem autorização do texto.
 
 Dois indícios reforçam que `dbbi` e `faed` são as duas fontes:
 
@@ -107,10 +117,36 @@ histórico), **encadeá-los**, a saída de um virando a entrada do próximo, ter
    somada à lista;
 4. `yinyang` → funde o lado `dbbi` com `faed` (metades, XOR das metades, cru/sha) e reduz a 32 B cada.
 
-144 cascatas sob o critério do par: **0**. Os três últimos tokens do roadmap
-(`wewontgiveawaythepassword`, `itsinfrontofyoureyesbutyourenotseeingit`, `verylaststep…`) são
-meta-comentário, não operações. Isso fecha a composição de **primeira ordem**; ampliar para milhares
-de variantes por passo seria voltar à força bruta, não compor com intenção — e o muro não é de volume.
+144 cascatas: **0**. Os três últimos tokens do roadmap (`wewontgiveawaythepassword`,
+`itsinfrontofyoureyesbutyourenotseeingit`, `verylaststep…`) são meta-comentário, não operações.
+
+### Correção de 2026-09-18: defeito de oráculo e alcance reduzido
+
+Uma auditoria independente do script encontrou um **defeito real**, confirmado no código e corrigido:
+`par()` só devolvia o par completo, de modo que um acerto de **um** dos alvos pelo lado `dbbi`, sem o
+outro lado, seria descartado em silêncio. Isso viola a regra 1 do `AGENTS.md`, que manda o oráculo
+duro declarar qualquer privkey que bata com um dos endereços. O mesmo padrão estava em
+`par_half_betterhalf.py`.
+
+Ambos foram corrigidos: **todo acerto isolado é registrado** e o par virou classificação adicional.
+Os dois controles agora incluem uma **regressão do bug** (um lado acerta, o outro não: o isolado tem
+de aparecer). Reexecutados, os dois dão `hits_isolados: []` e `hits_par: []` — **nenhum acerto foi
+mascarado**, o negativo factual se mantém. Mas o que o negativo *permite concluir* é menor do que
+a versão anterior deste relatório afirmava. Limites agora declarados no próprio `summary.json`:
+
+- **o lado `faed` é fixo**: as 10 leituras são calculadas uma vez, fora dos laços, e não passam pelas
+  transformações do roadmap — só o lado `dbbi` é transformado;
+- **`yinyang` aqui não mistura os bytes** dos dois campos; apenas reúne os alvos reconhecidos de cada
+  lado. Não é uma fusão, é uma verificação conjunta;
+- **`lastwords` entra como as letras do rótulo**, convertidas em números — não como as palavras que o
+  rótulo *referencia*;
+- **não há teste de abertura AES** das saídas dos pipelines, só o oráculo de chave;
+- **a correspondência `dbbi`→um alvo, `faed`→o outro é assunção**, não instrução demonstrada.
+
+Consequência honesta: ampliar só as transformações de `dbbi`, mantendo essas dez leituras fixas de
+`faed`, não é um teste informativo. O negativo vale para os encadeamentos definidos, com rótulos
+literais e lado `faed` fixo — **não** fecha a montagem de uma senha intermediária nem autentica a
+interpretação de `yinyang`.
 
 ## A "transformação não identificada" do resíduo, atacada de frente (negativo)
 
@@ -161,6 +197,44 @@ Tempo: 2,6 s.
 
 Isto encerra o item "o que `zeroed out` zera" da *ligação desconhecida* de §6, não por amostragem, mas
 por exaustão do espaço.
+
+## A ordem importa: `yinyang` pode ser do estágio seguinte
+
+O `ENDGAME.md` §6 registra que a versão exportada de 28/04/2025 (#39237) **situa yin-yang na fase
+seguinte à abertura de AES**, e adverte que isso não confirma o token como parte literal da senha
+atual. Os dois scripts deste diretório fazem o oposto: colocam `yinyang` **antes** de qualquer
+abertura, como operação que emite chave direto dos campos.
+
+Se a reconstrução do §6 estiver certa, a ordem a priorizar é
+
+> obter o material → **abrir uma etapa AES** → interpretar yin-yang
+
+e não
+
+> interpretar yin-yang sobre os campos atuais → emitir duas chaves.
+
+Isto é hipótese de **ordem**, não fórmula: a base é documental e foi lida no repositório, não no export
+original da conversa. Mas basta para dizer que o negativo destes scripts não autentica a interpretação
+de `yinyang` que eles próprios assumem.
+
+## Referência não é necessariamente ingrediente
+
+Distinção que os dois scripts atropelam. A página dá rótulos — `matrixsumlist`,
+`lastwordsbeforearchichoice`, `thispassword` — que são decodificações confirmadas. Mas isso não
+determina que **as letras deles** sejam o material criptográfico. Eles podem **nomear objetos a
+obter**: uma lista, um trecho de texto, uma senha.
+
+Usar `lastwordsbeforearchichoice` como sequência numérica não é o mesmo que identificar *quais são as
+últimas palavras antes da escolha* e usar esse conteúdo. Os scripts daqui implementam a primeira
+leitura; o negativo deles não alcança a segunda.
+
+Ressalva para não inflar isso: outras campanhas **já** testaram recortes reais das falas, inclusive
+fronteiras diferentes para a escolha do Arquiteto (§4-C: 70.340 senhas, 474 k AES). Então "usar a fala
+em vez do rótulo" não é descoberta inédita nem justifica repetir aqueles recortes. O que continua em
+aberto é a **ligação justificada** entre o referente correto, o resultado de `matrixsumlist` e a
+montagem da entrada seguinte — e, antes da operação, saber de cada trecho o que é **instrução**, o que
+é **dado** e o que é **referência a outro objeto**. Transformar tudo em número produz um encadeamento
+computacional que pode não ser o encadeamento pretendido.
 
 ## O que isto muda para quem continuar
 
