@@ -240,3 +240,43 @@ e o restante morre por contagem de dígitos.
 família, porque quase todo texto em inglês contém `t`. Não fecha outras codificações (ASCII decimal,
 o método `To_Base(16)` da página, bases não decimais), nem textos em outras línguas, nem objetos que
 não sejam texto.
+
+## 4. ASCII decimal: fechada por impossibilidade estrutural
+
+Na seção 3 declarei a codificação **ASCII decimal** (cada caractere vira seu código de 2 ou 3 dígitos)
+como não fechada. Fechei ([`residuo_ascii_decimal.json`](residuo_ascii_decimal.json)), e o resultado é
+mais forte que o esperado: **não existe nenhuma segmentação válida**.
+
+**Primeiro, o argumento do zero refeito para esta codificação.** O resíduo não tem `o`, logo nenhum
+código pode conter o dígito 0. Nas minúsculas isso proíbe `defghijklmnx` — 12 letras, entre elas **`e`**,
+a mais frequente do inglês. Restam 77 dos 95 códigos imprimíveis.
+
+**Depois, a impossibilidade estrutural**, que dispensa qualquer varredura:
+
+| dígito inicial | códigos de 2 dígitos | de 3 dígitos | pode iniciar? |
+|---|---|---|---|
+| `1` | 0 | 15 (111–119, 121–126) | sim |
+| **`2`** | **0** (21–29 < 32; 20 tem zero) | **0** (2xx > 126) | **nunca** |
+| `3`–`9` | 8 ou 9 | 0 | sim |
+
+O dígito **`2`** não pode iniciar código algum. E o resíduo **contém `2`** — a letra `b` — nas posições
+19 e 36. Todo `2` teria de ser consumido como dígito não-inicial, e a aritmética dos comprimentos (só
+blocos de 2 ou 3) não permite acomodá-los.
+
+Enumeração exaustiva do DAG de segmentação nos quatro alvos:
+
+| alvo | dígitos | caminhos |
+|---|---|---|
+| L84 | 61 | **0** |
+| L84 invertido | 61 | **0** |
+| L83 | 60 | **0** |
+| L83 invertido | 60 | **0** |
+
+Não é "nenhum caminho é legível" — é **não existe caminho**. **Controle:** um texto cujos códigos não
+contêm zero (`rasp copa`) é recuperado pelo mesmo grafo, com fração 1.
+
+**Alcance.** Fecha por completo a leitura ASCII-decimal do resíduo, nos dois campos e nos dois sentidos.
+Junto com a seção 3 (a1z26) e com o método `To_Base(16)` da página — já fechado no PR #7, e exaustivo
+porque é bijetivo e há só quatro alvos —, as três codificações decimais naturais do resíduo estão
+encerradas. Continuam fora: bases não decimais, bijeção arbitrária dígito↔símbolo e objetos que não
+sejam texto.
