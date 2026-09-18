@@ -77,6 +77,25 @@ próximos" reconhecem e que nenhuma varredura força. `itsinfrontofyoureyes…` 
 visível na página basta; falta a leitura certa, não um dado externo. Se for esse o caso, mais busca não
 fecha o último passo, por melhor que seja o oráculo.
 
+## O pipeline ordenado do roadmap (negativo)
+
+Segundo passo da mesma ideia: em vez de testar os tokens do roadmap isolados (como fez todo o
+histórico), **encadeá-los**, a saída de um virando a entrada do próximo, terminando na fusão com
+`faed` que emite o par.
+[`solver/lacunas_2026_09_18/pipeline_roadmap.py`](../../solver/lacunas_2026_09_18/pipeline_roadmap.py):
+
+1. `yellowblueprimes` → dado inicial: resíduo de `dbbi` (L84/L83, comprovado) ou `dbbi` inteiro;
+2. `matrixsumlist` → operador: as 28 somas da matriz sobre a lista (soma/subtração mod 10, concatenar,
+   selecionar);
+3. `lastwordsbeforearchichoice` → keystream: essa string (e `thispassword`, `matrixsumlist`) em a1z26,
+   somada à lista;
+4. `yinyang` → funde o lado `dbbi` com `faed` (metades, XOR das metades, cru/sha) e reduz a 32 B cada.
+
+144 cascatas sob o critério do par: **0**. Os três últimos tokens do roadmap
+(`wewontgiveawaythepassword`, `itsinfrontofyoureyesbutyourenotseeingit`, `verylaststep…`) são
+meta-comentário, não operações. Isso fecha a composição de **primeira ordem**; ampliar para milhares
+de variantes por passo seria voltar à força bruta, não compor com intenção — e o muro não é de volume.
+
 ## O que isto muda para quem continuar
 
 - **Reorientar o oráculo para o par**, não para escalar-contra-alvo. `par_half_betterhalf.py` é o
