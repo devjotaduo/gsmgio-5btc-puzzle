@@ -1,0 +1,93 @@
+{
+  "aes": {
+    "controls": {
+      "segmentations": [
+        83,
+        84
+      ],
+      "original_144_rows_independent_match": true,
+      "phase2_openssl_match": true,
+      "phase2_length": 648,
+      "phase2_sha256": "e2f9dd65604a3231f8b3301724e8d713a88fffc4b6c7c4aeeb20f58a582b593a",
+      "ecc_independent_checks": 5,
+      "raw_nested_control": true
+    },
+    "original_paths": 144,
+    "original_unique_scalars": 136,
+    "original_single_target_hits": 0,
+    "distinct_intermediate_materials": 544,
+    "distinct_passwords": 1496,
+    "aes_decisions": 8976,
+    "counts": {
+      "SMALL:sha256": 1496,
+      "SMALL:md5": 1496,
+      "TAIL32:sha256": 1496,
+      "TAIL32:md5": 1496,
+      "COSMIC:sha256": 1496,
+      "COSMIC:md5": 1496
+    },
+    "padding_valid": 35,
+    "triage_records": 0,
+    "openssl_raw_crosschecks": 12,
+    "raw_bytes_preserved": 4452096,
+    "raw32_windows_per_order": 4173840,
+    "runtime_seconds": 9.691,
+    "scope": "faithful PR6 single target and all intermediate representations; AES-256-CBC EVP SHA256/MD5; raw/no-padding included"
+  },
+  "native_crosscheck": {
+    "native_EVP_BytesToKey_and_decrypt_crosschecks": 8976,
+    "all_raw_bytes_equal": true,
+    "padding_valid": 35,
+    "binary_password_decryptions_included": 4452,
+    "counts": {
+      "SMALL:sha256": 1496,
+      "SMALL:md5": 1496,
+      "TAIL32:sha256": 1496,
+      "TAIL32:md5": 1496,
+      "COSMIC:sha256": 1496,
+      "COSMIC:md5": 1496
+    }
+  },
+  "raw_scan": {
+    "completed_batches": 18,
+    "records": 8976,
+    "raw32_checks_BE_LE": 8347680,
+    "hits": [],
+    "all_input_hashes_match": true
+  },
+  "direct_scan": {
+    "fixed_base_controls": 128,
+    "records": 1496,
+    "hits": [],
+    "raw32_checks_BE_LE": 61086,
+    "valid_scalars": 61086,
+    "duration_seconds": 1.053,
+    "threads": 4,
+    "contains_all_original_reductions_and_base_materials": true,
+    "input_sha256": "1def3eb81f8e012d1e363ea33a32af1b25ade0767704b5431da31ca39af58229"
+  },
+  "sum28": {
+    "inverse_models": 524288,
+    "forward_weight_profile_pairs": 1564864,
+    "ordered_strings_matching_target_length": 240928,
+    "positive_inverse_controls": 64,
+    "positive_forward_controls": 32,
+    "results_agree": true,
+    "exact_numeric_reconstructions": 0,
+    "negative_scope": "only fixed a1i9/global zeros, 16 natural orders, binary backgrounds, 4 special-cell choices; no arbitrary bijection or permutation",
+    "inverse_results_sha256": "3f34a46500086b5f85a5c074b9a5701da35bcbe8e44010ee9bcfc84a2644a3f2",
+    "forward_results_sha256": "befeb1b57d394ba43f7e685643e9752abf429d240810f9cd6c2a723d0b36ae36"
+  },
+  "any_validated_password_or_key": false,
+  "python": "3.13.5",
+  "openssl_cli": "OpenSSL 3.5.5 27 Jan 2026 (Library: OpenSSL 3.5.5 27 Jan 2026)",
+  "scanner_source_sha256": "0e1d3a7a9d2cde6048f5b5a14b5101208780cb15a6b85b4421d6c44d268dfa35",
+  "scanner_binary_sha256": "fff52faf556f01e74904a2d71e9970e3d46b7f5a7931c5002821a9598712ca1f",
+  "math_source_sha256": "4f16b575941f13d1fe19d7d325a2aa95bee9344a6b7286eab318d075b1ed76d3",
+  "forward_math_source_sha256": "3e091b7456151d37a8e1dd50faf734efc4fd46fc6b0aed74183886ca34cd1306",
+  "execution_notes": [
+    "The original PR6 was reimplemented from connector-read source, not run unmodified.",
+    "One grouped execution timed out; its incomplete batch was rerun in full and only completed reconciled batches count.",
+    "An initial synthetic-control expected offset was corrected from hard-coded 16 to actual prefix length 17; both planted keys then recovered exactly."
+  ]
+}

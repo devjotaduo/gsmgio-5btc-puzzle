@@ -1,0 +1,53 @@
+{
+ "papel": "verificação independente do coordenador sobre o pacote gsmg_intermediarios_2026-09-18",
+ "metodo": "código próprio e o kit do repositório (gsmg_common), sem executar os scripts da entrega",
+ "integridade": {
+  "MANIFEST.sha256": {"conferem": 91, "divergem": 0, "ausentes": 0}
+ },
+ "dados_de_entrada_contra_o_kit": {
+  "dbbi": "idêntico (91 símbolos)",
+  "faed": "idêntico (570 símbolos)",
+  "SMALL": "salt e ciphertext idênticos (80 B)",
+  "COSMIC": "salt e ciphertext idênticos (1328 B)",
+  "TAIL32": "salt e ciphertext idênticos (80 B)",
+  "grade_de_cores": "14×14 idêntica a G.COLORED: 15 azuis, 9 amarelas, 1 #FEFEFE, mesmas posições, 0 divergências; K+B = 86+15 = 101 = os uns da matriz"
+ },
+ "aes_reproduzido_com_o_kit_do_repo": {
+  "amostra": 500,
+  "divergencias_no_raw_sem_unpad": 0,
+  "divergencias_no_plaintext_despadded": 0,
+  "paddings_na_amostra": {"meu": 3, "arquivo": 3},
+  "paddings_no_conjunto_todo": 35,
+  "registros_com_triagem_nao_vazia": 0
+ },
+ "sum28_varrido_com_codigo_proprio": {
+  "alvos_numericos_distintos": {"relato": 2046, "meu": 2046},
+  "combinacoes_peso_perfil": {"relato": 1564864, "meu": 1564864},
+  "construcoes_ordenadas_comprimento_compativel": {"relato": 240928, "meu": 240928},
+  "reconstrucoes_exatas": {"relato": 0, "meu": 0},
+  "segundos": 8.6,
+  "nota": "varri o método direto (todos os pesos permitidos pelo limite), que cobre o mesmo espaço do método inverso por outro caminho"
+ },
+ "raw32_varrido_com_scanner_proprio": {
+  "parser": "próprio: [uint32 length][bytes] por registro",
+  "registros": 8976,
+  "bytes": 4452096,
+  "comprimentos_conferem_com_o_indice": true,
+  "janelas_validas_BE_LE": {"relato": 8347680, "meu": 8347680},
+  "hits": 0,
+  "controle_plantado": {"BE_offset_17": true, "LE_offset_9": true, "sem_hit_antes_do_plantio": true},
+  "segundos": 31.7
+ },
+ "pr6_reproduzido_no_repo": {
+  "caminhos": 144,
+  "escalares_distintos": 136,
+  "acertos_isolados": 0,
+  "nota": "o commit lido pela entrega (1dba50a1) é anterior à correção ef55ccf, logo a reimplementação partiu da versão COM o defeito do critério do par e chegou à mesma conclusão"
+ },
+ "nao_reproduzido_aqui": [
+  "a reconferência por EVP nativo de libcrypto (usei pycryptodome, implementação distinta da deles)",
+  "a calibração de 100 réplicas (227 paddings vs 225,88 esperados)",
+  "os controles internos do scanner deles (128 escalares vs EC_POINT_mul; 5 pontos vs Python)",
+  "o método inverso do sum28 por sistemas lineares (524.288 modelos)"
+ ]
+}

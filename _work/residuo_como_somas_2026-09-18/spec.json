@@ -1,0 +1,46 @@
+{
+  "hypothesis": "After removing prime markers, the residue IS a concatenation of 28 matrix color sums, not a keystream to transform.",
+  "source_prior_report": "_work/symbolic_color_sums_2026-09-16/RELATORIO.md explicitly excludes 28-value lists from its scope.",
+  "prior_report_git_blob": "e9267733d5efe194979b4ec5abb33066aef6284e",
+  "fields": [
+    "residue L83",
+    "residue L84"
+  ],
+  "directions": [
+    "forward",
+    "reverse"
+  ],
+  "positive_digit_map": "a=1,...,i=9; any global subset may instead mean 0",
+  "global_zero_subsets": 512,
+  "orders": [
+    "R|r1|c1|concat",
+    "R|r1|c1|interleave",
+    "C|r1|c1|concat",
+    "C|r1|c1|interleave",
+    "R|r1|c-1|concat",
+    "R|r1|c-1|interleave",
+    "C|r1|c-1|concat",
+    "C|r1|c-1|interleave",
+    "R|r-1|c1|concat",
+    "R|r-1|c1|interleave",
+    "C|r-1|c1|concat",
+    "C|r-1|c1|interleave",
+    "R|r-1|c-1|concat",
+    "R|r-1|c-1|interleave",
+    "C|r-1|c-1|concat",
+    "C|r-1|c-1|interleave"
+  ],
+  "weights": "blue p>=2, yellow q>=2, integer and uniform; black/white independently 0 or 1",
+  "special_white": "four declared choices: 0, 1, same as blue p, or same as yellow q; not an arbitrary independent integer",
+  "numerical_bound": "If a color occurs in k of 28 sums, its weight has at most 1+floor((L-28)/k) digits. Additional monotone length bounds are computed, not guessed.",
+  "success": "Exact reproduction of entire observed numeric string; candidates would then require further puzzle validation.",
+  "exclusions": [
+    "arbitrary 28! order",
+    "arbitrary digit bijections",
+    "per-occurrence zero aliases",
+    "other bases",
+    "arbitrary independent integer for fifth color",
+    "nonlinear transforms"
+  ],
+  "null": "N/A: exact equations and exhaustive finite coverage, no language score."
+}

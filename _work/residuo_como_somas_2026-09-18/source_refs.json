@@ -1,0 +1,37 @@
+{
+  "repository": "devjotaduo/gsmgio-5btc-puzzle",
+  "pr6": {
+    "number": 6,
+    "head_commit": "1dba50a1becb7ee68faee4fe46a25232fbe9c0cd",
+    "merge_commit": "8e9af03a81f0a225396a1cb6d1b305782591c5bc"
+  },
+  "read_sources": [
+    {
+      "path": "solver/lacunas_2026_09_18/pipeline_roadmap.py",
+      "blob": "e7aa6cbfee3ceb4fb559fc0f26d275f32d91592a",
+      "ref": "1dba50a1becb7ee68faee4fe46a25232fbe9c0cd"
+    },
+    {
+      "path": "solver/lacunas_2026_09_18/par_half_betterhalf.py",
+      "blob": "0fc05dbb325ed1b0d588e1592d2289a19dd91cf1",
+      "ref": "1dba50a1becb7ee68faee4fe46a25232fbe9c0cd"
+    },
+    {
+      "path": "ENDGAME.md",
+      "blob": "b7effb34c94b739272c18db0beb7ad6daa50027b",
+      "sections_read": "tables and prime-marker lead"
+    },
+    {
+      "path": "_work/symbolic_color_sums_2026-09-16/RELATORIO.md",
+      "blob": "e9267733d5efe194979b4ec5abb33066aef6284e"
+    },
+    {
+      "path": "_work/color_residue_2026-09-16/RELATORIO.md",
+      "blob": "5ed118851188055fc1f257302f9b6258d1bb8c59"
+    }
+  ],
+  "method": "GitHub connector reads; mathematical and crypto reimplementations are local. No original full repository clone or full historical corpus run.",
+  "input_data_origin": "Mounted prior conversation deliveries, compared across two independent stored transcriptions; phase2 control succeeds.",
+  "python": "3.13.5",
+  "cryptography": "46.0.4"
+}
