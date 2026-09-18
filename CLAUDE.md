@@ -15,3 +15,6 @@ Notas só para o Claude Code:
   campanhas paralelas, problemas-ponte e conclusões verificáveis.
 - Para ler mensagens novas do grupo sem export: Telegram Desktop via computer-use, busca
   "GSMG Puzzle Solvers", filtro "From: Jrk".
+- Rotina diária de vigilância (tarefa agendada do app, id `gsmg-monitor-pistas`, 08:10 local):
+  roda `solver/monitor_pistas.py` (diff do site + Telegram via `tg_monitor.py` se configurado),
+  lê o grupo/Reddit e escreve `_work/monitor_pistas/relatorio_<data>.md`. Só reporta; não comita.
