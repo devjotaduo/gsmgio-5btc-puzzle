@@ -55,6 +55,12 @@ _work/decentraland/dep_*
 !/.claude/skills/
 /.claude/skills/*
 !/.claude/skills/solve-phase/
+!/.claude/skills/research-swarm/
+!/.claude/skills/research-swarm/**
+!/.claude/skills/related-problem-ladder/
+!/.claude/skills/related-problem-ladder/**
+!/.claude/skills/proof-certificate/
+!/.claude/skills/proof-certificate/**
 /skills-lock.json
 
 # Bancada de pesquisa: publicar relatórios e checkpoints compactos.

@@ -10,5 +10,8 @@ Notas só para o Claude Code:
   o que estiver no repositório (`ENDGAME.md`, relatórios) não se duplica lá.
 - Skill `solve-phase` (`.claude/skills/solve-phase/`): reproduz o padrão sha256 → AES de
   qualquer fase. Agente `telegram-digger` (`.claude/agents/`): pesquisa o export do Telegram.
+- Skills `research-swarm`, `related-problem-ladder` e `proof-certificate`
+  (`.claude/skills/`): aplicam no Claude o protocolo de investigação de `AGENTS.md` para
+  campanhas paralelas, problemas-ponte e conclusões verificáveis.
 - Para ler mensagens novas do grupo sem export: Telegram Desktop via computer-use, busca
   "GSMG Puzzle Solvers", filtro "From: Jrk".
