@@ -124,6 +124,28 @@ Composição do resíduo, para registro: `e` 11, `f` 10, `g` 10, `c` 8, `h` 8, `
 esse tipo de segmento produzem lixo, e o espaço da dica "1812" tem 24 leituras no total. O `???` não é
 um buraco de enumeração — é um nó de **interpretação**.
 
+## "Zeroed out": o último buraco enumerável, fechado
+
+O criador disse (2021-12-26) que *"prime numbers … definitely required to proceed"* e que *"some
+characters need to be 'zeroed out'"*. Os primos já são o `yellowblueprimes`, provado. Faltava a
+zeragem: o histórico varreu zerar **um** e **dois** tipos de símbolo; três ou mais nunca tinha sido
+coberto no alfabeto literal.
+
+O espaço inteiro é pequeno — 2⁹ = 512 subconjuntos de `{a..i}` — e
+[`residuo_zerados.py`](../../solver/lacunas_2026_09_18/residuo_zerados.py) roda **todos**, inclusive os
+de tamanho 0, 1 e 2 para reconciliar com o histórico, em L84 e L83, na ordem publicada e invertida.
+São 2.044 leituras de zeragem e 6.132 escalares, com três leituras por caso: o método literal da
+página, a chave privada (decimal mod n, sha256 dos dígitos, sha256 dos bytes) contra os dois alvos nas
+duas formas de pubkey, e o critério do par com as leituras de `faed`.
+
+**Resultado: 0 chaves, 0 pares e 0 textos.** Nenhuma das 2.044 leituras produz um único plaintext com
+≥ 85 % de imprimíveis; o melhor de todo o espaço é **0,72**, zerando `a` e `g` em L83 — e não é texto.
+Controles: o leitor da página recupera um ASCII plantado e o oráculo de chave acha um h160 plantado.
+Tempo: 2,6 s.
+
+Isto encerra o item "o que `zeroed out` zera" da *ligação desconhecida* de §6, não por amostragem, mas
+por exaustão do espaço.
+
 ## O que isto muda para quem continuar
 
 - **Reorientar o oráculo para o par**, não para escalar-contra-alvo. `par_half_betterhalf.py` é o

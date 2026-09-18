@@ -295,8 +295,17 @@ nas demais um símbolo, e exige-se consumo integral dos 91 símbolos.
   grade 7×12; resíduo como chave sobre `faed`; gramática SHA256 das fases 2–3.2 com 60.005
   concatenações; "coluna j = letra j do rótulo" (7×13, 15×38).
 
-**A ligação ainda desconhecida:** qual segmentação é a pretendida, o que "zeroed out"
-zera e como `matrixsumlist` consome o resíduo. Compatibilidade estatística com i.i.d. em
+**A ligação ainda desconhecida:** qual segmentação é a pretendida e como `matrixsumlist` consome o
+resíduo. O terceiro item, **o que "zeroed out" zera, está fechado** como espaço enumerável: os 2^9 =
+512 subconjuntos de símbolos zerados (não só os de 1 e 2 do histórico), em L84 e L83, na ordem
+publicada e invertida — 2.044 leituras, 6.132 escalares — não dão chave de nenhum dos dois alvos nem
+um único texto com ≥ 85 % de imprimíveis (melhor de todo o espaço: 0,72, zerando `a` e `g`). Também
+ficam fechadas as duas leituras que o criador ensinou ou apontou para esse tipo de segmento: a1z26 com
+segmentação ambígua (a dica "21 ou 1812" rende só 16 leituras em L84 e 8 em L83, a melhor sendo a
+identidade, escore limpo −6,9 contra −3,7 do inglês) e o método literal da página
+(`Substitute`/`To_Base(16)`/`From_Hex`, com controle que reproduz `lastwordsbeforearchichoice` e
+`thispassword`), que sobre o resíduo dá 31 %/44 % de imprimíveis.
+[Relatório](_work/half_betterhalf_2026-09-18/RELATORIO.md). Compatibilidade estatística com i.i.d. em
 60/61 símbolos não exclui informação codificada. Os negativos sustentam apenas as operações
 enumeradas; não demonstram necessidade de informação externa. A auditoria de 18/09 encontrou
 lacunas reais (§3.13), e o autor afirmou em 06/08/2023 (#9607) que os participantes já tinham
