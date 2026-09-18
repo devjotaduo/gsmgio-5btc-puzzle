@@ -1,0 +1,352 @@
+{
+ "familia": "bijeção arbitrária símbolo→dígito (a família que reabriria os PRs #13 e #14)",
+ "motivo": "o teto do zero dependia da convenção a=1..i=9; com outra atribuição os zeros voltam",
+ "controle": {
+  "identidade_a1z26_viavel": true,
+  "caminhos_em_abc": 3,
+  "texto": "ABC"
+ },
+ "bijecoes": 3628800,
+ "espaco_esperado": 3628800,
+ "alvos": [
+  "L84",
+  "L84_rev",
+  "L83",
+  "L83_rev"
+ ],
+ "pares_bijecao_alvo_viaveis": {
+  "a1z26": 1501920,
+  "ascii_decimal": 0
+ },
+ "de_um_total_de": 14515200,
+ "com_fracao_legivel_ge_0_95": {
+  "a1z26": 1501920,
+  "ascii": 0
+ },
+ "achados": {
+  "a1z26": [
+   {
+    "alvo": "L84",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "fracao": 1.0,
+    "texto": "DIFHCCGIHAEEIHGGEGEBGEHHEHHFAFDHFFCDBFCCCGFEGGECDCIFFFGIGEEAE"
+   },
+   {
+    "alvo": "L84_rev",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "fracao": 1.0,
+    "texto": "EAEEGIGFFFICDCEGGEFGCCCFBDCFFHDFAFHHEHHEGBEGEGGHIEEAHIGCCHFID"
+   },
+   {
+    "alvo": "L83",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "fracao": 1.0,
+    "texto": "DIFHCCGIHAEEIHGGEGEBGEHHEHHFAFDHFFCDBFCCCGFEGGECDCIFFFGIGEEA"
+   },
+   {
+    "alvo": "L83_rev",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "fracao": 1.0,
+    "texto": "AEEGIGFFFICDCEGGEFGCCCFBDCFFHDFAFHHEHHEGBEGEGGHIEEAHIGCCHFID"
+   },
+   {
+    "alvo": "L84",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     9,
+     8
+    ],
+    "fracao": 1.0,
+    "texto": "DHFICCGHIAEEHIGGEGEBGEIIEIIFAFDIFFCDBFCCCGFEGGECDCHFFFGHGEEAE"
+   },
+   {
+    "alvo": "L84_rev",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     9,
+     8
+    ],
+    "fracao": 1.0,
+    "texto": "EAEEGHGFFFHCDCEGGEFGCCCFBDCFFIDFAFIIEIIEGBEGEGGIHEEAIHGCCIFHD"
+   },
+   {
+    "alvo": "L83",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     9,
+     8
+    ],
+    "fracao": 1.0,
+    "texto": "DHFICCGHIAEEHIGGEGEBGEIIEIIFAFDIFFCDBFCCCGFEGGECDCHFFFGHGEEA"
+   },
+   {
+    "alvo": "L83_rev",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     9,
+     8
+    ],
+    "fracao": 1.0,
+    "texto": "AEEGHGFFFHCDCEGGEFGCCCFBDCFFIDFAFIIEIIEGBEGEGGIHEEAIHGCCIFHD"
+   },
+   {
+    "alvo": "L84",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     8,
+     7,
+     9
+    ],
+    "fracao": 1.0,
+    "texto": "DIFGCCHIGAEEIGHHEHEBHEGGEGGFAFDGFFCDBFCCCHFEHHECDCIFFFHIHEEAE"
+   },
+   {
+    "alvo": "L84_rev",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     8,
+     7,
+     9
+    ],
+    "fracao": 1.0,
+    "texto": "EAEEHIHFFFICDCEHHEFHCCCFBDCFFGDFAFGGEGGEHBEHEHHGIEEAGIHCCGFID"
+   },
+   {
+    "alvo": "L83",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     8,
+     7,
+     9
+    ],
+    "fracao": 1.0,
+    "texto": "DIFGCCHIGAEEIGHHEHEBHEGGEGGFAFDGFFCDBFCCCHFEHHECDCIFFFHIHEEA"
+   },
+   {
+    "alvo": "L83_rev",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     8,
+     7,
+     9
+    ],
+    "fracao": 1.0,
+    "texto": "AEEHIHFFFICDCEHHEFHCCCFBDCFFGDFAFGGEGGEHBEHEHHGIEEAGIHCCGFID"
+   },
+   {
+    "alvo": "L84",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     8,
+     9,
+     7
+    ],
+    "fracao": 1.0,
+    "texto": "DGFICCHGIAEEGIHHEHEBHEIIEIIFAFDIFFCDBFCCCHFEHHECDCGFFFHGHEEAE"
+   },
+   {
+    "alvo": "L84_rev",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     8,
+     9,
+     7
+    ],
+    "fracao": 1.0,
+    "texto": "EAEEHGHFFFGCDCEHHEFHCCCFBDCFFIDFAFIIEIIEHBEHEHHIGEEAIGHCCIFGD"
+   },
+   {
+    "alvo": "L83",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     8,
+     9,
+     7
+    ],
+    "fracao": 1.0,
+    "texto": "DGFICCHGIAEEGIHHEHEBHEIIEIIFAFDIFFCDBFCCCHFEHHECDCGFFFHGHEEA"
+   },
+   {
+    "alvo": "L83_rev",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     8,
+     9,
+     7
+    ],
+    "fracao": 1.0,
+    "texto": "AEEHGHFFFGCDCEHHEFHCCCFBDCFFIDFAFIIEIIEHBEHEHHIGEEAIGHCCIFGD"
+   },
+   {
+    "alvo": "L84",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     9,
+     7,
+     8
+    ],
+    "fracao": 1.0,
+    "texto": "DHFGCCIHGAEEHGIIEIEBIEGGEGGFAFDGFFCDBFCCCIFEIIECDCHFFFIHIEEAE"
+   },
+   {
+    "alvo": "L84_rev",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     9,
+     7,
+     8
+    ],
+    "fracao": 1.0,
+    "texto": "EAEEIHIFFFHCDCEIIEFICCCFBDCFFGDFAFGGEGGEIBEIEIIGHEEAGHICCGFHD"
+   },
+   {
+    "alvo": "L83",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     9,
+     7,
+     8
+    ],
+    "fracao": 1.0,
+    "texto": "DHFGCCIHGAEEHGIIEIEBIEGGEGGFAFDGFFCDBFCCCIFEIIECDCHFFFIHIEEA"
+   },
+   {
+    "alvo": "L83_rev",
+    "sigma": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     9,
+     7,
+     8
+    ],
+    "fracao": 1.0,
+    "texto": "AEEIHIFFFHCDCEIIEFICCCFBDCFFGDFAFGGEGGEIBEIEIIGHEEAGHICCGFHD"
+   }
+  ],
+  "ascii": []
+ },
+ "script_sha256": "0b0f47fac30fd49d9c05a814881615c4de00080a27d87a78ff9bcba27790f9db"
+}
