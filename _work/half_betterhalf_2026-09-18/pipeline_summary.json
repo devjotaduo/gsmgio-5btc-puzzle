@@ -1,0 +1,22 @@
+{
+ "roadmap": "yellowblueprimes -> matrixsumlist -> lastwords -> yinyang (encadeado)",
+ "controle": {
+  "fusao_do_par_ok": true
+ },
+ "pipelines_testados": 144,
+ "leituras_faed": [
+  "faed/int10",
+  "faed/sha",
+  "faed_rev/int10",
+  "faed_rev/sha",
+  "faed_xor_meias/int10",
+  "faed_xor_meias/sha",
+  "faed_h1/int10",
+  "faed_h1/sha",
+  "faed_h2/int10",
+  "faed_h2/sha"
+ ],
+ "criterio": "par: {addr(dbbi), addr(faed)} superset {1GSMG, 17ucy}",
+ "hits": [],
+ "script_sha256": "af23fdb7f8a17ee79d1f579dca348a2f6157774c6cd8ae0968bd1692f6ba7aa9"
+}
