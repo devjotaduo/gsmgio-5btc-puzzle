@@ -96,6 +96,34 @@ histórico), **encadeá-los**, a saída de um virando a entrada do próximo, ter
 meta-comentário, não operações. Isso fecha a composição de **primeira ordem**; ampliar para milhares
 de variantes por passo seria voltar à força bruta, não compor com intenção — e o muro não é de volume.
 
+## A "transformação não identificada" do resíduo, atacada de frente (negativo)
+
+O fluxo comprovado é `dbbi → segmentação pelas posições primas → L83/L84 → resíduo de 60/61 símbolos
+→ ???`. [`solver/lacunas_2026_09_18/residuo_leituras.py`](../../solver/lacunas_2026_09_18/residuo_leituras.py)
+ataca o `???` com as duas leituras que o **próprio criador ensinou ou apontou**, com controle validado
+e escore pelo `clean_scorer` (o scorer original inflaria a leitura identidade, rica em a–i):
+
+**(1) a1z26 com segmentação ambígua.** O criador escreveu *"R=18 / A=1 / B=2. Could also be 21 or
+1812"* — ou seja, `1,8,1,2` ou `18,12`: a ambiguidade de fronteira. Aplicada ao resíduo (dígitos 1–9
+lidos como números 1–26, enumerando todas as fronteiras), o espaço é **minúsculo**: 16 segmentações em
+L84, 8 em L83. Só os poucos `1` e `2` geram bifurcação; o resto dos dígitos (3–9) é forçado. Melhor
+escore: **−6,904** (L84) e **−6,925** (L83) — e o "melhor" é a própria leitura identidade. Inglês real
+no mesmo scorer: **−3,748**. Não há texto, e a dica "1812" não abre o resíduo.
+
+**(2) Método literal da página.** `Substitute(a–i,o → 1–9,0)` → `To_Base(16)` → `From_Hex`, que é
+exatamente o que decodificou `lastwordsbeforearchichoice` e `thispassword` (o controle reproduz os dois
+verbatim a partir dos números documentados no README). Sobre o resíduo: 26 bytes com **31 %**
+imprimíveis em L84, 25 bytes com **44 %** em L83 — lixo binário. O resíduo não tem `o`, então não há
+zeros naturais; é aí que entraria o *"some characters need to be zeroed out"*, e essa varredura
+(escolher quais símbolos viram 0) já está no histórico como negativo.
+
+Composição do resíduo, para registro: `e` 11, `f` 10, `g` 10, `c` 8, `h` 8, `i` 5, `d` 4, `a` 3, `b` 2
+(L84); soma a1i9 = 341 (L84) e 336 (L83). Desvio da uniformidade não é significativo (χ² p 0,11, §6).
+
+**O que isso diz.** Não é "falta rodar a operação certa": as duas leituras que o criador *ensinou* para
+esse tipo de segmento produzem lixo, e o espaço da dica "1812" tem 24 leituras no total. O `???` não é
+um buraco de enumeração — é um nó de **interpretação**.
+
 ## O que isto muda para quem continuar
 
 - **Reorientar o oráculo para o par**, não para escalar-contra-alvo. `par_half_betterhalf.py` é o
