@@ -1,0 +1,36 @@
+{
+ "controle": {
+  "metodo_pagina_reproduz": [
+   "lastwordsbeforearchichoice",
+   "thispassword"
+  ]
+ },
+ "a1z26_ambiguo": {
+  "L84": {
+   "segmentacoes": 16,
+   "melhor_escore_limpo": -6.904,
+   "melhor_texto": "DIFHCCGIHAEEIHGGEGEBGEHHEHHFAFDHFFCDBFCCCGFEGGECDCIFFFGIGEEAE"
+  },
+  "L83": {
+   "segmentacoes": 8,
+   "melhor_escore_limpo": -6.925,
+   "melhor_texto": "DIFHCCGIHAEEIHGGEGEBGEHHEHHFAFDHFFCDBFCCCGFEGGECDCIFFFGIGEEA"
+  }
+ },
+ "metodo_pagina": {
+  "L84": {
+   "bytes": 26,
+   "printable": 0.31,
+   "latin1": "\u0003\u0017|Øì¸Xg~\u0019±ÍîU_ ôòv×["
+  },
+  "L83": {
+   "bytes": 25,
+   "printable": 0.44,
+   "latin1": "O&râ~\rxÕ£ó\u000eèø.1nïö~å\u000eô%{ï"
+  }
+ },
+ "referencia_escore_limpo": {
+  "ingles": -3.748,
+  "identidade_L84": -6.904
+ }
+}
