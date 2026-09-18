@@ -33,7 +33,10 @@ def collect():
             try: txt = open(p, encoding="utf-8", errors="replace").read()
             except Exception: continue
             if p.endswith(".jsonl"):
-                for line in txt.splitlines():
+                # split("\n"), não splitlines(): este também quebra em \x85/U+2028/U+2029 dentro das strings
+                # JSON (logs com ensure_ascii=False) e o pedaço caía no except. Os 694.386 da §3.11 saíram da
+                # versão com splitlines(); a correção acrescenta os conteúdos de _work/lacunas_2026-09-18/splitlines.
+                for line in txt.split("\n"):
                     line = line.strip()
                     if line:
                         try: walk(json.loads(line), got)
