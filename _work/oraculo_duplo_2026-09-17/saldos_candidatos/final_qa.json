@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "unique_candidates": 674,
+  "addresses_exact_union": 3370,
+  "primary_successes": 3370,
+  "primary_positive_balances": 0,
+  "addresses_with_history": 12,
+  "secondary_addresses": 18,
+  "secondary_provider": "mempool.space",
+  "secondary_confirmed_sat": 0,
+  "secondary_with_mempool_sat": 0,
+  "selection": "Todos os endereços com histórico + cinco formatos de cada um dos três candidatos WIF",
+  "extraction_sha256": "6cc3b9d13eeed39ae5f7b32c74b0aefa0000fdb5cf0bc713c0842db56087ec4c",
+  "balances_sha256": "efcac91ecbd57970ab824660dc6dba42ccb90d95b3039520f9fd9eccf0b4d05b",
+  "verification_sha256": "b4ac9d2b765c9aaebaf2c938f966c32f9e6ce8b1b7b80464ffaf2d3bace44cc5"
+}

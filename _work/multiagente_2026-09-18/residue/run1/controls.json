@@ -1,0 +1,17 @@
+{
+  "phase2_sha256": "e2f9dd65604a3231f8b3301724e8d713a88fffc4b6c7c4aeeb20f58a582b593a",
+  "phase2_wrong_kdf_rejected": true,
+  "checkerboard_exact": true,
+  "b_nonprime_positions": {
+    "83": [
+      30,
+      52
+    ],
+    "84": [
+      30,
+      52
+    ]
+  },
+  "bifid_roundtrips": true,
+  "non_English_planted_both_KDFs_both_addresses": true
+}

@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "real": {
+    "materials": 2016,
+    "aes_decisions": 24192,
+    "padding_hits": 98,
+    "semantic_hits": 0,
+    "key_hits": 0,
+    "max_printable": 0.5063291139240507,
+    "unique_material_sha256": 1620
+  },
+  "null": {
+    "runs": 100,
+    "materials_per_run": 2016,
+    "aes_decisions_per_run": 24192,
+    "padding_hits": {
+      "min": 80,
+      "max": 125,
+      "mean": 97.48,
+      "real": 98,
+      "expected_per_run": 94.5
+    },
+    "semantic_hits_total": 0,
+    "key_hits_total": 0,
+    "max_printable": 0.5822784810126582
+  },
+  "hard_hits": 0,
+  "elapsed_seconds": 283.75
+}

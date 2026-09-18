@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "phase2": true,
+  "checkerboard": true,
+  "rectangular_sums": true,
+  "null_conservation": true,
+  "synthetic_composed_password_aes": true,
+  "synthetic_key_offset": 7,
+  "saved_bases_exact": true
+}

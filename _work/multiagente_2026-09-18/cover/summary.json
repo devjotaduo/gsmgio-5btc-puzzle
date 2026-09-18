@@ -1,0 +1,2428 @@
+{
+  "status": "complete",
+  "real": {
+    "materials": 192,
+    "passwords": 384,
+    "trials": {
+      "SMALL/SHA256": 384,
+      "SMALL/MD5": 384,
+      "TAIL32/SHA256": 384,
+      "TAIL32/MD5": 384,
+      "COSMIC/SHA256": 384,
+      "COSMIC/MD5": 384
+    },
+    "paddings": {
+      "SMALL/SHA256": 4,
+      "TAIL32/MD5": 3,
+      "COSMIC/MD5": 4,
+      "COSMIC/SHA256": 1,
+      "SMALL/MD5": 1,
+      "TAIL32/SHA256": 1
+    },
+    "semantic_flags": 0,
+    "hard_hits": 0,
+    "max_printable": 0.4430379746835443,
+    "brainwallets": 384,
+    "raw32": 6911
+  },
+  "null_replicates": 100,
+  "nulls": [
+    {
+      "materials": 144,
+      "passwords": 288,
+      "trials": {
+        "SMALL/SHA256": 288,
+        "SMALL/MD5": 288,
+        "TAIL32/SHA256": 288,
+        "TAIL32/MD5": 288,
+        "COSMIC/SHA256": 288,
+        "COSMIC/MD5": 288
+      },
+      "paddings": {
+        "COSMIC/MD5": 4,
+        "TAIL32/MD5": 2,
+        "TAIL32/SHA256": 1,
+        "COSMIC/SHA256": 1,
+        "SMALL/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4177215189873418,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 339,
+      "passwords": 678,
+      "trials": {
+        "SMALL/SHA256": 678,
+        "SMALL/MD5": 678,
+        "TAIL32/SHA256": 678,
+        "TAIL32/MD5": 678,
+        "COSMIC/SHA256": 678,
+        "COSMIC/MD5": 678
+      },
+      "paddings": {
+        "SMALL/SHA256": 3,
+        "COSMIC/SHA256": 6,
+        "TAIL32/SHA256": 2,
+        "SMALL/MD5": 1,
+        "COSMIC/MD5": 3,
+        "TAIL32/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.5443037974683544,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 198,
+      "passwords": 396,
+      "trials": {
+        "SMALL/SHA256": 396,
+        "SMALL/MD5": 396,
+        "TAIL32/SHA256": 396,
+        "TAIL32/MD5": 396,
+        "COSMIC/SHA256": 396,
+        "COSMIC/MD5": 396
+      },
+      "paddings": {
+        "SMALL/SHA256": 2,
+        "COSMIC/MD5": 3,
+        "COSMIC/SHA256": 2,
+        "TAIL32/MD5": 2,
+        "TAIL32/SHA256": 1,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4050632911392405,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 261,
+      "passwords": 522,
+      "trials": {
+        "SMALL/SHA256": 522,
+        "SMALL/MD5": 522,
+        "TAIL32/SHA256": 522,
+        "TAIL32/MD5": 522,
+        "COSMIC/SHA256": 522,
+        "COSMIC/MD5": 522
+      },
+      "paddings": {
+        "SMALL/SHA256": 2,
+        "TAIL32/SHA256": 2,
+        "SMALL/MD5": 2,
+        "COSMIC/SHA256": 1,
+        "COSMIC/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 153,
+      "passwords": 306,
+      "trials": {
+        "SMALL/SHA256": 306,
+        "SMALL/MD5": 306,
+        "TAIL32/SHA256": 306,
+        "TAIL32/MD5": 306,
+        "COSMIC/SHA256": 306,
+        "COSMIC/MD5": 306
+      },
+      "paddings": {
+        "TAIL32/SHA256": 1,
+        "SMALL/SHA256": 1,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 222,
+      "passwords": 444,
+      "trials": {
+        "SMALL/SHA256": 444,
+        "SMALL/MD5": 444,
+        "TAIL32/SHA256": 444,
+        "TAIL32/MD5": 444,
+        "COSMIC/SHA256": 444,
+        "COSMIC/MD5": 444
+      },
+      "paddings": {
+        "SMALL/SHA256": 5,
+        "SMALL/MD5": 2,
+        "COSMIC/MD5": 2,
+        "COSMIC/SHA256": 2,
+        "TAIL32/SHA256": 2,
+        "TAIL32/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.46835443037974683,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 192,
+      "passwords": 384,
+      "trials": {
+        "SMALL/SHA256": 384,
+        "SMALL/MD5": 384,
+        "TAIL32/SHA256": 384,
+        "TAIL32/MD5": 384,
+        "COSMIC/SHA256": 384,
+        "COSMIC/MD5": 384
+      },
+      "paddings": {
+        "SMALL/SHA256": 3,
+        "COSMIC/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 186,
+      "passwords": 372,
+      "trials": {
+        "SMALL/SHA256": 372,
+        "SMALL/MD5": 372,
+        "TAIL32/SHA256": 372,
+        "TAIL32/MD5": 372,
+        "COSMIC/SHA256": 372,
+        "COSMIC/MD5": 372
+      },
+      "paddings": {
+        "COSMIC/MD5": 2,
+        "TAIL32/MD5": 2,
+        "COSMIC/SHA256": 1,
+        "TAIL32/SHA256": 2,
+        "SMALL/SHA256": 3,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.46835443037974683,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 186,
+      "passwords": 372,
+      "trials": {
+        "SMALL/SHA256": 372,
+        "SMALL/MD5": 372,
+        "TAIL32/SHA256": 372,
+        "TAIL32/MD5": 372,
+        "COSMIC/SHA256": 372,
+        "COSMIC/MD5": 372
+      },
+      "paddings": {
+        "TAIL32/SHA256": 3,
+        "TAIL32/MD5": 1,
+        "SMALL/SHA256": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 192,
+      "passwords": 384,
+      "trials": {
+        "SMALL/SHA256": 384,
+        "SMALL/MD5": 384,
+        "TAIL32/SHA256": 384,
+        "TAIL32/MD5": 384,
+        "COSMIC/SHA256": 384,
+        "COSMIC/MD5": 384
+      },
+      "paddings": {
+        "SMALL/MD5": 3,
+        "COSMIC/MD5": 3,
+        "SMALL/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4050632911392405,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 234,
+      "passwords": 468,
+      "trials": {
+        "SMALL/SHA256": 468,
+        "SMALL/MD5": 468,
+        "TAIL32/SHA256": 468,
+        "TAIL32/MD5": 468,
+        "COSMIC/SHA256": 468,
+        "COSMIC/MD5": 468
+      },
+      "paddings": {
+        "TAIL32/SHA256": 2,
+        "SMALL/SHA256": 3,
+        "COSMIC/MD5": 3,
+        "COSMIC/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.45569620253164556,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 144,
+      "passwords": 288,
+      "trials": {
+        "SMALL/SHA256": 288,
+        "SMALL/MD5": 288,
+        "TAIL32/SHA256": 288,
+        "TAIL32/MD5": 288,
+        "COSMIC/SHA256": 288,
+        "COSMIC/MD5": 288
+      },
+      "paddings": {
+        "TAIL32/SHA256": 1,
+        "TAIL32/MD5": 1,
+        "SMALL/SHA256": 1,
+        "COSMIC/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4050632911392405,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 204,
+      "passwords": 408,
+      "trials": {
+        "SMALL/SHA256": 408,
+        "SMALL/MD5": 408,
+        "TAIL32/SHA256": 408,
+        "TAIL32/MD5": 408,
+        "COSMIC/SHA256": 408,
+        "COSMIC/MD5": 408
+      },
+      "paddings": {
+        "SMALL/SHA256": 3,
+        "COSMIC/MD5": 2,
+        "COSMIC/SHA256": 1,
+        "TAIL32/MD5": 1,
+        "TAIL32/SHA256": 2,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 138,
+      "passwords": 276,
+      "trials": {
+        "SMALL/SHA256": 276,
+        "SMALL/MD5": 276,
+        "TAIL32/SHA256": 276,
+        "TAIL32/MD5": 276,
+        "COSMIC/SHA256": 276,
+        "COSMIC/MD5": 276
+      },
+      "paddings": {
+        "SMALL/MD5": 2,
+        "COSMIC/MD5": 1,
+        "COSMIC/SHA256": 1,
+        "TAIL32/MD5": 2,
+        "TAIL32/SHA256": 2,
+        "SMALL/SHA256": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 153,
+      "passwords": 306,
+      "trials": {
+        "SMALL/SHA256": 306,
+        "SMALL/MD5": 306,
+        "TAIL32/SHA256": 306,
+        "TAIL32/MD5": 306,
+        "COSMIC/SHA256": 306,
+        "COSMIC/MD5": 306
+      },
+      "paddings": {
+        "SMALL/SHA256": 3,
+        "TAIL32/MD5": 1,
+        "SMALL/MD5": 4,
+        "TAIL32/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 138,
+      "passwords": 276,
+      "trials": {
+        "SMALL/SHA256": 276,
+        "SMALL/MD5": 276,
+        "TAIL32/SHA256": 276,
+        "TAIL32/MD5": 276,
+        "COSMIC/SHA256": 276,
+        "COSMIC/MD5": 276
+      },
+      "paddings": {
+        "TAIL32/SHA256": 5,
+        "TAIL32/MD5": 1,
+        "SMALL/SHA256": 2,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 189,
+      "passwords": 378,
+      "trials": {
+        "SMALL/SHA256": 378,
+        "SMALL/MD5": 378,
+        "TAIL32/SHA256": 378,
+        "TAIL32/MD5": 378,
+        "COSMIC/SHA256": 378,
+        "COSMIC/MD5": 378
+      },
+      "paddings": {
+        "TAIL32/SHA256": 2,
+        "SMALL/SHA256": 2,
+        "SMALL/MD5": 5,
+        "TAIL32/MD5": 1,
+        "COSMIC/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 204,
+      "passwords": 408,
+      "trials": {
+        "SMALL/SHA256": 408,
+        "SMALL/MD5": 408,
+        "TAIL32/SHA256": 408,
+        "TAIL32/MD5": 408,
+        "COSMIC/SHA256": 408,
+        "COSMIC/MD5": 408
+      },
+      "paddings": {
+        "SMALL/SHA256": 3,
+        "TAIL32/SHA256": 2,
+        "TAIL32/MD5": 2,
+        "SMALL/MD5": 1,
+        "COSMIC/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 204,
+      "passwords": 408,
+      "trials": {
+        "SMALL/SHA256": 408,
+        "SMALL/MD5": 408,
+        "TAIL32/SHA256": 408,
+        "TAIL32/MD5": 408,
+        "COSMIC/SHA256": 408,
+        "COSMIC/MD5": 408
+      },
+      "paddings": {
+        "SMALL/MD5": 1,
+        "SMALL/SHA256": 3,
+        "COSMIC/MD5": 3,
+        "TAIL32/MD5": 1,
+        "COSMIC/SHA256": 1,
+        "TAIL32/SHA256": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 270,
+      "passwords": 540,
+      "trials": {
+        "SMALL/SHA256": 540,
+        "SMALL/MD5": 540,
+        "TAIL32/SHA256": 540,
+        "TAIL32/MD5": 540,
+        "COSMIC/SHA256": 540,
+        "COSMIC/MD5": 540
+      },
+      "paddings": {
+        "COSMIC/MD5": 2,
+        "TAIL32/SHA256": 7,
+        "SMALL/MD5": 3,
+        "COSMIC/SHA256": 1,
+        "TAIL32/MD5": 1,
+        "SMALL/SHA256": 4
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 144,
+      "passwords": 288,
+      "trials": {
+        "SMALL/SHA256": 288,
+        "SMALL/MD5": 288,
+        "TAIL32/SHA256": 288,
+        "TAIL32/MD5": 288,
+        "COSMIC/SHA256": 288,
+        "COSMIC/MD5": 288
+      },
+      "paddings": {
+        "COSMIC/MD5": 2,
+        "TAIL32/SHA256": 3,
+        "SMALL/MD5": 2,
+        "SMALL/SHA256": 1,
+        "TAIL32/MD5": 2,
+        "COSMIC/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4936708860759494,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 243,
+      "passwords": 486,
+      "trials": {
+        "SMALL/SHA256": 486,
+        "SMALL/MD5": 486,
+        "TAIL32/SHA256": 486,
+        "TAIL32/MD5": 486,
+        "COSMIC/SHA256": 486,
+        "COSMIC/MD5": 486
+      },
+      "paddings": {
+        "TAIL32/SHA256": 3,
+        "SMALL/MD5": 4,
+        "SMALL/SHA256": 2,
+        "COSMIC/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.46835443037974683,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 240,
+      "passwords": 480,
+      "trials": {
+        "SMALL/SHA256": 480,
+        "SMALL/MD5": 480,
+        "TAIL32/SHA256": 480,
+        "TAIL32/MD5": 480,
+        "COSMIC/SHA256": 480,
+        "COSMIC/MD5": 480
+      },
+      "paddings": {
+        "SMALL/SHA256": 3,
+        "COSMIC/MD5": 2,
+        "COSMIC/SHA256": 1,
+        "TAIL32/MD5": 1,
+        "TAIL32/SHA256": 2,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 192,
+      "passwords": 384,
+      "trials": {
+        "SMALL/SHA256": 384,
+        "SMALL/MD5": 384,
+        "TAIL32/SHA256": 384,
+        "TAIL32/MD5": 384,
+        "COSMIC/SHA256": 384,
+        "COSMIC/MD5": 384
+      },
+      "paddings": {
+        "COSMIC/MD5": 1,
+        "TAIL32/SHA256": 2,
+        "SMALL/SHA256": 1,
+        "TAIL32/MD5": 1,
+        "COSMIC/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 204,
+      "passwords": 408,
+      "trials": {
+        "SMALL/SHA256": 408,
+        "SMALL/MD5": 408,
+        "TAIL32/SHA256": 408,
+        "TAIL32/MD5": 408,
+        "COSMIC/SHA256": 408,
+        "COSMIC/MD5": 408
+      },
+      "paddings": {
+        "COSMIC/SHA256": 3,
+        "COSMIC/MD5": 1,
+        "TAIL32/SHA256": 3,
+        "TAIL32/MD5": 2,
+        "SMALL/SHA256": 4,
+        "SMALL/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.45569620253164556,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 222,
+      "passwords": 444,
+      "trials": {
+        "SMALL/SHA256": 444,
+        "SMALL/MD5": 444,
+        "TAIL32/SHA256": 444,
+        "TAIL32/MD5": 444,
+        "COSMIC/SHA256": 444,
+        "COSMIC/MD5": 444
+      },
+      "paddings": {
+        "TAIL32/SHA256": 3,
+        "TAIL32/MD5": 3,
+        "SMALL/SHA256": 5,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 174,
+      "passwords": 348,
+      "trials": {
+        "SMALL/SHA256": 348,
+        "SMALL/MD5": 348,
+        "TAIL32/SHA256": 348,
+        "TAIL32/MD5": 348,
+        "COSMIC/SHA256": 348,
+        "COSMIC/MD5": 348
+      },
+      "paddings": {
+        "SMALL/MD5": 4,
+        "SMALL/SHA256": 3,
+        "TAIL32/SHA256": 4,
+        "TAIL32/MD5": 3
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 156,
+      "passwords": 312,
+      "trials": {
+        "SMALL/SHA256": 312,
+        "SMALL/MD5": 312,
+        "TAIL32/SHA256": 312,
+        "TAIL32/MD5": 312,
+        "COSMIC/SHA256": 312,
+        "COSMIC/MD5": 312
+      },
+      "paddings": {
+        "COSMIC/MD5": 1,
+        "TAIL32/SHA256": 1,
+        "SMALL/SHA256": 2,
+        "TAIL32/MD5": 1,
+        "SMALL/MD5": 4
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 153,
+      "passwords": 306,
+      "trials": {
+        "SMALL/SHA256": 306,
+        "SMALL/MD5": 306,
+        "TAIL32/SHA256": 306,
+        "TAIL32/MD5": 306,
+        "COSMIC/SHA256": 306,
+        "COSMIC/MD5": 306
+      },
+      "paddings": {
+        "SMALL/MD5": 2,
+        "COSMIC/MD5": 1,
+        "TAIL32/SHA256": 1,
+        "SMALL/SHA256": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 228,
+      "passwords": 456,
+      "trials": {
+        "SMALL/SHA256": 456,
+        "SMALL/MD5": 456,
+        "TAIL32/SHA256": 456,
+        "TAIL32/MD5": 456,
+        "COSMIC/SHA256": 456,
+        "COSMIC/MD5": 456
+      },
+      "paddings": {
+        "SMALL/SHA256": 4,
+        "TAIL32/SHA256": 2,
+        "TAIL32/MD5": 1,
+        "COSMIC/MD5": 2,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 207,
+      "passwords": 414,
+      "trials": {
+        "SMALL/SHA256": 414,
+        "SMALL/MD5": 414,
+        "TAIL32/SHA256": 414,
+        "TAIL32/MD5": 414,
+        "COSMIC/SHA256": 414,
+        "COSMIC/MD5": 414
+      },
+      "paddings": {
+        "TAIL32/MD5": 3,
+        "COSMIC/MD5": 2,
+        "TAIL32/SHA256": 2,
+        "SMALL/SHA256": 2,
+        "SMALL/MD5": 2,
+        "COSMIC/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 228,
+      "passwords": 456,
+      "trials": {
+        "SMALL/SHA256": 456,
+        "SMALL/MD5": 456,
+        "TAIL32/SHA256": 456,
+        "TAIL32/MD5": 456,
+        "COSMIC/SHA256": 456,
+        "COSMIC/MD5": 456
+      },
+      "paddings": {
+        "COSMIC/MD5": 4,
+        "SMALL/SHA256": 2,
+        "TAIL32/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 288,
+      "passwords": 576,
+      "trials": {
+        "SMALL/SHA256": 576,
+        "SMALL/MD5": 576,
+        "TAIL32/SHA256": 576,
+        "TAIL32/MD5": 576,
+        "COSMIC/SHA256": 576,
+        "COSMIC/MD5": 576
+      },
+      "paddings": {
+        "COSMIC/MD5": 3,
+        "TAIL32/MD5": 2,
+        "COSMIC/SHA256": 2,
+        "TAIL32/SHA256": 3,
+        "SMALL/SHA256": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 138,
+      "passwords": 276,
+      "trials": {
+        "SMALL/SHA256": 276,
+        "SMALL/MD5": 276,
+        "TAIL32/SHA256": 276,
+        "TAIL32/MD5": 276,
+        "COSMIC/SHA256": 276,
+        "COSMIC/MD5": 276
+      },
+      "paddings": {
+        "SMALL/SHA256": 3,
+        "TAIL32/SHA256": 2,
+        "TAIL32/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 249,
+      "passwords": 498,
+      "trials": {
+        "SMALL/SHA256": 498,
+        "SMALL/MD5": 498,
+        "TAIL32/SHA256": 498,
+        "TAIL32/MD5": 498,
+        "COSMIC/SHA256": 498,
+        "COSMIC/MD5": 498
+      },
+      "paddings": {
+        "SMALL/MD5": 6,
+        "TAIL32/SHA256": 1,
+        "SMALL/SHA256": 4,
+        "TAIL32/MD5": 2,
+        "COSMIC/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.45569620253164556,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 210,
+      "passwords": 420,
+      "trials": {
+        "SMALL/SHA256": 420,
+        "SMALL/MD5": 420,
+        "TAIL32/SHA256": 420,
+        "TAIL32/MD5": 420,
+        "COSMIC/SHA256": 420,
+        "COSMIC/MD5": 420
+      },
+      "paddings": {
+        "TAIL32/SHA256": 3,
+        "TAIL32/MD5": 2,
+        "SMALL/SHA256": 3,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 282,
+      "passwords": 564,
+      "trials": {
+        "SMALL/SHA256": 564,
+        "SMALL/MD5": 564,
+        "TAIL32/SHA256": 564,
+        "TAIL32/MD5": 564,
+        "COSMIC/SHA256": 564,
+        "COSMIC/MD5": 564
+      },
+      "paddings": {
+        "TAIL32/SHA256": 2,
+        "SMALL/SHA256": 3,
+        "COSMIC/MD5": 3,
+        "COSMIC/SHA256": 2,
+        "TAIL32/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.45569620253164556,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 264,
+      "passwords": 528,
+      "trials": {
+        "SMALL/SHA256": 528,
+        "SMALL/MD5": 528,
+        "TAIL32/SHA256": 528,
+        "TAIL32/MD5": 528,
+        "COSMIC/SHA256": 528,
+        "COSMIC/MD5": 528
+      },
+      "paddings": {
+        "COSMIC/SHA256": 3,
+        "SMALL/MD5": 2,
+        "TAIL32/SHA256": 3,
+        "SMALL/SHA256": 2,
+        "TAIL32/MD5": 2,
+        "COSMIC/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 234,
+      "passwords": 468,
+      "trials": {
+        "SMALL/SHA256": 468,
+        "SMALL/MD5": 468,
+        "TAIL32/SHA256": 468,
+        "TAIL32/MD5": 468,
+        "COSMIC/SHA256": 468,
+        "COSMIC/MD5": 468
+      },
+      "paddings": {
+        "COSMIC/MD5": 3,
+        "SMALL/SHA256": 2,
+        "TAIL32/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 180,
+      "passwords": 360,
+      "trials": {
+        "SMALL/SHA256": 360,
+        "SMALL/MD5": 360,
+        "TAIL32/SHA256": 360,
+        "TAIL32/MD5": 360,
+        "COSMIC/SHA256": 360,
+        "COSMIC/MD5": 360
+      },
+      "paddings": {
+        "COSMIC/MD5": 1,
+        "TAIL32/SHA256": 1,
+        "SMALL/SHA256": 1,
+        "TAIL32/MD5": 1,
+        "SMALL/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 144,
+      "passwords": 288,
+      "trials": {
+        "SMALL/SHA256": 288,
+        "SMALL/MD5": 288,
+        "TAIL32/SHA256": 288,
+        "TAIL32/MD5": 288,
+        "COSMIC/SHA256": 288,
+        "COSMIC/MD5": 288
+      },
+      "paddings": {
+        "COSMIC/MD5": 3,
+        "TAIL32/SHA256": 1,
+        "SMALL/SHA256": 2,
+        "TAIL32/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4810126582278481,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 192,
+      "passwords": 384,
+      "trials": {
+        "SMALL/SHA256": 384,
+        "SMALL/MD5": 384,
+        "TAIL32/SHA256": 384,
+        "TAIL32/MD5": 384,
+        "COSMIC/SHA256": 384,
+        "COSMIC/MD5": 384
+      },
+      "paddings": {
+        "SMALL/MD5": 1,
+        "COSMIC/MD5": 2,
+        "SMALL/SHA256": 2,
+        "TAIL32/SHA256": 1,
+        "COSMIC/SHA256": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 156,
+      "passwords": 312,
+      "trials": {
+        "SMALL/SHA256": 312,
+        "SMALL/MD5": 312,
+        "TAIL32/SHA256": 312,
+        "TAIL32/MD5": 312,
+        "COSMIC/SHA256": 312,
+        "COSMIC/MD5": 312
+      },
+      "paddings": {
+        "TAIL32/MD5": 3,
+        "SMALL/MD5": 2,
+        "TAIL32/SHA256": 2,
+        "SMALL/SHA256": 2,
+        "COSMIC/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 270,
+      "passwords": 540,
+      "trials": {
+        "SMALL/SHA256": 540,
+        "SMALL/MD5": 540,
+        "TAIL32/SHA256": 540,
+        "TAIL32/MD5": 540,
+        "COSMIC/SHA256": 540,
+        "COSMIC/MD5": 540
+      },
+      "paddings": {
+        "SMALL/SHA256": 3,
+        "TAIL32/SHA256": 3,
+        "SMALL/MD5": 2,
+        "COSMIC/MD5": 5,
+        "COSMIC/SHA256": 4
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4936708860759494,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 192,
+      "passwords": 384,
+      "trials": {
+        "SMALL/SHA256": 384,
+        "SMALL/MD5": 384,
+        "TAIL32/SHA256": 384,
+        "TAIL32/MD5": 384,
+        "COSMIC/SHA256": 384,
+        "COSMIC/MD5": 384
+      },
+      "paddings": {
+        "COSMIC/MD5": 1,
+        "SMALL/MD5": 1,
+        "TAIL32/SHA256": 2,
+        "COSMIC/SHA256": 1,
+        "SMALL/SHA256": 3
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.45569620253164556,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 261,
+      "passwords": 522,
+      "trials": {
+        "SMALL/SHA256": 522,
+        "SMALL/MD5": 522,
+        "TAIL32/SHA256": 522,
+        "TAIL32/MD5": 522,
+        "COSMIC/SHA256": 522,
+        "COSMIC/MD5": 522
+      },
+      "paddings": {
+        "TAIL32/MD5": 2,
+        "TAIL32/SHA256": 1,
+        "SMALL/SHA256": 1,
+        "SMALL/MD5": 1,
+        "COSMIC/SHA256": 1,
+        "COSMIC/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 276,
+      "passwords": 552,
+      "trials": {
+        "SMALL/SHA256": 552,
+        "SMALL/MD5": 552,
+        "TAIL32/SHA256": 552,
+        "TAIL32/MD5": 552,
+        "COSMIC/SHA256": 552,
+        "COSMIC/MD5": 552
+      },
+      "paddings": {
+        "SMALL/MD5": 1,
+        "COSMIC/MD5": 3,
+        "SMALL/SHA256": 2,
+        "TAIL32/SHA256": 1,
+        "COSMIC/SHA256": 2,
+        "TAIL32/MD5": 3
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 240,
+      "passwords": 480,
+      "trials": {
+        "SMALL/SHA256": 480,
+        "SMALL/MD5": 480,
+        "TAIL32/SHA256": 480,
+        "TAIL32/MD5": 480,
+        "COSMIC/SHA256": 480,
+        "COSMIC/MD5": 480
+      },
+      "paddings": {
+        "SMALL/MD5": 1,
+        "COSMIC/MD5": 2,
+        "SMALL/SHA256": 2,
+        "TAIL32/SHA256": 1,
+        "COSMIC/SHA256": 2,
+        "TAIL32/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 270,
+      "passwords": 540,
+      "trials": {
+        "SMALL/SHA256": 540,
+        "SMALL/MD5": 540,
+        "TAIL32/SHA256": 540,
+        "TAIL32/MD5": 540,
+        "COSMIC/SHA256": 540,
+        "COSMIC/MD5": 540
+      },
+      "paddings": {
+        "COSMIC/SHA256": 2,
+        "SMALL/SHA256": 3,
+        "TAIL32/SHA256": 2,
+        "TAIL32/MD5": 1,
+        "SMALL/MD5": 2,
+        "COSMIC/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 216,
+      "passwords": 432,
+      "trials": {
+        "SMALL/SHA256": 432,
+        "SMALL/MD5": 432,
+        "TAIL32/SHA256": 432,
+        "TAIL32/MD5": 432,
+        "COSMIC/SHA256": 432,
+        "COSMIC/MD5": 432
+      },
+      "paddings": {
+        "COSMIC/SHA256": 2,
+        "COSMIC/MD5": 3,
+        "TAIL32/MD5": 1,
+        "SMALL/SHA256": 1,
+        "SMALL/MD5": 1,
+        "TAIL32/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4177215189873418,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 162,
+      "passwords": 324,
+      "trials": {
+        "SMALL/SHA256": 324,
+        "SMALL/MD5": 324,
+        "TAIL32/SHA256": 324,
+        "TAIL32/MD5": 324,
+        "COSMIC/SHA256": 324,
+        "COSMIC/MD5": 324
+      },
+      "paddings": {
+        "SMALL/MD5": 1,
+        "SMALL/SHA256": 3,
+        "TAIL32/SHA256": 2,
+        "COSMIC/MD5": 3,
+        "COSMIC/SHA256": 4
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 189,
+      "passwords": 378,
+      "trials": {
+        "SMALL/SHA256": 378,
+        "SMALL/MD5": 378,
+        "TAIL32/SHA256": 378,
+        "TAIL32/MD5": 378,
+        "COSMIC/SHA256": 378,
+        "COSMIC/MD5": 378
+      },
+      "paddings": {
+        "SMALL/SHA256": 3,
+        "SMALL/MD5": 3,
+        "TAIL32/SHA256": 3,
+        "COSMIC/MD5": 2,
+        "TAIL32/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.46835443037974683,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 153,
+      "passwords": 306,
+      "trials": {
+        "SMALL/SHA256": 306,
+        "SMALL/MD5": 306,
+        "TAIL32/SHA256": 306,
+        "TAIL32/MD5": 306,
+        "COSMIC/SHA256": 306,
+        "COSMIC/MD5": 306
+      },
+      "paddings": {
+        "COSMIC/MD5": 1,
+        "TAIL32/SHA256": 4,
+        "SMALL/SHA256": 1,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 210,
+      "passwords": 420,
+      "trials": {
+        "SMALL/SHA256": 420,
+        "SMALL/MD5": 420,
+        "TAIL32/SHA256": 420,
+        "TAIL32/MD5": 420,
+        "COSMIC/SHA256": 420,
+        "COSMIC/MD5": 420
+      },
+      "paddings": {
+        "SMALL/MD5": 3,
+        "COSMIC/MD5": 2,
+        "SMALL/SHA256": 2,
+        "COSMIC/SHA256": 2,
+        "TAIL32/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4050632911392405,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 207,
+      "passwords": 414,
+      "trials": {
+        "SMALL/SHA256": 414,
+        "SMALL/MD5": 414,
+        "TAIL32/SHA256": 414,
+        "TAIL32/MD5": 414,
+        "COSMIC/SHA256": 414,
+        "COSMIC/MD5": 414
+      },
+      "paddings": {
+        "COSMIC/MD5": 1,
+        "TAIL32/SHA256": 1,
+        "SMALL/SHA256": 1,
+        "SMALL/MD5": 2,
+        "COSMIC/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 228,
+      "passwords": 456,
+      "trials": {
+        "SMALL/SHA256": 456,
+        "SMALL/MD5": 456,
+        "TAIL32/SHA256": 456,
+        "TAIL32/MD5": 456,
+        "COSMIC/SHA256": 456,
+        "COSMIC/MD5": 456
+      },
+      "paddings": {
+        "COSMIC/MD5": 3,
+        "COSMIC/SHA256": 3,
+        "SMALL/SHA256": 4,
+        "TAIL32/SHA256": 2,
+        "TAIL32/MD5": 1,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 186,
+      "passwords": 372,
+      "trials": {
+        "SMALL/SHA256": 372,
+        "SMALL/MD5": 372,
+        "TAIL32/SHA256": 372,
+        "TAIL32/MD5": 372,
+        "COSMIC/SHA256": 372,
+        "COSMIC/MD5": 372
+      },
+      "paddings": {
+        "COSMIC/SHA256": 1,
+        "TAIL32/MD5": 2,
+        "TAIL32/SHA256": 2,
+        "SMALL/SHA256": 3
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 153,
+      "passwords": 306,
+      "trials": {
+        "SMALL/SHA256": 306,
+        "SMALL/MD5": 306,
+        "TAIL32/SHA256": 306,
+        "TAIL32/MD5": 306,
+        "COSMIC/SHA256": 306,
+        "COSMIC/MD5": 306
+      },
+      "paddings": {
+        "TAIL32/SHA256": 1,
+        "SMALL/SHA256": 1,
+        "SMALL/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 192,
+      "passwords": 384,
+      "trials": {
+        "SMALL/SHA256": 384,
+        "SMALL/MD5": 384,
+        "TAIL32/SHA256": 384,
+        "TAIL32/MD5": 384,
+        "COSMIC/SHA256": 384,
+        "COSMIC/MD5": 384
+      },
+      "paddings": {
+        "SMALL/MD5": 1,
+        "TAIL32/SHA256": 2,
+        "TAIL32/MD5": 2,
+        "SMALL/SHA256": 2,
+        "COSMIC/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 210,
+      "passwords": 420,
+      "trials": {
+        "SMALL/SHA256": 420,
+        "SMALL/MD5": 420,
+        "TAIL32/SHA256": 420,
+        "TAIL32/MD5": 420,
+        "COSMIC/SHA256": 420,
+        "COSMIC/MD5": 420
+      },
+      "paddings": {
+        "COSMIC/SHA256": 1,
+        "COSMIC/MD5": 1,
+        "TAIL32/SHA256": 2,
+        "TAIL32/MD5": 2,
+        "SMALL/SHA256": 2,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 240,
+      "passwords": 480,
+      "trials": {
+        "SMALL/SHA256": 480,
+        "SMALL/MD5": 480,
+        "TAIL32/SHA256": 480,
+        "TAIL32/MD5": 480,
+        "COSMIC/SHA256": 480,
+        "COSMIC/MD5": 480
+      },
+      "paddings": {
+        "COSMIC/MD5": 3,
+        "TAIL32/MD5": 1,
+        "COSMIC/SHA256": 1,
+        "SMALL/SHA256": 2,
+        "TAIL32/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 156,
+      "passwords": 312,
+      "trials": {
+        "SMALL/SHA256": 312,
+        "SMALL/MD5": 312,
+        "TAIL32/SHA256": 312,
+        "TAIL32/MD5": 312,
+        "COSMIC/SHA256": 312,
+        "COSMIC/MD5": 312
+      },
+      "paddings": {
+        "TAIL32/SHA256": 2,
+        "SMALL/SHA256": 1,
+        "TAIL32/MD5": 1,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 207,
+      "passwords": 414,
+      "trials": {
+        "SMALL/SHA256": 414,
+        "SMALL/MD5": 414,
+        "TAIL32/SHA256": 414,
+        "TAIL32/MD5": 414,
+        "COSMIC/SHA256": 414,
+        "COSMIC/MD5": 414
+      },
+      "paddings": {
+        "SMALL/MD5": 4,
+        "COSMIC/MD5": 1,
+        "TAIL32/SHA256": 1,
+        "SMALL/SHA256": 3,
+        "TAIL32/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 174,
+      "passwords": 348,
+      "trials": {
+        "SMALL/SHA256": 348,
+        "SMALL/MD5": 348,
+        "TAIL32/SHA256": 348,
+        "TAIL32/MD5": 348,
+        "COSMIC/SHA256": 348,
+        "COSMIC/MD5": 348
+      },
+      "paddings": {
+        "TAIL32/SHA256": 5,
+        "TAIL32/MD5": 2,
+        "SMALL/SHA256": 3,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 144,
+      "passwords": 288,
+      "trials": {
+        "SMALL/SHA256": 288,
+        "SMALL/MD5": 288,
+        "TAIL32/SHA256": 288,
+        "TAIL32/MD5": 288,
+        "COSMIC/SHA256": 288,
+        "COSMIC/MD5": 288
+      },
+      "paddings": {
+        "SMALL/SHA256": 2,
+        "TAIL32/SHA256": 3,
+        "TAIL32/MD5": 1,
+        "COSMIC/SHA256": 1,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4810126582278481,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 246,
+      "passwords": 492,
+      "trials": {
+        "SMALL/SHA256": 492,
+        "SMALL/MD5": 492,
+        "TAIL32/SHA256": 492,
+        "TAIL32/MD5": 492,
+        "COSMIC/SHA256": 492,
+        "COSMIC/MD5": 492
+      },
+      "paddings": {
+        "COSMIC/SHA256": 2,
+        "SMALL/SHA256": 3,
+        "SMALL/MD5": 2,
+        "COSMIC/MD5": 1,
+        "TAIL32/SHA256": 3
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 192,
+      "passwords": 384,
+      "trials": {
+        "SMALL/SHA256": 384,
+        "SMALL/MD5": 384,
+        "TAIL32/SHA256": 384,
+        "TAIL32/MD5": 384,
+        "COSMIC/SHA256": 384,
+        "COSMIC/MD5": 384
+      },
+      "paddings": {
+        "SMALL/SHA256": 3,
+        "TAIL32/SHA256": 2,
+        "TAIL32/MD5": 1,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4810126582278481,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 288,
+      "passwords": 576,
+      "trials": {
+        "SMALL/SHA256": 576,
+        "SMALL/MD5": 576,
+        "TAIL32/SHA256": 576,
+        "TAIL32/MD5": 576,
+        "COSMIC/SHA256": 576,
+        "COSMIC/MD5": 576
+      },
+      "paddings": {
+        "SMALL/MD5": 1,
+        "COSMIC/MD5": 4,
+        "SMALL/SHA256": 2,
+        "TAIL32/SHA256": 1,
+        "COSMIC/SHA256": 3,
+        "TAIL32/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 186,
+      "passwords": 372,
+      "trials": {
+        "SMALL/SHA256": 372,
+        "SMALL/MD5": 372,
+        "TAIL32/SHA256": 372,
+        "TAIL32/MD5": 372,
+        "COSMIC/SHA256": 372,
+        "COSMIC/MD5": 372
+      },
+      "paddings": {
+        "TAIL32/SHA256": 4,
+        "TAIL32/MD5": 3,
+        "COSMIC/MD5": 1,
+        "SMALL/SHA256": 2,
+        "SMALL/MD5": 2,
+        "COSMIC/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.45569620253164556,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 210,
+      "passwords": 420,
+      "trials": {
+        "SMALL/SHA256": 420,
+        "SMALL/MD5": 420,
+        "TAIL32/SHA256": 420,
+        "TAIL32/MD5": 420,
+        "COSMIC/SHA256": 420,
+        "COSMIC/MD5": 420
+      },
+      "paddings": {
+        "COSMIC/SHA256": 2,
+        "SMALL/MD5": 1,
+        "TAIL32/SHA256": 2,
+        "SMALL/SHA256": 2,
+        "TAIL32/MD5": 1,
+        "COSMIC/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 240,
+      "passwords": 480,
+      "trials": {
+        "SMALL/SHA256": 480,
+        "SMALL/MD5": 480,
+        "TAIL32/SHA256": 480,
+        "TAIL32/MD5": 480,
+        "COSMIC/SHA256": 480,
+        "COSMIC/MD5": 480
+      },
+      "paddings": {
+        "SMALL/SHA256": 2,
+        "TAIL32/SHA256": 5,
+        "COSMIC/SHA256": 2,
+        "COSMIC/MD5": 2,
+        "TAIL32/MD5": 3,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 300,
+      "passwords": 600,
+      "trials": {
+        "SMALL/SHA256": 600,
+        "SMALL/MD5": 600,
+        "TAIL32/SHA256": 600,
+        "TAIL32/MD5": 600,
+        "COSMIC/SHA256": 600,
+        "COSMIC/MD5": 600
+      },
+      "paddings": {
+        "SMALL/MD5": 3,
+        "TAIL32/SHA256": 7,
+        "SMALL/SHA256": 3,
+        "COSMIC/SHA256": 2,
+        "COSMIC/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 222,
+      "passwords": 444,
+      "trials": {
+        "SMALL/SHA256": 444,
+        "SMALL/MD5": 444,
+        "TAIL32/SHA256": 444,
+        "TAIL32/MD5": 444,
+        "COSMIC/SHA256": 444,
+        "COSMIC/MD5": 444
+      },
+      "paddings": {
+        "SMALL/SHA256": 5,
+        "COSMIC/SHA256": 5,
+        "SMALL/MD5": 1,
+        "TAIL32/SHA256": 3,
+        "TAIL32/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 174,
+      "passwords": 348,
+      "trials": {
+        "SMALL/SHA256": 348,
+        "SMALL/MD5": 348,
+        "TAIL32/SHA256": 348,
+        "TAIL32/MD5": 348,
+        "COSMIC/SHA256": 348,
+        "COSMIC/MD5": 348
+      },
+      "paddings": {
+        "SMALL/SHA256": 6,
+        "SMALL/MD5": 3,
+        "TAIL32/SHA256": 3,
+        "TAIL32/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.46835443037974683,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 240,
+      "passwords": 480,
+      "trials": {
+        "SMALL/SHA256": 480,
+        "SMALL/MD5": 480,
+        "TAIL32/SHA256": 480,
+        "TAIL32/MD5": 480,
+        "COSMIC/SHA256": 480,
+        "COSMIC/MD5": 480
+      },
+      "paddings": {
+        "COSMIC/MD5": 2,
+        "TAIL32/MD5": 3,
+        "COSMIC/SHA256": 2,
+        "SMALL/SHA256": 4,
+        "TAIL32/SHA256": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 144,
+      "passwords": 288,
+      "trials": {
+        "SMALL/SHA256": 288,
+        "SMALL/MD5": 288,
+        "TAIL32/SHA256": 288,
+        "TAIL32/MD5": 288,
+        "COSMIC/SHA256": 288,
+        "COSMIC/MD5": 288
+      },
+      "paddings": {
+        "TAIL32/SHA256": 1,
+        "SMALL/SHA256": 1,
+        "TAIL32/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 138,
+      "passwords": 276,
+      "trials": {
+        "SMALL/SHA256": 276,
+        "SMALL/MD5": 276,
+        "TAIL32/SHA256": 276,
+        "TAIL32/MD5": 276,
+        "COSMIC/SHA256": 276,
+        "COSMIC/MD5": 276
+      },
+      "paddings": {
+        "TAIL32/MD5": 2,
+        "TAIL32/SHA256": 4,
+        "SMALL/SHA256": 3,
+        "SMALL/MD5": 1,
+        "COSMIC/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 240,
+      "passwords": 480,
+      "trials": {
+        "SMALL/SHA256": 480,
+        "SMALL/MD5": 480,
+        "TAIL32/SHA256": 480,
+        "TAIL32/MD5": 480,
+        "COSMIC/SHA256": 480,
+        "COSMIC/MD5": 480
+      },
+      "paddings": {
+        "COSMIC/MD5": 3,
+        "TAIL32/MD5": 1,
+        "COSMIC/SHA256": 1,
+        "SMALL/SHA256": 2,
+        "TAIL32/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 231,
+      "passwords": 462,
+      "trials": {
+        "SMALL/SHA256": 462,
+        "SMALL/MD5": 462,
+        "TAIL32/SHA256": 462,
+        "TAIL32/MD5": 462,
+        "COSMIC/SHA256": 462,
+        "COSMIC/MD5": 462
+      },
+      "paddings": {
+        "TAIL32/SHA256": 3,
+        "SMALL/SHA256": 2,
+        "SMALL/MD5": 2,
+        "COSMIC/SHA256": 1,
+        "TAIL32/MD5": 2,
+        "COSMIC/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 240,
+      "passwords": 480,
+      "trials": {
+        "SMALL/SHA256": 480,
+        "SMALL/MD5": 480,
+        "TAIL32/SHA256": 480,
+        "TAIL32/MD5": 480,
+        "COSMIC/SHA256": 480,
+        "COSMIC/MD5": 480
+      },
+      "paddings": {
+        "COSMIC/MD5": 3,
+        "TAIL32/MD5": 1,
+        "COSMIC/SHA256": 1,
+        "SMALL/SHA256": 2,
+        "TAIL32/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 207,
+      "passwords": 414,
+      "trials": {
+        "SMALL/SHA256": 414,
+        "SMALL/MD5": 414,
+        "TAIL32/SHA256": 414,
+        "TAIL32/MD5": 414,
+        "COSMIC/SHA256": 414,
+        "COSMIC/MD5": 414
+      },
+      "paddings": {
+        "TAIL32/MD5": 1,
+        "TAIL32/SHA256": 4,
+        "SMALL/SHA256": 1,
+        "SMALL/MD5": 1,
+        "COSMIC/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 192,
+      "passwords": 384,
+      "trials": {
+        "SMALL/SHA256": 384,
+        "SMALL/MD5": 384,
+        "TAIL32/SHA256": 384,
+        "TAIL32/MD5": 384,
+        "COSMIC/SHA256": 384,
+        "COSMIC/MD5": 384
+      },
+      "paddings": {
+        "SMALL/SHA256": 4,
+        "TAIL32/MD5": 3,
+        "COSMIC/MD5": 4,
+        "COSMIC/SHA256": 1,
+        "SMALL/MD5": 1,
+        "TAIL32/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 186,
+      "passwords": 372,
+      "trials": {
+        "SMALL/SHA256": 372,
+        "SMALL/MD5": 372,
+        "TAIL32/SHA256": 372,
+        "TAIL32/MD5": 372,
+        "COSMIC/SHA256": 372,
+        "COSMIC/MD5": 372
+      },
+      "paddings": {
+        "SMALL/MD5": 2,
+        "COSMIC/MD5": 3,
+        "COSMIC/SHA256": 2,
+        "TAIL32/MD5": 3,
+        "TAIL32/SHA256": 2,
+        "SMALL/SHA256": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 270,
+      "passwords": 540,
+      "trials": {
+        "SMALL/SHA256": 540,
+        "SMALL/MD5": 540,
+        "TAIL32/SHA256": 540,
+        "TAIL32/MD5": 540,
+        "COSMIC/SHA256": 540,
+        "COSMIC/MD5": 540
+      },
+      "paddings": {
+        "COSMIC/SHA256": 3,
+        "COSMIC/MD5": 4,
+        "SMALL/SHA256": 3,
+        "TAIL32/MD5": 3,
+        "TAIL32/SHA256": 1,
+        "SMALL/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.39562923888470236,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 189,
+      "passwords": 378,
+      "trials": {
+        "SMALL/SHA256": 378,
+        "SMALL/MD5": 378,
+        "TAIL32/SHA256": 378,
+        "TAIL32/MD5": 378,
+        "COSMIC/SHA256": 378,
+        "COSMIC/MD5": 378
+      },
+      "paddings": {
+        "SMALL/MD5": 6,
+        "SMALL/SHA256": 3,
+        "TAIL32/MD5": 1,
+        "COSMIC/SHA256": 1,
+        "TAIL32/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.45569620253164556,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 186,
+      "passwords": 372,
+      "trials": {
+        "SMALL/SHA256": 372,
+        "SMALL/MD5": 372,
+        "TAIL32/SHA256": 372,
+        "TAIL32/MD5": 372,
+        "COSMIC/SHA256": 372,
+        "COSMIC/MD5": 372
+      },
+      "paddings": {
+        "TAIL32/MD5": 3,
+        "TAIL32/SHA256": 3,
+        "COSMIC/MD5": 2,
+        "SMALL/SHA256": 2,
+        "COSMIC/SHA256": 1,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 210,
+      "passwords": 420,
+      "trials": {
+        "SMALL/SHA256": 420,
+        "SMALL/MD5": 420,
+        "TAIL32/SHA256": 420,
+        "TAIL32/MD5": 420,
+        "COSMIC/SHA256": 420,
+        "COSMIC/MD5": 420
+      },
+      "paddings": {
+        "TAIL32/SHA256": 5,
+        "TAIL32/MD5": 2,
+        "SMALL/SHA256": 2,
+        "SMALL/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 225,
+      "passwords": 450,
+      "trials": {
+        "SMALL/SHA256": 450,
+        "SMALL/MD5": 450,
+        "TAIL32/SHA256": 450,
+        "TAIL32/MD5": 450,
+        "COSMIC/SHA256": 450,
+        "COSMIC/MD5": 450
+      },
+      "paddings": {
+        "SMALL/SHA256": 3,
+        "SMALL/MD5": 3,
+        "TAIL32/SHA256": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 198,
+      "passwords": 396,
+      "trials": {
+        "SMALL/SHA256": 396,
+        "SMALL/MD5": 396,
+        "TAIL32/SHA256": 396,
+        "TAIL32/MD5": 396,
+        "COSMIC/SHA256": 396,
+        "COSMIC/MD5": 396
+      },
+      "paddings": {
+        "SMALL/SHA256": 2,
+        "COSMIC/MD5": 3,
+        "COSMIC/SHA256": 2,
+        "TAIL32/MD5": 2,
+        "TAIL32/SHA256": 1,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4050632911392405,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 96,
+      "passwords": 192,
+      "trials": {
+        "SMALL/SHA256": 192,
+        "SMALL/MD5": 192,
+        "TAIL32/SHA256": 192,
+        "TAIL32/MD5": 192,
+        "COSMIC/SHA256": 192,
+        "COSMIC/MD5": 192
+      },
+      "paddings": {
+        "COSMIC/MD5": 3,
+        "TAIL32/SHA256": 1,
+        "SMALL/SHA256": 1,
+        "TAIL32/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 186,
+      "passwords": 372,
+      "trials": {
+        "SMALL/SHA256": 372,
+        "SMALL/MD5": 372,
+        "TAIL32/SHA256": 372,
+        "TAIL32/MD5": 372,
+        "COSMIC/SHA256": 372,
+        "COSMIC/MD5": 372
+      },
+      "paddings": {
+        "TAIL32/SHA256": 5,
+        "TAIL32/MD5": 2,
+        "SMALL/SHA256": 2,
+        "COSMIC/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 252,
+      "passwords": 504,
+      "trials": {
+        "SMALL/SHA256": 504,
+        "SMALL/MD5": 504,
+        "TAIL32/SHA256": 504,
+        "TAIL32/MD5": 504,
+        "COSMIC/SHA256": 504,
+        "COSMIC/MD5": 504
+      },
+      "paddings": {
+        "COSMIC/MD5": 2,
+        "TAIL32/SHA256": 1,
+        "SMALL/SHA256": 3,
+        "TAIL32/MD5": 1,
+        "SMALL/MD5": 4
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 138,
+      "passwords": 276,
+      "trials": {
+        "SMALL/SHA256": 276,
+        "SMALL/MD5": 276,
+        "TAIL32/SHA256": 276,
+        "TAIL32/MD5": 276,
+        "COSMIC/SHA256": 276,
+        "COSMIC/MD5": 276
+      },
+      "paddings": {
+        "SMALL/MD5": 1,
+        "COSMIC/MD5": 1,
+        "TAIL32/SHA256": 2,
+        "TAIL32/MD5": 2,
+        "SMALL/SHA256": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 210,
+      "passwords": 420,
+      "trials": {
+        "SMALL/SHA256": 420,
+        "SMALL/MD5": 420,
+        "TAIL32/SHA256": 420,
+        "TAIL32/MD5": 420,
+        "COSMIC/SHA256": 420,
+        "COSMIC/MD5": 420
+      },
+      "paddings": {
+        "COSMIC/MD5": 1,
+        "TAIL32/SHA256": 3,
+        "TAIL32/MD5": 2,
+        "SMALL/SHA256": 2,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.46835443037974683,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 192,
+      "passwords": 384,
+      "trials": {
+        "SMALL/SHA256": 384,
+        "SMALL/MD5": 384,
+        "TAIL32/SHA256": 384,
+        "TAIL32/MD5": 384,
+        "COSMIC/SHA256": 384,
+        "COSMIC/MD5": 384
+      },
+      "paddings": {
+        "SMALL/MD5": 3,
+        "TAIL32/SHA256": 3,
+        "TAIL32/MD5": 2,
+        "SMALL/SHA256": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4810126582278481,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 210,
+      "passwords": 420,
+      "trials": {
+        "SMALL/SHA256": 420,
+        "SMALL/MD5": 420,
+        "TAIL32/SHA256": 420,
+        "TAIL32/MD5": 420,
+        "COSMIC/SHA256": 420,
+        "COSMIC/MD5": 420
+      },
+      "paddings": {
+        "TAIL32/SHA256": 3,
+        "SMALL/SHA256": 1,
+        "TAIL32/MD5": 2,
+        "COSMIC/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 144,
+      "passwords": 288,
+      "trials": {
+        "SMALL/SHA256": 288,
+        "SMALL/MD5": 288,
+        "TAIL32/SHA256": 288,
+        "TAIL32/MD5": 288,
+        "COSMIC/SHA256": 288,
+        "COSMIC/MD5": 288
+      },
+      "paddings": {
+        "COSMIC/SHA256": 2,
+        "TAIL32/SHA256": 3,
+        "SMALL/MD5": 1,
+        "SMALL/SHA256": 1,
+        "TAIL32/MD5": 2,
+        "COSMIC/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 222,
+      "passwords": 444,
+      "trials": {
+        "SMALL/SHA256": 444,
+        "SMALL/MD5": 444,
+        "TAIL32/SHA256": 444,
+        "TAIL32/MD5": 444,
+        "COSMIC/SHA256": 444,
+        "COSMIC/MD5": 444
+      },
+      "paddings": {
+        "COSMIC/MD5": 2,
+        "TAIL32/SHA256": 2,
+        "TAIL32/MD5": 2,
+        "SMALL/SHA256": 2,
+        "SMALL/MD5": 1
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 156,
+      "passwords": 312,
+      "trials": {
+        "SMALL/SHA256": 312,
+        "SMALL/MD5": 312,
+        "TAIL32/SHA256": 312,
+        "TAIL32/MD5": 312,
+        "COSMIC/SHA256": 312,
+        "COSMIC/MD5": 312
+      },
+      "paddings": {
+        "COSMIC/SHA256": 2,
+        "SMALL/MD5": 1,
+        "TAIL32/SHA256": 1,
+        "SMALL/SHA256": 2,
+        "TAIL32/MD5": 1,
+        "COSMIC/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.43037974683544306,
+      "brainwallets": 0,
+      "raw32": 0
+    },
+    {
+      "materials": 288,
+      "passwords": 576,
+      "trials": {
+        "SMALL/SHA256": 576,
+        "SMALL/MD5": 576,
+        "TAIL32/SHA256": 576,
+        "TAIL32/MD5": 576,
+        "COSMIC/SHA256": 576,
+        "COSMIC/MD5": 576
+      },
+      "paddings": {
+        "COSMIC/SHA256": 2,
+        "SMALL/SHA256": 2,
+        "TAIL32/SHA256": 2,
+        "TAIL32/MD5": 2,
+        "SMALL/MD5": 1,
+        "COSMIC/MD5": 2
+      },
+      "semantic_flags": 0,
+      "hard_hits": 0,
+      "max_printable": 0.4430379746835443,
+      "brainwallets": 0,
+      "raw32": 0
+    }
+  ],
+  "seconds": 8.20299999999952,
+  "limits": [
+    "Geometria compatível com yin-yang padrão; coordenadas são hipótese.",
+    "Número de materiais distintos pode variar com discretização no nulo.",
+    "Raw32 no plaintext somente big-endian; chaves de hashes testadas integralmente."
+  ]
+}

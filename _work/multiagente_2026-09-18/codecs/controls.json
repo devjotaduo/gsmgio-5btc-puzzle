@@ -1,0 +1,318 @@
+{
+  "passed": true,
+  "known_bitcoin_vector": true,
+  "positive_cases": [
+    {
+      "kind": "raw32",
+      "prefix_length": 0,
+      "compressions": [
+        false,
+        true
+      ]
+    },
+    {
+      "kind": "raw32",
+      "prefix_length": 7,
+      "compressions": [
+        false,
+        true
+      ]
+    },
+    {
+      "kind": "raw32",
+      "prefix_length": 31,
+      "compressions": [
+        false,
+        true
+      ]
+    },
+    {
+      "kind": "hex64-and-wif",
+      "target": "1Cy4cPZuoEAERCZa45SqUduLqoFH2TYiF9"
+    },
+    {
+      "kind": "hex64-and-wif",
+      "target": "1MLztdVWDWQW2FeZiizqsNsYopyivQUPRC"
+    },
+    {
+      "kind": "raw32",
+      "prefix_length": 0,
+      "compressions": [
+        true,
+        false
+      ]
+    },
+    {
+      "kind": "raw32",
+      "prefix_length": 7,
+      "compressions": [
+        true,
+        false
+      ]
+    },
+    {
+      "kind": "raw32",
+      "prefix_length": 31,
+      "compressions": [
+        true,
+        false
+      ]
+    },
+    {
+      "kind": "hex64-and-wif",
+      "target": "1can45uc3Ynmm5jC2pyWbFBXWsm552pCE"
+    },
+    {
+      "kind": "hex64-and-wif",
+      "target": "1L32BiTpH64Bok4pzHcvdkK66mB2658Lwu"
+    }
+  ],
+  "independent_random_scalars": 16,
+  "encoded_text_cases": [
+    [
+      "cp273",
+      0,
+      "hex64"
+    ],
+    [
+      "cp273",
+      0,
+      "wif"
+    ],
+    [
+      "cp273",
+      1,
+      "hex64"
+    ],
+    [
+      "cp273",
+      1,
+      "wif"
+    ],
+    [
+      "utf-16-le",
+      0,
+      "hex64"
+    ],
+    [
+      "utf-16-le",
+      0,
+      "wif"
+    ],
+    [
+      "utf-16-le",
+      1,
+      "hex64"
+    ],
+    [
+      "utf-16-le",
+      1,
+      "wif"
+    ],
+    [
+      "utf-16-be",
+      0,
+      "hex64"
+    ],
+    [
+      "utf-16-be",
+      0,
+      "wif"
+    ],
+    [
+      "utf-16-be",
+      1,
+      "hex64"
+    ],
+    [
+      "utf-16-be",
+      1,
+      "wif"
+    ]
+  ],
+  "cp273_directions": {
+    "passed": true,
+    "cases": [
+      {
+        "direction": "cp273",
+        "key_index": 1,
+        "form": "hex64",
+        "offset": 0
+      },
+      {
+        "direction": "cp273",
+        "key_index": 1,
+        "form": "hex64",
+        "offset": 2
+      },
+      {
+        "direction": "cp273",
+        "key_index": 1,
+        "form": "wif-uncompressed",
+        "offset": 0
+      },
+      {
+        "direction": "cp273",
+        "key_index": 1,
+        "form": "wif-uncompressed",
+        "offset": 2
+      },
+      {
+        "direction": "cp273",
+        "key_index": 1,
+        "form": "wif-compressed",
+        "offset": 0
+      },
+      {
+        "direction": "cp273",
+        "key_index": 1,
+        "form": "wif-compressed",
+        "offset": 2
+      },
+      {
+        "direction": "cp273",
+        "key_index": 2,
+        "form": "hex64",
+        "offset": 0
+      },
+      {
+        "direction": "cp273",
+        "key_index": 2,
+        "form": "hex64",
+        "offset": 2
+      },
+      {
+        "direction": "cp273",
+        "key_index": 2,
+        "form": "wif-uncompressed",
+        "offset": 0
+      },
+      {
+        "direction": "cp273",
+        "key_index": 2,
+        "form": "wif-uncompressed",
+        "offset": 2
+      },
+      {
+        "direction": "cp273",
+        "key_index": 2,
+        "form": "wif-compressed",
+        "offset": 0
+      },
+      {
+        "direction": "cp273",
+        "key_index": 2,
+        "form": "wif-compressed",
+        "offset": 2
+      },
+      {
+        "direction": "cp273-inverse",
+        "key_index": 1,
+        "form": "hex64",
+        "offset": 0
+      },
+      {
+        "direction": "cp273-inverse",
+        "key_index": 1,
+        "form": "hex64",
+        "offset": 2
+      },
+      {
+        "direction": "cp273-inverse",
+        "key_index": 1,
+        "form": "wif-uncompressed",
+        "offset": 0
+      },
+      {
+        "direction": "cp273-inverse",
+        "key_index": 1,
+        "form": "wif-uncompressed",
+        "offset": 2
+      },
+      {
+        "direction": "cp273-inverse",
+        "key_index": 1,
+        "form": "wif-compressed",
+        "offset": 0
+      },
+      {
+        "direction": "cp273-inverse",
+        "key_index": 1,
+        "form": "wif-compressed",
+        "offset": 2
+      },
+      {
+        "direction": "cp273-inverse",
+        "key_index": 2,
+        "form": "hex64",
+        "offset": 0
+      },
+      {
+        "direction": "cp273-inverse",
+        "key_index": 2,
+        "form": "hex64",
+        "offset": 2
+      },
+      {
+        "direction": "cp273-inverse",
+        "key_index": 2,
+        "form": "wif-uncompressed",
+        "offset": 0
+      },
+      {
+        "direction": "cp273-inverse",
+        "key_index": 2,
+        "form": "wif-uncompressed",
+        "offset": 2
+      },
+      {
+        "direction": "cp273-inverse",
+        "key_index": 2,
+        "form": "wif-compressed",
+        "offset": 0
+      },
+      {
+        "direction": "cp273-inverse",
+        "key_index": 2,
+        "form": "wif-compressed",
+        "offset": 2
+      }
+    ],
+    "unmappable_bytes": [
+      175
+    ],
+    "all_byte_mappings_verified": 256,
+    "interrupted_candidates_rejected": 12,
+    "matched_null": {
+      "shuffles": 100,
+      "seed": 18092026,
+      "attempts": 100,
+      "hits": 0
+    }
+  },
+  "invalid_scalars_and_wif_rejected": true,
+  "matched_null": {
+    "shuffles": 100,
+    "seed": 17092026,
+    "attempts": 4900,
+    "hits": 0
+  },
+  "elapsed_seconds": 0.297,
+  "phase32_codec": {
+    "passed": true,
+    "plaintext_bytes": 2422,
+    "beaufort_bytes": 1539,
+    "offset": 447,
+    "beaufort_sha256": "6d66e0e0e2dfdb812d5ecee2be6f54c1f3b8c84b0d74580686cf2053d76a200e",
+    "ciphertext_sha256": "9d172dc017034564b40eb381fa61e31421f509a08430864c77ccf86cfc8fe784",
+    "readme_sha256": "b5ade8d9cbeb7956e725d3021a0a7cd36cd8b66df3ca376f987ca61fd280afef",
+    "operation": "ASCII.decode('cp273').encode('latin-1')",
+    "restored_exactly": true,
+    "conventional_representation_present": false
+  },
+  "phase2_and_checkerboard": true,
+  "kit_sha256": "25b160076554166b20d18f526fe7eebea0fd463a41c14d21290e114dd171d23e",
+  "oracle_sha256": "1b927716a5339a5a8cabe8527f1d7197e9bf539fdb508f25562dabafd45eec8d",
+  "controls_sha256": "903c271238dee4bb51c7f0859d35bfb53c116188b74516c127e612edf6204777",
+  "audit_sha256": "0b0ccd54bdd87bcefc4a4dc8cdc68aff20bc115597dd67e22b6dcb72db5b09eb"
+}

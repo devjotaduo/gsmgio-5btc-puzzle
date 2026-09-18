@@ -1,0 +1,13 @@
+{
+  "phase2": true,
+  "checkerboard": true,
+  "coordinate_pipeline_planted": true,
+  "white_cell14": [
+    7,
+    6
+  ],
+  "yellow_cell14": [
+    7,
+    9
+  ]
+}

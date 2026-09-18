@@ -1,0 +1,8 @@
+{
+  "hypothesis": "Os plaintexts integralmente recuperados podem conter uma abertura textual ou blob OpenSSL aninhado em regiões que antes eram apenas prefixos. Triagem finita nos bytes originais e nas duas direções cp273 pode localizar esses sinais sem ECC.",
+  "criteria_fixed_before_scan": {"whole_semantic": "G.semantic, sem alterar limiares", "nested_prefix": "G.nested_blob", "long_ascii_run": "48 bytes consecutivos em TAB/LF/CR ou 0x20..0x7e", "nested_any_offset": "Salted__ com pelo menos32 bytes restantes ou base64 validado que decodifica Salted__"},
+  "views": ["original", "cp273 convencional para Latin-1", "cp273 inverso com delimitador 0xaf"],
+  "controls": ["Fase2/checkerboard", "Fase3.2 mixedASCII/inversecp273", "AES aninhado sintético no prefixo e no interior", "Texto sintético interior nas três visões", "100 aleatórios por comprimento observado", "100 embaralhamentos da fase3.2"],
+  "limits": ["Triagem não declara solução", "Sem ECC", "Sem rede", "Não cobre texto curto, todos os codecs, compressão ou texto fragmentado arbitrariamente", "Resultados candidatos completos somente em JSONL local ignorado"],
+  "status": "registered_before_scan"
+}

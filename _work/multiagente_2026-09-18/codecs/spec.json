@@ -1,0 +1,6 @@
+{
+  "hypothesis": "A representação inversa cp273, comprovada pelos 1539 bytes da fase 3.2, está ausente no oráculo histórico. Acrescentá-la deve recuperar hex64/WIF plantados, mantendo offsets e sem concatenar trechos separados por falhas de codificação.",
+  "scope": ["hex64 e WIF na transformação ASCII.decode(cp273).encode(latin-1)", "cobertura cp273 convencional preservada", "duas chaves e alvos sintéticos", "100 embaralhamentos preservando contagens"],
+  "limits": ["Não varre corpus histórico", "Não altera KDF, cifras ou busca de chaves", "Não publica segredos", "A correção não demonstra solução real"],
+  "status": "registered_before_change"
+}

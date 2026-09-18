@@ -1,0 +1,169 @@
+{
+  "status": "complete",
+  "coverage": {
+    "decoder_configurations": 23164,
+    "family_counts": {
+      "cb": 19710,
+      "poly3": 216,
+      "bifid3": 2904,
+      "mono_rank": 4,
+      "digits": 150,
+      "groups": 20,
+      "a1z26_direct": 4,
+      "base": 48,
+      "index": 108
+    },
+    "changed_outputs_from_position_fix": 9068,
+    "empty_outputs": 27,
+    "materials": 71599,
+    "passwords": 143198,
+    "AES_decisions": 859188,
+    "legacy_generated_materials_without_gate": 71025,
+    "material_intersection_with_legacy_generator": 37920,
+    "new_materials_from_position_fix": 33679,
+    "legacy_materials_not_generated_after_fix": 33105,
+    "legacy_generated_set_sha256": "068eb91a254b3fabd9a5ace666083a9514a68e9b179c892fe30b92c59188a518",
+    "corrected_material_set_sha256": "54577ee1dd0b950ca1068c814aef56df06e63325136ef5c827f010f3c4557f9c",
+    "password_set_sha256": "c2ee7104c0f3a6e97da342def1c48478465a230b6709bda7297054339391b95f",
+    "forms": {
+      "dots_to_spaces": {
+        "count": 20896,
+        "set_sha256": "ad9f6ef986673900b7acb8ab39c5d591d81b056bf6249b29b657511840aba458"
+      },
+      "letters": {
+        "count": 20896,
+        "set_sha256": "d30d89d52828fe3c5c21b824a15f835fccb87cd91d8aeb9567557015fc088405"
+      },
+      "letters_lower": {
+        "count": 20896,
+        "set_sha256": "cf97042712d8c5b89b1e94242a8d12c8187bd601997284b0359c4427c628b8e4"
+      },
+      "lower": {
+        "count": 20995,
+        "set_sha256": "b5ed42c3e6bf4d81c096283ca56add84bd893e997f17d693cf5643e83dade91f"
+      },
+      "output": {
+        "count": 20995,
+        "set_sha256": "192da5811d2db54fa0ab62ce3e1f318cb83ab89f56df17b1302c1e89427ef730"
+      },
+      "upper": {
+        "count": 20995,
+        "set_sha256": "192da5811d2db54fa0ab62ce3e1f318cb83ab89f56df17b1302c1e89427ef730"
+      }
+    },
+    "historical_report": {
+      "scored_configurations": 23114,
+      "passwords_actually_tested": 680,
+      "AES_decisions": 4080,
+      "padding_records": 15
+    },
+    "historical_overlap_limit": "Legacy generator means all generated forms, not the actual historical top-20 corpus. The complete 680-password set was not preserved; no exact old/new AES subtraction is claimed.",
+    "generation_seconds": 3.95
+  },
+  "controls": "passed",
+  "null": {
+    "replicas": 100,
+    "seed": 20260918,
+    "selected_configurations": [
+      "a1z26_direct|identity|R83",
+      "a1z26_direct|identity|R83r",
+      "a1z26_direct|identity|R84",
+      "a1z26_direct|identity|R84r",
+      "base|in10|out26a|R83",
+      "base|in10|out26b|R84",
+      "base|in10|out27|R83r",
+      "base|in10|out36|R83",
+      "base|in9|out26a|R84",
+      "base|in9|out27z|R83r",
+      "base|in9|out36z|R83",
+      "base|in9|out36|R84r",
+      "bifid3|sq=abcdefghi|p=10|decrypt|rank|R83",
+      "bifid3|sq=abcdefghi|p=33|encrypt|sqidx|R84",
+      "bifid3|sq=abcdefghi|p=57|encrypt|sqidx|R83r",
+      "bifid3|sq=dbifhcega|p=26|decrypt|sqidx|R83",
+      "bifid3|sq=dbifhcega|p=4|decrypt|rank|R84",
+      "bifid3|sq=rank|p=18|encrypt|rank|R83r",
+      "bifid3|sq=rank|p=41|encrypt|rank|R83",
+      "bifid3|sq=rank|p=9|encrypt|sqidx|R84r",
+      "cb|esc(0, 1)|0-9|AZ.|L83_b0be1",
+      "cb|esc(1, 2)|0-9|key.:salphaseion|L84_m0",
+      "cb|esc(1, 9)|1-9|alpha322_nodot|R84r",
+      "cb|esc(2, 9)|0-9|key.:dbifhcega|R83",
+      "cb|esc(3, 9)|0-9|key:theseedisplanted|R83",
+      "cb|esc(5, 6)|0-9|alpha322_nodot|R83r",
+      "cb|esc(6, 9)|0-9|key:lastwordsbeforearchichoice|R83r",
+      "cb|esc(9,)|1-9|key:yinyang|R84r",
+      "digits|k=2|off0|a0z25|L83_b0be1",
+      "digits|k=2|off0|le26|L83_b0be10",
+      "digits|k=2|off1|a1z26|L83_m0",
+      "digits|k=3|off0|a0z25|L84_b0be1",
+      "digits|k=3|off0|le26|L84_m0",
+      "digits|k=3|off1|a1z26|R83",
+      "digits|k=3|off2|a0z25|R83r",
+      "digits|k=3|off2|le26|R84r",
+      "groups|L83|a0z25|R83",
+      "groups|L83|a1z26|R83",
+      "groups|L83|first|R83r",
+      "groups|L83|sum|R83",
+      "groups|L84|a0z25|R84",
+      "groups|L84|a1z26|R84r",
+      "groups|L84|last|R84",
+      "groups|L84|sum|R84r",
+      "index|ARCH|letters|abs|R83",
+      "index|ARCH|letters|skip|R84r",
+      "index|ARCH|words|nth|R84",
+      "index|M322|letters|cum|R83r",
+      "index|M322|words|cum|R83r",
+      "index|P1|letters|cum0|R83",
+      "index|P1|words|abs|R84r",
+      "index|P1|words|skip|R84r",
+      "mono_rank|rank->ETAOINSHR|R83",
+      "mono_rank|rank->ETAOINSHR|R83r",
+      "mono_rank|rank->ETAOINSHR|R84",
+      "mono_rank|rank->ETAOINSHR|R84r",
+      "poly3|row=(d-1)%3|col=(d-1)%3|ETAOINSHR@dbifhcega|off0|L83_m0",
+      "poly3|row=(d-1)%3|col=(d-1)//3|ETAOINSHR@dbifhcega|off1|L83_m0",
+      "poly3|row=(d-1)%3|col=d%3|ETAOINSHR|off0|L84_m0",
+      "poly3|row=(d-1)//3|col=(d-1)%3|ETAOINSHR|off1|R83",
+      "poly3|row=(d-1)//3|col=d%3|ETAOINSHR@dbifhcega|off0|R83",
+      "poly3|row=d%3|col=(d-1)%3|ETAOINSHR@dbifhcega|off1|R83r",
+      "poly3|row=d%3|col=(d-1)//3|ETAOINSHR|off0|R84",
+      "poly3|row=d%3|col=d%3|ETAOINSHR|off1|R84r"
+    ],
+    "AES_decisions": 178116,
+    "paddings": 603,
+    "semantic_reviews": 0,
+    "scope": "Stratified fixed sample of up to eight configurations per family; nonprime symbols shuffled with counts preserved and prime markers fixed. No whole-search p-value or ECC null claim.",
+    "seconds": 5.91
+  },
+  "result": {
+    "AES_decisions": 859188,
+    "padding_records": 3420,
+    "unique_padding_payloads": 3420,
+    "numeric_scalar_records": 60,
+    "unique_numeric_and_sha256_password_scalars": 143242,
+    "padding_private_key_attempts": {
+      "raw32": 1635534,
+      "hex64": 0,
+      "wif-uncompressed": 0,
+      "wif-compressed": 0
+    },
+    "semantic_review_records": 0,
+    "private_key_hits": 0,
+    "decisions_sha256": "34d74db43b56c414e9f650e2794a9f3d2150c2c936a7b3bd85671b9348105065",
+    "seconds": 75.5
+  },
+  "artifact_sha256": {
+    "controls.json": "8b399d83da5ac87765418fe60749bbd455bcebeb67b2a858aed7a63188be0d32",
+    "coverage.json": "76c6d601af891ebdd403aa6997d9eb702e3d8f534c656b3fc6f5ae13a0278721",
+    "hits.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "materials.jsonl": "4f3cbd47af8f4ddaf3fe918b1136f86c92c95cb8a6f11a78bd8d12fdf2b77f14",
+    "null.jsonl": "6aad00dce575fe3518b72e127b4f9a3c9c5089fe0d735710d814ca43837fe88e",
+    "null_padding.jsonl": "cb882ab2799aee2ed66c2fd7f777e99367abd37890160809e3ae26344d4e2b46",
+    "null_summary.json": "711276a88f298a66708cff2fae09da62170f63a30e0dc0d0934e5d6001f764fc",
+    "outputs.jsonl": "7eafdb7ae779d4e85b44e052a3f584c7ce33b46a5a3b4cf43127de1efdf62960",
+    "padding.jsonl": "fdf90f9d8c1caf0d19f95ca701343ac299b5708a790abf8467ebb5d32adff22c",
+    "passwords.jsonl": "7af999d5d6a7e22d4becacabec59a7fcc044fe402b6abad909183d2797e5d8ba",
+    "spec.json": "283753860584d6a2e1d2caa9e7cb100b19c88bc859c6662c8cfe460484efbb49"
+  }
+}

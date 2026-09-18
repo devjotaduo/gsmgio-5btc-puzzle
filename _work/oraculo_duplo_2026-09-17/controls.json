@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "known_bitcoin_vector": true,
+  "positive_cases": [
+    {
+      "kind": "raw32",
+      "prefix_length": 0,
+      "compressions": [
+        false,
+        true
+      ]
+    },
+    {
+      "kind": "raw32",
+      "prefix_length": 7,
+      "compressions": [
+        false,
+        true
+      ]
+    },
+    {
+      "kind": "raw32",
+      "prefix_length": 31,
+      "compressions": [
+        false,
+        true
+      ]
+    },
+    {
+      "kind": "hex64-and-wif",
+      "target": "1Cy4cPZuoEAERCZa45SqUduLqoFH2TYiF9"
+    },
+    {
+      "kind": "hex64-and-wif",
+      "target": "1MLztdVWDWQW2FeZiizqsNsYopyivQUPRC"
+    },
+    {
+      "kind": "raw32",
+      "prefix_length": 0,
+      "compressions": [
+        true,
+        false
+      ]
+    },
+    {
+      "kind": "raw32",
+      "prefix_length": 7,
+      "compressions": [
+        true,
+        false
+      ]
+    },
+    {
+      "kind": "raw32",
+      "prefix_length": 31,
+      "compressions": [
+        true,
+        false
+      ]
+    },
+    {
+      "kind": "hex64-and-wif",
+      "target": "1can45uc3Ynmm5jC2pyWbFBXWsm552pCE"
+    },
+    {
+      "kind": "hex64-and-wif",
+      "target": "1L32BiTpH64Bok4pzHcvdkK66mB2658Lwu"
+    }
+  ],
+  "independent_random_scalars": 16,
+  "invalid_scalars_and_wif_rejected": true,
+  "matched_null": {
+    "shuffles": 100,
+    "seed": 17092026,
+    "attempts": 4900,
+    "hits": 0
+  },
+  "elapsed_seconds": 0.531,
+  "phase2_and_checkerboard_original_kit": true,
+  "kit_sha256": "e188b18f7b48ffa1dc89869f16e22877a95855a59a2798ee11de815b2ed9f43a",
+  "oracle_sha256": "7aa54a2c8bb085b184452250dca7e7852e2ade81ebbeb32750eef63f184f7600",
+  "controls_sha256": "3bfeb537029f703f60d20e7cece1e6356d4ba8c948ef00db79d4f119ccdca6b4"
+}

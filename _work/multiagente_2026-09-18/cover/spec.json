@@ -1,0 +1,65 @@
+{
+  "hypothesis": "Fecha a lacuna declarada das coordenadas das estrelas da capa recuperada.\n\nHipótese de baixo prior: coordenadas ou soma/diferença dos dois centros,\nserializadas como os números das fases anteriores, fornecem senha ou brainwallet.\nA capa prova uma referência visual a yin-yang; não prova uso de coordenadas.\nQuatro limiares, duas discretizações em grade e ordem dos eixos são fixados\nantes de qualquer AES. Nulo: 100 rotações rígidas dos quatro pares medidos.\n",
+  "image_sha256": "3a9b0a6ecacef83e1ef9f688303105570b3dcae95fd82be75f1fcbd2f5fddd04",
+  "measurements": [
+    {
+      "threshold": 140,
+      "white": {
+        "x": 202.60188087774293,
+        "y": 248.6206896551724,
+        "area": 319
+      },
+      "yellow": {
+        "x": 203.0066371681416,
+        "y": 349.3473451327434,
+        "area": 452
+      }
+    },
+    {
+      "threshold": 170,
+      "white": {
+        "x": 202.88425925925924,
+        "y": 248.5925925925926,
+        "area": 216
+      },
+      "yellow": {
+        "x": 202.8735632183908,
+        "y": 349.183908045977,
+        "area": 348
+      }
+    },
+    {
+      "threshold": 200,
+      "white": {
+        "x": 202.8174603174603,
+        "y": 248.515873015873,
+        "area": 126
+      },
+      "yellow": {
+        "x": 203.02448979591838,
+        "y": 349.7469387755102,
+        "area": 245
+      }
+    },
+    {
+      "threshold": 220,
+      "white": {
+        "x": 202.83333333333331,
+        "y": 249.2,
+        "area": 30
+      },
+      "yellow": {
+        "x": 202.86486486486487,
+        "y": 349.8054054054054,
+        "area": 185
+      }
+    }
+  ],
+  "normalizations": [
+    "round(pixel)",
+    "floor(14*xy/(377,499))",
+    "round(13*xy/(376,498))"
+  ],
+  "script_sha256": "70b5fbd706a17c89d714afc30b528f00859d9bd432475c6970050c12d530e128",
+  "null": "100 rotações rígidas dos quatro pares, centro mediano fixo e ângulos uniformes; mesmo gerador; sem ECC no nulo"
+}

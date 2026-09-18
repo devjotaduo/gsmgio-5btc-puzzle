@@ -1,0 +1,91 @@
+{
+  "collected_utc": "2026-09-17T23:46:05.2733609Z",
+  "addresses": [
+    {
+      "source": "https://mempool.space/api/address/1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+      "response": {
+        "address": "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+        "chain_stats": {
+          "funded_txo_count": 126,
+          "funded_txo_sum": 875988872,
+          "spent_txo_count": 6,
+          "spent_txo_sum": 750353498,
+          "tx_count": 126
+        },
+        "mempool_stats": {
+          "funded_txo_count": 0,
+          "funded_txo_sum": 0,
+          "spent_txo_count": 0,
+          "spent_txo_sum": 0,
+          "tx_count": 0
+        }
+      }
+    },
+    {
+      "source": "https://mempool.space/api/address/17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa",
+      "response": {
+        "address": "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa",
+        "chain_stats": {
+          "funded_txo_count": 45,
+          "funded_txo_sum": 375055856,
+          "spent_txo_count": 0,
+          "spent_txo_sum": 0,
+          "tx_count": 45
+        },
+        "mempool_stats": {
+          "funded_txo_count": 0,
+          "funded_txo_sum": 0,
+          "spent_txo_count": 0,
+          "spent_txo_sum": 0,
+          "tx_count": 0
+        }
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "txid": "88cdb3cdca12b471551b1b26188508a14ca5fd8a415223ffb7c190381c9b9df3",
+      "source": "https://mempool.space/tx/88cdb3cdca12b471551b1b26188508a14ca5fd8a415223ffb7c190381c9b9df3",
+      "block_time": 1713995247,
+      "inputs": [
+        "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+        "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+        "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe"
+      ],
+      "outputs": [
+        {
+          "scriptpubkey_address": "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa",
+          "scriptpubkey": "76a9144bc468447fe1b048ad030a2f9a125478eabc4ed688ac",
+          "value": 125000000
+        },
+        {
+          "scriptpubkey_address": "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+          "scriptpubkey": "76a914a9553269572a317e39f0f518cb87c1a0ee1dbae488ac",
+          "value": 125324300
+        }
+      ]
+    },
+    {
+      "txid": "2aa9a4a90be819d5122d70c993280785a0508f163521e7b38cebb4db0b071b13",
+      "source": "https://mempool.space/tx/2aa9a4a90be819d5122d70c993280785a0508f163521e7b38cebb4db0b071b13",
+      "block_time": 1589227370,
+      "inputs": [
+        "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+        "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+        "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe"
+      ],
+      "outputs": [
+        {
+          "scriptpubkey_address": "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+          "scriptpubkey": "76a914a9553269572a317e39f0f518cb87c1a0ee1dbae488ac",
+          "value": 249815966
+        },
+        {
+          "scriptpubkey_address": "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa",
+          "scriptpubkey": "76a9144bc468447fe1b048ad030a2f9a125478eabc4ed688ac",
+          "value": 250000000
+        }
+      ]
+    }
+  ]
+}

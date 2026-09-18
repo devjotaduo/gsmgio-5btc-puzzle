@@ -1,0 +1,1043 @@
+{
+  "passed": true,
+  "phase2_and_checkerboard": true,
+  "synthetic_targets": [
+    "1r9zTaQS7fc2zhpgKhjGHkZCxnK8xgotn",
+    "12VhhWP691MN7PnwiGUEy6Gpso2ZcfgUHQ"
+  ],
+  "cases": [
+    {
+      "mode": "aes-256-cfb",
+      "digest": "sha256",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 0,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-cfb",
+      "digest": "sha256",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 16,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-cfb",
+      "digest": "sha256",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 48,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-cfb",
+      "digest": "sha256",
+      "key_index": 1,
+      "bytes": 1328,
+      "offset": 512,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.009789156626506035
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-cfb",
+      "digest": "sha256",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 0,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-cfb",
+      "digest": "sha256",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 16,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-cfb",
+      "digest": "sha256",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 48,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-cfb",
+      "digest": "sha256",
+      "key_index": 2,
+      "bytes": 1328,
+      "offset": 512,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.0075301204819276935
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-cfb",
+      "digest": "md5",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 0,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-cfb",
+      "digest": "md5",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 16,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-cfb",
+      "digest": "md5",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 48,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-cfb",
+      "digest": "md5",
+      "key_index": 1,
+      "bytes": 1328,
+      "offset": 512,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.009789156626506035
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-cfb",
+      "digest": "md5",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 0,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-cfb",
+      "digest": "md5",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 16,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-cfb",
+      "digest": "md5",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 48,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-cfb",
+      "digest": "md5",
+      "key_index": 2,
+      "bytes": 1328,
+      "offset": 512,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.0075301204819276935
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-ofb",
+      "digest": "sha256",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 0,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-ofb",
+      "digest": "sha256",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 16,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-ofb",
+      "digest": "sha256",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 48,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-ofb",
+      "digest": "sha256",
+      "key_index": 1,
+      "bytes": 1328,
+      "offset": 512,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.009789156626506035
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-ofb",
+      "digest": "sha256",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 0,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-ofb",
+      "digest": "sha256",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 16,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-ofb",
+      "digest": "sha256",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 48,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-ofb",
+      "digest": "sha256",
+      "key_index": 2,
+      "bytes": 1328,
+      "offset": 512,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.0075301204819276935
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-ofb",
+      "digest": "md5",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 0,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-ofb",
+      "digest": "md5",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 16,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-ofb",
+      "digest": "md5",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 48,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-ofb",
+      "digest": "md5",
+      "key_index": 1,
+      "bytes": 1328,
+      "offset": 512,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.009789156626506035
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-ofb",
+      "digest": "md5",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 0,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-ofb",
+      "digest": "md5",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 16,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-ofb",
+      "digest": "md5",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 48,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-ofb",
+      "digest": "md5",
+      "key_index": 2,
+      "bytes": 1328,
+      "offset": 512,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.0075301204819276935
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-ctr",
+      "digest": "sha256",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 0,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-ctr",
+      "digest": "sha256",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 16,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-ctr",
+      "digest": "sha256",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 48,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-ctr",
+      "digest": "sha256",
+      "key_index": 1,
+      "bytes": 1328,
+      "offset": 512,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.009789156626506035
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-ctr",
+      "digest": "sha256",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 0,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-ctr",
+      "digest": "sha256",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 16,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-ctr",
+      "digest": "sha256",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 48,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-ctr",
+      "digest": "sha256",
+      "key_index": 2,
+      "bytes": 1328,
+      "offset": 512,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.0075301204819276935
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-ctr",
+      "digest": "md5",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 0,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-ctr",
+      "digest": "md5",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 16,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-ctr",
+      "digest": "md5",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 48,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-ctr",
+      "digest": "md5",
+      "key_index": 1,
+      "bytes": 1328,
+      "offset": 512,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.009789156626506035
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-ctr",
+      "digest": "md5",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 0,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-ctr",
+      "digest": "md5",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 16,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "aes-256-ctr",
+      "digest": "md5",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 48,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "aes-256-ctr",
+      "digest": "md5",
+      "key_index": 2,
+      "bytes": 1328,
+      "offset": 512,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.0075301204819276935
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "chacha20",
+      "digest": "sha256",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 0,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "chacha20",
+      "digest": "sha256",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 16,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "chacha20",
+      "digest": "sha256",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 48,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "chacha20",
+      "digest": "sha256",
+      "key_index": 1,
+      "bytes": 1328,
+      "offset": 512,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.009789156626506035
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "chacha20",
+      "digest": "sha256",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 0,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "chacha20",
+      "digest": "sha256",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 16,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "chacha20",
+      "digest": "sha256",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 48,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "chacha20",
+      "digest": "sha256",
+      "key_index": 2,
+      "bytes": 1328,
+      "offset": 512,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.0075301204819276935
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "chacha20",
+      "digest": "md5",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 0,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "chacha20",
+      "digest": "md5",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 16,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "chacha20",
+      "digest": "md5",
+      "key_index": 1,
+      "bytes": 80,
+      "offset": 48,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.16249999999999998
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "chacha20",
+      "digest": "md5",
+      "key_index": 1,
+      "bytes": 1328,
+      "offset": 512,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.009789156626506035
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "chacha20",
+      "digest": "md5",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 0,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "chacha20",
+      "digest": "md5",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 16,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": true
+    },
+    {
+      "mode": "chacha20",
+      "digest": "md5",
+      "key_index": 2,
+      "bytes": 80,
+      "offset": 48,
+      "historical": {
+        "hard": 1,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 1,
+        "printable": 0.125
+      },
+      "broad_hits": 1,
+      "interior": false
+    },
+    {
+      "mode": "chacha20",
+      "digest": "md5",
+      "key_index": 2,
+      "bytes": 1328,
+      "offset": 512,
+      "historical": {
+        "hard": 0,
+        "soft": 0,
+        "errors": {},
+        "persisted_full_rows": 0,
+        "printable": 0.0075301204819276935
+      },
+      "broad_hits": 1,
+      "interior": true
+    }
+  ],
+  "matched_null": {
+    "shuffles": 100,
+    "seed": 18092026,
+    "attempts": 4900,
+    "hits": 0
+  },
+  "historical_code_sha256": "8955f85fa301d88d10e8e697916076a658fde2f46bdcc641d7c757d06075af48",
+  "oracle_sha256": "1b927716a5339a5a8cabe8527f1d7197e9bf539fdb508f25562dabafd45eec8d",
+  "audit_sha256": "9355518e6a6c6ec88b0946260582c53e46304e798a8fb0d5bb000dbde65d8511"
+}

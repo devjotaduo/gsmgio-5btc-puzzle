@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "finding": "O antecedente da fase 3.2 usa o sentido cp273 que não era varrido.",
+  "planted_bytes": 64,
+  "previous_views_hits": 0,
+  "new_inverse_view_hits": 1,
+  "offset": 0,
+  "phase32_codec": {
+    "passed": true,
+    "plaintext_bytes": 2422,
+    "beaufort_bytes": 1539,
+    "offset": 447,
+    "beaufort_sha256": "6d66e0e0e2dfdb812d5ecee2be6f54c1f3b8c84b0d74580686cf2053d76a200e",
+    "ciphertext_sha256": "9d172dc017034564b40eb381fa61e31421f509a08430864c77ccf86cfc8fe784",
+    "readme_sha256": "b5ade8d9cbeb7956e725d3021a0a7cd36cd8b66df3ca376f987ca61fd280afef",
+    "operation": "ASCII.decode('cp273').encode('latin-1')",
+    "restored_exactly": true,
+    "conventional_representation_present": false
+  },
+  "cp273_planted_cases": 24,
+  "matched_null": {
+    "shuffles": 100,
+    "seed": 18092026,
+    "attempts": 100,
+    "hits": 0
+  },
+  "oracle_sha256": "1b927716a5339a5a8cabe8527f1d7197e9bf539fdb508f25562dabafd45eec8d",
+  "limits": [
+    "Somente controles sintéticos e fases públicas autenticadas; nenhum corpus histórico varrido.",
+    "previous_views_hits agrega as visões anteriores preservadas, sem a nova visão cp273-inverse.",
+    "A prova de correção do oráculo não constitui descoberta de chave real."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "interior_false_negatives": 32,
+  "endpoint_positive_controls": 32,
+  "matched_null": {
+    "shuffles": 100,
+    "seed": 18092026,
+    "attempts": 4900,
+    "hits": 0
+  },
+  "historical_counts": {
+    "forms": 1272149,
+    "stream_decryptions": 30531576,
+    "emitted_full_stream_rows": 554,
+    "not_emitted_as_full_stream_rows": 30531022,
+    "all_raw32_windows": 14197182840,
+    "endpoint_checks_already_attempted": 61063152,
+    "interior_raw32_windows": 14136119688,
+    "reported_historical_all_modes_seconds": 1462,
+    "historical_log_sha256": "f2b4c7918906cad4c99933e48bc2e5e19deb976b7999a0ebc77ffd7aad512f47",
+    "historical_code_sha256": "8955f85fa301d88d10e8e697916076a658fde2f46bdcc641d7c757d06075af48",
+    "code_matches_archived_campaign": true,
+    "limits": "Não emitido significa ausência de registro completo no ramo STREAM; prefixes best podem existir. Não significa chave real perdida."
+  },
+  "cost_estimate": {
+    "benchmark_raw32_windows_per_repeat": 16152,
+    "benchmark_repeats": 3,
+    "benchmark_seconds": [
+      0.35857360000045446,
+      0.3634186999988742,
+      0.36557949999951234
+    ],
+    "median_windows_per_second_single_process": 44444.60342863489,
+    "estimated_all_raw32_single_process_hours": 88.7320753425638,
+    "estimated_interior_only_single_process_hours": 88.35043200775706,
+    "limits": "Extrapolação ECC do oráculo amplo em máquina sob carga; não inclui nova geração/decriptação, I/O ou promete escalabilidade paralela."
+  },
+  "next_step": "Corrigir o filtro antes de futuras campanhas; decidir reexecução só com base no custo e em corpus disponível. Esta auditoria não disparou busca histórica."
+}

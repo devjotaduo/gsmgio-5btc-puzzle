@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "unit": {
+    "pass": true,
+    "planted_le_offset": 7,
+    "null_replicates": 100,
+    "null_raw32_attempts": 2800
+  },
+  "expected_hits": 3,
+  "scanner": "scan_delta_v2.py",
+  "scanner_sha256": "f076bbf5ce0454ea8fd5814345d0bd3f39ed1035fa8043341be9fd0aa3699402",
+  "actual_hits": 3,
+  "end_to_end_status": "complete",
+  "attempts": {
+    "raw32": 55,
+    "hex64": 1,
+    "wif-uncompressed": 0,
+    "wif-compressed": 0,
+    "raw32-le": 55
+  },
+  "resume_exact": true,
+  "default_targets_resume_exact": true,
+  "changed_contract_refused": true,
+  "tampered_payload_refused": true
+}

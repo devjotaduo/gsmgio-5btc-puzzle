@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "corpus_sha256": {
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\_work\\oraculo_duplo_2026-09-17\\corpus_v3\\corpus.sqlite": "5cb7b7d527c4f016aeef9a7eb532b753ed0aefeb4070ac8c454d542620f25ab7",
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\_work\\oraculo_duplo_2026-09-17\\corpus_supplement\\corpus.sqlite": "d0d6071fdb1bc2bbcdfccd0b1ef88837bdbe49ac853e531f4fc8208848cb47a5",
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\_work\\oraculo_duplo_2026-09-17\\corpus_partial\\corpus.sqlite": "36c780f9e9e8e02807603e3d4a38f64da6ef3b0654239ac6d323b61d27e3c675"
+  },
+  "payloads_examined": 592341,
+  "textual_attempts": {
+    "raw32": 0,
+    "hex64": 674,
+    "wif-uncompressed": 3,
+    "wif-compressed": 0
+  },
+  "candidate_occurrences": 677,
+  "unique_candidates": 674,
+  "unique_addresses": 3370,
+  "scope": "hex64/WIF nas visões textuais do oráculo; sem raw32 nem derivação por hashes",
+  "limits": "Candidatos podem ser hashes, exemplos, controles ou falsos positivos; não são chaves validadas do puzzle.",
+  "extractor_sha256": "a98512d030c5e2b0ed3d152fef16392d542671a95a84deb4a9d533cbb7eedc23",
+  "oracle_sha256": "b80c7af580d4910c5d8286dfa27aba0ebfcefa25267b0cf05b24610d9b6e781f",
+  "balances_sha256": "1b68c5e6c285d0d724e8568e29220735ade101752aeb54d40ed920bea6d42c10"
+}
