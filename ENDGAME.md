@@ -360,6 +360,12 @@ caminho com média ≥ L ⇔ max(soma − L·n_quadgramas) ≥ 0, uma passada de
 bijeção-alvo viáveis, **0 atingem L = −4,5**, com melhor margem −59,21. Com isso as leituras textuais do
 resíduo estão esgotadas; continuam fora apenas bases não decimais e **objetos que não sejam texto** —
 esta última é a hipótese viva, porque o resíduo pode simplesmente não codificar linguagem.
+Sua **primeira instância concreta** já foi testada e descartada: o resíduo como **seleção por saltos**
+sobre `faed`. O teto é próprio — a soma dos saltos (341 em L84, 336 em L83) cabe nos 570 de `faed` sem
+dar a volta, o que limita o offset inicial a 230 e 235 valores. Varridas as 3.712 seleções (4 resíduos ×
+2 âncoras × 2 direções × todos os offsets): melhor escore de texto −6,516 contra −3,679 do inglês,
+0 hits de chave e 0 candidatos em 44.544 AES (z de padding −0,58).
+[Relatório](_work/residuo_saltos_2026-09-18/RELATORIO.md).
 [Relatório](_work/residuo_como_somas_2026-09-18/RELATORIO.md).
 O terceiro item, **o que "zeroed out" zera, está fechado** como espaço enumerável: os 2^9 =
 512 subconjuntos de símbolos zerados (não só os de 1 e 2 do histórico), em L84 e L83, na ordem
