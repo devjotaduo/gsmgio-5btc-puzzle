@@ -1,0 +1,48 @@
+{
+ "correcao": "residuo_bijecao.py mediu 'fração de letras' para a1z26, que é tautológico (a1z26 só produz letras). Aqui a medida é o clean_scorer.",
+ "referencia": {
+  "ingles_real": -3.766,
+  "identidade_do_residuo": -6.904
+ },
+ "canonico_substituicao_monoalfabetica": {
+  "pares_bijecao_alvo_avaliados": 1451520,
+  "melhor": {
+   "escore": -5.739,
+   "alvo": "L83",
+   "sigma": [
+    8,
+    7,
+    2,
+    9,
+    4,
+    1,
+    5,
+    6,
+    3
+   ],
+   "texto": "ICAFBBECFHDDCFEEDEDGEDFFDFFAHAIFAABIGABBBEADEEDBIBCAAAECEDDH"
+  }
+ },
+ "caminhos_com_pares_amostrados": {
+  "avaliados": 2924546,
+  "melhor": {
+   "escore": -5.981,
+   "alvo": "L84",
+   "sigma": [
+    3,
+    8,
+    1,
+    7,
+    4,
+    9,
+    5,
+    6,
+    2
+   ],
+   "texto": "GBIFAAEBFCDDZEEDEDHEDFFDFFICIGFIIQHIAKEIDEEDAGABIIIEBEDDCD"
+  },
+  "amostras_por_bijecao_alvo": 2
+ },
+ "veredito": "nenhuma bijeção produz texto: o melhor escore fica muito abaixo do inglês real",
+ "script_sha256": "f7d304a9ca1f7ff10cd40bbd45771e2bba13d4e7238aebf05349fa9dbfbd43bf"
+}

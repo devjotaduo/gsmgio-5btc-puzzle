@@ -352,7 +352,11 @@ tem comprimento compatível. Fecha "o resíduo é a codificação **a1z26** de u
 código imprimível algum (21–29 < 32; 2xx > 126), e o resíduo contém `2` (a letra `b`) — a enumeração
 exaustiva do DAG dá **0 caminhos** nos quatro alvos. Com o método `To_Base(16)` da página (fechado no
 PR #7, exaustivo por ser bijetivo), as três codificações decimais naturais do resíduo estão encerradas.
-Continuam fora: bases não decimais, bijeção arbitrária dígito↔símbolo e objetos que não sejam texto.
+A **bijeção arbitrária** também foi varrida (3.628.800 atribuições × 4 alvos): em ASCII
+decimal dá **0 leituras viáveis**, o que torna aquele fechamento independente de convenção; em a1z26 o
+caminho canônico (substituição monoalfabética, 1.451.520 pares, exaustivo) tem melhor escore **−5,739**
+contra **−3,766** do inglês real, e os caminhos com pares foram amostrados, não exauridos. Continuam
+fora: bases não decimais e objetos que não sejam texto.
 [Relatório](_work/residuo_como_somas_2026-09-18/RELATORIO.md).
 O terceiro item, **o que "zeroed out" zera, está fechado** como espaço enumerável: os 2^9 =
 512 subconjuntos de símbolos zerados (não só os de 1 e 2 do histórico), em L84 e L83, na ordem

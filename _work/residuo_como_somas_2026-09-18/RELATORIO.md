@@ -280,3 +280,44 @@ Junto com a seção 3 (a1z26) e com o método `To_Base(16)` da página — já f
 porque é bijetivo e há só quatro alvos —, as três codificações decimais naturais do resíduo estão
 encerradas. Continuam fora: bases não decimais, bijeção arbitrária dígito↔símbolo e objetos que não
 sejam texto.
+
+## 5. Bijeção arbitrária símbolo→dígito — e uma correção de método
+
+Os fechamentos das seções 3 e 4 usaram o teto "o resíduo não tem `o`, logo não tem zero". Esse teto
+depende da convenção `a=1…i=9` da **página** — se o autor tivesse usado outra atribuição, os zeros
+voltariam e as duas famílias reabririam. Faltava varrer as bijeções.
+
+Espaço: os 9 símbolos recebem 9 dígitos distintos dos 10, ou seja `C(10,9) × 9! = 3.628.800`
+atribuições, aplicadas aos quatro alvos.
+
+### ASCII decimal: fechado em definitivo
+
+**0 leituras viáveis** nas 3.628.800 bijeções × 4 alvos = 14.515.200 pares. Não é questão de convenção:
+não existe atribuição de dígitos que torne o resíduo segmentável em códigos ASCII imprimíveis. A seção
+4 valia para `a=1…i=9`; isto vale para **qualquer** atribuição.
+
+### a1z26: correção de um filtro tautológico
+
+A primeira versão do teste ([`residuo_bijecao.json`](residuo_bijecao.json)) mediu "fração de
+letras+espaço" e devolveu 1.501.920 leituras com fração ≥ 0,95 — número sem sentido, porque **a1z26 só
+produz letras por construção**. É o mesmo erro que `familia4_codecs.duro_traduzido` documenta evitar
+("o detector só dispara quando a saída já é ASCII por construção"). A medida correta é linguística.
+
+Refeito com o `clean_scorer` ([`residuo_bijecao_escore.json`](residuo_bijecao_escore.json)):
+
+| | escore |
+|---|---|
+| **Inglês real** (referência) | **−3,766** |
+| Melhor de **1.451.520** substituições monoalfabéticas (exaustivo) | **−5,739** |
+| Melhor de 2.924.546 caminhos com pares (amostrado) | −5,981 |
+| Leitura identidade do resíduo | −6,904 |
+
+Quando nenhum símbolo vira 0, cada símbolo é um dígito e o texto é o resíduo sob **substituição
+monoalfabética** — o caminho canônico, coberto exaustivamente (as 362.880 bijeções sem o zero × 4
+alvos). O melhor de 1,45 milhão fica em −5,739, a mais de dois pontos do inglês; o ganho sobre a
+identidade (−6,904) é o esperado de maximizar sobre 1,45 milhão de candidatos, não sinal.
+
+**Alcance honesto:** o caminho canônico está fechado por exaustão. Os caminhos que usam pares (10–26),
+que só existem quando algum símbolo vira 1 ou 2, foram **amostrados**, não exauridos — o espaço deles é
+grande porque cada símbolo mapeado a 1 ou 2 multiplica as escolhas. O melhor da amostra é pior que o
+melhor canônico, o que não sugere nada escondido ali, mas não é prova.
