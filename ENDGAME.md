@@ -257,6 +257,7 @@ experimento; a revisão de §3.12 amplia apenas a cobertura dos bytes preservado
 |---|---|---|
 | Corpus histórico (tokens da página, roadmap, Arquiteto, Matrix, Mr. Robot, Venus Project, site novo, Cosmic Duality OCR, fase 3.2) | 466.310 senhas-base × 3 formas = 1,27 M, nos 3 blobs × 2 KDF | 0 |
 | "our first hint is your last command" como gramática de composição; "seven intertwined" (concatenação, XOR de sha256, encadeado; entrelaçado só sobre 9 tokens do roadmap/página, k=1); tokens do roadmap em 1–3 partes, com o resíduo de §6 | ~7 M + 6,7 M + 60 k | 0 |
+| `faed` como 95 cores RGB nos 95 zeros da matriz (570 = 95 × 6); somas de linha/coluna como senha; 720 configurações | 109.440 senhas, 656.640 AES; raw32 sem filtro de padding nas saídas (610,7 M janelas) | 0 |
 | Senhas Unicode (☯, trigramas, 陰陽/阴阳/太極/음양, emojis; UTF-8/16, NFC/NFD) | 754 k senhas | 0 |
 | `matrixsumlist` como o operador que o criador demonstrou (`R=18/A=1/B=2 → 21 \| 1812`): ordinais a1z26 → soma \| lista sobre 152 objetos nomeados e a saída de `yellowblueprimes` em L83 e L84 (bits como dígitos e como binário) | 230.506 senhas, 1,38 M AES, 253 k privkeys (dois alvos) | 0 |
 | `lastwordsbeforearchichoice` literal: janelas antes das 5 ocorrências de "choice" no transcript do Arquiteto, falas, blocos cortados, com RAB e codec z | 70.340 senhas, 474 k AES, 211 k brainwallets | 0 |
@@ -275,6 +276,7 @@ experimento; a revisão de §3.12 amplia apenas a cobertura dos bytes preservado
 |---|---|---|
 | A cifra é aes-256-cbc | 16 cifras/modos do `openssl enc` × corpus 1,27 M × 3 blobs × 2 KDF = 122 M, controle por cifra com o CLI real | 0 reconhecidos; filtro de modos de fluxo não cobre raw32 binário interior (§3.13); CBC sem padding: fechado — COSMIC por bloco, SMALL/TAIL32 com os 7 operandos (§3.14) e o corpus de 1,27 M em SMALL/TAIL32 sem unpad (498,7 M janelas BE/LE, 0) |
 | Os blocos do ciphertext estão publicados fora de ordem (o `enter` como marca) | 120 permutações × salt cruzado SMALL↔TAIL32 × 2 KDF × 1,27 M = 1,22 bi lógicos; oráculo por bloco agnóstico a IV/ordem/padding: 0/10,18 M pares com ≥ 2 blocos limpos | refutada; os negativos são de **senha** |
+| O método da página converte hex ímpar com **zero à esquerda** (`G.z_method` e ~40 scripts), não como o `From_Hex` do CyberChef (pares desde o início). Só diverge com hex ímpar, que texto printável nunca produz, e para bytes codificados pelo criador o zero à esquerda é o inverso exato ([relatório](_work/hex_paridade_2026-09-18/RELATORIO.md)) | leitura CyberChef nas 1.767 configurações divergentes de L83/L84/`dbbi`/`faed` × 512 zeragens: 3.296 senhas, 19.776 AES, 18,4 M janelas raw32 | 0 |
 | KDF/IV alternativos, `-K` cru, chave = passphrase XOR | | 0 |
 
 ### E. Chave direta e seleção
