@@ -1,0 +1,30 @@
+{
+ "divida_fechada": "caminhos a1z26 COM PARES, antes só amostrados (PR #15)",
+ "metodo": "teste de limiar exato: existe caminho com média ≥ L  ⇔  max(soma − L·n_quadgramas) ≥ 0; uma passada de DP com estado (posição, últimos 3 caracteres)",
+ "limiar": -4.5,
+ "controle": {
+  "ingles_atinge": -3.906,
+  "identidade_nao_atinge": -6.904,
+  "limiar": -4.5
+ },
+ "bijecoes": 3628800,
+ "pares_bijecao_alvo_avaliados": 1501920,
+ "caminhos_que_atingem_o_limiar": 0,
+ "melhor_margem_sobre_o_limiar": {
+  "valor": -59.21,
+  "alvo": "L83_rev",
+  "sigma": [
+   8,
+   7,
+   2,
+   3,
+   1,
+   5,
+   4,
+   9,
+   6
+  ]
+ },
+ "leitura": "margem negativa = nenhum caminho, em nenhuma bijeção, chega ao limiar",
+ "script_sha256": "7bdd2aabe586693795fa7701d21f1e5301ab36bf184ddde45372d41e82ef4b8e"
+}
