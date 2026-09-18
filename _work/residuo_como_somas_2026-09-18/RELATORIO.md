@@ -189,3 +189,54 @@ e o método inverso do `sum28` por sistemas lineares — cobri o mesmo espaço p
 
 O pacote (9,9 MB, 92 arquivos) fica local, fora do git; aqui ficam o relatório, a especificação, os
 sumários e a verificação.
+
+## 3. O princípio aplicado aos demais rótulos (negativo, com teto algébrico mais forte)
+
+A hipótese das 28 somas vale como *método*, não só como teste: inverter a função do rótulo. Aplicado
+aos outros rótulos da página, o teto algébrico fica ainda mais afiado — e vem de uma propriedade do
+próprio resíduo, não de uma escolha de orçamento:
+
+> O resíduo usa só `a..i` e **nunca `o`**. Na convenção da página (`a=1…i=9`, `o=0`), a string de
+> dígitos do resíduo **não contém nenhum zero**.
+
+Em a1z26 concatenado, as únicas letras que produzem dígito 0 são **`j` (10)** e **`t` (20)**. Logo, se o
+resíduo é a codificação a1z26 de um texto, esse texto **não pode conter `j` nem `t`** — e `t` é a
+segunda letra mais frequente do inglês. O filtro decide antes de rodar qualquer coisa.
+
+**Os rótulos literais morrem de imediato** ([`rotulo_nomeia_objeto.json`](rotulo_nomeia_objeto.json)):
+
+| rótulo | dígitos a1z26 | gera zero? | proibidas |
+|---|---|---|---|
+| `lastwordsbeforearchichoice` | 37 | **sim** | `t` |
+| `thispassword` | 20 | **sim** | `t` |
+| `matrixsumlist` | 23 | **sim** | `t` |
+| `causality` | 14 | **sim** | `t` |
+| `thematrixhasyou` | 24 | **sim** | `t` |
+| `enter` | 8 | **sim** | `t` |
+| `yellowblueprimes` | 27 | não | — |
+| `yinyang` | 11 | não | — |
+
+Os dois que sobrevivem ao filtro morrem pelo comprimento (27 e 11 dígitos, contra 60/61).
+
+**E o objeto que o rótulo nomeia?** `lastwordsbeforearchichoice` aponta para as últimas palavras antes
+de "choice". Tomei todas as janelas de 1 a 40 palavras terminando imediatamente antes de cada uma das 5
+ocorrências de "choice" no `MISC.txt` (sha256 `223d7f76…`, a mesma fonte da frente `lista_mais_fala`):
+
+| | |
+|---|---|
+| Janelas | 200 |
+| Sobrevivem ao filtro `j`/`t` | **13** (6,5 %) |
+| Dessas, com comprimento 60 ou 61 | **0** |
+| Reconstruções do resíduo | **0** |
+
+As 13 sobreviventes são fragmentos curtos e sem `t` como `neo`, `youneo`, `killyouneo` — nenhuma chega
+perto do comprimento necessário. **93,5 % do espaço morre por uma propriedade estrutural do resíduo**,
+e o restante morre por contagem de dígitos.
+
+**Controle:** um texto sem `j`/`t` codifica sem zero (`acegik` → `1357911`); um com `t` gera zero
+(`cat`); e o resíduo de fato não tem `o` nem zero em nenhum dos quatro alvos.
+
+**Alcance:** fecha "o resíduo é a codificação **a1z26** de um texto em inglês" — praticamente toda a
+família, porque quase todo texto em inglês contém `t`. Não fecha outras codificações (ASCII decimal,
+o método `To_Base(16)` da página, bases não decimais), nem textos em outras línguas, nem objetos que
+não sejam texto.

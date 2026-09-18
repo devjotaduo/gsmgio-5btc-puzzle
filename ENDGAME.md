@@ -340,6 +340,15 @@ combinações e 240.928 construções de comprimento compatível — os três n�
 além da grade de cores conferida contra `G.COLORED` e da varredura raw32 da mesma entrega refeita inteira
 (8.347.680 janelas BE/LE, 0). Não fecha outras bases, permutações quaisquer das 28 somas nem as somas
 dentro de outra transformação.
+O mesmo princípio (o rótulo nomeia um objeto) foi aplicado aos demais rótulos, com um teto algébrico
+ainda mais forte: **o resíduo não tem `o`, logo sua string de dígitos não tem zero**, e em a1z26 só
+`j`(10) e `t`(20) geram zero — o texto-fonte não pode conter `j` nem `t`, e `t` é a segunda letra mais
+comum do inglês. Isso mata de imediato `lastwordsbeforearchichoice`, `thispassword`, `matrixsumlist`,
+`causality`, `thematrixhasyou` e `enter` como literais; `yellowblueprimes` e `yinyang` passam no filtro
+e morrem no comprimento (27 e 11 dígitos contra 60/61). Sobre o objeto que o rótulo nomeia: das 200
+janelas antes das 5 ocorrências de "choice" no `MISC.txt`, só 13 (6,5 %) sobrevivem ao filtro e nenhuma
+tem comprimento compatível. Fecha "o resíduo é a codificação **a1z26** de um texto em inglês"; não fecha
+outras codificações nem objetos que não sejam texto.
 [Relatório](_work/residuo_como_somas_2026-09-18/RELATORIO.md).
 O terceiro item, **o que "zeroed out" zera, está fechado** como espaço enumerável: os 2^9 =
 512 subconjuntos de símbolos zerados (não só os de 1 e 2 do histórico), em L84 e L83, na ordem
