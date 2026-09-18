@@ -321,3 +321,46 @@ identidade (−6,904) é o esperado de maximizar sobre 1,45 milhão de candidato
 que só existem quando algum símbolo vira 1 ou 2, foram **amostrados**, não exauridos — o espaço deles é
 grande porque cada símbolo mapeado a 1 ou 2 multiplica as escolhas. O melhor da amostra é pior que o
 melhor canônico, o que não sugere nada escondido ali, mas não é prova.
+
+## 6. A dívida da seção 5, fechada por exaustão
+
+A seção 5 deixou explícito que os caminhos `a1z26` **com pares** (10–26) tinham sido amostrados, não
+exauridos. Fechados ([`residuo_bijecao_exato.json`](residuo_bijecao_exato.json)).
+
+**O que tornou barato.** Maximizar a *média* de quadgramas exigiria Dinkelbach por bijeção, porque o
+comprimento do texto varia com o número de pares. Mas não é preciso maximizar: basta um **teste de
+limiar exato**. Como o `clean_scorer` devolve `soma / (len − 3)`,
+
+> existe caminho com média ≥ L  ⇔  `max( soma − L · n_quadgramas ) ≥ 0`
+
+e isso é **uma única passada** de programação dinâmica com estado `(posição, últimos 3 caracteres)` —
+0,14 ms por par bijeção-alvo.
+
+Limiar escolhido com folga: **L = −4,5**, abaixo do inglês real (−3,906 no controle) e bem acima do
+melhor caminho canônico (−5,739).
+
+| | |
+|---|---|
+| Bijeções | 3.628.800 |
+| Pares bijeção-alvo com a1z26 viável | 1.501.920 |
+| **Caminhos que atingem o limiar** | **0** |
+| Melhor margem sobre o limiar | **−59,21** |
+
+A margem negativa de 59 unidades de soma diz que o melhor caminho existente não chega nem perto: não é
+"ficou pouco abaixo", é outra ordem de grandeza. **Controle:** um texto em inglês real atinge o limiar
+(−3,906) e a leitura identidade não (−6,904).
+
+### Onde a linha do resíduo está agora
+
+| família | estado |
+|---|---|
+| `a1z26`, todas as bijeções, **todos** os caminhos | **fechada por exaustão** |
+| ASCII decimal, todas as bijeções | **fechada** (0 leituras viáveis) |
+| método `To_Base(16)` da página | fechada (PR #7, bijetivo) |
+| resíduo = lista das 28 somas | fechada (seção 1) |
+| "zeroed out": 512 subconjuntos | fechada (PR #8) |
+| bases não decimais | **aberta** |
+| objetos que não sejam texto | **aberta** |
+
+As leituras textuais do resíduo estão essencialmente esgotadas. A hipótese que resta viva é a que nunca
+foi atacada porque não tem gramática: **o resíduo pode não codificar linguagem**.
