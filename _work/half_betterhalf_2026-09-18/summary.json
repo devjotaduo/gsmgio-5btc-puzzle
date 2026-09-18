@@ -1,0 +1,34 @@
+{
+ "reframe": "half and better half = 1GSMG (half) e 17ucy (better half); a fase dá o PAR de chaves",
+ "alvos": {
+  "half_1GSMG": "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+  "better_half_17ucy": "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa"
+ },
+ "controle": {
+  "detector_do_par_ok": true
+ },
+ "pares_de_fontes": 16,
+ "operacoes_por_par": {
+  "dbbi×faed": 35,
+  "dbbi×faed_rev": 35,
+  "dbbi×faed_h1": 35,
+  "dbbi×faed_h2": 35,
+  "dbbi_rev×faed": 35,
+  "dbbi_rev×faed_rev": 35,
+  "dbbi_rev×faed_h1": 35,
+  "dbbi_rev×faed_h2": 35,
+  "resid_L84×faed": 35,
+  "resid_L84×faed_rev": 35,
+  "resid_L84×faed_h1": 35,
+  "resid_L84×faed_h2": 35,
+  "resid_L83×faed": 35,
+  "resid_L83×faed_rev": 35,
+  "resid_L83×faed_h1": 35,
+  "resid_L83×faed_h2": 35
+ },
+ "ops_de_par_testadas": 560,
+ "criterio": "mesma operação O: {addr(O(dbbi)), addr(O(faed))} ⊇ {1GSMG, 17ucy} (inclui cruzado)",
+ "hits": [],
+ "kit": "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\solver\\experiments\\claude_endgame_2026_09_02\\gsmg_common.py",
+ "script_sha256": "a3a18cf980b438be40c4273e9331a420c194d0381ddc5616a5bbe7d033b12d34"
+}
