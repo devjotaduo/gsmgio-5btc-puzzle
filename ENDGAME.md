@@ -261,6 +261,7 @@ experimento; a revisão de §3.12 amplia apenas a cobertura dos bytes preservado
 | `matrixsumlist` como o operador que o criador demonstrou (`R=18/A=1/B=2 → 21 \| 1812`): ordinais a1z26 → soma \| lista sobre 152 objetos nomeados e a saída de `yellowblueprimes` em L83 e L84 (bits como dígitos e como binário) | 230.506 senhas, 1,38 M AES, 253 k privkeys (dois alvos) | 0 |
 | `lastwordsbeforearchichoice` literal: janelas antes das 5 ocorrências de "choice" no transcript do Arquiteto, falas, blocos cortados, com RAB e codec z | 70.340 senhas, 474 k AES, 211 k brainwallets | 0 |
 | "seven intertwined" como entrelaçamento de caracteres dos 7 operandos de nível-senha (fase 1, `causality`, junções de 227 B e 62 B, `thematrixhasyou`, URL, título+endereço): 28 conjuntos × 7! ordens × k 1–9 × inversões × caixa | ≈ 285 M AES (COSMIC inteiro), 11,6 M privkeys (dois alvos) | 0 |
+| **Diff do monólogo contra o roteiro de *Matrix Reloaded*** (duas transcrições concordantes). Desvios únicos: inserções YOU/ME/WELL/NOT/CODES/HOPEFULLY, "WE"→"I", SIXTH→LAST, ONE→YOU, MATRIX→PUZZLE, PROGRAM→BASICS, ZION→"YOUR WILL TO LIVE AND", "ENTIRE HUMAN RACE"→"ENTIRENESS OF YOURSELF SELF… CIAO BELLA O", + a súplica GSMG (HUNDRED FOURTY, WISEMAN ABOVE). Testado: palavras inseridas/duplicadas como senha; letras extras das grafias erradas (24 permutações "UIHG"); mapa ONE→YOU aplicado ao Bifid; posições das duplicadas como índices de blocos; seleções 7+16=23 blocos; fatias de 140. **Consequência que o mapa não registrava: os números 23/16/7 são do roteiro** ("select from the matrix 23 individuals — 16 female, 7 male"), não escolha do criador — ver §6. [Histórico](docs/historico/ENDGAME_cronologico_2026.md) | ≈ 120 frases canônicas nos 35 blocos, SMALL e COSMIC (raw + sha256hex), mais os testes mecânicos do diff | 0 |
 | "twenty-three ciphers" como família de codecs: 65 de byte único e os multi-byte (UTF, CJK), nas duas direções, sobre plaintexts guardados, campos da página e senhas | 762 k AES, ≈ 100 M reinterpretações | 0 |
 | Dualidade (`half / better half`, yin-yang): um blob como senha do outro, metades do SMALL em torno de `enter`, cortes em todos os pontos, XOR, complemento da matriz, estrelas da capa (proxy) | 265 k senhas, 1,6 M AES | 0 |
 | Referência pessoal pela gramática das fases: 104 itens públicos do mundo do criador, aridade 1–3 (4–6 na lista curta), 7 materiais, separadores | ≈ 1,7 M candidatos, 32,6 M AES | 0 (triplas verbatim a 67,5 %) |
@@ -327,18 +328,21 @@ nas demais um símbolo, e exige-se consumo integral dos 91 símbolos.
   grade 7×12; resíduo como chave sobre `faed`; gramática SHA256 das fases 2–3.2 com 60.005
   concatenações; "coluna j = letra j do rótulo" (7×13, 15×38).
 
-**A ligação ainda desconhecida: resta UMA — como `matrixsumlist` consome o resíduo.** A outra,
-qual segmentação é a pretendida, tem resposta **documental**: a fala do Arquiteto na fase 3.2 (README
-554–555) começa nomeando o próprio passo — "**REINSERTING THE PRIME BASICS** after which you will be
-required to select from over **twenty-three** ciphers **sixteen** encryptions and or **seven**
-intertwined passwords" — e L84 produz exatamente **23 marcadores = 16 `b` + 7 `be`**, enquanto L83 dá
-15 + 8. Das duas segmentações que a regra admite, só L84 satisfaz a repartição enunciada. Atenção ao
-que isto corrige: o teste das **cores** casa com as duas e de fato não desambigua (5 casamentos, não 4),
-mas o argumento dos **números 16/7 é independente das cores** e escolhe L84. É argumento semântico, não
-prova. **Não muda resultado algum, e o alcance é modesto:** L84 já vinha sendo adotado — a maioria das
-campanhas varre as duas segmentações em paralelo, e `prime_host_l84_2026-09-17` fixou L84 por decisão
-declarada, registrando que "a justificativa dessa escolha continua sendo uma hipótese". O que muda é
-que essa premissa deixa de ser arbitrária.
+**As duas ligações seguem desconhecidas: qual segmentação é a pretendida e como `matrixsumlist` consome
+o resíduo.** Sobre a **primeira**, o argumento 16/7 é a melhor razão disponível para L84, mas é fraco e
+é preciso dizer por quê. A favor: das duas segmentações que a regra admite, só L84 dá **23 = 16 `b` +
+7 `be`** (L83 dá 15 + 8), e a fala que enuncia esses números é o plaintext da própria 3.2. Contra, e
+decisivo para o peso: **os números são do roteiro do filme, não do criador.** O Arquiteto de *Matrix
+Reloaded* diz "reinserting the **prime program**. After which you will be required to select from the
+matrix **23 individuals — 16 female, 7 male**"; o criador trocou só os substantivos (`program→basics`,
+`individuals→ciphers`, `female→encryptions`, `male→intertwined passwords`). Logo a adjacência entre
+"prime" e "16/7" — que parecia desenho — é estrutura do texto copiado. Some-se que **23 não discrimina**
+(π(83) = π(84) = 23, consequência aritmética do comprimento) e que as duas segmentações, diferindo por
+um token, têm sempre repartições adjacentes. O argumento é **condicional**: se o criador desenhou `dbbi`
+para bater os números que ia citar, então L84. Nada mudou a favor de L83, e L84 já era a premissa em
+uso — a maioria das campanhas varre as duas, e `prime_host_l84_2026-09-17` fixou L84 por decisão
+declarada, registrando que "a justificativa dessa escolha continua sendo uma hipótese". O ganho é de
+prioridade, não de conhecimento.
 [Nota](_work/l83_cosmic_2026-09-18/DISCRIMINANTE.md). Sobre o **primeiro**: a coincidência de que o COSMIC tem 83 blocos AES e L83 tem 83 tokens foi
 testada como correspondência e **não tem lastro**. Particionando os 83 blocos pelas 23 posições primas,
 as quatro estatísticas (média, variância, bits por byte, entropia) dão menor p = 0,433 contra 20.000

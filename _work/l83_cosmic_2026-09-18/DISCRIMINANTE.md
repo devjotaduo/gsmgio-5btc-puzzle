@@ -52,14 +52,41 @@ O que esta rodada acrescenta ao segundo é a **frase inteira**: ela não só con
 nomeando o passo** — "reinserting the prime basics" é `yellowblueprimes`. Um número solto é
 coincidência; um número enunciado imediatamente depois do nome da operação é especificação.
 
-## Força e limite do argumento
+## A ressalva que derruba metade da força — os números são do filme
 
-**Força.** Não é coincidência numérica solta: a mesma frase nomeia o passo (`prime basics`) e enumera a
-repartição (16 e 7). Das duas segmentações que a regra admite, só uma a satisfaz.
+**Descoberta depois de escrever o acima, conferindo o caderno histórico.** A fala não é do criador: é o
+Arquiteto de *Matrix Reloaded*, copiada e editada. O original
+([registro de 01/09](../../docs/historico/ENDGAME_cronologico_2026.md), diff palavra a palavra contra
+duas transcrições concordantes) diz:
 
-**Limite.** É argumento **semântico**, não prova. "Over twenty-three ciphers" pode ser lido como
-narrativa do Arquiteto e não como especificação; e nada garante que 16/7 se refira aos tipos de
-marcador, embora a proximidade com "reinserting the prime basics" seja forte.
+> reinserting the **prime program**. After which you will be required to select from the matrix
+> **23 individuals — 16 female, 7 male** — to rebuild Zion.
+
+O criador trocou **só os substantivos**: `prime program → prime basics`, `individuals → ciphers`,
+`female → encryptions`, `male → intertwined passwords`, `the matrix → over`. Os números **23, 16 e 7
+são herdados do roteiro**, não escolhidos por ele.
+
+Isso desmonta a parte do meu argumento que dizia "a mesma frase nomeia o passo **e** enumera a
+repartição, logo é especificação": **essa adjacência é do filme**. No roteiro, "reinserting the prime
+program" já vem seguido de "16 female, 7 male". Eu li como desenho do autor o que é estrutura do texto
+que ele copiou.
+
+Some-se que **23 não discrimina nada**: π(83) = π(84) = 23, então o total de marcadores é consequência
+aritmética do comprimento, idêntico nas duas segmentações. Resta só a repartição.
+
+## Força e limite, reavaliados
+
+**O que sobra de força.** Das duas segmentações que a regra admite, só L84 reproduz a repartição
+16/7 — L83 dá 15/8. O autor demonstrou estar trabalhando com essa fala (usou-a inteira, como plaintext
+da 3.2), então mirar a repartição ao desenhar `dbbi` é plausível e barato dentro da regra 4. O argumento
+passa a ser **condicional**: *se* ele desenhou para bater os números do roteiro, então L84.
+
+**O que caiu.** A premissa desse "se" não tem evidência independente. E o prior não é desprezível: as
+duas segmentações diferem por um único token, logo suas repartições são sempre adjacentes — dado que
+uma delas ia cair perto de 16/7, que a vizinha exata batesse é menos surpreendente do que parecia.
+
+**Limite que já estava.** É argumento **semântico**, não prova. "Over twenty-three ciphers" pode ser
+narrativa e não especificação, e nada garante que 16/7 se refira aos tipos de marcador.
 
 ## Consequência prática — pequena, e é preciso dizer isso
 
@@ -69,6 +96,20 @@ varriam já haviam escolhido L84: `prime_host_l84_2026-09-17` (fixou L84 por dec
 trabalho velho** — ele converte uma premissa adotada por conveniência em premissa fundamentada, e
 com isso justifica retroativamente essas duas campanhas, que até aqui carregavam uma escolha sem razão.
 
-O ganho real é de **prioridade**: onde uma varredura custa o dobro por rodar as duas segmentações, agora
-há motivo para gastar em L84 primeiro. A §6 passa de duas incógnitas para uma — resta **como
-`matrixsumlist` consome o resíduo** —, mas a incógnita que resta é a cara.
+O ganho real é de **prioridade**: onde uma varredura custa o dobro por rodar as duas segmentações, há
+motivo para gastar em L84 primeiro. Com a ressalva da proveniência, esse motivo é mais fraco do que a
+primeira versão desta nota dizia, mas não some — nada mudou a favor de L83.
+
+A §6 **não** passa de duas incógnitas para uma. A segmentação continua sem prova; o que ela ganhou foi
+uma razão condicional para a escolha já em uso. A incógnita cara — **como `matrixsumlist` consome o
+resíduo** — segue inteira.
+
+## O que isto custou e o que ensina
+
+Este documento foi corrigido **duas vezes** depois de publicado: primeiro por inflar a novidade (L84 já
+era premissa adotada), depois por inflar a força (os números são do roteiro). As duas correções vieram
+de ler o próprio repositório — o relatório de 17/09 e o caderno histórico —, não de dado novo.
+
+A lição operacional é a regra 3 do `AGENTS.md` levada a sério: **conferir o que já está registrado antes
+de afirmar, não só antes de codar.** O caderno histórico é declarado "só para arqueologia", mas continha
+os dois fatos que decidiam o peso deste achado.
