@@ -17,6 +17,7 @@ mantem no git so os relatorios e as execucoes finais.
 
 ## Alegacoes publicas, auditorias e fontes
 
+- [Rodada "operador ensinado": `matrixsumlist` como operador RAB, últimas palavras do Arquiteto, sete senhas entrelaçadas, codecs, dualidade e referência pessoal; oráculo de dois endereços (`1GSMG…` e `17ucy…`) e re-varredura retroativa — 17/09/2026](../_work/operador_ensinado_2026-09-17/RELATORIO.md) - scripts em `solver/operador_ensinado_2026_09_17/`.
 - [`lastwordsbeforearchichoice`: fronteiras verificadas](../_work/recipe_audit_2026-09-11/FRONTEIRA_TEXTUAL.md).
 - [Conferência pública — 16/09/2026](../_work/public_recheck_2026-09-16/RELATORIO.md).
 - [DBBI/FAED: mapa comum, bases primas e origem de ASCII 127](../_work/shared_numeric_2026-09-11/RELATORIO.md).

@@ -14,6 +14,15 @@ README = os.path.join(ROOT, "README.md")
 PRIZE_ADDR = "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe"
 # h160 (uncompressed) do alvo citado em PR #68/#88
 TARGET_H160 = "a9553269572a317e39f0f518cb87c1a0ee1dbae4"
+# SEGUNDO ALVO (2026-09-17): 17ucy recebeu os halvings (2,5 + 1,25 BTC) das duas txs de gasto de
+# 1GSMG (2aa9a4a9..., 88cdb3cd...); guarda 3,75055856 BTC, nunca gastou (pubkey NAO exposta) e e chave
+# DISTINTA (a forma comprimida da pubkey de 1GSMG da 1cc6xa...). Que sua chave esteja em algum envelope
+# NAO esta provado (o endereco e de 2020; o criador glosou "better half" = a esposa). Entra no oraculo
+# porque, ate 2026-09-17, toda varredura de privkey do projeto era cega para 3/4 dos fundos.
+PRIZE_ADDR_2 = "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa"
+TARGET_H160_2 = "4bc468447fe1b048ad030a2f9a125478eabc4ed6"
+PRIZE_ADDRS = (PRIZE_ADDR, PRIZE_ADDR_2)
+TARGET_H160S = (TARGET_H160, TARGET_H160_2)
 
 # ---------- fontes ----------
 @functools.lru_cache(maxsize=1)
@@ -120,8 +129,12 @@ def check_privkey(priv32: bytes):
     if n == 0 or n >= SECP256k1.order:
         return None
     au, ac, hu, hc = priv_to_addresses(priv32)
-    if PRIZE_ADDR in (au, ac) or TARGET_H160 in (hu, hc):
-        return {"priv": priv32.hex(), "addr_unc": au, "addr_comp": ac}
+    for tgt_addr in PRIZE_ADDRS:
+        if tgt_addr in (au, ac):
+            return {"priv": priv32.hex(), "addr_unc": au, "addr_comp": ac, "alvo": tgt_addr}
+    for tgt_h in TARGET_H160S:
+        if tgt_h in (hu, hc):
+            return {"priv": priv32.hex(), "addr_unc": au, "addr_comp": ac, "alvo_h160": tgt_h}
     return None
 
 # ---------- BIP39 -> endereco ----------
@@ -155,7 +168,7 @@ def check_mnemonic(words):
             ck = acct.Purpose().Coin().Account(a).Change(chg)
             for i in range(5):
                 addr = ck.AddressIndex(i).PublicKey().ToAddress()
-                if addr == PRIZE_ADDR:
+                if addr in PRIZE_ADDRS:
                     matched = f"m/44'/0'/{a}'/{int(chg)}/{i}"
     return {"valid": True, "degenerate": False,
             "match": matched is not None, "path": matched, "mnemonic": mnem}

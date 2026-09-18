@@ -103,9 +103,27 @@ Exports do Telegram até 2026-09-17: nenhuma fala do criador depois de 2026-09-0
    `dbbi` (DIFH = −5,13 vs THEQ = −4,06); a leitura identidade do resíduo de §6 pontua z +6,9 com
    ele e z 1,5 com o scorer limpo. Todo escore histórico sobre saídas ricas em a–i está inflado.
 9. **Ruído calibrado** (720 k senhas aleatórias): z de padding entre −1,2 e +2,1 por sub-família e
-   `printable` até ~0,60 em 80 B são o comportamento normal do acaso.
+   `printable` até ~0,60 em 80 B são o comportamento normal do acaso. Em escala ≥ 10⁷ a taxa de
+   referência é Σ_{j=1..16} 256⁻ʲ = 1/255 (o `unpad` aceita 1–16), não 1/256: contra 1/256 um lote de
+   10⁸ nasce com z ≈ +2,6 (provado pelo histograma de comprimentos de padding da rodada de
+   2026-09-17). O teto de `printable` sobe com o número de paddings: 0,62–0,65 com ~143 k por blob de
+   80 B. Maior desvio já visto: z +3,75 numa sub-família de 151 k decifrações, reproduzido, sem
+   mecanismo possível e p ≈ 0,03 após look-elsewhere — acaso.
 10. **Superfície ECC nula:** pubkey exposta, 6 assinaturas com `r` distintos, nonces pequenos ou
     relacionados excluídos (BSGS), ECDLP intacto.
+11. **Oráculo de dois endereços.** As duas transações de gasto de `1GSMG…` (`2aa9a4a9…`, 2,5 BTC;
+    `88cdb3cd…`, 1,25 BTC) mandaram os halvings para
+    [`17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa`](https://mempool.space/address/17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa),
+    que guarda 3,75055856 BTC, nunca gastou (pubkey não exposta) e é chave **distinta** (a forma
+    comprimida da pubkey de `1GSMG` dá `1cc6xa…`; a comunidade já notara, #69284). Que a chave de `17ucy`
+    esteja em algum envelope **não** está provado: o endereço é de 2020 e o criador glosou "better half"
+    como a esposa. Mas até 2026-09-17 `solver/oracles.py` e `G.fast_priv_scan` comparavam só com
+    `1GSMG`: toda varredura de privkey do projeto era cega para 3/4 dos fundos. O kit agora testa os dois
+    (`O.PRIZE_ADDRS`, `O.TARGET_H160S`; `fast_priv_scan` compara o h160 das duas formas de pubkey, com
+    controle plantado no self-test). Re-varredura retroativa de todo plaintext com padding guardado:
+    694.386 anteriores (81.862.702 verificações) + 1.331.155 da rodada "operador ensinado"
+    (231.207.482): **0**. O MITM de 16! (§4-B) exige a pubkey do alvo e **não** pode ser refeito para
+    `17ucy`; os demais negativos históricos de privkey valem só para `1GSMG`.
 
 ## 4. O que foi refutado, por família
 
@@ -137,8 +155,15 @@ exatos e os scripts estão nos relatórios linkados em `docs/RESEARCH-INDEX.md` 
 | Família | Cobertura | Resultado |
 |---|---|---|
 | Corpus histórico (tokens da página, roadmap, Arquiteto, Matrix, Mr. Robot, Venus Project, site novo, Cosmic Duality OCR, fase 3.2) | 466.310 senhas-base × 3 formas = 1,27 M, nos 3 blobs × 2 KDF | 0 |
-| "our first hint is your last command" como gramática de composição; "seven intertwined" (concatenação, XOR de sha256, encadeado, entrelaçado); tokens do roadmap em 1–3 partes, com o resíduo de §6 | ~7 M + 6,7 M + 60 k | 0 |
+| "our first hint is your last command" como gramática de composição; "seven intertwined" (concatenação, XOR de sha256, encadeado; entrelaçado só sobre 9 tokens do roadmap/página, k=1); tokens do roadmap em 1–3 partes, com o resíduo de §6 | ~7 M + 6,7 M + 60 k | 0 |
 | Senhas Unicode (☯, trigramas, 陰陽/阴阳/太極/음양, emojis; UTF-8/16, NFC/NFD) | 754 k senhas | 0 |
+| `matrixsumlist` como o operador que o criador demonstrou (`R=18/A=1/B=2 → 21 \| 1812`): ordinais a1z26 → soma \| lista sobre 152 objetos nomeados e a saída de `yellowblueprimes` em L83 e L84 (bits como dígitos e como binário) | 230.506 senhas, 1,38 M AES, 253 k privkeys (dois alvos) | 0 |
+| `lastwordsbeforearchichoice` literal: janelas antes das 5 ocorrências de "choice" no transcript do Arquiteto, falas, blocos cortados, com RAB e codec z | 70.340 senhas, 474 k AES, 211 k brainwallets | 0 |
+| "seven intertwined" como entrelaçamento de caracteres dos 7 operandos de nível-senha (fase 1, `causality`, junções de 227 B e 62 B, `thematrixhasyou`, URL, título+endereço): 28 conjuntos × 7! ordens × k 1–9 × inversões × caixa | ≈ 285 M AES (COSMIC inteiro), 11,6 M privkeys (dois alvos) | 0 |
+| "twenty-three ciphers" como família de codecs: 65 de byte único e os multi-byte (UTF, CJK), nas duas direções, sobre plaintexts guardados, campos da página e senhas | 762 k AES, ≈ 100 M reinterpretações | 0 |
+| Dualidade (`half / better half`, yin-yang): um blob como senha do outro, metades do SMALL em torno de `enter`, cortes em todos os pontos, XOR, complemento da matriz, estrelas da capa (proxy) | 265 k senhas, 1,6 M AES | 0 |
+| Referência pessoal pela gramática das fases: 104 itens públicos do mundo do criador, aridade 1–3 (4–6 na lista curta), 7 materiais, separadores | ≈ 1,7 M candidatos, 32,6 M AES | 0 (triplas verbatim a 67,5 %) |
+| "our first hint is your last command" literal: o sha256 publicado em 22/04/2019 como argumento `-pass`; "segunda porta" = `sha256(título + 17ucy…)` e variantes | 217 senhas; 10 URLs (todas 404) | 0 |
 | Senha como **arquivo** (`-kfile`/`-pass file:` = 1.ª linha; 89 artefatos, chunks PNG, digests dos bytes, 128 k linhas de texto) | 767 k decifrações | 0 |
 | Textos do site revivido, capa/livro, falas do criador, linhas de comando openssl | | 0 |
 
@@ -183,7 +208,7 @@ nas demais um símbolo, e exige-se consumo integral dos 91 símbolos.
   admite segmentação sob 4.248 variantes.
 - L84: 23 primos, **16 `b` + 7 `be`** — os números do Arquiteto ("twenty-three ciphers, sixteen
   encryptions and or seven intertwined passwords"). Tipos como bits (`b`=0, `be`=1):
-  `00001000110000100110010`. Coincidem posição a posição com as cores dos 25 eventos da matriz em
+  `00001000110000100110010` (em L83 o `e` final vira o 23.º `be` e o último bit vira 1: `…0110011`). Coincidem posição a posição com as cores dos 25 eventos da matriz em
   ordem espiral (`BBBBYBBBYYBBBBYBBYYBWYYBY`, `#FEFEFE` = azul) omitindo dois eventos — 22 e 25,
   ou 23 e 25: p familiar 6,3 × 10⁻⁴. Só a ordem espiral casa. **Mas L83 também casa** (omitindo
   22/24, 23/24 ou 24/25): as cores confirmam a segmentação e não a desambiguam nem trazem
@@ -226,6 +251,7 @@ consecutivas com nulo ⇒ esperar insumo do criador.
 | `solver/primos_2026_09_17/`, `solver/prime_host_*.cjs` | segmentação por primos, resíduo, `faed`, `matrixsumlist`, marcadores; scorer limpo |
 | `solver/zero_free_*.cjs`, `solver/diagonal_sum_*.cjs`, demais `*.cjs` | famílias de codificação/somas fechadas com verificação independente |
 | `solver/prize_nonce_bsgs/`, `solver/prize_*.cjs`, `solver/gsmg_sig_recover.py` | superfície ECC do prêmio |
+| `solver/operador_ensinado_2026_09_17/` | operador RAB, últimas palavras, sete entrelaçadas, codecs, dualidade, referência pessoal; oráculo de dois alvos e re-varreduras (`retro_dois_alvos.py`, `v4_rodada_dois_alvos.py`) |
 
 Taxonomia completa em `solver/README.md`; histórico cronológico em
 `docs/historico/ENDGAME_cronologico_2026.md`.

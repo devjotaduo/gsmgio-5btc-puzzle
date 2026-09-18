@@ -37,6 +37,9 @@ BLOBS = {"SMALL": _parse(SMALL_B64), "TAIL32": _parse(TAIL32_B64),
          "COSMIC": O.blobs()["COSMIC"]}
 PRIZE_ADDR = O.PRIZE_ADDR
 TARGET_H160 = O.TARGET_H160
+PRIZE_ADDR_2 = O.PRIZE_ADDR_2          # 17ucy... = segunda metade do premio (ver oracles.py)
+TARGET_H160_2 = O.TARGET_H160_2
+TARGET_H160S = O.TARGET_H160S
 TARGET_PUBKEY_HEX = ("04f4d1bbd91e65e2a019566a17574e97dae908b784b388891848007e4f55d5a4"
                      "649c73d25fc5ed8fd7227cab0be4e576c0c6404db5aa546286563e4be12bf33559")
 
@@ -208,7 +211,8 @@ def try_password_all(pw, blobs=("SMALL", "COSMIC", "TAIL32"), kdf="both"):
 
 # ------------------------------------------------------------------ privkey
 def priv_hit(b32):
-    """Oraculo duro: privkey de 32B gera o endereco-premio (comp ou uncomp)?"""
+    """Oraculo duro: privkey de 32B gera UM DOS DOIS enderecos do premio (comp ou uncomp)?
+    Desde 2026-09-17 testa tambem 17ucy... (ver O.PRIZE_ADDRS)."""
     if len(b32) != 32: return None
     return O.check_privkey(b32)
 def scan_priv(buf, where=""):
@@ -230,18 +234,23 @@ def scan_priv(buf, where=""):
         except Exception:
             pass
     return hits
+def _h160_hex(b):
+    return hashlib.new("ripemd160", hashlib.sha256(b).digest()).hexdigest()
 def fast_priv_scan(buf, where=""):
-    """Como scan_priv, mas com coincurve (≈0,05 ms/chave) — use em varreduras grandes."""
+    """Como scan_priv, mas com coincurve (≈0,1 ms/chave) — use em varreduras grandes.
+    Desde 2026-09-17 compara o h160 (comp e uncomp) contra os DOIS enderecos do premio; ate entao
+    so comparava a pubkey nao comprimida de 1GSMG e era cego para 17ucy (que nunca gastou).
+    Retorno inalterado: lista de (where, "priv@j", hex) — uma entrada por janela que casa."""
     from coincurve import PublicKey
-    tgt = bytes.fromhex(TARGET_PUBKEY_HEX)
     hits = []
     for j in range(0, len(buf) - 31):
         sec = buf[j:j + 32]
         try:
-            if PublicKey.from_valid_secret(sec).format(False) == tgt:
-                hits.append((where, f"priv@{j}", sec.hex()))
+            pk = PublicKey.from_valid_secret(sec)
         except Exception:
-            pass
+            continue
+        if any(_h160_hex(pk.format(form)) in TARGET_H160S for form in (False, True)):
+            hits.append((where, f"priv@{j}", sec.hex()))
     return hits
 def phrase_priv(phrase):
     """'brainwallet': sha256(frase) como privkey (varias formas). Retorna hits."""
@@ -354,6 +363,15 @@ if __name__ == "__main__":
     # controle: senha lixo nao abre; padding aleatorio ~1/256
     assert aes_try("xyz_wrong") == [] or all(not semantic(p) for _, p in aes_try("xyz_wrong"))
     assert priv_hit(sha(b"test")) is None
+    # controle dos DOIS alvos (2026-09-17): chave plantada e reconhecida por fast_priv_scan quando
+    # seu h160 entra temporariamente em TARGET_H160S; sem isso, nao dispara
+    _k = sha(b"controle-dois-alvos"); from coincurve import PublicKey as _PK
+    _h = _h160_hex(_PK.from_valid_secret(_k).format(True))
+    assert fast_priv_scan(b"\x00" * 5 + _k + b"\x00" * 3) == []
+    TARGET_H160S = TARGET_H160S + (_h,)
+    assert fast_priv_scan(b"\x00" * 5 + _k + b"\x00" * 3)[0][1] == "priv@5"
+    TARGET_H160S = TARGET_H160S[:-1]
+    assert O.check_privkey(bytes(32)) is None and len(O.PRIZE_ADDRS) == 2 and O.PRIZE_ADDR_2.startswith("17ucy")
     # controle positivo do checkerboard: fase 3.2.2
     alpha322 = "FUBCDORA.LETHINGKYMVPS.JQZXW"
     digs = [int(c) for c in "15165943121972409169171213758951813141543131412428154191312181219433121171617137149110916631213131281491109166131412199114371612126021664313711154112"]
