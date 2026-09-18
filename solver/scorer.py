@@ -4,7 +4,7 @@ Usado pelo oraculo 'readable' como SINAL (nao decide solve): plaintext
 com score alto vira candidato para revisao humana.
 Cache em disco para nao reconstruir toda vez.
 """
-import os, re, math, json, pickle
+import os, re, math, json, pickle, subprocess
 from collections import Counter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -13,8 +13,17 @@ CACHE = os.path.join(HERE, "quadgram.pkl")
 A = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 IDX = {c: i for i, c in enumerate(A)}
 
+def _export():
+    """result.json é local (ignorado pelo git) e só existe no checkout principal; numa worktree, busca lá."""
+    p = os.path.join(ROOT, "result.json")
+    if os.path.exists(p):
+        return p
+    common = subprocess.run(["git", "-C", ROOT, "rev-parse", "--path-format=absolute", "--git-common-dir"],
+                            capture_output=True, text=True, check=True).stdout.strip()
+    return os.path.join(os.path.dirname(common), "result.json")
+
 def _corpus():
-    data = json.load(open(os.path.join(ROOT, "result.json"), encoding="utf-8"))
+    data = json.load(open(_export(), encoding="utf-8"))
     for m in data.get("messages", []):
         t = m.get("text", "")
         if isinstance(t, list):

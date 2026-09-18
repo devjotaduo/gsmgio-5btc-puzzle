@@ -6,7 +6,8 @@ disable-model-invocation: true
 
 # solve-phase
 
-Automatiza o fio condutor de quase toda fase do puzzle (ver [CLAUDE.md](../../../CLAUDE.md)):
+Automatiza o fio condutor de quase toda fase do puzzle (ver [AGENTS.md](../../../AGENTS.md),
+"Como o puzzle se resolve"):
 
 1. Palavras-chave dos hints → concatenadas **na ordem certa**, respeitando
    caixa e espaços (o README anota isso como `/(aBa, connected enf)`).
@@ -33,8 +34,11 @@ O script imprime o SHA256 usado (em stderr) e o texto decifrado (em stdout).
 
 ## Calibragem
 
-- **KDF**: os blobs (2019) usam o default do OpenSSL 1.1.x = **sha256**, então o
-  script **não** passa `-md`. Verificado end-to-end na fase 3.2. Se um blob sair
-  binário, o botão a girar é acrescentar `-md md5` no `solve.sh`.
-- Se a senha da fase **não** for `SHA256(...)` e sim um valor direto, passe o
-  valor e troque o `sha256sum` do script por um `echo` — casos raros.
+- **KDF**: os blobs autenticados abrem só com EVP-**SHA256** (o default do OpenSSL ≥ 1.1),
+  e o script passa `-md sha256` explícito. Verificado end-to-end na fase 3.2.
+  `KDF=md5` existe só como controle declarado (AGENTS.md, regra 2).
+- **Saída pouco legível não é KDF errado**: o plaintext autêntico da 3.2 tem só 58,9 % de
+  ASCII (segmento EBCDIC cp273). Julgue com `G.semantic`/`G.try_password_all` do kit.
+- Senha direta, sem SHA256: `RAW=1 bash .claude/skills/solve-phase/solve.sh "<senha>" blob.txt`.
+- O Codex não carrega esta skill (fica só em `.claude/skills/`), mas pode rodar o `solve.sh`
+  diretamente com os mesmos argumentos.
