@@ -1,0 +1,49 @@
+{
+ "hipotese": "o resíduo é seletor/parâmetro, não linguagem — mais instâncias",
+ "controle": {
+  "fase2": true
+ },
+ "A_dbbi_como_grade_de_pares": {
+  "linhas_de_dbbi": 7,
+  "max_valor_pos_impares": 9,
+  "max_valor_pos_pares": 9,
+  "viavel": false,
+  "conclusao": "impossível: o resíduo tem valor 9 nas duas paridades e dbbi só tem 7 linhas"
+ },
+ "B_saltos_dbbi_com_wrap": {
+  "selecoes": 1456,
+  "cobertura": "exaustiva: 91 offsets × 4 resíduos × 2 âncoras × 2 direções"
+ },
+ "C_pares_em_grades": {
+  "cobertura": "exaustiva: faed 15×38 e matriz 14×14, ordens lc/cl, bases 0/1"
+ },
+ "exaustivo": {
+  "materiais": 1480,
+  "melhor_escore": -6.328,
+  "rotulo": "B/L84_rev/fwd/antes/off69",
+  "texto": "ecifebbbbeeadfdcedbbdibchbiebhahdbgefiehgbigbebfcecffabbabebf",
+  "hits_de_chave": []
+ },
+ "D_saltos_com_bijecao_AMOSTRA": {
+  "materiais": 199951,
+  "melhor_escore": -6.014,
+  "rotulo": "D/L83/sig784356219/off17",
+  "texto": "adaagacheifefaagbegageifcidegbeggifcaicecceiceedficdbfbfcedh",
+  "hits_de_chave": [],
+  "declarado": "amostra, NÃO exaustivo: 9!·offsets·16 é grande demais"
+ },
+ "aes_sobre_o_exaustivo": {
+  "senhas": 2960,
+  "aes": 17760,
+  "paddings": 82,
+  "paddings_esperados": 69.65,
+  "z_padding": 1.48
+ },
+ "candidatos_aes": [],
+ "referencia_ingles": -3.679,
+ "kit": {
+  "commit": "5e1a88f1a12ddb5709a7bacc0e1debdd3daca029",
+  "kit_sha256": "3810cbafa1936652bd6c30fc36b908453036d7d685ecd7f3ec0b33dba9cc1e67"
+ },
+ "script_sha256": "3ab270aab0002c1400a57bd7b788e067d3d562cf283b136abe81ae4bddec2f4a"
+}

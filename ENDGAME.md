@@ -365,6 +365,12 @@ sobre `faed`. O teto é próprio — a soma dos saltos (341 em L84, 336 em L83) 
 dar a volta, o que limita o offset inicial a 230 e 235 valores. Varridas as 3.712 seleções (4 resíduos ×
 2 âncoras × 2 direções × todos os offsets): melhor escore de texto −6,516 contra −3,679 do inglês,
 0 hits de chave e 0 candidatos em 44.544 AES (z de padding −0,58).
+Outras instâncias de seleção seguiram: saltos sobre `dbbi` com wrap (1.456, exaustivo) e
+pares `(linha, coluna)` em `faed` e na matriz (exaustivo) — 1.480 materiais, melhor escore −6,328,
+0 chaves e 0 candidatos em 17.760 AES; `dbbi` como grade de pares é **impossível por teto** (o resíduo
+tem valor 9 nas duas paridades e `dbbi` só tem 7 linhas); e saltos com bijeção arbitrária ficam em
+**amostra** (199.951 materiais, melhor −6,014), porque a soma varia de 233 a 377 e sempre cabe em 570,
+de modo que nenhuma bijeção é eliminada por comprimento.
 [Relatório](_work/residuo_saltos_2026-09-18/RELATORIO.md).
 [Relatório](_work/residuo_como_somas_2026-09-18/RELATORIO.md).
 O terceiro item, **o que "zeroed out" zera, está fechado** como espaço enumerável: os 2^9 =
