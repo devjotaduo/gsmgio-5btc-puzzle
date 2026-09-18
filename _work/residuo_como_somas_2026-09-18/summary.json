@@ -1,0 +1,35 @@
+{
+  "controls": {
+    "segmentations": [
+      83,
+      84
+    ],
+    "original_144_rows_independent_match": true,
+    "phase2_openssl_match": true,
+    "phase2_length": 648,
+    "phase2_sha256": "e2f9dd65604a3231f8b3301724e8d713a88fffc4b6c7c4aeeb20f58a582b593a",
+    "ecc_independent_checks": 5,
+    "raw_nested_control": true
+  },
+  "original_paths": 144,
+  "original_unique_scalars": 136,
+  "original_single_target_hits": 0,
+  "distinct_intermediate_materials": 544,
+  "distinct_passwords": 1496,
+  "aes_decisions": 8976,
+  "counts": {
+    "SMALL:sha256": 1496,
+    "SMALL:md5": 1496,
+    "TAIL32:sha256": 1496,
+    "TAIL32:md5": 1496,
+    "COSMIC:sha256": 1496,
+    "COSMIC:md5": 1496
+  },
+  "padding_valid": 35,
+  "triage_records": 0,
+  "openssl_raw_crosschecks": 12,
+  "raw_bytes_preserved": 4452096,
+  "raw32_windows_per_order": 4173840,
+  "runtime_seconds": 9.691,
+  "scope": "faithful PR6 single target and all intermediate representations; AES-256-CBC EVP SHA256/MD5; raw/no-padding included"
+}

@@ -1,0 +1,12 @@
+{
+  "inverse_models": 524288,
+  "forward_weight_profile_pairs": 1564864,
+  "ordered_strings_matching_target_length": 240928,
+  "positive_inverse_controls": 64,
+  "positive_forward_controls": 32,
+  "results_agree": true,
+  "exact_numeric_reconstructions": 0,
+  "negative_scope": "only fixed a1i9/global zeros, 16 natural orders, binary backgrounds, 4 special-cell choices; no arbitrary bijection or permutation",
+  "inverse_results_sha256": "3f34a46500086b5f85a5c074b9a5701da35bcbe8e44010ee9bcfc84a2644a3f2",
+  "forward_results_sha256": "befeb1b57d394ba43f7e685643e9752abf429d240810f9cd6c2a723d0b36ae36"
+}
