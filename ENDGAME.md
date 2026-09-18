@@ -249,6 +249,7 @@ experimento; a revisão de §3.12 amplia apenas a cobertura dos bytes preservado
 | Transposições por `matrixsumlist`/`lastwords…`/`dbbi`, keystreams mod 9/10 (listas, tokens, cores, primos), running keys do corpus e do livro (6,4 M alinhamentos) | | 0 |
 | RSA por caractere com primos das cores, `dbbi` como escalar secp256k1, `dbbi` como SHA256 de listas (525 k pré-imagens), somas de linhas/colunas/anéis/diagonais/retângulos em todas as dimensões, produtos internos, distâncias | | 0 |
 | Codificações sem zero (base 9 bijetiva, códigos com zeros apagados, trits) | 11,6 M modelos; **cobertura parcial**: DBBI admite 192.969 modelos compatíveis e só o melhor caminho de cada foi testado | 0 |
+| Resíduo L83/L84 como **escalar direto** de `1GSMG`, bases 2–19, atribuição global de dígitos com colisões, dois sinais | 72 configurações, 3,15 bi pares configuração/atribuição; duas implementações C independentes na estrutura; 22 controles positivos cada + 80.780 atribuições enumeradas literalmente | 0 |
 | `dbbi` (64 tokens `b`/`g`) como **chave privada hex** sob **todas** as 16! bijeções | MITM na curva, 4 ordens × 2 sinais = 1,67 × 10¹⁴ chaves; controle plantado recuperado exato | 0 |
 
 ### C. Senhas
@@ -326,8 +327,19 @@ nas demais um símbolo, e exige-se consumo integral dos 91 símbolos.
   grade 7×12; resíduo como chave sobre `faed`; gramática SHA256 das fases 2–3.2 com 60.005
   concatenações; "coluna j = letra j do rótulo" (7×13, 15×38).
 
-**A ligação ainda desconhecida:** qual segmentação é a pretendida e como `matrixsumlist` consome o
-resíduo. Sobre o **primeiro**: a coincidência de que o COSMIC tem 83 blocos AES e L83 tem 83 tokens foi
+**A ligação ainda desconhecida: resta UMA — como `matrixsumlist` consome o resíduo.** A outra,
+qual segmentação é a pretendida, tem resposta **documental**: a fala do Arquiteto na fase 3.2 (README
+554–555) começa nomeando o próprio passo — "**REINSERTING THE PRIME BASICS** after which you will be
+required to select from over **twenty-three** ciphers **sixteen** encryptions and or **seven**
+intertwined passwords" — e L84 produz exatamente **23 marcadores = 16 `b` + 7 `be`**, enquanto L83 dá
+15 + 8. Das duas segmentações que a regra admite, só L84 satisfaz a repartição enunciada. Atenção ao
+que isto corrige: o teste das **cores** casa com as duas e de fato não desambigua (5 casamentos, não 4),
+mas o argumento dos **números 16/7 é independente das cores** e escolhe L84. É argumento semântico, não
+prova. **Não muda resultado algum, e o alcance é modesto:** L84 já vinha sendo adotado — a maioria das
+campanhas varre as duas segmentações em paralelo, e `prime_host_l84_2026-09-17` fixou L84 por decisão
+declarada, registrando que "a justificativa dessa escolha continua sendo uma hipótese". O que muda é
+que essa premissa deixa de ser arbitrária.
+[Nota](_work/l83_cosmic_2026-09-18/DISCRIMINANTE.md). Sobre o **primeiro**: a coincidência de que o COSMIC tem 83 blocos AES e L83 tem 83 tokens foi
 testada como correspondência e **não tem lastro**. Particionando os 83 blocos pelas 23 posições primas,
 as quatro estatísticas (média, variância, bits por byte, entropia) dão menor p = 0,433 contra 20.000
 partições aleatórias — 1,0 após Bonferroni. A coincidência cai de "pista" para "número" e **não
