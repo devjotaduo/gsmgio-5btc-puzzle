@@ -5,7 +5,9 @@
   "better_half_17ucy": "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa"
  },
  "controle": {
-  "detector_do_par_ok": true
+  "detector_do_par_ok": true,
+  "acerto_isolado_registrado": true,
+  "regressao_do_bug_da_PR6": "coberta"
  },
  "pares_de_fontes": 16,
  "operacoes_por_par": {
@@ -27,8 +29,10 @@
   "resid_L83×faed_h2": 35
  },
  "ops_de_par_testadas": 560,
- "criterio": "mesma operação O: {addr(O(dbbi)), addr(O(faed))} ⊇ {1GSMG, 17ucy} (inclui cruzado)",
- "hits": [],
+ "criterio": "regra 1: TODO acerto isolado é registrado; o par é classificação adicional",
+ "hits_isolados": [],
+ "hits_par": [],
+ "assuncao_nao_demonstrada": "que 'half'=1GSMG e 'better half'=17ucy, e que dbbi e faed correspondam a cada um: o criador glosou 'better half' como a esposa, o que fala de PERTENCIMENTO e não especifica formato nem qual campo gera qual chave",
  "kit": "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\solver\\experiments\\claude_endgame_2026_09_02\\gsmg_common.py",
- "script_sha256": "a3a18cf980b438be40c4273e9331a420c194d0381ddc5616a5bbe7d033b12d34"
+ "script_sha256": "f2369608661a69a4b4ddda48aac9c5a8d590d5b28794e8a98c0e6f81c4a4ddd4"
 }

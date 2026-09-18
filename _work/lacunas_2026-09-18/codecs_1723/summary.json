@@ -1,0 +1,40 @@
+{
+ "item": "A2: codecs da família 4 sobre os conteúdos recuperados pelo splitlines",
+ "conteudos": 1723,
+ "bytes": 774293,
+ "com_8_ou_mais_bytes_altos": 1706,
+ "codecs": 65,
+ "reinterpretacoes": 223990,
+ "detector_disparou": 0,
+ "oraculo_duro": 0,
+ "duros_detalhe": [],
+ "melhor_lower": {
+  "valor": 0.457,
+  "print": 0.657,
+  "codec": "cp037",
+  "dir": "dec"
+ },
+ "distribuicao_lower": {
+  "0.0": 17,
+  "0.1": 94,
+  "0.2": 1253,
+  "0.3": 332,
+  "0.4": 26,
+  "0.5": 1
+ },
+ "chaves_confirmadas": [],
+ "hits_de_chave": [],
+ "controle": {
+  "traducao_reversivel": true,
+  "duro_detecta_nested_blob": true,
+  "codec": "cp273",
+  "dir": "dec",
+  "plantado_hex": "e28193a385846d6d00010203372d2e2f1605250b0c0d0e0f101112133c3d3226"
+ },
+ "alvos": {
+  "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe": "a9553269572a317e39f0f518cb87c1a0ee1dbae4",
+  "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa": "4bc468447fe1b048ad030a2f9a125478eabc4ed6"
+ },
+ "sha256_conteudos": "a50eef7510f358eb3b805b8eb7e4f33c6b2a936d2d9183514ef82ca803b67f4d",
+ "script_sha256": "d760d4024604d6a74256084ec06024f5dc725eb0e43a107b2efe867e04fb0aec"
+}
