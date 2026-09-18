@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "two_workers": true,
+  "planted_hits": 3,
+  "resume_did_not_duplicate": true,
+  "wal_rejected": true,
+  "raw32_windows": 54
+}

@@ -1,0 +1,25 @@
+{
+  "contract": {
+    "corpus_sha256": "36c780f9e9e8e02807603e3d4a38f64da6ef3b0654239ac6d323b61d27e3c675",
+    "code": {
+      "solver\\multiagente_2026_09_18\\scan_delta.py": "51aa5a2ba94f371d6fe62e3559a99b5161163064098acd11eea302e9b254aaa6",
+      "solver\\oraculo_duplo_2026_09_17\\oracle.py": "1b927716a5339a5a8cabe8527f1d7197e9bf539fdb508f25562dabafd45eec8d",
+      "solver\\oraculo_duplo_2026_09_17\\scan.py": "3447d3e57273a1001d819027bb4c48e89057b95cfa2f0fbe70480c0f1aecb01f"
+    },
+    "targets": [
+      "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+      "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa"
+    ],
+    "mode": "text",
+    "batch_windows": 250000,
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "corpus": "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\_work\\oraculo_duplo_2026-09-17\\corpus_partial\\corpus.sqlite",
+  "controls": {
+    "pass": true,
+    "planted_le_offset": 7,
+    "null_replicates": 100,
+    "null_raw32_attempts": 2800
+  },
+  "created_utc": "2026-09-18T04:29:37.900302+00:00"
+}

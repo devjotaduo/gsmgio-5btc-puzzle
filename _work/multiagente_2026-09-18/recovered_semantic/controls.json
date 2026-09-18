@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "phase2_and_checkerboard": true,
+  "phase32_sha256": "b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34",
+  "phase32_checks": {
+    "original": {
+      "reasons": [
+        "semantic_whole",
+        "ascii_run_ge48",
+        "nested_any_offset"
+      ],
+      "ascii_runs": [
+        {
+          "offset": 0,
+          "length": 447
+        },
+        {
+          "offset": 1986,
+          "length": 436
+        }
+      ],
+      "nested": [
+        {
+          "offset": 2292,
+          "kind": "base64",
+          "decoded_bytes": 96
+        }
+      ]
+    },
+    "cp273": {
+      "reasons": [],
+      "ascii_runs": [],
+      "nested": []
+    },
+    "cp273-inverse": {
+      "reasons": [
+        "ascii_run_ge48"
+      ],
+      "ascii_runs": [
+        {
+          "offset": 442,
+          "length": 1548
+        }
+      ],
+      "nested": []
+    }
+  },
+  "synthetic_positives": [
+    {
+      "nested": "raw",
+      "offset": 0
+    },
+    {
+      "nested": "base64",
+      "offset": 0
+    },
+    {
+      "nested": "raw",
+      "offset": 19
+    },
+    {
+      "nested": "base64",
+      "offset": 19
+    },
+    {
+      "text_view": "original",
+      "offset": 19,
+      "length": 82
+    },
+    {
+      "text_view": "cp273",
+      "offset": 19,
+      "length": 82
+    },
+    {
+      "text_view": "cp273-inverse",
+      "offset": 19,
+      "length": 82
+    }
+  ],
+  "uniform_null": {
+    "seed": 1809202602,
+    "samples_per_length": 100,
+    "lengths": [
+      77,
+      78,
+      79,
+      1325,
+      1326,
+      1327
+    ],
+    "samples": 600,
+    "reasons": {}
+  },
+  "matched_phase32_null": {
+    "shuffles": 100,
+    "reasons": {
+      "original:semantic_whole": 100
+    },
+    "interpretation": "G.semantic pode ser invariante ao embaralhamento: é triagem, não autenticação."
+  },
+  "input_hashes": {
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\_work\\multiagente_2026-09-18\\recovered\\corpus.sqlite": "4637c0722090360376b20392234674689ebacc3417bc5c97f33fd6b3d433820f",
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\solver\\multiagente_2026_09_18\\audit_recovered_semantic.py": "4afb902e21a8ef1090003d2df930ca22e725f4ebf90bbe13dbcbb79493b73160",
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\solver\\experiments\\claude_endgame_2026_09_02\\gsmg_common.py": "25b160076554166b20d18f526fe7eebea0fd463a41c14d21290e114dd171d23e",
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\solver\\oraculo_duplo_2026_09_17\\oracle.py": "1b927716a5339a5a8cabe8527f1d7197e9bf539fdb508f25562dabafd45eec8d"
+  }
+}

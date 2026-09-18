@@ -1,0 +1,6 @@
+{
+  "hypothesis": "O ramo STREAM histórico perde uma chave binária interior se a saída tiver printable<0.60 e nenhum sinal textual. Testar quatro modos, dois KDFs, dois alvos sintéticos e offsets de início/interior/fim demonstra a condição exata do falso negativo.",
+  "scope": ["Implementação histórica importada sem executar main/work", "Fixture de 80 bytes e confirmação adicional de 1328 bytes", "AES-CFB, AES-OFB, AES-CTR, ChaCha20", "EVP-SHA256 e EVP-MD5", "100 embaralhamentos preservando contagens", "Leitura do log histórico para contagem; benchmark sintético limitado"],
+  "limits": ["Não reexecuta os 122 milhões de testes", "Não consulta rede", "Não busca chaves reais", "Estimativa de duração não promete aceleração linear em múltiplos processos"],
+  "status": "registered_before_reproduction"
+}

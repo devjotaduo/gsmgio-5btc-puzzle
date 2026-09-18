@@ -1,0 +1,26 @@
+{
+  "status": "complete",
+  "targets": [
+    "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+    "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa"
+  ],
+  "corpus_sha256": "d0d6071fdb1bc2bbcdfccd0b1ef88837bdbe49ac853e531f4fc8208848cb47a5",
+  "total_payloads": 19,
+  "total_bytes": 912,
+  "expected_raw32_windows": 323,
+  "completed_batches": 1,
+  "payloads_scanned": 19,
+  "bytes_scanned": 912,
+  "attempts": {
+    "raw32": 323,
+    "hex64": 0,
+    "wif-uncompressed": 0,
+    "wif-compressed": 0
+  },
+  "valid_scalars": 323,
+  "hard_hits": 0,
+  "workers": 1,
+  "session_seconds": 0.313,
+  "session_candidates_per_second": 1031.9,
+  "updated_utc": "2026-09-17T23:58:46.347917+00:00"
+}

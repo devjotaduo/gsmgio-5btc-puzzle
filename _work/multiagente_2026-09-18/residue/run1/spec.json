@@ -1,0 +1,18 @@
+{
+  "hypothesis": "A senha correta pode ser saída não linguística de uma configuração já declarada, antes excluída pelo gate top-20; ou resultado de manter b não primo na máscara correta.",
+  "scope": "Exact historical decoder/configuration enumeration and six normalizations; only position-aware marker substitution and removal of score/top-20 gates. Three original blobs, EVP-SHA256/MD5, raw and lowercase SHA256-hex passwords. Full padding retained and scanned at both isolated P2PKH targets.",
+  "limitations": "Keeps historical lossy decoder rules: trailing escape dropped, invalid codes '?', removal of '?' in forms, modulo mappings and only two selected Polybius output alphabets. No additional codecs or decoder families. Null sample is stratified, not the full search. Legacy generated-set comparison is not proof of the actual old 680-password list.",
+  "targets": [
+    "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+    "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa"
+  ],
+  "source_sha256": {
+    "solver\\multiagente_2026_09_18\\residue_complete.py": "00eec76c5c3458b46a382cdc384ab4e54621729aac6d5e8c53b68a4e9d9367e3",
+    "solver\\primos_2026_09_17\\resid_decoders.py": "07c0bfb382148cefa2026edd24e65bf76142b9cc880f7b84b84d3bbb366ab868",
+    "_work\\prime_geometry_2026-09-11\\inputs.json": "2e58c16a953bc22c2361adb5124f43d8fe624d15e3c90858349dcb25ecefedc6",
+    "README.md": "b5ade8d9cbeb7956e725d3021a0a7cd36cd8b66df3ca376f987ca61fd280afef",
+    "solver\\oraculo_duplo_2026_09_17\\oracle.py": "1b927716a5339a5a8cabe8527f1d7197e9bf539fdb508f25562dabafd45eec8d"
+  },
+  "null_count": 100,
+  "status": "specified_before_generation"
+}

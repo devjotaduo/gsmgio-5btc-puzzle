@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "started_utc": "2026-09-18T04:30:28.802502+00:00",
+  "finished_utc": "2026-09-18T04:30:54.702481+00:00",
+  "status": "ready_for_scanner",
+  "scan_performed": false,
+  "script_sha256": "e9228dd22ced106b4c53fe1db991729c623cde185341e8843bb590acd2fdb4c2",
+  "source_root": "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle",
+  "baseline_root": "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\_work\\oraculo_duplo_2026-09-17",
+  "baseline_databases": [
+    {
+      "path": "corpus_v3/corpus.sqlite",
+      "sha256": "5cb7b7d527c4f016aeef9a7eb532b753ed0aefeb4070ac8c454d542620f25ab7",
+      "stat": {
+        "size": 713625600,
+        "mtime_ns": 1789689406574778100,
+        "inode": 7881299349007747
+      },
+      "payloads": 592321
+    },
+    {
+      "path": "corpus_supplement/corpus.sqlite",
+      "sha256": "d0d6071fdb1bc2bbcdfccd0b1ef88837bdbe49ac853e531f4fc8208848cb47a5",
+      "stat": {
+        "size": 53248,
+        "mtime_ns": 1789689461364365200,
+        "inode": 5348024558612809
+      },
+      "payloads": 19
+    },
+    {
+      "path": "corpus_partial/corpus.sqlite",
+      "sha256": "36c780f9e9e8e02807603e3d4a38f64da6ef3b0654239ac6d323b61d27e3c675",
+      "stat": {
+        "size": 12288,
+        "mtime_ns": 1789689663938914100,
+        "inode": 6192449488744698
+      },
+      "payloads": 1
+    }
+  ],
+  "sources": [
+    {
+      "source": "README.md",
+      "inventory": {
+        "size": 52130,
+        "mtime_ns": 1789682449051081400,
+        "inode": 4503599627415908
+      },
+      "copy_start": {
+        "size": 52130,
+        "mtime_ns": 1789682449051081400,
+        "inode": 4503599627415908
+      },
+      "copy_end": {
+        "size": 52130,
+        "mtime_ns": 1789682449051081400,
+        "inode": 4503599627415908
+      },
+      "snapshot": "snapshots/00_README.md",
+      "snapshot_bytes": 52130,
+      "snapshot_sha256": "b5ade8d9cbeb7956e725d3021a0a7cd36cd8b66df3ca376f987ca61fd280afef",
+      "changed": false,
+      "kind": "reference",
+      "counts": {}
+    },
+    {
+      "source": "solver/experiments/claude_endgame_2026_09_02/gsmg_common.py",
+      "inventory": {
+        "size": 21645,
+        "mtime_ns": 1789697905879767500,
+        "inode": 10977524091831723
+      },
+      "copy_start": {
+        "size": 21645,
+        "mtime_ns": 1789697905879767500,
+        "inode": 10977524091831723
+      },
+      "copy_end": {
+        "size": 21645,
+        "mtime_ns": 1789697905879767500,
+        "inode": 10977524091831723
+      },
+      "snapshot": "snapshots/01_gsmg_common.py",
+      "snapshot_bytes": 21645,
+      "snapshot_sha256": "55309d199e1f5541e02a20675c04ef468229666fc6ec429c9394bbf6c9c3b19e",
+      "changed": false,
+      "kind": "reference",
+      "counts": {}
+    },
+    {
+      "source": "solver/experiments/claude_endgame_2026_09_02/bifid3x3_exhaustive.py",
+      "inventory": {
+        "size": 20204,
+        "mtime_ns": 1788377742482417300,
+        "inode": 7036874417874200
+      },
+      "copy_start": {
+        "size": 20204,
+        "mtime_ns": 1788377742482417300,
+        "inode": 7036874417874200
+      },
+      "copy_end": {
+        "size": 20204,
+        "mtime_ns": 1788377742482417300,
+        "inode": 7036874417874200
+      },
+      "snapshot": "snapshots/02_bifid3x3_exhaustive.py",
+      "snapshot_bytes": 20204,
+      "snapshot_sha256": "e871688bfcf31889841d4f8f2e4b630f9fe6ea706c1630378f1ac372c18fc49e",
+      "changed": false,
+      "kind": "reference",
+      "counts": {}
+    },
+    {
+      "source": "_work/operador_ensinado_2026-09-17/critico_sete_final/cosmic_full_agente.bin",
+      "inventory": {
+        "size": 190631870,
+        "mtime_ns": 1789696972764430100,
+        "inode": 12947848929201567
+      },
+      "copy_start": {
+        "size": 190631870,
+        "mtime_ns": 1789696972764430100,
+        "inode": 12947848929201567
+      },
+      "copy_end": {
+        "size": 190631870,
+        "mtime_ns": 1789696972764430100,
+        "inode": 12947848929201567
+      },
+      "snapshot": "snapshots/03_cosmic_full_agente.bin",
+      "snapshot_bytes": 190631870,
+      "snapshot_sha256": "3cb1e194ae42114c5feb477a88c531f1986934a7f092c5feede6f284b1ff617f",
+      "changed": false,
+      "kind": "cosmic_binary",
+      "counts": {
+        "accepted_origins": 143225,
+        "binary_records": 143225,
+        "parsed_bytes": 190631870
+      }
+    },
+    {
+      "source": "_work/operador_ensinado_2026-09-17/critico_sete_final/cosmic_full_o5up.bin",
+      "inventory": {
+        "size": 52603641,
+        "mtime_ns": 1789696725841608700,
+        "inode": 6755399441569811
+      },
+      "copy_start": {
+        "size": 52603641,
+        "mtime_ns": 1789696725841608700,
+        "inode": 6755399441569811
+      },
+      "copy_end": {
+        "size": 52603641,
+        "mtime_ns": 1789696725841608700,
+        "inode": 6755399441569811
+      },
+      "snapshot": "snapshots/04_cosmic_full_o5up.bin",
+      "snapshot_bytes": 52603641,
+      "snapshot_sha256": "8539224dd8147a2b14891a1f517ec94ed41dd52c0fa9c8637586a888464b7dbc",
+      "changed": false,
+      "kind": "cosmic_binary",
+      "counts": {
+        "accepted_origins": 39522,
+        "binary_records": 39522,
+        "parsed_bytes": 52603641
+      }
+    },
+    {
+      "source": "solver/experiments/claude_endgame_2026_09_02/bifid3x3_exhaustive.jsonl",
+      "inventory": {
+        "size": 20369913,
+        "mtime_ns": 1788379040589405300,
+        "inode": 12103423998651243
+      },
+      "copy_start": {
+        "size": 20369913,
+        "mtime_ns": 1788379040589405300,
+        "inode": 12103423998651243
+      },
+      "copy_end": {
+        "size": 20369913,
+        "mtime_ns": 1788379040589405300,
+        "inode": 12103423998651243
+      },
+      "snapshot": "snapshots/05_bifid3x3_exhaustive.jsonl",
+      "snapshot_bytes": 20369913,
+      "snapshot_sha256": "ea8990317b63bacdfa37eabfe204dd39ec4f101281afa008c718ef8d2538b53c",
+      "changed": false,
+      "kind": "bifid_jsonl",
+      "counts": {
+        "lines": 35093,
+        "parsed_json_lines": 35092,
+        "aes_records": 35142,
+        "aes_records_verified": 35142,
+        "accepted_origins": 35142,
+        "issue:invalid_jsonl": 1
+      }
+    },
+    {
+      "source": "solver/experiments/claude_endgame_2026_09_02/b3x3_run_screen_only.jsonl",
+      "inventory": {
+        "size": 6095848,
+        "mtime_ns": 1788377732706999100,
+        "inode": 3377699720659991
+      },
+      "copy_start": {
+        "size": 6095848,
+        "mtime_ns": 1788377732706999100,
+        "inode": 3377699720659991
+      },
+      "copy_end": {
+        "size": 6095848,
+        "mtime_ns": 1788377732706999100,
+        "inode": 3377699720659991
+      },
+      "snapshot": "snapshots/06_b3x3_run_screen_only.jsonl",
+      "snapshot_bytes": 6095848,
+      "snapshot_sha256": "e3666632f4aee71e396a62165d0be3fc00f11fb0bbb5543c4a6a1be6abced5bb",
+      "changed": false,
+      "kind": "bifid_jsonl",
+      "counts": {
+        "lines": 14071,
+        "parsed_json_lines": 14071,
+        "aes_records": 14090,
+        "aes_records_verified": 14090,
+        "accepted_origins": 14090
+      }
+    }
+  ],
+  "counts": {
+    "accepted_origins": 231979,
+    "issue:invalid_jsonl": 1,
+    "new_bytes": 260180711,
+    "new_corpus_origins": 231979,
+    "new_payloads": 225854,
+    "origins_duplicate_new": 6125,
+    "snapshot_bytes": 269795251
+  },
+  "verified_output": {
+    "payloads": 225854,
+    "bytes": 260180711,
+    "raw32_windows_forward": 253179237
+  },
+  "controls": {
+    "phase2_sha256": true,
+    "phase2_md5_rejected": true,
+    "phase2_plaintext_sha256": "e2f9dd65604a3231f8b3301724e8d713a88fffc4b6c7c4aeeb20f58a582b593a",
+    "blob_sha256": {
+      "SMALL": "9e2831e1b34b5f34796df47ccaf6530d48d371c61a6bff84d60db1064fa7a258",
+      "TAIL32": "291dfd6f3e759ec2e272b35a00c24907da70c3e7a9291b4c13605c7b0b4f3de9",
+      "COSMIC": "b18950551a4dd0cb8a9378f0906ba18c03a15f0ee83eb98c6bc90165c5f79805"
+    }
+  },
+  "corpus_sha256": "4637c0722090360376b20392234674689ebacc3417bc5c97f33fd6b3d433820f",
+  "limits": [
+    "Somente os quatro arquivos de dados nomeados e seus snapshots finitos.",
+    "Linhas JSON inválidas e registros incompletos são explícitos em issues.",
+    "A reprodução de senha usa UTF-8 e só é aceita se prefixo Latin-1 e comprimento conferem.",
+    "Padding validado reproduz registros históricos; não é prova de solução.",
+    "Nenhuma varredura de chaves executada por este programa."
+  ]
+}

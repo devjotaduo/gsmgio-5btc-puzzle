@@ -1,0 +1,4332 @@
+{
+  "version": 1,
+  "status": "passed",
+  "pass": true,
+  "scan_status": "complete",
+  "ecc_performed": false,
+  "network_used": false,
+  "verifier_sha256": "cac8a2ba819fe7da4b5550935c7d70fc1db0aba0a09f20662ecb4bff7f2706a6",
+  "run": "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\_work\\multiagente_2026-09-18\\scan_text_v3",
+  "verified_utc": "2026-09-18T04:52:37.533262+00:00",
+  "mode": "text",
+  "targets": [
+    "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+    "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa"
+  ],
+  "corpus": "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\_work\\oraculo_duplo_2026-09-17\\corpus_v3\\corpus.sqlite",
+  "corpus_sha256": "5cb7b7d527c4f016aeef9a7eb532b753ed0aefeb4070ac8c454d542620f25ab7",
+  "code_sha256": {
+    "solver/multiagente_2026_09_18/scan_delta.py": "51aa5a2ba94f371d6fe62e3559a99b5161163064098acd11eea302e9b254aaa6",
+    "solver/oraculo_duplo_2026_09_17/oracle.py": "1b927716a5339a5a8cabe8527f1d7197e9bf539fdb508f25562dabafd45eec8d",
+    "solver/oraculo_duplo_2026_09_17/scan.py": "3447d3e57273a1001d819027bb4c48e89057b95cfa2f0fbe70480c0f1aecb01f"
+  },
+  "counts": {
+    "payloads": 592321,
+    "bytes": 76680140,
+    "raw32_windows_per_direction": 58356151,
+    "valid_scalars": 677,
+    "hits": 0
+  },
+  "attempts": {
+    "raw32": 0,
+    "hex64": 674,
+    "wif-uncompressed": 3,
+    "wif-compressed": 0
+  },
+  "batch_windows": 250000,
+  "batches": [
+    {
+      "batch_id": 0,
+      "payloads": 531,
+      "bytes": 266587,
+      "raw32_windows_per_direction": 250126,
+      "first_payload_id": 1,
+      "last_payload_id": 531,
+      "ordered_ids_and_sha256": "f70ceb9788bb34ab2fa3173acbb61614cac1fd1e3e40ce59cdc48e072a2fd3d7",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 1,
+      "payloads": 515,
+      "bytes": 266571,
+      "raw32_windows_per_direction": 250606,
+      "first_payload_id": 532,
+      "last_payload_id": 1046,
+      "ordered_ids_and_sha256": "98611b5a1791d69968557b0b5adf70a5fa02987793c879cf780732360f08e5fa",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 2,
+      "payloads": 520,
+      "bytes": 266965,
+      "raw32_windows_per_direction": 250845,
+      "first_payload_id": 1047,
+      "last_payload_id": 1566,
+      "ordered_ids_and_sha256": "b8d379a9b93d01fb1dbacbb7ea702783ab5e6a387f31f67d834dcad6aa8d820b",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 3,
+      "payloads": 534,
+      "bytes": 266823,
+      "raw32_windows_per_direction": 250269,
+      "first_payload_id": 1567,
+      "last_payload_id": 2100,
+      "ordered_ids_and_sha256": "abacebb3cfe1de49197fe481e7d03a99aa5249f43731033d2b4e9afbabe7123f",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 4,
+      "payloads": 574,
+      "bytes": 268735,
+      "raw32_windows_per_direction": 250941,
+      "first_payload_id": 2101,
+      "last_payload_id": 2674,
+      "ordered_ids_and_sha256": "4270f594787973691763d1dfd85511b8c37b9c248b549a5769d0764f41da32fe",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 5,
+      "payloads": 563,
+      "bytes": 267865,
+      "raw32_windows_per_direction": 250412,
+      "first_payload_id": 2675,
+      "last_payload_id": 3237,
+      "ordered_ids_and_sha256": "2a3220ee05418b679f339308a9d7bf883f252746febdc908ae68fb0648f568ec",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 6,
+      "payloads": 487,
+      "bytes": 265606,
+      "raw32_windows_per_direction": 250509,
+      "first_payload_id": 3238,
+      "last_payload_id": 3724,
+      "ordered_ids_and_sha256": "d5c6d99b8c5964e64fe4b7bfa867c1e9397242861a1167a2f0deeb61b6f02421",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 7,
+      "payloads": 519,
+      "bytes": 266885,
+      "raw32_windows_per_direction": 250796,
+      "first_payload_id": 3725,
+      "last_payload_id": 4243,
+      "ordered_ids_and_sha256": "a8a1129fd7a5f8d34757bdb77b147605070a279a677cde07cbcccbd98e4352d1",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 8,
+      "payloads": 519,
+      "bytes": 266888,
+      "raw32_windows_per_direction": 250799,
+      "first_payload_id": 4244,
+      "last_payload_id": 4762,
+      "ordered_ids_and_sha256": "c31c4afb1085289e7903714d1003034513922e6beb8c26b46d2e25edd616c4b3",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 9,
+      "payloads": 528,
+      "bytes": 267599,
+      "raw32_windows_per_direction": 251231,
+      "first_payload_id": 4763,
+      "last_payload_id": 5290,
+      "ordered_ids_and_sha256": "97ac2fc97765398994d9a10741fce8577d1c2b6321827672fce0486f74bae593",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 10,
+      "payloads": 578,
+      "bytes": 269051,
+      "raw32_windows_per_direction": 251133,
+      "first_payload_id": 5291,
+      "last_payload_id": 5868,
+      "ordered_ids_and_sha256": "0ea2142ec6dbb7a775e907c10ad54f1effd7c781f782b46e7e5d466f031408e4",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 11,
+      "payloads": 566,
+      "bytes": 268106,
+      "raw32_windows_per_direction": 250560,
+      "first_payload_id": 5869,
+      "last_payload_id": 6434,
+      "ordered_ids_and_sha256": "49961cfed8a66f20c243f0afcf1b7fd9704e83fcbf863a8681d4b2912041d258",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 12,
+      "payloads": 580,
+      "bytes": 269210,
+      "raw32_windows_per_direction": 251230,
+      "first_payload_id": 6435,
+      "last_payload_id": 7014,
+      "ordered_ids_and_sha256": "3944204f96a759639fa1933866aa79ecbd7d67aec2bb5b1e949fcb8bd071f140",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 13,
+      "payloads": 529,
+      "bytes": 266430,
+      "raw32_windows_per_direction": 250031,
+      "first_payload_id": 7015,
+      "last_payload_id": 7543,
+      "ordered_ids_and_sha256": "44f7d3328c9ef1532940b54efdbf09b91a189838fb46bd6b141c9b72ca433211",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 14,
+      "payloads": 585,
+      "bytes": 268356,
+      "raw32_windows_per_direction": 250221,
+      "first_payload_id": 7544,
+      "last_payload_id": 8128,
+      "ordered_ids_and_sha256": "c1f9c56cef9d86db2f3a1d77ec428b928d595ad4180f21ce997132de5c7244f4",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 15,
+      "payloads": 526,
+      "bytes": 267440,
+      "raw32_windows_per_direction": 251134,
+      "first_payload_id": 8129,
+      "last_payload_id": 8654,
+      "ordered_ids_and_sha256": "ed1823acc682dc4b917ff1848a55b5505673f2d5e55bc6c1d73e35c88208023d",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 16,
+      "payloads": 541,
+      "bytes": 267377,
+      "raw32_windows_per_direction": 250606,
+      "first_payload_id": 8655,
+      "last_payload_id": 9195,
+      "ordered_ids_and_sha256": "d0349ae455ec82f11b4388c9c4920d5f1c13634e33f50c56ac5da31e0f044f58",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 17,
+      "payloads": 538,
+      "bytes": 267139,
+      "raw32_windows_per_direction": 250461,
+      "first_payload_id": 9196,
+      "last_payload_id": 9733,
+      "ordered_ids_and_sha256": "25de88c6025997c3b31b7aa7eb8691f756bb6fd2a2a2711cf42a80cbfe7bdcf1",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 18,
+      "payloads": 553,
+      "bytes": 268324,
+      "raw32_windows_per_direction": 251181,
+      "first_payload_id": 9734,
+      "last_payload_id": 10286,
+      "ordered_ids_and_sha256": "8e1aaa966b4f2ab43b60511988f195df92867ff09f098c805a31747bcd40ee58",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 19,
+      "payloads": 573,
+      "bytes": 268658,
+      "raw32_windows_per_direction": 250895,
+      "first_payload_id": 10287,
+      "last_payload_id": 10859,
+      "ordered_ids_and_sha256": "fe3faffb673635c8932ca17b0e6ff3865ac979bbce87d2a1ada15139619e3ba9",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 20,
+      "payloads": 533,
+      "bytes": 266745,
+      "raw32_windows_per_direction": 250222,
+      "first_payload_id": 10860,
+      "last_payload_id": 11392,
+      "ordered_ids_and_sha256": "447694a07d2b2c5ca7199bdf811c75735b2b6e7c1c58a264bf57c3c1e98fa4fc",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 21,
+      "payloads": 540,
+      "bytes": 267297,
+      "raw32_windows_per_direction": 250557,
+      "first_payload_id": 11393,
+      "last_payload_id": 11932,
+      "ordered_ids_and_sha256": "30e2ad4a602f3757901a962989fd826ac3b5ecb6b19030c8b1d8f9a7b347bf0c",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 22,
+      "payloads": 516,
+      "bytes": 266651,
+      "raw32_windows_per_direction": 250655,
+      "first_payload_id": 11933,
+      "last_payload_id": 12448,
+      "ordered_ids_and_sha256": "a241f0e0be9129852e80f1e6430619240c25caa5a19864bb8635ec4b799981f0",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 23,
+      "payloads": 529,
+      "bytes": 266429,
+      "raw32_windows_per_direction": 250030,
+      "first_payload_id": 12449,
+      "last_payload_id": 12977,
+      "ordered_ids_and_sha256": "66f9556f34e1e804a5e073b5c93a756aef104497f63473663cc3e6cc78599be3",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 24,
+      "payloads": 618,
+      "bytes": 269717,
+      "raw32_windows_per_direction": 250559,
+      "first_payload_id": 12978,
+      "last_payload_id": 13595,
+      "ordered_ids_and_sha256": "58a91f27c34934ca69a60787dfc943ecdf6f733909ef77e789f000d41647c16e",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 25,
+      "payloads": 559,
+      "bytes": 267549,
+      "raw32_windows_per_direction": 250220,
+      "first_payload_id": 13596,
+      "last_payload_id": 14154,
+      "ordered_ids_and_sha256": "cf6cf65fd444625c299c03a572e965e653e0e9d148098e2ea3007db36eb79cbc",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 26,
+      "payloads": 555,
+      "bytes": 267235,
+      "raw32_windows_per_direction": 250030,
+      "first_payload_id": 14155,
+      "last_payload_id": 14709,
+      "ordered_ids_and_sha256": "3d0b794f2693d00fd0cd2da758d2c97a98fef5c316e0aac2732890bd29c6e0b4",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 27,
+      "payloads": 555,
+      "bytes": 267235,
+      "raw32_windows_per_direction": 250030,
+      "first_payload_id": 14710,
+      "last_payload_id": 15264,
+      "ordered_ids_and_sha256": "96d26759795979313f2dee7d59635bac4915d1465f1d86c3cbf12737adadc456",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 28,
+      "payloads": 547,
+      "bytes": 267852,
+      "raw32_windows_per_direction": 250895,
+      "first_payload_id": 15265,
+      "last_payload_id": 15811,
+      "ordered_ids_and_sha256": "4383b389451af6d3a904b11321cfdcb8b06f23e09a424885e9f7f2c2af50d0ca",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 29,
+      "payloads": 553,
+      "bytes": 268325,
+      "raw32_windows_per_direction": 251182,
+      "first_payload_id": 15812,
+      "last_payload_id": 16364,
+      "ordered_ids_and_sha256": "73460cf0f3d8c197f3148b14da2d36ac26e5175ba48c67d52c13c53b7a0b401e",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 30,
+      "payloads": 587,
+      "bytes": 268515,
+      "raw32_windows_per_direction": 250318,
+      "first_payload_id": 16365,
+      "last_payload_id": 16951,
+      "ordered_ids_and_sha256": "c69c45c61bd089ac3a15d897f49bb50bb22ee7274677bb4281edcd78d1ece61c",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 31,
+      "payloads": 538,
+      "bytes": 267139,
+      "raw32_windows_per_direction": 250461,
+      "first_payload_id": 16952,
+      "last_payload_id": 17489,
+      "ordered_ids_and_sha256": "9692d3e4389e21094320665f99b0e942787898e424a88911e68b115c8c2176e0",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 32,
+      "payloads": 567,
+      "bytes": 268183,
+      "raw32_windows_per_direction": 250606,
+      "first_payload_id": 17490,
+      "last_payload_id": 18056,
+      "ordered_ids_and_sha256": "f6eddb62484cd78e63eede6ed5d15765472f76b4b6e694a86a2771d3ed65e631",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 33,
+      "payloads": 541,
+      "bytes": 267377,
+      "raw32_windows_per_direction": 250606,
+      "first_payload_id": 18057,
+      "last_payload_id": 18597,
+      "ordered_ids_and_sha256": "cdf7556af601263919f56d187e21f5ff46bdb83f70344163266a6a4e5ae1bb15",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 34,
+      "payloads": 563,
+      "bytes": 267868,
+      "raw32_windows_per_direction": 250415,
+      "first_payload_id": 18598,
+      "last_payload_id": 19160,
+      "ordered_ids_and_sha256": "2abcaf9e8d1d7d5e18d91919bbef20052747d49ac948496fa973e5ef5a237855",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 35,
+      "payloads": 568,
+      "bytes": 268262,
+      "raw32_windows_per_direction": 250654,
+      "first_payload_id": 19161,
+      "last_payload_id": 19728,
+      "ordered_ids_and_sha256": "534ceace1e6dc36515d5345f73461d42b9018ae314dd2c3b9545ee29a59d9d5a",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 36,
+      "payloads": 547,
+      "bytes": 267849,
+      "raw32_windows_per_direction": 250892,
+      "first_payload_id": 19729,
+      "last_payload_id": 20275,
+      "ordered_ids_and_sha256": "cd190ded3c530845dbb861f298565f571e00ea11de30e3c9be1ea1b2b33671b2",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 37,
+      "payloads": 507,
+      "bytes": 265940,
+      "raw32_windows_per_direction": 250223,
+      "first_payload_id": 20276,
+      "last_payload_id": 20782,
+      "ordered_ids_and_sha256": "e6930b4c55660073179eb8dc4e9f478b965993456e9e6dfeaeeefdf8d9e6aeac",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 38,
+      "payloads": 565,
+      "bytes": 268025,
+      "raw32_windows_per_direction": 250510,
+      "first_payload_id": 20783,
+      "last_payload_id": 21347,
+      "ordered_ids_and_sha256": "80d138c16d1bc58d84a88ca24cd4d3b13245c10171a45094d21bd0ce1307168e",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 39,
+      "payloads": 533,
+      "bytes": 266741,
+      "raw32_windows_per_direction": 250218,
+      "first_payload_id": 21348,
+      "last_payload_id": 21880,
+      "ordered_ids_and_sha256": "6b51bce560c035bf15c43fa7d5b32ba5af69545442cfd065e6bfcf45c1513e29",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 40,
+      "payloads": 540,
+      "bytes": 267297,
+      "raw32_windows_per_direction": 250557,
+      "first_payload_id": 21881,
+      "last_payload_id": 22420,
+      "ordered_ids_and_sha256": "ec2c9bc0762e09c72af6b091bf95411ec95f049f8f9d4ebbe2f8054a817b0e97",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 41,
+      "payloads": 568,
+      "bytes": 268262,
+      "raw32_windows_per_direction": 250654,
+      "first_payload_id": 22421,
+      "last_payload_id": 22988,
+      "ordered_ids_and_sha256": "01d95c57c960fcd6f41df7c7d5b0a071d9f4eec2c4f01a3470639a78f78097f8",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 42,
+      "payloads": 503,
+      "bytes": 265625,
+      "raw32_windows_per_direction": 250032,
+      "first_payload_id": 22989,
+      "last_payload_id": 23491,
+      "ordered_ids_and_sha256": "7e507a41ae0e6f2e31c9eb4338387a8634bf63661f99155442a5cc1337880a24",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 43,
+      "payloads": 500,
+      "bytes": 266633,
+      "raw32_windows_per_direction": 251133,
+      "first_payload_id": 23492,
+      "last_payload_id": 23991,
+      "ordered_ids_and_sha256": "48d5a07a5558526eab65d8e7a12fa13022597b922fd4b076cde2f5aa557b2fba",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 44,
+      "payloads": 628,
+      "bytes": 270092,
+      "raw32_windows_per_direction": 250624,
+      "first_payload_id": 23992,
+      "last_payload_id": 24619,
+      "ordered_ids_and_sha256": "417dfe89ae60fe8b0abd89d0d888dff523c96e7eaab28e4337eb0ea017f375bb",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 45,
+      "payloads": 528,
+      "bytes": 267600,
+      "raw32_windows_per_direction": 251232,
+      "first_payload_id": 24620,
+      "last_payload_id": 25147,
+      "ordered_ids_and_sha256": "06b1c6b6bfe243c3acc89ebe11eb4a51cc107a3fc499c0bfac97545c95c8a02c",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 46,
+      "payloads": 527,
+      "bytes": 267520,
+      "raw32_windows_per_direction": 251183,
+      "first_payload_id": 25148,
+      "last_payload_id": 25674,
+      "ordered_ids_and_sha256": "1b5a3fa21f5b5d0f78a69cc4d7070acea28f8eb132b9d196a070c4fb73c96404",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 47,
+      "payloads": 579,
+      "bytes": 269132,
+      "raw32_windows_per_direction": 251183,
+      "first_payload_id": 25675,
+      "last_payload_id": 26253,
+      "ordered_ids_and_sha256": "1d03e384543a21e19c9f29cba7f6bb5651867e33c85e4b294d44eede549fa4f6",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 48,
+      "payloads": 503,
+      "bytes": 266873,
+      "raw32_windows_per_direction": 251280,
+      "first_payload_id": 26254,
+      "last_payload_id": 26756,
+      "ordered_ids_and_sha256": "1dbb26b19f535e72035698b7b55cbe4e859f19f35f6a5c08a14091610cb1920a",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 49,
+      "payloads": 738,
+      "bytes": 272968,
+      "raw32_windows_per_direction": 250138,
+      "first_payload_id": 26757,
+      "last_payload_id": 27494,
+      "ordered_ids_and_sha256": "30cf30f7f6f0172565ac2ffc9739b6f78a53bfeba588be30606bced46b41f08a",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 1,
+        "wif-uncompressed": 1,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 2,
+      "hits": 0
+    },
+    {
+      "batch_id": 50,
+      "payloads": 519,
+      "bytes": 266774,
+      "raw32_windows_per_direction": 250700,
+      "first_payload_id": 27495,
+      "last_payload_id": 28013,
+      "ordered_ids_and_sha256": "ab251367c856975394e5765da837ed6150c347dd8a857840d7d11757c9476e22",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 51,
+      "payloads": 766,
+      "bytes": 273844,
+      "raw32_windows_per_direction": 250098,
+      "first_payload_id": 28014,
+      "last_payload_id": 28779,
+      "ordered_ids_and_sha256": "e458a477fcfaa12c4bc743f32d8f577b99cf359ea83dcf6c8861f662bb2af687",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 102,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 102,
+      "hits": 0
+    },
+    {
+      "batch_id": 52,
+      "payloads": 578,
+      "bytes": 269053,
+      "raw32_windows_per_direction": 251135,
+      "first_payload_id": 28780,
+      "last_payload_id": 29357,
+      "ordered_ids_and_sha256": "0e8486ed97a78f38d8131d30ab60536cff58028495c9723d16a3f4849fd659a6",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 53,
+      "payloads": 1034,
+      "bytes": 282129,
+      "raw32_windows_per_direction": 250075,
+      "first_payload_id": 29358,
+      "last_payload_id": 30391,
+      "ordered_ids_and_sha256": "5872e44acd46c50cc9ff0df5410f6e05123bf2e78d5b82dbfdb6ebbc182e5b95",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 54,
+      "payloads": 568,
+      "bytes": 268259,
+      "raw32_windows_per_direction": 250651,
+      "first_payload_id": 30392,
+      "last_payload_id": 30959,
+      "ordered_ids_and_sha256": "b6c7a5f286db5541c9b4e91447d23e1d91414e19b0d82d39cf147ac42dcf4960",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 55,
+      "payloads": 544,
+      "bytes": 267611,
+      "raw32_windows_per_direction": 250747,
+      "first_payload_id": 30960,
+      "last_payload_id": 31503,
+      "ordered_ids_and_sha256": "8d3e5531dbc72677bbf7f777d88508e37d5d00919fbc3cee0cd85feaab962830",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 56,
+      "payloads": 595,
+      "bytes": 269146,
+      "raw32_windows_per_direction": 250701,
+      "first_payload_id": 31504,
+      "last_payload_id": 32098,
+      "ordered_ids_and_sha256": "4c60c426ddaf9e4956058025668f433f9ca15d73e6712743eeeb9dd082a905f9",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 57,
+      "payloads": 575,
+      "bytes": 268815,
+      "raw32_windows_per_direction": 250990,
+      "first_payload_id": 32099,
+      "last_payload_id": 32673,
+      "ordered_ids_and_sha256": "88275d55f2e1fbfa3994b7717dcd1cee6200ab497781b132893a9563e0639184",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 58,
+      "payloads": 546,
+      "bytes": 267769,
+      "raw32_windows_per_direction": 250843,
+      "first_payload_id": 32674,
+      "last_payload_id": 33219,
+      "ordered_ids_and_sha256": "b0f39dabbfffb20c64fbde68f91adb1f0d602bfe7637f35d2b60a95abd6095fe",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 59,
+      "payloads": 589,
+      "bytes": 268674,
+      "raw32_windows_per_direction": 250415,
+      "first_payload_id": 33220,
+      "last_payload_id": 33808,
+      "ordered_ids_and_sha256": "98a4eda945fe926b903f701c53afa82b8a1e694fb5860073b81a06168ed59756",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 60,
+      "payloads": 526,
+      "bytes": 267442,
+      "raw32_windows_per_direction": 251136,
+      "first_payload_id": 33809,
+      "last_payload_id": 34334,
+      "ordered_ids_and_sha256": "2bdf3ed1f4a6239ec0e182fea3ae81558213fde7232bf52630ae5142cd63d2d4",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 61,
+      "payloads": 542,
+      "bytes": 267455,
+      "raw32_windows_per_direction": 250653,
+      "first_payload_id": 34335,
+      "last_payload_id": 34876,
+      "ordered_ids_and_sha256": "f8142c60851d2bcadb56d313cd0627a7b1b830438ff4664638ca0db2cda2b16c",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 62,
+      "payloads": 581,
+      "bytes": 268041,
+      "raw32_windows_per_direction": 250030,
+      "first_payload_id": 34877,
+      "last_payload_id": 35457,
+      "ordered_ids_and_sha256": "210b60aa9a0d977690042731257cb63fd4365c43e1f6914bd61244d0dc8b4acb",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 63,
+      "payloads": 567,
+      "bytes": 267653,
+      "raw32_windows_per_direction": 250076,
+      "first_payload_id": 35458,
+      "last_payload_id": 36024,
+      "ordered_ids_and_sha256": "6151569bd7605f6bc641166eeab4a4c71418ed36cb15f16c51e629627a77f004",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 64,
+      "payloads": 565,
+      "bytes": 268024,
+      "raw32_windows_per_direction": 250509,
+      "first_payload_id": 36025,
+      "last_payload_id": 36589,
+      "ordered_ids_and_sha256": "fb87373102e6d28f51de5c18acf9e5f12ad365b1b2a067f932be5ec2afc8fa6d",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 65,
+      "payloads": 551,
+      "bytes": 268166,
+      "raw32_windows_per_direction": 251085,
+      "first_payload_id": 36590,
+      "last_payload_id": 37140,
+      "ordered_ids_and_sha256": "5b4f9217fec395730fa58fe2e9fa28f12f6e758713cbc721a79278ed4ecff81d",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 66,
+      "payloads": 546,
+      "bytes": 267771,
+      "raw32_windows_per_direction": 250845,
+      "first_payload_id": 37141,
+      "last_payload_id": 37686,
+      "ordered_ids_and_sha256": "07e147abe3169c66c9f9a5fec93181dda58c56b22e3fa3283173163270fb34c6",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 67,
+      "payloads": 565,
+      "bytes": 268026,
+      "raw32_windows_per_direction": 250511,
+      "first_payload_id": 37687,
+      "last_payload_id": 38251,
+      "ordered_ids_and_sha256": "ccda2fdb80071e51736d959e399f2aba20b133806a703519ded1a13c16c6b39f",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 68,
+      "payloads": 554,
+      "bytes": 268401,
+      "raw32_windows_per_direction": 251227,
+      "first_payload_id": 38252,
+      "last_payload_id": 38805,
+      "ordered_ids_and_sha256": "00770d66b1c919a73e3f4121c6250c3cdd07f2cbd21bb1c57aeb0bbcdf621d57",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 69,
+      "payloads": 531,
+      "bytes": 266587,
+      "raw32_windows_per_direction": 250126,
+      "first_payload_id": 38806,
+      "last_payload_id": 39336,
+      "ordered_ids_and_sha256": "0ff3059d9772e09df3ee64716d962c6694fe53f1c340edd7163cd766eac8761d",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 70,
+      "payloads": 541,
+      "bytes": 267376,
+      "raw32_windows_per_direction": 250605,
+      "first_payload_id": 39337,
+      "last_payload_id": 39877,
+      "ordered_ids_and_sha256": "a1ef1a47d832f71c6e25fb1e42a07f321c61afb8ccb4590b93cbe31f7c9358ce",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 71,
+      "payloads": 545,
+      "bytes": 267695,
+      "raw32_windows_per_direction": 250800,
+      "first_payload_id": 39878,
+      "last_payload_id": 40422,
+      "ordered_ids_and_sha256": "76e042233bb14042100dbb60e29663f555cf329a4c4b721c19dc72fc7c2384e9",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 72,
+      "payloads": 524,
+      "bytes": 267280,
+      "raw32_windows_per_direction": 251036,
+      "first_payload_id": 40423,
+      "last_payload_id": 40946,
+      "ordered_ids_and_sha256": "5e343d923255c1e055e4753aa914b59c18ae3efe8a13b2fbcedd38346f107a76",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 73,
+      "payloads": 529,
+      "bytes": 267678,
+      "raw32_windows_per_direction": 251279,
+      "first_payload_id": 40947,
+      "last_payload_id": 41475,
+      "ordered_ids_and_sha256": "c71c4a28cd2301b280d858ed6d6d18c7a6b0c76c2baa2e46979b2d2d9ec1eaa2",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 74,
+      "payloads": 580,
+      "bytes": 269211,
+      "raw32_windows_per_direction": 251231,
+      "first_payload_id": 41476,
+      "last_payload_id": 42055,
+      "ordered_ids_and_sha256": "0cc583f89237666bfdc060ad44601444cf33a8b40e8a32978df6ba400355045a",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 75,
+      "payloads": 545,
+      "bytes": 267692,
+      "raw32_windows_per_direction": 250797,
+      "first_payload_id": 42056,
+      "last_payload_id": 42600,
+      "ordered_ids_and_sha256": "57a33eb3ba8eeca98042d136a48dce3a69b844d3770f92581fc27b4ea2c8b28a",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 76,
+      "payloads": 547,
+      "bytes": 267849,
+      "raw32_windows_per_direction": 250892,
+      "first_payload_id": 42601,
+      "last_payload_id": 43147,
+      "ordered_ids_and_sha256": "b5c0916c4eaaa349d98516793b3e387e9a7d01cb6014114c8c15797200e077c5",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 77,
+      "payloads": 2488,
+      "bytes": 327175,
+      "raw32_windows_per_direction": 250047,
+      "first_payload_id": 43148,
+      "last_payload_id": 45635,
+      "ordered_ids_and_sha256": "ec87c01276c319ce986c2a8132a12f8487019322dc777b08833092324c7d5efc",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 78,
+      "payloads": 5819,
+      "bytes": 430389,
+      "raw32_windows_per_direction": 250000,
+      "first_payload_id": 45636,
+      "last_payload_id": 51454,
+      "ordered_ids_and_sha256": "c1f38b786c08cfae4bf8f432a69e7fec18b84ec61de85a3e7dd3ac7be6065532",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 79,
+      "payloads": 5814,
+      "bytes": 430234,
+      "raw32_windows_per_direction": 250000,
+      "first_payload_id": 51455,
+      "last_payload_id": 57268,
+      "ordered_ids_and_sha256": "817bbec78056f0874effefb7582f9182c959a9c007c8d67769c3e878d6a321d4",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 80,
+      "payloads": 5807,
+      "bytes": 430032,
+      "raw32_windows_per_direction": 250015,
+      "first_payload_id": 57269,
+      "last_payload_id": 63075,
+      "ordered_ids_and_sha256": "59f6eb592e7c4a3af6f5d60e18ef0beb1953e39268989aa05219967263ae5700",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 81,
+      "payloads": 5838,
+      "bytes": 430994,
+      "raw32_windows_per_direction": 250016,
+      "first_payload_id": 63076,
+      "last_payload_id": 68913,
+      "ordered_ids_and_sha256": "7c680044982a5521fcb74c6cbfaf08845d6b645b3271967dbad5b1bd0e065db3",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 82,
+      "payloads": 5807,
+      "bytes": 430055,
+      "raw32_windows_per_direction": 250038,
+      "first_payload_id": 68914,
+      "last_payload_id": 74720,
+      "ordered_ids_and_sha256": "83763fc6e97bf1b9863077b8c6fdb6dfbf9e00755660b51be562849141bd0563",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 83,
+      "payloads": 5827,
+      "bytes": 430666,
+      "raw32_windows_per_direction": 250029,
+      "first_payload_id": 74721,
+      "last_payload_id": 80547,
+      "ordered_ids_and_sha256": "c1c3980728f311984dfc69e8f2458d62d83aeab57ad38b90c467f508886e73c8",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 84,
+      "payloads": 5811,
+      "bytes": 430167,
+      "raw32_windows_per_direction": 250026,
+      "first_payload_id": 80548,
+      "last_payload_id": 86358,
+      "ordered_ids_and_sha256": "b0d3f49857348bf12b28b1c33167726b4c92a232d7c93fb45a50173b214bde0a",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 85,
+      "payloads": 5802,
+      "bytes": 429883,
+      "raw32_windows_per_direction": 250021,
+      "first_payload_id": 86359,
+      "last_payload_id": 92160,
+      "ordered_ids_and_sha256": "5d5b651a9e31376bcade7eecfe53c47d8583f033ae5861aebb0f7ddf9e73c889",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 86,
+      "payloads": 5830,
+      "bytes": 430767,
+      "raw32_windows_per_direction": 250037,
+      "first_payload_id": 92161,
+      "last_payload_id": 97990,
+      "ordered_ids_and_sha256": "25798eb582a830a3e212b06958eee1505732e17f55ddea1bb402040d85ae9e00",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 87,
+      "payloads": 5807,
+      "bytes": 430040,
+      "raw32_windows_per_direction": 250023,
+      "first_payload_id": 97991,
+      "last_payload_id": 103797,
+      "ordered_ids_and_sha256": "0b7b43ecfbe14877575c84dac11551cedfec0378881e23c0df6012cc5833bfa1",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 88,
+      "payloads": 5830,
+      "bytes": 430739,
+      "raw32_windows_per_direction": 250009,
+      "first_payload_id": 103798,
+      "last_payload_id": 109627,
+      "ordered_ids_and_sha256": "08671edfef40d2435a2d9d7663561c0c8d30e6d65c61d555678ec9ed195124a4",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 89,
+      "payloads": 5796,
+      "bytes": 429693,
+      "raw32_windows_per_direction": 250017,
+      "first_payload_id": 109628,
+      "last_payload_id": 115423,
+      "ordered_ids_and_sha256": "5dab5a754ddf2921779eedf548bee1deda3f3d178976bcb328d38456031b8730",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 90,
+      "payloads": 5809,
+      "bytes": 430112,
+      "raw32_windows_per_direction": 250033,
+      "first_payload_id": 115424,
+      "last_payload_id": 121232,
+      "ordered_ids_and_sha256": "ecd44464b542827a2ee161c1bb2af81578e9155011495ff224204567f9947e35",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 91,
+      "payloads": 5833,
+      "bytes": 430823,
+      "raw32_windows_per_direction": 250000,
+      "first_payload_id": 121233,
+      "last_payload_id": 127065,
+      "ordered_ids_and_sha256": "aba40ef77005dedfd89dcef4dbc1c12bed6d6e6aab8d6f19c46a6cb856abf3f3",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 92,
+      "payloads": 5816,
+      "bytes": 430302,
+      "raw32_windows_per_direction": 250006,
+      "first_payload_id": 127066,
+      "last_payload_id": 132881,
+      "ordered_ids_and_sha256": "2d0d8d5a61db7b053b8c98cd30b39815cf2f2d9bb459e3cefa2ff3e78cda7497",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 93,
+      "payloads": 5804,
+      "bytes": 429926,
+      "raw32_windows_per_direction": 250002,
+      "first_payload_id": 132882,
+      "last_payload_id": 138685,
+      "ordered_ids_and_sha256": "16affdc06069dfb697cc05d7ec065edb7951f86fef32f73446c08fd41af2f1d0",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 94,
+      "payloads": 5835,
+      "bytes": 430909,
+      "raw32_windows_per_direction": 250024,
+      "first_payload_id": 138686,
+      "last_payload_id": 144520,
+      "ordered_ids_and_sha256": "35c209d7e408aba8824bbb96c5c1a3282fc3c31be2ad1e35e886d858dd4f8464",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 95,
+      "payloads": 5839,
+      "bytes": 431056,
+      "raw32_windows_per_direction": 250047,
+      "first_payload_id": 144521,
+      "last_payload_id": 150359,
+      "ordered_ids_and_sha256": "83ba10a3ca0442ec50b567cb913ba5553053d0a95b6337ed775e357ac0f717b4",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 96,
+      "payloads": 5807,
+      "bytes": 430040,
+      "raw32_windows_per_direction": 250023,
+      "first_payload_id": 150360,
+      "last_payload_id": 156166,
+      "ordered_ids_and_sha256": "b34ad81eda464189d39303b8a472e11a691e75df4ce5b3d44a43a50edbae824b",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 97,
+      "payloads": 5816,
+      "bytes": 430322,
+      "raw32_windows_per_direction": 250026,
+      "first_payload_id": 156167,
+      "last_payload_id": 161982,
+      "ordered_ids_and_sha256": "094df1b13c1749b1b395a19b7aaa92336b0b604dc0afc8e4f1f6805cf495fc0e",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 98,
+      "payloads": 5831,
+      "bytes": 430796,
+      "raw32_windows_per_direction": 250035,
+      "first_payload_id": 161983,
+      "last_payload_id": 167813,
+      "ordered_ids_and_sha256": "8d818af5d66db9e0362eba3602a1f0894f02775f2749327898215d5be308c9a7",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 99,
+      "payloads": 5795,
+      "bytes": 429671,
+      "raw32_windows_per_direction": 250026,
+      "first_payload_id": 167814,
+      "last_payload_id": 173608,
+      "ordered_ids_and_sha256": "ab7aea0850e453152a33278439037d33c898ca3eb9f5b3c7cf3e241fafe3a2dc",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 100,
+      "payloads": 5810,
+      "bytes": 430129,
+      "raw32_windows_per_direction": 250019,
+      "first_payload_id": 173609,
+      "last_payload_id": 179418,
+      "ordered_ids_and_sha256": "87af0fec0f9516ebf3a9dd20204063991ea9a3fceb2f9c79f6ab93f4773eba4e",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 101,
+      "payloads": 5801,
+      "bytes": 429855,
+      "raw32_windows_per_direction": 250024,
+      "first_payload_id": 179419,
+      "last_payload_id": 185219,
+      "ordered_ids_and_sha256": "323f30a8de2bcd42bf27baa69cefee6b2b4e7629285c926a13eb28415907a9b4",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 102,
+      "payloads": 5817,
+      "bytes": 430350,
+      "raw32_windows_per_direction": 250023,
+      "first_payload_id": 185220,
+      "last_payload_id": 191036,
+      "ordered_ids_and_sha256": "190b6a4b47f70741ca3ad3acb6fedf8ccbd0de807fb45fd86af657bd229e04b1",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 103,
+      "payloads": 5815,
+      "bytes": 430274,
+      "raw32_windows_per_direction": 250009,
+      "first_payload_id": 191037,
+      "last_payload_id": 196851,
+      "ordered_ids_and_sha256": "80f36cfc4915f37583975881bec70794378b9f99ecdb28afd8cdae449550e55d",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 104,
+      "payloads": 5808,
+      "bytes": 430072,
+      "raw32_windows_per_direction": 250024,
+      "first_payload_id": 196852,
+      "last_payload_id": 202659,
+      "ordered_ids_and_sha256": "22922c0042380d821da740dd9cf7bb8fae56a8ec90296ea2fb1848d543623f37",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 105,
+      "payloads": 5802,
+      "bytes": 429870,
+      "raw32_windows_per_direction": 250008,
+      "first_payload_id": 202660,
+      "last_payload_id": 208461,
+      "ordered_ids_and_sha256": "8ce5b26bfd367c17e74f97bde127da1eb5829922d99d10ed4b4245c0a941f4ed",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 106,
+      "payloads": 5818,
+      "bytes": 430358,
+      "raw32_windows_per_direction": 250000,
+      "first_payload_id": 208462,
+      "last_payload_id": 214279,
+      "ordered_ids_and_sha256": "60e51b0f2d1c7a4a80e13f5136e455bf5a544b6eef879f39fff7957f759e052c",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 107,
+      "payloads": 5826,
+      "bytes": 430631,
+      "raw32_windows_per_direction": 250025,
+      "first_payload_id": 214280,
+      "last_payload_id": 220105,
+      "ordered_ids_and_sha256": "34f76ec9b648ff310aeca88f2672534c439675fd7c21752c8148977efde17302",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 108,
+      "payloads": 5852,
+      "bytes": 431439,
+      "raw32_windows_per_direction": 250027,
+      "first_payload_id": 220106,
+      "last_payload_id": 225957,
+      "ordered_ids_and_sha256": "7206b055e895247c402fc1aeb1b9ca1a93548f7c6c84976ab6104db76045dfb1",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 109,
+      "payloads": 5794,
+      "bytes": 429628,
+      "raw32_windows_per_direction": 250014,
+      "first_payload_id": 225958,
+      "last_payload_id": 231751,
+      "ordered_ids_and_sha256": "3e14f3a00da6ed379df0277d8849f9c8ab717fdef9e595ae9eb306db5dfce1a5",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 110,
+      "payloads": 5784,
+      "bytes": 429309,
+      "raw32_windows_per_direction": 250005,
+      "first_payload_id": 231752,
+      "last_payload_id": 237535,
+      "ordered_ids_and_sha256": "9e792926458beab87e4779a31f18c4e55fee0bd519012e2c33d0a0204c006176",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 111,
+      "payloads": 5837,
+      "bytes": 430984,
+      "raw32_windows_per_direction": 250037,
+      "first_payload_id": 237536,
+      "last_payload_id": 243372,
+      "ordered_ids_and_sha256": "a22aa92febb6ff6537ea20b74f5264ac58710526d7d07ff20097a5a40dd0d3eb",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 112,
+      "payloads": 5811,
+      "bytes": 430176,
+      "raw32_windows_per_direction": 250035,
+      "first_payload_id": 243373,
+      "last_payload_id": 249183,
+      "ordered_ids_and_sha256": "6f02c840e78f3bbadeda104f2407a2ee9b5145544830fe41d5fd4c5963fb1f69",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 113,
+      "payloads": 5811,
+      "bytes": 430149,
+      "raw32_windows_per_direction": 250008,
+      "first_payload_id": 249184,
+      "last_payload_id": 254994,
+      "ordered_ids_and_sha256": "fe457bc1951063556987bcffdddbf4ae1a5952832f1cc177851230cfc358f9ea",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 114,
+      "payloads": 5814,
+      "bytes": 430256,
+      "raw32_windows_per_direction": 250022,
+      "first_payload_id": 254995,
+      "last_payload_id": 260808,
+      "ordered_ids_and_sha256": "d055be5040e5a5cc140fce0254decb4cd67f392e1f03dc985788ed679ed08e50",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 115,
+      "payloads": 5808,
+      "bytes": 430051,
+      "raw32_windows_per_direction": 250003,
+      "first_payload_id": 260809,
+      "last_payload_id": 266616,
+      "ordered_ids_and_sha256": "fb55213aa57c8df6934d922a18a55fa7f7f2b7116903a9764fe8ad12f52b5dea",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 116,
+      "payloads": 5807,
+      "bytes": 430033,
+      "raw32_windows_per_direction": 250016,
+      "first_payload_id": 266617,
+      "last_payload_id": 272423,
+      "ordered_ids_and_sha256": "292eaefa66ab9fbd243b4f06d043a52cc6034101e00a528620574e557cd34e27",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 117,
+      "payloads": 5811,
+      "bytes": 430154,
+      "raw32_windows_per_direction": 250013,
+      "first_payload_id": 272424,
+      "last_payload_id": 278234,
+      "ordered_ids_and_sha256": "92044851da52ebd1f4237f539b2b5b461d643be6a5fcd703262ab93eb87a25f3",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 118,
+      "payloads": 5817,
+      "bytes": 430354,
+      "raw32_windows_per_direction": 250027,
+      "first_payload_id": 278235,
+      "last_payload_id": 284051,
+      "ordered_ids_and_sha256": "28ca91228e2349ae71cea66cce1e64760e0b5b82f8d3404b7cfcdae6942072d0",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 119,
+      "payloads": 5821,
+      "bytes": 430465,
+      "raw32_windows_per_direction": 250014,
+      "first_payload_id": 284052,
+      "last_payload_id": 289872,
+      "ordered_ids_and_sha256": "3bd2ac71dccb7e514c0d50298869800e7d846681f8b685392f4dc23ebb7d64f3",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 120,
+      "payloads": 5819,
+      "bytes": 430418,
+      "raw32_windows_per_direction": 250029,
+      "first_payload_id": 289873,
+      "last_payload_id": 295691,
+      "ordered_ids_and_sha256": "cde8d639faa3c99b73d89757233466d5c73ad2327124fb7aa973ec6ad40fabeb",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 121,
+      "payloads": 5812,
+      "bytes": 430185,
+      "raw32_windows_per_direction": 250013,
+      "first_payload_id": 295692,
+      "last_payload_id": 301503,
+      "ordered_ids_and_sha256": "3b75f8ca950855ea075872716958ab9ceacbd61f309a9d8a68d9e48d3f30636c",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 122,
+      "payloads": 5799,
+      "bytes": 429787,
+      "raw32_windows_per_direction": 250018,
+      "first_payload_id": 301504,
+      "last_payload_id": 307302,
+      "ordered_ids_and_sha256": "abc58b113b46ccfcd546f186c3b71d15b41e77152c0ee420c1cb26ce4779f6ad",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 123,
+      "payloads": 5814,
+      "bytes": 430236,
+      "raw32_windows_per_direction": 250002,
+      "first_payload_id": 307303,
+      "last_payload_id": 313116,
+      "ordered_ids_and_sha256": "bbabd24df4b46eb1c236220a91322b90c3da1301126fde23b2f23364a5b2552c",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 124,
+      "payloads": 5820,
+      "bytes": 430422,
+      "raw32_windows_per_direction": 250002,
+      "first_payload_id": 313117,
+      "last_payload_id": 318936,
+      "ordered_ids_and_sha256": "ddfa234d67768862ed60eeb8dacf363730e8cedcfb7adfe8800fc02d001ec9f7",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 125,
+      "payloads": 5819,
+      "bytes": 430435,
+      "raw32_windows_per_direction": 250046,
+      "first_payload_id": 318937,
+      "last_payload_id": 324755,
+      "ordered_ids_and_sha256": "0b84f37bcedce58fa9e8b9347be3d9dc792dcd5aee5aa0e1857453849c026a18",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 126,
+      "payloads": 5824,
+      "bytes": 430566,
+      "raw32_windows_per_direction": 250022,
+      "first_payload_id": 324756,
+      "last_payload_id": 330579,
+      "ordered_ids_and_sha256": "53ccd51166908abfca924922809f0db712a5e3d14c0a8c36fbd60d7c5a687c5f",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 127,
+      "payloads": 5814,
+      "bytes": 430256,
+      "raw32_windows_per_direction": 250022,
+      "first_payload_id": 330580,
+      "last_payload_id": 336393,
+      "ordered_ids_and_sha256": "8f89235ef6f58669f11a0c3958f679e16b559c18ca07a5949a37e82aa9af1096",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 128,
+      "payloads": 5813,
+      "bytes": 430227,
+      "raw32_windows_per_direction": 250024,
+      "first_payload_id": 336394,
+      "last_payload_id": 342206,
+      "ordered_ids_and_sha256": "66ec1d77987593ba8a678ddde94c04d40ce5b1cb9d7604a58d44376c734a9dca",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 129,
+      "payloads": 5807,
+      "bytes": 430059,
+      "raw32_windows_per_direction": 250042,
+      "first_payload_id": 342207,
+      "last_payload_id": 348013,
+      "ordered_ids_and_sha256": "829d48e3dd77861d32481a8d83f032e6e9c21e82b0e25f23483dc4dc92a80328",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 130,
+      "payloads": 5831,
+      "bytes": 430796,
+      "raw32_windows_per_direction": 250035,
+      "first_payload_id": 348014,
+      "last_payload_id": 353844,
+      "ordered_ids_and_sha256": "8243934a7e2ccb2bb8295c956bd7f5e40f13d2d6f0db04f12aa7e1e60a3948c6",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 131,
+      "payloads": 5820,
+      "bytes": 430434,
+      "raw32_windows_per_direction": 250014,
+      "first_payload_id": 353845,
+      "last_payload_id": 359664,
+      "ordered_ids_and_sha256": "cb291ce8e535c3b1b2db2de3302784341b5c0f7710b11b1c323a819481caa575",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 132,
+      "payloads": 5824,
+      "bytes": 430579,
+      "raw32_windows_per_direction": 250035,
+      "first_payload_id": 359665,
+      "last_payload_id": 365488,
+      "ordered_ids_and_sha256": "761be6787b1daeb094fb87a51223243a6a36582d82ec50ff03f08cbcf466c1fd",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 133,
+      "payloads": 5826,
+      "bytes": 430622,
+      "raw32_windows_per_direction": 250016,
+      "first_payload_id": 365489,
+      "last_payload_id": 371314,
+      "ordered_ids_and_sha256": "0ed99dad9c6057e8f46fc2f1b1266f8749486788e5d39c8495b5020177129cb7",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 134,
+      "payloads": 5805,
+      "bytes": 429995,
+      "raw32_windows_per_direction": 250040,
+      "first_payload_id": 371315,
+      "last_payload_id": 377119,
+      "ordered_ids_and_sha256": "1d6f7569955c161b438b7f789b3cbf79c0ece911975c4033ae07a739c8904288",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 135,
+      "payloads": 5818,
+      "bytes": 430358,
+      "raw32_windows_per_direction": 250000,
+      "first_payload_id": 377120,
+      "last_payload_id": 382937,
+      "ordered_ids_and_sha256": "0d2dee8ed5db5767ce81b7cbc3b5e881eca1bb60551638a9a4edf9f1b2f20d2e",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 136,
+      "payloads": 5800,
+      "bytes": 429824,
+      "raw32_windows_per_direction": 250024,
+      "first_payload_id": 382938,
+      "last_payload_id": 388737,
+      "ordered_ids_and_sha256": "cf2e71f4b598fac929929f7b650abd84a722bcd3720b5757c27cd227555762f5",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 137,
+      "payloads": 5819,
+      "bytes": 430389,
+      "raw32_windows_per_direction": 250000,
+      "first_payload_id": 388738,
+      "last_payload_id": 394556,
+      "ordered_ids_and_sha256": "c02ea688fe7f1c3b3cc7be93b7cd469731b8d69a265aebb788bc73b32e1a9259",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 138,
+      "payloads": 5824,
+      "bytes": 430591,
+      "raw32_windows_per_direction": 250047,
+      "first_payload_id": 394557,
+      "last_payload_id": 400380,
+      "ordered_ids_and_sha256": "645a56b0dc58c82b6d1d7d26aaf4b74392ac05b3c940709571a4ba605cd8c508",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 139,
+      "payloads": 5804,
+      "bytes": 429955,
+      "raw32_windows_per_direction": 250031,
+      "first_payload_id": 400381,
+      "last_payload_id": 406184,
+      "ordered_ids_and_sha256": "52e6a7e1356ed4f773d9880e7f4cccf84603ac9ff1aa8bbff764d2c5a9403620",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 140,
+      "payloads": 5821,
+      "bytes": 430474,
+      "raw32_windows_per_direction": 250023,
+      "first_payload_id": 406185,
+      "last_payload_id": 412005,
+      "ordered_ids_and_sha256": "fa9cdb443e5dcb27a578738afe485162f0c1647318264d4ec4b05b57788fa954",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 141,
+      "payloads": 5834,
+      "bytes": 430855,
+      "raw32_windows_per_direction": 250001,
+      "first_payload_id": 412006,
+      "last_payload_id": 417839,
+      "ordered_ids_and_sha256": "98d4079dfeeec99eeab3b470f5e6a1d4910392a396519dee7badd23f42f84e89",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 142,
+      "payloads": 5830,
+      "bytes": 430747,
+      "raw32_windows_per_direction": 250017,
+      "first_payload_id": 417840,
+      "last_payload_id": 423669,
+      "ordered_ids_and_sha256": "f6b7df1273f8c3d7f01b392b6bc12cdee4c1d630c735af19cfafac0d05e51e58",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 143,
+      "payloads": 5837,
+      "bytes": 430963,
+      "raw32_windows_per_direction": 250016,
+      "first_payload_id": 423670,
+      "last_payload_id": 429506,
+      "ordered_ids_and_sha256": "04be9e3869f474e584307d0e2f5ce48c405afe55ff4eb386ec2143e2589d0581",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 144,
+      "payloads": 5803,
+      "bytes": 429893,
+      "raw32_windows_per_direction": 250000,
+      "first_payload_id": 429507,
+      "last_payload_id": 435309,
+      "ordered_ids_and_sha256": "a8d910a10c19d3e81165c2d793d25e40e4fd2b9b886005d4129616423d7df5bb",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 145,
+      "payloads": 5811,
+      "bytes": 430167,
+      "raw32_windows_per_direction": 250026,
+      "first_payload_id": 435310,
+      "last_payload_id": 441120,
+      "ordered_ids_and_sha256": "b5172ff320bc93f4f8026907f379e0f2c1d2fc1513b941460910a70aceb4c226",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 146,
+      "payloads": 5798,
+      "bytes": 429750,
+      "raw32_windows_per_direction": 250012,
+      "first_payload_id": 441121,
+      "last_payload_id": 446918,
+      "ordered_ids_and_sha256": "38ba5d369a66dc7adbfbc3a79580b79cb5bb5f73204be65b00562b40d61e8383",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 147,
+      "payloads": 5804,
+      "bytes": 429925,
+      "raw32_windows_per_direction": 250001,
+      "first_payload_id": 446919,
+      "last_payload_id": 452722,
+      "ordered_ids_and_sha256": "2cfa2806cd1c2e51ce230b2775d2aca2cce9aa0cf7bfb095360a1d4271d75bf9",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 148,
+      "payloads": 5829,
+      "bytes": 430703,
+      "raw32_windows_per_direction": 250004,
+      "first_payload_id": 452723,
+      "last_payload_id": 458551,
+      "ordered_ids_and_sha256": "2cfd1a5348dc3985b088130284a5e27a4af9206386cd6be1fee1a7b48d584ad8",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 149,
+      "payloads": 1330,
+      "bytes": 291481,
+      "raw32_windows_per_direction": 250251,
+      "first_payload_id": 458552,
+      "last_payload_id": 459881,
+      "ordered_ids_and_sha256": "5583f6b179d383133f0f95f8a1f51308b811a83f31dee5525762f24f858253b9",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 150,
+      "payloads": 539,
+      "bytes": 267220,
+      "raw32_windows_per_direction": 250511,
+      "first_payload_id": 459882,
+      "last_payload_id": 460420,
+      "ordered_ids_and_sha256": "ca591840e3434cab76b3db790d802f2d5c41660a8f14cc7e48d89f5651f8588a",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 151,
+      "payloads": 523,
+      "bytes": 267205,
+      "raw32_windows_per_direction": 250992,
+      "first_payload_id": 460421,
+      "last_payload_id": 460943,
+      "ordered_ids_and_sha256": "9f16e608c33a64adae496a9d748d21f32f4f40f2a97da21de862cee1b625a176",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 152,
+      "payloads": 528,
+      "bytes": 267598,
+      "raw32_windows_per_direction": 251230,
+      "first_payload_id": 460944,
+      "last_payload_id": 461471,
+      "ordered_ids_and_sha256": "e16b55c9f93801e5ad7f351a28d198510066e27129b797a26cfa65d391910ea3",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 153,
+      "payloads": 538,
+      "bytes": 267138,
+      "raw32_windows_per_direction": 250460,
+      "first_payload_id": 461472,
+      "last_payload_id": 462009,
+      "ordered_ids_and_sha256": "e57144352c3a5189555fc5c17b45ea1d24e2ff7ede1b2bc4675e041d98e4cbc1",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 154,
+      "payloads": 541,
+      "bytes": 267378,
+      "raw32_windows_per_direction": 250607,
+      "first_payload_id": 462010,
+      "last_payload_id": 462550,
+      "ordered_ids_and_sha256": "ff3b0b26fc202af0596c26221fafca90feb0abcdef0f67a77f447dbb50aca5fd",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 155,
+      "payloads": 548,
+      "bytes": 267931,
+      "raw32_windows_per_direction": 250943,
+      "first_payload_id": 462551,
+      "last_payload_id": 463098,
+      "ordered_ids_and_sha256": "f961df6c6b9825b3b48d9c9c0d5e8556c926fab9592bdf45b70166e6cd7760d2",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 156,
+      "payloads": 524,
+      "bytes": 267280,
+      "raw32_windows_per_direction": 251036,
+      "first_payload_id": 463099,
+      "last_payload_id": 463622,
+      "ordered_ids_and_sha256": "54336e18d45f5d88fcf9974a956fb81c371fae97beba4d7775348f23c6a1ed4f",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 157,
+      "payloads": 641,
+      "bytes": 270282,
+      "raw32_windows_per_direction": 250411,
+      "first_payload_id": 463623,
+      "last_payload_id": 464263,
+      "ordered_ids_and_sha256": "7d2e3e9845d052efa7b1772cabdc7d641bf40fc61a897c6c3e5a00969d1cbcc4",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 158,
+      "payloads": 514,
+      "bytes": 266493,
+      "raw32_windows_per_direction": 250559,
+      "first_payload_id": 464264,
+      "last_payload_id": 464777,
+      "ordered_ids_and_sha256": "77d461c830009771266dc9db874f3eb1b3533fa037acb1f2e79b32bc2e1e61ed",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 159,
+      "payloads": 627,
+      "bytes": 270426,
+      "raw32_windows_per_direction": 250989,
+      "first_payload_id": 464778,
+      "last_payload_id": 465404,
+      "ordered_ids_and_sha256": "71775f6e8b41de6fa3470970ee3c5f006f09ec17a31313d4e42f18678f1cde23",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 160,
+      "payloads": 555,
+      "bytes": 267236,
+      "raw32_windows_per_direction": 250031,
+      "first_payload_id": 465405,
+      "last_payload_id": 465959,
+      "ordered_ids_and_sha256": "dc4ca2f515762fd51722f531c05b6dfe3c8e58283006bcd37b91c18d5f52440f",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 161,
+      "payloads": 576,
+      "bytes": 268893,
+      "raw32_windows_per_direction": 251037,
+      "first_payload_id": 465960,
+      "last_payload_id": 466535,
+      "ordered_ids_and_sha256": "e32a1e7639b5ca1f178d299bdbd116519090fe8e1176b4e1e38ce4c7730daf19",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 162,
+      "payloads": 535,
+      "bytes": 266902,
+      "raw32_windows_per_direction": 250317,
+      "first_payload_id": 466536,
+      "last_payload_id": 467070,
+      "ordered_ids_and_sha256": "7d62883d7f96476b62aee7fa84dfae588d973fcd5a85f9401b573035e8d5e687",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 163,
+      "payloads": 500,
+      "bytes": 266635,
+      "raw32_windows_per_direction": 251135,
+      "first_payload_id": 467071,
+      "last_payload_id": 467570,
+      "ordered_ids_and_sha256": "511040477236bd449c26c79f22cdd6125be492977182f91daa3027a67fd1e645",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 164,
+      "payloads": 519,
+      "bytes": 266888,
+      "raw32_windows_per_direction": 250799,
+      "first_payload_id": 467571,
+      "last_payload_id": 468089,
+      "ordered_ids_and_sha256": "a93c23b2b88739175b335c38732dede94c49f8bbb1e8599f9fa272f25e105f83",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 165,
+      "payloads": 558,
+      "bytes": 267473,
+      "raw32_windows_per_direction": 250175,
+      "first_payload_id": 468090,
+      "last_payload_id": 468647,
+      "ordered_ids_and_sha256": "68952e8287af1ec2617d538ac80dd71625ae123cb95b2fec1d02773472f81b1c",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 166,
+      "payloads": 557,
+      "bytes": 267394,
+      "raw32_windows_per_direction": 250127,
+      "first_payload_id": 468648,
+      "last_payload_id": 469204,
+      "ordered_ids_and_sha256": "edf30957a66300b7f56f967a748965e9f96db933e81f112f07c855e00b3173b8",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 167,
+      "payloads": 574,
+      "bytes": 268736,
+      "raw32_windows_per_direction": 250942,
+      "first_payload_id": 469205,
+      "last_payload_id": 469778,
+      "ordered_ids_and_sha256": "cc9f4f206a1f19721ce282ad31777c791ca3dd0212e6947b13a2047f27da2768",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 168,
+      "payloads": 581,
+      "bytes": 268040,
+      "raw32_windows_per_direction": 250029,
+      "first_payload_id": 469779,
+      "last_payload_id": 470359,
+      "ordered_ids_and_sha256": "0034d580721e38c4eb36131bf45dfc15c628394538e0336826dd52e8481f81b2",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 169,
+      "payloads": 501,
+      "bytes": 266714,
+      "raw32_windows_per_direction": 251183,
+      "first_payload_id": 470360,
+      "last_payload_id": 470860,
+      "ordered_ids_and_sha256": "40165be98c9cb2e8c914675d933f0076f8f645f6c0f8097d97afa240bb36eda5",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 170,
+      "payloads": 537,
+      "bytes": 267062,
+      "raw32_windows_per_direction": 250415,
+      "first_payload_id": 470861,
+      "last_payload_id": 471397,
+      "ordered_ids_and_sha256": "4d60bbecacb1d44359b2e59770039185789c7365f5f82242d92ae827730b2751",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 171,
+      "payloads": 551,
+      "bytes": 268167,
+      "raw32_windows_per_direction": 251086,
+      "first_payload_id": 471398,
+      "last_payload_id": 471948,
+      "ordered_ids_and_sha256": "b6004c656fbcf285525e70731a562b8d703b0aec95a77b82e47f8db782b96296",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 172,
+      "payloads": 581,
+      "bytes": 268040,
+      "raw32_windows_per_direction": 250029,
+      "first_payload_id": 471949,
+      "last_payload_id": 472529,
+      "ordered_ids_and_sha256": "4aeb9fe6162bdb29b845b1dd91fa96bf7b364196eaff5f128266e1db2145a95a",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 173,
+      "payloads": 528,
+      "bytes": 267599,
+      "raw32_windows_per_direction": 251231,
+      "first_payload_id": 472530,
+      "last_payload_id": 473057,
+      "ordered_ids_and_sha256": "fb543156f08003181e116032cea0eb055046827c590430ceee433eb40c6df14d",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 174,
+      "payloads": 550,
+      "bytes": 268087,
+      "raw32_windows_per_direction": 251037,
+      "first_payload_id": 473058,
+      "last_payload_id": 473607,
+      "ordered_ids_and_sha256": "be99db8c360d1d5184cb76a6200bd80c0730e622ad8c319703e017b0ffde1d86",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 175,
+      "payloads": 502,
+      "bytes": 266639,
+      "raw32_windows_per_direction": 251077,
+      "first_payload_id": 473608,
+      "last_payload_id": 474109,
+      "ordered_ids_and_sha256": "d209ca6019e8ce1e87830896b294a85ed63eaf31496fa3bf24c22ff073b2e626",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 86,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 86,
+      "hits": 0
+    },
+    {
+      "batch_id": 176,
+      "payloads": 543,
+      "bytes": 267537,
+      "raw32_windows_per_direction": 250704,
+      "first_payload_id": 474110,
+      "last_payload_id": 474652,
+      "ordered_ids_and_sha256": "288fcf6648dcff8b005e4e463e8c731b01c946a4bdf25a36c648bf077c8236c4",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 177,
+      "payloads": 507,
+      "bytes": 265938,
+      "raw32_windows_per_direction": 250221,
+      "first_payload_id": 474653,
+      "last_payload_id": 475159,
+      "ordered_ids_and_sha256": "2aaf287c78f39961775c5eef9275545a49b6d826184d153872ea04ed9759d9a5",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 178,
+      "payloads": 579,
+      "bytes": 269130,
+      "raw32_windows_per_direction": 251181,
+      "first_payload_id": 475160,
+      "last_payload_id": 475738,
+      "ordered_ids_and_sha256": "f895218050d277bf9e7b0055cbb2b4c1a47e9eeb125242ad54f943c0c78afd07",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 179,
+      "payloads": 496,
+      "bytes": 266318,
+      "raw32_windows_per_direction": 250942,
+      "first_payload_id": 475739,
+      "last_payload_id": 476234,
+      "ordered_ids_and_sha256": "a6f4cc8ae3e10f53f317070d188e9e783e58ffccf7ce239883425e09e37150cc",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 180,
+      "payloads": 518,
+      "bytes": 266807,
+      "raw32_windows_per_direction": 250749,
+      "first_payload_id": 476235,
+      "last_payload_id": 476752,
+      "ordered_ids_and_sha256": "105895a210dda9ed691f9b177b0b51b308670f77e8bcc609ea5c5570af9b421d",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 181,
+      "payloads": 556,
+      "bytes": 267315,
+      "raw32_windows_per_direction": 250079,
+      "first_payload_id": 476753,
+      "last_payload_id": 477308,
+      "ordered_ids_and_sha256": "a36e66b5a514cde11b5afaea2176c6f5a00ade76f952a855ec33200433dec2f7",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 182,
+      "payloads": 515,
+      "bytes": 266570,
+      "raw32_windows_per_direction": 250605,
+      "first_payload_id": 477309,
+      "last_payload_id": 477823,
+      "ordered_ids_and_sha256": "d043bd445187b0a4a817ae9682c8c8ebf567ba0dba4c4e41ef3107a1fe2fb830",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 183,
+      "payloads": 547,
+      "bytes": 267852,
+      "raw32_windows_per_direction": 250895,
+      "first_payload_id": 477824,
+      "last_payload_id": 478370,
+      "ordered_ids_and_sha256": "11a87c6f90dbc8684f3bb38eca3adf42899e07bfa7f889afa1b5011491cd83ae",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 184,
+      "payloads": 554,
+      "bytes": 268403,
+      "raw32_windows_per_direction": 251229,
+      "first_payload_id": 478371,
+      "last_payload_id": 478924,
+      "ordered_ids_and_sha256": "dc3b17b03493f4dbf2b1b155f1bd6492273a55758bba0fe69bfdeeb8db453d14",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 185,
+      "payloads": 581,
+      "bytes": 268040,
+      "raw32_windows_per_direction": 250029,
+      "first_payload_id": 478925,
+      "last_payload_id": 479505,
+      "ordered_ids_and_sha256": "4ab991407fc2b7c4226a63fd859190dd85ae66a82181075dbe5d43c4a8c56850",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 186,
+      "payloads": 535,
+      "bytes": 266903,
+      "raw32_windows_per_direction": 250318,
+      "first_payload_id": 479506,
+      "last_payload_id": 480040,
+      "ordered_ids_and_sha256": "5a5c10196de80eba7f29a51bfb199dd627d259e800044b4b833418a5d09599b3",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 187,
+      "payloads": 540,
+      "bytes": 267298,
+      "raw32_windows_per_direction": 250558,
+      "first_payload_id": 480041,
+      "last_payload_id": 480580,
+      "ordered_ids_and_sha256": "45825398ff8afb81f07f3abdefe8335443d4c2a88ca56d4137c6b3b5e0a59b6f",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 188,
+      "payloads": 523,
+      "bytes": 267205,
+      "raw32_windows_per_direction": 250992,
+      "first_payload_id": 480581,
+      "last_payload_id": 481103,
+      "ordered_ids_and_sha256": "a2f9a7b4aa1ea7a22086036c93ab92d42b07562155630863d5931147d5bfae7c",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 189,
+      "payloads": 481,
+      "bytes": 265133,
+      "raw32_windows_per_direction": 250222,
+      "first_payload_id": 481104,
+      "last_payload_id": 481584,
+      "ordered_ids_and_sha256": "648ba1657434d32d325fa50d1e7eed93e67b3b148a27fa792056e35be0cc54f4",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 190,
+      "payloads": 521,
+      "bytes": 267043,
+      "raw32_windows_per_direction": 250892,
+      "first_payload_id": 481585,
+      "last_payload_id": 482105,
+      "ordered_ids_and_sha256": "ab38a3b86a0ebd101429bfcbff074b15793df5a9a065c39111f51f69ae49d94a",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 191,
+      "payloads": 538,
+      "bytes": 267139,
+      "raw32_windows_per_direction": 250461,
+      "first_payload_id": 482106,
+      "last_payload_id": 482643,
+      "ordered_ids_and_sha256": "c2124c07a5fe0020024d59d70584a1f414edbdee12a0757170c3ca37238ab072",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 192,
+      "payloads": 500,
+      "bytes": 266633,
+      "raw32_windows_per_direction": 251133,
+      "first_payload_id": 482644,
+      "last_payload_id": 483143,
+      "ordered_ids_and_sha256": "0959715f2635980a7c5dd51f889f524ad687d892609c8bcc674fdad58cba2767",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 193,
+      "payloads": 574,
+      "bytes": 268736,
+      "raw32_windows_per_direction": 250942,
+      "first_payload_id": 483144,
+      "last_payload_id": 483717,
+      "ordered_ids_and_sha256": "a8c622746efa34460b0c4f00547a4eaefcace7ed053a2f5322ea3fce7a7c4725",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 194,
+      "payloads": 502,
+      "bytes": 266794,
+      "raw32_windows_per_direction": 251232,
+      "first_payload_id": 483718,
+      "last_payload_id": 484219,
+      "ordered_ids_and_sha256": "3f5057fa946199123e88a564abedfa1b55231225b213b2957f3ead6dd4ca1cd9",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 195,
+      "payloads": 581,
+      "bytes": 268036,
+      "raw32_windows_per_direction": 250025,
+      "first_payload_id": 484220,
+      "last_payload_id": 484800,
+      "ordered_ids_and_sha256": "eba0afd56f3c086c96b54643232968ed6566e664a9ebb37e137a2435adaa4b70",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 196,
+      "payloads": 513,
+      "bytes": 266413,
+      "raw32_windows_per_direction": 250510,
+      "first_payload_id": 484801,
+      "last_payload_id": 485313,
+      "ordered_ids_and_sha256": "5956490a0a89a6dcaf6e1b11efcee2b32bdd70650d13b3f1167aad80f884fc3e",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 197,
+      "payloads": 507,
+      "bytes": 265936,
+      "raw32_windows_per_direction": 250219,
+      "first_payload_id": 485314,
+      "last_payload_id": 485820,
+      "ordered_ids_and_sha256": "811516377670cfbfe04107fe65f25b52ab5ec22fe5d78d4665cac5edf078fd1e",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 198,
+      "payloads": 533,
+      "bytes": 266746,
+      "raw32_windows_per_direction": 250223,
+      "first_payload_id": 485821,
+      "last_payload_id": 486353,
+      "ordered_ids_and_sha256": "8163cdb199e537e45ab4b3afa3faff896ac56aba39ec4d4a47d66a19cf0b5d3f",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 199,
+      "payloads": 570,
+      "bytes": 268275,
+      "raw32_windows_per_direction": 250941,
+      "first_payload_id": 486354,
+      "last_payload_id": 486923,
+      "ordered_ids_and_sha256": "63fa61b203f268116dc450bdcb94f62de8802459c3efc20f57f348de02f56094",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 200,
+      "payloads": 509,
+      "bytes": 266096,
+      "raw32_windows_per_direction": 250317,
+      "first_payload_id": 486924,
+      "last_payload_id": 487432,
+      "ordered_ids_and_sha256": "7e58509b95608051ad5a81f358fc30f07cfb94a0f6cd75879b05d69697147bbf",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 201,
+      "payloads": 540,
+      "bytes": 267297,
+      "raw32_windows_per_direction": 250557,
+      "first_payload_id": 487433,
+      "last_payload_id": 487972,
+      "ordered_ids_and_sha256": "4696c646e03ab54a5ac0bbbb7039d2a026fca8ae0c57a33e553293a228da9456",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 202,
+      "payloads": 568,
+      "bytes": 268260,
+      "raw32_windows_per_direction": 250652,
+      "first_payload_id": 487973,
+      "last_payload_id": 488540,
+      "ordered_ids_and_sha256": "6dc7a3f5bfca72c84fe15505236798ab78a0f911b6bb8f10b0b2d31b8d86f457",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 203,
+      "payloads": 584,
+      "bytes": 268279,
+      "raw32_windows_per_direction": 250175,
+      "first_payload_id": 488541,
+      "last_payload_id": 489124,
+      "ordered_ids_and_sha256": "2751b8275b07a8a577e910c66625b03f6170b80f3ab24d9ec48882ca95d10c6e",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 204,
+      "payloads": 557,
+      "bytes": 267394,
+      "raw32_windows_per_direction": 250127,
+      "first_payload_id": 489125,
+      "last_payload_id": 489681,
+      "ordered_ids_and_sha256": "0496cb54fd67c2590b19ce2157bc24d0c79904160d37452d4495fefb4ee35219",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 205,
+      "payloads": 559,
+      "bytes": 267552,
+      "raw32_windows_per_direction": 250223,
+      "first_payload_id": 489682,
+      "last_payload_id": 490240,
+      "ordered_ids_and_sha256": "1cc5265190b6a4c837d8eb132c922f1f32bd683e492b6d06c30e302d28be6931",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 206,
+      "payloads": 546,
+      "bytes": 267769,
+      "raw32_windows_per_direction": 250843,
+      "first_payload_id": 490241,
+      "last_payload_id": 490786,
+      "ordered_ids_and_sha256": "d472a4033b77278379a5cd601c52df7f2d4ca680f0c85c9e580d20e2d193cba2",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 207,
+      "payloads": 561,
+      "bytes": 267709,
+      "raw32_windows_per_direction": 250318,
+      "first_payload_id": 490787,
+      "last_payload_id": 491347,
+      "ordered_ids_and_sha256": "65f477360a5058aad6f854024d8eae5b8de1a90531c36bb6e774ce33d87e4235",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 208,
+      "payloads": 563,
+      "bytes": 267868,
+      "raw32_windows_per_direction": 250415,
+      "first_payload_id": 491348,
+      "last_payload_id": 491910,
+      "ordered_ids_and_sha256": "2129f0e1b0d8d5c9a9540fcf756b73af415f02583189e393c145a0ae09736460",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 209,
+      "payloads": 570,
+      "bytes": 268418,
+      "raw32_windows_per_direction": 250748,
+      "first_payload_id": 491911,
+      "last_payload_id": 492480,
+      "ordered_ids_and_sha256": "24735855a37fc4a4957a7b9c68435fde8ed3fc23b9ef495368e60c3205af01b8",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 210,
+      "payloads": 570,
+      "bytes": 268421,
+      "raw32_windows_per_direction": 250751,
+      "first_payload_id": 492481,
+      "last_payload_id": 493050,
+      "ordered_ids_and_sha256": "21cfcfdaf6fc199a8aa6ab7a4669f58830b582e39a6f49b362a3cbfb6f46eb55",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 211,
+      "payloads": 564,
+      "bytes": 267947,
+      "raw32_windows_per_direction": 250463,
+      "first_payload_id": 493051,
+      "last_payload_id": 493614,
+      "ordered_ids_and_sha256": "660d373bfae21037e1aaadfc05228b0831b9662aed59475f3b0fd3bc65d03301",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 212,
+      "payloads": 516,
+      "bytes": 266649,
+      "raw32_windows_per_direction": 250653,
+      "first_payload_id": 493615,
+      "last_payload_id": 494130,
+      "ordered_ids_and_sha256": "fcea81073fa097a616c9acc37784f3bbce6c2f6140ffd9b9d565030dc5f7c568",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 213,
+      "payloads": 534,
+      "bytes": 266740,
+      "raw32_windows_per_direction": 250186,
+      "first_payload_id": 494131,
+      "last_payload_id": 494664,
+      "ordered_ids_and_sha256": "0d4c93e2ad9897faa4cf7d5c3032c36d50c0a4cf41f455fd689ec64d54f20f73",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 214,
+      "payloads": 523,
+      "bytes": 267204,
+      "raw32_windows_per_direction": 250991,
+      "first_payload_id": 494665,
+      "last_payload_id": 495187,
+      "ordered_ids_and_sha256": "cacf9ce3a534587523e845d992d037ef43e3ebfa6d5952bb6ec0e48a1665d9db",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 215,
+      "payloads": 592,
+      "bytes": 268907,
+      "raw32_windows_per_direction": 250555,
+      "first_payload_id": 495188,
+      "last_payload_id": 495779,
+      "ordered_ids_and_sha256": "2876786598f60095fdecdf3327d0b240b974672365ec60242cac9aac312a7bc5",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 216,
+      "payloads": 555,
+      "bytes": 267236,
+      "raw32_windows_per_direction": 250031,
+      "first_payload_id": 495780,
+      "last_payload_id": 496334,
+      "ordered_ids_and_sha256": "3d8f32f1b53cce028fc64ebecf90fb3e8667c55dbb01c892f4eefb3e101c1afd",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 217,
+      "payloads": 554,
+      "bytes": 268404,
+      "raw32_windows_per_direction": 251230,
+      "first_payload_id": 496335,
+      "last_payload_id": 496888,
+      "ordered_ids_and_sha256": "8578852a7d70fdd2bea390a8468fad22d9a6aed3eff0e9b63204bdebce60ff17",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 218,
+      "payloads": 530,
+      "bytes": 266507,
+      "raw32_windows_per_direction": 250077,
+      "first_payload_id": 496889,
+      "last_payload_id": 497418,
+      "ordered_ids_and_sha256": "661b03f5d07c0180474e4abb9c8cbda36602e6f4a21b32e7d0e1849a8d2b9c58",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 219,
+      "payloads": 589,
+      "bytes": 268672,
+      "raw32_windows_per_direction": 250413,
+      "first_payload_id": 497419,
+      "last_payload_id": 498007,
+      "ordered_ids_and_sha256": "6611c803f3e6629a78b8b58987ec24632d72218547f7fe2d33fe55b4284d29c0",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 220,
+      "payloads": 576,
+      "bytes": 268895,
+      "raw32_windows_per_direction": 251039,
+      "first_payload_id": 498008,
+      "last_payload_id": 498583,
+      "ordered_ids_and_sha256": "9975a72de4b53f92e7b5974380dbaabd2a4934a4f3fe2f8ab7bc2ff0944df489",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 221,
+      "payloads": 555,
+      "bytes": 267233,
+      "raw32_windows_per_direction": 250028,
+      "first_payload_id": 498584,
+      "last_payload_id": 499138,
+      "ordered_ids_and_sha256": "1797a6703db44ce53a4c2b33353816110b8cadb7ea441262e2bcf6202c019bd8",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 222,
+      "payloads": 519,
+      "bytes": 266889,
+      "raw32_windows_per_direction": 250800,
+      "first_payload_id": 499139,
+      "last_payload_id": 499657,
+      "ordered_ids_and_sha256": "946aa818ee09df42d66524512ebd6f312a8f89f50b0e02c928875e59607a8fe6",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 223,
+      "payloads": 553,
+      "bytes": 268326,
+      "raw32_windows_per_direction": 251183,
+      "first_payload_id": 499658,
+      "last_payload_id": 500210,
+      "ordered_ids_and_sha256": "bba508bab2f7f8d941e87878aff3c0ac34fdeb8d585194c979edc44e23e91004",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 224,
+      "payloads": 509,
+      "bytes": 266097,
+      "raw32_windows_per_direction": 250318,
+      "first_payload_id": 500211,
+      "last_payload_id": 500719,
+      "ordered_ids_and_sha256": "35b35700e015423323742685dd2f34e1cff67e41222360dec3ff518f0bae0482",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 225,
+      "payloads": 3193,
+      "bytes": 348993,
+      "raw32_windows_per_direction": 250010,
+      "first_payload_id": 500720,
+      "last_payload_id": 503912,
+      "ordered_ids_and_sha256": "757ecca8c8aeaf97d5b1f3d1e0b7fd30dba248141631f67f90a0abec914afdfa",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 1,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 1,
+      "hits": 0
+    },
+    {
+      "batch_id": 226,
+      "payloads": 14706,
+      "bytes": 705888,
+      "raw32_windows_per_direction": 250002,
+      "first_payload_id": 503913,
+      "last_payload_id": 518618,
+      "ordered_ids_and_sha256": "421783e5926085df76e5d124713a9d217abba71f42e40472b0560bb2f701b014",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 227,
+      "payloads": 14706,
+      "bytes": 705888,
+      "raw32_windows_per_direction": 250002,
+      "first_payload_id": 518619,
+      "last_payload_id": 533324,
+      "ordered_ids_and_sha256": "f6a2b6708de679e8826be37678c41b3dd62dc5e671c2f9dd7e769a35f4d17db8",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 228,
+      "payloads": 14706,
+      "bytes": 705888,
+      "raw32_windows_per_direction": 250002,
+      "first_payload_id": 533325,
+      "last_payload_id": 548030,
+      "ordered_ids_and_sha256": "98e656ad1d8d8388867287f9ef6aaf930e629320a1760b8b18cb0b5ad1224d8b",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 229,
+      "payloads": 15948,
+      "bytes": 742137,
+      "raw32_windows_per_direction": 249502,
+      "first_payload_id": 548031,
+      "last_payload_id": 563978,
+      "ordered_ids_and_sha256": "c0211ef404cebcc08a4a8a1947d46cd26c95dd9d715a6397a902477a27ebce4b",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 386,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 386,
+      "hits": 0
+    },
+    {
+      "batch_id": 230,
+      "payloads": 13842,
+      "bytes": 666725,
+      "raw32_windows_per_direction": 249308,
+      "first_payload_id": 563979,
+      "last_payload_id": 577820,
+      "ordered_ids_and_sha256": "606c3606c6a245779cc3033f62fd2bc2b8cd3adf2636c8c2597e2e2002e6d66d",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 99,
+        "wif-uncompressed": 1,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 100,
+      "hits": 0
+    },
+    {
+      "batch_id": 231,
+      "payloads": 5209,
+      "bytes": 411489,
+      "raw32_windows_per_direction": 250010,
+      "first_payload_id": 577821,
+      "last_payload_id": 583029,
+      "ordered_ids_and_sha256": "75d5fcdcca34e6253583ae88aadaf9475e439501806be49de664d86c493002a5",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 232,
+      "payloads": 9264,
+      "bytes": 511675,
+      "raw32_windows_per_direction": 248616,
+      "first_payload_id": 583030,
+      "last_payload_id": 592293,
+      "ordered_ids_and_sha256": "87e8269d51b71cf95bc8449d159a6e90b12b93a8844796131e631ceb75a3aadc",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    },
+    {
+      "batch_id": 233,
+      "payloads": 28,
+      "bytes": 10640,
+      "raw32_windows_per_direction": 9772,
+      "first_payload_id": 592294,
+      "last_payload_id": 592321,
+      "ordered_ids_and_sha256": "e98bd696530ff1daba18ce3d0f06e66e1534e1ab7d1197a4fb7ffc089f887f09",
+      "expected_raw32_attempts_each_direction": 0,
+      "attempts": {
+        "raw32": 0,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "valid_scalars": 0,
+      "hits": 0
+    }
+  ],
+  "input_files": {
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\_work\\multiagente_2026-09-18\\scan_text_v3\\summary.json": {
+      "sha256": "32c570e3a2f2c1eb959ff17c66066e84e2258e2e36acc0069f6c9f3ac0dc671d",
+      "stat": [
+        681,
+        1789705763444904000,
+        4503599627598557
+      ]
+    },
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\_work\\multiagente_2026-09-18\\scan_text_v3\\spec.json": {
+      "sha256": "2c704b720748734028a98628c3a9f167f2e8575c1b7fdb5797d26f3bdadd8bda",
+      "stat": [
+        1102,
+        1789705757785220000,
+        4222124650887829
+      ]
+    },
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\solver\\multiagente_2026_09_18\\scan_delta.py": {
+      "sha256": "51aa5a2ba94f371d6fe62e3559a99b5161163064098acd11eea302e9b254aaa6",
+      "stat": [
+        9934,
+        1789705728954374300,
+        7599824371225149
+      ]
+    },
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\solver\\oraculo_duplo_2026_09_17\\oracle.py": {
+      "sha256": "1b927716a5339a5a8cabe8527f1d7197e9bf539fdb508f25562dabafd45eec8d",
+      "stat": [
+        6998,
+        1789705669073182600,
+        8444249302425077
+      ]
+    },
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\solver\\oraculo_duplo_2026_09_17\\scan.py": {
+      "sha256": "3447d3e57273a1001d819027bb4c48e89057b95cfa2f0fbe70480c0f1aecb01f",
+      "stat": [
+        9564,
+        1789688913302427400,
+        6473924465454107
+      ]
+    },
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\_work\\oraculo_duplo_2026-09-17\\corpus_v3\\corpus.sqlite": {
+      "sha256": "5cb7b7d527c4f016aeef9a7eb532b753ed0aefeb4070ac8c454d542620f25ab7",
+      "stat": [
+        713625600,
+        1789689406574778100,
+        7881299349007747
+      ]
+    },
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\_work\\multiagente_2026-09-18\\scan_text_v3\\checkpoint.sqlite": {
+      "sha256": "732e11d48b40739d8c7bd9ac406926eabd2d7c2502ff0637cf5797e2734df46d",
+      "stat": [
+        49152,
+        1789705762947937200,
+        4785074604309209
+      ]
+    },
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\_work\\multiagente_2026-09-18\\scan_text_v3\\hits.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stat": [
+        0,
+        1789705763443905200,
+        69805794224470748
+      ]
+    }
+  },
+  "checks": {
+    "sqlite_integrity": true,
+    "sqlite_sidecars_absent": true,
+    "all_payload_digests": true,
+    "exact_batch_ids": true,
+    "per_batch_counts": true,
+    "summary_reconciled": true,
+    "hits_match_checkpoints": true,
+    "input_files_unchanged": true
+  },
+  "limits": [
+    "O checkpoint não registra a lista de IDs processada pelo worker; os IDs são reconstruídos pelo batching contratado.",
+    "Contagens textuais e valid_scalars são reconciliadas, sem repetir extração/ECC.",
+    "A confirmação ECC independente dos hits é a declaração persistida pelo scanner; este auditor não a repete."
+  ]
+}

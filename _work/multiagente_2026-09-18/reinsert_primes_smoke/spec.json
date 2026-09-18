@@ -1,0 +1,23 @@
+{
+  "hypothesis": "Recolocar o proprio primo p nos marcadores logicos b/be de DBBI, manter a1z26 nos nao-primos, somar todas as grades retangulares exatas e testar as listas como senhas numericas compostas com as duas clausulas internas ja decodificadas.",
+  "difference_from_previous": "A rodada matrixsumlist estrutural testou residuos, sequencias com marcadores zerados/como bits e preenchimentos da matriz. Este teste usa p como valor numerico do marcador antes das somas.",
+  "clauses": [
+    {
+      "id": "lastwordsbeforearchichoice",
+      "text": "lastwordsbeforearchichoice",
+      "source": "README.md: segmento z #1 da pagina final, a-i,o -> decimal -> hex -> ASCII"
+    },
+    {
+      "id": "thispassword",
+      "text": "thispassword",
+      "source": "README.md: segmento z #2 da pagina final, a-i,o -> decimal -> hex -> ASCII"
+    }
+  ],
+  "expected_materials": 2016,
+  "nulls": 1,
+  "source_hashes": {
+    "script": "7251836adb544ac12b12ed77b1f3554fd3ffd3ccda1140331cf5dc8c0c2bd844",
+    "gsmg_common": "25b160076554166b20d18f526fe7eebea0fd463a41c14d21290e114dd171d23e",
+    "dual_oracle": "1b927716a5339a5a8cabe8527f1d7197e9bf539fdb508f25562dabafd45eec8d"
+  }
+}

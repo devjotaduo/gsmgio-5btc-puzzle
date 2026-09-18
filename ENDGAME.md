@@ -1,6 +1,6 @@
 # Endgame do GSMG.IO 5 BTC — relatório único
 
-**Estado em 2026-09-17: a fase final não está resolvida.** Nenhum dos três blobs AES foi
+**Estado em 2026-09-18: a fase final não está resolvida.** Nenhum dos três blobs AES foi
 aberto de forma autenticada e o prêmio segue intacto em
 [`1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe`](https://mempool.space/address/1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe)
 (1,25635374 BTC, 126 transações). Este documento substitui o caderno cronológico
@@ -55,7 +55,7 @@ moldura de verificação desenhada pelo autor. O centro contém um coelho branco
 | Data | Fala | Uso |
 |---|---|---|
 | 2020-01-14 | "Roses are White but often Red. Yellow has a number and so does Blue. Go back to the first puzzle piece without further ado. It might have shown you only one door, beware that the rabbits nest may contain a whole lot more." | levou ao "hash the text" da fase 0 → URL do endgame |
-| 2020-05-21 | "First or zero" | índice base 0 ou 1 (base 0 **mata** a segmentação de §6) |
+| 2020-05-21 | "First or zero" | responde à numeração da peça/fase zero (#4105), não à indexação dos primos; a segmentação de §6 foi encontrada em base 1 |
 | 2021-03-05 | "Infrared" (a "xor black/white/yellow/blue? or sum for red") | sem operação que renda senha (§5-F) |
 | 2021-04-01 | "R=18 / A=1 / B=2. Could also be 21 or 1812 bit" | a1z26 |
 | 2021-12-26 | "prime numbers … definitely required to proceed. … some characters need to be 'zeroed out'" | primos = §6; "zeroed out" ainda sem operação |
@@ -63,7 +63,7 @@ moldura de verificação desenhada pelo autor. O centro contém um coelho branco
 | 2023-02-23 | binário invertido: `yellowblueprimes matrixsumlist lastwordsbeforearchichoice yinyang wewontgiveawaythepassword itsinfrontofyoureyesbutyourenotseeingit verylaststepisatruegiveawaypromised` | o roadmap |
 | 2023-06-10 | TAIL32 "Correct" (nunca aberto), "No" (não é o hint da SalPhaseIon) | |
 | 2023-08-06 / 2025-04-28 | "Once you hit a 'ying yang', you'll be able to solve it the same day"; "when yingyang is reached, 2 hours max" | yinyang é uma etapa, não a senha |
-| 2024-01-26 | "Regular Bitcoin Private key" | alvo = privkey crua de 32 B |
+| 2024-01-26 | "Regular Bitcoin Private key" | alvo = chave privada Bitcoin; a fala não determina representação binária, textual ou intermediária |
 | 2022-12-11 | ".... That is very specific" sobre a **capa** do livro *Cosmic Duality* (yin-yang de campos estelares, uma estrela branca e uma amarela) | a "página 39" foi acréscimo da comunidade |
 | 2026-07-12 | "My close friends have the best chance of solving it … NOTE: that is a hint"; "hidden laptop … on that thing is the actual answer"; "The 5 btc was never the actual prize"; "salphaseion 100% solvable: Yes" | o passo final pode depender de referência pessoal |
 | 2026-09-01 | "Couple hours, and no." — resposta a "quanto tempo levou? trabalhou sozinho?", ou seja **não** sozinho; a "two sloppy days" ele respondeu "Same same". "Pfff. Coincidence." (YOUWON) | **teto de complexidade**: ferramentas online, poucas camadas |
@@ -73,9 +73,11 @@ Exports do Telegram até 2026-09-17: nenhuma fala do criador depois de 2026-09-0
 
 ## 3. Fatos provados
 
-1. **KDF.** Os blobs autenticados das fases 2, 3 e 3.2 abrem **só** com `openssl enc` EVP_BytesToKey
-   **SHA256** (openssl ≥ 1.1.0), nunca com MD5. O cabeçalho `Salted__` prova `-pass`/`-k`; PBKDF2,
-   todos os digests EVP e `-K` com 9 IVs foram excluídos. O desconhecido é a **senha**.
+1. **KDF.** Os blobs autenticados das fases 2, 3 e 3.2 abrem com `openssl enc` EVP_BytesToKey
+   **SHA256** (openssl ≥ 1.1.0), não com MD5 usando as senhas conhecidas. O cabeçalho `Salted__`
+   é compatível com senha e salt, mas não identifica digest, iterações ou uso de padding.
+   Os testes de PBKDF2, digests EVP e `-K` com 9 IVs deram negativo nos parâmetros e corpora
+   enumerados; isso não prova o KDF dos três blobs ainda fechados.
 2. **A "cadeia comunitária" é miragem.** Chain1 (SMALL com a senha dos cinco tokens), Chain2
    (TAIL32 com o WIF resultante), `cc` (COSMIC com a passphrase XOR `a795de11…`), Chain4, os "35
    blocos", `half`/`better_half` e `BTCSEED`: todos abrem só sob EVP-**MD5**, têm padding `0x01` e
@@ -124,12 +126,40 @@ Exports do Telegram até 2026-09-17: nenhuma fala do criador depois de 2026-09-0
     694.386 anteriores (81.862.702 verificações) + 1.331.155 da rodada "operador ensinado"
     (231.207.482): **0**. O MITM de 16! (§4-B) exige a pubkey do alvo e **não** pode ser refeito para
     `17ucy`; os demais negativos históricos de privkey valem só para `1GSMG`.
+12. **Revisão paralela dos bytes salvos contra os dois alvos.** Implementação separada da de
+    §3.11 (`solver/oraculo_duplo_2026_09_17/oracle.py`), feita em paralelo na branch
+    `codex/oraculo-duplo` sobre um corpus distinto (`_work/` + `solver/`, com prefixos); a
+    sobreposição com o corpus da §3.11 não foi medida. Ela notou ainda
+    que `G.fast_priv_scan` varria só raw32, apesar da docstring mencionar hex/WIF. Resultado:
+    **zero chaves dos dois alvos** em 592.339 conteúdos únicos (58.357.232 tentativas raw32, 674
+    hex64 e 3 WIFs válidos), com pubkeys comprimidas/não comprimidas e controles independentes.
+    É um snapshot finito de plaintexts, prefixos e representações preservadas; não recupera
+    candidatos descartados nem estende ao segundo alvo as antigas buscas baseadas na pubkey
+    exposta. Cobertura e limites no
+    [relatório do oráculo duplo](_work/oraculo_duplo_2026-09-17/RELATORIO.md).
+13. **Auditoria multiagente de 18/09: cobertura ampliada, ainda sem solução.** A fase 3.2
+    usa a direção inversa de cp273 em relação ao decoder textual inicialmente implementado.
+    A correção reproduz os 1.539 bytes autênticos do Beaufort no offset 447; nova varredura
+    textual dos 592.339 conteúdos anteriores: zero candidatos adicionais e zero hits. **Lacuna
+    declarada:** o corpus da §3.11 (694.386 plaintexts + 1.331.155 da rodada "operador
+    ensinado") não passou pela visão cp273 inversa nem por UTF-16.
+    Também foram recuperados 225.854 plaintexts completos de binários COSMIC e caudas Bifid
+    que não pertenciam ao corpus anterior. A varredura concluída verificou todas as
+    253.179.237 janelas raw32 em cada orientação BE/LE (**506.358.474 tentativas**) contra
+    os dois alvos, sem hit. A auditoria independente conferiu os 2.506 lotes, hashes de
+    corpus/código e arquivo de hits vazio. O scanner Go antigo terminou por falta de memória,
+    apesar de um relatório citar a contagem calculada como execução. Separadamente, o filtro
+    dos modos de fluxo podia descartar chaves binárias interiores antes da persistência:
+    esse espaço grande continua aberto. [Escopo e evidências](_work/multiagente_2026-09-18/RELATORIO.md).
 
 ## 4. O que foi refutado, por família
 
 Cada linha tem cobertura declarada, oráculo duro e, quando há escore, nulo casado; os números
 exatos e os scripts estão nos relatórios linkados em `docs/RESEARCH-INDEX.md` e nos scripts de
-`solver/`. **Nenhuma dessas famílias deve ser reaberta sem insumo novo do criador.**
+`solver/`. **Reabrir exige insumo novo ou uma lacuna de cobertura reproduzida**, como em §3.13;
+o negativo de uma enumeração finita não exclui todas as funções da mesma família.
+Os negativos históricos de privkey valem para o endereço efetivamente configurado em cada
+experimento; a revisão de §3.12 amplia apenas a cobertura dos bytes preservados.
 
 ### A. Alegações públicas
 | Alegação | Teste | Resultado |
@@ -170,7 +200,7 @@ exatos e os scripts estão nos relatórios linkados em `docs/RESEARCH-INDEX.md` 
 ### D. Premissas da ferramenta
 | Premissa | Cobertura | Resultado |
 |---|---|---|
-| A cifra é aes-256-cbc | 16 cifras/modos do `openssl enc` × corpus 1,27 M × 3 blobs × 2 KDF = 122 M, controle por cifra com o CLI real | 0 |
+| A cifra é aes-256-cbc | 16 cifras/modos do `openssl enc` × corpus 1,27 M × 3 blobs × 2 KDF = 122 M, controle por cifra com o CLI real | 0 reconhecidos; filtro de modos de fluxo não cobre raw32 binário interior (§3.13) |
 | Os blocos do ciphertext estão publicados fora de ordem (o `enter` como marca) | 120 permutações × salt cruzado SMALL↔TAIL32 × 2 KDF × 1,27 M = 1,22 bi lógicos; oráculo por bloco agnóstico a IV/ordem/padding: 0/10,18 M pares com ≥ 2 blocos limpos | refutada; os negativos são de **senha** |
 | KDF/IV alternativos, `-K` cru, chave = passphrase XOR | | 0 |
 
@@ -225,17 +255,23 @@ nas demais um símbolo, e exige-se consumo integral dos 91 símbolos.
   grade 7×12; resíduo como chave sobre `faed`; gramática SHA256 das fases 2–3.2 com 60.005
   concatenações; "coluna j = letra j do rótulo" (7×13, 15×38).
 
-**O que falta é informação, não busca:** qual segmentação é a pretendida, o que "zeroed out"
-zera, e como `matrixsumlist` consome o resíduo. Sem isso, qualquer decoder novo sobre um resíduo
-aleatório é gasto sem prior.
+**A ligação ainda desconhecida:** qual segmentação é a pretendida, o que "zeroed out"
+zera e como `matrixsumlist` consome o resíduo. Compatibilidade estatística com i.i.d. em
+60/61 símbolos não exclui informação codificada. Os negativos sustentam apenas as operações
+enumeradas; não demonstram necessidade de informação externa. A auditoria de 18/09 encontrou
+lacunas reais (§3.13), e o autor afirmou em 06/08/2023 (#9607) que os participantes já tinham
+a informação. A versão exportada de 28/04/2025 (#39237) situa yin-yang na fase seguinte à
+abertura de AES; não confirma esse token como parte literal da senha atual.
 
 ## 7. Como trabalhar
 
-Ver `AGENTS.md`. Em resumo: oráculo duro único; KDF SHA256; hipótese em prosa, finita, com
-controle positivo e nulo casado (≥ 100 embaralhamentos); scorer limpo para texto; plaintexts em
-hex; conferir esta tabela antes de codar; relatório em `_work/`, script em `solver/`, linha no
-índice; entrada aqui só se mudar o mapa. Regra de parada adotada: cinco famílias negativas
-consecutivas com nulo ⇒ esperar insumo do criador.
+Ver `AGENTS.md`, que prevalece. Em resumo: oráculo duro (privkey de um dos dois alvos, ou
+abertura AES certificada); KDF SHA256; hipótese em prosa, finita, com controle positivo e nulo
+casado (≥ 100 embaralhamentos); scorer limpo para texto; plaintexts em hex; conferir esta tabela
+antes de codar; relatório em `_work/`, script em `solver/`, linha no índice; entrada aqui só se
+mudar o mapa. Campanha nova só com insumo do criador, lacuna reproduzida ou família ausente da
+§4; a parada de cada campanha está no seu `spec.json`. "Cinco famílias negativas seguidas" é
+heurística de gestão, não conclusão científica.
 
 ## 8. Scripts reproduzíveis (principais)
 

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "source": "_work/operador_ensinado_2026-09-17/critico_familia5/critico_familia5.jsonl",
+  "source_snapshot_bytes": 8716188,
+  "source_snapshot_sha256": "be32b6a2e0a68c16a2adb3e59912e991d2fe65d629dfec5c3a5b7c3a0c7ee703",
+  "locator": "line:6215.hex",
+  "prefix_bytes": 789,
+  "prefix_sha256": "396c7f0d499abfdff11273feaf28aa53c0dfb01a2e7e42ac51f9b27e7c4ea5fc",
+  "declared_plaintext_bytes": 1327,
+  "absent_tail_bytes": 538,
+  "truncated": true,
+  "dropped_nibbles": 0,
+  "corpus_sha256": "36c780f9e9e8e02807603e3d4a38f64da6ef3b0654239ac6d323b61d27e3c675",
+  "source_script_sha256": "9b14e4c3e718b7409deb181ab7a0da9a4099d584b5bbffebd736d52aa1dae3d6"
+}

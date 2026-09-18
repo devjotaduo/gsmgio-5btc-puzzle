@@ -1,0 +1,41 @@
+{
+  "hypothesis": "Complemento finito: somas com primos reinseridos + duas cláusulas históricas.\n\nHipótese: a ordem matrixsumlist -> lastwordsbeforearchichoice pede a lista\nnumérica seguida da cláusula. Não acrescenta ordens, cortes ou normalizações.\nO recorte da fase 3.2 é interpretativo; a segunda cláusula vem de roteiro\npré-filme. Nenhuma das duas tem autoridade de senha conhecida.\n",
+  "clauses": [
+    "reinsertingtheprimebasicsafterwhichyouwillberequiredto",
+    "sheisgoingtodieandthereisnothingyoucandotostopit"
+  ],
+  "order": "numeric_base + clause",
+  "forms": [
+    "raw",
+    "sha256hex"
+  ],
+  "blobs": [
+    "SMALL",
+    "COSMIC",
+    "TAIL32"
+  ],
+  "kdfs": [
+    "sha256",
+    "md5"
+  ],
+  "null_replicates": 100,
+  "seed": 18092027,
+  "null_ecc": false,
+  "raw32_order": "big-endian",
+  "source_hashes": {
+    "solver\\multiagente_2026_09_18\\reinsert_architect.py": "a0fbdac513a5b5ca04daee0ab076dda86e32e2c1da2b41fd89cb71ef16ec979b",
+    "solver\\multiagente_2026_09_18\\reinsert_primes.py": "c335e1aea6df75b8efbf9e3ce5e11831760075c4175c38057bdc69eab4b4aa9b",
+    "solver\\oraculo_duplo_2026_09_17\\oracle.py": "1b927716a5339a5a8cabe8527f1d7197e9bf539fdb508f25562dabafd45eec8d",
+    "solver\\experiments\\claude_endgame_2026_09_02\\gsmg_common.py": "25b160076554166b20d18f526fe7eebea0fd463a41c14d21290e114dd171d23e",
+    "README.md": "b5ade8d9cbeb7956e725d3021a0a7cd36cd8b66df3ca376f987ca61fd280afef",
+    "_work\\multiagente_2026-09-18\\reinsert_primes_v2\\materials.jsonl": "c78db0807d1100ed2f09cbfee390c2c2e78662cbd4db11b96d9e392b782176b6",
+    "_work\\recipe_audit_2026-09-11\\FRONTEIRA_TEXTUAL.md": "8a2846ae0605931d3a9d6185e58dfc81fd33e7e721cd6e8cee8f5a14a13a3fad",
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle\\solver\\oracles.py": "2fa8b8347a59df6d75a5ad2e0f8bf37642229783b3e8fedfe3ea53788a2484eb",
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle\\README.md": "b5ade8d9cbeb7956e725d3021a0a7cd36cd8b66df3ca376f987ca61fd280afef"
+  },
+  "clause_sources": [
+    "README.md fase 3.2; corte antes SELECT interpretativo",
+    "FRONTEIRA_TEXTUAL.md; roteiro pré-filme, p.122A/PDF130"
+  ],
+  "inputs_sha256": "a793047630fb0fa221f63b5dadc9414dec0d7823a377403ea453ce52576de719"
+}

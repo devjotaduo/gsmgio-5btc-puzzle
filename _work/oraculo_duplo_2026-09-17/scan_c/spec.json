@@ -1,0 +1,19 @@
+{
+  "contract": {
+    "corpus_sha256": "b2f957c6fcc09be2806fc5f3197bebdebb065ae7c3c639a7eacd9d8b9d129e67",
+    "targets": [
+      "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+      "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa"
+    ],
+    "target_hash160": {
+      "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe": "a9553269572a317e39f0f518cb87c1a0ee1dbae4",
+      "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa": "4bc468447fe1b048ad030a2f9a125478eabc4ed6"
+    },
+    "oracle_sha256": "b80c7af580d4910c5d8286dfa27aba0ebfcefa25267b0cf05b24610d9b6e781f",
+    "scanner_sha256": "3447d3e57273a1001d819027bb4c48e89057b95cfa2f0fbe70480c0f1aecb01f",
+    "batch_windows": 25000,
+    "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "corpus": "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\_work\\oraculo_duplo_2026-09-17\\part_c.sqlite",
+  "created_utc": "2026-09-17T23:57:58.639643+00:00"
+}

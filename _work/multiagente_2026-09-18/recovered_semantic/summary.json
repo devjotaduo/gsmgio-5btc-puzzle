@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "payloads": 225854,
+  "bytes": 260180711,
+  "candidate_payloads": 0,
+  "reasons": {},
+  "seconds": 210.797,
+  "input_hashes": {
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\_work\\multiagente_2026-09-18\\recovered\\corpus.sqlite": "4637c0722090360376b20392234674689ebacc3417bc5c97f33fd6b3d433820f",
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\solver\\multiagente_2026_09_18\\audit_recovered_semantic.py": "4afb902e21a8ef1090003d2df930ca22e725f4ebf90bbe13dbcbb79493b73160",
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\solver\\experiments\\claude_endgame_2026_09_02\\gsmg_common.py": "25b160076554166b20d18f526fe7eebea0fd463a41c14d21290e114dd171d23e",
+    "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\solver\\oraculo_duplo_2026_09_17\\oracle.py": "1b927716a5339a5a8cabe8527f1d7197e9bf539fdb508f25562dabafd45eec8d"
+  },
+  "finished_utc": "2026-09-18T04:41:41.247156+00:00",
+  "candidate_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "solution_declared": false,
+  "limits": [
+    "Triagem por propriedades locais, sem autenticar instruções ou chaves.",
+    "Só as três visões declaradas; ASCII contínuo de pelo menos48 bytes.",
+    "Nenhuma operação ECC e nenhum acesso à rede."
+  ]
+}

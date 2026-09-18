@@ -1,0 +1,165 @@
+{
+  "passed": true,
+  "exact_union_and_byte_comparison": true,
+  "checkpoint_totals_reconciled": true,
+  "observed_files_unchanged": 25,
+  "original_kit_unchanged": true,
+  "oracle_controls": {
+    "passed": true,
+    "known_bitcoin_vector": true,
+    "positive_cases": [
+      {
+        "kind": "raw32",
+        "prefix_length": 0,
+        "compressions": [
+          false,
+          true
+        ]
+      },
+      {
+        "kind": "raw32",
+        "prefix_length": 7,
+        "compressions": [
+          false,
+          true
+        ]
+      },
+      {
+        "kind": "raw32",
+        "prefix_length": 31,
+        "compressions": [
+          false,
+          true
+        ]
+      },
+      {
+        "kind": "hex64-and-wif",
+        "target": "1Cy4cPZuoEAERCZa45SqUduLqoFH2TYiF9"
+      },
+      {
+        "kind": "hex64-and-wif",
+        "target": "1MLztdVWDWQW2FeZiizqsNsYopyivQUPRC"
+      },
+      {
+        "kind": "raw32",
+        "prefix_length": 0,
+        "compressions": [
+          true,
+          false
+        ]
+      },
+      {
+        "kind": "raw32",
+        "prefix_length": 7,
+        "compressions": [
+          true,
+          false
+        ]
+      },
+      {
+        "kind": "raw32",
+        "prefix_length": 31,
+        "compressions": [
+          true,
+          false
+        ]
+      },
+      {
+        "kind": "hex64-and-wif",
+        "target": "1can45uc3Ynmm5jC2pyWbFBXWsm552pCE"
+      },
+      {
+        "kind": "hex64-and-wif",
+        "target": "1L32BiTpH64Bok4pzHcvdkK66mB2658Lwu"
+      }
+    ],
+    "independent_random_scalars": 16,
+    "encoded_text_cases": [
+      [
+        "cp273",
+        0,
+        "hex64"
+      ],
+      [
+        "cp273",
+        0,
+        "wif"
+      ],
+      [
+        "cp273",
+        1,
+        "hex64"
+      ],
+      [
+        "cp273",
+        1,
+        "wif"
+      ],
+      [
+        "utf-16-le",
+        0,
+        "hex64"
+      ],
+      [
+        "utf-16-le",
+        0,
+        "wif"
+      ],
+      [
+        "utf-16-le",
+        1,
+        "hex64"
+      ],
+      [
+        "utf-16-le",
+        1,
+        "wif"
+      ],
+      [
+        "utf-16-be",
+        0,
+        "hex64"
+      ],
+      [
+        "utf-16-be",
+        0,
+        "wif"
+      ],
+      [
+        "utf-16-be",
+        1,
+        "hex64"
+      ],
+      [
+        "utf-16-be",
+        1,
+        "wif"
+      ]
+    ],
+    "invalid_scalars_and_wif_rejected": true,
+    "matched_null": {
+      "shuffles": 100,
+      "seed": 17092026,
+      "attempts": 4900,
+      "hits": 0
+    },
+    "elapsed_seconds": 0.469,
+    "phase2_and_checkerboard_original_kit": true,
+    "kit_sha256": "e188b18f7b48ffa1dc89869f16e22877a95855a59a2798ee11de815b2ed9f43a",
+    "oracle_sha256": "b80c7af580d4910c5d8286dfa27aba0ebfcefa25267b0cf05b24610d9b6e781f",
+    "controls_sha256": "eeb273b67c922d687644974ea20f58e8f80f576cc1ada285563468ffcafe1065"
+  },
+  "explicit_hex_audit": {
+    "corpus_sha256": "5cb7b7d527c4f016aeef9a7eb532b753ed0aefeb4070ac8c454d542620f25ab7",
+    "files_with_snapshot_hash_verified": 1834,
+    "explicit_fields_checked": 49849,
+    "missing": [],
+    "unverifiable_sources": [],
+    "odd_length_fields": 0,
+    "scope": "campos explicitamente rotulados com valores hex entre aspas; não cobre generic hex, representações de texto ou gzip irrecuperável",
+    "passed_within_scope": true,
+    "script_sha256": "8237fe26ec30a3eeb06e584c284bf93cc2f9ed0f8d63acdadf845354e310b84e"
+  },
+  "main_corpus_sha256": "5cb7b7d527c4f016aeef9a7eb532b753ed0aefeb4070ac8c454d542620f25ab7",
+  "finalizer_sha256": "c05e94c6a43c32d01b9a5c8dad4b04144d557e06349acdd4e15f920f00027400"
+}

@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "reference_functions_only_no_module_import": true,
+  "historical_source_sha256": "07c0bfb382148cefa2026edd24e65bf76142b9cc880f7b84b84d3bbb366ab868",
+  "kit_source_sha256": "25b160076554166b20d18f526fe7eebea0fd463a41c14d21290e114dd171d23e",
+  "implementation_sha256": "00eec76c5c3458b46a382cdc384ab4e54621729aac6d5e8c53b68a4e9d9367e3",
+  "model_output_comparisons": 46328,
+  "family_comparisons": {
+    "cb": 39420,
+    "poly3": 432,
+    "bifid3": 5808,
+    "mono_rank": 8,
+    "digits": 300,
+    "groups": 40,
+    "a1z26_direct": 8,
+    "base": 96,
+    "index": 216
+  },
+  "all_six_forms_match": true,
+  "both_mask_versions_verified": true,
+  "comparison_sha256": "36221c880ec3a76f7b594bb6a523f57541205c7897114609be06d0897902402b"
+}

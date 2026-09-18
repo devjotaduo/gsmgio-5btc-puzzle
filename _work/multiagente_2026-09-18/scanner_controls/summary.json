@@ -1,0 +1,22 @@
+{
+  "status": "running",
+  "mode": "both",
+  "targets": [
+    "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+    "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa"
+  ],
+  "total_payloads": 4,
+  "total_bytes": 144,
+  "expected_raw32_windows_per_direction": 44,
+  "completed_batches": 0,
+  "payloads_scanned": 0,
+  "bytes_scanned": 0,
+  "attempts": {},
+  "valid_scalars": 0,
+  "hard_hits": 0,
+  "workers": 2,
+  "seconds": 0.0,
+  "session_attempts_per_second": 0.0,
+  "session_bytes_per_second": 0.0,
+  "updated_utc": "2026-09-18T04:29:37.110348+00:00"
+}

@@ -1,0 +1,144 @@
+{
+  "status": "complete",
+  "targets": [
+    "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+    "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa"
+  ],
+  "second_target_prize_status": "unconfirmed",
+  "main_corpus_sha256": "5cb7b7d527c4f016aeef9a7eb532b753ed0aefeb4070ac8c454d542620f25ab7",
+  "main_payloads": 592321,
+  "unique_payloads_union": 592339,
+  "unique_bytes_union": 76681745,
+  "attempts": {
+    "raw32": 58357232,
+    "hex64": 674,
+    "wif-uncompressed": 3,
+    "wif-compressed": 0
+  },
+  "totals_across_runs": {
+    "payloads_scanned": 592341,
+    "bytes_scanned": 76681841,
+    "valid_scalars": 58357909,
+    "hard_hits": 0
+  },
+  "runs": [
+    {
+      "name": "a",
+      "corpus_sha256": "b2280fee1076e2465afe85e8f131766f6182244f26d5bdc2d2760eb9e8117dfb",
+      "payloads": 26306,
+      "bytes": 12867865,
+      "attempts": {
+        "raw32": 12052379,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "hard_hits": 0,
+      "supplement_overlap": 0
+    },
+    {
+      "name": "b",
+      "corpus_sha256": "bbbbe94ea8cbe204d4caa918caf146f6f15dd1e70f60ab33805dac1366d10eec",
+      "payloads": 460322,
+      "bytes": 52155344,
+      "attempts": {
+        "raw32": 37885761,
+        "hex64": 189,
+        "wif-uncompressed": 1,
+        "wif-compressed": 0
+      },
+      "hard_hits": 0,
+      "supplement_overlap": 0
+    },
+    {
+      "name": "c",
+      "corpus_sha256": "b2f957c6fcc09be2806fc5f3197bebdebb065ae7c3c639a7eacd9d8b9d129e67",
+      "payloads": 105693,
+      "bytes": 11656931,
+      "attempts": {
+        "raw32": 8418011,
+        "hex64": 485,
+        "wif-uncompressed": 2,
+        "wif-compressed": 0
+      },
+      "hard_hits": 0,
+      "supplement_overlap": 0
+    },
+    {
+      "name": "supplement",
+      "corpus_sha256": "d0d6071fdb1bc2bbcdfccd0b1ef88837bdbe49ac853e531f4fc8208848cb47a5",
+      "payloads": 19,
+      "bytes": 912,
+      "attempts": {
+        "raw32": 323,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "hard_hits": 0,
+      "supplement_overlap": 2
+    },
+    {
+      "name": "partial",
+      "corpus_sha256": "36c780f9e9e8e02807603e3d4a38f64da6ef3b0654239ac6d323b61d27e3c675",
+      "payloads": 1,
+      "bytes": 789,
+      "attempts": {
+        "raw32": 758,
+        "hex64": 0,
+        "wif-uncompressed": 0,
+        "wif-compressed": 0
+      },
+      "hard_hits": 0,
+      "supplement_overlap": 0
+    }
+  ],
+  "main_partition_exact_disjoint_union": true,
+  "snapshot_started_utc": "2026-09-17T23:49:10.761650+00:00",
+  "snapshot_finished_utc": "2026-09-17T23:56:46.571545+00:00",
+  "main_collection_counts": {
+    "duplicate_representations": 22621,
+    "empty_representations": 355,
+    "excluded_field:generic_hex_without_plaintext_context": 2005572,
+    "excluded_field:text_without_plaintext_context": 784352,
+    "inventory_bytes": 3125871654,
+    "inventory_files": 2641,
+    "issue:decode_error": 65,
+    "issue:gzip_incomplete": 1,
+    "issue:incomplete_log_frame": 8,
+    "issue:invalid_hex": 1,
+    "issue:jsonl_parse_error": 4,
+    "issue:source_changed": 3,
+    "issue:unparsed_plaintext_signal": 219,
+    "issue:unterminated_final_line": 3,
+    "lines": 5651375,
+    "log_lines": 1037159,
+    "nonprefix_origins": 381161,
+    "origins": 614942,
+    "prefix_origins": 233781,
+    "processed_sources": 1834,
+    "snapshot_bytes": 2256590344,
+    "text_skipped_full_hex_present": 18096,
+    "unique_bytes": 76680140,
+    "unique_payloads": 592321
+  },
+  "code_sha256": {
+    "oracle.py": "b80c7af580d4910c5d8286dfa27aba0ebfcefa25267b0cf05b24610d9b6e781f",
+    "scan.py": "3447d3e57273a1001d819027bb4c48e89057b95cfa2f0fbe70480c0f1aecb01f"
+  },
+  "finalizer_sha256": "c05e94c6a43c32d01b9a5c8dad4b04144d557e06349acdd4e15f920f00027400",
+  "verified_utc": "2026-09-18T00:07:24.752075+00:00",
+  "limits": [
+    "Somente arquivos existentes no inventário; inclusões/escritas posteriores não são cobertas.",
+    "SHA256 de sources refere-se aos bytes do snapshot limitado ao tamanho inventariado.",
+    "Arquivos alterados durante cópia são sinalizados; snapshot não promete atomicidade do escritor.",
+    "Prefixos e representações textuais ambíguas são marcados truncated=1; caudas ausentes não são cobertas.",
+    "Não se inferem plaintexts a partir de senhas, hashes, ciphertexts ou materiais.",
+    "Logs sem campos reconhecidos ficam em issues quando apresentam sinal de plaintext.",
+    "Exclusões por diretório não enumeram os descendentes; arquivos excluídos não são lidos nem hasheados.",
+    "Não inclui plaintexts nunca preservados nem reconstrói bytes perdidos em representações textuais.",
+    "Tentativas não são escalares distintos; cada escalar válido testa ambas as serializações.",
+    "Não reexecuta hipóteses históricas nem recupera candidatos descartados sem bytes salvos.",
+    "O complemento parcial cobre 789 bytes, não os 538 bytes ausentes da cauda."
+  ]
+}

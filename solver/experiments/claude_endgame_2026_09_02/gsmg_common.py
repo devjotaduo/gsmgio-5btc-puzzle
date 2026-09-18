@@ -6,7 +6,8 @@ Importe com:
 Tudo aqui e DETERMINISTICO e verificado. Os oraculos duros sao a unica verdade.
 """
 import os, sys, re, base64, hashlib, math, itertools
-SOLVER = r"C:\Users\ruthe\Desktop\puzzle\gsmgio-5btc-puzzle\solver"
+# solver/ desta cópia do repositório: numa worktree, o kit usa os oráculos e o README da própria worktree
+SOLVER = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, SOLVER)
 import oracles as O                      # aes_open / check_privkey / check_mnemonic
 from Crypto.Cipher import AES
@@ -195,6 +196,7 @@ def semantic_text(t, min_score=-4.5, min_words=2):
     return len(word_hits(t, 6)) >= min_words
 def try_password_all(pw, blobs=("SMALL", "COSMIC", "TAIL32"), kdf="both"):
     """Roda aes_try em todos os blobs; devolve hits SEMANTICOS + paddings (soft).
+    `hard` = CANDIDATO (semântico ou privkey embutida), não solução: ver AGENTS.md, regra 1.
     Desde 2026-09-17: todo plaintext com padding válido também é varrido por privkey embutida
     (fast_priv_scan) e por blob aninhado (nested_blob), e o plaintext completo vai no registro
     (`hex`) para permitir varredura retroativa — antes os plaintexts eram descartados."""

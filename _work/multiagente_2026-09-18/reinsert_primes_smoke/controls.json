@@ -1,0 +1,52 @@
+{
+  "phase2_evp_sha256": true,
+  "checkerboard_3_2_2": true,
+  "planted_rectangular_sums": {
+    "passed": true,
+    "values": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13
+    ],
+    "expected": {
+      "rows": [
+        10,
+        31
+      ],
+      "rows_rev": [
+        31,
+        10
+      ],
+      "cols": [
+        9,
+        14,
+        18
+      ],
+      "cols_rev": [
+        18,
+        14,
+        9
+      ]
+    }
+  },
+  "matched_null_conservation": {
+    "passed": true,
+    "checks": {
+      "83": {
+        "same_marker_bits": true,
+        "same_residue_counts": true,
+        "same_physical_length": true,
+        "physical_length": 91
+      },
+      "84": {
+        "same_marker_bits": true,
+        "same_residue_counts": true,
+        "same_physical_length": true,
+        "physical_length": 91
+      }
+    }
+  }
+}

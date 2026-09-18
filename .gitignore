@@ -42,11 +42,25 @@ _work/decentraland/dep_*
 /node_modules/
 /.codex/
 /.agents/
+!/.agents/
+!/.agents/skills/
+!/.agents/skills/research-swarm/
+!/.agents/skills/research-swarm/**
+!/.agents/skills/related-problem-ladder/
+!/.agents/skills/related-problem-ladder/**
+!/.agents/skills/proof-certificate/
+!/.agents/skills/proof-certificate/**
 /.claude/*
 !/.claude/agents/
 !/.claude/skills/
 /.claude/skills/*
 !/.claude/skills/solve-phase/
+!/.claude/skills/research-swarm/
+!/.claude/skills/research-swarm/**
+!/.claude/skills/related-problem-ladder/
+!/.claude/skills/related-problem-ladder/**
+!/.claude/skills/proof-certificate/
+!/.claude/skills/proof-certificate/**
 /skills-lock.json
 
 # Bancada de pesquisa: publicar relatórios e checkpoints compactos.

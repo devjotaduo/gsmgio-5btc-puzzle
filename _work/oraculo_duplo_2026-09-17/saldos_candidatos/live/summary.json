@@ -1,0 +1,208 @@
+{
+  "status": "complete",
+  "addresses": 3370,
+  "ok": 3370,
+  "positive": 0,
+  "history": 12,
+  "balance_reported_sat": 0,
+  "started_utc": "2026-09-18T00:21:13.327355+00:00",
+  "finished_utc": "2026-09-18T00:22:21.080890+00:00",
+  "provider": "blockchain.com",
+  "input_sha256": "6cc3b9d13eeed39ae5f7b32c74b0aefa0000fdb5cf0bc713c0842db56087ec4c",
+  "script_sha256": "4d4aedce26aac53774c9a1f6ec9c1ffea98dfff480e697a594fd34ecc2ef78f6",
+  "interesting": [
+    {
+      "address": "1C7zdTfnkzmr13HfA2vNm5SJYRK6nEKyq8",
+      "origins": [
+        {
+          "candidate_line": 1,
+          "type": "p2pkh-compressed"
+        }
+      ],
+      "provider": "blockchain.com",
+      "checked_at_utc": "2026-09-18T00:21:14.125813+00:00",
+      "status": "ok",
+      "balance_reported_sat": 0,
+      "balance_reported_btc": "0.00000000",
+      "tx_count": 221,
+      "received_reported_sat": 2188995239
+    },
+    {
+      "address": "1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T",
+      "origins": [
+        {
+          "candidate_line": 1,
+          "type": "p2pkh-uncompressed"
+        }
+      ],
+      "provider": "blockchain.com",
+      "checked_at_utc": "2026-09-18T00:21:14.125813+00:00",
+      "status": "ok",
+      "balance_reported_sat": 0,
+      "balance_reported_btc": "0.00000000",
+      "tx_count": 4163,
+      "received_reported_sat": 1594722475
+    },
+    {
+      "address": "3KToBU4ykTWfjnu4kAUV1q8QosnxT61sbf",
+      "origins": [
+        {
+          "candidate_line": 1,
+          "type": "p2sh-p2wpkh"
+        }
+      ],
+      "provider": "blockchain.com",
+      "checked_at_utc": "2026-09-18T00:21:14.125813+00:00",
+      "status": "ok",
+      "balance_reported_sat": 0,
+      "balance_reported_btc": "0.00000000",
+      "tx_count": 2,
+      "received_reported_sat": 546
+    },
+    {
+      "address": "bc1q08alc0e5ua69scxhvyma568nvguqccrv4cc9n4",
+      "origins": [
+        {
+          "candidate_line": 1,
+          "type": "p2wpkh"
+        }
+      ],
+      "provider": "blockchain.com",
+      "checked_at_utc": "2026-09-18T00:21:14.125813+00:00",
+      "status": "ok",
+      "balance_reported_sat": 0,
+      "balance_reported_btc": "0.00000000",
+      "tx_count": 4,
+      "received_reported_sat": 1581
+    },
+    {
+      "address": "151XjjaceJMiB1gBH7jZiuqx2ZVj9Usa6R",
+      "origins": [
+        {
+          "candidate_line": 105,
+          "type": "p2pkh-uncompressed"
+        }
+      ],
+      "provider": "blockchain.com",
+      "checked_at_utc": "2026-09-18T00:21:24.053436+00:00",
+      "status": "ok",
+      "balance_reported_sat": 0,
+      "balance_reported_btc": "0.00000000",
+      "tx_count": 2,
+      "received_reported_sat": 10500
+    },
+    {
+      "address": "1F3iEJXDbQ1sZi6sx3LKNi1QNk6CYWf4ti",
+      "origins": [
+        {
+          "candidate_line": 169,
+          "type": "p2pkh-uncompressed"
+        }
+      ],
+      "provider": "blockchain.com",
+      "checked_at_utc": "2026-09-18T00:21:30.093832+00:00",
+      "status": "ok",
+      "balance_reported_sat": 0,
+      "balance_reported_btc": "0.00000000",
+      "tx_count": 2,
+      "received_reported_sat": 10500
+    },
+    {
+      "address": "1LoVGDgRs9hTfTNJNuXKSpywcbdvwRXpmK",
+      "origins": [
+        {
+          "candidate_line": 191,
+          "type": "p2pkh-compressed"
+        }
+      ],
+      "provider": "blockchain.com",
+      "checked_at_utc": "2026-09-18T00:21:33.029173+00:00",
+      "status": "ok",
+      "balance_reported_sat": 0,
+      "balance_reported_btc": "0.00000000",
+      "tx_count": 8,
+      "received_reported_sat": 1437434
+    },
+    {
+      "address": "1GAehh7TsJAHuUAeKZcXf5CnwuGuGgyX2S",
+      "origins": [
+        {
+          "candidate_line": 191,
+          "type": "p2pkh-uncompressed"
+        }
+      ],
+      "provider": "blockchain.com",
+      "checked_at_utc": "2026-09-18T00:21:33.029173+00:00",
+      "status": "ok",
+      "balance_reported_sat": 0,
+      "balance_reported_btc": "0.00000000",
+      "tx_count": 51,
+      "received_reported_sat": 146099959
+    },
+    {
+      "address": "bc1qmy63mjadtw8nhzl69ukdepwzsyvv4yex5qlmkd",
+      "origins": [
+        {
+          "candidate_line": 191,
+          "type": "p2wpkh"
+        }
+      ],
+      "provider": "blockchain.com",
+      "checked_at_utc": "2026-09-18T00:21:33.029173+00:00",
+      "status": "ok",
+      "balance_reported_sat": 0,
+      "balance_reported_btc": "0.00000000",
+      "tx_count": 2,
+      "received_reported_sat": 1000
+    },
+    {
+      "address": "1JX13G3cfWJgqpEfiTaksnN9RRAQKbH6et",
+      "origins": [
+        {
+          "candidate_line": 539,
+          "type": "p2pkh-compressed"
+        }
+      ],
+      "provider": "blockchain.com",
+      "checked_at_utc": "2026-09-18T00:22:07.078704+00:00",
+      "status": "ok",
+      "balance_reported_sat": 0,
+      "balance_reported_btc": "0.00000000",
+      "tx_count": 2,
+      "received_reported_sat": 892
+    },
+    {
+      "address": "19GuvDvMMUZ8vq84wT79fvnvhMd5MnfTkR",
+      "origins": [
+        {
+          "candidate_line": 674,
+          "type": "p2pkh-compressed"
+        }
+      ],
+      "provider": "blockchain.com",
+      "checked_at_utc": "2026-09-18T00:22:21.079669+00:00",
+      "status": "ok",
+      "balance_reported_sat": 0,
+      "balance_reported_btc": "0.00000000",
+      "tx_count": 2,
+      "received_reported_sat": 44349
+    },
+    {
+      "address": "1CC3X2gu58d6wXUWMffpuzN9JAfTUWu4Kj",
+      "origins": [
+        {
+          "candidate_line": 674,
+          "type": "p2pkh-uncompressed"
+        }
+      ],
+      "provider": "blockchain.com",
+      "checked_at_utc": "2026-09-18T00:22:21.079669+00:00",
+      "status": "ok",
+      "balance_reported_sat": 0,
+      "balance_reported_btc": "0.00000000",
+      "tx_count": 288,
+      "received_reported_sat": 26373906
+    }
+  ],
+  "balance_semantics": "final_balance reportado; endpoint não separa confirmado/mempool"
+}

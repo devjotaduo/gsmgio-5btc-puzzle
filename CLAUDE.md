@@ -10,6 +10,10 @@ Notas só para o Claude Code:
   o que estiver no repositório (`ENDGAME.md`, relatórios) não se duplica lá.
 - Skill `solve-phase` (`.claude/skills/solve-phase/`): reproduz o padrão sha256 → AES de
   qualquer fase. Agente `telegram-digger` (`.claude/agents/`): pesquisa o export do Telegram.
+- Skills `research-swarm`, `related-problem-ladder` e `proof-certificate`
+  (`.claude/skills/`): espelhos idênticos das canônicas em `.agents/skills/`; editar lá e copiar.
+- Trabalho com o Codex: `python tools/codex_pair.py` (protocolo em `AGENTS.md`, "Trabalho em
+  dupla"). O `result.json` e o `.codex/` só existem no checkout principal (ver "Dados locais").
 - Para ler mensagens novas do grupo sem export: Telegram Desktop via computer-use, busca
   "GSMG Puzzle Solvers", filtro "From: Jrk".
 - Rotina diária de vigilância (tarefa agendada do app, id `gsmg-monitor-pistas`, 08:10 local):

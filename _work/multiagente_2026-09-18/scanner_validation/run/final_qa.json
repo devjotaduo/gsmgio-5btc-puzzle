@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "status": "failed",
+  "pass": false,
+  "scan_status": "complete",
+  "ecc_performed": false,
+  "network_used": false,
+  "verifier_sha256": "cac8a2ba819fe7da4b5550935c7d70fc1db0aba0a09f20662ecb4bff7f2706a6",
+  "run": "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle-oraculo-duplo\\_work\\multiagente_2026-09-18\\scanner_validation\\run",
+  "verified_utc": "2026-09-18T04:47:59.647855+00:00",
+  "error": "corpus_hash_mismatch"
+}

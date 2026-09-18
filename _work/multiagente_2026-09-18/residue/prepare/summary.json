@@ -1,0 +1,61 @@
+{
+  "status": "prepared_only",
+  "decoder_configurations": 23164,
+  "family_counts": {
+    "cb": 19710,
+    "poly3": 216,
+    "bifid3": 2904,
+    "mono_rank": 4,
+    "digits": 150,
+    "groups": 20,
+    "a1z26_direct": 4,
+    "base": 48,
+    "index": 108
+  },
+  "changed_outputs_from_position_fix": 9068,
+  "empty_outputs": 27,
+  "materials": 71599,
+  "passwords": 143198,
+  "AES_decisions": 859188,
+  "legacy_generated_materials_without_gate": 71025,
+  "material_intersection_with_legacy_generator": 37920,
+  "new_materials_from_position_fix": 33679,
+  "legacy_materials_not_generated_after_fix": 33105,
+  "legacy_generated_set_sha256": "068eb91a254b3fabd9a5ace666083a9514a68e9b179c892fe30b92c59188a518",
+  "corrected_material_set_sha256": "54577ee1dd0b950ca1068c814aef56df06e63325136ef5c827f010f3c4557f9c",
+  "password_set_sha256": "c2ee7104c0f3a6e97da342def1c48478465a230b6709bda7297054339391b95f",
+  "forms": {
+    "dots_to_spaces": {
+      "count": 20896,
+      "set_sha256": "ad9f6ef986673900b7acb8ab39c5d591d81b056bf6249b29b657511840aba458"
+    },
+    "letters": {
+      "count": 20896,
+      "set_sha256": "d30d89d52828fe3c5c21b824a15f835fccb87cd91d8aeb9567557015fc088405"
+    },
+    "letters_lower": {
+      "count": 20896,
+      "set_sha256": "cf97042712d8c5b89b1e94242a8d12c8187bd601997284b0359c4427c628b8e4"
+    },
+    "lower": {
+      "count": 20995,
+      "set_sha256": "b5ed42c3e6bf4d81c096283ca56add84bd893e997f17d693cf5643e83dade91f"
+    },
+    "output": {
+      "count": 20995,
+      "set_sha256": "192da5811d2db54fa0ab62ce3e1f318cb83ab89f56df17b1302c1e89427ef730"
+    },
+    "upper": {
+      "count": 20995,
+      "set_sha256": "192da5811d2db54fa0ab62ce3e1f318cb83ab89f56df17b1302c1e89427ef730"
+    }
+  },
+  "historical_report": {
+    "scored_configurations": 23114,
+    "passwords_actually_tested": 680,
+    "AES_decisions": 4080,
+    "padding_records": 15
+  },
+  "historical_overlap_limit": "Legacy generator means all generated forms, not the actual historical top-20 corpus. The complete 680-password set was not preserved; no exact old/new AES subtraction is claimed.",
+  "generation_seconds": 4.17
+}
