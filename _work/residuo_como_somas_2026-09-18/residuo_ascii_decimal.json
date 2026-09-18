@@ -1,0 +1,34 @@
+{
+ "familia": "ASCII decimal (cada caractere = seu código de 2 ou 3 dígitos)",
+ "argumento_do_zero": "o resíduo não tem `o`, logo nenhum código pode conter o dígito 0; nas minúsculas isso proíbe 'defghijklmnx' — inclusive 'e'",
+ "codigos_permitidos": 77,
+ "controle": {
+  "texto_plantado": "rasp copa",
+  "caminhos": 1,
+  "fracao": 1.0
+ },
+ "alvos": {
+  "L84": {
+   "digitos": 61,
+   "caminhos": 0
+  },
+  "L84_rev": {
+   "digitos": 61,
+   "caminhos": 0
+  },
+  "L83": {
+   "digitos": 60,
+   "caminhos": 0
+  },
+  "L83_rev": {
+   "digitos": 60,
+   "caminhos": 0
+  }
+ },
+ "fracao_maxima_global": {
+  "palavras": 0.0,
+  "prosa": 0.0
+ },
+ "referencia_ingles": -3.751,
+ "script_sha256": "e0648c4d8ce15980117237eeebd2d2e271586126b6cc0faae94350f14422b7b5"
+}

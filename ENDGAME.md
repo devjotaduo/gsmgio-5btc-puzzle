@@ -347,8 +347,12 @@ comum do inglês. Isso mata de imediato `lastwordsbeforearchichoice`, `thispassw
 `causality`, `thematrixhasyou` e `enter` como literais; `yellowblueprimes` e `yinyang` passam no filtro
 e morrem no comprimento (27 e 11 dígitos contra 60/61). Sobre o objeto que o rótulo nomeia: das 200
 janelas antes das 5 ocorrências de "choice" no `MISC.txt`, só 13 (6,5 %) sobrevivem ao filtro e nenhuma
-tem comprimento compatível. Fecha "o resíduo é a codificação **a1z26** de um texto em inglês"; não fecha
-outras codificações nem objetos que não sejam texto.
+tem comprimento compatível. Fecha "o resíduo é a codificação **a1z26** de um texto em inglês". A leitura
+**ASCII decimal** também foi fechada, por impossibilidade estrutural: o dígito `2` não pode iniciar
+código imprimível algum (21–29 < 32; 2xx > 126), e o resíduo contém `2` (a letra `b`) — a enumeração
+exaustiva do DAG dá **0 caminhos** nos quatro alvos. Com o método `To_Base(16)` da página (fechado no
+PR #7, exaustivo por ser bijetivo), as três codificações decimais naturais do resíduo estão encerradas.
+Continuam fora: bases não decimais, bijeção arbitrária dígito↔símbolo e objetos que não sejam texto.
 [Relatório](_work/residuo_como_somas_2026-09-18/RELATORIO.md).
 O terceiro item, **o que "zeroed out" zera, está fechado** como espaço enumerável: os 2^9 =
 512 subconjuntos de símbolos zerados (não só os de 1 e 2 do histórico), em L84 e L83, na ordem
