@@ -1,0 +1,134 @@
+{
+ "camada": "D",
+ "reconciliacao_montage_summary": {
+  "sobreviventes": [
+   797172,
+   797172
+  ],
+  "montagens": [
+   12754752,
+   12754752
+  ],
+  "janelas_unicas": [
+   339511437,
+   339511437
+  ],
+  "best_refeito": [
+   797172,
+   797172
+  ]
+ },
+ "verificacoes_EC": 679022874,
+ "verificacoes_h160": 1358045748,
+ "hits": [],
+ "por_arquivo": {
+  "survivors_10612.jsonl": {
+   "sha256": "1e66905ec3f4942a29039ac33a94061e2519b2764ee1e32b65a9a15e9ec26f56",
+   "sobreviventes": 40163,
+   "janelas_unicas": 17105503
+  },
+  "survivors_10868.jsonl": {
+   "sha256": "bb03fe017f572177f93679790cdf29f876ea6ad8e2380741bd24cbd0d5a673fe",
+   "sobreviventes": 40077,
+   "janelas_unicas": 17068839
+  },
+  "survivors_11892.jsonl": {
+   "sha256": "1826084728e9c18175ed1bed94f128a29956745e283512d9cdea883ebd347e5c",
+   "sobreviventes": 42497,
+   "janelas_unicas": 18098839
+  },
+  "survivors_24672.jsonl": {
+   "sha256": "b9298563712ec77c5a655e3ef38c25d8cfd062702afecc1d39029f361280bf1a",
+   "sobreviventes": 37542,
+   "janelas_unicas": 15988953
+  },
+  "survivors_24784.jsonl": {
+   "sha256": "d709e8d885ba75b83de1034d690e1c56cd3fc2208c26140e56ee14de9b71bdc8",
+   "sobreviventes": 42647,
+   "janelas_unicas": 18163185
+  },
+  "survivors_25020.jsonl": {
+   "sha256": "d7f1eb499f31e2ff100235c91fdda84fa9f443c966c31b2aaacf56bc5b65249f",
+   "sobreviventes": 37877,
+   "janelas_unicas": 16131575
+  },
+  "survivors_26276.jsonl": {
+   "sha256": "fe091ee8652122c23567b373f6750f89d9cf481864d353ba3b16e340c58acee1",
+   "sobreviventes": 39815,
+   "janelas_unicas": 16957248
+  },
+  "survivors_27780.jsonl": {
+   "sha256": "dbf970780ddc584e1dede2501ebc86c2dad3e130cf122e8553684c8cb26fee82",
+   "sobreviventes": 40197,
+   "janelas_unicas": 17119762
+  },
+  "survivors_29048.jsonl": {
+   "sha256": "c750085d6801b2e0f2e32ade725c5f223cf5ce0615259dd312fcf13d5e3455f2",
+   "sobreviventes": 39984,
+   "janelas_unicas": 17028825
+  },
+  "survivors_32384.jsonl": {
+   "sha256": "dbac054a524a2bba94397e3fafac1f51230b37992e1aca6ba3a13f022471e63c",
+   "sobreviventes": 37452,
+   "janelas_unicas": 15950598
+  },
+  "survivors_33032.jsonl": {
+   "sha256": "ce5868f3372836bcc5abd2bac1f6122b32ada5c36d5d4325913f27e3f8d265d2",
+   "sobreviventes": 40322,
+   "janelas_unicas": 17172932
+  },
+  "survivors_33532.jsonl": {
+   "sha256": "0c42006b0be069d1f53950a79ea680c52d6d36e9abfffb233e6d7418902f515e",
+   "sobreviventes": 40459,
+   "janelas_unicas": 17231101
+  },
+  "survivors_34308.jsonl": {
+   "sha256": "8780290e074cbe90160b9c2d18077cb64915f2c8da4e4fac4ceb685c7b9264bf",
+   "sobreviventes": 40222,
+   "janelas_unicas": 17130386
+  },
+  "survivors_43772.jsonl": {
+   "sha256": "c1077b2f120cb9648fce21c6b600ebc6402244738828939876794d179476e838",
+   "sobreviventes": 42595,
+   "janelas_unicas": 18140919
+  },
+  "survivors_48256.jsonl": {
+   "sha256": "6563b195707f807fbdd07487fe26281bf31abf904aff026475199c1cb3678159",
+   "sobreviventes": 40140,
+   "janelas_unicas": 17095499
+  },
+  "survivors_49452.jsonl": {
+   "sha256": "b35f88f1bfd85502fff86b815cd8ba873aebff8d94be88ab5f5f67c002c75a9c",
+   "sobreviventes": 39999,
+   "janelas_unicas": 17035436
+  },
+  "survivors_50036.jsonl": {
+   "sha256": "f097be66e74a836510ea6b63b535c23b434cba09261dd349fb6dc0a0d477c936",
+   "sobreviventes": 37421,
+   "janelas_unicas": 15937374
+  },
+  "survivors_51492.jsonl": {
+   "sha256": "a061b41ac2449b7c5be5930ce284563230a6f07b78904fd3bd396fc163c058a6",
+   "sobreviventes": 42433,
+   "janelas_unicas": 18071874
+  },
+  "survivors_51992.jsonl": {
+   "sha256": "8579c78e1f70833b047495cd019a0cbf950e2b5ac4825ecf14a3d9309bf50f60",
+   "sobreviventes": 37683,
+   "janelas_unicas": 16048940
+  },
+  "survivors_6400.jsonl": {
+   "sha256": "3592da8b615d45cea6e851863965522631a520d92b3831273009c82df8860569",
+   "sobreviventes": 37647,
+   "janelas_unicas": 16033649
+  }
+ },
+ "segundos": 4462.0,
+ "alvos": {
+  "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe": "a9553269572a317e39f0f518cb87c1a0ee1dbae4",
+  "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa": "4bc468447fe1b048ad030a2f9a125478eabc4ed6"
+ },
+ "workers": 10,
+ "script_sha256": "026fcc42ef3ecc550fa5954248541a98aa314bb2d9a220992b528ab597198377",
+ "orfaos_sha256": "04f2b0122817beef6f6764338faae12dbfc97c5a99067823e5b81be98cc94f95"
+}

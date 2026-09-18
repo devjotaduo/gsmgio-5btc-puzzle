@@ -1,0 +1,25 @@
+{
+ "formula": {
+  "escalares_aleatorios": 2000,
+  "negacao_igual_a_coincurve": true
+ },
+ "k_plantado_por_fonte": {
+  "select256": true,
+  "cjs_color_factor": true,
+  "brainwallet_py_e_2": true,
+  "F6_T3_low": true,
+  "F6_gerar": true,
+  "cores163": true,
+  "F6_T3_vb_ate_654889": true,
+  "prime_host_faed_keys": true,
+  "corpus_466310": true,
+  "F6_separadores": true,
+  "F6_T3_vb_resto": true,
+  "brainwallet_inline": true,
+  "cjs_zero_cells": true,
+  "cjs_frequency": true,
+  "cjs_wavelength": true,
+  "cjs_url_prime": true,
+  "cjs_count_prime": true
+ }
+}
