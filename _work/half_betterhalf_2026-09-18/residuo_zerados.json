@@ -1,0 +1,35 @@
+{
+ "hipotese": "'some characters need to be zeroed out' sobre o resíduo de §6",
+ "espaco": {
+  "subconjuntos_de_simbolos": 512,
+  "por_tamanho": {
+   "0": 1,
+   "1": 9,
+   "2": 36,
+   "3": 84,
+   "4": 126,
+   "5": 126,
+   "6": 84,
+   "7": 36,
+   "8": 9,
+   "9": 1
+  },
+  "leituras_de_zeragem": 2044,
+  "escalares_testados": 6132,
+  "cobre_o_historico": "tamanhos 0, 1 e 2 inclusos para reconciliar"
+ },
+ "controles": {
+  "leitor_da_pagina_ok": true,
+  "oraculo_de_chave_ok": true
+ },
+ "hits_de_chave_ou_par": [],
+ "textos_printable_ge_085": [],
+ "melhor_printable": {
+  "printable": 0.72,
+  "zerados": "ag",
+  "variante": "L83/dir",
+  "latin1": "O&kJ0CGUCTA^Ãyt·ÌpÖbër6"
+ },
+ "referencia_escore_ingles": -3.766,
+ "script_sha256": "492244bea1c6b04e8e4366e167fe0d2ed4d05db9f08f7903ebfdca17ad2f9cd3"
+}
