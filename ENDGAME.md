@@ -261,6 +261,7 @@ experimento; a revisão de §3.12 amplia apenas a cobertura dos bytes preservado
 | "twenty-three ciphers" como família de codecs: 65 de byte único e os multi-byte (UTF, CJK), nas duas direções, sobre plaintexts guardados, campos da página e senhas | 762 k AES, ≈ 100 M reinterpretações | 0 |
 | Dualidade (`half / better half`, yin-yang): um blob como senha do outro, metades do SMALL em torno de `enter`, cortes em todos os pontos, XOR, complemento da matriz, estrelas da capa (proxy) | 265 k senhas, 1,6 M AES | 0 |
 | Referência pessoal pela gramática das fases: 104 itens públicos do mundo do criador, aridade 1–3 (4–6 na lista curta), 7 materiais, separadores | ≈ 1,7 M candidatos, 32,6 M AES | 0 (triplas verbatim a 67,5 %) |
+| Extensão da anterior com o registro pessoal-informal de 12/07 e 16/07 que o inventário não pegou: 41 itens inéditos (typos dele inclusos), disjunção garantida por construção | 19.913 candidatos, 358 k AES, 19.913 brainwallets; nulo casado z +0,57 | 0 (z +1,16) |
 | "our first hint is your last command" literal: o sha256 publicado em 22/04/2019 como argumento `-pass`; "segunda porta" = `sha256(título + 17ucy…)` e variantes | 217 senhas; 10 URLs (todas 404) | 0 |
 | Senha como **arquivo** (`-kfile`/`-pass file:` = 1.ª linha; 89 artefatos, chunks PNG, digests dos bytes, 128 k linhas de texto) | 767 k decifrações | 0 |
 | Textos do site revivido, capa/livro, falas do criador, linhas de comando openssl | | 0 |
