@@ -39,6 +39,17 @@ em `solver/`, cada um com seus próprios controles.
 | `result.json`, `ChatExport_*/` | exports do Telegram do grupo "GSMG Puzzle Solvers" — **locais, nunca commitar** |
 | `tg_monitor.py` | monitor local do grupo (telethon; credenciais fora do repo) |
 
+## Skills versionadas
+
+As skills de pesquisa ficam em `.agents/skills/` e podem ser invocadas pelo nome.
+Use somente a que corresponde ao trabalho:
+
+| Skill | Quando usar |
+|---|---|
+| `research-swarm` | uma questão aberta exige hipóteses concorrentes e síntese de evidências |
+| `related-problem-ladder` | é preciso testar um mecanismo em uma instância menor antes de ampliar a campanha |
+| `proof-certificate` | uma alegação precisa de verificação independente ou prova formal antes de ser tratada como fato |
+
 ## Regras de ouro
 
 1. **Só o oráculo duro declara solução:** uma privkey de 32 B que gera a pubkey do prêmio
@@ -71,6 +82,44 @@ em `solver/`, cada um com seus próprios controles.
 8. **Git:** `origin` é o fork `devjotaduo/gsmgio-5btc-puzzle`; commits em pt-BR
    (conventional commits). Vários agentes trabalham em paralelo neste diretório: confira
    `git status` e estagie só os próprios hunks; nunca reverta trabalho alheio não commitado.
+
+## Modo de investigação em enxame
+
+Use este modo para uma pergunta aberta que tenha mais de uma hipótese razoável;
+não o use para repetir campanhas fechadas ou inflar uma enumeração sem premissa.
+
+1. **Contrato antes de paralelizar.** Registre no `spec.json` a pergunta, oráculo de
+   sucesso, hipótese, contra-hipótese, fontes, parâmetros, controle positivo, nulo e
+   condição de parada. Divida as frentes por mecanismos independentes, não por fatias
+   arbitrárias da mesma busca.
+2. **Tese contra construção.** Quando aplicável, uma frente procura uma regularidade ou
+   invariante; outra busca uma construção que a viole. As duas precisam atacar a mesma
+   alegação e declarar o que as refutaria. Não force esse par quando não houver uma
+   antítese concreta.
+3. **Problema-ponte antes da campanha cara.** Se a operação ainda for incerta, resolva
+   primeiro uma instância menor que preserve o mecanismo. Um degrau só é útil quando
+   diferencia hipóteses, calibra o oráculo ou elimina um parâmetro. Resultado no degrau
+   não é solução do puzzle.
+4. **Troca de achados em formato verificável.** Cada frente publica em
+   `_work/<campanha>/FINDINGS.md` ou no relatório: fato observado, inferência, fontes ou
+   hashes, cobertura, controles, limite e próxima pergunta. Não repasse conclusão sem
+   evidência reproduzível, nem material sensível/volumoso fora das regras de Git.
+5. **Síntese com conjuntos exatos.** Antes de combinar resultados, compare bytes,
+   senhas, parâmetros e alvos; declare sobreposição e não some tentativas duplicadas.
+   O sintetizador separa o que foi provado do que só ganhou prioridade.
+6. **Certificado antes de declarar vitória.** Uma suposta chave ou abertura passa por
+   implementação independente. Uma cobertura finita precisa de hashes, checkpoints e
+   reconciliação. Para uma afirmação matemática geral, formalize em Lean ou outro
+   verificador quando o modelo estiver definido e a ferramenta disponível; a prova formal
+   não substitui validar a modelagem do puzzle.
+7. **Organização e propriedade.** Scripts reproduzíveis ficam em `solver/<campanha>/`;
+   relatório e execução final em `_work/<campanha>_<data>/`. Frentes que escrevem arquivos
+   distintos declaram propriedade; para alterações concorrentes do mesmo módulo, use
+   worktrees separados ou serialize a edição. A campanha encerra com `RELATORIO.md`, índice
+   e atualização de `ENDGAME.md` apenas se o mapa realmente mudou.
+
+Não há meta fixa de agentes, horas ou tentativas. Escale apenas até cobrir as hipóteses
+independentes declaradas; o critério é qualidade de evidência, não volume de execução.
 
 ## Ambiente
 
@@ -105,5 +154,5 @@ a–i,o → decimal → hex → ASCII) e deixa `dbbi` e `faed` sem decodificaç�
 
 O único fato estrutural novo é que `dbbi` foi construído com marcadores `b`/`be` nas
 posições lógicas primas (o passo `yellowblueprimes`); o resíduo é estatisticamente
-aleatório e tudo o que é simples sobre ele já deu zero. **Só insumo novo do criador move
-a fronteira**; ver `ENDGAME.md` §6.
+aleatório e tudo o que é simples sobre ele já deu zero. **Só insumo novo do criador ou
+lacuna de cobertura reproduzida move a fronteira**; ver `ENDGAME.md` §6.

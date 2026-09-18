@@ -1,0 +1,4 @@
+interface:
+  display_name: "Certificado de Prova"
+  short_description: "Prepara verificação independente ou prova formal"
+  default_prompt: "Use $proof-certificate para tornar esta alegação verificável."

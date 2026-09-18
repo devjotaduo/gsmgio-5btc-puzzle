@@ -42,6 +42,14 @@ _work/decentraland/dep_*
 /node_modules/
 /.codex/
 /.agents/
+!/.agents/
+!/.agents/skills/
+!/.agents/skills/research-swarm/
+!/.agents/skills/research-swarm/**
+!/.agents/skills/related-problem-ladder/
+!/.agents/skills/related-problem-ladder/**
+!/.agents/skills/proof-certificate/
+!/.agents/skills/proof-certificate/**
 /.claude/*
 !/.claude/agents/
 !/.claude/skills/

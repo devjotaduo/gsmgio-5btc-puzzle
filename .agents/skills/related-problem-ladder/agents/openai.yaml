@@ -1,0 +1,4 @@
+interface:
+  display_name: "Problema-Ponte"
+  short_description: "Testa mecanismos em um problema relacionado menor"
+  default_prompt: "Use $related-problem-ladder para construir um problema-ponte desta hipótese."

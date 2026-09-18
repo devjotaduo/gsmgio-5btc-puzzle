@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pesquisa em Enxame"
+  short_description: "Coordena hipóteses e evidências em pesquisa aberta"
+  default_prompt: "Use $research-swarm para organizar esta investigação em pistas verificáveis."
