@@ -41,7 +41,8 @@ def digitos(R, zerados):
 
 
 def bytes_da_pagina(s):
-    """decimal -> hex -> bytes (o método que decodificou lastwords/thispassword)."""
+    """decimal -> hex -> bytes (o método que decodificou lastwords/thispassword). Hex ímpar leva zero à
+    esquerda; o From_Hex do CyberChef diverge nesse caso (ver hex_paridade.py)."""
     n = int(s)
     if n == 0:
         return b""

@@ -96,7 +96,10 @@ A2I = {c: i + 1 for i, c in enumerate("abcdefghi")}   # a=1..i=9 (metodo ensinad
 def digits(s, base1=True):
     return [ord(c) - 96 if base1 else ord(c) - 97 for c in s.lower() if c in "abcdefghi"]
 def z_method(digit_list):
-    """Metodo da pagina: digitos decimais -> inteiro -> hex -> bytes (ascii)."""
+    """Metodo da pagina: digitos decimais -> inteiro -> hex -> bytes (ascii).
+    Hex impar leva zero a esquerda (inverso exato de bytes -> inteiro). O From_Hex do CyberChef le
+    pares desde o inicio e deixa o ultimo digito sozinho; so diverge com hex impar, o que texto
+    printavel nunca produz. Ver solver/lacunas_2026_09_18/hex_paridade.py."""
     n = int("".join(str(d) for d in digit_list)); h = format(n, "x")
     if len(h) % 2: h = "0" + h
     return bytes.fromhex(h)

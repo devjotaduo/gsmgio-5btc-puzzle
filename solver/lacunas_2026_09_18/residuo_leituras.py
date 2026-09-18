@@ -7,8 +7,11 @@ pelo scorer limpo (o original inflaria a leitura identidade, que é rica em a-i)
 
   (1) a1z26 com segmentação ambígua — a dica literal "could also be 21 or 1812" (R=18/A=1/B=2):
       dígitos 1-9 lidos como números 1-26, enumerando todas as fronteiras (single ou par 10-26);
-  (2) método literal da página (Substitute a-i,o->1-9,0; To_Base(16); From_Hex) — o que decodificou
+  (2) método da página (a-i,o->1-9,0; decimal -> hex -> bytes) — o que decodificou
       lastwordsbeforearchichoice e thispassword; controle reproduz os dois verbatim.
+      CORREÇÃO 2026-09-18: hex ímpar leva zero à esquerda, o que NÃO é o From_Hex do CyberChef (este lê
+      pares desde o início e deixa o último dígito sozinho). Os controles têm hex par e não veem a
+      diferença. A leitura CyberChef foi testada à parte; ver hex_paridade.py.
 
 Conclusão registrada: ambas dão lixo. Não é operação faltando — é que o resíduo, sob o que o criador
 ensinou, não vira texto. O muro é interpretativo (qual segmentação, o que "zeroed out" zera).
