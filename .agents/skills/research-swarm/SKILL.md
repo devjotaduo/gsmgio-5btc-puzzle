@@ -1,45 +1,53 @@
 ---
 name: research-swarm
-description: "Organiza uma investigação aberta em pistas independentes, com tese, antítese, compartilhamento de evidências e síntese verificável. Use quando uma questão exige mais de uma hipótese finita; não use para uma edição ou teste isolado."
+description: "Organiza uma investigação aberta em frentes independentes e finitas, com tese, antítese, troca de evidências reproduzíveis e síntese auditável. Use quando uma questão exige mais de uma hipótese falsificável; não use para uma edição ou teste isolado."
 ---
 
-# pesquisa em enxame
+# Pesquisa em enxame
 
-Use quando a questão ainda não tem um caminho único. O objetivo é aumentar cobertura
-sem transformar paralelismo em volume de tentativas sem critério.
+Aplica o "Modo de investigação em enxame" de `AGENTS.md`: leia antes a tabela de famílias refutadas
+do `ENDGAME.md` e a cobertura já registrada. O objetivo é aumentar cobertura sem transformar
+paralelismo em volume de tentativas sem critério; não paralelize antes de definir pergunta, oráculo
+e cobertura.
 
 ## Contrato da campanha
 
-Antes de abrir frentes, registre em `spec.json` ou no relatório:
+Registre em `_work/<campanha>_<data>/spec.json`, antes de abrir frentes (sem esse contrato, uma saída
+é pista, não conclusão):
 
-- a pergunta e o oráculo que define êxito;
-- a hipótese central e o que a refutaria;
-- uma pista de **regularidade/invariante** e outra de **falha/construção** quando
-  ambas forem sensatas;
-- fontes, corpus, parâmetros e limites de cada pista;
-- a evidência mínima que justifica passar para síntese.
+1. pergunta exata e oráculo que decide um acerto;
+2. hipótese central, o que a refutaria e a construção contrária a produzir ou refutar;
+3. domínio, partição e limite de cada frente; sobreposição só quando deliberada (verificação
+   independente) e declarada;
+4. fontes, corpus, dados, ferramentas, parâmetros e limitações;
+5. controle positivo, nulo casado (ou N/A justificado, em prova determinística) e condição de parada;
+6. dono de cada arquivo e a evidência mínima que justifica passar à síntese.
 
-Uma pista pode ser analítica, experimental, de recuperação de cobertura ou de
-auditoria. Não force simetria artificial: a pista oposta deve atacar a mesma
-afirmação por um mecanismo realmente diferente.
+## Frentes
 
-## Organização e troca de avanços
+Uma frente pode ser analítica, experimental, de recuperação de cobertura ou de auditoria.
+Distribua papéis complementares: sustentar a regularidade/invariante, procurar a falha/construção
+que a viole, verificar controles e reproduções, e resolver um problema relacionado que preserve o
+mecanismo. Não force simetria artificial: a frente oposta deve atacar a mesma afirmação por um
+mecanismo realmente diferente. Cada frente escreve só nos próprios arquivos
+(`solver/<campanha>/<frente>/`, `_work/<campanha>_<data>/<frente>/`). Pare uma frente quando ela
+atingir a cobertura declarada, reproduzir um negativo ou perder a premissa; não abra variantes
+ilimitadas sem novo sinal.
 
-Cada responsável declara os arquivos que possui e publica somente achados
-reproduzíveis: hipótese, fontes/hashes, controles, resultado, cobertura e
-limites. Mantenha material sensível ou volumoso fora do Git conforme o projeto.
+## Troca de achados
 
-Ao compartilhar um avanço, separe fato observado, inferência e próxima pergunta.
-Quem sintetiza compara conjuntos, parâmetros e oráculos antes de combinar
-resultados; não some contagens sobrepostas nem converta triagem em prova.
+Cada frente publica em `_work/<campanha>_<data>/<frente>/FINDINGS.md` só achados reproduzíveis:
+hipótese, conjunto coberto, fontes/hashes, comando, artefatos, controles, resultado, limitação e
+próximo teste. Separe fato observado, inferência e próxima pergunta. Compartilhe evidência
+verificável, nunca só interpretação; material sensível ou volumoso fica fora do Git.
 
-Quando houver trabalho paralelo, prefira frentes independentes e finitas. Pare
-uma frente quando ela atingir sua cobertura declarada, reproduzir um negativo ou
-perder a premissa. Não abra variantes ilimitadas sem novo sinal.
+## Síntese e entrega
 
-## Fechamento
-
-A síntese deve dizer o que as pistas concordam, o que elas contradizem, a
-cobertura conjunta e a lacuna precisa que permanece. Encaminhe uma possível
-solução para `$proof-certificate`; encaminhe um mecanismo promissor porém ainda
-amplo para `$related-problem-ladder` antes de ampliar a busca principal.
+Quem coordena (dono do `spec.json` e do `RELATORIO.md`) compara conjuntos, parâmetros e oráculos
+antes de combinar: declara concordâncias independentes, contradições e sua reprodução decisiva,
+cobertura conjunta, a lacuna precisa que permanece e as inferências que não passam pelo oráculo
+duro. Não some tentativas sobrepostas nem converta triagem em prova. Feche com relatório
+reproduzível: hipótese, comandos, versões de dados, controles, nulo, cobertura, resultados,
+limitações e decisão. Encaminhe uma possível solução ou alegação forte para proof-certificate;
+encaminhe um mecanismo promissor porém ainda amplo para related-problem-ladder antes de ampliar a
+busca principal.

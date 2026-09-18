@@ -13,8 +13,9 @@ uma solução. Leia o relatório da campanha (`_work/<nome>/RELATORIO.md`, índi
 - Raiz do repositório como diretório de trabalho, salvo indicação no docstring. Muitos scripts
   gravam em `_work/<campanha>/` por caminho fixo: **não mova campanhas nem renomeie pastas**.
 - Nunca execute a pasta em lote: há buscas de horas e scripts que sobrescrevem evidências.
-- Padding AES válido, checksum BIP39 e escore de inglês não são solução; só o oráculo duro
-  (privkey → pubkey do prêmio, ou plaintext semântico) conta.
+- Padding AES válido, checksum BIP39 e escore de inglês não são solução. Só conta o oráculo
+  duro da regra 1 de `AGENTS.md`: privkey que gera `1GSMG…` ou `17ucy…`, ou abertura AES
+  certificada. Plaintext semântico (o `hard` de `G.try_password_all`) é candidato.
 
 ## 1. Kit e oráculos (não mover: importados por caminho)
 

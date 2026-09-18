@@ -126,9 +126,10 @@ Exports do Telegram até 2026-09-17: nenhuma fala do criador depois de 2026-09-0
     694.386 anteriores (81.862.702 verificações) + 1.331.155 da rodada "operador ensinado"
     (231.207.482): **0**. O MITM de 16! (§4-B) exige a pubkey do alvo e **não** pode ser refeito para
     `17ucy`; os demais negativos históricos de privkey valem só para `1GSMG`.
-12. **Revisão independente dos bytes salvos contra os dois alvos.** Implementação separada da de
+12. **Revisão paralela dos bytes salvos contra os dois alvos.** Implementação separada da de
     §3.11 (`solver/oraculo_duplo_2026_09_17/oracle.py`), feita em paralelo na branch
-    `codex/oraculo-duplo`; as duas chegaram ao mesmo zero por caminhos distintos. Ela notou ainda
+    `codex/oraculo-duplo` sobre um corpus distinto (`_work/` + `solver/`, com prefixos); a
+    sobreposição com o corpus da §3.11 não foi medida. Ela notou ainda
     que `G.fast_priv_scan` varria só raw32, apesar da docstring mencionar hex/WIF. Resultado:
     **zero chaves dos dois alvos** em 592.339 conteúdos únicos (58.357.232 tentativas raw32, 674
     hex64 e 3 WIFs válidos), com pubkeys comprimidas/não comprimidas e controles independentes.
@@ -139,7 +140,9 @@ Exports do Telegram até 2026-09-17: nenhuma fala do criador depois de 2026-09-0
 13. **Auditoria multiagente de 18/09: cobertura ampliada, ainda sem solução.** A fase 3.2
     usa a direção inversa de cp273 em relação ao decoder textual inicialmente implementado.
     A correção reproduz os 1.539 bytes autênticos do Beaufort no offset 447; nova varredura
-    textual dos 592.339 conteúdos anteriores: zero candidatos adicionais e zero hits.
+    textual dos 592.339 conteúdos anteriores: zero candidatos adicionais e zero hits. **Lacuna
+    declarada:** o corpus da §3.11 (694.386 plaintexts + 1.331.155 da rodada "operador
+    ensinado") não passou pela visão cp273 inversa nem por UTF-16.
     Também foram recuperados 225.854 plaintexts completos de binários COSMIC e caudas Bifid
     que não pertenciam ao corpus anterior. A varredura concluída verificou todas as
     253.179.237 janelas raw32 em cada orientação BE/LE (**506.358.474 tentativas**) contra
@@ -262,11 +265,13 @@ abertura de AES; não confirma esse token como parte literal da senha atual.
 
 ## 7. Como trabalhar
 
-Ver `AGENTS.md`. Em resumo: oráculo duro único; KDF SHA256; hipótese em prosa, finita, com
-controle positivo e nulo casado (≥ 100 embaralhamentos); scorer limpo para texto; plaintexts em
-hex; conferir esta tabela antes de codar; relatório em `_work/`, script em `solver/`, linha no
-índice; entrada aqui só se mudar o mapa. Regra de parada adotada: cinco famílias negativas
-consecutivas com nulo ⇒ esperar insumo do criador.
+Ver `AGENTS.md`, que prevalece. Em resumo: oráculo duro (privkey de um dos dois alvos, ou
+abertura AES certificada); KDF SHA256; hipótese em prosa, finita, com controle positivo e nulo
+casado (≥ 100 embaralhamentos); scorer limpo para texto; plaintexts em hex; conferir esta tabela
+antes de codar; relatório em `_work/`, script em `solver/`, linha no índice; entrada aqui só se
+mudar o mapa. Campanha nova só com insumo do criador, lacuna reproduzida ou família ausente da
+§4; a parada de cada campanha está no seu `spec.json`. "Cinco famílias negativas seguidas" é
+heurística de gestão, não conclusão científica.
 
 ## 8. Scripts reproduzíveis (principais)
 
