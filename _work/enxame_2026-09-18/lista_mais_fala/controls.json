@@ -1,0 +1,52 @@
+{
+  "controles": {
+    "fase2_comum": true,
+    "fase3_concatenador": {
+      "senha_ok": true,
+      "abre": {
+        "SHA256": true
+      }
+    },
+    "openssl_cli": {
+      "fase2": true,
+      "fase3": true
+    },
+    "bases_270_iguais_v2": true,
+    "plantado": {
+      "SHA256": true,
+      "MD5": true,
+      "privkey_material": true,
+      "alvo_sintetico_nao_vaza": true
+    }
+  },
+  "lacuna": {
+    "critico_familia2_regerado": {
+      "senhas": 55576,
+      "esperado_log": 55576,
+      "intersecao": 0,
+      "intersecao_nucleo": 0
+    },
+    "reinsert_primes_todas_composicoes": {
+      "valores": 3240,
+      "intersecao": 0
+    },
+    "reinsert_architect_1080": {
+      "senhas": 1080,
+      "intersecao": 0
+    },
+    "corpora_14_reinsert_architect_evidence": {
+      "valores": 188142,
+      "intersecao": 0
+    },
+    "logs_padding_familia2_pw": {
+      "valores": 1610,
+      "intersecao": 0
+    },
+    "codigo": {
+      "reinsert_primes.py compose_materials": "lista + rótulo literal lastwordsbeforearchichoice/thispassword",
+      "reinsert_architect.py CLAUSES": "lista + 2 cláusulas fixas (reinserting..., sheisgoingtodie...)",
+      "critico_familia2.py COMPOS/composicoes": "fala + rótulos fixos; nenhuma lista numérica",
+      "familia2_lastwords.py:209 COMPOS": "idem"
+    }
+  }
+}

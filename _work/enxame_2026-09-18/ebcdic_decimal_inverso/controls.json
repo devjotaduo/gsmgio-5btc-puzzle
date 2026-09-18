@@ -1,0 +1,154 @@
+{
+  "fase2": {
+    "abre": true
+  },
+  "repertorios": {
+    "rep_antigo_eq_encoding_json_1141": true,
+    "tamanhos": 98,
+    "so_antigo": 55,
+    "so_inverso": 55,
+    "comum": 43,
+    "az_autentico_hex": "2fc25bc0c1c3c5c7d1f62c255f3e3ff8c9cacbc8cdcecfcc603a",
+    "az_rejeitados_pelo_antigo": 12,
+    "az_rejeitados_pelo_inverso": 0,
+    "rep_inverso_hex": "040506070a0d141516171a1b2021232425262728292a2b2c2d2e2f3a3b3c3d3e3f5b5e5f607b7e808182838488898a8b8c8d8e90919394959698999a9b9ea0a7c0c1c2c3c4c5c7c8c9cacbcccdcecfd1dce0e1e2e3e5e7e8e9eaebecedeeeff1f6f8",
+    "rep_antigo_hex": "050d2540434b4c4d4e4f50595b5c5d5e5f6061636b6c6d6e6f797a7b7d7e7f818283848586878889919293949596979899a2a3a4a5a6a7a8a9b5bbc1c2c3c4c5c6c7c8c9d1d2d3d4d5d6d7d8d9dce2e3e4e5e6e7e8e9ecf0f1f2f3f4f5f6f7f8f9fc"
+  },
+  "fase32_direcao": {
+    "plaintext_sha256": "b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34",
+    "offset": 447,
+    "beaufort_bytes": 1539,
+    "transformacao": "b.decode('latin-1').encode('cp273')",
+    "reproduz_readme": true,
+    "bytes_no_rep_inverso": 1539,
+    "bytes_no_rep_antigo": 864
+  },
+  "sucessor": {
+    "sucessor_inteiros_por_repertorio": 65536,
+    "aceito_vs_definicao": 85536,
+    "aleatorios_aceitos": 10038,
+    "sucessor_grandes_vs_contagem": 6000
+  },
+  "dfs_vs_forca_bruta": {
+    "casos": 2000,
+    "casos_com_aceitos": 1090,
+    "aceitos_conferidos": 1791
+  },
+  "ponte": {
+    "texto": "I've been waiting for you.\nThe matrix has you!",
+    "bytes_autenticos_hex": "f11bcec180c2c1c13e80cf2fd1c8d13ec580c33fca80603fcd068ee8c7c1805f2fc8cad1cc80c72fcb80603fcd81",
+    "bytes_fora_do_rep_antigo": 26,
+    "casos": [
+      {
+        "alias": "a",
+        "digitos": 111,
+        "zeraveis": 19,
+        "nos_dfs": 43,
+        "dfs_recupera": true,
+        "direta_recupera": true,
+        "rep_antigo_aceita": false,
+        "cjs_antigo_hits": 0,
+        "cjs_antigo_recupera_direcao_antiga": true
+      },
+      {
+        "alias": "b",
+        "digitos": 111,
+        "zeraveis": 19,
+        "nos_dfs": 55,
+        "dfs_recupera": true,
+        "direta_recupera": true,
+        "rep_antigo_aceita": false,
+        "cjs_antigo_hits": 0,
+        "cjs_antigo_recupera_direcao_antiga": true
+      },
+      {
+        "alias": "c",
+        "digitos": 111,
+        "zeraveis": 18,
+        "nos_dfs": 47,
+        "dfs_recupera": true,
+        "direta_recupera": true,
+        "rep_antigo_aceita": false,
+        "cjs_antigo_hits": 0,
+        "cjs_antigo_recupera_direcao_antiga": true
+      },
+      {
+        "alias": "d",
+        "digitos": 111,
+        "zeraveis": 21,
+        "nos_dfs": 55,
+        "dfs_recupera": true,
+        "direta_recupera": true,
+        "rep_antigo_aceita": false,
+        "cjs_antigo_hits": 0,
+        "cjs_antigo_recupera_direcao_antiga": true
+      },
+      {
+        "alias": "e",
+        "digitos": 111,
+        "zeraveis": 25,
+        "nos_dfs": 77,
+        "dfs_recupera": true,
+        "direta_recupera": null,
+        "rep_antigo_aceita": false,
+        "cjs_antigo_hits": 0,
+        "cjs_antigo_recupera_direcao_antiga": true
+      },
+      {
+        "alias": "f",
+        "digitos": 111,
+        "zeraveis": 22,
+        "nos_dfs": 67,
+        "dfs_recupera": true,
+        "direta_recupera": true,
+        "rep_antigo_aceita": false,
+        "cjs_antigo_hits": 0,
+        "cjs_antigo_recupera_direcao_antiga": true
+      },
+      {
+        "alias": "g",
+        "digitos": 111,
+        "zeraveis": 15,
+        "nos_dfs": 49,
+        "dfs_recupera": true,
+        "direta_recupera": true,
+        "rep_antigo_aceita": false,
+        "cjs_antigo_hits": 0,
+        "cjs_antigo_recupera_direcao_antiga": true
+      },
+      {
+        "alias": "h",
+        "digitos": 111,
+        "zeraveis": 20,
+        "nos_dfs": 59,
+        "dfs_recupera": true,
+        "direta_recupera": true,
+        "rep_antigo_aceita": false,
+        "cjs_antigo_hits": 0,
+        "cjs_antigo_recupera_direcao_antiga": true
+      },
+      {
+        "alias": "i",
+        "digitos": 111,
+        "zeraveis": 24,
+        "nos_dfs": 113,
+        "dfs_recupera": true,
+        "direta_recupera": null,
+        "rep_antigo_aceita": false,
+        "cjs_antigo_hits": 0,
+        "cjs_antigo_recupera_direcao_antiga": true
+      }
+    ]
+  },
+  "bijecao_plantada": {
+    "recuperados": 400
+  },
+  "privkey_plantada": {
+    "plantado_e_recuperado": true,
+    "restaurado": true
+  },
+  "aes_openssl": {
+    "openssl": "OpenSSL 3.5.7 9 Jun 2026 (Library: OpenSSL 3.5.7 9 Jun 2026)",
+    "abre_com_sha256": true
+  }
+}

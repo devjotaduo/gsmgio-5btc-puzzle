@@ -1,0 +1,1209 @@
+{
+ "frente": "lacuna_cp273_utf16",
+ "status": "completo",
+ "reconciliacao": {
+  "retro": {
+   "esperado": {
+    "conteudos": 694386,
+    "bytes": 62457317
+   },
+   "recoletado_agora": 837728,
+   "bytes_agora": 133175123,
+   "fora_de_operador_ensinado": 693556,
+   "bytes_fora_de_operador_ensinado": 62068517,
+   "mtime_max_arquivos_fora_de_oe": "2026-09-17T18:32:50+00:00",
+   "fim_da_retro_utc (mtime do log)": "2026-09-17T23:34:21+00:00",
+   "com_mtime_ate_o_fim_da_retro": 701468,
+   "bytes_ate_o_fim_da_retro": 65902144,
+   "menor_corte_que_alcanca_694386": {
+    "corte_utc": "2026-09-17T23:32:26+00:00",
+    "conteudos": 700920
+   },
+   "arquivos_com_hex": 138
+  },
+  "v4": {
+   "esperado": {
+    "conteudos": 1331155,
+    "janelas": 115603741
+   },
+   "recoletado_agora": 1448949,
+   "janelas_agora": 120664743,
+   "por_arquivo_identico_ao_v4_resultado": false,
+   "arquivos_divergentes": [
+    {
+     "arquivo": "critico_sete_final\\pads_o5up.jsonl.gz",
+     "agora": {
+      "lidos": 117794,
+      "novos": 117794
+     },
+     "v4": null
+    }
+   ]
+  },
+  "uniao": {
+   "conteudos": 1894673,
+   "so_retro": 445724,
+   "so_v4": 1056945,
+   "ambos": 392004,
+   "bytes": 211776899
+  }
+ },
+ "cobertura": {
+  "conteudos_varridos": 1894673,
+  "bytes_varridos": 211776899,
+  "impressao_multiconjunto": {
+   "retro": "d7e164e59c2d0c47244aacc0c97a7e74e391b649c6f15c3498b1258260d82ee4",
+   "v4": "e6a434d566061fb38ddb84fa1ff888b3fcd813d431b6ef0bc87c5b8395a20f60",
+   "definicao": "Σ sha256(conteúdo) mod 2^256 por origem"
+  },
+  "visoes": [
+   "cp273-inverse",
+   "cp273",
+   "utf-16-le@0",
+   "utf-16-le@1",
+   "utf-16-be@0",
+   "utf-16-be@1"
+  ],
+  "hex_wif_tambem_na_original": true
+ },
+ "tentativas_de_chave": {
+  "original:hex64": 710313,
+  "original:wif-uncompressed": 3
+ },
+ "escalares_validos": 706250,
+ "hits": [],
+ "motivos_por_visao": {
+  "cp273-inverse:sem:ebcdic": 2302,
+  "cp273-inverse:semantic_whole": 2302,
+  "cp273:ascii_run_ge48": 60,
+  "cp273:sem:ebcdic": 11668,
+  "cp273:sem:printable": 112,
+  "cp273:semantic_whole": 11714
+ },
+ "motivos_novos_por_visao": {
+  "cp273-inverse:sem:ebcdic": 2302,
+  "cp273:sem:ebcdic": 11668
+ },
+ "conteudos_candidatos": 13970,
+ "triagem_dos_candidatos": {
+  "artefato: sem:ebcdic na cp273 direta mede as minúsculas ASCII da própria original | ambos": 308,
+  "artefato: sem:ebcdic na cp273 inversa de conteúdo já legível na original | retro": 2302,
+  "artefato: sem:ebcdic na cp273 direta mede as minúsculas ASCII da própria original | retro": 11360
+ },
+ "candidatos_a_examinar": 0,
+ "conteudos_so_com_motivos_da_original": 46,
+ "arquivos_retro": [
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada1_logs\\selection__select256.jsonl",
+   "mtime_utc": "2026-09-17T07:01:17+00:00",
+   "fora_oe": true,
+   "lidos": 1,
+   "novos": 1
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada2_logs\\cores_parametro_163__cores163.jsonl",
+   "mtime_utc": "2026-09-17T07:53:23+00:00",
+   "fora_oe": true,
+   "lidos": 474,
+   "novos": 474
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada2_logs\\critic2__bits163.jsonl",
+   "mtime_utc": "2026-09-17T07:55:51+00:00",
+   "fora_oe": true,
+   "lidos": 3,
+   "novos": 3
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada2_logs\\rerun_ext__s2_board_plain.jsonl",
+   "mtime_utc": "2026-09-17T07:53:25+00:00",
+   "fora_oe": true,
+   "lidos": 73,
+   "novos": 73
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada2_logs\\rerun_ext__s3_board_plain.jsonl",
+   "mtime_utc": "2026-09-17T07:53:26+00:00",
+   "fora_oe": true,
+   "lidos": 238,
+   "novos": 232
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada2_logs\\rerun_ext__s4_raise_plain.jsonl",
+   "mtime_utc": "2026-09-17T07:53:26+00:00",
+   "fora_oe": true,
+   "lidos": 66,
+   "novos": 62
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada2_logs\\rerun_ext__s5_firstboard_plain.jsonl",
+   "mtime_utc": "2026-09-17T07:53:26+00:00",
+   "fora_oe": true,
+   "lidos": 74,
+   "novos": 73
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada2_logs\\rerun_ext__select256.jsonl",
+   "mtime_utc": "2026-09-17T07:53:26+00:00",
+   "fora_oe": true,
+   "lidos": 1,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada2_logs\\rerun_ext__select256_plain.jsonl",
+   "mtime_utc": "2026-09-17T07:53:26+00:00",
+   "fora_oe": true,
+   "lidos": 106,
+   "novos": 105
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada2_logs\\rerun_ext__yinyang_roundB_plain.jsonl",
+   "mtime_utc": "2026-09-17T07:53:26+00:00",
+   "fora_oe": true,
+   "lidos": 14,
+   "novos": 14
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada2_logs\\rerun_ext__yinyang_roundC_plain.jsonl",
+   "mtime_utc": "2026-09-17T07:53:26+00:00",
+   "fora_oe": true,
+   "lidos": 6,
+   "novos": 6
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada2_logs\\rerun_ext__yinyang_roundD_plain.jsonl",
+   "mtime_utc": "2026-09-17T07:53:26+00:00",
+   "fora_oe": true,
+   "lidos": 746,
+   "novos": 746
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada3_logs\\forense_bytes__f4_passwords.jsonl",
+   "mtime_utc": "2026-09-17T17:50:31+00:00",
+   "fora_oe": true,
+   "lidos": 93,
+   "novos": 93
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada3_logs\\kfile_first_line__soft_hits.jsonl",
+   "mtime_utc": "2026-09-17T17:50:29+00:00",
+   "fora_oe": true,
+   "lidos": 104,
+   "novos": 100
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada3_logs\\premissa_cifra__multicipher_attack.jsonl",
+   "mtime_utc": "2026-09-17T17:50:28+00:00",
+   "fora_oe": true,
+   "lidos": 562,
+   "novos": 562
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada3_logs\\unicode_yinyang__unicode_yinyang_partial_agente4.jsonl",
+   "mtime_utc": "2026-09-17T17:50:30+00:00",
+   "fora_oe": true,
+   "lidos": 524,
+   "novos": 524
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada4_logs\\matrixsumlist_struct__paddings.jsonl",
+   "mtime_utc": "2026-09-17T18:32:50+00:00",
+   "fora_oe": true,
+   "lidos": 1002,
+   "novos": 1002
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\critico_codecs23\\critico_codecs23.jsonl",
+   "mtime_utc": "2026-09-18T01:14:38+00:00",
+   "fora_oe": false,
+   "lidos": 518,
+   "novos": 518
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\critico_familia2\\run.jsonl",
+   "mtime_utc": "2026-09-17T23:46:42+00:00",
+   "fora_oe": false,
+   "lidos": 1302,
+   "novos": 1299
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\critico_familia4_codecs\\critico_familia4_codecs.jsonl",
+   "mtime_utc": "2026-09-18T00:29:16+00:00",
+   "fora_oe": false,
+   "lidos": 247594,
+   "novos": 247593
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\critico_familia5\\critico_familia5.jsonl",
+   "mtime_utc": "2026-09-17T23:53:38+00:00",
+   "fora_oe": false,
+   "lidos": 6274,
+   "novos": 6272
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\critico_familia6\\paddings_materiais.jsonl",
+   "mtime_utc": "2026-09-18T00:05:50+00:00",
+   "fora_oe": false,
+   "lidos": 2900,
+   "novos": 2899
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\critico_familia6\\paddings_materiais2.jsonl",
+   "mtime_utc": "2026-09-18T01:19:13+00:00",
+   "fora_oe": false,
+   "lidos": 4652,
+   "novos": 4652
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\critico_familia6\\paddings_repro.jsonl",
+   "mtime_utc": "2026-09-18T00:02:26+00:00",
+   "fora_oe": false,
+   "lidos": 14002,
+   "novos": 14001
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\critico_familia6\\paddings_separadores.jsonl",
+   "mtime_utc": "2026-09-18T00:14:12+00:00",
+   "fora_oe": false,
+   "lidos": 5483,
+   "novos": 5483
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\critico_familia6\\paddings_triplas_low.jsonl",
+   "mtime_utc": "2026-09-18T00:27:15+00:00",
+   "fora_oe": false,
+   "lidos": 39087,
+   "novos": 39075
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\critico_familia6\\paddings_triplas_low_resume.jsonl",
+   "mtime_utc": "2026-09-18T01:07:20+00:00",
+   "fora_oe": false,
+   "lidos": 16158,
+   "novos": 16154
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\critico_familia6\\paddings_triplas_vb.jsonl",
+   "mtime_utc": "2026-09-18T01:20:48+00:00",
+   "fora_oe": false,
+   "lidos": 46445,
+   "novos": 46354
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\critico_rab\\ext_soft.jsonl",
+   "mtime_utc": "2026-09-18T01:07:09+00:00",
+   "fora_oe": false,
+   "lidos": 1725,
+   "novos": 1715
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\critico_rab\\repro\\soft_padding.jsonl",
+   "mtime_utc": "2026-09-18T00:54:46+00:00",
+   "fora_oe": false,
+   "lidos": 188,
+   "novos": 178
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\critico_rab_a1z26\\extensao_soft.jsonl",
+   "mtime_utc": "2026-09-17T23:53:41+00:00",
+   "fora_oe": false,
+   "lidos": 4133,
+   "novos": 2324
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\critico_rab_a1z26\\l83_soft.jsonl",
+   "mtime_utc": "2026-09-17T23:54:15+00:00",
+   "fora_oe": false,
+   "lidos": 157,
+   "novos": 108
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\critico_rab_final\\extra_bits_soft.jsonl",
+   "mtime_utc": "2026-09-18T01:39:50+00:00",
+   "fora_oe": false,
+   "lidos": 2,
+   "novos": 2
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\familia2_lastwords\\run.jsonl",
+   "mtime_utc": "2026-09-17T23:33:24+00:00",
+   "fora_oe": false,
+   "lidos": 553,
+   "novos": 339
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\familia4_codecs\\familia4_codecs.jsonl",
+   "mtime_utc": "2026-09-18T01:13:45+00:00",
+   "fora_oe": false,
+   "lidos": 2866,
+   "novos": 2865
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\familia5_dualidade\\familia5_dualidade.jsonl",
+   "mtime_utc": "2026-09-17T23:37:25+00:00",
+   "fora_oe": false,
+   "lidos": 203,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\familia6_referencia_pessoal\\paddings.jsonl",
+   "mtime_utc": "2026-09-17T23:32:26+00:00",
+   "fora_oe": false,
+   "lidos": 7371,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\familia6_referencia_pessoal\\paddings_extra.jsonl",
+   "mtime_utc": "2026-09-17T23:42:13+00:00",
+   "fora_oe": false,
+   "lidos": 6631,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\operador_ensinado_2026-09-17\\rab_a1z26\\soft_padding.jsonl",
+   "mtime_utc": "2026-09-17T23:37:32+00:00",
+   "fora_oe": false,
+   "lidos": 188,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\prime_codepoints_2026-09-16\\cases.jsonl",
+   "mtime_utc": "2026-09-16T09:05:15+00:00",
+   "fora_oe": true,
+   "lidos": 2,
+   "novos": 2
+  },
+  {
+   "arquivo": "_work\\rsa_color_candidates_2026-09-16\\candidates.jsonl",
+   "mtime_utc": "2026-09-16T08:18:52+00:00",
+   "fora_oe": true,
+   "lidos": 51335,
+   "novos": 51335
+  },
+  {
+   "arquivo": "_work\\rsa_color_candidates_2026-09-16\\passwords.jsonl",
+   "mtime_utc": "2026-09-16T08:20:32+00:00",
+   "fora_oe": true,
+   "lidos": 102670,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\rsa_substituted_digits_2026-09-16\\ascii_followup.jsonl",
+   "mtime_utc": "2026-09-16T08:39:28+00:00",
+   "fora_oe": true,
+   "lidos": 18,
+   "novos": 18
+  },
+  {
+   "arquivo": "_work\\rsa_substituted_digits_2026-09-16\\cases.jsonl",
+   "mtime_utc": "2026-09-16T08:30:59+00:00",
+   "fora_oe": true,
+   "lidos": 25,
+   "novos": 25
+  },
+  {
+   "arquivo": "_work\\rsa_substituted_digits_2026-09-16\\verification_cases.jsonl",
+   "mtime_utc": "2026-09-16T08:44:00+00:00",
+   "fora_oe": true,
+   "lidos": 28,
+   "novos": 28
+  },
+  {
+   "arquivo": "_work\\utf8_decimal_2026-09-16\\two_symbols\\cases.jsonl",
+   "mtime_utc": "2026-09-16T03:29:08+00:00",
+   "fora_oe": true,
+   "lidos": 24024,
+   "novos": 24005
+  },
+  {
+   "arquivo": "_work\\xor_period_2026-09-15\\known_keys\\cases.jsonl",
+   "mtime_utc": "2026-09-16T02:29:33+00:00",
+   "fora_oe": true,
+   "lidos": 2,
+   "novos": 2
+  },
+  {
+   "arquivo": "_work\\binary_partition_2026-09-15\\candidates.json",
+   "mtime_utc": "2026-09-16T01:38:31+00:00",
+   "fora_oe": true,
+   "lidos": 3170,
+   "novos": 3170
+  },
+  {
+   "arquivo": "_work\\binary_partition_2026-09-15\\passwords.json",
+   "mtime_utc": "2026-09-16T01:38:52+00:00",
+   "fora_oe": true,
+   "lidos": 12680,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\color_carry_2026-09-16\\candidates.json",
+   "mtime_utc": "2026-09-16T05:10:24+00:00",
+   "fora_oe": true,
+   "lidos": 55,
+   "novos": 55
+  },
+  {
+   "arquivo": "_work\\color_carry_2026-09-16\\oracles.json",
+   "mtime_utc": "2026-09-16T05:10:24+00:00",
+   "fora_oe": true,
+   "lidos": 228,
+   "novos": 76
+  },
+  {
+   "arquivo": "_work\\color_factor_sums_2026-09-16\\materials.json",
+   "mtime_utc": "2026-09-16T09:54:49+00:00",
+   "fora_oe": true,
+   "lidos": 8265,
+   "novos": 8265
+  },
+  {
+   "arquivo": "_work\\color_factor_sums_2026-09-16\\oracles.json",
+   "mtime_utc": "2026-09-16T09:56:45+00:00",
+   "fora_oe": true,
+   "lidos": 16635,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\color_residue_2026-09-16\\candidates.json",
+   "mtime_utc": "2026-09-16T05:02:06+00:00",
+   "fora_oe": true,
+   "lidos": 39,
+   "novos": 39
+  },
+  {
+   "arquivo": "_work\\color_residue_2026-09-16\\oracles.json",
+   "mtime_utc": "2026-09-16T05:02:06+00:00",
+   "fora_oe": true,
+   "lidos": 234,
+   "novos": 78
+  },
+  {
+   "arquivo": "_work\\count_prime_matrix_2026-09-16\\oracles.json",
+   "mtime_utc": "2026-09-16T03:36:37+00:00",
+   "fora_oe": true,
+   "lidos": 990,
+   "novos": 488
+  },
+  {
+   "arquivo": "_work\\count_prime_matrix_2026-09-16\\preimages.json",
+   "mtime_utc": "2026-09-16T03:36:37+00:00",
+   "fora_oe": true,
+   "lidos": 472,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\frequency_primes_2026-09-16\\materials.json",
+   "mtime_utc": "2026-09-16T05:51:14+00:00",
+   "fora_oe": true,
+   "lidos": 8712,
+   "novos": 8504
+  },
+  {
+   "arquivo": "_work\\frequency_primes_2026-09-16\\oracles.json",
+   "mtime_utc": "2026-09-16T05:51:14+00:00",
+   "fora_oe": true,
+   "lidos": 27631,
+   "novos": 9675
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\mitm16\\config.json",
+   "mtime_utc": "2026-09-17T10:46:06+00:00",
+   "fora_oe": true,
+   "lidos": 1,
+   "novos": 1
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada3_logs\\forense_bytes__f4_passwords.json",
+   "mtime_utc": "2026-09-17T17:50:31+00:00",
+   "fora_oe": true,
+   "lidos": 108,
+   "novos": 13
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada3_logs\\forense_bytes__f5_retro_ebcdic.json",
+   "mtime_utc": "2026-09-17T17:50:31+00:00",
+   "fora_oe": true,
+   "lidos": 253,
+   "novos": 91
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada3_logs\\forense_bytes__RETORNO.json",
+   "mtime_utc": "2026-09-17T17:50:31+00:00",
+   "fora_oe": true,
+   "lidos": 1,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada3_logs\\infrared__summary.json",
+   "mtime_utc": "2026-09-17T17:50:30+00:00",
+   "fora_oe": true,
+   "lidos": 5,
+   "novos": 5
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada3_logs\\kfile_first_line__summary.json",
+   "mtime_utc": "2026-09-17T17:50:29+00:00",
+   "fora_oe": true,
+   "lidos": 1,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada3_logs\\kfile_first_line__summary_lines.json",
+   "mtime_utc": "2026-09-17T17:50:29+00:00",
+   "fora_oe": true,
+   "lidos": 1,
+   "novos": 1
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada3_logs\\premissa_cifra__summary.json",
+   "mtime_utc": "2026-09-17T17:50:28+00:00",
+   "fora_oe": true,
+   "lidos": 10,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada3_logs\\unicode_yinyang__unicode_yinyang_summary.json",
+   "mtime_utc": "2026-09-17T17:50:30+00:00",
+   "fora_oe": true,
+   "lidos": 1,
+   "novos": 1
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada4_logs\\marcadores__summary.json",
+   "mtime_utc": "2026-09-17T18:32:20+00:00",
+   "fora_oe": true,
+   "lidos": 5,
+   "novos": 5
+  },
+  {
+   "arquivo": "_work\\frontier_2026-09-17\\rodada4_logs\\resid_decoders__soft_aes_paddings.json",
+   "mtime_utc": "2026-09-17T18:32:19+00:00",
+   "fora_oe": true,
+   "lidos": 15,
+   "novos": 15
+  },
+  {
+   "arquivo": "_work\\matrix_sum_words_2026-09-16\\materials.json",
+   "mtime_utc": "2026-09-16T10:59:32+00:00",
+   "fora_oe": true,
+   "lidos": 8631,
+   "novos": 8631
+  },
+  {
+   "arquivo": "_work\\matrix_sum_words_2026-09-16\\normalized_materials.json",
+   "mtime_utc": "2026-09-16T11:07:23+00:00",
+   "fora_oe": true,
+   "lidos": 6075,
+   "novos": 3772
+  },
+  {
+   "arquivo": "_work\\matrix_sum_words_2026-09-16\\normalized_oracles.json",
+   "mtime_utc": "2026-09-16T11:07:25+00:00",
+   "fora_oe": true,
+   "lidos": 5447,
+   "novos": 124
+  },
+  {
+   "arquivo": "_work\\matrix_sum_words_2026-09-16\\oracles.json",
+   "mtime_utc": "2026-09-16T10:59:38+00:00",
+   "fora_oe": true,
+   "lidos": 18108,
+   "novos": 450
+  },
+  {
+   "arquivo": "_work\\matrix_sum_words_2026-09-16\\quadgram_materials.json",
+   "mtime_utc": "2026-09-16T11:04:34+00:00",
+   "fora_oe": true,
+   "lidos": 5523,
+   "novos": 4044
+  },
+  {
+   "arquivo": "_work\\matrix_sum_words_2026-09-16\\quadgram_oracles.json",
+   "mtime_utc": "2026-09-16T11:04:40+00:00",
+   "fora_oe": true,
+   "lidos": 11510,
+   "novos": 269
+  },
+  {
+   "arquivo": "_work\\matrix_sum_words_2026-09-16\\selected.json",
+   "mtime_utc": "2026-09-16T10:57:53+00:00",
+   "fora_oe": true,
+   "lidos": 233,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\mp3_container_2026-09-16\\audit.json",
+   "mtime_utc": "2026-09-16T11:48:34+00:00",
+   "fora_oe": true,
+   "lidos": 2,
+   "novos": 2
+  },
+  {
+   "arquivo": "_work\\new_approach_claude\\g_ambiguity_matrixsum_attack.json",
+   "mtime_utc": "2026-09-05T01:28:49+00:00",
+   "fora_oe": true,
+   "lidos": 2084,
+   "novos": 2084
+  },
+  {
+   "arquivo": "_work\\new_approach_page39\\prime_ascii_mask_attack.json",
+   "mtime_utc": "2026-09-05T00:29:49+00:00",
+   "fora_oe": true,
+   "lidos": 1,
+   "novos": 1
+  },
+  {
+   "arquivo": "_work\\new_approach_page39\\prime_ascii_permutation_attack.json",
+   "mtime_utc": "2026-09-05T00:36:59+00:00",
+   "fora_oe": true,
+   "lidos": 82,
+   "novos": 82
+  },
+  {
+   "arquivo": "_work\\new_approach_skills\\miroir_verbatim_attack.json",
+   "mtime_utc": "2026-09-05T01:16:30+00:00",
+   "fora_oe": true,
+   "lidos": 49,
+   "novos": 49
+  },
+  {
+   "arquivo": "_work\\optional_null_decimal_2026-09-16\\with_zero\\candidates.json",
+   "mtime_utc": "2026-09-16T06:24:16+00:00",
+   "fora_oe": true,
+   "lidos": 22,
+   "novos": 22
+  },
+  {
+   "arquivo": "_work\\optional_null_decimal_2026-09-16\\with_zero\\oracles.json",
+   "mtime_utc": "2026-09-16T06:26:44+00:00",
+   "fora_oe": true,
+   "lidos": 132,
+   "novos": 44
+  },
+  {
+   "arquivo": "_work\\prime_codepoints_2026-09-16\\candidate_auth.json",
+   "mtime_utc": "2026-09-16T09:22:36+00:00",
+   "fora_oe": true,
+   "lidos": 6360,
+   "novos": 4236
+  },
+  {
+   "arquivo": "_work\\prime_host_delta_2026-09-17\\rabbit_delta\\materials.json",
+   "mtime_utc": "2026-09-17T17:11:02+00:00",
+   "fora_oe": true,
+   "lidos": 68,
+   "novos": 68
+  },
+  {
+   "arquivo": "_work\\prime_host_delta_2026-09-17\\rabbit_delta\\padding.json",
+   "mtime_utc": "2026-09-17T17:11:03+00:00",
+   "fora_oe": true,
+   "lidos": 12,
+   "novos": 11
+  },
+  {
+   "arquivo": "_work\\prime_host_delta_2026-09-17\\run1\\materials.json",
+   "mtime_utc": "2026-09-17T17:00:09+00:00",
+   "fora_oe": true,
+   "lidos": 15627,
+   "novos": 15627
+  },
+  {
+   "arquivo": "_work\\prime_host_delta_2026-09-17\\run1\\padding.json",
+   "mtime_utc": "2026-09-17T17:00:21+00:00",
+   "fora_oe": true,
+   "lidos": 808,
+   "novos": 786
+  },
+  {
+   "arquivo": "_work\\prime_host_l84_2026-09-17\\run1\\materials.json",
+   "mtime_utc": "2026-09-17T17:28:25+00:00",
+   "fora_oe": true,
+   "lidos": 384,
+   "novos": 384
+  },
+  {
+   "arquivo": "_work\\prime_host_l84_2026-09-17\\run1\\padding.json",
+   "mtime_utc": "2026-09-17T17:28:33+00:00",
+   "fora_oe": true,
+   "lidos": 609,
+   "novos": 609
+  },
+  {
+   "arquivo": "_work\\prime_joined_words_2026-09-16\\oracles.json",
+   "mtime_utc": "2026-09-16T12:08:30+00:00",
+   "fora_oe": true,
+   "lidos": 6644,
+   "novos": 6644
+  },
+  {
+   "arquivo": "_work\\prime_radix_beam_2026-09-16\\oracles.json",
+   "mtime_utc": "2026-09-16T12:17:45+00:00",
+   "fora_oe": true,
+   "lidos": 982,
+   "novos": 982
+  },
+  {
+   "arquivo": "_work\\radix127_completion_2026-09-16\\new_candidate_auth.json",
+   "mtime_utc": "2026-09-16T08:56:52+00:00",
+   "fora_oe": true,
+   "lidos": 132,
+   "novos": 88
+  },
+  {
+   "arquivo": "_work\\recipe_audit_2026-09-11\\consequence_spec.json",
+   "mtime_utc": "2026-09-11T18:06:28+00:00",
+   "fora_oe": true,
+   "lidos": 5,
+   "novos": 4
+  },
+  {
+   "arquivo": "_work\\rsa_pending_dfa_2026-09-16\\candidates.json",
+   "mtime_utc": "2026-09-16T09:27:29+00:00",
+   "fora_oe": true,
+   "lidos": 573,
+   "novos": 573
+  },
+  {
+   "arquivo": "_work\\rsa_pending_dfa_2026-09-16\\candidate_auth.json",
+   "mtime_utc": "2026-09-16T09:29:44+00:00",
+   "fora_oe": true,
+   "lidos": 6660,
+   "novos": 3510
+  },
+  {
+   "arquivo": "_work\\rsa_substituted_digits_2026-09-16\\candidate_auth.json",
+   "mtime_utc": "2026-09-16T08:44:43+00:00",
+   "fora_oe": true,
+   "lidos": 171,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\substituted_codepoints_2026-09-16\\candidates.json",
+   "mtime_utc": "2026-09-16T03:51:45+00:00",
+   "fora_oe": true,
+   "lidos": 3600,
+   "novos": 3600
+  },
+  {
+   "arquivo": "_work\\substituted_codepoints_2026-09-16\\oracles.json",
+   "mtime_utc": "2026-09-16T03:51:45+00:00",
+   "fora_oe": true,
+   "lidos": 10800,
+   "novos": 3599
+  },
+  {
+   "arquivo": "_work\\substituted_codepoints_2026-09-16\\padding.json",
+   "mtime_utc": "2026-09-16T03:51:45+00:00",
+   "fora_oe": true,
+   "lidos": 165,
+   "novos": 165
+  },
+  {
+   "arquivo": "_work\\substituted_decimal_2026-09-15\\alias-b.json",
+   "mtime_utc": "2026-09-16T01:54:31+00:00",
+   "fora_oe": true,
+   "lidos": 183,
+   "novos": 183
+  },
+  {
+   "arquivo": "_work\\title_position_masks_2026-09-16\\materials.json",
+   "mtime_utc": "2026-09-16T13:29:34+00:00",
+   "fora_oe": true,
+   "lidos": 3110,
+   "novos": 3110
+  },
+  {
+   "arquivo": "_work\\title_position_masks_2026-09-16\\padding.json",
+   "mtime_utc": "2026-09-16T13:29:35+00:00",
+   "fora_oe": true,
+   "lidos": 152,
+   "novos": 150
+  },
+  {
+   "arquivo": "_work\\unbounded_integer_words_2026-09-16\\candidates.json",
+   "mtime_utc": "2026-09-16T10:41:24+00:00",
+   "fora_oe": true,
+   "lidos": 25369,
+   "novos": 25369
+  },
+  {
+   "arquivo": "_work\\unbounded_integer_words_2026-09-16\\oracles.json",
+   "mtime_utc": "2026-09-16T10:46:08+00:00",
+   "fora_oe": true,
+   "lidos": 192324,
+   "novos": 66551
+  },
+  {
+   "arquivo": "_work\\unbounded_integer_words_2026-09-16\\resume_candidates.json",
+   "mtime_utc": "2026-09-16T10:44:22+00:00",
+   "fora_oe": true,
+   "lidos": 28501,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\unbounded_integer_words_2026-09-16\\wordcase_candidates.json",
+   "mtime_utc": "2026-09-16T10:43:01+00:00",
+   "fora_oe": true,
+   "lidos": 44267,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\unbounded_zero_codepoints_2026-09-16\\candidate_auth.json",
+   "mtime_utc": "2026-09-16T09:42:11+00:00",
+   "fora_oe": true,
+   "lidos": 1161,
+   "novos": 774
+  },
+  {
+   "arquivo": "_work\\unbounded_zero_codepoints_2026-09-16\\selected_candidates.json",
+   "mtime_utc": "2026-09-16T09:42:06+00:00",
+   "fora_oe": true,
+   "lidos": 107,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\unbounded_zero_integer_2026-09-16\\oracles.json",
+   "mtime_utc": "2026-09-16T10:28:17+00:00",
+   "fora_oe": true,
+   "lidos": 546,
+   "novos": 308
+  },
+  {
+   "arquivo": "_work\\unbounded_zero_integer_2026-09-16\\pilot_oracles.json",
+   "mtime_utc": "2026-09-16T10:31:53+00:00",
+   "fora_oe": true,
+   "lidos": 31408,
+   "novos": 4842
+  },
+  {
+   "arquivo": "_work\\url_prime_reinsertion_2026-09-16\\derivation.json",
+   "mtime_utc": "2026-09-16T10:08:10+00:00",
+   "fora_oe": true,
+   "lidos": 1534,
+   "novos": 1534
+  },
+  {
+   "arquivo": "_work\\url_prime_reinsertion_2026-09-16\\oracles.json",
+   "mtime_utc": "2026-09-16T10:08:12+00:00",
+   "fora_oe": true,
+   "lidos": 3239,
+   "novos": 80
+  },
+  {
+   "arquivo": "_work\\utf8_decimal_2026-09-16\\candidates.json",
+   "mtime_utc": "2026-09-16T03:30:31+00:00",
+   "fora_oe": true,
+   "lidos": 33408,
+   "novos": 9373
+  },
+  {
+   "arquivo": "_work\\utf8_decimal_2026-09-16\\two_symbols\\results.json",
+   "mtime_utc": "2026-09-16T03:29:08+00:00",
+   "fora_oe": true,
+   "lidos": 33408,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\utf8_decimal_2026-09-16\\two_symbols\\summary.json",
+   "mtime_utc": "2026-09-16T03:29:08+00:00",
+   "fora_oe": true,
+   "lidos": 33408,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\wavelength_primes_2026-09-16\\materials.json",
+   "mtime_utc": "2026-09-16T05:43:08+00:00",
+   "fora_oe": true,
+   "lidos": 5544,
+   "novos": 5464
+  },
+  {
+   "arquivo": "_work\\wavelength_primes_2026-09-16\\oracles.json",
+   "mtime_utc": "2026-09-16T05:43:08+00:00",
+   "fora_oe": true,
+   "lidos": 17585,
+   "novos": 6159
+  },
+  {
+   "arquivo": "_work\\xor_period_2026-09-15\\dbbi-original-g.json",
+   "mtime_utc": "2026-09-16T02:22:18+00:00",
+   "fora_oe": true,
+   "lidos": 32,
+   "novos": 32
+  },
+  {
+   "arquivo": "_work\\xor_period_2026-09-15\\dbbi-reverse-g.json",
+   "mtime_utc": "2026-09-16T02:22:18+00:00",
+   "fora_oe": true,
+   "lidos": 16,
+   "novos": 16
+  },
+  {
+   "arquivo": "_work\\xor_period_2026-09-15\\witnesses.json",
+   "mtime_utc": "2026-09-16T02:24:05+00:00",
+   "fora_oe": true,
+   "lidos": 48,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\xor_period_2026-09-15\\known_keys\\candidates.json",
+   "mtime_utc": "2026-09-16T02:29:33+00:00",
+   "fora_oe": true,
+   "lidos": 2,
+   "novos": 0
+  },
+  {
+   "arquivo": "_work\\zero_cells_prime_sums_2026-09-16\\materials.json",
+   "mtime_utc": "2026-09-16T11:34:19+00:00",
+   "fora_oe": true,
+   "lidos": 16712,
+   "novos": 16712
+  },
+  {
+   "arquivo": "_work\\zero_cells_prime_sums_2026-09-16\\oracles.json",
+   "mtime_utc": "2026-09-16T11:34:34+00:00",
+   "fora_oe": true,
+   "lidos": 34263,
+   "novos": 751
+  },
+  {
+   "arquivo": "_work\\zero_free_numerals_2026-09-17\\plaintexts\\materials.json",
+   "mtime_utc": "2026-09-17T17:50:45+00:00",
+   "fora_oe": true,
+   "lidos": 123464,
+   "novos": 123464
+  },
+  {
+   "arquivo": "_work\\zero_free_numerals_2026-09-17\\plaintexts\\padding.json",
+   "mtime_utc": "2026-09-17T17:51:34+00:00",
+   "fora_oe": true,
+   "lidos": 5772,
+   "novos": 5772
+  },
+  {
+   "arquivo": "solver\\experiments\\claude_endgame_2026_09_02\\ans_too_ct_text.jsonl",
+   "mtime_utc": "2026-09-02T17:20:25+00:00",
+   "fora_oe": true,
+   "lidos": 2,
+   "novos": 2
+  },
+  {
+   "arquivo": "solver\\experiments\\claude_endgame_2026_09_02\\b3x3_run_screen_only.jsonl",
+   "mtime_utc": "2026-09-02T19:35:32+00:00",
+   "fora_oe": true,
+   "lidos": 2,
+   "novos": 2
+  },
+  {
+   "arquivo": "solver\\experiments\\claude_endgame_2026_09_02\\dutch_german_scorer.jsonl",
+   "mtime_utc": "2026-09-02T19:23:07+00:00",
+   "fora_oe": true,
+   "lidos": 14,
+   "novos": 14
+  },
+  {
+   "arquivo": "solver\\experiments\\claude_endgame_2026_09_02\\kdf_variants.jsonl",
+   "mtime_utc": "2026-09-02T17:33:58+00:00",
+   "fora_oe": true,
+   "lidos": 1,
+   "novos": 1
+  },
+  {
+   "arquivo": "solver\\experiments\\claude_endgame_2026_09_02\\matrix_prime_bits.jsonl",
+   "mtime_utc": "2026-09-02T17:23:09+00:00",
+   "fora_oe": true,
+   "lidos": 1,
+   "novos": 1
+  },
+  {
+   "arquivo": "solver\\experiments\\claude_endgame_2026_09_02\\phase2_leftovers.jsonl",
+   "mtime_utc": "2026-09-02T17:30:10+00:00",
+   "fora_oe": true,
+   "lidos": 1,
+   "novos": 0
+  },
+  {
+   "arquivo": "solver\\experiments\\claude_endgame_2026_09_02\\phase2_leftovers_r3.jsonl",
+   "mtime_utc": "2026-09-02T19:23:48+00:00",
+   "fora_oe": true,
+   "lidos": 2,
+   "novos": 1
+  },
+  {
+   "arquivo": "solver\\experiments\\claude_endgame_2026_09_02\\phase2_table_bytes.jsonl",
+   "mtime_utc": "2026-09-02T19:27:50+00:00",
+   "fora_oe": true,
+   "lidos": 1,
+   "novos": 0
+  },
+  {
+   "arquivo": "solver\\experiments\\claude_endgame_2026_09_02\\tail32_history.jsonl",
+   "mtime_utc": "2026-09-02T17:25:22+00:00",
+   "fora_oe": true,
+   "lidos": 9798,
+   "novos": 9786
+  },
+  {
+   "arquivo": "solver\\experiments\\claude_endgame_2026_09_02\\yinyang_interleave.jsonl",
+   "mtime_utc": "2026-09-02T19:21:57+00:00",
+   "fora_oe": true,
+   "lidos": 10,
+   "novos": 10
+  },
+  {
+   "arquivo": "solver\\experiments\\claude_endgame_2026_09_02\\yinyang_interleave_pass1.jsonl",
+   "mtime_utc": "2026-09-02T19:17:31+00:00",
+   "fora_oe": true,
+   "lidos": 26,
+   "novos": 19
+  }
+ ],
+ "arquivos_v4": [
+  {
+   "arquivo": "critico_codecs23\\critico_codecs23.jsonl",
+   "lidos": 518,
+   "novos": 518
+  },
+  {
+   "arquivo": "critico_familia2\\run.jsonl",
+   "lidos": 1302,
+   "novos": 1302
+  },
+  {
+   "arquivo": "critico_familia4_codecs\\critico_familia4_codecs.jsonl",
+   "lidos": 247594,
+   "novos": 247594
+  },
+  {
+   "arquivo": "critico_familia5\\critico_familia5.jsonl",
+   "lidos": 6274,
+   "novos": 6273
+  },
+  {
+   "arquivo": "critico_familia6\\paddings_materiais.jsonl",
+   "lidos": 2900,
+   "novos": 2900
+  },
+  {
+   "arquivo": "critico_familia6\\paddings_materiais2.jsonl",
+   "lidos": 4652,
+   "novos": 4652
+  },
+  {
+   "arquivo": "critico_familia6\\paddings_repro.jsonl",
+   "lidos": 14002,
+   "novos": 14002
+  },
+  {
+   "arquivo": "critico_familia6\\paddings_separadores.jsonl",
+   "lidos": 5483,
+   "novos": 5483
+  },
+  {
+   "arquivo": "critico_familia6\\paddings_triplas_low.jsonl",
+   "lidos": 39087,
+   "novos": 39075
+  },
+  {
+   "arquivo": "critico_familia6\\paddings_triplas_low_resume.jsonl",
+   "lidos": 16158,
+   "novos": 16154
+  },
+  {
+   "arquivo": "critico_familia6\\paddings_triplas_vb.jsonl",
+   "lidos": 46445,
+   "novos": 46354
+  },
+  {
+   "arquivo": "critico_rab\\ext_soft.jsonl",
+   "lidos": 2123,
+   "novos": 2114
+  },
+  {
+   "arquivo": "critico_rab\\repro\\soft_padding.jsonl",
+   "lidos": 230,
+   "novos": 222
+  },
+  {
+   "arquivo": "critico_rab_a1z26\\extensao_soft.jsonl",
+   "lidos": 5033,
+   "novos": 2816
+  },
+  {
+   "arquivo": "critico_rab_a1z26\\l83_soft.jsonl",
+   "lidos": 192,
+   "novos": 135
+  },
+  {
+   "arquivo": "critico_rab_final\\extra_bits_soft.jsonl",
+   "lidos": 2,
+   "novos": 2
+  },
+  {
+   "arquivo": "familia2_lastwords\\run.jsonl",
+   "lidos": 553,
+   "novos": 338
+  },
+  {
+   "arquivo": "familia4_codecs\\familia4_codecs.jsonl",
+   "lidos": 3146,
+   "novos": 3144
+  },
+  {
+   "arquivo": "familia5_dualidade\\familia5_dualidade.jsonl",
+   "lidos": 246,
+   "novos": 0
+  },
+  {
+   "arquivo": "familia6_referencia_pessoal\\paddings.jsonl",
+   "lidos": 7371,
+   "novos": 0
+  },
+  {
+   "arquivo": "familia6_referencia_pessoal\\paddings_extra.jsonl",
+   "lidos": 6631,
+   "novos": 0
+  },
+  {
+   "arquivo": "rab_a1z26\\soft_padding.jsonl",
+   "lidos": 230,
+   "novos": 0
+  },
+  {
+   "arquivo": "critico_familia3_entrelacamento\\pads_formas_novas.jsonl.gz",
+   "lidos": 298283,
+   "novos": 298283
+  },
+  {
+   "arquivo": "critico_familia3_entrelacamento\\pads_k59.jsonl.gz",
+   "lidos": 256631,
+   "novos": 256631
+  },
+  {
+   "arquivo": "critico_sete_final\\pads_o5up.jsonl.gz",
+   "lidos": 117794,
+   "novos": 117794
+  },
+  {
+   "arquivo": "familia3_entrelacamento\\paddings.jsonl.gz",
+   "lidos": 428706,
+   "novos": 428706
+  }
+ ],
+ "segundos_varredura": 47.1,
+ "segundos_total": 72.8,
+ "workers": 6,
+ "hashes": {
+  "solver\\enxame_2026_09_18\\lacuna_cp273_utf16\\scan.py": "c1c264e44a53c39b8a41cb73c2e552d5cc4f998e3b6e7e15ecad0f36163a58c5",
+  "solver\\experiments\\claude_endgame_2026_09_02\\gsmg_common.py": "3810cbafa1936652bd6c30fc36b908453036d7d685ecd7f3ec0b33dba9cc1e67",
+  "solver\\oracles.py": "d0d7407932b4a84c324cc077ae732348e76b74f62446b7434c44e00661840c40",
+  "solver\\oraculo_duplo_2026_09_17\\oracle.py": "1b927716a5339a5a8cabe8527f1d7197e9bf539fdb508f25562dabafd45eec8d",
+  "solver\\multiagente_2026_09_18\\audit_recovered_semantic.py": "4afb902e21a8ef1090003d2df930ca22e725f4ebf90bbe13dbcbb79493b73160",
+  "solver\\operador_ensinado_2026_09_17\\retro_dois_alvos.py": "9dfccf6fc1206a8bd53a93fad2ee3080f84eff757d52ef75ee1022cd8e3db796",
+  "solver\\operador_ensinado_2026_09_17\\v4_rodada_dois_alvos.py": "815d55e3cefd5754690056276e9bb6ed5556d63b5cf5b9bb9fe70ff2b9f5ff9d"
+ },
+ "fim_utc": "2026-09-18T07:51:42+00:00",
+ "solucao_declarada": false
+}

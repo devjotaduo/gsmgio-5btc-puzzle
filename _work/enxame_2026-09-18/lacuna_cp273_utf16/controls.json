@@ -1,0 +1,310 @@
+{
+ "kit_selftest": "gsmg_common OK; KDF=EVP-SHA256 confirmado; BIF: BTCSEEDDEOEMCKEADHBSCHDKBDCSDK score -5.577",
+ "chaves_plantadas": {
+  "casos": [
+   {
+    "visao": "cp273-inverse",
+    "formato": "hex64",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "cp273-inverse",
+    "formato": "hex64",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "cp273-inverse",
+    "formato": "wif-uncompressed",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "cp273-inverse",
+    "formato": "wif-uncompressed",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "cp273-inverse",
+    "formato": "wif-compressed",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "cp273-inverse",
+    "formato": "wif-compressed",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "cp273",
+    "formato": "hex64",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "cp273",
+    "formato": "hex64",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "cp273",
+    "formato": "wif-uncompressed",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "cp273",
+    "formato": "wif-uncompressed",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "cp273",
+    "formato": "wif-compressed",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "cp273",
+    "formato": "wif-compressed",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-le@1",
+    "formato": "hex64",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-le@0",
+    "formato": "hex64",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-le@1",
+    "formato": "wif-uncompressed",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-le@0",
+    "formato": "wif-uncompressed",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-le@1",
+    "formato": "wif-compressed",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-le@0",
+    "formato": "wif-compressed",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-be@1",
+    "formato": "hex64",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-be@0",
+    "formato": "hex64",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-be@1",
+    "formato": "wif-uncompressed",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-be@0",
+    "formato": "wif-uncompressed",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-be@1",
+    "formato": "wif-compressed",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-be@0",
+    "formato": "wif-compressed",
+    "offset": 14,
+    "hits": 1
+   }
+  ],
+  "n": 24,
+  "privkey_sintetica_sha256_de": "enxame 2026-09-18 ...",
+  "sem_alvo_plantado_hits": 0
+ },
+ "texto_e_aninhado": {
+  "casos": [
+   {
+    "visao": "cp273-inverse",
+    "payload": "ascii",
+    "offset": 19
+   },
+   {
+    "visao": "cp273-inverse",
+    "payload": "ascii",
+    "offset": 20
+   },
+   {
+    "visao": "cp273-inverse",
+    "payload": "aninhado-base64",
+    "offset": 19
+   },
+   {
+    "visao": "cp273-inverse",
+    "payload": "aninhado-base64",
+    "offset": 20
+   },
+   {
+    "visao": "cp273-inverse",
+    "payload": "aninhado-cru",
+    "offset": 19
+   },
+   {
+    "visao": "cp273-inverse",
+    "payload": "aninhado-cru",
+    "offset": 20
+   },
+   {
+    "visao": "cp273",
+    "payload": "ascii",
+    "offset": 19
+   },
+   {
+    "visao": "cp273",
+    "payload": "ascii",
+    "offset": 20
+   },
+   {
+    "visao": "cp273",
+    "payload": "aninhado-base64",
+    "offset": 19
+   },
+   {
+    "visao": "cp273",
+    "payload": "aninhado-base64",
+    "offset": 20
+   },
+   {
+    "visao": "cp273",
+    "payload": "aninhado-cru",
+    "offset": 19
+   },
+   {
+    "visao": "cp273",
+    "payload": "aninhado-cru",
+    "offset": 20
+   },
+   {
+    "visao": "utf-16-le@1",
+    "payload": "ascii",
+    "offset": 19
+   },
+   {
+    "visao": "utf-16-le@0",
+    "payload": "ascii",
+    "offset": 20
+   },
+   {
+    "visao": "utf-16-le@1",
+    "payload": "aninhado-base64",
+    "offset": 19
+   },
+   {
+    "visao": "utf-16-le@0",
+    "payload": "aninhado-base64",
+    "offset": 20
+   },
+   {
+    "visao": "utf-16-le@1",
+    "payload": "aninhado-cru",
+    "offset": 19
+   },
+   {
+    "visao": "utf-16-le@0",
+    "payload": "aninhado-cru",
+    "offset": 20
+   },
+   {
+    "visao": "utf-16-be@1",
+    "payload": "ascii",
+    "offset": 19
+   },
+   {
+    "visao": "utf-16-be@0",
+    "payload": "ascii",
+    "offset": 20
+   },
+   {
+    "visao": "utf-16-be@1",
+    "payload": "aninhado-base64",
+    "offset": 19
+   },
+   {
+    "visao": "utf-16-be@0",
+    "payload": "aninhado-base64",
+    "offset": 20
+   },
+   {
+    "visao": "utf-16-be@1",
+    "payload": "aninhado-cru",
+    "offset": 19
+   },
+   {
+    "visao": "utf-16-be@0",
+    "payload": "aninhado-cru",
+    "offset": 20
+   }
+  ],
+  "n": 24,
+  "sal_usado": "0000000000000000"
+ },
+ "fase32": {
+  "sha256": "b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34",
+  "ebcdic_sig": 1.0,
+  "cp273_inverse_run": {
+   "offset": 442,
+   "length": 1548
+  },
+  "texto_inicio": "K\r%\r%vtkvplmepphluwahtzmjpfipuxohaptukzztgikfwpuyatowynlebtq",
+  "novos": [
+   "ascii_run_ge48"
+  ]
+ },
+ "utf16_vs_codec": {
+  "comparacoes": 1600
+ },
+ "regra_ebcdic": {
+  "bytes_verificados": 256,
+  "imagem_az_total": 26,
+  "imagem_az_ge_0x80": 17
+ },
+ "passou": true,
+ "hashes": {
+  "solver\\enxame_2026_09_18\\lacuna_cp273_utf16\\scan.py": "c1c264e44a53c39b8a41cb73c2e552d5cc4f998e3b6e7e15ecad0f36163a58c5",
+  "solver\\experiments\\claude_endgame_2026_09_02\\gsmg_common.py": "3810cbafa1936652bd6c30fc36b908453036d7d685ecd7f3ec0b33dba9cc1e67",
+  "solver\\oracles.py": "d0d7407932b4a84c324cc077ae732348e76b74f62446b7434c44e00661840c40",
+  "solver\\oraculo_duplo_2026_09_17\\oracle.py": "1b927716a5339a5a8cabe8527f1d7197e9bf539fdb508f25562dabafd45eec8d",
+  "solver\\multiagente_2026_09_18\\audit_recovered_semantic.py": "4afb902e21a8ef1090003d2df930ca22e725f4ebf90bbe13dbcbb79493b73160",
+  "solver\\operador_ensinado_2026_09_17\\retro_dois_alvos.py": "9dfccf6fc1206a8bd53a93fad2ee3080f84eff757d52ef75ee1022cd8e3db796",
+  "solver\\operador_ensinado_2026_09_17\\v4_rodada_dois_alvos.py": "815d55e3cefd5754690056276e9bb6ed5556d63b5cf5b9bb9fe70ff2b9f5ff9d"
+ }
+}

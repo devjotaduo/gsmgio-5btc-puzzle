@@ -1,0 +1,1911 @@
+{
+  "frente": "ebcdic_decimal_inverso",
+  "hipotese": "I1 (Codex Astra, 2026-09-18)",
+  "repertorio": "b.decode('latin-1').encode('cp273') ⊂ ASCII 32–126/TAB/LF/CR (98 bytes)",
+  "I1": {
+    "inteiros": 33819184,
+    "aceitos": 0,
+    "dfs_nos": 17,
+    "direto_eq_dfs": true,
+    "por_letra": [
+      {
+        "letra": "a",
+        "ocorrencias": 3,
+        "mascaras_nao_vazias": 7,
+        "aceitos": 0,
+        "s": 0.0
+      },
+      {
+        "letra": "b",
+        "ocorrencias": 25,
+        "mascaras_nao_vazias": 33554431,
+        "aceitos": 0,
+        "s": 29.0
+      },
+      {
+        "letra": "c",
+        "ocorrencias": 8,
+        "mascaras_nao_vazias": 255,
+        "aceitos": 0,
+        "s": 0.0
+      },
+      {
+        "letra": "d",
+        "ocorrencias": 4,
+        "mascaras_nao_vazias": 15,
+        "aceitos": 0,
+        "s": 0.0
+      },
+      {
+        "letra": "e",
+        "ocorrencias": 18,
+        "mascaras_nao_vazias": 262143,
+        "aceitos": 0,
+        "s": 0.2
+      },
+      {
+        "letra": "f",
+        "ocorrencias": 10,
+        "mascaras_nao_vazias": 1023,
+        "aceitos": 0,
+        "s": 0.0
+      },
+      {
+        "letra": "g",
+        "ocorrencias": 10,
+        "mascaras_nao_vazias": 1023,
+        "aceitos": 0,
+        "s": 0.0
+      },
+      {
+        "letra": "h",
+        "ocorrencias": 8,
+        "mascaras_nao_vazias": 255,
+        "aceitos": 0,
+        "s": 0.0
+      },
+      {
+        "letra": "i",
+        "ocorrencias": 5,
+        "mascaras_nao_vazias": 31,
+        "aceitos": 0,
+        "s": 0.0
+      }
+    ],
+    "analitico": {
+      "bytes_do_inteiro": 38,
+      "p_por_inteiro": 1.423876080614959e-16,
+      "esperado": 4.815432716351613e-09
+    }
+  },
+  "literal": {
+    "configuracoes": 184,
+    "nos": 764,
+    "grupos": [
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "",
+        "pesos": 0,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "a",
+        "pesos": 3,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "b",
+        "pesos": 25,
+        "nos": 5,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "c",
+        "pesos": 8,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "d",
+        "pesos": 4,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "e",
+        "pesos": 18,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "f",
+        "pesos": 10,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "g",
+        "pesos": 10,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "h",
+        "pesos": 8,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "i",
+        "pesos": 5,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "ab",
+        "pesos": 28,
+        "nos": 5,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "ac",
+        "pesos": 11,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "ad",
+        "pesos": 7,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "ae",
+        "pesos": 21,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "af",
+        "pesos": 13,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "ag",
+        "pesos": 13,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "ah",
+        "pesos": 11,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "ai",
+        "pesos": 8,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "bc",
+        "pesos": 33,
+        "nos": 5,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "bd",
+        "pesos": 29,
+        "nos": 13,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "be",
+        "pesos": 43,
+        "nos": 5,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "bf",
+        "pesos": 35,
+        "nos": 5,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "bg",
+        "pesos": 35,
+        "nos": 5,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "bh",
+        "pesos": 33,
+        "nos": 5,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "bi",
+        "pesos": 30,
+        "nos": 13,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "cd",
+        "pesos": 12,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "ce",
+        "pesos": 26,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "cf",
+        "pesos": 18,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "cg",
+        "pesos": 18,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "ch",
+        "pesos": 16,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "ci",
+        "pesos": 13,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "de",
+        "pesos": 22,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "df",
+        "pesos": 14,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "dg",
+        "pesos": 14,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "dh",
+        "pesos": 12,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "di",
+        "pesos": 9,
+        "nos": 5,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "ef",
+        "pesos": 28,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "eg",
+        "pesos": 28,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "eh",
+        "pesos": 26,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "ei",
+        "pesos": 23,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "fg",
+        "pesos": 20,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "fh",
+        "pesos": 18,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "fi",
+        "pesos": 15,
+        "nos": 5,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "gh",
+        "pesos": 18,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "gi",
+        "pesos": 15,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "hi",
+        "pesos": 13,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "",
+        "pesos": 0,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "a",
+        "pesos": 3,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "b",
+        "pesos": 25,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "c",
+        "pesos": 8,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "d",
+        "pesos": 4,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "e",
+        "pesos": 18,
+        "nos": 15,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "f",
+        "pesos": 10,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "g",
+        "pesos": 10,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "h",
+        "pesos": 8,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "i",
+        "pesos": 5,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "ab",
+        "pesos": 28,
+        "nos": 9,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "ac",
+        "pesos": 11,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "ad",
+        "pesos": 7,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "ae",
+        "pesos": 21,
+        "nos": 25,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "af",
+        "pesos": 13,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "ag",
+        "pesos": 13,
+        "nos": 7,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "ah",
+        "pesos": 11,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "ai",
+        "pesos": 8,
+        "nos": 5,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "bc",
+        "pesos": 33,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "bd",
+        "pesos": 29,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "be",
+        "pesos": 43,
+        "nos": 51,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "bf",
+        "pesos": 35,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "bg",
+        "pesos": 35,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "bh",
+        "pesos": 33,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "bi",
+        "pesos": 30,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "cd",
+        "pesos": 12,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "ce",
+        "pesos": 26,
+        "nos": 15,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "cf",
+        "pesos": 18,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "cg",
+        "pesos": 18,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "ch",
+        "pesos": 16,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "ci",
+        "pesos": 13,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "de",
+        "pesos": 22,
+        "nos": 15,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "df",
+        "pesos": 14,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "dg",
+        "pesos": 14,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "dh",
+        "pesos": 12,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "di",
+        "pesos": 9,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "ef",
+        "pesos": 28,
+        "nos": 17,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "eg",
+        "pesos": 28,
+        "nos": 31,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "eh",
+        "pesos": 26,
+        "nos": 15,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "ei",
+        "pesos": 23,
+        "nos": 23,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "fg",
+        "pesos": 20,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "fh",
+        "pesos": 18,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "fi",
+        "pesos": 15,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "gh",
+        "pesos": 18,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "gi",
+        "pesos": 15,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "hi",
+        "pesos": 13,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "",
+        "pesos": 0,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "a",
+        "pesos": 54,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "b",
+        "pesos": 49,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "c",
+        "pesos": 52,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "d",
+        "pesos": 49,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "e",
+        "pesos": 69,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "f",
+        "pesos": 57,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "g",
+        "pesos": 107,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "h",
+        "pesos": 58,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "i",
+        "pesos": 75,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "ab",
+        "pesos": 103,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "ac",
+        "pesos": 106,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "ad",
+        "pesos": 103,
+        "nos": 7,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "ae",
+        "pesos": 123,
+        "nos": 13,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "af",
+        "pesos": 111,
+        "nos": 7,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "ag",
+        "pesos": 161,
+        "nos": 7,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "ah",
+        "pesos": 112,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "ai",
+        "pesos": 129,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "bc",
+        "pesos": 101,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "bd",
+        "pesos": 98,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "be",
+        "pesos": 118,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "bf",
+        "pesos": 106,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "bg",
+        "pesos": 156,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "bh",
+        "pesos": 107,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "bi",
+        "pesos": 124,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "cd",
+        "pesos": 101,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "ce",
+        "pesos": 121,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "cf",
+        "pesos": 109,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "cg",
+        "pesos": 159,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "ch",
+        "pesos": 110,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "ci",
+        "pesos": 127,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "de",
+        "pesos": 118,
+        "nos": 7,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "df",
+        "pesos": 106,
+        "nos": 5,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "dg",
+        "pesos": 156,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "dh",
+        "pesos": 107,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "di",
+        "pesos": 124,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "ef",
+        "pesos": 126,
+        "nos": 7,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "eg",
+        "pesos": 176,
+        "nos": 33,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "eh",
+        "pesos": 127,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "ei",
+        "pesos": 144,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "fg",
+        "pesos": 164,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "fh",
+        "pesos": 115,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "fi",
+        "pesos": 132,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "gh",
+        "pesos": 165,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "gi",
+        "pesos": 182,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "hi",
+        "pesos": 133,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "",
+        "pesos": 0,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "a",
+        "pesos": 54,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "b",
+        "pesos": 49,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "c",
+        "pesos": 52,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "d",
+        "pesos": 49,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "e",
+        "pesos": 69,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "f",
+        "pesos": 57,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "g",
+        "pesos": 107,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "h",
+        "pesos": 58,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "i",
+        "pesos": 75,
+        "nos": 9,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "ab",
+        "pesos": 103,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "ac",
+        "pesos": 106,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "ad",
+        "pesos": 103,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "ae",
+        "pesos": 123,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "af",
+        "pesos": 111,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "ag",
+        "pesos": 161,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "ah",
+        "pesos": 112,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "ai",
+        "pesos": 129,
+        "nos": 11,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "bc",
+        "pesos": 101,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "bd",
+        "pesos": 98,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "be",
+        "pesos": 118,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "bf",
+        "pesos": 106,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "bg",
+        "pesos": 156,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "bh",
+        "pesos": 107,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "bi",
+        "pesos": 124,
+        "nos": 9,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "cd",
+        "pesos": 101,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "ce",
+        "pesos": 121,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "cf",
+        "pesos": 109,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "cg",
+        "pesos": 159,
+        "nos": 3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "ch",
+        "pesos": 110,
+        "nos": 5,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "ci",
+        "pesos": 127,
+        "nos": 15,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "de",
+        "pesos": 118,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "df",
+        "pesos": 106,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "dg",
+        "pesos": 156,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "dh",
+        "pesos": 107,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "di",
+        "pesos": 124,
+        "nos": 9,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "ef",
+        "pesos": 126,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "eg",
+        "pesos": 176,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "eh",
+        "pesos": 127,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "ei",
+        "pesos": 144,
+        "nos": 9,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "fg",
+        "pesos": 164,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "fh",
+        "pesos": 115,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "fi",
+        "pesos": 132,
+        "nos": 13,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "gh",
+        "pesos": 165,
+        "nos": 1,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "gi",
+        "pesos": 182,
+        "nos": 9,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "hi",
+        "pesos": 133,
+        "nos": 39,
+        "aceitos": 0
+      }
+    ],
+    "aceitos": 0
+  },
+  "bijecoes": {
+    "casos": 13063680,
+    "nos": 29225802,
+    "grupos": [
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "a",
+        "casos": 362880,
+        "nos": 364420,
+        "s": 1.9,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "b",
+        "casos": 362880,
+        "nos": 3794886,
+        "s": 9.8,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "c",
+        "casos": 362880,
+        "nos": 453636,
+        "s": 2.3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "d",
+        "casos": 362880,
+        "nos": 1088640,
+        "s": 3.1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "e",
+        "casos": 362880,
+        "nos": 378700,
+        "s": 2.4,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "f",
+        "casos": 362880,
+        "nos": 498336,
+        "s": 2.4,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "g",
+        "casos": 362880,
+        "nos": 371112,
+        "s": 2.1,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "h",
+        "casos": 362880,
+        "nos": 427732,
+        "s": 2.4,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "orig",
+        "zeraveis": "i",
+        "casos": 362880,
+        "nos": 621996,
+        "s": 3.0,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "a",
+        "casos": 362880,
+        "nos": 688320,
+        "s": 3.2,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "b",
+        "casos": 362880,
+        "nos": 1058004,
+        "s": 5.3,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "c",
+        "casos": 362880,
+        "nos": 364690,
+        "s": 2.6,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "d",
+        "casos": 362880,
+        "nos": 363746,
+        "s": 2.4,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "e",
+        "casos": 362880,
+        "nos": 3399706,
+        "s": 11.6,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "f",
+        "casos": 362880,
+        "nos": 410032,
+        "s": 3.0,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "g",
+        "casos": 362880,
+        "nos": 453522,
+        "s": 3.2,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "h",
+        "casos": 362880,
+        "nos": 362880,
+        "s": 2.9,
+        "aceitos": 0
+      },
+      {
+        "campo": "dbbi",
+        "ordem": "rev",
+        "zeraveis": "i",
+        "casos": 362880,
+        "nos": 395992,
+        "s": 2.8,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "a",
+        "casos": 362880,
+        "nos": 1049778,
+        "s": 9.5,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "b",
+        "casos": 362880,
+        "nos": 380206,
+        "s": 6.8,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "c",
+        "casos": 362880,
+        "nos": 381402,
+        "s": 6.8,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "d",
+        "casos": 362880,
+        "nos": 758028,
+        "s": 7.6,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "e",
+        "casos": 362880,
+        "nos": 1189524,
+        "s": 10.5,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "f",
+        "casos": 362880,
+        "nos": 1128372,
+        "s": 9.3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "g",
+        "casos": 362880,
+        "nos": 816438,
+        "s": 12.2,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "h",
+        "casos": 362880,
+        "nos": 367820,
+        "s": 6.7,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "orig",
+        "zeraveis": "i",
+        "casos": 362880,
+        "nos": 362886,
+        "s": 7.9,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "a",
+        "casos": 362880,
+        "nos": 466756,
+        "s": 7.5,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "b",
+        "casos": 362880,
+        "nos": 374486,
+        "s": 7.2,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "c",
+        "casos": 362880,
+        "nos": 1091684,
+        "s": 9.9,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "d",
+        "casos": 362880,
+        "nos": 385634,
+        "s": 7.0,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "e",
+        "casos": 362880,
+        "nos": 362880,
+        "s": 8.5,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "f",
+        "casos": 362880,
+        "nos": 410844,
+        "s": 7.4,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "g",
+        "casos": 362880,
+        "nos": 362884,
+        "s": 11.0,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "h",
+        "casos": 362880,
+        "nos": 1188060,
+        "s": 10.3,
+        "aceitos": 0
+      },
+      {
+        "campo": "faed",
+        "ordem": "rev",
+        "zeraveis": "i",
+        "casos": 362880,
+        "nos": 2651770,
+        "s": 16.5,
+        "aceitos": 0
+      }
+    ],
+    "aceitos": 0
+  },
+  "textos_unicos": 0,
+  "aes": {
+    "senhas": 0,
+    "aes": 0,
+    "paddings": 0,
+    "candidatos": [],
+    "privkey_hits": []
+  },
+  "kit": {
+    "commit": "5f12b716a67763d7cd72aec3447a15c3015bf2d4",
+    "kit_sha256": "3810cbafa1936652bd6c30fc36b908453036d7d685ecd7f3ec0b33dba9cc1e67"
+  },
+  "hashes": {
+    "busca.py": "9606291b814bd0959056b66548dc2f40fa83e6c1f885e8d7a8b5f431583e50f2",
+    "comum.py": "0bea988072b8a179fbb56d802913eec2533f8cb4195c7fb0f6b2e10ffd8cc7a6",
+    "cjs_antigo": "b1a14c3caf511dc4c9b080df6c39c0342c12bc29568f567acaf5636a5c930f0d",
+    "dbbi": "71fe46259e270c113529dfaded4b59c59a9dffd826a7202ab07fc498b6a2c5ca",
+    "faed": "066191b4aafc114fbca7f0d168382f40129c4ff18490375b689741081d5ef3c2"
+  },
+  "segundos": 133.8
+}

@@ -122,10 +122,12 @@ Exports do Telegram até 2026-09-17: nenhuma fala do criador depois de 2026-09-0
     como a esposa. Mas até 2026-09-17 `solver/oracles.py` e `G.fast_priv_scan` comparavam só com
     `1GSMG`: toda varredura de privkey do projeto era cega para 3/4 dos fundos. O kit agora testa os dois
     (`O.PRIZE_ADDRS`, `O.TARGET_H160S`; `fast_priv_scan` compara o h160 das duas formas de pubkey, com
-    controle plantado no self-test). Re-varredura retroativa de todo plaintext com padding guardado:
+    controle plantado no self-test). Re-varredura retroativa de todo conteúdo hex guardado (plaintexts
+    com padding e também materiais de decodificadores, §3.14):
     694.386 anteriores (81.862.702 verificações) + 1.331.155 da rodada "operador ensinado"
     (231.207.482): **0**. O MITM de 16! (§4-B) exige a pubkey do alvo e **não** pode ser refeito para
-    `17ucy`; os demais negativos históricos de privkey valem só para `1GSMG`.
+    `17ucy`; os demais negativos históricos de privkey valem só para `1GSMG`, exceto as famílias
+    re-verificadas na §3.14.
 12. **Revisão paralela dos bytes salvos contra os dois alvos.** Implementação separada da de
     §3.11 (`solver/oraculo_duplo_2026_09_17/oracle.py`), feita em paralelo na branch
     `codex/oraculo-duplo` sobre um corpus distinto (`_work/` + `solver/`, com prefixos); a
@@ -142,7 +144,7 @@ Exports do Telegram até 2026-09-17: nenhuma fala do criador depois de 2026-09-0
     A correção reproduz os 1.539 bytes autênticos do Beaufort no offset 447; nova varredura
     textual dos 592.339 conteúdos anteriores: zero candidatos adicionais e zero hits. **Lacuna
     declarada:** o corpus da §3.11 (694.386 plaintexts + 1.331.155 da rodada "operador
-    ensinado") não passou pela visão cp273 inversa nem por UTF-16.
+    ensinado") não passou pela visão cp273 inversa nem por UTF-16 (fechada na §3.14).
     Também foram recuperados 225.854 plaintexts completos de binários COSMIC e caudas Bifid
     que não pertenciam ao corpus anterior. A varredura concluída verificou todas as
     253.179.237 janelas raw32 em cada orientação BE/LE (**506.358.474 tentativas**) contra
@@ -151,6 +153,37 @@ Exports do Telegram até 2026-09-17: nenhuma fala do criador depois de 2026-09-0
     apesar de um relatório citar a contagem calculada como execução. Separadamente, o filtro
     dos modos de fluxo podia descartar chaves binárias interiores antes da persistência:
     esse espaço grande continua aberto. [Escopo e evidências](_work/multiagente_2026-09-18/RELATORIO.md).
+14. **Enxame de 18/09: lacunas reproduzidas fechadas, sem solução.** Sete lentes de ideação (seis
+    do Claude e o Codex Astra) propuseram 17 hipóteses. As 13 do Claude caíram no gate
+    adversarial com prior ≤ 2. As 4 do Codex e 3 lacunas de oráculo reproduzidas pelos
+    verificadores viraram frentes de teste, cada uma com revisão independente. Resultado: zero
+    candidatos e zero hits em 6,58 M decisões AES e ~168 M testes de privkey contra os dois alvos.
+    - **Visões cp273 e UTF-16 sobre o corpus da §3.11** (1.894.673 conteúdos, 6 visões): 0. O
+      corpus da §3.11 é de conteúdos hex, que incluem materiais de decodificadores; não é só de
+      plaintexts.
+    - **Decimal → bytes → EBCDIC no repertório da direção autêntica.** A busca de 16/09 podava
+      pelo repertório da direção errada, e o falso negativo foi demonstrado. Refeita a leitura por
+      inteiro completo (33,8 M inteiros de `dbbi` e 13,1 M configurações literais e de bijeção):
+      0 textos aceitos.
+    - **Seleções de 256 bits de `faed`** como pré-imagem de senha (1,15 M AES) e contra `17ucy`: 0.
+    - **Lista numérica + fala antes de "choice"** (474 k senhas, 2,84 M AES): 0.
+    - **CBC sem padding.** COSMIC por bloco sobre as 1,27 M formas do corpus histórico e
+      SMALL/TAIL32 sem unpad com os 7 operandos, com raw32 BE/LE: 0.
+    - **`17ucy` nos escalares históricos** (11,19 M: F6 completa, brainwallets, corpus de 466.310
+      bases, famílias `.cjs`, `prime_host`, `select256`): 0.
+    - **Plaintexts de 17/09 deixados em `%TEMP%`**, que nenhuma re-varredura tinha lido (152.952
+      conteúdos, 150 M janelas raw32 BE+LE): 0.
+    - **Continuam abertos:**
+      - modos de fluxo;
+      - raw32 sem unpad do corpus de 1,27 M em SMALL/TAIL32 (~499 M checagens);
+      - a leitura EBCDIC por códigos concatenados (`ebcdic_codepoints.cjs`, mesmo repertório
+        errado);
+      - as camadas C/D do corpus órfão contra `17ucy`;
+      - a negação N−k contra `17ucy`;
+      - 772 conteúdos que a recoleta da §3.11 perdeu por `splitlines()`, cobertos só pela
+        §3.12/§3.13.
+
+    [Relatório, frentes e revisões](_work/enxame_2026-09-18/RELATORIO.md).
 
 ## 4. O que foi refutado, por família
 
@@ -174,7 +207,7 @@ experimento; a revisão de §3.12 amplia apenas a cobertura dos bytes preservado
 ### B. Decodificação de `dbbi` e `faed`
 | Família | Cobertura | Resultado |
 |---|---|---|
-| Decimal → hex → ASCII (o método da página) com zeros: cada letra, até duas, **todas** as ocorrências, `g→0/7`, UTF-8, EBCDIC 1141, bases primas 11–257, base 127, bases 29/31/37 com alfabetos, potências, Brotli/Zstd/zlib/gzip | certificados de cobertura integral (2^107 máscaras etc.) | 0 |
+| Decimal → hex → ASCII (o método da página) com zeros: cada letra, até duas, **todas** as ocorrências, `g→0/7`, UTF-8, EBCDIC 1141, bases primas 11–257, base 127, bases 29/31/37 com alfabetos, potências, Brotli/Zstd/zlib/gzip | certificados de cobertura integral (2^107 máscaras etc.); EBCDIC por inteiro completo refeito na direção autêntica da 3.2 (§3.14), por códigos concatenados ainda não | 0 |
 | Straddling checkerboard / VIC direto e permutado, Bifid 3×3 exaustivo (60.480 classes) e 5×5, Trifid, Bazeries, Nihilist, Polybius, MadHatter | 104 M decodes + hill-climb GPU com controles | 0 |
 | Transposições por `matrixsumlist`/`lastwords…`/`dbbi`, keystreams mod 9/10 (listas, tokens, cores, primos), running keys do corpus e do livro (6,4 M alinhamentos) | | 0 |
 | RSA por caractere com primos das cores, `dbbi` como escalar secp256k1, `dbbi` como SHA256 de listas (525 k pré-imagens), somas de linhas/colunas/anéis/diagonais/retângulos em todas as dimensões, produtos internos, distâncias | | 0 |
@@ -200,7 +233,7 @@ experimento; a revisão de §3.12 amplia apenas a cobertura dos bytes preservado
 ### D. Premissas da ferramenta
 | Premissa | Cobertura | Resultado |
 |---|---|---|
-| A cifra é aes-256-cbc | 16 cifras/modos do `openssl enc` × corpus 1,27 M × 3 blobs × 2 KDF = 122 M, controle por cifra com o CLI real | 0 reconhecidos; filtro de modos de fluxo não cobre raw32 binário interior (§3.13) |
+| A cifra é aes-256-cbc | 16 cifras/modos do `openssl enc` × corpus 1,27 M × 3 blobs × 2 KDF = 122 M, controle por cifra com o CLI real | 0 reconhecidos; filtro de modos de fluxo não cobre raw32 binário interior (§3.13); CBC sem padding: COSMIC por bloco e SMALL/TAIL32 com os 7 operandos fechados, raw32 do corpus em SMALL/TAIL32 aberto (§3.14) |
 | Os blocos do ciphertext estão publicados fora de ordem (o `enter` como marca) | 120 permutações × salt cruzado SMALL↔TAIL32 × 2 KDF × 1,27 M = 1,22 bi lógicos; oráculo por bloco agnóstico a IV/ordem/padding: 0/10,18 M pares com ≥ 2 blocos limpos | refutada; os negativos são de **senha** |
 | KDF/IV alternativos, `-K` cru, chave = passphrase XOR | | 0 |
 

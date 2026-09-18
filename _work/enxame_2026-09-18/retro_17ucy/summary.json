@@ -1,0 +1,616 @@
+{
+ "frente": "retro_17ucy",
+ "alvos": {
+  "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe": "a9553269572a317e39f0f518cb87c1a0ee1dbae4",
+  "17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa": "4bc468447fe1b048ad030a2f9a125478eabc4ed6"
+ },
+ "kit": {
+  "commit": "5f12b716a67763d7cd72aec3447a15c3015bf2d4",
+  "kit_sha256": "3810cbafa1936652bd6c30fc36b908453036d7d685ecd7f3ec0b33dba9cc1e67"
+ },
+ "script_sha256": "f4bdb574399772df73bb96cf1f74b2c8d6d8f672cd6730ee6125bfcbc4a0fbd3",
+ "comum_sha256": "0bea988072b8a179fbb56d802913eec2533f8cb4195c7fb0f6b2e10ffd8cc7a6",
+ "fontes": 17,
+ "gerados": 12875340,
+ "unicos_soma_por_fonte": 11189196,
+ "unicos_uniao_prefixo64": 10121336,
+ "sobreposicao_entre_fontes": 1067860,
+ "validos": 11188119,
+ "verificacoes_h160": 22376238,
+ "hits_reais": [],
+ "aes": 0,
+ "seg_parede": 498.4,
+ "por_fonte": [
+  {
+   "fonte": "select256",
+   "meta": {
+    "selecoes": 2038,
+    "NT_total_reconciliado": 3773974,
+    "NT_controles": 75,
+    "NT_laco_principal": 3763099,
+    "NT_nulo": 10800,
+    "fonte": "6eaff59672cee29aaaff61863b040c3bc3d93828c2e8c85c6d39bc92e8eca940"
+   },
+   "por_subfonte": {
+    "pcheck": 3745198
+   },
+   "fora_de_32B": {},
+   "gerados": 3745198,
+   "unicos": 2457409,
+   "validos": 2456332,
+   "invalidos_0_ou_ge_n": 1077,
+   "sha256_fluxo_ordenado": "15a98902c29172c6a9ffb8c76b24c2270bd4dae773c02e2956afac7edca0768b",
+   "verificacoes_h160": 4912664,
+   "hits_reais": [],
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0,
+   "seg_geracao": 12.5,
+   "seg_total": 280.6
+  },
+  {
+   "fonte": "cjs_color_factor",
+   "meta": {
+    "arquivo": "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle\\_work\\color_factor_sums_2026-09-16\\oracles.json",
+    "sha256_arquivo": "b55d59ec6d4aa7a6823a6de5d98c46139126ff83ca3b0480fbdede53fad87baf",
+    "senhas": 16740,
+    "paddings": 411,
+    "escalares_originais": 455646,
+    "scalarStream_recomputado": "f43590628495ae7476823b3f50a5cee5f0643d7c1e10df2f001e1670adec0b16",
+    "guardado": [
+     455646,
+     "f43590628495ae7476823b3f50a5cee5f0643d7c1e10df2f001e1670adec0b16"
+    ],
+    "reconciliado": true
+   },
+   "por_subfonte": {
+    "original": 455646,
+    "ext/sha256(senha)": 16740,
+    "ext/sha256(corpo)": 411
+   },
+   "fora_de_32B": {},
+   "gerados": 472797,
+   "unicos": 455646,
+   "validos": 455646,
+   "invalidos_0_ou_ge_n": 0,
+   "sha256_fluxo_ordenado": "f43590628495ae7476823b3f50a5cee5f0643d7c1e10df2f001e1670adec0b16",
+   "verificacoes_h160": 911292,
+   "hits_reais": [],
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0,
+   "seg_geracao": 1.8,
+   "seg_total": 23.5
+  },
+  {
+   "fonte": "brainwallet_py_e_2",
+   "meta": {
+    "frases": 3246,
+    "chaves_brainwallet_py": 96450,
+    "chaves_brainwallet2_py": 57965,
+    "fonte": "4637315b8b0fff54029edd93372a30077d415c7bbc5fbd7e951a97fbf057f562",
+    "readme": [
+     "2d2ec8f",
+     "ce2eb740cbe12cc66e1986b384be1ee6d90d9043d7a7ef6a2c71f7bbbb78d682"
+    ]
+   },
+   "por_subfonte": {
+    "brainwallet/sha256": 16075,
+    "brainwallet/sha256|N-k": 16075,
+    "brainwallet/dsha256": 16075,
+    "brainwallet/dsha256|N-k": 16075,
+    "brainwallet/sha256hex": 16075,
+    "brainwallet/sha256hex|N-k": 16075,
+    "brainwallet2/rawbytes": 57965
+   },
+   "fora_de_32B": {},
+   "gerados": 154415,
+   "unicos": 139513,
+   "validos": 139513,
+   "invalidos_0_ou_ge_n": 0,
+   "sha256_fluxo_ordenado": "0a4d71b29eabae22f206fdcdb22abe3baacea6e5898d36a137f271fe42756797",
+   "verificacoes_h160": 279026,
+   "hits_reais": [],
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0,
+   "seg_geracao": 0.5,
+   "seg_total": 7.8
+  },
+  {
+   "fonte": "F6_T3_low",
+   "meta": {
+    "triplas": 777816
+   },
+   "por_subfonte": {
+    "T3_low/sha256": 777816,
+    "T3_low/sha256d": 777816,
+    "T3_low/sha256_hex": 777816
+   },
+   "fora_de_32B": {},
+   "gerados": 2333448,
+   "unicos": 2333445,
+   "validos": 2333445,
+   "invalidos_0_ou_ge_n": 0,
+   "sha256_fluxo_ordenado": "4611ed46b5001a43c6d453d9163a342bb7a88e90ef9c9660f701ca20a89fb636",
+   "verificacoes_h160": 4666890,
+   "hits_reais": [],
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0,
+   "seg_geracao": 5.3,
+   "seg_total": 161.9
+  },
+  {
+   "fonte": "F6_gerar",
+   "meta": {
+    "candidatos": 198345,
+    "nao_F3": 29121,
+    "brainwallets_historicos_reconciliados": 454932,
+    "fontes": {
+     "familia6": "5a26b14e1551f53e6cc7f007fb4962fe10c24fef838a47a27877c56300de3843",
+     "critico_familia6": "a477a341fbfc86ebc7f74aed366a92fdd42178765ac7c23d096a33f6af35375b"
+    }
+   },
+   "por_subfonte": {
+    "gerar/sha256": 198345,
+    "gerar/sha256d": 198345,
+    "gerar/sha256_hex": 198345,
+    "gerar/sha256_lf": 29121
+   },
+   "fora_de_32B": {},
+   "gerados": 624156,
+   "unicos": 624156,
+   "validos": 624156,
+   "invalidos_0_ou_ge_n": 0,
+   "sha256_fluxo_ordenado": "3122c774f7682d6dfd7c2350f5bb2f449259202b158195ac9330e9f9ce3f70db",
+   "verificacoes_h160": 1248312,
+   "hits_reais": [],
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0,
+   "seg_geracao": 1.1,
+   "seg_total": 38.5
+  },
+  {
+   "fonte": "cores163",
+   "meta": {
+    "senhas_reconciliadas": 21997,
+    "priv32": 28267,
+    "janelas_formas_bytes": 718467,
+    "CNT_priv_sem_plaintexts": 746734,
+    "CNT_priv_original": 986874,
+    "diferenca_janelas_de_plaintexts_AES": 240140,
+    "fonte": "102b9a5c904928c020abb7efba58ed5c723795be6c4d9f78947845af0a6e4495"
+   },
+   "por_subfonte": {
+    "priv32": 28267,
+    "janelas_formas_bytes": 718467
+   },
+   "fora_de_32B": {},
+   "gerados": 746734,
+   "unicos": 658967,
+   "validos": 658967,
+   "invalidos_0_ou_ge_n": 0,
+   "sha256_fluxo_ordenado": "471442e34c8a0067f0e38f8269679af832c89bed8e9a181f328ae4443bcec028",
+   "verificacoes_h160": 1317934,
+   "hits_reais": [],
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0,
+   "seg_geracao": 0.9,
+   "seg_total": 49.8
+  },
+  {
+   "fonte": "F6_T3_vb_ate_654889",
+   "meta": {
+    "triplas": 654890,
+    "indice_corte": 654889
+   },
+   "por_subfonte": {
+    "T3_vb_ate_654889/sha256": 654890,
+    "T3_vb_ate_654889/sha256d": 654890,
+    "T3_vb_ate_654889/sha256_hex": 654890
+   },
+   "fora_de_32B": {},
+   "gerados": 1964670,
+   "unicos": 1964670,
+   "validos": 1964670,
+   "invalidos_0_ou_ge_n": 0,
+   "sha256_fluxo_ordenado": "c9a1f772b41c2d2ee5f700195c966b125272dd14031e98fabf532827d290b739",
+   "verificacoes_h160": 3929340,
+   "hits_reais": [],
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0,
+   "seg_geracao": 4.7,
+   "seg_total": 237.2
+  },
+  {
+   "fonte": "prime_host_faed_keys",
+   "meta": {
+    "ph_delta_run1": {
+     "materiais": 17003,
+     "sha256_arquivo": "f24b70b01d7fb360e0026b2dcb99e93b1306558a1bca24e8feb6f63d9559c5ec"
+    },
+    "ph_l84_run1": {
+     "materiais": 13539,
+     "sha256_arquivo": "26e137d714b2d922e089d1decd8fb9ec518b6c88de138b58452ca60dfa4f1224"
+    },
+    "rabbit_delta": {
+     "materiais": 284,
+     "sha256_arquivo": "2be92cef9ce222530f4bc52e5eb1e5bf618a9a6d10c7f2d002204af3a0f9c4a4"
+    },
+    "faed_keys": {
+     "chaves": 1067,
+     "formatos": {
+      "decimal-concat": 539,
+      "mod10": 528
+     },
+     "sha256_arquivo": "97b86d2f3e24e507c3486ae1369b7cff180ccdb34988f122fe2a496e8286a79b"
+    }
+   },
+   "por_subfonte": {
+    "ph_delta_run1/sha256": 17003,
+    "ph_delta_run1/sha256d": 17003,
+    "ph_delta_run1/sha256_hex": 17003,
+    "ph_l84_run1/sha256": 13539,
+    "ph_l84_run1/sha256d": 13539,
+    "ph_l84_run1/sha256_hex": 13539,
+    "rabbit_delta/sha256": 284,
+    "rabbit_delta/sha256d": 284,
+    "rabbit_delta/sha256_hex": 284,
+    "faed_keys/inteiro": 1067,
+    "faed_keys/texto/sha256": 1067,
+    "faed_keys/texto/sha256d": 1067,
+    "faed_keys/texto/sha256_hex": 1067
+   },
+   "fora_de_32B": {},
+   "gerados": 96746,
+   "unicos": 95128,
+   "validos": 95128,
+   "invalidos_0_ou_ge_n": 0,
+   "sha256_fluxo_ordenado": "3c2cea7862500e585c9c34f83df30e35f66d023e94624d0796ae293dc5d85997",
+   "verificacoes_h160": 190256,
+   "hits_reais": [],
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0,
+   "seg_geracao": 0.3,
+   "seg_total": 6.5
+  },
+  {
+   "fonte": "corpus_466310",
+   "meta": {
+    "bases": 466310,
+    "por_fonte": {
+     "salphaseion_passphrase_sweep.py": 231993,
+     "roadmap_sweep.py": 307,
+     "focused_aes.py": 125,
+     "answer_phrase_sweep.py": 39,
+     "first_hint_sweep.py": 24,
+     "new_hints_attack.py": 9205,
+     "architect_sum_attack.py": 6492,
+     "cosmic_book_attack.py": 59208,
+     "intertwine_attack4.py": 73,
+     "eps35_attack.py": 129,
+     "pop_culture_attack.py": 222,
+     "miroir_attack.py": 68,
+     "intertwine_attack.py": 80,
+     "intertwine_attack2.py": 40,
+     "intertwine_attack3.py": 26,
+     "grammar32": 158279
+    },
+    "sha256_bases_ordenadas": "854a6f553409d4f02af06ff2b93ab643373b033a9151f41468a09892a79b6953",
+    "historico_privkeys": 932620,
+    "fonte": "fa214ca07b6431fd0d36c61c6741905e7762a4903a680af90d2e6de59773008f"
+   },
+   "por_subfonte": {
+    "corpus/sha256": 466310,
+    "corpus/sha256d": 466310,
+    "corpus/sha256_hex": 466310
+   },
+   "fora_de_32B": {},
+   "gerados": 1398930,
+   "unicos": 1178273,
+   "validos": 1178273,
+   "invalidos_0_ou_ge_n": 0,
+   "sha256_fluxo_ordenado": "87281e281b038cd884a45a84c1d4cd620a92fc20b5c77ba72ce7b9a36b4b81d6",
+   "verificacoes_h160": 2356546,
+   "hits_reais": [],
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0,
+   "seg_geracao": 6.9,
+   "seg_total": 187.8
+  },
+  {
+   "fonte": "F6_separadores",
+   "meta": {
+    "candidatos_gerados": 77118
+   },
+   "por_subfonte": {
+    "separadores_low/sha256": 45600,
+    "separadores_low/sha256d": 45600,
+    "separadores_low/sha256_hex": 45600,
+    "separadores_vb/sha256": 31518,
+    "separadores_vb/sha256d": 31518,
+    "separadores_vb/sha256_hex": 31518
+   },
+   "fora_de_32B": {},
+   "gerados": 231354,
+   "unicos": 228318,
+   "validos": 228318,
+   "invalidos_0_ou_ge_n": 0,
+   "sha256_fluxo_ordenado": "96a76451dccd92c998491ef53320edc614f1433d29148ddd31a0709560b81c71",
+   "verificacoes_h160": 456636,
+   "hits_reais": [],
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0,
+   "seg_geracao": 0.3,
+   "seg_total": 111.3
+  },
+  {
+   "fonte": "F6_T3_vb_resto",
+   "meta": {
+    "triplas": 315136,
+    "indice_corte": 654889
+   },
+   "por_subfonte": {
+    "T3_vb_resto/sha256": 315136,
+    "T3_vb_resto/sha256d": 315136,
+    "T3_vb_resto/sha256_hex": 315136
+   },
+   "fora_de_32B": {},
+   "gerados": 945408,
+   "unicos": 945408,
+   "validos": 945408,
+   "invalidos_0_ou_ge_n": 0,
+   "sha256_fluxo_ordenado": "13154a15af09bce793e106ea0248330f03e5b3d75ce0d107916ec369bfd5beea",
+   "verificacoes_h160": 1890816,
+   "hits_reais": [],
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0,
+   "seg_geracao": 4.7,
+   "seg_total": 206.9
+  },
+  {
+   "fonte": "brainwallet_inline",
+   "meta": {
+    "candidatos": 6434,
+    "fonte": "b2e751f4e99acbd5472933286ac2444c3a56cd00ee46e3a2fc634ba27a56f60a",
+    "readme": [
+     "2d2ec8f",
+     "ce2eb740cbe12cc66e1986b384be1ee6d90d9043d7a7ef6a2c71f7bbbb78d682"
+    ]
+   },
+   "por_subfonte": {
+    "inline/sha256": 6434,
+    "inline/sha256|N-k": 6434,
+    "inline/sha256d": 6434,
+    "inline/sha256d|N-k": 6434,
+    "inline/sha256_hex": 6434,
+    "inline/sha256_hex|N-k": 6434
+   },
+   "fora_de_32B": {},
+   "gerados": 38604,
+   "unicos": 38604,
+   "validos": 38604,
+   "invalidos_0_ou_ge_n": 0,
+   "sha256_fluxo_ordenado": "9cf58f7af58b964bbca7709b79763678154b4e192f6e633bd5a7de310f53e800",
+   "verificacoes_h160": 77208,
+   "hits_reais": [],
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0,
+   "seg_geracao": 0.5,
+   "seg_total": 4.3
+  },
+  {
+   "fonte": "cjs_zero_cells",
+   "meta": {
+    "arquivo": "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle\\_work\\zero_cells_prime_sums_2026-09-16\\oracles.json",
+    "sha256_arquivo": "5c3ddba0036cca4638ff9946b45b9ffdcfca2877b152fb6272066ce1d6bb0ec4",
+    "senhas": 33600,
+    "paddings": 751,
+    "escalares_originais": 34351,
+    "scalarStream_recomputado": "9811a719e969c9a12f585554cfc46bb23f320bcade653ff100c374b09adb5e66",
+    "guardado": [
+     34351,
+     "9811a719e969c9a12f585554cfc46bb23f320bcade653ff100c374b09adb5e66"
+    ],
+    "reconciliado": true
+   },
+   "por_subfonte": {
+    "original": 34351,
+    "ext/sha256(senha)": 33600,
+    "ext/sha256(corpo)": 751
+   },
+   "fora_de_32B": {},
+   "gerados": 68702,
+   "unicos": 34351,
+   "validos": 34351,
+   "invalidos_0_ou_ge_n": 0,
+   "sha256_fluxo_ordenado": "9811a719e969c9a12f585554cfc46bb23f320bcade653ff100c374b09adb5e66",
+   "verificacoes_h160": 68702,
+   "hits_reais": [],
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0,
+   "seg_geracao": 0.7,
+   "seg_total": 11.4
+  },
+  {
+   "fonte": "cjs_frequency",
+   "meta": {
+    "arquivo": "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle\\_work\\frequency_primes_2026-09-16\\oracles.json",
+    "sha256_arquivo": "fb7e84b4c78cc6b6b3d4775885ecd95729e4702883cdebc5a0b1d64a144c705f",
+    "senhas": 18480,
+    "paddings": 439,
+    "escalares_originais": 9240,
+    "scalarStream_recomputado": "f2412450d392dd5a97b3988fd75661f2925eb4af923ad07252932ee1f715de4d",
+    "guardado": [
+     9240,
+     null
+    ],
+    "reconciliado": true
+   },
+   "por_subfonte": {
+    "original": 9240,
+    "ext/sha256(senha)": 18480,
+    "ext/sha256(corpo)": 439
+   },
+   "fora_de_32B": {},
+   "gerados": 28159,
+   "unicos": 18919,
+   "validos": 18919,
+   "invalidos_0_ou_ge_n": 0,
+   "sha256_fluxo_ordenado": "cfcd9351340226ddce6f3a8c3c4bac7478509cbce0775804138511e497934b9b",
+   "verificacoes_h160": 37838,
+   "hits_reais": [],
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0,
+   "seg_geracao": 1.7,
+   "seg_total": 18.0
+  },
+  {
+   "fonte": "cjs_wavelength",
+   "meta": {
+    "arquivo": "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle\\_work\\wavelength_primes_2026-09-16\\oracles.json",
+    "sha256_arquivo": "0e05c84109fa4e902c0e92812544e7bcaff55b3d401a2dbc88b0510ce95527fd",
+    "senhas": 11760,
+    "paddings": 281,
+    "escalares_originais": 5880,
+    "scalarStream_recomputado": "653b6bfe31d3bf6b920bfd38c0bc33a904e78c90912839f65c091e284765e9f3",
+    "guardado": [
+     5880,
+     null
+    ],
+    "reconciliado": true
+   },
+   "por_subfonte": {
+    "original": 5880,
+    "ext/sha256(senha)": 11760,
+    "ext/sha256(corpo)": 281
+   },
+   "fora_de_32B": {},
+   "gerados": 17921,
+   "unicos": 12041,
+   "validos": 12041,
+   "invalidos_0_ou_ge_n": 0,
+   "sha256_fluxo_ordenado": "8585ecdce18a3609191a620bec10be2a43e3805126c5059e6ee99c64c2bc5ae0",
+   "verificacoes_h160": 24082,
+   "hits_reais": [],
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0,
+   "seg_geracao": 0.1,
+   "seg_total": 0.5
+  },
+  {
+   "fonte": "cjs_url_prime",
+   "meta": {
+    "arquivo": "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle\\_work\\url_prime_reinsertion_2026-09-16\\oracles.json",
+    "sha256_arquivo": "15ed40d88250ab2ea94f84b6d82db1895c3cba527cdd683ece1eb867e7f77693",
+    "senhas": 3250,
+    "paddings": 80,
+    "escalares_originais": 3250,
+    "scalarStream_recomputado": "6c8e1cda68f206837431424b42e770c36b3d2ea1755b6f19f0cdaa4fd7417921",
+    "guardado": [
+     3250,
+     "6c8e1cda68f206837431424b42e770c36b3d2ea1755b6f19f0cdaa4fd7417921"
+    ],
+    "reconciliado": true
+   },
+   "por_subfonte": {
+    "original": 3250,
+    "ext/sha256(senha)": 3250,
+    "ext/sha256(corpo)": 80
+   },
+   "fora_de_32B": {},
+   "gerados": 6580,
+   "unicos": 3330,
+   "validos": 3330,
+   "invalidos_0_ou_ge_n": 0,
+   "sha256_fluxo_ordenado": "a5548b34ff5c7422b17ce2b14a28ba4616f3580c99b83ea302647203d9709562",
+   "verificacoes_h160": 6660,
+   "hits_reais": [],
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0,
+   "seg_geracao": 0.2,
+   "seg_total": 4.9
+  },
+  {
+   "fonte": "cjs_count_prime",
+   "meta": {
+    "arquivo": "C:\\Users\\ruthe\\Desktop\\puzzle\\gsmgio-5btc-puzzle\\_work\\count_prime_matrix_2026-09-16\\oracles.json",
+    "sha256_arquivo": "410a61753df6c3a7923bdc79c15c4d42da1e52a535ec705da3a33ef9b63792b8",
+    "senhas": 1000,
+    "paddings": 18,
+    "escalares_originais": 500,
+    "scalarStream_recomputado": "8c00e453923cc95b81bc91d7bc0bff1967d31e7602dafffe2db74305de63091c",
+    "guardado": [
+     500,
+     null
+    ],
+    "reconciliado": true
+   },
+   "por_subfonte": {
+    "original": 500,
+    "ext/sha256(senha)": 1000,
+    "ext/sha256(corpo)": 18
+   },
+   "fora_de_32B": {},
+   "gerados": 1518,
+   "unicos": 1018,
+   "validos": 1018,
+   "invalidos_0_ou_ge_n": 0,
+   "sha256_fluxo_ordenado": "bb97afc1bd310d13484026704122f97fdfaee4496cc80c6bf0f69ca16d687822",
+   "verificacoes_h160": 2036,
+   "hits_reais": [],
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0,
+   "seg_geracao": 0.0,
+   "seg_total": 0.1
+  }
+ ]
+}

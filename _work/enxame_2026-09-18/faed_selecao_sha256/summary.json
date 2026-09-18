@@ -1,0 +1,154 @@
+{
+ "frente": "faed_selecao_sha256",
+ "hipotese": "I2 (Codex Astra)",
+ "commit_kit": {
+  "commit": "5f12b716a67763d7cd72aec3447a15c3015bf2d4",
+  "kit_sha256": "3810cbafa1936652bd6c30fc36b908453036d7d685ecd7f3ec0b33dba9cc1e67"
+ },
+ "sha256_script": "7c0bc672fe2a6597b241999058635f2d7bca01e8d5c03137f982ca3d23b50508",
+ "sha256_comum": "0bea988072b8a179fbb56d802913eec2533f8cb4195c7fb0f6b2e10ffd8cc7a6",
+ "sha256_select_bits": "2178925efb0841cf33aaf55d235cc31b094d4ec2c24927170437a857585e14a1",
+ "sha256_paddings_jsonl": "231d7beaeb3bb7b3f13f3a01a952baeaa8d90fa67da010dc48d5bb880fd98441",
+ "U": 47862,
+ "ocorrencias": 50988,
+ "sha256_senhas_codex": "85eec0d5b7d522f57e3df6787245ea5c52268cf953062902a2aa0b7897afa209",
+ "sha256_U_ordenado": "7f12f600ff84e6d641ad58a492795ff301b1ca5fd85f847f4d4f88cf0f7187c3",
+ "formas": [
+  "raw",
+  "sha256hex",
+  "sha256HEX",
+  "hex"
+ ],
+ "senhas_por_forma": {
+  "raw": 47862,
+  "sha256hex": 47862,
+  "sha256HEX": 47862,
+  "hex": 47778
+ },
+ "senhas": 191364,
+ "aes": 1148184,
+ "paddings": 4434,
+ "paddings_esperados": 4502.68,
+ "z_padding": -1.03,
+ "celulas": {
+  "SMALL/SHA256/raw": {
+   "paddings": 188,
+   "esperado": 187.69
+  },
+  "SMALL/SHA256/sha256hex": {
+   "paddings": 178,
+   "esperado": 187.69
+  },
+  "SMALL/SHA256/sha256HEX": {
+   "paddings": 169,
+   "esperado": 187.69
+  },
+  "SMALL/SHA256/hex": {
+   "paddings": 154,
+   "esperado": 187.36
+  },
+  "SMALL/MD5/raw": {
+   "paddings": 161,
+   "esperado": 187.69
+  },
+  "SMALL/MD5/sha256hex": {
+   "paddings": 195,
+   "esperado": 187.69
+  },
+  "SMALL/MD5/sha256HEX": {
+   "paddings": 175,
+   "esperado": 187.69
+  },
+  "SMALL/MD5/hex": {
+   "paddings": 171,
+   "esperado": 187.36
+  },
+  "COSMIC/SHA256/raw": {
+   "paddings": 187,
+   "esperado": 187.69
+  },
+  "COSMIC/SHA256/sha256hex": {
+   "paddings": 198,
+   "esperado": 187.69
+  },
+  "COSMIC/SHA256/sha256HEX": {
+   "paddings": 195,
+   "esperado": 187.69
+  },
+  "COSMIC/SHA256/hex": {
+   "paddings": 184,
+   "esperado": 187.36
+  },
+  "COSMIC/MD5/raw": {
+   "paddings": 169,
+   "esperado": 187.69
+  },
+  "COSMIC/MD5/sha256hex": {
+   "paddings": 194,
+   "esperado": 187.69
+  },
+  "COSMIC/MD5/sha256HEX": {
+   "paddings": 167,
+   "esperado": 187.69
+  },
+  "COSMIC/MD5/hex": {
+   "paddings": 233,
+   "esperado": 187.36
+  },
+  "TAIL32/SHA256/raw": {
+   "paddings": 188,
+   "esperado": 187.69
+  },
+  "TAIL32/SHA256/sha256hex": {
+   "paddings": 181,
+   "esperado": 187.69
+  },
+  "TAIL32/SHA256/sha256HEX": {
+   "paddings": 185,
+   "esperado": 187.69
+  },
+  "TAIL32/SHA256/hex": {
+   "paddings": 202,
+   "esperado": 187.36
+  },
+  "TAIL32/MD5/raw": {
+   "paddings": 199,
+   "esperado": 187.69
+  },
+  "TAIL32/MD5/sha256hex": {
+   "paddings": 193,
+   "esperado": 187.69
+  },
+  "TAIL32/MD5/sha256HEX": {
+   "paddings": 182,
+   "esperado": 187.69
+  },
+  "TAIL32/MD5/hex": {
+   "paddings": 186,
+   "esperado": 187.36
+  }
+ },
+ "candidatos": [],
+ "privkeys_testadas": 95724,
+ "privkeys_invalidas": {
+  "u": 1,
+  "sha256(u)": 0
+ },
+ "priv_hits": [],
+ "nulo": {
+  "embaralhamentos": 100,
+  "celula": "sha256hex x SMALL,TAIL32 x SHA256,MD5",
+  "observado": 747,
+  "esperado_analitico": 750.78,
+  "nulo_media": 751.98,
+  "nulo_dp": 27.35,
+  "nulo_min": 657,
+  "nulo_max": 821,
+  "p_emp_ge": 0.614,
+  "U_por_embaralhamento_min_max": [
+   47854,
+   47870
+  ]
+ },
+ "segundos": 288.6
+}

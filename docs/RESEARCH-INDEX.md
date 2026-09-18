@@ -17,6 +17,7 @@ mantem no git so os relatorios e as execucoes finais.
 
 ## Alegacoes publicas, auditorias e fontes
 
+- [Enxame de 18/09/2026: lacuna cp273/UTF-16 da §3.11 fechada, EBCDIC decimal na direção autêntica, seleções de `faed` como senha, lista + fala, CBC sem padding, `17ucy` nos escalares históricos e plaintexts órfãos de `%TEMP%`](../_work/enxame_2026-09-18/RELATORIO.md) - scripts em `solver/enxame_2026_09_18/`. Resultados: 6,58 M decisões AES, ~168 M testes de privkey contra os dois alvos, zero candidatos. As 17 hipóteses e o gate estão em [`ideacao/FINDINGS.md`](../_work/enxame_2026-09-18/ideacao/FINDINGS.md).
 - [Rodada multiagente — 18/09/2026: cp273 inverso, recuperação de caudas, varredura BE/LE concluída, decodificadores, primos reinseridos e geometria da capa](../_work/multiagente_2026-09-18/RELATORIO.md). 225.854 plaintexts recuperados; 506.358.474 janelas raw32 BE/LE contra dois alvos, zero hits; controles e auditoria final no relatório.
 - [Rodada "operador ensinado": `matrixsumlist` como operador RAB, últimas palavras do Arquiteto, sete senhas entrelaçadas, codecs, dualidade e referência pessoal; oráculo de dois endereços (`1GSMG…` e `17ucy…`) e re-varredura retroativa — 17/09/2026](../_work/operador_ensinado_2026-09-17/RELATORIO.md) - scripts em `solver/operador_ensinado_2026_09_17/`.
 - [Consulta dos 3.370 endereços de candidatos textuais: saldo zero; 12 com histórico — 17/09/2026](../_work/oraculo_duplo_2026-09-17/saldos_candidatos/RELATORIO.md). Conferência adicional de 18 endereços em segundo provedor.
