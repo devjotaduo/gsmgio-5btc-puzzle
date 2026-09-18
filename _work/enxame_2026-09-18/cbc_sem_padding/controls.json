@@ -1,0 +1,16 @@
+{
+ "kit_selftest_ok": true,
+ "a_ascii_nopad_sha256": 83,
+ "a_ascii_nopad_md5": 83,
+ "b_padding_zero_nascii": 82,
+ "e_nested_header": true,
+ "f_cp273_nebc": 2,
+ "g_fase2_nascii": 40,
+ "g_fase2_head": "The ironic",
+ "h_senha_errada_nascii": 0,
+ "raw32_sem_plantar": 0,
+ "raw32_plantado": [
+  "BE@17"
+ ],
+ "raw32_unpad_rejeita": true
+}

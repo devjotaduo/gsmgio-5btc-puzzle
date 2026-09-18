@@ -185,6 +185,9 @@ independentes declaradas; o critério é qualidade de evidência, não volume de
 - **Python:** `C:/Users/ruthe/AppData/Local/Programs/Python/Python312/python.exe`
   (pycryptodome, coincurve, ecdsa, base58, mnemonic, bip_utils, numpy, PIL, pyopencl,
   opencv-python-headless). Outros interpretadores não têm as dependências.
+- **Processos e disco:** o C: vive quase cheio, e o pagefile cresce nele sob pressão de RAM. Em
+  18/09, com 20 workers em seis frentes, chegou a 41,6 GB e zerou o disco. Some no máximo 12
+  processos entre todas as frentes paralelas, contando os revisores.
 - **Node 24** para os `.cjs`; **Go 1.26** para `solver/mitm16_dbbi_hex/` e
   `solver/prize_nonce_bsgs/`; **GPU** RTX 5060 Laptop (OpenCL via driver; sem nvcc/MSVC).
 - **Kit:** `import sys; sys.path.insert(0, r"…\solver\experiments\claude_endgame_2026_09_02"); import gsmg_common as G`

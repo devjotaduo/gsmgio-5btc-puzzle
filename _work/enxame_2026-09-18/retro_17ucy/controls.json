@@ -1,0 +1,134 @@
+{
+ "globais": {
+  "positivo_publico_correct_horse": true,
+  "endereco": "1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T",
+  "kit_atual_ve_segundo_alvo_plantado": true,
+  "oraculo_pre_0ce4185_sem_17ucy": true,
+  "oraculo_pre_0ce4185_alvos": [
+   "1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe",
+   "a9553269572a317e39f0f518cb87c1a0ee1dbae4"
+  ]
+ },
+ "por_fonte": {
+  "select256": {
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0
+  },
+  "cjs_color_factor": {
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0
+  },
+  "brainwallet_py_e_2": {
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0
+  },
+  "F6_T3_low": {
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0
+  },
+  "F6_gerar": {
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0
+  },
+  "cores163": {
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0
+  },
+  "F6_T3_vb_ate_654889": {
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0
+  },
+  "prime_host_faed_keys": {
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0
+  },
+  "corpus_466310": {
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0
+  },
+  "F6_separadores": {
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0
+  },
+  "F6_T3_vb_resto": {
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0
+  },
+  "brainwallet_inline": {
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0
+  },
+  "cjs_zero_cells": {
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0
+  },
+  "cjs_frequency": {
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0
+  },
+  "cjs_wavelength": {
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0
+  },
+  "cjs_url_prime": {
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0
+  },
+  "cjs_count_prime": {
+   "plantados": 2,
+   "plantados_recuperados": 2,
+   "controle_plantado_ok": true,
+   "ecdsa_amostra": 200,
+   "ecdsa_divergencias": 0
+  }
+ },
+ "nulo": "N/A: cobertura determinística finita; vale a contagem reconciliada"
+}

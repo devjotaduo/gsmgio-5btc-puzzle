@@ -1,0 +1,513 @@
+{
+ "kit_selftest": "gsmg_common OK; KDF=EVP-SHA256 confirmado; BIF: BTCSEEDDEOEMCKEADHBSCHDKBDCSDK score -5.577",
+ "chaves_plantadas": {
+  "casos": [
+   {
+    "visao": "cp273-inverse",
+    "formato": "hex64",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "cp273-inverse",
+    "formato": "hex64",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "cp273-inverse",
+    "formato": "wif-uncompressed",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "cp273-inverse",
+    "formato": "wif-uncompressed",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "cp273-inverse",
+    "formato": "wif-compressed",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "cp273-inverse",
+    "formato": "wif-compressed",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "cp273",
+    "formato": "hex64",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "cp273",
+    "formato": "hex64",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "cp273",
+    "formato": "wif-uncompressed",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "cp273",
+    "formato": "wif-uncompressed",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "cp273",
+    "formato": "wif-compressed",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "cp273",
+    "formato": "wif-compressed",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-le@1",
+    "formato": "hex64",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-le@0",
+    "formato": "hex64",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-le@1",
+    "formato": "wif-uncompressed",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-le@0",
+    "formato": "wif-uncompressed",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-le@1",
+    "formato": "wif-compressed",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-le@0",
+    "formato": "wif-compressed",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-be@1",
+    "formato": "hex64",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-be@0",
+    "formato": "hex64",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-be@1",
+    "formato": "wif-uncompressed",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-be@0",
+    "formato": "wif-uncompressed",
+    "offset": 14,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-be@1",
+    "formato": "wif-compressed",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "visao": "utf-16-be@0",
+    "formato": "wif-compressed",
+    "offset": 14,
+    "hits": 1
+   }
+  ],
+  "n": 24,
+  "privkey_sintetica_sha256_de": "enxame 2026-09-18 ...",
+  "sem_alvo_plantado_hits": 0
+ },
+ "texto_e_aninhado": {
+  "casos": [
+   {
+    "visao": "cp273-inverse",
+    "payload": "ascii",
+    "offset": 19
+   },
+   {
+    "visao": "cp273-inverse",
+    "payload": "ascii",
+    "offset": 20
+   },
+   {
+    "visao": "cp273-inverse",
+    "payload": "aninhado-base64",
+    "offset": 19
+   },
+   {
+    "visao": "cp273-inverse",
+    "payload": "aninhado-base64",
+    "offset": 20
+   },
+   {
+    "visao": "cp273-inverse",
+    "payload": "aninhado-cru",
+    "offset": 19
+   },
+   {
+    "visao": "cp273-inverse",
+    "payload": "aninhado-cru",
+    "offset": 20
+   },
+   {
+    "visao": "cp273",
+    "payload": "ascii",
+    "offset": 19
+   },
+   {
+    "visao": "cp273",
+    "payload": "ascii",
+    "offset": 20
+   },
+   {
+    "visao": "cp273",
+    "payload": "aninhado-base64",
+    "offset": 19
+   },
+   {
+    "visao": "cp273",
+    "payload": "aninhado-base64",
+    "offset": 20
+   },
+   {
+    "visao": "cp273",
+    "payload": "aninhado-cru",
+    "offset": 19
+   },
+   {
+    "visao": "cp273",
+    "payload": "aninhado-cru",
+    "offset": 20
+   },
+   {
+    "visao": "utf-16-le@1",
+    "payload": "ascii",
+    "offset": 19
+   },
+   {
+    "visao": "utf-16-le@0",
+    "payload": "ascii",
+    "offset": 20
+   },
+   {
+    "visao": "utf-16-le@1",
+    "payload": "aninhado-base64",
+    "offset": 19
+   },
+   {
+    "visao": "utf-16-le@0",
+    "payload": "aninhado-base64",
+    "offset": 20
+   },
+   {
+    "visao": "utf-16-le@1",
+    "payload": "aninhado-cru",
+    "offset": 19
+   },
+   {
+    "visao": "utf-16-le@0",
+    "payload": "aninhado-cru",
+    "offset": 20
+   },
+   {
+    "visao": "utf-16-be@1",
+    "payload": "ascii",
+    "offset": 19
+   },
+   {
+    "visao": "utf-16-be@0",
+    "payload": "ascii",
+    "offset": 20
+   },
+   {
+    "visao": "utf-16-be@1",
+    "payload": "aninhado-base64",
+    "offset": 19
+   },
+   {
+    "visao": "utf-16-be@0",
+    "payload": "aninhado-base64",
+    "offset": 20
+   },
+   {
+    "visao": "utf-16-be@1",
+    "payload": "aninhado-cru",
+    "offset": 19
+   },
+   {
+    "visao": "utf-16-be@0",
+    "payload": "aninhado-cru",
+    "offset": 20
+   }
+  ],
+  "n": 24,
+  "sal_usado": "0000000000000000"
+ },
+ "fase32": {
+  "sha256": "b82afeb86f9e50848220f9b64b744b821400308aea273a1c949b9d2d0e408a34",
+  "ebcdic_sig": 1.0,
+  "cp273_inverse_run": {
+   "offset": 442,
+   "length": 1548
+  },
+  "texto_inicio": "K\r%\r%vtkvplmepphluwahtzmjpfipuxohaptukzztgikfwpuyatowynlebtq",
+  "novos": [
+   "ascii_run_ge48"
+  ]
+ },
+ "utf16_vs_codec": {
+  "comparacoes": 1600
+ },
+ "regra_ebcdic": {
+  "bytes_verificados": 256,
+  "imagem_az_total": 26,
+  "imagem_az_ge_0x80": 17
+ },
+ "passou": true,
+ "alvos": {
+  "TARGET_H160S": [
+   "a9553269572a317e39f0f518cb87c1a0ee1dbae4",
+   "4bc468447fe1b048ad030a2f9a125478eabc4ed6"
+  ]
+ },
+ "reproducao_lacuna": {
+  "commit_historico": "9062dc7",
+  "sha256_fonte_fast_priv_scan": "104a0944f449ac886cb3c3e58e44b33247a5f101e4ef2d60413871d35665d02d",
+  "casos": {
+   "17ucy_sintetico_BE": {
+    "historico": 0,
+    "atual": 1,
+    "frente": 1
+   },
+   "17ucy_sintetico_LE": {
+    "historico": 0,
+    "atual": 0,
+    "frente": 1
+   },
+   "1GSMG_sintetico_pubkey_nao_comprimida": {
+    "historico_BE": 1,
+    "historico_LE": 0
+   }
+  },
+  "conclusao": "o histórico é cego a 17ucy (compara só a pubkey não comprimida de 1GSMG) e a LE; o kit atual cobre 17ucy só em BE; esta frente cobre BE e LE"
+ },
+ "raw32_17ucy_sintetico": {
+  "n": 24,
+  "casos": [
+   {
+    "pubkey": "comprimida",
+    "len": 79,
+    "ordem": "be",
+    "offset": 0,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 79,
+    "ordem": "be",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 79,
+    "ordem": "be",
+    "offset": 47,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 79,
+    "ordem": "le",
+    "offset": 0,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 79,
+    "ordem": "le",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 79,
+    "ordem": "le",
+    "offset": 47,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 1327,
+    "ordem": "be",
+    "offset": 0,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 1327,
+    "ordem": "be",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 1327,
+    "ordem": "be",
+    "offset": 1295,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 1327,
+    "ordem": "le",
+    "offset": 0,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 1327,
+    "ordem": "le",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "pubkey": "comprimida",
+    "len": 1327,
+    "ordem": "le",
+    "offset": 1295,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 79,
+    "ordem": "be",
+    "offset": 0,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 79,
+    "ordem": "be",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 79,
+    "ordem": "be",
+    "offset": 47,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 79,
+    "ordem": "le",
+    "offset": 0,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 79,
+    "ordem": "le",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 79,
+    "ordem": "le",
+    "offset": 47,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 1327,
+    "ordem": "be",
+    "offset": 0,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 1327,
+    "ordem": "be",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 1327,
+    "ordem": "be",
+    "offset": 1295,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 1327,
+    "ordem": "le",
+    "offset": 0,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 1327,
+    "ordem": "le",
+    "offset": 13,
+    "hits": 1
+   },
+   {
+    "pubkey": "nao_comprimida",
+    "len": 1327,
+    "ordem": "le",
+    "offset": 1295,
+    "hits": 1
+   }
+  ]
+ },
+ "brainwallet_plantado": {
+  "material": "lit:nd",
+  "forma": "sha256",
+  "achado_com_alvo_plantado": true
+ },
+ "hashes": {
+  "solver\\enxame_2026_09_18\\orfaos_temp\\orfaos.py": "a650e54ae91133fc82b417885e64882e94369d0b1ce3e114aaed9ee6370f5a33",
+  "solver\\enxame_2026_09_18\\lacuna_cp273_utf16\\scan.py": "c1c264e44a53c39b8a41cb73c2e552d5cc4f998e3b6e7e15ecad0f36163a58c5",
+  "solver\\experiments\\claude_endgame_2026_09_02\\gsmg_common.py": "3810cbafa1936652bd6c30fc36b908453036d7d685ecd7f3ec0b33dba9cc1e67",
+  "solver\\oracles.py": "d0d7407932b4a84c324cc077ae732348e76b74f62446b7434c44e00661840c40",
+  "solver\\oraculo_duplo_2026_09_17\\oracle.py": "1b927716a5339a5a8cabe8527f1d7197e9bf539fdb508f25562dabafd45eec8d"
+ }
+}

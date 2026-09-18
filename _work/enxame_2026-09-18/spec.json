@@ -1,0 +1,34 @@
+{
+  "campanha": "enxame_2026-09-18",
+  "coordenador": "Claude Code, branch claude/enxame-2026-09-18 (dono deste spec e do RELATORIO.md)",
+  "pergunta": "Existe, na lacuna declarada em ENDGAME §3.13 ou numa família ausente da tabela §4 compatível com o teto de complexidade (regra 4), uma operação finita que abra SMALL, COSMIC ou TAIL32 ou produza a privkey de um dos dois alvos?",
+  "justificativa_da_campanha": "Sem insumo novo do criador (monitor de 2026-09-17: site sem mudança; exports até 17/09 sem falas dele). Entradas admitidas pela regra 3: (1) lacuna de cobertura reproduzida (§3.13); (2) família ausente da §4 com prior compatível com a regra 4.",
+  "oraculo": "AGENTS.md regra 1. Solução = privkey de 32 B cujo h160 (comprimida ou não) bate com 1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe ou 17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa, ou abertura AES certificada (blob aninhado que abre, chave de um alvo, ou texto que descreve o próximo passo lido igual pelo openssl CLI e por uma segunda implementação). Sinal semântico = candidato; padding PKCS7 sozinho = ruído (1/255).",
+  "kdf": "G.try_password_all com kdf='both' (EVP_BytesToKey SHA256 primário, MD5 controle); o relatório de cada frente declara o que cobriu.",
+  "blobs": ["SMALL", "COSMIC", "TAIL32"],
+  "controle_positivo": "Fase 2 abre com sha256hex('causality') pelo kit; frentes de decodificação reproduzem também o checkerboard da 3.2.2. Frentes de varredura plantam a chave-alvo sintética na representação testada.",
+  "nulo": "≥ 100 embaralhamentos preservando contagens quando houver escore ou taxa de padding a comparar; N/A justificado em varredura determinística de cobertura finita.",
+  "frentes": {
+    "lacuna_cp273_utf16": {
+      "hipotese": "Algum plaintext com padding válido já guardado no corpus da §3.11 (694.386 anteriores + 1.331.155 do operador ensinado) contém hex64, WIF, blob openssl aninhado, texto ASCII ≥ 48 B ou sinal G.semantic visível só sob a visão cp273 inversa (ASCII.decode(cp273).encode(latin-1), a direção autêntica da fase 3.2), cp273 direta ou UTF-16 LE/BE.",
+      "contra_hipotese": "O corpus é padding aleatório de senhas erradas; nenhuma visão bijetiva por byte cria estrutura.",
+      "controle": "Chave-alvo sintética em hex64/WIF codificada em cada visão e plantada num plaintext falso é recuperada; o plaintext autêntico da 3.2 dispara a assinatura EBCDIC.",
+      "nulo": "N/A: cobertura determinística finita; contagens de conteúdos únicos reconciliadas com as da §3.11.",
+      "parada": "Todo conteúdo único recoletado passou pelas quatro visões com contagens reconciliadas, ou a recoleta prova que parte do corpus não existe mais (declarar a parte).",
+      "dono": "solver/enxame_2026_09_18/lacuna_cp273_utf16/, _work/enxame_2026-09-18/lacuna_cp273_utf16/"
+    },
+    "ideacao": {
+      "hipotese": "Frentes de ideação com lentes distintas (gramática das fases, roteiro literal, ferramentas online, dualidade/cores, auditoria de implementação, falas do criador; mais o Codex Astra como lente de outro modelo) produzem hipóteses finitas e falsificáveis ausentes da §4.",
+      "gate": "Cada hipótese passa por um verificador de cobertura que procura em solver/, _work/**/RELATORIO.md, docs/RESEARCH-INDEX.md e docs/historico/ o teste já feito. Só seguem para teste as de cobertura nenhuma ou parcial com lacuna exata, prior ≥ 3 de 5 e custo ≤ 2 h de CPU nesta máquina.",
+      "dono": "_work/enxame_2026-09-18/ideacao/ (somente leitura do repositório)"
+    },
+    "testes": "Definidos depois do gate, uma frente por hipótese aprovada, com hipótese, candidatos, controle, nulo e parada próprios em _work/enxame_2026-09-18/<frente>/FINDINGS.md e script em solver/enxame_2026_09_18/<frente>/."
+  },
+  "fora_de_escopo": [
+    "Lacuna dos modos de fluxo (≈ 14,2 bilhões de janelas raw32; §3.13): prior baixo sob a regra 4 e custo acima do teto desta campanha; fica declarada.",
+    "GPU 16! de §5 (132 h por variante).",
+    "Qualquer busca pela identidade real de pessoas (regra 6)."
+  ],
+  "parada_global": "Todas as frentes aprovadas executadas com controles, ou um candidato certificado por proof-certificate. Negativos são resultado e vão para o RELATORIO.md.",
+  "disco": "C: com ~1,9 GB livres em 2026-09-18: nenhuma frente grava mais de 200 MB; plaintexts só com padding válido, em hex."
+}

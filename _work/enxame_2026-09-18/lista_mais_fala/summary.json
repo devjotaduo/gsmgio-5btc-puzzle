@@ -1,0 +1,121 @@
+{
+  "frente": "lista_mais_fala",
+  "montagem": {
+    "F_nucleo": 233,
+    "F_ocorrencias_textuais": 300,
+    "F_ext_novas": 206,
+    "F_ascii": 233,
+    "F_sem_apostrofo": 233,
+    "bases": 270,
+    "F_nucleo_amostra": [
+      "you",
+      "killyou",
+      "fuckin’killyou",
+      "I’llfuckin’killyou",
+      "thesalvationofZionThedoortoyourleftleadsbacktotheMatrixtoherandtotheendofyourspeciesAsyouadequatelyputtheproblemis",
+      "thesalvationofzionthedoortoyourleftleadsbacktothematrixtoherandtotheendofyourspeciesasyouadequatelyputtheproblemis"
+    ],
+    "sha_nucleo": "ba03b9f52e8466c009a758fe19a953cd60ac662cc39bd0f7f5fd7ffe8af88b3d"
+  },
+  "grupos": [
+    {
+      "rotulo": "nucleo_sha256hex_b+f",
+      "senhas": 62910,
+      "aes": 377460,
+      "paddings": 1460,
+      "paddings_esperados": 1480.24,
+      "z_padding": -0.53,
+      "itens_gerados": 62910,
+      "candidatos": 0,
+      "paddings_por_blob_kdf": {
+        "COSMIC/SHA256": 262,
+        "TAIL32/MD5": 232,
+        "SMALL/SHA256": 240,
+        "SMALL/MD5": 256,
+        "TAIL32/SHA256": 230,
+        "COSMIC/MD5": 240
+      }
+    },
+    {
+      "rotulo": "ext_raw_b+f",
+      "senhas": 62910,
+      "aes": 377460,
+      "paddings": 1468,
+      "paddings_esperados": 1480.24,
+      "z_padding": -0.32,
+      "itens_gerados": 62910,
+      "candidatos": 0,
+      "paddings_por_blob_kdf": {
+        "SMALL/SHA256": 244,
+        "TAIL32/MD5": 245,
+        "COSMIC/SHA256": 249,
+        "SMALL/MD5": 230,
+        "COSMIC/MD5": 249,
+        "TAIL32/SHA256": 251
+      }
+    },
+    {
+      "rotulo": "ext_inversa_f+b",
+      "senhas": 125820,
+      "aes": 754920,
+      "paddings": 2986,
+      "paddings_esperados": 2960.47,
+      "z_padding": 0.47,
+      "itens_gerados": 125820,
+      "candidatos": 0,
+      "paddings_por_blob_kdf": {
+        "SMALL/MD5": 533,
+        "TAIL32/SHA256": 505,
+        "TAIL32/MD5": 465,
+        "SMALL/SHA256": 484,
+        "COSMIC/SHA256": 506,
+        "COSMIC/MD5": 493
+      }
+    },
+    {
+      "rotulo": "ext_apostrofo",
+      "senhas": 222480,
+      "aes": 1334880,
+      "paddings": 5282,
+      "paddings_esperados": 5234.82,
+      "z_padding": 0.65,
+      "itens_gerados": 222480,
+      "candidatos": 0,
+      "paddings_por_blob_kdf": {
+        "SMALL/MD5": 850,
+        "SMALL/SHA256": 865,
+        "COSMIC/MD5": 825,
+        "COSMIC/SHA256": 968,
+        "TAIL32/SHA256": 880,
+        "TAIL32/MD5": 894
+      }
+    }
+  ],
+  "total": {
+    "senhas": 474120,
+    "aes": 2844720,
+    "paddings": 11196,
+    "paddings_esperados": 11155.77,
+    "z_padding": 0.38
+  },
+  "privkeys": {
+    "testadas": 474120,
+    "hits": []
+  },
+  "candidatos": 0,
+  "materiais_distintos": 237060,
+  "senhas_distintas": 474120,
+  "kit": {
+    "commit": "5f12b716a67763d7cd72aec3447a15c3015bf2d4",
+    "kit_sha256": "3810cbafa1936652bd6c30fc36b908453036d7d685ecd7f3ec0b33dba9cc1e67"
+  },
+  "hashes": {
+    "script": "44188452425aba0a9ff8ec7580b03eebfcea8cad538b86b749a00dcc9458ad59",
+    "comum": "0bea988072b8a179fbb56d802913eec2533f8cb4195c7fb0f6b2e10ffd8cc7a6",
+    "reinsert_primes": "c335e1aea6df75b8efbf9e3ce5e11831760075c4175c38057bdc69eab4b4aa9b",
+    "critico_familia2": "69162e2221c4e8f12274dd53dfcf41e848475bd43dcf7ca4710340a2e1822f74",
+    "misc_txt": "223d7f7687bda05af22999dee19f7cb3affc14ac470c478ea9dd3f9762bc5ac7",
+    "paddings_jsonl": "bf8f1d14e524c29e41d5337da301179943ff901c7c92ea2d623ccc3e0c4cd571"
+  },
+  "segundos": 138.1
+}

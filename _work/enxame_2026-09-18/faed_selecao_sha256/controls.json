@@ -1,0 +1,82 @@
+{
+ "lacuna": {
+  "estatica": {
+   "pcheck": "linhas 36-49: compara só PublicKey.format(False) == TGT; nenhum AES",
+   "TGT": "TGT = pubkey não comprimida de 1GSMG (G.TARGET_PUBKEY_HEX); 17ucy ausente",
+   "multibit": "linhas 317-326: só pcheck, nenhuma senha",
+   "main2_reverso": "linha 340: materialize(sub[::-1], ..., do_pw=False)",
+   "materialize_senhas": "linhas 174-224: com do_pw só tenta shahex(texto), texto cru e hex dos bits no offset 0; os 32 B de pcheck nunca viram pré-imagem de senha"
+  },
+  "ocorrencias": 50988,
+  "U": 47862,
+  "sha256_senhas_ordenadas": "85eec0d5b7d522f57e3df6787245ea5c52268cf953062902a2aa0b7897afa209",
+  "nt_historico_main": 512996,
+  "nt_historico_main2": 652435,
+  "reconcilia_log_historico": true,
+  "pcheck_calls_main": 508349,
+  "pcheck_calls_main2": 652435,
+  "senhas_ramo_antigo_total": 1549,
+  "senhas_ramo_antigo_distintas": 928,
+  "senhas_ramo_antigo_main2": 0,
+  "senhas_novas_por_forma": {
+   "raw": 47862,
+   "sha256hex": 47862,
+   "sha256HEX": 47862,
+   "hex": 47778
+  },
+  "sobreposicao_com_ramo_antigo_por_forma": {
+   "raw": 0,
+   "sha256hex": 0,
+   "sha256HEX": 0,
+   "hex": 72
+  }
+ },
+ "fase2": {
+  "senhas": 1,
+  "candidatos": 1,
+  "head": "The ironic 2name of the keymakers trying"
+ },
+ "privkey_plantada": {
+  "hits_plantados": [
+   {
+    "u": "4c1b2fd7ffd0130f28acc18ea939fba7fa334cbc3f9941d2cba7f9e472f451d5",
+    "forma": "u",
+    "priv": "4c1b2fd7ffd0130f28acc18ea939fba7fa334cbc3f9941d2cba7f9e472f451d5"
+   },
+   {
+    "u": "d140585b13fd32367cfac01db46bc99f880830946e60755eb57b536ffcb92aae",
+    "forma": "sha256(u)",
+    "priv": "398fae9416023225f9b87fa922472f30d246edfea9606a15c2d63e204fa21b41"
+   }
+  ],
+  "sem_plantio": 0,
+  "oracles_check_privkey_acha": true,
+  "pcheck_antigo_acha_segundo_alvo": false
+ },
+ "ponte": {
+  "K": "1046d2b8aefdccba5652134107a6654748f89d0e7793a8b63dbd184790b45fee",
+  "onde_K": "faed/primes_b0/b9@0",
+  "U_sintetico": 48452,
+  "senha": "7094453e988b19706ff15aadb71fcbe1a34f27c77a566afbfbf70fca385f18e2",
+  "envelope_b64": "U2FsdGVkX1+N4+IbdC4v+Kg9y9Slj3vy/P7rDpjBtZ34mTHS2zVKLjeZ9GdX9RQWVhqwLLOiB2QWaE7rImA1h0XfNIPwTwZHKemloao/F/Q5l2yqBkgiryS7JaFB8xp3mfDvDkAfuOH5Vp5ZqBISNw==",
+  "senhas_novas": 193723,
+  "aberturas_ramo_novo": [
+   {
+    "forma": "sha256hex",
+    "u": "1046d2b8aefdccba5652134107a6654748f89d0e7793a8b63dbd184790b45fee",
+    "kdf": "Crypto.Hash.SHA256",
+    "candidato": true
+   }
+  ],
+  "paddings_ramo_novo": 1416,
+  "senhas_ramo_antigo": 1549,
+  "senhas_ramo_antigo_distintas": 932,
+  "aberturas_ramo_antigo": 0,
+  "pcheck_antigo_em_K": false,
+  "openssl_cli_decifra_igual": true,
+  "nt_ramo_antigo": {
+   "main": 512352,
+   "main2": 649954
+  }
+ }
+}
