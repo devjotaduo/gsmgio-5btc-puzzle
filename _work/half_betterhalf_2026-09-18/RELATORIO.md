@@ -60,22 +60,38 @@ L84), o que `zeroed out` zera, e como `matrixsumlist` consome o resíduo. É um 
 compatibilidade com i.i.d. em 61 símbolos não prova ausência de informação — só que nenhuma operação
 enumerada a extraiu.
 
-## A parte que a evidência do criador sugere e vale encarar
+## A evidência do criador: o que ela realmente diz (revisado com o export verbatim)
 
-Em 12/07/2026 (ENDGAME §2), três falas juntas:
+**Correção.** Uma versão anterior deste relatório leu as falas de 12/07/2026 como indício de que o passo
+final seria *não-computacional*, e citou `itsinfrontofyoureyesbutyourenotseeingit` como fala dele. As
+duas coisas estão erradas, e a conferência verbatim no export desfaz ambas.
 
-- *"The 5 btc was never the actual prize"*;
-- *"hidden laptop … on that thing is the actual answer"*;
-- *"My close friends have the best chance of solving it … NOTE: that is a hint"*.
+`itsinfrontofyoureyes…` é token do **roadmap de 2023-02-23**, não fala de 2026; não há nenhuma
+ocorrência do criador com essa frase nos exports (os ~30 hits são solvers citando o roadmap).
 
-E o próprio roadmap dele (binário invertido, 2023-02-23) **termina** com
-`itsinfrontofyoureyesbutyourenotseeingit` e `verylaststepisatruegiveaway`.
+Quanto às três falas: são de **uma única noite de bar** (21:17–22:30, ele declaradamente bêbado às
+21:26), e o contexto desarma a leitura fácil — o detalhamento está na nota de contexto da §2 do
+`ENDGAME.md`. Em resumo:
 
-Leitura conjunta, honesta: a cadeia criptográfica é *"salphaseion 100% solvable"* (ele confirmou), mas
-o **passo final pode ser não-computacional** — uma referência ao mundo pessoal do criador que "amigos
-próximos" reconhecem e que nenhuma varredura força. `itsinfrontofyoureyes…` é auto-referente: o material
-visível na página basta; falta a leitura certa, não um dado externo. Se for esse o caso, mais busca não
-fecha o último passo, por melhor que seja o oráculo.
+1. **O laptop é sobre a memória dele.** Responde a "você só aparece quando há hint", logo depois de *"A
+   day later I can hardly understand what I have done. And that is not a joke"*. Significa *o gabarito
+   que perdi está lá*, não *a peça que falta está lá*.
+2. **No mesmo fio ele afirma solubilidade**: "Yes" a *salphaseion is 100% solveable?* e *"I've verified
+   many times back then … it's all still solvable with a few stable qubits"*. Se dependesse do objeto
+   físico, seria afirmação vazia.
+3. **Os halvings de 2024** implicam que ele opera as chaves por outro meio — contradição levantada no
+   grupo e nunca respondida.
+
+O hint marcado (`NOTE: that is a hint`) está sobre **close friends**, e é paradoxal de propósito: eles
+têm mais chance **apesar de não terem a habilidade técnica** do grupo. O que têm é o **vocabulário**
+dele. Ou seja, o hint anuncia uma **classe de senha** — palavra ou expressão de registro
+pessoal-informal, do mesmo universo de `causality` e `thematrixhasyou` — e **não** impossibilidade.
+
+**Consequência para a estratégia:** isto é evidência *a favor* de continuar a criptoanálise, com o
+orçamento dividido entre mecanismo e **listas de candidatos semânticos** dentro do teto da regra 4
+(ferramentas online, poucas camadas). A família "referência pessoal" já foi atacada com 104 itens
+públicos (§4-C, 1,7 M candidatos, 0), o que reduz mas não esgota essa classe. Perseguir identidade,
+locais ou o objeto é interdito pela regra 6 e sem valor operacional.
 
 ## O pipeline ordenado do roadmap (negativo)
 

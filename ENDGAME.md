@@ -65,8 +65,36 @@ moldura de verificação desenhada pelo autor. O centro contém um coelho branco
 | 2023-08-06 / 2025-04-28 | "Once you hit a 'ying yang', you'll be able to solve it the same day"; "when yingyang is reached, 2 hours max" | yinyang é uma etapa, não a senha |
 | 2024-01-26 | "Regular Bitcoin Private key" | alvo = chave privada Bitcoin; a fala não determina representação binária, textual ou intermediária |
 | 2022-12-11 | ".... That is very specific" sobre a **capa** do livro *Cosmic Duality* (yin-yang de campos estelares, uma estrela branca e uma amarela) | a "página 39" foi acréscimo da comunidade |
-| 2026-07-12 | "My close friends have the best chance of solving it … NOTE: that is a hint"; "hidden laptop … on that thing is the actual answer"; "The 5 btc was never the actual prize"; "salphaseion 100% solvable: Yes" | o passo final pode depender de referência pessoal |
+| 2026-07-12 | "My close friends have the best chance of solving it (a few tried). But they don't have the skills some of you do" + "NOTE: that is a hint"; "I have a hidden laptop which I haven't touched in years. On that thing… is the actual answer"; "The \"5\" btc was never the actual prize. That was only a tiny fraction"; "salphaseion 100% solvable: Yes" | **classe de senha**, não impossibilidade — ver a nota de contexto abaixo |
 | 2026-09-01 | "Couple hours, and no." — resposta a "quanto tempo levou? trabalhou sozinho?", ou seja **não** sozinho; a "two sloppy days" ele respondeu "Same same". "Pfff. Coincidence." (YOUWON) | **teto de complexidade**: ferramentas online, poucas camadas |
+
+**Contexto da noite de 2026-07-12 (conferido verbatim no export; corrige a leitura fácil).** As quatro
+falas acima são de uma única sessão de bar, 21:17–22:30, com ele declaradamente bêbado ("I might me
+drunk", 21:26). Não é um drop estruturado, e três pontos desarmam a leitura "a resposta está trancada
+num objeto físico":
+
+1. **O laptop é sobre a memória dele, não sobre o puzzle.** A fala responde a reclamações de que ele só
+   aparece quando há hint, e vem logo depois de "I have these moment where I get into a frenzy … A day
+   later I can hardly understand what I have done. And that is not a joke" (21:37) e de um "I don't know
+   right now" (21:45) a uma teoria de primos. O sentido é *o gabarito que eu perdi está lá*, não *a peça
+   que falta ao puzzle está lá*. Em 16/07, a um participante que brincou ter procurado o laptop, ele
+   respondeu "Well, it's hidden in a room with a hidden door" — piada, sem conteúdo operacional.
+2. **No mesmo fio ele afirma solubilidade:** "Yes" a *salphaseion is 100% solveable?* (22:01) e "I've
+   verified many times back then after some sad rushed mistakes, it's all still solvable with a few
+   stable qubits" (22:03). Se a solução dependesse do objeto físico, a afirmação seria vazia.
+3. **Contradição levantada no grupo e nunca respondida** (17/07): se ele não toca o laptop há anos, as
+   transações de halving de 2024 implicam que opera as chaves por outro meio.
+
+O hint marcado (`NOTE: that is a hint`) está sobre **close friends**, não sobre o laptop, e é
+deliberadamente paradoxal: os amigos têm mais chance **apesar de não terem a habilidade técnica** do
+grupo. O que eles têm é o **vocabulário pessoal/cultural** dele. Leitura operacional: o passo final é uma
+palavra ou expressão de registro pessoal-informal, do mesmo universo semântico de `causality` e
+`thematrixhasyou` — uma **classe de senha**, não um mecanismo novo nem um segredo inacessível. Isso é
+evidência *a favor* de continuar a criptoanálise sob o teto da regra 4, e não contra. "Some already found
+it. And understood not to risk it… 🤐" e "Iykyk" (22:17–22:20) são alegações não verificáveis ditas na
+mesma sessão. Perseguir identidade, locais ou o objeto é interdito pela regra 6 do `AGENTS.md` e não tem
+valor operacional. `itsinfrontofyoureyesbutyourenotseeingit` **não** é fala dele: é token do roadmap de
+2023-02-23; não há nenhuma ocorrência do criador com essa frase nos exports.
 
 Exports do Telegram até 2026-09-17: nenhuma fala do criador depois de 2026-09-01 (o export de
 04 a 17/09, com 1.209 mensagens, não tem nenhuma dele).
