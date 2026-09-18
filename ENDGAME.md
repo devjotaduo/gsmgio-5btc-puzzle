@@ -327,7 +327,15 @@ nas demais um símbolo, e exige-se consumo integral dos 91 símbolos.
   concatenações; "coluna j = letra j do rótulo" (7×13, 15×38).
 
 **A ligação ainda desconhecida:** qual segmentação é a pretendida e como `matrixsumlist` consome o
-resíduo. Sobre o segundo, uma leitura **inversa** foi testada e fechada em 18/09: que o resíduo **seja**
+resíduo. Sobre o **primeiro**: a coincidência de que o COSMIC tem 83 blocos AES e L83 tem 83 tokens foi
+testada como correspondência e **não tem lastro**. Particionando os 83 blocos pelas 23 posições primas,
+as quatro estatísticas (média, variância, bits por byte, entropia) dão menor p = 0,433 contra 20.000
+partições aleatórias — 1,0 após Bonferroni. A coincidência cai de "pista" para "número" e **não
+discrimina L83 de L84**. O teste só veria estrutura no ciphertext; se os marcadores disserem algo sobre
+os blocos que só faz sentido depois de decifrar, nenhum teste sobre o CT o detectaria. Na mesma rodada, a
+segmentação foi **reconstruída do zero** por implementação independente: saem exatamente as duas, com
+L84 em 16 `b` + 7 `be` e resíduo idêntico byte a byte ao publicado aqui, e L83 em 15 `b` + 8 `be`.
+[Relatório](_work/l83_cosmic_2026-09-18/RELATORIO.md). Sobre o segundo, uma leitura **inversa** foi testada e fechada em 18/09: que o resíduo **seja**
 o objeto que o rótulo nomeia — a lista das 14 somas de linha e 14 de coluna —, em vez de ser o alvo da
 operação. Isso cobria a lacuna que `symbolic_color_sums_2026-09-16` deixou explícita ("combinar linhas e
 colunas em uma lista de 28 valores"). Os limites de peso saem dos dados, não de escolha: azul aparece em

@@ -1,0 +1,47 @@
+{
+ "pergunta": "a coincidência 83 = L83 = blocos do COSMIC tem lastro no ciphertext?",
+ "por_que_importa": "o gargalo da §6 é qual segmentação é a pretendida; L83 teria campo correspondente de 83 unidades, L84 não teria campo de 84",
+ "segmentacao_reconstruida_do_zero": {
+  "L83": {
+   "tokens": 83,
+   "marcadores": 23,
+   "b": 15,
+   "be": 8,
+   "residuo_len": 60,
+   "residuo": "difhccgihaeeihggegebgehhehhfafdhffcdbfcccgfeggecdcifffgigeea",
+   "bits_dos_tipos": "00001000110000100110011"
+  },
+  "L84": {
+   "tokens": 84,
+   "marcadores": 23,
+   "b": 16,
+   "be": 7,
+   "residuo_len": 61,
+   "residuo": "difhccgihaeeihggegebgehhehhfafdhffcdbfcccgfeggecdcifffgigeeae",
+   "bits_dos_tipos": "00001000110000100110010"
+  }
+ },
+ "validacao": "o resíduo de L84 confere byte a byte com o publicado no ENDGAME §6",
+ "particao": {
+  "blocos": 83,
+  "marcados_posicao_prima": 23,
+  "outros": 60
+ },
+ "diferencas_observadas": {
+  "media": -2.07889,
+  "variancia": 211.94106,
+  "bits_por_byte": 0.02396,
+  "entropia": -0.39335
+ },
+ "p_bicaudal_nulo_casado": {
+  "media": 0.6313,
+  "variancia": 0.4851,
+  "bits_por_byte": 0.8289,
+  "entropia": 0.4332
+ },
+ "nulo": "20000 partições aleatórias do mesmo tamanho",
+ "menor_p": 0.4332,
+ "bonferroni_4_estatisticas": 1.0,
+ "veredito": "sem sinal: a coincidência 83=83 não tem lastro detectável no ciphertext",
+ "script_sha256": "3eaac29ee6c0c0275c47e2e4e31b13703aca7a69864e3c6d8b032d8004f925fd"
+}
