@@ -1,0 +1,41 @@
+{
+ "hipotese": "o resíduo é SELEÇÃO (saltos sobre faed), não texto",
+ "teto_algebrico": "soma dos saltos = 341 (L84) / 336 (L83) cabe nos 570 de faed; offsets possíveis: 230 e 235",
+ "controle": {
+  "selecao": {
+   "saltos": [
+    3,
+    1,
+    4
+   ],
+   "selecionado": "dgd",
+   "ok": true
+  },
+  "fase2": true
+ },
+ "selecoes_geradas": 3712,
+ "materiais_distintos": 3712,
+ "legibilidade": {
+  "melhor_escore": -6.516,
+  "rotulo": "L83/rev/depois/off14",
+  "texto": "ihhhigfddeebiifedebdficebaieddaafageaahfhicehheecbeggbedhifg",
+  "referencia_ingles": -3.679
+ },
+ "chave": {
+  "materiais_testados": 3712,
+  "hits": []
+ },
+ "aes": {
+  "senhas": 7424,
+  "aes": 44544,
+  "paddings": 167,
+  "paddings_esperados": 174.68,
+  "z_padding": -0.58
+ },
+ "candidatos_aes": [],
+ "kit": {
+  "commit": "28aff4b76b357707d1259e737e94700a88368012",
+  "kit_sha256": "3810cbafa1936652bd6c30fc36b908453036d7d685ecd7f3ec0b33dba9cc1e67"
+ },
+ "script_sha256": "408aa08654572132c5452b1a755f27bd67a2cf4f03fe29de45c93eb7e00b4a50"
+}
