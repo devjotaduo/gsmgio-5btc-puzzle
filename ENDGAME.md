@@ -327,7 +327,17 @@ nas demais um símbolo, e exige-se consumo integral dos 91 símbolos.
   concatenações; "coluna j = letra j do rótulo" (7×13, 15×38).
 
 **A ligação ainda desconhecida:** qual segmentação é a pretendida e como `matrixsumlist` consome o
-resíduo. O terceiro item, **o que "zeroed out" zera, está fechado** como espaço enumerável: os 2^9 =
+resíduo. Sobre o segundo, uma leitura **inversa** foi testada e fechada em 18/09: que o resíduo **seja**
+o objeto que o rótulo nomeia — a lista das 14 somas de linha e 14 de coluna —, em vez de ser o alvo da
+operação. Isso cobria a lacuna que `symbolic_color_sums_2026-09-16` deixou explícita ("combinar linhas e
+colunas em uma lista de 28 valores"). Os limites de peso saem dos dados, não de escolha: azul aparece em
+22 das 28 somas e amarelo em 15, então um azul de 3 dígitos exigiria ≥ 72 dígitos e um amarelo de 4
+exigiria ≥ 73, contra os 60/61 símbolos do resíduo — logo azul ≤ 99 e amarelo ≤ 999, com todos os pares
+de primos incluídos. Em L83 e L84, nos dois sentidos, com as 512 escolhas globais de letras zeráveis e
+16 ordens: 0 em 524.288 combinações, e 0 num segundo método com 1.564.864 combinações de pesos e perfis.
+Não fecha outras bases, permutações quaisquer das 28 somas nem as somas dentro de outra transformação.
+[Relatório](_work/residuo_como_somas_2026-09-18/RELATORIO.md).
+O terceiro item, **o que "zeroed out" zera, está fechado** como espaço enumerável: os 2^9 =
 512 subconjuntos de símbolos zerados (não só os de 1 e 2 do histórico), em L84 e L83, na ordem
 publicada e invertida — 2.044 leituras, 6.132 escalares — não dão chave de nenhum dos dois alvos nem
 um único texto com ≥ 85 % de imprimíveis (melhor de todo o espaço: 0,72, zerando `a` e `g`). Também
