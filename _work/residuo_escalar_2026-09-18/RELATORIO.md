@@ -81,5 +81,5 @@ variáveis por ocorrência; SHA256 ou outra derivação a partir do resíduo; us
 material de outra camada; `matrixsumlist` como operador; permutações de posições, recortes ou inversão
 de **bytes** (inverter símbolos não é inverter bytes); e o alvo `17ucy…`.
 
-Também **não decide L83 versus L84** — mas esse ponto foi resolvido por outro caminho, em
+Também **não decide L83 versus L84** — o argumento que fundamenta essa escolha está em
 [`DISCRIMINANTE.md`](../l83_cosmic_2026-09-18/DISCRIMINANTE.md).

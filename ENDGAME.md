@@ -335,7 +335,10 @@ intertwined passwords" — e L84 produz exatamente **23 marcadores = 16 `b` + 7 
 15 + 8. Das duas segmentações que a regra admite, só L84 satisfaz a repartição enunciada. Atenção ao
 que isto corrige: o teste das **cores** casa com as duas e de fato não desambigua (5 casamentos, não 4),
 mas o argumento dos **números 16/7 é independente das cores** e escolhe L84. É argumento semântico, não
-prova, e não muda resultado algum — todas as campanhas testaram L83 e L84 em paralelo.
+prova. **Não muda resultado algum, e o alcance é modesto:** L84 já vinha sendo adotado — a maioria das
+campanhas varre as duas segmentações em paralelo, e `prime_host_l84_2026-09-17` fixou L84 por decisão
+declarada, registrando que "a justificativa dessa escolha continua sendo uma hipótese". O que muda é
+que essa premissa deixa de ser arbitrária.
 [Nota](_work/l83_cosmic_2026-09-18/DISCRIMINANTE.md). Sobre o **primeiro**: a coincidência de que o COSMIC tem 83 blocos AES e L83 tem 83 tokens foi
 testada como correspondência e **não tem lastro**. Particionando os 83 blocos pelas 23 posições primas,
 as quatro estatísticas (média, variância, bits por byte, entropia) dão menor p = 0,433 contra 20.000
