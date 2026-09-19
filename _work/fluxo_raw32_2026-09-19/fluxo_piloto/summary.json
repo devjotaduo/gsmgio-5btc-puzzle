@@ -1,0 +1,31 @@
+{
+  "forms": 48,
+  "decryptions": 768,
+  "raw32_checks": 1033728,
+  "hex64_candidates": 0,
+  "wif_candidates": 0,
+  "sample_candidates": [],
+  "seconds": 0.07,
+  "windows_per_second": 14828435.19,
+  "campaign": "fluxo_raw32_2026-09-19",
+  "front": "fluxo_piloto",
+  "tokens": 16,
+  "forms_total": 48,
+  "forms_tested": 48,
+  "modes": [
+    "aes-256-cfb",
+    "aes-256-ofb",
+    "aes-256-ctr",
+    "chacha20"
+  ],
+  "digests": [
+    "sha256",
+    "md5"
+  ],
+  "blobs": [
+    "SMALL",
+    "COSMIC"
+  ],
+  "controls_ok": true,
+  "scope": "degrau técnico (cobertura parcial, sem oráculo duro de privkey)"
+}

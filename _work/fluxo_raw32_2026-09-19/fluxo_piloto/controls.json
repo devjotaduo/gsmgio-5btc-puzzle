@@ -1,0 +1,63 @@
+{
+  "phase2_and_checkerboard": true,
+  "positive": {
+    "planted_marker_hex": "4b7f321f341e09a336ecd85b56626c32c897dce40c4d3888d042cdcdab52fc7a",
+    "controls_checked": 8,
+    "detections": [
+      {
+        "mode": "aes-256-cfb",
+        "digest": "sha256",
+        "checks": 194,
+        "marker_hits": 1
+      },
+      {
+        "mode": "aes-256-ofb",
+        "digest": "sha256",
+        "checks": 194,
+        "marker_hits": 1
+      },
+      {
+        "mode": "aes-256-ctr",
+        "digest": "sha256",
+        "checks": 194,
+        "marker_hits": 1
+      },
+      {
+        "mode": "chacha20",
+        "digest": "sha256",
+        "checks": 194,
+        "marker_hits": 1
+      },
+      {
+        "mode": "aes-256-cfb",
+        "digest": "md5",
+        "checks": 194,
+        "marker_hits": 1
+      },
+      {
+        "mode": "aes-256-ofb",
+        "digest": "md5",
+        "checks": 194,
+        "marker_hits": 1
+      },
+      {
+        "mode": "aes-256-ctr",
+        "digest": "md5",
+        "checks": 194,
+        "marker_hits": 1
+      },
+      {
+        "mode": "chacha20",
+        "digest": "md5",
+        "checks": 194,
+        "marker_hits": 1
+      }
+    ]
+  },
+  "null": {
+    "shuffle_runs": 100,
+    "seed": 20260919,
+    "raw32_checks": 9800,
+    "hits": 0
+  }
+}

@@ -14,6 +14,7 @@ mantem no git so os relatorios e as execucoes finais.
 - [Segmentacao de `dbbi` por marcadores `b`/`be` nos primos (`yellowblueprimes`): reproducao, residuo, campanha e limites](../_work/frontier_2026-09-17/RELATORIO.md) - scripts em [`solver/primos_2026_09_17/`](../solver/primos_2026_09_17/README.md).
 - [Export de 17/09: marcadores primos, matriz anotada e diferencas do coelho](../_work/prime_host_delta_2026-09-17/RELATORIO.md).
 - [L84/16+7 adotado como premissa: consequencias testadas](../_work/prime_host_l84_2026-09-17/RELATORIO.md).
+- [Lacuna de fluxo/raw32 (§4.D): degrau técnico com controles completos e contagem inicial de custo — 19/09/2026](../_work/fluxo_raw32_2026-09-19/RELATORIO.md) - script em [`solver/fluxo_raw32_2026_09_19/fluxo_piloto.py`](../solver/fluxo_raw32_2026_09_19/fluxo_piloto.py).
 
 ## Alegacoes publicas, auditorias e fontes
 
