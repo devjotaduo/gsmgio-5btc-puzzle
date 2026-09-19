@@ -1,0 +1,122 @@
+[
+ {
+  "cadeia": "I_texto_depois_binario",
+  "residuo": "eahaifdhhifcieihgfdchaiacahieibaddgcebebbibhiachacidcecffiechgciabahdebcgiggeffebaefiebdgef",
+  "token_do_residuo": "189469749525223358127657",
+  "senhas": [
+   "fbfef2866c140d5898acb66b580c60cdc930920ca9ef3a105b46684ff4c0c4e8",
+   "25d78e04ff1b6d161da8d72b3381a59e1044d27085949305332a74165481e057",
+   "8ed83f7fdce5ed0f1d0830db978336de72220723b91b96df7a9864c896dda7a5"
+  ],
+  "veredito_por_elo": [
+   {
+    "sobreviveu": true,
+    "candidato": true,
+    "printable": 0.988,
+    "semantic": true,
+    "nested": false,
+    "ebcdic": 0.0,
+    "priv": false
+   },
+   {
+    "sobreviveu": true,
+    "candidato": false,
+    "printable": 0.5,
+    "semantic": false,
+    "nested": false,
+    "ebcdic": 0.0,
+    "priv": false
+   },
+   {
+    "sobreviveu": true,
+    "candidato": true,
+    "printable": 0.25,
+    "semantic": false,
+    "nested": false,
+    "ebcdic": 0.125,
+    "priv": true
+   }
+  ],
+  "morre_no_elo": 2
+ },
+ {
+  "cadeia": "II_todos_visiveis",
+  "residuo": "eiehagaebcdehchdhebbbiccdfgcfaahbgfddffahiaebfbaffibahfheiebfedeedhcghbhfifgfhheaaabbbgifbh",
+  "token_do_residuo": "951148823614812156826816",
+  "senhas": [
+   "5b5ac9d747a57cd5eeee2a1ecccfdbe073698d1d20acce42566b2180a6ae61d3",
+   "5f400267aea5cab69cb8c5565a5d807317cb93731f8d02b93b996d2cfcfa4d9f",
+   "701ecba25731acf86a44869cf14831c4fb28f96e6d4cee9ddc6449ed44466c57"
+  ],
+  "veredito_por_elo": [
+   {
+    "sobreviveu": true,
+    "candidato": true,
+    "printable": 0.989,
+    "semantic": true,
+    "nested": false,
+    "ebcdic": 0.0,
+    "priv": false
+   },
+   {
+    "sobreviveu": true,
+    "candidato": true,
+    "printable": 0.286,
+    "semantic": true,
+    "nested": false,
+    "ebcdic": 1.0,
+    "priv": false
+   },
+   {
+    "sobreviveu": true,
+    "candidato": true,
+    "printable": 1.0,
+    "semantic": true,
+    "nested": false,
+    "ebcdic": 0.0,
+    "priv": false
+   }
+  ],
+  "morre_no_elo": null
+ },
+ {
+  "cadeia": "III_chave_em_LE",
+  "residuo": "diifhagidgfeffabbfgifhfgbiahebcbeddecacfcehidheaeghgaegfbhheggedhbigeibighddhcbfihieahaghcf",
+  "token_do_residuo": "998766276533385187927298",
+  "senhas": [
+   "b34435c2c36037a160cd91eed248f9e6319ab7eb11a746a760ea406838b07399",
+   "66d1ece829af948f7b5ed593450efc504ac2ff7360a459643f3cf2e62589f972",
+   "9866e146d069149637751b6a6c9f8ed927ebe30796c8f9261b9fd685b8d17a3b"
+  ],
+  "veredito_por_elo": [
+   {
+    "sobreviveu": true,
+    "candidato": true,
+    "printable": 0.988,
+    "semantic": true,
+    "nested": false,
+    "ebcdic": 0.0,
+    "priv": false
+   },
+   {
+    "sobreviveu": true,
+    "candidato": false,
+    "printable": 0.438,
+    "semantic": false,
+    "nested": false,
+    "ebcdic": 0.071,
+    "priv": false
+   },
+   {
+    "sobreviveu": true,
+    "candidato": false,
+    "printable": 0.275,
+    "semantic": false,
+    "nested": false,
+    "ebcdic": 0.128,
+    "priv": false
+   }
+  ],
+  "morre_no_elo": 2
+ }
+]
