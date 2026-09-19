@@ -1,0 +1,17 @@
+{
+  "senhas": 1750,
+  "decifracoes": 52500,
+  "seed": 20260919,
+  "printable_media": 0.3712,
+  "printable_max": 0.5875,
+  "printable_p99": 0.4875,
+  "printable_p999": 0.525,
+  "max_por_blob": {
+    "SMALL": 0.5875,
+    "COSMIC": 0.4224,
+    "TAIL32": 0.5875
+  },
+  "semanticos_thr085": 0,
+  "blob_aninhado": 0,
+  "ebcdic_sig_075": 0
+}

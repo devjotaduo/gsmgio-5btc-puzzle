@@ -1,0 +1,62 @@
+{
+  "frente": "F6 yinyang_inversao",
+  "kit_sha256": "f109cd8a41441d7439b18cf60ec72d465a3a446ae03260036672457136932c3a",
+  "controle_positivo_fase2": {
+    "ok": true,
+    "printable": 0.981,
+    "head": "The ironic 2name of the keymakers trying to protect the curr"
+  },
+  "controle_privkey": {
+    "h160_plantado": "222b5788962e3b4e4d69ecc10ae8ddf7e94be78a",
+    "fast_priv_scan_recuperou": true,
+    "priv_hit_recuperou": true,
+    "apos_restaurar_nao_dispara": true,
+    "priv_hit_aleatorio_eh_None": true,
+    "alvos": [
+      "a9553269572a317e39f0f518cb87c1a0ee1dbae4",
+      "4bc468447fe1b048ad030a2f9a125478eabc4ed6"
+    ]
+  },
+  "objetos_ai": {
+    "dbbi": 91,
+    "faed": 570,
+    "residuo_L84": 61,
+    "residuo_L83": 60,
+    "dbbi_faed": 661,
+    "faed_dbbi": 661,
+    "faed_h1": 285,
+    "faed_h2": 285,
+    "faed_troca": 570,
+    "dbbi_troca": 90
+  },
+  "objetos_bin": {
+    "matriz_rowmajor": 196,
+    "matriz_colmajor": 196,
+    "matriz_espiral": 196,
+    "cores24": 24,
+    "cores25": 25,
+    "marcadores23": 23
+  },
+  "grupo_involucoes": [
+    "id",
+    "C/B",
+    "R",
+    "CR/BR"
+  ],
+  "senhas_distintas": 844,
+  "aes_executados": 5064,
+  "escalares_distintos": 336,
+  "janelas_raw32": 99510,
+  "paddings_validos": 21,
+  "candidatos_semanticos": 0,
+  "hits_oraculo_duro": [],
+  "nulo": {
+    "rodadas": 100,
+    "media": 19.88,
+    "sd": 4.17,
+    "observado": 21,
+    "z": 0.27,
+    "aes_do_nulo": 506400
+  },
+  "segundos": 109.4
+}

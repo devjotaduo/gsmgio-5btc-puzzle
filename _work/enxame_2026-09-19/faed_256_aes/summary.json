@@ -1,0 +1,73 @@
+{
+ "frente": "faed_256_aes",
+ "campanha": "enxame_2026-09-19",
+ "candidatos_u_com_repeticao": 10808,
+ "candidatos_u_distintos": 10536,
+ "por_familia_contagem_u": {
+  "primos_b0": 512,
+  "primos_b1": 512,
+  "cores_colored": 3,
+  "cores_blue": 3,
+  "cores_yellow": 3,
+  "gi": 1900,
+  "gi_complemento": 7144,
+  "multiplos_7": 191,
+  "multiplos_15": 9,
+  "multiplos_23": 3,
+  "multiplos_31": 3,
+  "multiplos_39": 3,
+  "multiplos_47": 3,
+  "multiplos_55": 3,
+  "multiplos_63": 3,
+  "multiplos_71": 3,
+  "par_i_i285_soma": 255,
+  "par_i_i285_xor": 255
+ },
+ "formas_de_senha": [
+  "u_raw",
+  "u_sha256hex",
+  "u_hex",
+  "texto_raw",
+  "texto_sha256"
+ ],
+ "senhas_distintas_testadas": 32182,
+ "chamadas_formas_de": 54040,
+ "blobs": [
+  "SMALL",
+  "COSMIC",
+  "TAIL32"
+ ],
+ "kdf": "SHA256+MD5 (both)",
+ "decisoes_aes_totais": 193092,
+ "paddings_hard_mais_soft": 772,
+ "candidatos_duros_oraculo_semantico": 0,
+ "candidatos_duros_lista": [],
+ "privkey_hits_diretos": [],
+ "privkeys_testadas_u_e_sha256u": 21072,
+ "controle_positivo": {
+  "estrutural_ok": true,
+  "K_hex": "14e1aeab343296209d9e1565cf388dcd167e09107c80612f567c043e82842423",
+  "senha_sha256hex": "92414512c452cc6a0eec9d100577143d67f7502d6359ea41ef34c79e7abc5c5b",
+  "aes_ok": true,
+  "aberturas": [
+   {
+    "forma": "u_sha256hex",
+    "kdf": "Crypto.Hash.SHA256"
+   }
+  ],
+  "u_recuperado": "14e1aeab343296209d9e1565cf388dcd167e09107c80612f567c043e82842423"
+ },
+ "nulo": {
+  "embaralhamentos": 100,
+  "celula": "primos+gi+cores+par_i_i285 (pack_b9+ascii32) x sha256hex x SMALL,TAIL32 x SHA256,MD5",
+  "senhas_por_embaralhamento": 16,
+  "observado_real": 0,
+  "nulo_media": 0.19,
+  "nulo_dp": 0.443,
+  "nulo_min": 0,
+  "nulo_max": 2,
+  "z_padding": -0.429,
+  "esperado_analitico_1_255": 0.251
+ },
+ "segundos": 33.2
+}
