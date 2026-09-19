@@ -52,6 +52,9 @@ _work/decentraland/dep_*
 !/.agents/skills/proof-certificate/**
 /.claude/*
 !/.claude/agents/
+!/.claude/hooks/
+!/.claude/hooks/**
+!/.claude/settings.json
 !/.claude/skills/
 /.claude/skills/*
 !/.claude/skills/solve-phase/
