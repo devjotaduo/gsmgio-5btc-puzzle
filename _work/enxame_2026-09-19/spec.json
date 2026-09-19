@@ -1,0 +1,138 @@
+{
+  "campanha": "enxame_2026-09-19",
+  "coordenador": "Claude Code (sessão remota, Linux)",
+  "data": "2026-09-19",
+  "kit": {
+    "caminho": "solver/experiments/claude_endgame_2026_09_02/gsmg_common.py",
+    "commit_base": "66fecdc",
+    "scorer": "solver/primos_2026_09_17/clean_scorer.py"
+  },
+
+  "pergunta": "Das lacunas de cobertura declaradas em ENDGAME.md (§3.13/§3.14 modos de fluxo; §4-B sem-zero parcial; §4-E faed-256 braço AES e inversão yin-yang parciais; §6 saltos com bijeção em amostra), alguma esconde a senha de SMALL/COSMIC/TAIL32 ou a chave privada de 1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe / 17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa?",
+
+  "oraculo_duro": {
+    "regra": "AGENTS.md regra 1 — nada mais declara solução",
+    "chave": "privkey de 32 B cujo h160 (pubkey comprimida OU não comprimida) bate com 1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe ou 17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa",
+    "aes": "blob aberto cujo plaintext leva adiante: blob aninhado que abre, chave que bate com um alvo, ou texto do próximo passo lido igual pelo openssl CLI e por segunda implementação",
+    "nao_sao_solucao": [
+      "padding PKCS7 válido isolado (1/255 em escala, ENDGAME.md §3.9)",
+      "checksum BIP39 válido",
+      "escore de inglês (triagem, nunca prova)",
+      "qualquer sinal semântico de G.semantic — marca CANDIDATO, não solução"
+    ],
+    "candidato_vira_solucao": "somente por certificado da skill proof-certificate, com implementação independente"
+  },
+
+  "gate_regra_3": "Nenhuma frente abre por hipótese nova sem lastro. F1,F2 = lacuna declarada em §3.14 ('Continua aberto: só os modos de fluxo'); F3 = §4-B 'cobertura parcial'; F4 = §4-E 'o braço AES ficou ~200x mais fino'; F5 = §6 'ficam em amostra'; F6 = §4-E 'inversão yin-yang (parcial)'; F7 = gate de insumo novo do criador; F8 = antítese do único lead aberto (§6); F9 = degrau que calibra o oráculo; F10 = reconciliação de conjuntos (protocolo, item 5).",
+
+  "hipotese_central": "As lacunas declaradas são lacunas reais de execução, não de mecanismo: o material já enumerado por campanhas anteriores passou por filtros (padding PKCS7, repertório, melhor-caminho-único, braço AES fino) que podiam descartar o acerto antes da persistência.",
+  "o_que_refutaria": "Fechar cada lacuna com cobertura exata declarada e obter 0 no oráculo duro, com controle positivo plantado recuperado em cada pipeline.",
+  "construcao_contraria": "F8 tenta produzir o encaixe b/be em posições primas de dbbi como artefato construtível sem intenção autoral; se conseguir, o único lead estrutural aberto (§6) cai de 'desenho' para 'coincidência' e a prioridade do resíduo muda.",
+
+  "limites_do_ambiente": {
+    "hardware": "4 cores, 15 GB RAM, sem GPU (clGetPlatformIDs: PLATFORM_NOT_FOUND_KHR)",
+    "consequencia_gpu": "solver/gpu_aes16_dbbi_hex/ (§5, 132 h/variante em RTX 5060) NÃO é executável aqui; permanece trabalho pronto e não executado",
+    "corpora_ausentes": "este clone tem _work/ com 14 MB (só relatórios e summary/spec/controls). NÃO estão aqui: corpus de 466.310 senhas-base / 1,27 M formas, os 694.386 + 1.331.155 plaintexts da §3.11, os 592.339 conteúdos da §3.12, result.json (export do Telegram) e os ChatExport_*",
+    "consequencia_corpora": "F1/F2 NÃO podem re-varrer o corpus histórico. Cobrem os modos de fluxo sobre o material reconstruível a partir do repositório e declaram essa diferença como cobertura, sem herdar a contagem histórica. F7 não tem acesso ao Telegram e cobre só o site.",
+    "processos": "teto de 4 processos pesados simultâneos; frentes analíticas não contam"
+  },
+
+  "frentes": [
+    {
+      "id": "F1", "nome": "modos_fluxo",
+      "papel": "tese/experimental",
+      "lacuna": "ENDGAME.md tabela D + §3.13/§3.14: o filtro de modos de fluxo não cobre raw32 binário interior; modos de fluxo não produzem padding, então o filtro PKCS7 histórico descartava todo o material antes de persistir",
+      "dominio": "3 blobs (SMALL, COSMIC, TAIL32) x modos de fluxo do openssl enc (cfb, cfb1, cfb8, ofb, ctr) x 2 KDF (SHA256 e MD5) x conjunto de senhas reconstruível do repositório",
+      "limite": "sem filtro de padding; toda janela raw32 BE e LE de cada plaintext contra os DOIS alvos; declarar contagem exata de senhas, decifrações e janelas",
+      "dono": "solver/enxame_2026_09_19/modos_fluxo/, _work/enxame_2026-09-19/modos_fluxo/"
+    },
+    {
+      "id": "F2", "nome": "auditoria_fluxo",
+      "papel": "antítese/verificação independente de F1",
+      "lacuna": "§3.13 registra o modo exato da falha a evitar: um scanner Go terminou por falta de memória e um relatório citou a contagem CALCULADA como execução",
+      "dominio": "reimplementação independente do pipeline de F1 (sem reusar o código de F1) + controle plantado: injetar uma chave alvo conhecida no interior de um plaintext de modo de fluxo e exigir que o scanner a recupere",
+      "limite": "sobreposição com F1 é DELIBERADA e declarada; conferir contagens, hashes de corpus e arquivo de hits",
+      "dono": "solver/enxame_2026_09_19/auditoria_fluxo/, _work/enxame_2026-09-19/auditoria_fluxo/"
+    },
+    {
+      "id": "F3", "nome": "sem_zero_integral",
+      "papel": "recuperação de cobertura",
+      "lacuna": "§4-B: 'DBBI admite 192.969 modelos compatíveis e só o melhor caminho de cada foi testado'",
+      "dominio": "todos os caminhos de cada modelo sem-zero, não só o melhor, via teste de limiar exato por DP (existe caminho com média >= L <=> max(soma - L*n_quadgramas) >= 0), como em §6",
+      "limite": "prova determinística de ausência => nulo casado N/A justificado; controle positivo obrigatório",
+      "dono": "solver/enxame_2026_09_19/sem_zero_integral/, _work/enxame_2026-09-19/sem_zero_integral/"
+    },
+    {
+      "id": "F4", "nome": "faed_256_aes",
+      "papel": "recuperação de cobertura",
+      "lacuna": "§4-E: seleção de 256 bits de faed — 'parcial: o braço AES ficou ~200x mais fino' que o braço de privkey (3,77 M)",
+      "dominio": "as mesmas seleções principiadas (primos, cores, g/i, múltiplos, i/i+285) como MATERIAL DE SENHA nos 3 blobs x 2 KDF, equalizando o braço AES ao braço de chave",
+      "limite": "declarar quantas seleções e quantas decifrações; z de padding contra o ruído calibrado de §3.9",
+      "dono": "solver/enxame_2026_09_19/faed_256_aes/, _work/enxame_2026-09-19/faed_256_aes/"
+    },
+    {
+      "id": "F5", "nome": "saltos_bijecao",
+      "papel": "recuperação de cobertura",
+      "lacuna": "§6: saltos com bijeção arbitrária 'ficam em amostra (199.951 materiais)', porque a soma varia de 233 a 377 e sempre cabe em 570 — nenhuma bijeção é eliminada por comprimento",
+      "dominio": "as 9! = 362.880 bijecões a-i -> 1..9 completas, x resíduos L83/L84 x 2 âncoras x 2 direções x todos os offsets viáveis",
+      "limite": "se a exaustão não couber no orçamento, provar teto algébrico e declarar a fração exata coberta — nunca reportar amostra como exaustão",
+      "dono": "solver/enxame_2026_09_19/saltos_bijecao/, _work/enxame_2026-09-19/saltos_bijecao/"
+    },
+    {
+      "id": "F6", "nome": "yinyang_inversao",
+      "papel": "recuperação de cobertura",
+      "lacuna": "§4-E: 'inversão yin-yang (parcial)'",
+      "dominio": "definir em prosa o domínio finito exato da inversão yin-yang (complemento de símbolos, de bits, de cores, de ordem; sobre dbbi, faed, matriz e resíduo) e fechá-lo",
+      "limite": "se o domínio não for finito sem arbitrar, dizer isso e devolver a fronteira, em vez de enumerar sem premissa",
+      "dono": "solver/enxame_2026_09_19/yinyang_inversao/, _work/enxame_2026-09-19/yinyang_inversao/"
+    },
+    {
+      "id": "F7", "nome": "insumo_novo",
+      "papel": "gate de insumo (read-only)",
+      "lacuna": "AGENTS.md regra 3, primeiro gate: campanha nova também abre com insumo novo do criador. ENDGAME.md: nenhuma fala do criador depois de 2026-09-01",
+      "dominio": "site ao vivo gsmg.io e a página do endgame conferidos byte a byte contra as capturas de _work/gsmg_live_2026-09/ e _work/archive/",
+      "limite": "Telegram NÃO acessível deste container (result.json e ChatExport_* ausentes) — declarar como limite, não como ausência de insumo",
+      "dono": "_work/enxame_2026-09-19/insumo_novo/"
+    },
+    {
+      "id": "F8", "nome": "antitese_primos",
+      "papel": "construção contrária ao único lead aberto",
+      "lacuna": "§6 e §3.4: 'A intenção do autor é inferência, não medida'; o argumento por L84 é condicional e os números 16/7/23 são do roteiro do filme",
+      "dominio": "procurar uma CONSTRUÇÃO que produza o encaixe b/be em posições primas sem intenção autoral (processos geradores de texto a-i que satisfaçam a regra; sensibilidade da unicidade das 2 segmentações ao comprimento 91 e às contagens)",
+      "limite": "atacar a mesma alegação por mecanismo diferente do teste de embaralhamento já feito (0 em 20.000); não repetir o nulo existente",
+      "dono": "solver/enxame_2026_09_19/antitese_primos/, _work/enxame_2026-09-19/antitese_primos/"
+    },
+    {
+      "id": "F9", "nome": "degrau_oraculo",
+      "papel": "problema-ponte (related-problem-ladder)",
+      "lacuna": "protocolo, item 3: antes de ampliar, resolver instância menor que preserve o mecanismo. Aqui o alvo do degrau é o DETECTOR, não o espaço de chaves",
+      "dominio": "construir um puzzle em miniatura na gramática do criador (tokens -> sha256 -> openssl aes-256-cbc -> blob aninhado) com passo de consumo de resíduo CONHECIDO, e medir se G.semantic + clean_scorer + fast_priv_scan detectariam o acerto",
+      "limite": "resultado no degrau NÃO é solução do puzzle; serve para declarar a taxa de detecção e falsos negativos do oráculo atual",
+      "dono": "solver/enxame_2026_09_19/degrau_oraculo/, _work/enxame_2026-09-19/degrau_oraculo/"
+    },
+    {
+      "id": "F11", "nome": "bases_nao_decimais",
+      "papel": "família declarada fora de cobertura",
+      "lacuna": "§6, em texto: 'Com isso as leituras textuais do resíduo estão esgotadas; continuam fora apenas BASES NÃO DECIMAIS e objetos que não sejam texto'. As três leituras decimais (a1z26, ASCII decimal, To_Base(16)) estão fechadas por exaustão; as não decimais não",
+      "dominio": "o resíduo de §6 (L84 'difhccgihaeeihggegebgehhehhfafdhffcdbfcccgfeggecdcifffgigeeae' e L83 sem o 'e' final) lido em bases não decimais — base 9 bijetiva e demais bases b != 10 compatíveis com o repertório a-i (valores 1..9, sem zero) — e o resultado testado como senha e como escalar contra os dois alvos",
+      "limite": "declarar quais bases e quais convenções de dígito; o teto é o repertório (sem 'o', logo sem zero) e o comprimento 60/61",
+      "dono": "solver/enxame_2026_09_19/bases_nao_decimais/, _work/enxame_2026-09-19/bases_nao_decimais/"
+    },
+    {
+      "id": "F10", "nome": "reconciliacao",
+      "papel": "síntese auditável — EXECUTADA PELO COORDENADOR, não por frente paralela",
+      "lacuna": "protocolo, item 5: comparar bytes, senhas, parâmetros e alvos antes de combinar; não somar tentativas duplicadas",
+      "dominio": "ler os FINDINGS.md das demais frentes, medir sobreposição real de conjuntos, separar o provado do que só ganhou prioridade",
+      "limite": "não executa busca própria; não edita ENDGAME.md nem o índice (isso é de quem integra o PR)",
+      "dono": "_work/enxame_2026-09-19/reconciliacao/"
+    }
+  ],
+
+  "controle_positivo_obrigatorio": "Toda frente que decifra roda antes: fase 2 abre com sha256hex('causality'); o checkerboard reproduz a 3.2.2. Toda frente que varre privkey planta uma chave conhecida e exige recuperá-la (como o self-test de G.fast_priv_scan).",
+  "nulo_casado": "Frentes com escore de texto: >= 100 embaralhamentos preservando contagens. Provas determinísticas por DP ou exaustão: N/A justificado no FINDINGS.md.",
+  "condicao_de_parada": "Cada frente para ao atingir a cobertura declarada, ao reproduzir um negativo ou ao perder a premissa. Sem variantes novas sem sinal novo. Orçamento por frente: <= 40 min de CPU e 1 processo pesado.",
+  "evidencia_minima_para_sintese": "FINDINGS.md com hipótese, conjunto coberto (números exatos), comando reproduzível, controle positivo recuperado, nulo ou N/A justificado, resultado no oráculo duro e limitação declarada.",
+
+  "entrega": "_work/enxame_2026-09-19/RELATORIO.md (do coordenador) + linha em docs/RESEARCH-INDEX.md. Entrada em ENDGAME.md apenas se o mapa mudar, e aplicada por quem integra o PR.",
+  "expectativa_declarada": "O resultado esperado é COBERTURA, não solução. Dezenas de campanhas anteriores com orçamento muito maior deram 0. Negativo com cobertura exata é resultado válido e deve ser escrito como tal."
+}
