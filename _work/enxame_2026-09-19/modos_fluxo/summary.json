@@ -1,0 +1,310 @@
+{
+  "frente": "F1 modos_fluxo",
+  "campanha": "enxame_2026-09-19",
+  "commit_base": "66fecdc",
+  "kit_sha256": "f109cd8a41441d7439b18cf60ec72d465a3a446ae03260036672457136932c3a",
+  "senhas_meta": {
+    "camadas": {
+      "A_operandos_fases": {
+        "bases": 13,
+        "formas": 6,
+        "senhas_novas": 54
+      },
+      "B_roadmap": {
+        "bases": 9,
+        "formas": 6,
+        "senhas_novas": 36
+      },
+      "C_pagina_endgame": {
+        "bases": 18,
+        "formas": 6,
+        "senhas_novas": 77
+      },
+      "D_primos_residuo": {
+        "bases": 13,
+        "formas": 6,
+        "senhas_novas": 43
+      },
+      "E_monologo_arquiteto": {
+        "bases": 37,
+        "formas": 6,
+        "senhas_novas": 148
+      },
+      "F_transcricoes_readme": {
+        "bases": 228,
+        "formas": 6,
+        "senhas_novas": 888
+      },
+      "G_pares_roadmap": {
+        "bases": 42,
+        "formas": 2,
+        "senhas_novas": 84
+      },
+      "H_trios_roadmap": {
+        "bases": 210,
+        "formas": 2,
+        "senhas_novas": 420
+      }
+    },
+    "bases_total": 570,
+    "senhas_unicas": 1750
+  },
+  "senhas_processadas": 1750,
+  "senhas_no_dominio": 1750,
+  "interrompido_por_tempo": null,
+  "modos": [
+    "cfb",
+    "cfb1",
+    "cfb8",
+    "ofb",
+    "ctr"
+  ],
+  "kdfs": [
+    "sha256",
+    "md5"
+  ],
+  "blobs": [
+    "SMALL",
+    "COSMIC",
+    "TAIL32"
+  ],
+  "decifracoes": 52500,
+  "decifracoes_por_modo": {
+    "cfb": 10500,
+    "cfb1": 10500,
+    "cfb8": 10500,
+    "ofb": 10500,
+    "ctr": 10500
+  },
+  "janelas_raw32_BE_LE": 48825000,
+  "alvos": [
+    "a9553269572a317e39f0f518cb87c1a0ee1dbae4",
+    "4bc468447fe1b048ad030a2f9a125478eabc4ed6"
+  ],
+  "hits_oraculo_duro": 0,
+  "candidatos_semanticos": 0,
+  "top_printable": [
+    {
+      "printable": 0.6,
+      "senha": "yellowblueprimesitsinfrontofyoureyesbutyourenotseeingitlastwords",
+      "blob": "TAIL32",
+      "modo": "ctr",
+      "kdf": "sha256",
+      "head_hex": "321a9f345f7c64579dcc512f78df7143a918492f7a44549c67b62520d25df112"
+    },
+    {
+      "printable": 0.6,
+      "senha": "c9764e39014cd5db83353aac61da3e4d176e534d5f0f40860e38d462ba44f658",
+      "blob": "SMALL",
+      "modo": "cfb8",
+      "kdf": "sha256",
+      "head_hex": "c723e0a53d654d9c6d31a6bc9690335e5a1e0c2824213ccc7dfa8c5796e6622c"
+    },
+    {
+      "printable": 0.6,
+      "senha": "6f61b0c748eefd9f57e73de0f5b79f455f264ed2cb5bbca83bab5ef59bd3a55c",
+      "blob": "TAIL32",
+      "modo": "ofb",
+      "kdf": "md5",
+      "head_hex": "a4302e2b6c4f0e2c2459670b781c1847a4b62e38f07b613a8dfc2ad16ab0cfdb"
+    },
+    {
+      "printable": 0.5875,
+      "senha": "yinyang",
+      "blob": "TAIL32",
+      "modo": "cfb1",
+      "kdf": "sha256",
+      "head_hex": "2cc13974faf9c34336f1771b615a6844656b2172f9685b0b09d14d5240739a97"
+    },
+    {
+      "printable": 0.575,
+      "senha": "f86ecb0d89999fb0451a3c4b429d0b1c610f4828dc61db9949d6e1be8647de43",
+      "blob": "TAIL32",
+      "modo": "ofb",
+      "kdf": "sha256",
+      "head_hex": "1a9f197a315873982e72f079d1272a3ed650978847afba7bdf30c454518f3817"
+    },
+    {
+      "printable": 0.575,
+      "senha": "96f964a99051dc1c71485dad340e4c57c226356e642acf5ed4708b92366907ba",
+      "blob": "TAIL32",
+      "modo": "ofb",
+      "kdf": "sha256",
+      "head_hex": "55fd696330b29b7dda85cc6ae860735b6d5d3af26fc75cd16e315ccc897ae27b"
+    },
+    {
+      "printable": 0.575,
+      "senha": "885e804feecbf9c97fda47fa3dbc2e4998506a4992770364b3d27b83bf363bf0",
+      "blob": "SMALL",
+      "modo": "cfb",
+      "kdf": "md5",
+      "head_hex": "433a339426ab0466867425152f52abc349c9092e199a07898b685501b55776bc"
+    },
+    {
+      "printable": 0.575,
+      "senha": "31481d0b62176706485dc2f888112d30c07d22a885e984e5108cb90bc5326666",
+      "blob": "SMALL",
+      "modo": "ctr",
+      "kdf": "md5",
+      "head_hex": "f8eaa70fb2d613725b3ae06d0b9dad44d165632f509aa4c17b29285c3dbf3075"
+    },
+    {
+      "printable": 0.5625,
+      "senha": "lastwordsbeforearchichoiceitsinfrontofyoureyesbutyourenotseeingi",
+      "blob": "TAIL32",
+      "modo": "cfb",
+      "kdf": "sha256",
+      "head_hex": "fbce4319eb9762f6412ff80a6542a61f6b75fb9a3098ec491d4e23532d4332c1"
+    },
+    {
+      "printable": 0.5625,
+      "senha": "itsinfrontofyoureyesbutyourenotseeingitwewontgiveawaythepassword",
+      "blob": "TAIL32",
+      "modo": "cfb8",
+      "kdf": "sha256",
+      "head_hex": "6e60839c866620b57c5abf12bdab35267f769ad0214b8bd93b600b2c1650518a"
+    },
+    {
+      "printable": 0.5625,
+      "senha": "dbbi",
+      "blob": "TAIL32",
+      "modo": "ctr",
+      "kdf": "sha256",
+      "head_hex": "b5484780a98f0c1a3cf9865c3777449a5e25cd475c632745246f8c7218945b6d"
+    },
+    {
+      "printable": 0.5625,
+      "senha": "bc8ca964d5de41f12151b517db38b82b6f670ddbbeb5c35ea5dd4da9e5333aa3",
+      "blob": "TAIL32",
+      "modo": "ofb",
+      "kdf": "sha256",
+      "head_hex": "5f3d65032f9952729e9223414d7b47946a018fe36c524a187ef965b94f0e4158"
+    },
+    {
+      "printable": 0.5625,
+      "senha": "021c067db64ec18a36f21629d3a73fd9a56a1ac406035b48e9da94f685a06f99",
+      "blob": "TAIL32",
+      "modo": "ofb",
+      "kdf": "md5",
+      "head_hex": "c9d0c7c84d316f4943c26c59e232372038e7699236bb3d31fe65cb493e621440"
+    },
+    {
+      "printable": 0.55,
+      "senha": "yellowblueprimesyinyanglastwordsbeforearchichoice",
+      "blob": "TAIL32",
+      "modo": "cfb",
+      "kdf": "sha256",
+      "head_hex": "122a6d3c6602d83829992e172305816a4018a524eb2a367b62d4523c61c18e3d"
+    },
+    {
+      "printable": 0.55,
+      "senha": "puzzle",
+      "blob": "SMALL",
+      "modo": "cfb8",
+      "kdf": "sha256",
+      "head_hex": "a33c38f707244c4d4f87907e0ea3a588edc678226194bfb189254a6f6864e845"
+    },
+    {
+      "printable": 0.55,
+      "senha": "luck",
+      "blob": "TAIL32",
+      "modo": "ctr",
+      "kdf": "sha256",
+      "head_hex": "4b552c3fe24ffe765a4f27dc8f069127200bd376e552db528e8c6e1767042e23"
+    },
+    {
+      "printable": 0.55,
+      "senha": "final",
+      "blob": "TAIL32",
+      "modo": "cfb1",
+      "kdf": "sha256",
+      "head_hex": "c73b73fadd20c1055dd85d57475b9d0773d2c9fd4773dc9a4d29c8a5b88d1d78"
+    },
+    {
+      "printable": 0.55,
+      "senha": "faed",
+      "blob": "TAIL32",
+      "modo": "ofb",
+      "kdf": "sha256",
+      "head_hex": "18202a45751d0e84dcbc9d31047d3c49298b573c9998581759f72ce921e00167"
+    },
+    {
+      "printable": 0.55,
+      "senha": "e39438978ac07a14fd878630d93c25778699a0c1610759db7b07076053e02b75",
+      "blob": "TAIL32",
+      "modo": "cfb1",
+      "kdf": "md5",
+      "head_hex": "589bc959b8676b0d0d49297a606ca04c401cf461dcee77147db04d1720a345b4"
+    },
+    {
+      "printable": 0.55,
+      "senha": "claim",
+      "blob": "SMALL",
+      "modo": "cfb1",
+      "kdf": "sha256",
+      "head_hex": "2143cda7358c450625377a766370467bd5d37e56641231ce28b98c6311e2e243"
+    }
+  ],
+  "nulo_casado": {
+    "senhas": 200,
+    "decifracoes": 6000,
+    "printable_media": 0.371,
+    "printable_max": 0.5875,
+    "printable_p99": 0.4875,
+    "semanticos": 0
+  },
+  "controles": {
+    "kdf_fase2": {
+      "sha256": true,
+      "md5": false
+    },
+    "openssl_cli": {
+      "cfb/sha256": true,
+      "cfb/md5": true,
+      "cfb1/sha256": true,
+      "cfb1/md5": true,
+      "cfb8/sha256": true,
+      "cfb8/md5": true,
+      "ofb/sha256": true,
+      "ofb/md5": true,
+      "ctr/sha256": true,
+      "ctr/md5": true
+    },
+    "chave_plantada": {
+      "ofb": {
+        "hits": 2,
+        "orientacoes": [
+          "BE",
+          "LE"
+        ]
+      },
+      "cfb1": {
+        "hits": 2,
+        "orientacoes": [
+          "BE",
+          "LE"
+        ]
+      },
+      "falso_positivo_alvos_reais": 0,
+      "janelas_controle": 124
+    }
+  },
+  "segundos": 1413.7,
+  "nulo_casado_exato": {
+    "senhas": 1750,
+    "decifracoes": 52500,
+    "seed": 20260919,
+    "printable_media": 0.3712,
+    "printable_max": 0.5875,
+    "printable_p99": 0.4875,
+    "printable_p999": 0.525,
+    "max_por_blob": {
+      "SMALL": 0.5875,
+      "COSMIC": 0.4224,
+      "TAIL32": 0.5875
+    },
+    "semanticos_thr085": 0,
+    "blob_aninhado": 0,
+    "ebcdic_sig_075": 0
+  }
+}

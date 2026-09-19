@@ -1,8 +1,7 @@
 # Enxame de 2026-09-19 — relatório da campanha
 
 Contrato: [`spec.json`](spec.json). Coordenador: sessão remota do Claude Code (Linux).
-Base: `66fecdc`. **Estado: 7 das 10 frentes fechadas; F1 (modos de fluxo), F2 (auditoria de fluxo) e
-F5 (saltos com bijeção) ainda em execução — este relatório será completado quando fecharem.**
+Base: `66fecdc`. **Estado: as 10 frentes fecharam.**
 
 > **Resultado no oráculo duro: 0.** Nenhum blob foi aberto e nenhuma chave dos dois alvos foi
 > encontrada. O produto desta campanha é **cobertura e correção do mapa**, não solução — como o
@@ -36,6 +35,9 @@ agente**: cada uma está presa a um desses gates, declarado no `spec.json`.
 | **F6** `yinyang_inversao` | §4-E "(parcial)" | domínio escrito: só 4 involuções com lastro, grupo de 4 elementos. 844 senhas, 5.064 AES, 336 escalares, 99.510 janelas: **0**, nulo z +0,27 |
 | **F8** `antitese_primos` | antítese do lead §6 | construção contrária **falhou**; lead **reforçado** por cota exata — ver §4 |
 | **F3** `sem_zero_integral` | §4-B "só o melhor caminho" | **prova**: alvo de 32 B inalcançável (mínimo 44). 404.096 senhas, 2.424.576 AES: **0** |
+| **F5** `saltos_bijecao` | §6 "ficam em amostra" | domínio completo calculado (783.820.800); cobertos **0,1429 %** com 99,86 % **declarado fora**. 6,72 M AES, 1,12 M chaves: **0** |
+| **F1** `modos_fluxo` | §3.14 "a única aberta" | 1.750 senhas, 52.500 decifrações sem filtro de padding, 48.825.000 janelas: **0** — ver §8 |
+| **F2** `auditoria_fluxo` | §3.13 (contagem citada como execução) | reimplementação independente; veredito: **o 0 hits da F1 é confiável** — ver §8 |
 
 ## 4. O que muda o mapa
 
@@ -108,13 +110,21 @@ Comparados objetos e parâmetros **antes** de combinar; sobreposições declarad
   em nenhum total de cobertura.
 - O **nulo** de F6 (506.400 AES) **não** entra na cobertura: é nulo, não varredura.
 
-**Totais legítimos sobre material real, das frentes fechadas:**
+- **F1 ∩ F2 = 69 senhas**, sobreposição **deliberada** (é verificação independente): das 70.080
+  decifrações brutas, **2.070 são duplicadas de propósito** e entram uma única vez.
+- **F5** opera sobre seleções do resíduo em `faed` por saltos, mecanismo distinto das seleções de
+  256 bits de F4; **F1/F2** usam modos de cifra distintos de todo o resto (fluxo, não CBC).
+
+**Totais legítimos sobre material real, das 10 frentes:**
 
 | unidade | total |
 |---|---|
-| decisões AES | **2.623.980** |
-| escalares de 32 B contra os dois alvos | **21.479** |
-| janelas raw32 (unidade distinta — não somar com escalares) | **99.510** |
+| decisões AES | **9.411.990** |
+| escalares de 32 B contra os dois alvos | **1.141.479** |
+| janelas raw32 (unidade distinta — não somar com escalares) | **63.348.810** |
+
+Composição das decisões AES: 2.623.980 (F4+F6+F11+F3, CBC sobre objetos disjuntos) + 6.720.000 (F5)
++ 68.010 (união única de F1∪F2, já descontadas as duplicadas).
 
 ## 6. O que **não** mudou
 
@@ -147,7 +157,65 @@ consequência sobre a leitura dos negativos históricos.
 
 **Para `docs/RESEARCH-INDEX.md`:** uma linha apontando para este relatório.
 
-## 8. Frentes em execução
+## 8. A lacuna declarada aberta: modos de fluxo (F1 + F2)
 
-F1 `modos_fluxo` e F2 `auditoria_fluxo` (a lacuna que a §3.14 declara como **a única aberta**) e
-F5 `saltos_bijecao` (§6, "ficam em amostra"). Esta seção será substituída pelos resultados.
+Esta é a lacuna que a §3.14 nomeia como **a única ainda aberta**, e a campanha a atacou com uma
+frente e sua antítese.
+
+**F1 — cobertura.** 3 blobs × 5 modos (`cfb`, `cfb1`, `cfb8`, `ofb`, `ctr`) × 2 KDF × **1.750
+senhas** reconstruídas do repositório = **52.500 decifrações sem filtro de padding** e **48.825.000
+janelas raw32** BE+LE contra os dois alvos, nas duas formas de pubkey. Domínio 100 % concluído em
+1.413,7 s. **0 chaves, 0 candidatos.** Os 10/10 pares modo × KDF reproduzem o `openssl` real byte a
+byte, incluindo o CFB de 1 bit feito à mão.
+
+**F2 — auditoria independente, e o veredito importa.** Reimplementou tudo sem reusar código da F1
+(inclusive **secp256k1 em Python puro**), plantou chaves em offsets **desalinhados** (37 em BE, 113
+em LE) e as recuperou **nos 5 modos**, com negativo casado contra os alvos reais. Sobre a F1:
+**"o 0 hits é confiável — não é artefato de implementação nem aritmética disfarçada de execução"**,
+que era precisamente o modo de falha da §3.13. Conferiu as contagens contra fórmula fechada nas 32
+linhas de log e no total, verificou que `hits.jsonl` estava vazio **por execução** (criado antes do
+laço), e mediu o throughput (24–37 k janelas/s contra os 30,6 k/s dela) para provar trabalho de EC
+em tempo de parede.
+
+**Sobreposição medida:** F1 ∩ F2 = **69** senhas; união **2.267**. As decifrações **não** se somam
+inteiras — 2.070 são duplicadas de propósito, e é nelas que a verificação independente tem valor.
+**Cobertura única da família: 68.010 decifrações e 63.249.300 janelas. Zero hits.**
+
+**Ressalva que só a antítese produziu:** o controle plantado da F1 exercita o scanner em 2 dos 5
+modos (`ofb`, `cfb1`); o da F2 cobre os 5.
+
+### 8.1 Um achado estrutural que argumenta contra a própria família
+
+F1 trouxe, além da varredura, um argumento **independente dela** — e o coordenador o verificou:
+
+Modo de fluxo não faz padding, logo |plaintext| = |ciphertext|. Os três ciphertexts têm **80, 1328 e
+80 bytes, e os três são ≡ 0 mod 16** (1328 = 16 × 83, os mesmos 83 blocos do COSMIC citados no §6).
+Sob CBC/PKCS7 isso é **obrigatório**; sob modo de fluxo seria coincidência de ~(1/16)³ ≈ 2,4 × 10⁻⁴.
+**Fator de Bayes ≈ 4 × 10³ contra a família dos modos de fluxo.**
+
+É prior baixo *quantificado*, não refutação — a premissa de uniformidade dos comprimentos mod 16 é
+uma suposição. Mas reposiciona a lacuna: ela é **real e continua aberta**, e ao mesmo tempo é um
+lugar pouco provável para a resposta estar.
+
+### 8.2 O que NÃO se pode escrever no `ENDGAME.md`
+
+As duas frentes convergem e são explícitas: **isto não fecha a família.** Fecha 68.010 decifrações
+sobre um conjunto nomeado de 2.267 senhas — contra as 1,27 M formas do corpus histórico, **ausente
+deste clone**. A §3.14 continua valendo tal como está: *"continua aberto: só os modos de fluxo"*.
+
+Para fechá-la de fato, F2 deixa a conta pronta: rodar o pipeline já certificado (C1–C5) sobre o
+corpus de 1,27 M na máquina que o tem = **38.164.470 decifrações** e **35.493.457.500 escalares**,
+~13 dias-CPU ao ritmo medido aqui, ~1,2 dia com 12 workers. **É uma conta a executar, não a citar.**
+
+## 9. Um item aberto de auditoria
+
+F2 conferiu as contagens históricas do `ENDGAME.md` e **todas saem exatas** (§3.13, §3.14, a tabela D
+e o `summary.json` do `raw32_corpus_nopad`) — inclusive uma que devolve o tamanho do corpus
+(1.272.149) sem que ele estivesse escrito ali.
+
+Resta **uma ressalva de plausibilidade, não de aritmética**: aquele `summary.json` declara
+498.682.408 janelas em 1.577,2 s = **316.182 verificações/s**, contra **30.617/s** medidos aqui com
+`coincurve` em 1 processo — **~10,3×**. É compatível com 8 a 12 workers paralelos na máquina
+original (o `AGENTS.md` declara teto de 12 processos), mas **não é verificável deste clone**, porque
+o corpus não está aqui. Fica registrado como item aberto de auditoria, para quem tem o checkout
+principal.
