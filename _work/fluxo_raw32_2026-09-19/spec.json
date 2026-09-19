@@ -1,0 +1,39 @@
+{
+  "campanha": "fluxo_raw32_2026-09-19",
+  "coordenador": "Copilot Task Agent (dono do spec e da síntese)",
+  "pergunta": "A lacuna declarada em ENDGAME §4.D (modos de fluxo e CBC sem padding binário) contém uma abertura AES válida ou chave de um dos alvos quando removemos o filtro textual e varremos raw32 interior?",
+  "oraculo": "Solução só com oráculo duro da regra 1 do AGENTS.md: privkey de 32 B que bata em 1GSMG... ou 17ucy..., ou abertura AES certificada com passo seguinte reproduzível por openssl e segunda implementação.",
+  "hipotese": "O filtro histórico dos modos de fluxo descartou plaintext binário interior relevante; uma varredura raw32 completa por janelas pode recuperar chave/candidato duro.",
+  "contra_hipotese": "As saídas de fluxo permanecem ruído aleatório para o corpus e KDFs já cobertos; remover o filtro não altera o resultado final.",
+  "fontes": [
+    "ENDGAME.md §4.D",
+    "_work/multiagente_2026-09-18/RELATORIO.md (limites)",
+    "solver/premissas_2026_09_17/multicipher_attack.py",
+    "solver/oraculo_duplo_2026_09_17/oracle.py"
+  ],
+  "frentes": {
+    "cobertura": {
+      "objetivo": "Reconstruir domínio finito e contabilidade da lacuna de fluxo (decriptações, janelas raw32, limite de custo).",
+      "parada": "Domínio e custo reconciliados com as contagens históricas, com hashes e suposições explícitas.",
+      "dono": "_work/fluxo_raw32_2026-09-19/cobertura/"
+    },
+    "fluxo_piloto": {
+      "objetivo": "Executar degrau controlado em subconjunto pequeno e reproduzível para validar pipeline de decriptação+oráculo raw32 sem filtro textual.",
+      "controle_positivo": "Plantio sintético de privkey em plaintext de modo de fluxo detectado pelo oráculo.",
+      "nulo": "100 embaralhamentos preservando bytes do mesmo tamanho sem hits.",
+      "parada": "Controles passam e o piloto entrega taxa de janelas/s para extrapolação.",
+      "dono": "_work/fluxo_raw32_2026-09-19/fluxo_piloto/"
+    },
+    "ideacao": {
+      "objetivo": "Listar somente hipóteses ausentes da tabela de famílias refutadas que mantenham prior compatível com a regra 4.",
+      "gate": "Segue para execução apenas hipótese com lacuna reproduzida, custo finito e sem sobreposição com campanhas fechadas.",
+      "dono": "_work/fluxo_raw32_2026-09-19/ideacao/"
+    }
+  },
+  "limites": [
+    "Sem corpus local completo, a campanha fica no degrau reproduzível e não declara cobertura total.",
+    "Máximo operacional de 12 processos paralelos (AGENTS.md).",
+    "Sem busca de identidade pessoal e sem material sensível fora das regras de Git."
+  ],
+  "parada_global": "Ou aparece candidato duro para proof-certificate, ou o degrau fecha com negativo e lacuna restante quantificada."
+}
