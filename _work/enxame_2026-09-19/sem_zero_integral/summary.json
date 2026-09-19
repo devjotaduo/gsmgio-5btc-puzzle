@@ -1,0 +1,54 @@
+{
+  "ascii_compatible_combos": 192960,
+  "fwdTotal": 78480,
+  "revTotal": 114480,
+  "cp1141_out_of_scope": 9,
+  "reported_total_192969": 192969,
+  "targetLengths": [
+    32,
+    51,
+    52,
+    64
+  ],
+  "perLength": [
+    {
+      "L": 32,
+      "combosWithExistence": 0,
+      "combosMaterializedFully": 0,
+      "combosDeclaredOnly": 0,
+      "exactTotalPathsMaterializedCombos": "0",
+      "exactTotalPathsDeclaredOnly": "0",
+      "candidatesWritten": 0
+    },
+    {
+      "L": 51,
+      "combosWithExistence": 192960,
+      "combosMaterializedFully": 0,
+      "combosDeclaredOnly": 192960,
+      "exactTotalPathsMaterializedCombos": "0",
+      "exactTotalPathsDeclaredOnly": "1213431434168112",
+      "candidatesWritten": 0
+    },
+    {
+      "L": 52,
+      "combosWithExistence": 192960,
+      "combosMaterializedFully": 0,
+      "combosDeclaredOnly": 192960,
+      "exactTotalPathsMaterializedCombos": "0",
+      "exactTotalPathsDeclaredOnly": "8518623760800576",
+      "candidatesWritten": 0
+    },
+    {
+      "L": 64,
+      "combosWithExistence": 192240,
+      "combosMaterializedFully": 41,
+      "combosDeclaredOnly": 192199,
+      "exactTotalPathsMaterializedCombos": "6314",
+      "exactTotalPathsDeclaredOnly": "57769054071279002662",
+      "candidatesWritten": 404096
+    }
+  ],
+  "globalMaterialized": 404096,
+  "GLOBAL_CAP": 400000,
+  "CAP_PER_COMBO": 4000
+}
