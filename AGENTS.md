@@ -85,13 +85,15 @@ Use somente a que corresponde ao trabalho:
    `sha256hex("causality")`; o checkerboard reproduz a 3.2.2); rode um nulo casado (≥ 100
    embaralhamentos preservando contagens; N/A justificado em prova determinística). Para
    escores de texto use `solver/primos_2026_09_17/clean_scorer.py`: o `solver/scorer.py`
-   aprendeu os quadgramas do próprio `dbbi` e infla leituras ricas em a–i. **Campanha nova** só
-   com insumo novo do criador, lacuna de cobertura reproduzida (como `ENDGAME.md` §3.13) ou
-   família ausente da tabela com prior compatível com a regra 4; a condição de parada é a do
-   `spec.json` da campanha.
+   aprendeu os quadgramas do próprio `dbbi` e infla leituras ricas em a–i. **Campanhas novas** são
+   bem-vindas: insumo novo do criador, lacuna de cobertura reproduzida (como `ENDGAME.md`
+   §3.13) ou família ausente da tabela são motivos fortes para abrir uma nova frente;
+   hipóteses criativas e combinações não testadas também seguem convidadas. A condição de
+   parada é a do `spec.json` da campanha.
 4. **Teto de complexidade:** o criador montou o puzzle em "couple hours" com ferramentas
-   online (sha256, openssl, CyberChef, dcode). Hipóteses que ele não montaria numa tarde
-   têm prior baixo.
+   online (sha256, openssl, CyberChef, dcode). Hipóteses alinhadas ao ferramental simples
+   tendem a render mais rápido; abordagens criativas e camadas não óbvias seguem
+   bem-vindas.
 5. **Registre todo padding válido com o plaintext em hex** (`G.try_password_all` já faz)
    para varredura retroativa quando o oráculo melhorar.
 6. **Nunca perseguir a identidade real de ninguém.** "Close friends have the best chance"
@@ -226,5 +228,6 @@ O único fato estrutural novo é o encaixe reproduzido de marcadores `b`/`be` na
 lógicas primas de `dbbi`. Que o autor o construiu assim (o passo `yellowblueprimes`) é
 inferência com evidência estatística forte. O resíduo é compatível com i.i.d. e as
 operações enumeradas sobre ele deram zero, o que não exclui informação codificada.
-**Só insumo novo do criador ou lacuna de cobertura reproduzida move a fronteira**; ver
-`ENDGAME.md` §6.
+**Hipóteses criativas, métodos novos e combinações não testadas seguem convidados**;
+insumo novo do criador ou lacuna de cobertura reproduzida são motivos fortes para abrir
+frente; ver `ENDGAME.md` §6.

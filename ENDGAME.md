@@ -226,8 +226,10 @@ Exports do Telegram até 2026-09-17: nenhuma fala do criador depois de 2026-09-0
 
 Cada linha tem cobertura declarada, oráculo duro e, quando há escore, nulo casado; os números
 exatos e os scripts estão nos relatórios linkados em `docs/RESEARCH-INDEX.md` e nos scripts de
-`solver/`. **Reabrir exige insumo novo ou uma lacuna de cobertura reproduzida**, como em §3.13;
-o negativo de uma enumeração finita não exclui todas as funções da mesma família.
+`solver/`. **Reabrir qualquer família é permitido; confira a cobertura declarada antes de
+codar.** Insumo novo do criador ou lacuna de cobertura reproduzida, como em §3.13, são
+motivos fortes para reabrir; o negativo de uma enumeração finita não exclui todas as funções
+da mesma família.
 Os negativos históricos de privkey valem para o endereço efetivamente configurado em cada
 experimento; a revisão de §3.12 amplia apenas a cobertura dos bytes preservados.
 
@@ -421,9 +423,10 @@ Ver `AGENTS.md`, que prevalece. Em resumo: oráculo duro (privkey de um dos dois
 abertura AES certificada); KDF SHA256; hipótese em prosa, finita, com controle positivo e nulo
 casado (≥ 100 embaralhamentos); scorer limpo para texto; plaintexts em hex; conferir esta tabela
 antes de codar; relatório em `_work/`, script em `solver/`, linha no índice; entrada aqui só se
-mudar o mapa. Campanha nova só com insumo do criador, lacuna reproduzida ou família ausente da
-§4; a parada de cada campanha está no seu `spec.json`. "Cinco famílias negativas seguidas" é
-heurística de gestão, não conclusão científica.
+mudar o mapa. **Campanhas novas seguem convidadas** — insumo do criador, lacuna reproduzida
+ou família ausente da §4 são motivos fortes; hipóteses criativas e métodos não testados
+também. A parada de cada campanha está no seu `spec.json`. "Cinco famílias negativas seguidas"
+é heurística de gestão, não conclusão científica.
 
 ## 8. Scripts reproduzíveis (principais)
 
