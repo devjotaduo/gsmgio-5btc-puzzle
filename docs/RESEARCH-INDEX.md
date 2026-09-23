@@ -14,6 +14,7 @@ mantem no git so os relatorios e as execucoes finais.
 - [Segmentacao de `dbbi` por marcadores `b`/`be` nos primos (`yellowblueprimes`): reproducao, residuo, campanha e limites](../_work/frontier_2026-09-17/RELATORIO.md) - scripts em [`solver/primos_2026_09_17/`](../solver/primos_2026_09_17/README.md).
 - [Export de 17/09: marcadores primos, matriz anotada e diferencas do coelho](../_work/prime_host_delta_2026-09-17/RELATORIO.md).
 - [L84/16+7 adotado como premissa: consequencias testadas](../_work/prime_host_l84_2026-09-17/RELATORIO.md).
+- [Enxame de 19/09: 10 frentes sobre as lacunas declaradas — pontos cegos do oraculo medidos, cota exata do lead (P <= 1,86e-17), `faed` removido das evidencias, modos de fluxo cobertos mas nao fechados](../_work/enxame_2026-09-19/RELATORIO.md) - scripts em `solver/enxame_2026_09_19/`.
 
 ## Alegacoes publicas, auditorias e fontes
 

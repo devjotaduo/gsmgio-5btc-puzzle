@@ -1,0 +1,36 @@
+{
+  "kdf_fase2": {
+    "sha256": true,
+    "md5": false
+  },
+  "openssl_cli": {
+    "cfb/sha256": true,
+    "cfb/md5": true,
+    "cfb1/sha256": true,
+    "cfb1/md5": true,
+    "cfb8/sha256": true,
+    "cfb8/md5": true,
+    "ofb/sha256": true,
+    "ofb/md5": true,
+    "ctr/sha256": true,
+    "ctr/md5": true
+  },
+  "chave_plantada": {
+    "ofb": {
+      "hits": 2,
+      "orientacoes": [
+        "BE",
+        "LE"
+      ]
+    },
+    "cfb1": {
+      "hits": 2,
+      "orientacoes": [
+        "BE",
+        "LE"
+      ]
+    },
+    "falso_positivo_alvos_reais": 0,
+    "janelas_controle": 124
+  }
+}
